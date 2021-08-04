@@ -25,6 +25,7 @@ shutil.copyfile("./allfiles/cangjie5.dict.yaml", "./sort_rime/注音洋蔥純注
 shutil.copyfile("./allfiles/cangjie5.schema.yaml", "./sort_rime/注音洋蔥純注音版/cangjie5.schema.yaml")
 shutil.copyfile("./allfiles/terra_pinyin_onion_add.dict.yaml", "./sort_rime/注音洋蔥純注音版/terra_pinyin_onion_add.dict.yaml")
 shutil.copyfile("./allfiles/terra_pinyin_onion.dict.yaml", "./sort_rime/注音洋蔥純注音版/terra_pinyin_onion.dict.yaml")
+shutil.copyfile("./allfiles/bopomo_onion_dvorak.schema.yaml", "./sort_rime/注音洋蔥純注音版/bopomo_onion.schema.yaml")
 
 shutil.copyfile("./allfiles/各方案default.custom/注音洋蔥純注音版_custom/default.custom.yaml", "./sort_rime/注音洋蔥純注音版/default.custom.yaml")
 
@@ -481,5 +482,3 @@ os.rename('./sort_rime/ocm/', './sort_rime/ocm_'+localtime)
 os.rename('./sort_rime/洋蔥行列30/', './sort_rime/洋蔥行列30_'+localtime)
 
 os.rename('./sort_rime/', './電腦RIME方案_'+localtime)
-
-
