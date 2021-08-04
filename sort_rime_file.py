@@ -140,6 +140,7 @@ shutil.copyfile("./allfiles/bopomo_onionplus_2.schema.yaml", "./sort_rime/注音
 shutil.copyfile("./allfiles/bopomo_onionplus_phrase.txt", "./sort_rime/注音洋蔥plus版/bopomo_onionplus_phrase.txt")
 shutil.copyfile("./allfiles/bopomo_onionplus.extended.dict.yaml", "./sort_rime/注音洋蔥plus版/bopomo_onionplus.extended.dict.yaml")
 shutil.copyfile("./allfiles/bopomo_onionplus.schema.yaml", "./sort_rime/注音洋蔥plus版/bopomo_onionplus.schema.yaml")
+shutil.copyfile("./allfiles/bopomo_onionplus_dvorak.schema.yaml", "./sort_rime/注音洋蔥plus版/bopomo_onionplus_dvorak.schema.yaml")
 shutil.copyfile("./allfiles/cangjie5.dict.yaml", "./sort_rime/注音洋蔥plus版/cangjie5.dict.yaml")
 shutil.copyfile("./allfiles/cangjie5.schema.yaml", "./sort_rime/注音洋蔥plus版/cangjie5.schema.yaml")
 shutil.copyfile("./allfiles/cyrillic.dict.yaml", "./sort_rime/注音洋蔥plus版/cyrillic.dict.yaml")
