@@ -9,18 +9,27 @@ local function array30up_mix(key, env)
   local context = engine.context
   local input_array = context.input
   local orig_array = context:get_commit_text()
+  local check_i1 = string.match(input_array, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$") or
+                   string.match(input_array, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$") or
+                   string.match(input_array, "`.+$") or
+                   string.match(input_array, "^[a-z][-_.0-9a-z]*@.*$") or
+                   string.match(input_array, "^https?:.*$") or
+                   string.match(input_array, "^ftp:.*$") or
+                   string.match(input_array, "^mailto:.*$") or
+                   string.match(input_array, "^file:.*$")
+  local check_i2 = string.match(input_array, "^=[a-z0-9,.;/-]+$")
+
   -- if context:get_option("ascii_mode") then
   --   return 2
-  -- elseif (not context:has_menu()) then
+  -- if (not context:has_menu()) then
   --   return 2
-  if (not context:has_menu()) then
-    return 2
-  elseif (key:repr() == "space") then
-  -- elseif (key:repr() == "space") and (context:has_menu()) then
+  if (key:repr() == "space") and (context:has_menu()) then
+  -- elseif (key:repr() == "space") then
   -- if (key:repr() == "space") and (context:is_composing()) then
     -- local input_array = context.input
 
-    if (string.match(input_array, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.match(input_array, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.match(input_array, "`.+$")) or (string.match(input_array, "^[a-z][-_.0-9a-z]*@.*$")) or (string.match(input_array, "^https?:.*$")) or (string.match(input_array, "^ftp:.*$")) or (string.match(input_array, "^mailto:.*$")) or (string.match(input_array, "^file:.*$")) or (string.match(input_array, "^=[a-z0-9,.;/-]+$")) then
+    if check_i1 or check_i2 then
+    -- if (string.match(input_array, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.match(input_array, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.match(input_array, "`.+$")) or (string.match(input_array, "^[a-z][-_.0-9a-z]*@.*$")) or (string.match(input_array, "^https?:.*$")) or (string.match(input_array, "^ftp:.*$")) or (string.match(input_array, "^mailto:.*$")) or (string.match(input_array, "^file:.*$")) or (string.match(input_array, "^=[a-z0-9,.;/-]+$")) then
     -- if (string.match(input_array, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.match(input_array, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.match(input_array, "`.+$")) or (string.match(input_array, "^[a-z][-_.0-9a-z]*@.*$")) or (string.match(input_array, "^https?:.*$")) or (string.match(input_array, "^ftp:.*$")) or (string.match(input_array, "^mailto:.*$")) or (string.match(input_array, "^file:.*$")) or (string.match(input_array, "^www%..+$")) or (string.match(input_array, "^=[a-z0-9,.;/-]+$")) then
       -- local orig_array = context:get_commit_text()
       engine:commit_text(orig_array)
@@ -34,12 +43,13 @@ local function array30up_mix(key, env)
     --   return 1 -- kAccepted
 
     end
-  elseif (key:repr() == "Return") then
-  -- elseif (key:repr() == "Return") and (context:has_menu()) then
+  elseif (key:repr() == "Return") and (context:has_menu()) then
+  -- elseif (key:repr() == "Return") then
   -- elseif (key:repr() == "Return") and (context:is_composing()) then
     -- local input_array = context.input
 
-    if (string.match(input_array, "^=[a-z0-9,.;/-]+$")) then
+    if check_i2 then
+    -- if (string.match(input_array, "^=[a-z0-9,.;/-]+$")) then
       -- local orig_array = context:get_commit_text()
       engine:commit_text(orig_array)
       context:clear()

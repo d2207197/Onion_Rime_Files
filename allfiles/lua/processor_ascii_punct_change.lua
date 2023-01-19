@@ -9,12 +9,13 @@ local function ascii_punct_change(key, env)
   local orig_p23 = context:get_commit_text()
   local o_ascii_punct = context:get_option("ascii_punct")
   local o_ascii_mode = context:get_option("ascii_mode")
+
   -- if (context:get_option("ascii_mode")) then
   --   return 2
-  if (o_ascii_mode) then
-    return 2
-  elseif (o_ascii_punct) then
-  -- if (o_ascii_punct) and (not o_ascii_mode) then
+  -- if (o_ascii_mode) then
+  --   return 2
+  if (o_ascii_punct) and (not o_ascii_mode) then
+  -- elseif (o_ascii_punct) then
   -- if (context:get_option("ascii_punct")) and (not context:get_option("ascii_mode")) then
     -- local orig_p23 = context:get_commit_text()
     if (key:repr() == "Shift+less") then
