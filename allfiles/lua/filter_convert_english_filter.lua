@@ -13,10 +13,10 @@ local change_preedit = require("filter_cand/change_preedit")
 ----------------------------------------------------------------------------------------
 -- 可利用 cp pattern 隨時增加pattern
 local english_pattern = {
-  [";"] = {comment = "〔全大寫〕", func = string.upper},
-  [";;"] = {comment = "〔開頭大寫〕", func = english_u1},
+  [";;"] = {comment = "〔全大寫〕", func = string.upper},
   [";/"] = {comment = "〔全小寫〕", func = english_s},
   [";'"] = {comment = "〔間隔後大寫〕", func = english_s2u},
+  [";"] = {comment = "〔開頭大寫〕", func = english_u1},
   [""] = {comment = "〔補空〕", func = english_s},
  }
 ----------------------------------------------------------------------------------------
