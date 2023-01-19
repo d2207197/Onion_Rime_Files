@@ -2,6 +2,12 @@
 number_translator: 將 `'/` + 阿拉伯數字 和 英文字母 各種轉譯
 --]]
 
+------------------------------------
+
+local convert_format = require("filter_cand/convert_format")
+
+------------------------------------
+
 local function formatnumberthousands(n3)
   local r3 = string.sub(n3, -3, -1)  -- 從後向前取三位
   local n3 = string.sub(n3, 1, -4)  -- 剩下的數字
@@ -15,7 +21,95 @@ local function formatnumberthousands(n3)
   return r3
 end
 
+------------------------------------
 
+local function fullshape_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789|０１２３４５６７８９|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
+
+local function math1_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789|𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
+
+local function math2_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789|𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
+
+local function circled1_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789|⓪①②③④⑤⑥⑦⑧⑨|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
+
+local function circled2_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789|🄋➀➁➂➃➄➅➆➇➈|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
+
+local function circled3_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789|⓿❶❷❸❹❺❻❼❽❾|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
+
+local function circled4_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789|🄌➊➋➌➍➎➏➐➑➒|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
+
+local function circled5_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789|Ⓞ㊀㊁㊂㊃㊄㊅㊆㊇㊈|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
+
+local function purech_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789|〇一二三四五六七八九|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
+
+local function military_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789.|洞么兩三四五六拐八勾點|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
+
+local function little1_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789|⁰¹²³⁴⁵⁶⁷⁸⁹|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
+
+local function little2_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789|₀₁₂₃₄₅₆₇₈₉|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
+
+------------------------------------
+--- 以下舊的寫法（備份參考）
+--[[
 local function fullshape_number(dn)
   if dn == "" then return "" end
   dn = string.gsub(dn, "0", "０")
@@ -196,6 +290,8 @@ local function little2_number(dn)
   dn = string.gsub(dn, "9", "₉")
   return dn
 end
+--]]
+------------------------------------
 
 return {
         formatnumberthousands = formatnumberthousands,

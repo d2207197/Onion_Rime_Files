@@ -1,4 +1,9 @@
 
+----------------------------------------------------------------------------------------
+
+local convert_format = require("filter_cand/convert_format")
+
+----------------------------------------------------------------------------------------
 
 local function revise_t(t)
   if t == "" then return "" end
@@ -6,7 +11,17 @@ local function revise_t(t)
   return t
 end
 
+local function fullshape_t(t)
+  if t == "" then return "" end
+  local format1 = "xlit|abcdefghijklmnopqrstuvwxyz-/|ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ－／|"
+  local format2 = "xform/[.,;]//"
+  local proj = convert_format(format1, format2)
+  return proj:apply(t)
+end
 
+------------------------------------
+--- 以下舊的寫法（備份參考）
+--[[
 local function fullshape_t(t)
   if t == "" then return "" end
   t = string.gsub(t, "a", "ａ")
@@ -40,6 +55,8 @@ local function fullshape_t(t)
   t = string.gsub(t, "[.,;]", "")
   return t
 end
+--]]
+------------------------------------
 
 local function halfwidth_kata_t(t)
   if t == "" then return "" end

@@ -4,6 +4,10 @@ number_translator: 將 `'/` + 阿拉伯數字 和 英文字母 各種轉譯
 
 ------------------------------------
 
+local convert_format = require("filter_cand/convert_format")
+
+------------------------------------
+
 local function english_s(en)
   if en == "" then return "" end
   return string.gsub(en, "%./", " ")
@@ -34,7 +38,107 @@ local function english_s2u(en)
 end
 
 ------------------------------------
+--- 以下新的寫法
 
+local function english_1(t)
+  if t == "" then return "" end
+  local format1 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ|"
+  local format2 = "xform|[.]/| |"
+  local proj = convert_format(format1, format2)
+  return proj:apply(t)
+end
+
+local function english_2(t)
+  if t == "" then return "" end
+  local format1 = "xlit|abcdefghijklmnopqrstuvwxyz|𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫|"
+  local format2 = "xform|[.]/| |"
+  local proj = convert_format(format1, format2)
+  return proj:apply(t)
+end
+
+local function english_3(t)
+  if t == "" then return "" end
+  local format1 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ |ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏ　|"
+  local format2 = "xform|[.]/|　|"
+  local proj = convert_format(format1, format2)
+  return proj:apply(t)
+end
+
+local function english_4(t)
+  if t == "" then return "" end
+  local format1 = "xlit|abcdefghijklmnopqrstuvwxyz |ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ　|"
+  local format2 = "xform|[.]/|　|"
+  local proj = convert_format(format1, format2)
+  return proj:apply(t)
+end
+
+local function english_5(t)
+  if t == "" then return "" end
+  local format1 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ |🄐🄑🄒🄓🄔🄕🄖🄗🄘🄙🄚🄛🄜🄝🄞🄟🄠🄡🄢🄣🄤🄥🄦🄧🄨🄩　|"
+  local format2 = "xform|[.]/|　|"
+  local proj = convert_format(format1, format2)
+  return proj:apply(t)
+end
+
+local function english_6(t)
+  if t == "" then return "" end
+  local format1 = "xlit|abcdefghijklmnopqrstuvwxyz |⒜⒝⒞⒟⒠⒡⒢⒣⒤⒥⒦⒧⒨⒩⒪⒫⒬⒭⒮⒯⒰⒱⒲⒳⒴⒵　|"
+  local format2 = "xform|[.]/|　|"
+  local proj = convert_format(format1, format2)
+  return proj:apply(t)
+end
+
+local function english_7(t)
+  if t == "" then return "" end
+  local format1 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉|"
+  local format2 = "xform|[.]/|　|"
+  local proj = convert_format(format1, format2)
+  return proj:apply(t)
+end
+
+local function english_8(t)
+  if t == "" then return "" end
+  local format1 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩|"
+  local format2 = "xform|[.]/|　|"
+  local proj = convert_format(format1, format2)
+  return proj:apply(t)
+end
+
+local function english_9(t)
+  if t == "" then return "" end
+  local format1 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉|"
+  local format2 = "xform|[.]/|　|"
+  local proj = convert_format(format1, format2)
+  return proj:apply(t)
+end
+
+local function english_f_u(t)
+  if t == "" then return "" end
+  local format1 = "xform|[.]/|　|"
+  local format2 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ ,.-/'|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ　，．－／＇|"
+  local proj = convert_format(format1, format2)
+  return proj:apply(t)
+end
+
+local function english_f_l(t)
+  if t == "" then return "" end
+  local format1 = "xform|[.]/|　|"
+  local format2 = "xlit|abcdefghijklmnopqrstuvwxyz ,.-/'|ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ　，．－／＇|"
+  local proj = convert_format(format1, format2)
+  return proj:apply(t)
+end
+
+local function english_s_u(t)
+  if t == "" then return "" end
+  local format1 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
+  local format2 = "xform|[.]/|　|"
+  local proj = convert_format(format1, format2)
+  return proj:apply(t)
+end
+
+------------------------------------
+--- 以下舊的寫法（備份參考）
+--[[
 local function english_1(en)
   if en == "" then return "" end
   en = string.gsub(en, "A", "𝔸")
@@ -434,6 +538,8 @@ local function english_s_u(en)
   en = string.gsub(en, "%./", " ")
   return en
 end
+--]]
+------------------------------------
 
 local function english_1_2(en)
   if en == "" then return "" end
