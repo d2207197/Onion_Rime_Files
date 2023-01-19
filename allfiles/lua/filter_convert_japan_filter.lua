@@ -60,7 +60,7 @@ local function p_convert_japan_filter(input, env)
   -- local _end = context:get_preedit().sel_end + 1  --一般日語末尾只有「.」或「,」，「.,」會多一。
   local _end = caret_pos
   local tips_jp = '《日-固列》'
-  local c , s = string.match(o_input, "([-/a-z][-/a-z.,;]*)(%., ?)$")
+  local c , s = string.match(o_input, "[,46]([-/a-z][-/a-z.,;]*)(%., ?)$")
   if caret_pos == #o_input and (c~=nil) then
   -- if (c~=nil) and #o_input <= _end then
   -- if (c~=nil) and context:is_composing() then
@@ -70,10 +70,10 @@ local function p_convert_japan_filter(input, env)
     -- local roma = Candidate("jp", start, _end, '字串總數：'..#o_input..' 開始：'..start..' 末尾數加一：'.._end..' 游標數：'..caret_pos, "〔測試〕")  --測試用
     local roma = Candidate("jp", start, _end, revise_t(c) , "〔羅馬字〕")
     local roma_f = Candidate("jp", start, _end, fullshape_t(c), "〔全形羅馬字〕")
-    -- roma.preedit = tips_jp .. c .. s
-    -- roma_f.preedit = tips_jp .. c .. s
     -- yield( change_preedit(roma, jp_p) )
     -- yield( change_preedit(roma_f, jp_p) )
+    -- roma.preedit = tips_jp .. c .. s
+    -- roma_f.preedit = tips_jp .. c .. s
     roma.preedit = jp_p
     roma_f.preedit = jp_p
     yield(roma)
@@ -83,12 +83,12 @@ local function p_convert_japan_filter(input, env)
       local hwkata = Candidate("jp", start, _end, hw, "〔半形片假名〕")
       local kata = Candidate("jp", start, _end, kata_t(hw), "〔片假名〕")
       local hira = Candidate("jp", start, _end, hira_t(hw), "〔平假名〕")
-      -- hwkata.preedit = tips_jp .. c .. s
-      -- kata.preedit = tips_jp .. c .. s
-      -- hira.preedit = tips_jp .. c .. s
       -- yield( change_preedit(hwkata, jp_p) )
       -- yield( change_preedit(kata, jp_p) )
       -- yield( change_preedit(hira, jp_p) )
+      -- hwkata.preedit = tips_jp .. c .. s
+      -- kata.preedit = tips_jp .. c .. s
+      -- hira.preedit = tips_jp .. c .. s
       hwkata.preedit = jp_p
       kata.preedit = jp_p
       hira.preedit = jp_p
@@ -97,8 +97,8 @@ local function p_convert_japan_filter(input, env)
       yield(hira)
     else
       local no_kana = Candidate("jp", start, _end, "", "〔該拼寫無假名〕")
-      -- no_kana.preedit = tips_jp .. c .. s
       -- yield( change_preedit(no_kana, jp_p) )
+      -- no_kana.preedit = tips_jp .. c .. s
       no_kana.preedit = jp_p
       yield(no_kana)
     end

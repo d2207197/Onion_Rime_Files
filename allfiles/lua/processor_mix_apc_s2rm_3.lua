@@ -12,7 +12,10 @@ local function mix_apc_s2rm_3(key, env)
   local o_ascii_mode = context:get_option("ascii_mode")
   -- if (context:get_option("ascii_mode")) then
   --   return 2
-  if (o_ascii_punct) and (not o_ascii_mode) then
+  if (o_ascii_mode) then
+    return 2
+  elseif (o_ascii_punct) then
+  -- if (o_ascii_punct) and (not o_ascii_mode) then
   -- if (context:get_option("ascii_punct")) and (not context:get_option("ascii_mode")) then
     if (key:repr() == "Shift+less") then
       if (context:is_composing()) then
@@ -44,7 +47,8 @@ local function mix_apc_s2rm_3(key, env)
         return 1 -- kAccepted
       end
     end
-  elseif (not o_ascii_punct) and (not o_ascii_mode) then
+  elseif (not o_ascii_punct) then
+  -- elseif (not o_ascii_punct) and (not o_ascii_mode) then
   -- elseif (not context:get_option("ascii_punct")) and (not context:get_option('ascii_mode')) then
     if (key:repr() == "space") and (context:is_composing()) then
     -- if (key:repr() == "space") and (context:has_menu()) then

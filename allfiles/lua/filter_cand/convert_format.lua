@@ -1,4 +1,5 @@
 --- 如同  comment_format
+
 local function convert_format(p1,p2,p3,p4) -- patern  支援utf8
   local config_list = ConfigList()
   for i ,v in next, {p1,p2,p3,p4} do

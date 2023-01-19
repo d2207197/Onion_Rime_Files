@@ -13,8 +13,10 @@ local function array30up_mix(key, env)
   --   return 2
   -- elseif (not context:has_menu()) then
   --   return 2
-  if (key:repr() == "space") and (context:has_menu()) then
-  -- if (key:repr() == "space") then
+  if (not context:has_menu()) then
+    return 2
+  elseif (key:repr() == "space") then
+  -- elseif (key:repr() == "space") and (context:has_menu()) then
   -- if (key:repr() == "space") and (context:is_composing()) then
     -- local input_array = context.input
 
@@ -32,8 +34,8 @@ local function array30up_mix(key, env)
     --   return 1 -- kAccepted
 
     end
-  elseif (key:repr() == "Return") and (context:has_menu()) then
-  -- elseif (key:repr() == "Return") then
+  elseif (key:repr() == "Return") then
+  -- elseif (key:repr() == "Return") and (context:has_menu()) then
   -- elseif (key:repr() == "Return") and (context:is_composing()) then
     -- local input_array = context.input
 

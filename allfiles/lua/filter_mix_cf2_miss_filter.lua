@@ -18,11 +18,15 @@ local function mix_cf2_miss_filter(inp, env)
   local tran = c_f2_s and Translation(drop_cand, inp, '᰼᰼') or inp
   for cand in tran:iter() do
     if (addcomment1) then
-      yield( string.match(cand.text, '^。$') and change_comment(cand,"〔句點〕") or cand )
+      yield( cand.text== "。" and change_comment(cand,"〔句點〕") or cand )
+      -- yield( string.match(cand.text, '^。$') and change_comment(cand,"〔句點〕") or cand )
     elseif (addcomment2) then
-      yield( string.match(cand.text, '^〔$') and change_comment(cand,"〔六角括號〕")
-          or string.match(cand.text, '^〕$') and change_comment(cand,"〔六角括號〕")
+      yield( cand.text == "〔" and change_comment(cand,"〔六角括號〕")
+          or cand.text == "〕" and change_comment(cand,"〔六角括號〕")
           or cand )
+      -- yield( string.match(cand.text, '^〔$') and change_comment(cand,"〔六角括號〕")
+      --     or string.match(cand.text, '^〕$') and change_comment(cand,"〔六角括號〕")
+      --     or cand )
     else
       yield(cand)
     end

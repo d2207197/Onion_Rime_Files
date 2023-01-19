@@ -39,21 +39,22 @@ local function p_convert_japan_translator(input, seg)
   local tips_jp = '《日-固列》'
   local c = string.match(input, "([-/a-z.,;]+)%.,$")
   local tag_jp = seg:has_tag("japan")
+  local jp_p = tips_jp .. input
   if tag_jp and (c~=nil) then
     local hw = halfwidth_kata_t(c)
     local roma = Candidate("jp", seg.start, seg._end, revise_t(c), "〔羅馬字〕")
     local roma_f = Candidate("jp", seg.start, seg._end, fullshape_t(c), "〔全形羅馬字〕")
-    roma.preedit = tips_jp .. input
-    roma_f.preedit = tips_jp .. input
+    roma.preedit = jp_p
+    roma_f.preedit = jp_p
     yield(roma)
     yield(roma_f)
     if not string.match(hw, "%l") then
       local hwkata = Candidate("jp", seg.start, seg._end, hw, "〔半形片假名〕")
       local kata = Candidate("jp", seg.start, seg._end, kata_t(hw), "〔片假名〕")
       local hira = Candidate("jp", seg.start, seg._end, hira_t(hw), "〔平假名〕")
-      hwkata.preedit = tips_jp .. input
-      kata.preedit = tips_jp .. input
-      hira.preedit = tips_jp .. input
+      hwkata.preedit = jp_p
+      kata.preedit = jp_p
+      hira.preedit = jp_p
       yield(hwkata)
       yield(kata)
       yield(hira)
