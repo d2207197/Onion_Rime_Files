@@ -6,7 +6,7 @@
 schema:
   schema_id: Mount_ocm
   name: "❖蝦米(單出-反查專用)❖"
-  version: "202211"
+  version: "202301"
   author:
     - 洋蔥
   description: |
@@ -21,6 +21,7 @@ switches:
     reset: 0
     states: [ "中文", "英文" ]
   - name: full_shape
+    reset: 0
     states: [ "半形", "全形" ]
   - name: ascii_punct
     reset: 0
@@ -265,8 +266,74 @@ key_binder:
 
 punctuator:
   # import_preset: default #symbols_ovff
+  full_shape:
+    ";": ["；"] #["；", "："]
+    # ";" : { commit: "；" }
+    "`" : { commit: "｀" }
+    "~" : { commit: "～" }
+    "!" : { commit: "！" }
+    "@" : { commit: "＠" }
+    "#" : { commit: "＃" }
+    "$" : { commit: "＄" }
+    "%" : { commit: "％" }
+    "^" : { commit: "＾" }
+    "&" : { commit: "＆" }
+    "*" : { commit: "＊" }
+    "(" : { commit: "（" }
+    ")" : { commit: "）" }
+    "_" : { commit: "＿" }
+    "-" : { commit: "－" }
+    "+" : { commit: "＋" }
+    "=" : { commit: "＝" }
+    # "[" : { commit: "［" }
+    # "]" : { commit: "］" }
+    "{" : { commit: "｛" }
+    "}" : { commit: "｝" }
+    "\\" : { commit: "＼" }
+    "|" : { commit: "｜" }
+    ":" : { commit: "：" }
+    # "'" : { commit: "＇" }
+    '"' : { commit: '＂' }
+    # "," : { commit: "，" }
+    # "." : { commit: "．" }
+    "<" : { commit: "＜" }
+    ">" : { commit: "＞" }
+    "/" : { commit: "／" }
+    "?" : { commit: "？" }
   half_shape:
     ";": [";"]
+    # ";" : { commit: ";" }
+    "`" : { commit: "`" }
+    "~" : { commit: "~" }
+    "!" : { commit: "!" }
+    "@" : { commit: "@" }
+    "#" : { commit: "#" }
+    "$" : { commit: "$" }
+    "%" : { commit: "%" }
+    "^" : { commit: "^" }
+    "&" : { commit: "&" }
+    "*" : { commit: "*" }
+    "(" : { commit: "(" }
+    ")" : { commit: ")" }
+    "_" : { commit: "_" }
+    "-" : { commit: "-" }
+    "+" : { commit: "+" }
+    "=" : { commit: "=" }
+    # "[" : { commit: "[" }
+    # "]" : { commit: "]" }
+    "{" : { commit: "{" }
+    "}" : { commit: "}" }
+    "\\" : { commit: "\\" }
+    "|" : { commit: "|" }
+    ":" : { commit: ":" }
+    # "'" : { commit: "'" }
+    '"' : { commit: '"' }
+    # "," : { commit: "," }
+    # "." : { commit: "." }
+    "<" : { commit: "<" }
+    ">" : { commit: ">" }
+    "/" : { commit: "/" }
+    "?" : { commit: "?" }
 
 recognizer:
 #  import_preset: default
