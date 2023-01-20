@@ -19,8 +19,78 @@ local function fullshape_t(t)
   return proj:apply(t)
 end
 
+local function kata_t(t)
+  if t == "" then return "" end
+  local f_1 = "xform/ｶﾞ/ガ/"
+  local f_2 = "xform/ｷﾞ/ギ/"
+  local f_3 = "xform/ｸﾞ/グ/"
+  local f_4 = "xform/ｹﾞ/ゲ/"
+  local f_5 = "xform/ｺﾞ/ゴ/"
+  local f_6 = "xform/ｻﾞ/ザ/"
+  local f_7 = "xform/ｼﾞ/ジ/"
+  local f_8 = "xform/ｽﾞ/ズ/"
+  local f_9 = "xform/ｾﾞ/ゼ/"
+  local f_10 = "xform/ｿﾞ/ゾ/"
+  local f_11 = "xform/ﾀﾞ/ダ/"
+  local f_12 = "xform/ﾁﾞ/ヂ/"
+  local f_13 = "xform/ﾂﾞ/ヅ/"
+  local f_14 = "xform/ﾃﾞ/デ/"
+  local f_15 = "xform/ﾄﾞ/ド/"
+  local f_16 = "xform/ﾊﾞ/バ/"
+  local f_17 = "xform/ﾋﾞ/ビ/"
+  local f_18 = "xform/ﾌﾞ/ブ/"
+  local f_19 = "xform/ﾍﾞ/ベ/"
+  local f_20 = "xform/ﾎﾞ/ボ/"
+  local f_21 = "xform/ﾊﾟ/パ/"
+  local f_22 = "xform/ﾋﾟ/ピ/"
+  local f_23 = "xform/ﾌﾟ/プ/"
+  local f_24 = "xform/ﾍﾟ/ぺ/"
+  local f_25 = "xform/ﾎﾟ/ポ/"
+  local f_26 = "xform/ｳﾞ/ヴ/"
+  local f_27 = "xform/ﾜﾞ/ヷ/"
+  local f_28 = "xform/ｦﾞ/ヺ/"
+  local f_29 = "xlit|ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｧｨｩｪｫｬｭｮｯ･ｰﾞﾟ|アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンァィゥェォャュョッ・ー゛゜|"
+  local proj = convert_format(f_1,f_2,f_3,f_4,f_5,f_6,f_7,f_8,f_9,f_10,f_11,f_12,f_13,f_14,f_15,f_16,f_17,f_18,f_19,f_20,f_21,f_22,f_23,f_24,f_25,f_26,f_27,f_28,f_29)
+  return proj:apply(t)
+end
+
+local function hira_t(t)
+  if t == "" then return "" end
+  local f_1 = "xform/ｶﾞ/が/"
+  local f_2 = "xform/ｷﾞ/ぎ/"
+  local f_3 = "xform/ｸﾞ/ぐ/"
+  local f_4 = "xform/ｹﾞ/げ/"
+  local f_5 = "xform/ｺﾞ/ご/"
+  local f_6 = "xform/ｻﾞ/ざ/"
+  local f_7 = "xform/ｼﾞ/じ/"
+  local f_8 = "xform/ｽﾞ/ず/"
+  local f_9 = "xform/ｾﾞ/ぜ/"
+  local f_10 = "xform/ｿﾞ/ぞ/"
+  local f_11 = "xform/ﾀﾞ/だ/"
+  local f_12 = "xform/ﾁﾞ/ぢ/"
+  local f_13 = "xform/ﾂﾞ/づ/"
+  local f_14 = "xform/ﾃﾞ/で/"
+  local f_15 = "xform/ﾄﾞ/ど/"
+  local f_16 = "xform/ﾊﾞ/ば/"
+  local f_17 = "xform/ﾋﾞ/び/"
+  local f_18 = "xform/ﾌﾞ/ぶ/"
+  local f_19 = "xform/ﾍﾞ/べ/"
+  local f_20 = "xform/ﾎﾞ/ぼ/"
+  local f_21 = "xform/ﾊﾟ/ぱ/"
+  local f_22 = "xform/ﾋﾟ/ぴ/"
+  local f_23 = "xform/ﾌﾟ/ぷ/"
+  local f_24 = "xform/ﾍﾟ/ぺ/"
+  local f_25 = "xform/ﾎﾟ/ぽ/"
+  local f_26 = "xform/ｳﾞ/ゔ/"
+  -- local f_27 = "xform/ﾜﾞ", "")
+  -- local f_28 = "xform/ｦﾞ", "")
+  local f_29 = "xlit|ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｧｨｩｪｫｬｭｮｯ･ｰﾞﾟ|あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんぁぃぅぇぉゃゅょっ・ー゛゜|"
+  local proj = convert_format(f_1,f_2,f_3,f_4,f_5,f_6,f_7,f_8,f_9,f_10,f_11,f_12,f_13,f_14,f_15,f_16,f_17,f_18,f_19,f_20,f_21,f_22,f_23,f_24,f_25,f_26,f_29)
+  return proj:apply(t)
+end
+
 ------------------------------------
---- 以下舊的寫法（備份參考）
+--- 以下舊的寫法
 --[[
 local function fullshape_t(t)
   if t == "" then return "" end
@@ -512,6 +582,9 @@ local function halfwidth_kata_t(t)
   return t
 end
 
+------------------------------------
+--- 以下舊的寫法
+--[[
 local function kata_t(t)
   if t == "" then return "" end
   t = string.gsub(t, "ｶﾞ", "ガ")
@@ -697,6 +770,8 @@ local function hira_t(t)
   -- t = string.gsub(t, "[.,;]", "")
   return t
 end
+--]]
+------------------------------------
 
 return {
     revise_t = revise_t,
