@@ -13,13 +13,6 @@ local function english_s(en)
   return string.gsub(en, "%./", " ")
 end
 
-local function english_u1(en)
-  if en == "" then return "" end
-  -- en = string.upper(string.sub(en,1,1)) .. string.sub(english_u2(english_s(en)),2)
-  en = english_s(en)
-  return en:gsub("^%l",string.upper)
-end
-
 local function english_u2(en)
   if en == "" then return "" end
   -- if string.match(en, "^[/.'-][a-z]") then
@@ -28,6 +21,14 @@ local function english_u2(en)
   en = en:gsub("[/-]%l",string.upper)
   en = en:gsub("^['.]%l",string.upper)
   return en
+end
+
+local function english_u1(en)
+  if en == "" then return "" end
+  -- en = string.upper(string.sub(en,1,1)) .. string.sub(english_u2(english_s(en)),2)
+  -- return en
+  en = english_s(en)
+  return en:gsub("^%l",string.upper)
 end
 
 local function english_s2u(en)
@@ -44,7 +45,7 @@ local function english_1(t)
   if t == "" then return "" end
   local format1 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ|"
   local format2 = "xform|[.]/| |"
-  local proj = convert_format(format1, format2)
+  local proj = convert_format(format1,format2)
   return proj:apply(t)
 end
 
@@ -52,7 +53,7 @@ local function english_2(t)
   if t == "" then return "" end
   local format1 = "xlit|abcdefghijklmnopqrstuvwxyz|𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫|"
   local format2 = "xform|[.]/| |"
-  local proj = convert_format(format1, format2)
+  local proj = convert_format(format1,format2)
   return proj:apply(t)
 end
 
@@ -60,7 +61,7 @@ local function english_3(t)
   if t == "" then return "" end
   local format1 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ |ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏ　|"
   local format2 = "xform|[.]/|　|"
-  local proj = convert_format(format1, format2)
+  local proj = convert_format(format1,format2)
   return proj:apply(t)
 end
 
@@ -68,7 +69,7 @@ local function english_4(t)
   if t == "" then return "" end
   local format1 = "xlit|abcdefghijklmnopqrstuvwxyz |ⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ　|"
   local format2 = "xform|[.]/|　|"
-  local proj = convert_format(format1, format2)
+  local proj = convert_format(format1,format2)
   return proj:apply(t)
 end
 
@@ -76,7 +77,7 @@ local function english_5(t)
   if t == "" then return "" end
   local format1 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ |🄐🄑🄒🄓🄔🄕🄖🄗🄘🄙🄚🄛🄜🄝🄞🄟🄠🄡🄢🄣🄤🄥🄦🄧🄨🄩　|"
   local format2 = "xform|[.]/|　|"
-  local proj = convert_format(format1, format2)
+  local proj = convert_format(format1,format2)
   return proj:apply(t)
 end
 
@@ -84,7 +85,7 @@ local function english_6(t)
   if t == "" then return "" end
   local format1 = "xlit|abcdefghijklmnopqrstuvwxyz |⒜⒝⒞⒟⒠⒡⒢⒣⒤⒥⒦⒧⒨⒩⒪⒫⒬⒭⒮⒯⒰⒱⒲⒳⒴⒵　|"
   local format2 = "xform|[.]/|　|"
-  local proj = convert_format(format1, format2)
+  local proj = convert_format(format1,format2)
   return proj:apply(t)
 end
 
@@ -92,7 +93,7 @@ local function english_7(t)
   if t == "" then return "" end
   local format1 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉|"
   local format2 = "xform|[.]/|　|"
-  local proj = convert_format(format1, format2)
+  local proj = convert_format(format1,format2)
   return proj:apply(t)
 end
 
@@ -100,7 +101,7 @@ local function english_8(t)
   if t == "" then return "" end
   local format1 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩|"
   local format2 = "xform|[.]/|　|"
-  local proj = convert_format(format1, format2)
+  local proj = convert_format(format1,format2)
   return proj:apply(t)
 end
 
@@ -108,7 +109,7 @@ local function english_9(t)
   if t == "" then return "" end
   local format1 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|🅰🅱🅲🅳🅴🅵🅶🅷🅸🅹🅺🅻🅼🅽🅾🅿🆀🆁🆂🆃🆄🆅🆆🆇🆈🆉|"
   local format2 = "xform|[.]/|　|"
-  local proj = convert_format(format1, format2)
+  local proj = convert_format(format1,format2)
   return proj:apply(t)
 end
 
@@ -116,7 +117,7 @@ local function english_f_u(t)
   if t == "" then return "" end
   local format1 = "xform|[.]/|　|"
   local format2 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ ,.-/'|ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ　，．－／＇|"
-  local proj = convert_format(format1, format2)
+  local proj = convert_format(format1,format2)
   return proj:apply(t)
 end
 
@@ -124,7 +125,7 @@ local function english_f_l(t)
   if t == "" then return "" end
   local format1 = "xform|[.]/|　|"
   local format2 = "xlit|abcdefghijklmnopqrstuvwxyz ,.-/'|ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ　，．－／＇|"
-  local proj = convert_format(format1, format2)
+  local proj = convert_format(format1,format2)
   return proj:apply(t)
 end
 
@@ -132,7 +133,7 @@ local function english_s_u(t)
   if t == "" then return "" end
   local format1 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
   local format2 = "xform|[.]/|　|"
-  local proj = convert_format(format1, format2)
+  local proj = convert_format(format1,format2)
   return proj:apply(t)
 end
 
