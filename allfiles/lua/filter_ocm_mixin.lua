@@ -6,10 +6,6 @@
 故改用新版 lua 之引入 opencc 方法。
 --]]
 
-----------------
-
-local drop_cand = require("filter_cand/drop_cand")
-local change_comment = require("filter_cand/change_comment")
 
 ----------------
 local function xform_mark(inp)
@@ -18,6 +14,18 @@ local function xform_mark(inp)
   inp = string.gsub(inp, "@", " ")
   return inp
 end
+----------------
+
+
+
+
+--- 以下新的寫法
+
+----------------
+
+local drop_cand = require("filter_cand/drop_cand")
+local change_comment = require("filter_cand/change_comment")
+
 ----------------
 local function ocm_mixin_filter(inp, env)
   local c_f2_s = env.engine.context:get_option("character_range_bhjm")
@@ -52,7 +60,8 @@ return { ocm_mixin_filter = ocm_mixin_filter }
 
 
 
---- 以下舊的寫法（備份參考）
+
+--- 以下舊的寫法
 --[[
 local function ocm_mixin_filter(input, env)
   local c_f2_s = env.engine.context:get_option("character_range_bhjm")

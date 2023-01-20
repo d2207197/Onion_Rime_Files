@@ -4,12 +4,17 @@
 合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
 --]]
 
+
+
+
+--- 以下新的寫法
+
 ----------------
 
 local drop_cand = require("filter_cand/drop_cand")
 local change_comment = require("filter_cand/change_comment")
 
-----------------
+--------------
 local function mix_cf2_miss_filter(inp, env)
   local c_f2_s = env.engine.context:get_option("character_range_bhjm")
   local p_key = env.engine.context.input
@@ -38,7 +43,9 @@ return mix_cf2_miss_filter
 
 
 
---- 以下舊的寫法（備份參考）
+
+
+--- 以下舊的寫法
 --[[
 local function mix_cf2_miss_filter(input, env)
   local c_f2_s = env.engine.context:get_option("character_range_bhjm")
@@ -58,12 +65,14 @@ local function mix_cf2_miss_filter(input, env)
       elseif (addcomment1) or (addcomment2) then
       -- elseif (not dnch) and (addcomment1) or (addcomment2) then
       -- elseif (not string.match(cand.text, '᰼᰼' )) and (addcomment1) or (addcomment2) then
-        if string.match(cand.text, '。') then
+        if cand.text == "。" then
+        -- if string.match(cand.text, '。') then
         -- if (dotend) then
         -- if (cand.text == '。') then
           cand:get_genuine().comment = "〔句點〕"
           yield(cand)
-        elseif string.match(cand.text, '^〔$') or string.match(cand.text, '^〕$') then
+        elseif cand.text == "〔" or cand.text == "〕" then
+        -- elseif string.match(cand.text, '^〔$') or string.match(cand.text, '^〕$') then
         -- elseif string.match(cand.text, "[〕〔]") then
         -- elseif (bracket1) or (bracket2) then
         -- elseif (cand.text == '〔') or (cand.text == '〕') then
@@ -81,12 +90,14 @@ local function mix_cf2_miss_filter(input, env)
         -- local dotend = string.match(cand.text, '。')
         -- local bracket1 = string.match(cand.text, '〔')
         -- local bracket2 = string.match(cand.text, '〕')
-        if string.match(cand.text, '。') then
+        if cand.text == "。" then
+        -- if string.match(cand.text, '。') then
         -- if (dotend) then
         -- if (cand.text == '。') then
           cand:get_genuine().comment = "〔句點〕"
           yield(cand)
-        elseif string.match(cand.text, '^〔$') or string.match(cand.text, '^〕$') then
+        elseif cand.text == "〔" or cand.text == "〕" then
+        -- elseif string.match(cand.text, '^〔$') or string.match(cand.text, '^〕$') then
         -- elseif string.match(cand.text, "[〕〔]") then
         -- elseif (bracket1) or (bracket2) then
         -- elseif (cand.text == '〔') or (cand.text == '〕') then

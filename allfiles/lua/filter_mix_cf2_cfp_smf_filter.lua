@@ -38,6 +38,8 @@ end
 沒用到 ocm_mixin 方案時，ReverseDb("build/symbols-mark.reverse.bin")會找不到。
 --]]
 
+--- 以下新的寫法
+
 ----------------
 
 local drop_cand = require("filter_cand/drop_cand")
@@ -73,7 +75,8 @@ return { mix_cf2_cfp_smf_filter = mix_cf2_cfp_smf_filter }
 
 
 
---- 以下舊的寫法（備份參考）
+
+--- 以下舊的寫法
 --[[
 local function mix_cf2_cfp_smf_filter(input, env)
   local c_f2_s = env.engine.context:get_option("character_range_bhjm")

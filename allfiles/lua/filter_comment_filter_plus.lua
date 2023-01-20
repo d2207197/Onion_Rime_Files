@@ -3,11 +3,18 @@
 （Mount_ocm）
 去除後面編碼註釋
 --]]
+
+
 -- local function xform_c(cf)
 --   if cf == "" then return "" end
 --   cf = string.gsub(cf, "[ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ%s]+$", "zk")
 --   return cf
 -- end
+
+
+
+
+--- 以下新的寫法
 
 ----------------
 
@@ -27,7 +34,9 @@ return comment_filter_plus
 
 
 
---- 以下舊的寫法（備份參考）
+
+
+--- 以下舊的寫法
 --[[
 local function comment_filter_plus(input, env)
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")

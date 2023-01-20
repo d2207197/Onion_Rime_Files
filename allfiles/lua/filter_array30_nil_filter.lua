@@ -5,6 +5,7 @@
 行列30空碼'⎔'轉成不輸出任何符號，符合原生
 --]]
 
+
 -- -- preedit_format 格式轉寫（精簡不用）
 -- local function xform_array30_input(ainput)
 --   if ainput == "" then return "" end
@@ -42,6 +43,9 @@
 --   ainput = string.gsub(ainput, "^==", "《查注音》")
 --   return ainput
 -- end
+
+
+
 
 local function array30_nil_filter(input, env)
   -- local array30_input = env.engine.context.input  -- 原始未轉換輸入碼

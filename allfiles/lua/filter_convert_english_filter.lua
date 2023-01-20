@@ -8,8 +8,11 @@ local english_s = f_e_s.english_s
 local english_u1 = f_e_s.english_u1
 local english_s2u = f_e_s.english_s2u
 
-local change_preedit = require("filter_cand/change_preedit")
 
+--- 以下新的寫法
+
+----------------------------------------------------------------------------------------
+local change_preedit = require("filter_cand/change_preedit")
 ----------------------------------------------------------------------------------------
 -- 可利用 cp pattern 隨時增加pattern
 local english_pattern = {
@@ -69,7 +72,12 @@ end
 return { convert_english_filter = convert_english_filter,
        p_convert_english_filter = p_convert_english_filter }
 ----------------------------------------------------------------------------------------
---- 以下舊的寫法（備份參考）
+
+
+
+
+
+--- 以下舊的寫法
 --[[
 -- 主方案用
 local function convert_english_filter(input, env)
@@ -135,6 +143,7 @@ local function p_convert_english_filter(input, env)
 
   if caret_pos ~= #o_input then
   elseif (c1~=nil) then
+    -- local english = Candidate("en", start, _end, '字串總數：'..#o_input..' 開始：'..start..' 末尾數加一：'.._end..' 游標數：'..caret_pos, "〔測試〕")  --測試用
     local english = Candidate("en", start, _end, string.upper(english_s(c1)), "〔全大寫〕")
     english.preedit = tips_en .. c1 .. s1
     yield(english)
@@ -154,7 +163,6 @@ local function p_convert_english_filter(input, env)
     english.preedit = tips_en .. c4 .. s4
     yield(english)
     -- yield( change_preedit(english, tips_en .. c4 .. s4) )
-    -- local english = Candidate("en", start, _end, '字串總數：'..#o_input..' 開始：'..start..' 末尾數加一：'.._end..' 游標數：'..caret_pos, "〔測試〕")  --測試用
   elseif (c5~=nil) and (not context:has_menu()) then
     local english = Candidate("en", start, _end, english_s(c5), "〔補空〕")
     english.preedit = tips_en .. c5 .. s5
