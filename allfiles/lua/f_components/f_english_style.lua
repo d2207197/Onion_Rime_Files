@@ -18,9 +18,8 @@ local function english_u2(en)
   -- if string.match(en, "^[/.'-][a-z]") then
   --   en = string.upper(string.sub(en,1,2)) .. string.sub(en,3)
   -- end
-  en = en:gsub("[/-]%l",string.upper)
   en = en:gsub("^['.]%l",string.upper)
-  return en
+  return en:gsub("[/-]%l",string.upper)
 end
 
 local function english_u1(en)
@@ -547,7 +546,9 @@ local function english_1_2(en)
   -- en = english_1(string.sub(en,1,1)) .. english_2(string.sub(en,2,-1))
   en = english_s2u(en)
   en = english_1(en)
-  en = english_2(en)
+  if string.match(en,"%l") then
+    en = english_2(en)
+  end
   return en
 end
 
@@ -556,7 +557,9 @@ local function english_3_4(en)
   -- en = english_3(string.sub(en,1,1)) .. english_4(string.sub(en,2,-1))
   en = english_s2u(en)
   en = english_3(en)
-  en = english_4(en)
+  if string.match(en,"%l") then
+    en = english_4(en)
+  end
   return en
 end
 
@@ -565,7 +568,9 @@ local function english_5_6(en)
   -- en = english_5(string.sub(en,1,1)) .. english_6(string.sub(en,2,-1))
   en = english_s2u(en)
   en = english_5(en)
-  en = english_6(en)
+  if string.match(en,"%l") then
+    en = english_6(en)
+  end
   return en
 end
 
@@ -574,7 +579,9 @@ local function english_f_ul(en)
   -- en = english_f_u(string.sub(en,1,1)) .. english_f_l(string.sub(en,2,-1))
   en = english_s2u(en)
   en = english_f_u(en)
-  en = english_f_l(en)
+  if string.match(en,"%l") then
+    en = english_f_l(en)
+  end
   return en
 end
 

@@ -7,7 +7,7 @@ local convert_format = require("filter_cand/convert_format")
 
 local function revise_t(t)
   if t == "" then return "" end
-    t = string.gsub(t, "[.,;]", "")
+  t = string.gsub(t, "[.,;]", "")
   return t
 end
 
