@@ -51,7 +51,7 @@ shutil.copytree('./allfiles/雙拼注音鍵位說明圖示/', './sort_rime/注�
 
 
 #複製檔案(注音洋蔥mixin版)
-shutil.copyfile("./allfiles/essay-zh-hant-mc.txt", "./sort_rime/注音洋蔥mixin版/essay-zh-hant-mc.txt")
+shutil.copyfile("./allfiles/essay-zh-hant-mc-mixin.txt", "./sort_rime/注音洋蔥mixin版/essay-zh-hant-mc-mixin.txt")
 shutil.copyfile("./allfiles/essay-jp-onion.txt", "./sort_rime/注音洋蔥mixin版/essay-jp-onion.txt")
 shutil.copyfile("./allfiles/allbpm.dict.yaml", "./sort_rime/注音洋蔥mixin版/allbpm.dict.yaml")
 shutil.copyfile("./allfiles/allbpm.schema.yaml", "./sort_rime/注音洋蔥mixin版/allbpm.schema.yaml")
@@ -252,7 +252,7 @@ shutil.copytree('./allfiles/jpnin1完整轉寫custom/', './sort_rime/注音洋�
 
 
 #複製檔案(地球拼音洋蔥mix-in版)
-shutil.copyfile("./allfiles/essay-zh-hant-mc.txt", "./sort_rime/地球拼音洋蔥mix-in版/essay-zh-hant-mc.txt")
+shutil.copyfile("./allfiles/essay-zh-hant-mc-mixin.txt", "./sort_rime/地球拼音洋蔥mix-in版/essay-zh-hant-mc-mixin.txt")
 shutil.copyfile("./allfiles/cangjie5.dict.yaml", "./sort_rime/地球拼音洋蔥mix-in版/cangjie5.dict.yaml")
 shutil.copyfile("./allfiles/cangjie5.schema.yaml", "./sort_rime/地球拼音洋蔥mix-in版/cangjie5.schema.yaml")
 shutil.copyfile("./allfiles/ocm_mixin_jp.dict.yaml", "./sort_rime/地球拼音洋蔥mix-in版/ocm_mixin_jp.dict.yaml")
