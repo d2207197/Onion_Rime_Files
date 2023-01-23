@@ -22,12 +22,12 @@ import_tables:
   - phrases.cht_en_w
   - phrases.chtp
   # - phrases.cht  #《未標注拼音之中文詞庫》  #不建議打開。
-  # - phrases.jp_hk_more  #《日語大詞庫》  #欲更精準 mapping，可打開並關閉小詞庫 phrases.jp_hk。
   - phrases.en_o_w
   - phrases.la_py_w
   - phrases.en_l_w
   - phrases.en_u_w
   - phrases.la_eu_w
+  # - phrases.jp_hk_more  #《日語大詞庫》  #欲更精準 mapping，可打開並關閉小詞庫 phrases.jp_hk。
   - phrases.jp_hk
   - phrases.jp_hkkreduce
   # - phrases.kr_more  #《韓語大詞庫》  #欲更精準 mapping，可打開並關閉小詞庫 phrases.kr。
