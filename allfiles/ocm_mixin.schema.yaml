@@ -401,7 +401,7 @@ top_reverse_lookup:
     - xform/( ryBB)$/$1`拉-小@/ #修正錯漏
     - xform/( wyBB)$/$1`拉-小@/ #修正錯漏
     - "xlit|ABCDEF`@|';/!,.〔〕|"
-    - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
+    - "xlit|abcdefghijklmnopqrstuvwxyz/|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ⧸|"
     - xform/( ᴊᴊ;)〔拉-大〕/$1〔拉〕/ #修正錯漏
     - xform/〔$// #修正錯漏
 ######################調出其他語言之翻譯器(結尾符號調出各國語言輸入)################
