@@ -26,6 +26,7 @@ switches:
     reset: 0
     states: [ 。，, ．， ]
   - name: simplification
+    # reset: 0
     states: [ 漢字, 汉字 ]
   - name: back_mark
     reset: 0
