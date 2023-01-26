@@ -59,7 +59,7 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - table_translator@custom_phrase
+    # - table_translator@custom_phrase
     - script_translator@reverse2_lookup
     - script_translator
 
@@ -142,13 +142,13 @@ translator:
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
     - 'xform/\\/ /' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
 ############################## 以下為短語 ##########################################
-custom_phrase:
-  dictionary: ""
-  user_dict: bopomo_onion_phrase
-  db_class: stabledb
-  enable_completion: false
-  enable_sentence: false
-  initial_quality: 1
+# custom_phrase:
+#   dictionary: ""
+#   user_dict: bopomo_onion_phrase
+#   db_class: stabledb
+#   enable_completion: false
+#   enable_sentence: false
+#   initial_quality: 1
 ################################ 以下為使用ooo反查注音 #############################
 reverse2_lookup:
   tag: reverse2_lookup

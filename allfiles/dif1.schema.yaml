@@ -121,7 +121,7 @@ engine:
   translators:
 #以下的排序會嚴重影響到出字詞的排序，甚至會錯亂
     - punct_translator
-    - table_translator@custom_phrase
+    # - table_translator@custom_phrase
     - table_translator@pt
     - script_translator@jphi_lookup
     - script_translator@jpka_lookup
@@ -206,13 +206,13 @@ speller:
   algebra:
     - abbrev/-@/-/ #修改順序用
 ################################### 短語和外掛標點 ######################################
-custom_phrase:
-  dictionary: ""
-  user_dict: dif1_phrase
-  db_class: stabledb
-  enable_completion: false
-  enable_sentence: false
-  initial_quality: 1
+# custom_phrase:
+#   dictionary: ""
+#   user_dict: dif1_phrase
+#   db_class: stabledb
+#   enable_completion: false
+#   enable_sentence: false
+#   initial_quality: 1
 
 pt:
   tag: pt

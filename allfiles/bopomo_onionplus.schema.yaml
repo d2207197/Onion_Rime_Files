@@ -104,7 +104,7 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - table_translator@custom_phrase
+    # - table_translator@custom_phrase
     - table_translator@emoji_series
     - script_translator@reverse2_lookup
     - table_translator@easy_en
@@ -241,13 +241,13 @@ translator:
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
     - 'xform/\\/⁞/' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
 ############################## 短語 #########################################
-custom_phrase:
-  dictionary: ""
-  user_dict: bopomo_onionplus_phrase
-  db_class: stabledb
-  enable_completion: false
-  enable_sentence: false
-  initial_quality: 1
+# custom_phrase:
+#   dictionary: ""
+#   user_dict: bopomo_onionplus_phrase
+#   db_class: stabledb
+#   enable_completion: false
+#   enable_sentence: false
+#   initial_quality: 1
 ################################ 反查注音 ###################################
 reverse2_lookup:
   tag: reverse2_lookup
