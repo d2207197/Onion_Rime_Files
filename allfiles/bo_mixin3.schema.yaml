@@ -102,7 +102,7 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - table_translator@bo_mixin_phrase
+    - table_translator@custom_phrase
     - table_translator@emoji_series
     - table_translator@easy_en
     - table_translator@easy_en_upper
@@ -381,7 +381,7 @@ translator:
   dictionary: bo_mixin.extended
   prism: bo_mixin3
   enable_charset_filter: false
-  initial_quality: "1"
+  initial_quality: 1
   disable_user_dict_for_patterns:
 #拉丁
     - ^[-a-z,./][;/]?'$
@@ -640,13 +640,13 @@ all_bpm:
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347 |ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙ˉ|"
     - 'xform/\\//'
 ################################### 短語 ######################################
-bo_mixin_phrase:
+custom_phrase:
   dictionary: ""
   user_dict: bo_mixin_phrase
   db_class: stabledb
   enable_completion: false
   enable_sentence: false
-  initial_quality: "2"
+  initial_quality: 2
 ############################# 反查注音 ###################################
 reverse2_lookup:
   tag: reverse2_lookup

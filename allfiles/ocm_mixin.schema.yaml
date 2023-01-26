@@ -123,7 +123,7 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - table_translator@ocm_mixin_phrase
+    - table_translator@custom_phrase
     - table_translator@pt
     - table_translator@top_fixed
     - script_translator
@@ -276,12 +276,13 @@ speller:
     - xform/^;;([a-z]+)(')$/$1$2$2/ #拉丁-組合變音標記
     - derive/^([a-z]+)[';]$/$1/ #拉丁 #B' #[']?#不使大寫轉成單「'」此條要「遮屏」#
 ################################### 短語和外掛標點 ######################################
-ocm_mixin_phrase:
+custom_phrase:
   dictionary: ""
   user_dict: ocm_mixin_phrase
   db_class: stabledb
   enable_completion: false
   enable_sentence: false
+  initial_quality: 1
 
 pt:
   tag: pt

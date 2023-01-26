@@ -44,7 +44,7 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - table_translator@jpnin1_phrase
+    - table_translator@custom_phrase
     - script_translator@kanji_input
     - script_translator
     # - lua_translator@convert_japan_translator
@@ -243,12 +243,13 @@ translator:
     # - ^[sc]h[auo]$
     # - ^j[auo]$
 
-jpnin1_phrase:
+custom_phrase:
   dictionary: ""
   user_dict: jpnin1_phrase
   db_class: stabledb #tabledb
   enable_completion: false
   enable_sentence: false
+  initial_quality: 1
 
 kanji_input:
   tag: kanji_input

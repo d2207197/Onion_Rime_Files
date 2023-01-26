@@ -157,7 +157,7 @@ translator:
   dictionary: bopomo_onion_double.extended
   prism: bopomo_onion_double
   enable_user_dict: true
-  initial_quality: "0"
+  initial_quality: 0
   preedit_format:
 ###############
     - xform/\\/ /
