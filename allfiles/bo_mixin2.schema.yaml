@@ -110,11 +110,15 @@ engine:
     - script_translator@fs2
     - script_translator@all_bpm
     - script_translator@reverse2_lookup
-    - lua_translator@t2_translator
+    - lua_translator@mf_translator
+    # - lua_translator@t2_translator
     - lua_translator@email_url_translator
     - lua_translator@instruction_grave_bpmf
     # - lua_translator@p_convert_japan_translator
     - script_translator
+############################ lua_translator 前綴 ########################################
+mf_translator:
+  prefix: "'/"
 ################################### 選單 ################################################
 menu:
   # alternative_select_keys: "QAZWSXEDCRFV"

@@ -12,8 +12,9 @@
 --      - lua_filter@lua_function2
 --    可掛接作用功能:
 --      ...
---      - lua_translator@t_translator                --（引lua資料夾）「`」開頭打出時間日期
---      - lua_translator@t2_translator               --（引lua資料夾）「'/」開頭打出時間日期
+--      - lua_translator@t_translator                --（關）「`」開頭打出時間日期
+--      - lua_translator@t2_translator               --（關）「'/」開頭打出時間日期
+--      - lua_translator@mf_translator               --（引lua資料夾）合併以上兩個時間日期translator。
 --      - lua_translator@date_translator             --（引lua資料夾）（liur）「``」開頭打出時間日期
 --      - lua_translator@mytranslator                --（關）（有缺函數，參考勿用，暫關閉）
 --      - lua_translator@instruction_dbpmf           --（引lua資料夾）選項中顯示洋蔥雙拼各種說明
@@ -304,8 +305,10 @@ instruction_ocm = require("translator_instruction_ocm")
 
 
 --- t_translator 系列
-t_translator = require("translator_time_translator")
-t2_translator = require("translator_time2_translator")
+-- 合併 t_translator 和 t2_translator 為 mf_translator。
+-- t_translator = require("translator_time_translator")
+-- t2_translator = require("translator_time2_translator")
+mf_translator = require("translator_multifunction_translator")
 
 
 -- --- 日文出羅馬字、全形羅馬字、半形片假名、全片假名、全平假名。

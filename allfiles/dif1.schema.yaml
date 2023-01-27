@@ -141,10 +141,14 @@ engine:
     - table_translator@easy_en_upper
     # - script_translator@easy_en_script
     - script_translator@japan
-    - lua_translator@t2_translator
+    - lua_translator@mf_translator
+    # - lua_translator@t2_translator
     - lua_translator@email_urlw_translator
     - lua_translator@instruction_ocm
     # - lua_translator@p_convert_japan_translator
+############################ lua_translator 前綴 ########################################
+mf_translator:
+  prefix: "'/"
 ################################### 選單 ################################################
 menu:
   alternative_select_keys: "0123456789"

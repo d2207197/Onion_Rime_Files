@@ -68,9 +68,13 @@ engine:
     - table_translator@emoji_series
     - script_translator@reverse2_lookup
     - script_translator
-    - lua_translator@t_translator
+    - lua_translator@mf_translator
+    # - lua_translator@t_translator
     - lua_translator@email_url_translator
     - lua_translator@instruction_dbpmf
+
+mf_translator:
+  prefix: "`"
 
 menu:
   alternative_select_keys: "1234567890"

@@ -74,7 +74,8 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - lua_translator@t_translator
+    - lua_translator@mf_translator
+    # - lua_translator@t_translator
     - lua_translator@email_url_translator
     # - script_translator
     - table_translator
@@ -82,6 +83,9 @@ engine:
     - script_translator@reverse2_lookup
     - table_translator@reverse3_lookup
 
+
+mf_translator:
+  prefix: "`"
 
 
 simplifier:
