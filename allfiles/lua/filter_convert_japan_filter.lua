@@ -37,32 +37,31 @@ end
 function M.func(input,env)
   local engine = env.engine
   local context = engine.context
-  local caret_pos = context.caret_pos
   local o_input = context.input  -- 原始未轉換輸入碼
   local start = context:get_preedit().sel_start
   local _end = context:get_preedit().sel_end
-  local _end_c = caret_pos
+  local caret_pos = context.caret_pos
   local c, s = string.match(o_input, env.match_pattern)
   if caret_pos == #o_input and (c~=nil) then
     local es = _end - start - 2  --減二為扣掉「.,」兩個尾綴（c不包含，故前移兩位）
     local c = string.sub(c, -es)
     -- local c = string.sub(c, start ,_end)
     local jp_p = env.tips_jp .. c .. s
-    local roma = Candidate("jp", start, _end_c, revise_t(c) , "〔羅馬字〕")
-    local roma_f = Candidate("jp", start, _end_c, fullshape_t(c), "〔全形羅馬字〕")
+    local roma = Candidate("jp", start, caret_pos, revise_t(c) , "〔羅馬字〕")
+    local roma_f = Candidate("jp", start, caret_pos, fullshape_t(c), "〔全形羅馬字〕")
     yield( change_preedit(roma, jp_p) )
     yield( change_preedit(roma_f, jp_p) )
 
     local hw = halfwidth_kata_t(c)
     if not string.match(hw, "%l") then
-      local hwkata = Candidate("jp", start, _end_c, hw, "〔半形片假名〕")
-      local kata = Candidate("jp", start, _end_c, kata_t(hw), "〔片假名〕")
-      local hira = Candidate("jp", start, _end_c, hira_t(hw), "〔平假名〕")
+      local hwkata = Candidate("jp", start, caret_pos, hw, "〔半形片假名〕")
+      local kata = Candidate("jp", start, caret_pos, kata_t(hw), "〔片假名〕")
+      local hira = Candidate("jp", start, caret_pos, hira_t(hw), "〔平假名〕")
       yield( change_preedit(hwkata, jp_p) )
       yield( change_preedit(kata, jp_p) )
       yield( change_preedit(hira, jp_p) )
     else
-      local no_kana = Candidate("jp", start, _end_c, "", "〔該拼寫無假名〕")
+      local no_kana = Candidate("jp", start, caret_pos, "", "〔該拼寫無假名〕")
       yield( change_preedit(no_kana, jp_p) )
     end
 

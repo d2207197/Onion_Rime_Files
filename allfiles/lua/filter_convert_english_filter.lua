@@ -57,11 +57,10 @@ end
 function M.func(input,env)
   local engine = env.engine
   local context = engine.context
-  local caret_pos = context.caret_pos
   local o_input = context.input  -- 原始未轉換輸入碼
   local start = context:get_preedit().sel_start
   -- local _end = context:get_preedit().sel_end + 1  --一般末尾「;」會多一。
-  local _end_c = caret_pos
+  local caret_pos = context.caret_pos
 
   for cand in input:iter() do
     yield(cand)
@@ -71,7 +70,7 @@ function M.func(input,env)
     local mstr, cp, sp = o_input:match(env.match_pattern)  -- 取代 s1~ s5
     local cp_tab = env.english_pattern[cp]
     if cp_tab then
-      local e_cand = Candidate("en", start, _end_c, cp_tab.func(mstr), cp_tab.comment)
+      local e_cand = Candidate("en", start, caret_pos, cp_tab.func(mstr), cp_tab.comment)
       -- yield( change_preedit(e_cand, env.tips_en .. mstr .. cp .. sp) )
       -- yield( env.enable_tips and change_preedit(e_cand, env.tips_en .. mstr .. cp .. sp) or e_cand )
       yield( env.p_prefix ~= "" and change_preedit(e_cand, env.tips_en .. mstr .. cp .. sp) or e_cand )
