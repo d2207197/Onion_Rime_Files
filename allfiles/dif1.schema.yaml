@@ -78,8 +78,8 @@ engine:
     - lua_filter@mix_cf2_cfp_filter  # 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
     # - lua_filter@comment_filter_plus
     - lua_filter@en_sort_filter
-    - lua_filter@p_convert_japan_filter
-    - lua_filter@p_convert_english_filter
+    - lua_filter@convert_english_filter
+    - lua_filter@convert_japan_filter
     - simplifier@back_mark
     - simplifier@punct_mark
     - reverse_lookup_filter@ovff_reverse_lookup
@@ -198,11 +198,11 @@ mix_cf2_cfp_filter:
 en_sort_filter:
   tags: [ easy_en ]
 
-p_convert_japan_filter:
-  tags: [ japan ]
-
-p_convert_english_filter:
+convert_english_filter:
   tags: [ easy_en ]
+
+convert_japan_filter:
+  tags: [ japan ]
 ################################### 拼寫 ######################################
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;-"
@@ -431,12 +431,12 @@ easy_en:
   # initial_quality: 1000
   prefix: "'."
   # suffix: " "
-  tips: "《Easy英語》▶"
+  tips: "《Easy》▶"
   extra_tags:
     - easy_en_upper
     # - easy_en_script
   preedit_format:
-    - xform/^/《Easy英語》/
+    - xform/^/《Easy》/
     # - xform/》;/》; /
     # - xform/》'/》' /
     # - xform|》[/]|》/ |

@@ -14,8 +14,75 @@ local halfwidth_kata_t = c_k.halfwidth_kata_t
 local kata_t = c_k.kata_t
 local hira_t = c_k.hira_t
 
--- local change_preedit = require("filter_cand/change_preedit")
 
+
+
+--- 以下新的寫法：合併寫法
+----------------------------------------------------------------------------------------
+local change_preedit = require("filter_cand/change_preedit")
+----------------------------------------------------------------------------------------
+local M={}
+function M.init(env)
+  local config = env.engine.schema.config
+  local check_plus = config:get_string("translator/dictionary") or ""  -- 檢查為獨立方案或掛接方案
+  env.p_prefix = check_plus ~= "jpnin1.extended" and config:get_string("japan/prefix") or ""
+  env.match_pattern = env.p_prefix .. "([-/a-z.,;]+)(%., ?)$"  -- "[,46]([-/a-z][-/a-z.,;]*)(%., ?)$"：會有Bug
+  env.tips_jp = "《日-固列》"
+  -- env.tips_jp = env.p_prefix ~= "" and "《日-固列》" or ""
+end
+
+function M.fini(env)
+end
+
+function M.func(input,env)
+  local engine = env.engine
+  local context = engine.context
+  local caret_pos = context.caret_pos
+  local o_input = context.input  -- 原始未轉換輸入碼
+  local start = context:get_preedit().sel_start
+  local _end = context:get_preedit().sel_end
+  local _end_c = caret_pos
+  local c, s = string.match(o_input, env.match_pattern)
+  if caret_pos == #o_input and (c~=nil) then
+    local es = _end - start - 2  --減二為扣掉「.,」兩個尾綴（c不包含，故前移兩位）
+    local c = string.sub(c, -es)
+    -- local c = string.sub(c, start ,_end)
+    local jp_p = env.tips_jp .. c .. s
+    local roma = Candidate("jp", start, _end_c, revise_t(c) , "〔羅馬字〕")
+    local roma_f = Candidate("jp", start, _end_c, fullshape_t(c), "〔全形羅馬字〕")
+    yield( change_preedit(roma, jp_p) )
+    yield( change_preedit(roma_f, jp_p) )
+
+    local hw = halfwidth_kata_t(c)
+    if not string.match(hw, "%l") then
+      local hwkata = Candidate("jp", start, _end_c, hw, "〔半形片假名〕")
+      local kata = Candidate("jp", start, _end_c, kata_t(hw), "〔片假名〕")
+      local hira = Candidate("jp", start, _end_c, hira_t(hw), "〔平假名〕")
+      yield( change_preedit(hwkata, jp_p) )
+      yield( change_preedit(kata, jp_p) )
+      yield( change_preedit(hira, jp_p) )
+    else
+      local no_kana = Candidate("jp", start, _end_c, "", "〔該拼寫無假名〕")
+      yield( change_preedit(no_kana, jp_p) )
+    end
+
+  else
+    for cand in input:iter() do
+      yield(cand)
+    end
+  end
+end
+
+return M
+----------------------------------------------------------------------------------------
+
+
+
+
+--- 以下舊的寫法：分開寫法
+--[[
+----------------------------------------------------------------------------------------
+local change_preedit = require("filter_cand/change_preedit")
 ----------------------------------------------------------------------------------------
 -- 主方案用
 local function convert_japan_filter(input, env)
@@ -59,8 +126,8 @@ local function p_convert_japan_filter(input, env)
   local start = context:get_preedit().sel_start
   -- local _end = context:get_preedit().sel_end + 1  --一般日語末尾只有「.」或「,」，「.,」會多一。
   local _end = caret_pos
-  local tips_jp = '《日-固列》'
-  local c , s = string.match(o_input, "[,46]([-/a-z][-/a-z.,;]*)(%., ?)$")
+  local tips_jp = "《日-固列》"
+  local c, s = string.match(o_input, "[,46]([-/a-z][-/a-z.,;]*)(%., ?)$")
   if caret_pos == #o_input and (c~=nil) then
   -- if (c~=nil) and #o_input <= _end then
   -- if (c~=nil) and context:is_composing() then
@@ -115,3 +182,5 @@ end
 
 return { convert_japan_filter = convert_japan_filter,
        p_convert_japan_filter = p_convert_japan_filter }
+----------------------------------------------------------------------------------------
+--]]

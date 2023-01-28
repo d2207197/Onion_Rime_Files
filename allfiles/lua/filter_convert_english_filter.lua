@@ -3,6 +3,9 @@
 easy 英文尾綴「;」或「;;」生成全大寫或首字母大寫。
 --]]
 
+--[[
+從 f_components 資料夾匯入假名相關轉換函數。
+--]]
 local f_e_s = require("f_components/f_english_style")
 local english_s = f_e_s.english_s
 local english_u1 = f_e_s.english_u1
@@ -36,7 +39,7 @@ function M.init(env)
   local check_plus = config:get_string("translator/dictionary") or ""  -- 檢查為獨立方案或掛接方案
   env.p_prefix = check_plus ~= "easy_en_lower" and config:get_string("easy_en/prefix") or ""
   -- env.enable_tips = check_plus ~= "easy_en_lower" and true or false
-  env.match_pattern = env.p_prefix .. "([-/a-z.,']+)([;/']*)( ?)$"  -- "[.3]?([-/a-z.,']+)([;/']*)( ?)$"：有Bug
+  env.match_pattern = env.p_prefix .. "([-/a-z.,']+)([;/']*)( ?)$"  -- "[.3]?([-/a-z.,']+)([;/']*)( ?)$"：會有Bug
   env.tips_en = "《Easy》"
 
   env.english_pattern = {
@@ -58,7 +61,7 @@ function M.func(input,env)
   local o_input = context.input  -- 原始未轉換輸入碼
   local start = context:get_preedit().sel_start
   -- local _end = context:get_preedit().sel_end + 1  --一般末尾「;」會多一。
-  local _end = caret_pos
+  local _end_c = caret_pos
 
   for cand in input:iter() do
     yield(cand)
@@ -68,7 +71,7 @@ function M.func(input,env)
     local mstr, cp, sp = o_input:match(env.match_pattern)  -- 取代 s1~ s5
     local cp_tab = env.english_pattern[cp]
     if cp_tab then
-      local e_cand = Candidate("en", start, _end, cp_tab.func(mstr), cp_tab.comment)
+      local e_cand = Candidate("en", start, _end_c, cp_tab.func(mstr), cp_tab.comment)
       -- yield( change_preedit(e_cand, env.tips_en .. mstr .. cp .. sp) )
       -- yield( env.enable_tips and change_preedit(e_cand, env.tips_en .. mstr .. cp .. sp) or e_cand )
       yield( env.p_prefix ~= "" and change_preedit(e_cand, env.tips_en .. mstr .. cp .. sp) or e_cand )
@@ -156,8 +159,9 @@ return { convert_english_filter = convert_english_filter,
 
 
 
---- 以下舊的寫法
+--- 以下舊的寫法：分開寫法
 --[[
+----------------------------------------------------------------------------------------
 -- 主方案用
 local function convert_english_filter(input, env)
   local engine = env.engine
@@ -254,4 +258,5 @@ end
 
 return { convert_english_filter = convert_english_filter,
        p_convert_english_filter = p_convert_english_filter }
+----------------------------------------------------------------------------------------
 --]]

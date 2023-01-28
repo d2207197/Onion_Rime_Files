@@ -83,8 +83,8 @@ engine:
     # - lua_filter@symbols_mark_filter
     # - simplifier@back_mark
     - lua_filter@en_sort_filter
-    - lua_filter@p_convert_japan_filter
-    - lua_filter@p_convert_english_filter
+    - lua_filter@convert_english_filter
+    - lua_filter@convert_japan_filter
     - simplifier@emoji_switch
     - simplifier
     - simplifier@punct_mark
@@ -199,11 +199,11 @@ ocm_mixin_filter:
 en_sort_filter:
   tags: [ easy_en ]
 
-p_convert_japan_filter:
-  tags: [ japan ]
-
-p_convert_english_filter:
+convert_english_filter:
   tags: [ easy_en ]
+
+convert_japan_filter:
+  tags: [ japan ]
 ################################### 拼寫 ######################################
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;,'./-`"
@@ -425,12 +425,12 @@ easy_en:
   # initial_quality: 1000
   prefix: "'."
   # suffix: " "
-  tips: "《Easy英語》▶"
+  tips: "《Easy》▶"
   extra_tags:
     - easy_en_upper
     # - easy_en_script
   preedit_format:
-    - xform/^/《Easy英語》/
+    - xform/^/《Easy》/
     # - xform/》;/》; /
     # - xform/》'/》' /
     # - xform|》[/]|》/ |
