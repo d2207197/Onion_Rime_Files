@@ -144,14 +144,10 @@ engine:
     - lua_translator@email_urlw_translator
     - lua_translator@instruction_ocm
     # - lua_translator@p_convert_japan_translator
-############################ lua_translator 前綴 ########################################
+############################ lua_translator 前綴 ##############################
 mf_translator:
   prefix: "'/"
-################################### 選單 ################################################
-menu:
-  alternative_select_keys: '0123456789'
-  page_size: 9
-################################### 濾鏡 ################################################
+################################### 濾鏡 ######################################
 simplifier:
   opencc_config: tw2s.json
   tips: all
@@ -204,6 +200,10 @@ convert_english_filter:
 
 convert_japan_filter:
   tags: [ japan ]
+################################### 選單 ######################################
+menu:
+  alternative_select_keys: '0123456789'
+  page_size: 9
 ################################### 拼寫 ######################################
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;,'./-`"

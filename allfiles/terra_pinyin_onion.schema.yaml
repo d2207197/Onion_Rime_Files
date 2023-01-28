@@ -50,7 +50,7 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - table_translator@custom_phrase
+    # - table_translator@custom_phrase
     - reverse_lookup_translator
     - script_translator
   filters:
@@ -58,9 +58,6 @@ engine:
     - simplifier@back_mark
     - reverse_lookup_filter@top_reverse_lookup
     - uniquifier
-
-menu:
-  page_size: 9
 
 simplifier:
   opencc_config: tw2s.json
@@ -75,6 +72,9 @@ back_mark:
   comment_format:
     - xform/^/  /
     - xform/@/ /
+
+menu:
+  page_size: 9
 
 speller:
   alphabet: "zyxwvutsrqponmlkjihgfedcba-;,./'"
@@ -304,13 +304,13 @@ top_reverse_lookup:
     # - xform/([a-z]+)[0-5]/$1/
     - xform/([a-z]+)5/$1/
 
-custom_phrase:
-  dictionary: ""
-  user_dict: custom_phrase
-  db_class: stabledb
-  enable_completion: false
-  enable_sentence: false
-  initial_quality: 1
+# custom_phrase:
+#   dictionary: ""
+#   user_dict: custom_phrase
+#   db_class: stabledb
+#   enable_completion: false
+#   enable_sentence: false
+#   initial_quality: 1
 
 reverse_lookup:
   dictionary: cangjie5

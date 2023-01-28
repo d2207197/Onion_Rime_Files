@@ -256,7 +256,7 @@ key_binder:
     - {accept: Shift+Tab, send: Page_Up, when: has_menu}
     - {accept: Shift+space, send: Page_Down, when: has_menu}
     - {accept: Tab, send: Page_Down, when: has_menu}
-#######################################    
+#######################################
     #    - {accept: Return, send: space, when: has_menu} #return直出
     - {accept: space, send: Escape, when: composing} #空碼清屏用
     - {accept: space, send: space, when: has_menu} #補上一條產生之bug

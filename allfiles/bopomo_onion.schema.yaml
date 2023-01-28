@@ -62,12 +62,7 @@ engine:
     # - table_translator@custom_phrase
     - script_translator@reverse2_lookup
     - script_translator
-
-menu:
-  # alternative_select_keys: "QAZWSXEDCRFV"
-  alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
-  page_size: 6
-############################### 濾鏡 ##################################
+################################### 濾鏡 ######################################
 simplifier:
   opencc_config: tw2s.json
   tips: all
@@ -76,7 +71,12 @@ simplifier:
 #   tags: [ abc ]
 # gbk:
 #   tags: [ abc ]
-############################## 拼寫正則 #####################################
+################################### 選單 ######################################
+menu:
+  # alternative_select_keys: "QAZWSXEDCRFV"
+  alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
+  page_size: 6
+################################### 拼寫 ######################################
 speller:
   alphabet: "1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-3467 "
   initials: "1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-"

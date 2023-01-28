@@ -119,15 +119,10 @@ engine:
     - lua_translator@instruction_grave_bpmf
     # - lua_translator@p_convert_japan_translator
     - script_translator
-############################ lua_translator 前綴 ########################################
+############################ lua_translator 前綴 ##############################
 mf_translator:
   prefix: "'/"
-################################### 選單 ################################################
-menu:
-  # alternative_select_keys: "QAZWSXEDCRFV"
-  alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
-  page_size: 6
-################################### 濾鏡 ################################################
+################################### 濾鏡 ######################################
 simplifier:
   opencc_config: tw2s.json
   tips: all
@@ -174,6 +169,11 @@ convert_japan_filter:
 
 # mix_cf2_miss_filter:
 #   tags: [ punct, abc, reverse2_lookup ]
+################################### 選單 ######################################
+menu:
+  # alternative_select_keys: "QAZWSXEDCRFV"
+  alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
+  page_size: 6
 ################################### 拼寫 ######################################
 speller:
   alphabet: "1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 3467"

@@ -72,13 +72,9 @@ engine:
     # - lua_translator@t_translator
     - lua_translator@email_url_translator
     - lua_translator@instruction_dbpmf
-
+######################## lua_translator 前綴 ##########################
 mf_translator:
   prefix: "`"
-
-menu:
-  alternative_select_keys: "1234567890"
-  page_size: 6
 ############################### 濾鏡 ##################################
 simplifier:
   opencc_config: tw2s.json
@@ -94,7 +90,11 @@ charset_cjk_filter_plus:
 #   tags: [ abc ]
 # gbk:
 #   tags: [ abc ]
-############################## 拼寫正則 #####################################
+################################### 選單 ######################################
+menu:
+  alternative_select_keys: "1234567890"
+  page_size: 6
+################################### 拼寫 ######################################
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;',./"
   initials: "abcdefghijklmnopqrstuvwxyz"
