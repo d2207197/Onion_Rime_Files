@@ -16,33 +16,34 @@ lua_custom_phrase:
   user_dict: "lua_custom_phrase"
 --]]
 ---------------------------------------------------------------
-local function file_exists(path)
-    if type(path)~="string" then return false end
-    return os.rename(path,path) and true or false
-end
+-- local function file_exists(path)
+--     if type(path)~="string" then return false end
+--     return os.rename(path,path) and true or false
+-- end
 
-local function isFile(path)
-    if not file_exists(path) then return false end
-    local f = io.open(path)
-    if f then
-      local res = f:read(1) and true or false
-      f:close()
-      return res
-    end
-    return false
-end
+-- local function isFile(path)
+--     if not file_exists(path) then return false end
+--     local f = io.open(path)
+--     if f then
+--       local res = f:read(1) and true or false
+--       f:close()
+--       return res
+--     end
+--     return false
+-- end
 ---------------------------------------------------------------
 
 local function load_text_dict(text_dict)
-  local slash = package.path:sub(1,1)
-  local path= rime_api.get_user_data_dir() .. slash
-  filename = path .. ( text_dict or "lua_custom_phrase" ) .. ".txt" or ""
+  -- local slash = package.path:sub(1,1)  -- 實際內容太長，不用
+  local path= rime_api.get_user_data_dir()
+  filename = path .. "/" .. ( text_dict or "lua_custom_phrase" ) .. ".txt" or ""
 
-  -- if io.open(filename) == nil then  --如果 schema 中沒設或缺檔則轉用 lua_custom_phrase.txt。
-  --   filename = path .. "lua_custom_phrase" .. ".txt"
-  -- end
+  if io.open(filename) == nil then  --如果 schema 中沒設或缺檔則轉用 lua_custom_phrase.txt。
+    filename = path .. "\\" .. ( text_dict or "lua_custom_phrase" ) .. ".txt" or ""
+  end
 
-  if not isFile(filename) then return end
+  if io.open(filename) == nil then return end
+  -- if not isFile(filename) then return end  -- 在 widonws 中會有問題。
 
   local tab = {}
   for line in io.open(filename):lines() do
