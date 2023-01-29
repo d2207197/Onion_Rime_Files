@@ -34,11 +34,11 @@ lua_custom_phrase:
 ---------------------------------------------------------------
 
 local function load_text_dict(text_dict)
-  -- local slash = package.path:sub(1,1)  -- 實際內容太長，不用
+  -- local slash = package.path:sub(1,1)  -- package.path 跑出的內容太長，不用
   local path= rime_api.get_user_data_dir()
-  filename = path .. "/" .. ( text_dict or "lua_custom_phrase" ) .. ".txt" or ""
+  filename = path .. "/" .. ( text_dict or "lua_custom_phrase" ) .. ".txt" or ""  -- Mac 用
 
-  if io.open(filename) == nil then  --如果 schema 中沒設或缺檔則轉用 lua_custom_phrase.txt。
+  if io.open(filename) == nil then  -- Windows 用
     filename = path .. "\\" .. ( text_dict or "lua_custom_phrase" ) .. ".txt" or ""
   end
 
@@ -97,8 +97,6 @@ local function translate(input, seg, env)
       cand.quality = env.quality
       yield(cand)
     end
-    -- local custom_phrase_cand = Candidate("short", start, _end, c_p_tab, "〔短語〕")
-    -- yield( custom_phrase_cand )
   end
 
   -- --- 以下測試用
