@@ -43,6 +43,7 @@ shutil.copyfile("./allfiles/terra_pinyin_onion.dict.yaml", "./sort_rime/注音�
 shutil.copyfile("./allfiles/symbols_bpmf.dict.yaml", "./sort_rime/注音洋蔥雙拼版/symbols_bpmf.dict.yaml")
 shutil.copyfile("./allfiles/symbols_double_bpmf.schema.yaml", "./sort_rime/注音洋蔥雙拼版/symbols_double_bpmf.schema.yaml")
 shutil.copyfile("./allfiles/element_double_bopomo.yaml", "./sort_rime/注音洋蔥雙拼版/element_double_bopomo.yaml")
+shutil.copyfile("./allfiles/lua_custom_phrase.txt", "./sort_rime/注音洋蔥雙拼版/lua_custom_phrase.txt")
 
 shutil.copyfile("./allfiles/各方案default.custom/注音洋蔥雙拼版_custom/default.custom.yaml", "./sort_rime/注音洋蔥雙拼版/default.custom.yaml")
 
