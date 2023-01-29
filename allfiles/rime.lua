@@ -217,6 +217,13 @@ convert_english_filter = require("filter_convert_english_filter")
 -- halfwidth_katakana_filter = filter_halfwidth_katakana_filter.halfwidth_katakana_filter
 
 
+-- --- lua_custom_phrase_filter
+-- -- 取代原先 table_translator@custom_phrase。
+-- -- 可多行，用\n\r。
+-- -- 接續掛接方案後，有 bug，上不了屏，改用 translator 實現。
+-- lua_custom_phrase_filter = require("filter_lua_custom_phrase_filter")
+
+
 
 
 --[[
@@ -263,13 +270,6 @@ kr_2set_0m_choice = require("processor_kr_2set_0m_choice")
 -- --- kr_2set_0m （hangeul2set_zeromenu）
 -- -- 韓語成零選項。開關（space_mode）
 -- kr_2set_0m = require("processor_kr_2set_0m")
-
-
--- --- lua_custom_phrase_filter
--- -- 取代原先 table_translator@custom_phrase。
--- -- 可多行，用\n\r。
--- -- 接續掛接方案後，有 bug，上不了屏，改用 translator 實現。
--- lua_custom_phrase_filter = require("filter_lua_custom_phrase_filter")
 
 
 

@@ -47,21 +47,22 @@ local function load_text_dict(text_dict)
 
   local tab = {}
   for line in io.open(filename):lines() do
-    if not line:match("^#") and line:match("^[^\t]+\t[0-9a-z,./; -]+[\t]?%d*$") then
+    if not line:match("^#") then
+      if line:match("^[^\t]+\t[0-9a-z,./; -]+[\t]?%d*$") then
 
-      local line = string.gsub(line,"^([^\t]+\t[^\t]+)\t?.*$","%1")
-      local v_text = string.gsub(line,"^(.+)\t.+","%1")
-      local v_code = string.gsub(line,"^.+\t(.+)","%1")
+        local line = string.gsub(line,"^([^\t]+\t[^\t]+)\t?.*$","%1")
+        local v_text = string.gsub(line,"^(.+)\t.+","%1")
+        local v_code = string.gsub(line,"^.+\t(.+)","%1")
+        -- tab[v_code] = v_text  -- 一個 code 只能有一條短語，下方可一個 code，多條短語。
+        if tab[v_code] == nil then
+          local nn={}
+          table.insert(nn, v_text)
+          tab[v_code] = nn
+        else
+          table.insert(tab[v_code], v_text)
+        end
 
-      -- tab[v_code] = v_text  -- 一個 code 只能有一條短語，下方可一個 code，多條短語。
-      if tab[v_code] == nil then
-        local nn={}
-        table.insert(nn, v_text)
-        tab[v_code] = nn
-      else
-        table.insert(tab[v_code], v_text)
       end
-
     end
   end
 
