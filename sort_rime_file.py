@@ -61,6 +61,7 @@ shutil.copyfile("./allfiles/bo_mixin_kr_hnc.dict.yaml", "./sort_rime/注音洋�
 shutil.copyfile("./allfiles/bo_mixin_la.dict.yaml", "./sort_rime/注音洋蔥mixin版/bo_mixin_la.dict.yaml")
 shutil.copyfile("./allfiles/bo_mixin_en.dict.yaml", "./sort_rime/注音洋蔥mixin版/bo_mixin_en.dict.yaml")
 shutil.copyfile("./allfiles/bo_mixin_phrase.txt", "./sort_rime/注音洋蔥mixin版/bo_mixin_phrase.txt")
+shutil.copyfile("./allfiles/lua_custom_phrase.txt", "./sort_rime/注音洋蔥mixin版/lua_custom_phrase.txt")
 shutil.copyfile("./allfiles/bo_mixin.extended.dict.yaml", "./sort_rime/注音洋蔥mixin版/bo_mixin.extended.dict.yaml")
 shutil.copyfile("./allfiles/bo_mixin1.schema.yaml", "./sort_rime/注音洋蔥mixin版/bo_mixin1.schema.yaml")
 shutil.copyfile("./allfiles/bo_mixin2.schema.yaml", "./sort_rime/注音洋蔥mixin版/bo_mixin2.schema.yaml")
@@ -159,6 +160,7 @@ shutil.copyfile("./allfiles/allbpm.dict.yaml", "./sort_rime/注音洋蔥plus版/
 shutil.copyfile("./allfiles/allbpm.schema.yaml", "./sort_rime/注音洋蔥plus版/allbpm.schema.yaml")
 shutil.copyfile("./allfiles/bopomo_onionplus_space.schema.yaml", "./sort_rime/注音洋蔥plus版/bopomo_onionplus_space.schema.yaml")
 shutil.copyfile("./allfiles/bopomo_onionplus_phrase.txt", "./sort_rime/注音洋蔥plus版/bopomo_onionplus_phrase.txt")
+shutil.copyfile("./allfiles/lua_custom_phrase.txt", "./sort_rime/注音洋蔥plus版/lua_custom_phrase.txt")
 shutil.copyfile("./allfiles/bopomo_onionplus.extended.dict.yaml", "./sort_rime/注音洋蔥plus版/bopomo_onionplus.extended.dict.yaml")
 shutil.copyfile("./allfiles/bopomo_onionplus.schema.yaml", "./sort_rime/注音洋蔥plus版/bopomo_onionplus.schema.yaml")
 shutil.copyfile("./allfiles/cangjie5.dict.yaml", "./sort_rime/注音洋蔥plus版/cangjie5.dict.yaml")
@@ -317,6 +319,7 @@ shutil.copyfile("./allfiles/ocm_mixin_jp.dict.yaml", "./sort_rime/ocm/ocm_mixin/
 shutil.copyfile("./allfiles/ocm_mixin_kr.dict.yaml", "./sort_rime/ocm/ocm_mixin/ocm_mixin_kr.dict.yaml")
 shutil.copyfile("./allfiles/ocm_mixin_la.dict.yaml", "./sort_rime/ocm/ocm_mixin/ocm_mixin_la.dict.yaml")
 shutil.copyfile("./allfiles/ocm_mixin_phrase.txt", "./sort_rime/ocm/ocm_mixin/ocm_mixin_phrase.txt")
+shutil.copyfile("./allfiles/lua_custom_phrase.txt", "./sort_rime/ocm/ocm_mixin/lua_custom_phrase.txt")
 shutil.copyfile("./allfiles/ocm_mixin.extended.dict.yaml", "./sort_rime/ocm/ocm_mixin/ocm_mixin.extended.dict.yaml")
 shutil.copyfile("./allfiles/ocm_mixin.schema.yaml", "./sort_rime/ocm/ocm_mixin/ocm_mixin.schema.yaml")
 
@@ -423,6 +426,7 @@ shutil.copyfile("./allfiles/dif1_kr.schema.yaml", "./sort_rime/ocm/ocm_plus/dif1
 shutil.copyfile("./allfiles/dif1_la.extended.dict.yaml", "./sort_rime/ocm/ocm_plus/dif1_la.extended.dict.yaml")
 shutil.copyfile("./allfiles/dif1_la.schema.yaml", "./sort_rime/ocm/ocm_plus/dif1_la.schema.yaml")
 shutil.copyfile("./allfiles/dif1_phrase.txt", "./sort_rime/ocm/ocm_plus/dif1_phrase.txt")
+shutil.copyfile("./allfiles/lua_custom_phrase.txt", "./sort_rime/ocm/ocm_plus/lua_custom_phrase.txt")
 shutil.copyfile("./allfiles/dif1.extended.dict.yaml", "./sort_rime/ocm/ocm_plus/dif1.extended.dict.yaml")
 shutil.copyfile("./allfiles/dif1.schema.yaml", "./sort_rime/ocm/ocm_plus/dif1.schema.yaml")
 

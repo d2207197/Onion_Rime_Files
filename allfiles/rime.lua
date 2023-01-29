@@ -24,6 +24,7 @@
 --      - lua_translator@email_urlw_translator       --（引lua資料夾）輸入email、網址（多了www.）
 --      - lua_translator@convert_japan_translator    --（關）（效能不佳）日文出羅馬字、全形羅馬字、半形片假名、全片假名、全平假名。
 --      - lua_translator@p_convert_japan_translator  --（關）（效能不佳）同 convert_japan_translator，掛接方案用。
+--      - lua_translator@lua_custom_phrase           --（引lua資料夾）取代原先 table_translator@custom_phrase。可多行，用\n\r。
 --
 --
 --      《 ＊ 以下「濾鏡」注意在 filters 中的順序，關係到作用效果 》
@@ -48,6 +49,7 @@
 --      - lua_filter@convert_japan_filter            --（引lua資料夾）日文出羅馬字、全形羅馬字、半形片假名、全片假名、全平假名。後來合併修改為掛接方案也可使用。
 --      - lua_filter@p_convert_japan_filter          --（關）同 convert_japan_filter，掛接方案用。
 --      - lua_filter@halfwidth_katakana_filter       --（關）（jpnin1）片假名後附加半形片假名。選單顯示太雜亂，故不用。
+--      - lua_filter@lua_custom_phrase_filter        --（關）取代原先 table_translator@custom_phrase。接續掛接方案後，有 bug，上不了屏，改用 translator 實現。
 --
 --      - ＊合併兩個以上函數：
 --      - lua_filter@mix30_nil_comment_filter        --（關） 合併 array30_nil_filter 和 array30_comment_filter，兩個 lua filter 太耗效能。
@@ -263,6 +265,13 @@ kr_2set_0m_choice = require("processor_kr_2set_0m_choice")
 -- kr_2set_0m = require("processor_kr_2set_0m")
 
 
+-- --- lua_custom_phrase_filter
+-- -- 取代原先 table_translator@custom_phrase。
+-- -- 可多行，用\n\r。
+-- -- 接續掛接方案後，有 bug，上不了屏，改用 translator 實現。
+-- lua_custom_phrase_filter = require("filter_lua_custom_phrase_filter")
+
+
 
 
 -- --- mobile_bpmf （手機注音用）
@@ -311,6 +320,12 @@ instruction_ocm = require("translator_instruction_ocm")
 -- t_translator = require("translator_time_translator")
 -- t2_translator = require("translator_time2_translator")
 mf_translator = require("translator_multifunction_translator")
+
+
+--- lua_custom_phrase
+-- 取代原先 table_translator@custom_phrase。
+-- 可多行，用\n\r。
+lua_custom_phrase = require("translator_lua_custom_phrase")
 
 
 -- --- 日文出羅馬字、全形羅馬字、半形片假名、全片假名、全平假名。

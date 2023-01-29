@@ -121,6 +121,7 @@ engine:
   translators:
 #以下的排序會嚴重影響到出字詞的排序，甚至會錯亂
     - punct_translator
+    - lua_translator@lua_custom_phrase
     # - table_translator@custom_phrase
     - table_translator@pt
     - script_translator@jphi_lookup
@@ -146,9 +147,13 @@ engine:
     - lua_translator@email_urlw_translator
     - lua_translator@instruction_ocm
     # - lua_translator@p_convert_japan_translator
-############################ lua_translator 前綴 ##############################
+################################# lua 引用 ####################################
 mf_translator:
   prefix: "'/"
+
+lua_custom_phrase:
+  user_dict: "dif1_phrase"
+  # user_dict: "lua_custom_phrase"
 ################################### 濾鏡 ######################################
 simplifier:
   opencc_config: tw2s.json

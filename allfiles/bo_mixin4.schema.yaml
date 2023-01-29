@@ -109,6 +109,7 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
+    - lua_translator@lua_custom_phrase
     # - table_translator@custom_phrase
     - table_translator@emoji_series
     - table_translator@easy_en
@@ -126,9 +127,13 @@ engine:
     - lua_translator@instruction_grave_bpmf
     # - lua_translator@p_convert_japan_translator
     - script_translator
-############################ lua_translator 前綴 ##############################
+################################# lua 引用 ####################################
 mf_translator:
   prefix: "'/"
+
+lua_custom_phrase:
+  # user_dict: "bo_mixin_phrase"
+  user_dict: "lua_custom_phrase"
 ################################### 濾鏡 ######################################
 simplifier:
   opencc_config: tw2s.json

@@ -65,6 +65,7 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
+    # - lua_translator@lua_custom_phrase
     - table_translator@emoji_series
     - script_translator@reverse2_lookup
     - script_translator
@@ -72,10 +73,14 @@ engine:
     # - lua_translator@t_translator
     - lua_translator@email_url_translator
     - lua_translator@instruction_dbpmf
-######################## lua_translator 前綴 ##########################
+################################# lua 引用 ####################################
 mf_translator:
   prefix: "`"
-############################### 濾鏡 ##################################
+
+# lua_custom_phrase:
+#   user_dict: "bopomo_onion_phrase"
+#   # user_dict: "lua_custom_phrase"
+################################### 濾鏡 ######################################
 simplifier:
   opencc_config: tw2s.json
   tips: all
