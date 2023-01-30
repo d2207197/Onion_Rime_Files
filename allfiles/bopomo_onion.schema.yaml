@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion
   name: "☆注音(洋蔥純注音版)☆"
-  version: "202210"
+  version: "202301"
   author:
     - 『洋蔥』
   description: |
@@ -314,12 +314,12 @@ key_binder:
 #關#    - {accept: space, send: Escape, when: composing} #空碼時，按空格清除
 #關#    - {accept: space, send: space, when: has_menu} #非空碼時，空白還是空白
 ### 補一聲和上屏 raw_input （ paging 時，空白鍵無法輸出一聲 ） ###
-    - {accept: Shift+V, send: space, when: has_menu}
+    - {accept: Shift+D, send: space, when: has_menu}
     - {accept: Shift+L, send: space, when: has_menu}
-    - {accept: Shift+D, send: Shift+Return, when: composing}
+    - {accept: Shift+E, send: Shift+Return, when: composing}
     - {accept: Shift+O, send: Shift+Return, when: composing}
 ### 純注音專門上屏注音文用 ###
-    - {accept: Shift+B, send: Control+Return, when: has_menu}
+    - {accept: Shift+F, send: Control+Return, when: has_menu}
 ### 刪除鍵 ###
     - {accept: BackSpace, send: Control+BackSpace, when: has_menu} #〔關〕刪除前一個拼音字符〔開〕：刪除整組拼音字符（一個字）
     - {accept: Shift+BackSpace, send: BackSpace, when: has_menu}
@@ -327,7 +327,7 @@ key_binder:
     # - {accept: backslash, send: Shift+BackSpace, when: has_menu} #「\」鍵位刪除整組拼音字符（一個字）。
 #關#    - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
 ### 另設快捷刪除鍵 ###
-    - {accept: Shift+F, send: BackSpace, when: composing}
+    - {accept: Shift+R, send: BackSpace, when: composing}
     - {accept: Shift+P, send: BackSpace, when: composing}
 ### 功能快捷鍵 ###
     # - {accept: Control+minus, toggle: back_mark, when: always } #「國際音標和符號」提示碼開關
