@@ -42,7 +42,7 @@
 
   > Linux 反饋問題很多，其 Rime 核心 librime 過舊，librime-lua 掛件缺失！不可能回退使功能打折去符合舊版核心寫法！
   
-  > 原先方案以 Mac 鼠鬚管官方最新封裝版本為實作基礎，後來放飛開始使用新版 librime 核心和 librime-lua 掛件的新功能、新函數。有可能需更換或編譯含最新版 librime-lua 的 librime 核心才能確保完整運行所有功能。核心更換方法：[推薦 Rime 主程式安裝之版本和方法](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E6%8E%A8%E8%96%A6-Rime-%E4%B8%BB%E7%A8%8B%E5%BC%8F%E5%AE%89%E8%A3%9D%E4%B9%8B%E7%89%88%E6%9C%AC%E5%92%8C%E6%96%B9%E6%B3%95)。20230130 官方出[新版](https://github.com/rime/squirrel/releases)，可相容。
+  > 原先方案以 Mac 鼠鬚管官方最新封裝版本為實作基礎，後來放飛開始使用新版 librime 核心和 librime-lua 掛件的新功能、新函數。有可能需更換或編譯含最新版 librime-lua 的 librime 核心才能確保完整運行所有功能。核心更換方法：[推薦 Rime 主程式安裝之版本和方法](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E6%8E%A8%E8%96%A6-Rime-%E4%B8%BB%E7%A8%8B%E5%BC%8F%E5%AE%89%E8%A3%9D%E4%B9%8B%E7%89%88%E6%9C%AC%E5%92%8C%E6%96%B9%E6%B3%95)。20230130 官方推出[鼠鬚管 0.16.1 新版](https://github.com/rime/squirrel/releases)，可相容。
   
   > 承上，有二個非注音方案確定使用最新 librime-lua 函數去達成功能，其他方案也不追求相容舊版，只確保這邊 Windows 和 Mac 兩者皆可正常運行出功能。
   
