@@ -34,36 +34,40 @@ lua_custom_phrase:
 ---------------------------------------------------------------
 
 local function load_text_dict(text_dict)
-  -- local slash = package.path:sub(1,1)  -- package.path 跑出的內容太長，不用
+  -- local slash = package.path:sub(1,1)  -- package.path 跑出的內容太長，不用。
   local path= rime_api.get_user_data_dir()
-  filename = path .. "/" .. ( text_dict or "lua_custom_phrase" ) .. ".txt" or ""  -- Mac 用
+  local filename = path .. "/" .. ( text_dict or "lua_custom_phrase" ) .. ".txt" or ""  -- Mac 用
 
   if io.open(filename) == nil then  -- Windows 用
     filename = path .. "\\" .. ( text_dict or "lua_custom_phrase" ) .. ".txt" or ""
   end
 
-  if io.open(filename) == nil then return end
+  --- 當找不到該 txt 字典檔案則跳開（該函數為 nil）
   -- if not isFile(filename) then return end  -- 在 widonws 中會有問題。
+  -- if io.open(filename) == nil then return log.error("lua_custom_phrase： Missing user_dict File!") end  -- 錯誤日誌中提示遺失檔案（不存在）
+  if io.open(filename) == nil then return end
 
   local tab = {}
   for line in io.open(filename):lines() do
-    if not line:match("^#") then
-      if line:match("^[^\t]+\t[0-9a-z,./; -]+[\t]?%d*$") then
+    local l_remove_sign = line:match("^#")
+    local l_ok = line:match("^[^\t]+\t[%d%l,./; -]+\t?%d*$")
 
-        local line = string.gsub(line,"^([^\t]+\t[^\t]+)\t?.*$","%1")
-        local v_text = string.gsub(line,"^(.+)\t.+","%1")
-        local v_code = string.gsub(line,"^.+\t(.+)","%1")
-        -- tab[v_code] = v_text  -- 一個 code 只能有一條短語，下方可一個 code，多條短語。
-        if tab[v_code] == nil then
-          local nn={}
-          table.insert(nn, v_text)
-          tab[v_code] = nn
-        else
-          table.insert(tab[v_code], v_text)
-        end
+    if not l_remove_sign and l_ok then
+      local line = string.gsub(line,"^([^\t]+\t[^\t]+)\t?.*$","%1")
+      local v_text = string.gsub(line,"^(.+)\t.+$","%1")
+      local v_code = string.gsub(line,"^.+\t(.+)$","%1")
 
+      -- tab[v_code] = v_text  -- 一個 code 只能有一條短語，下方可一個 code，多條短語。
+      if tab[v_code] == nil then
+        local nn={}
+        table.insert(nn, v_text)
+        tab[v_code] = nn
+      else
+        table.insert(tab[v_code], v_text)
       end
+
     end
+
   end
 
   return tab
@@ -71,26 +75,30 @@ end
 
 ---------------------------------------------------------------
 local function init(env)
-   config = env.engine.schema.config
-   namespace = "lua_custom_phrase"
-   env.textdict = config:get_string(namespace .. "/user_dict") or ""
-   -- log.info("lua_custom_phrase Initilized!")
-   env.quality = 10
+  config = env.engine.schema.config
+  namespace = "lua_custom_phrase"
+  env.textdict = config:get_string(namespace .. "/user_dict") or ""
+  env.tab = load_text_dict(env.textdict) or {}  -- 更新 txt 需「重新部署」或方案變換
+  env.quality = 10
+  -- log.info("lua_custom_phrase: \'" .. env.textdict .. ".txt\' Initilized!")  -- 日誌中提示已經載入 txt 短語
 end
 
 
 local function translate(input, seg, env)
+  --- 當 schema 中找不到設定則跳開（env.textdict為""，該函數為 nil）
+  -- if env.textdict == "" then return log.error("lua_custom_phrase： user_dict File Name is Wrong or Missing!") end  -- 錯誤日誌中提示名稱錯誤或遺失
   if env.textdict == "" then return end
 
   local engine = env.engine
   local context = engine.context
   -- local caret_pos = context.caret_pos
   -- local text_dict_tab = load_text_dict("lua_custom_phrase") or {}  -- 直接限定 txt 字典
-  local text_dict_tab = load_text_dict(env.textdict) or {}
-  local c_p_tab = text_dict_tab[input] or {}
+  -- local text_dict_tab = load_text_dict(env.textdict) or {}  -- 更新 txt 不需「重新部署」
+  -- local c_p_tab = text_dict_tab[input] or {}  -- 更新 txt 不需「重新部署」
+  local c_p_tab = env.tab[input] or {}  -- 更新 txt 需「重新部署」或方案變換
 
   if c_p_tab then
-  -- if caret_pos == #input and c_p_tab then  --只能在一開頭輸入
+  -- if caret_pos == #input and c_p_tab then  --只能在一開頭輸入，掛接後續無法。
     for _, v in pairs(c_p_tab) do
       local v = string.gsub(v, "\\n", "\n")  -- 可以多行文本
       local v = string.gsub(v, "\\r", "\r")  -- 可以多行文本
