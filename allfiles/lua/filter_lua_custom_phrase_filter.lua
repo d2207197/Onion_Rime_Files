@@ -42,19 +42,19 @@ local function load_text_dict(text_dict)
   if type(text_dict) ~= "string" then return end
 
   local path = rime_api.get_user_data_dir()
-  -- local filename = path .. "/" .. ( text_dict or "lua_custom_phrase" ) .. ".txt"  -- 如 text_dict 為 nil，下方已跳開，可不用 or
-  local filename = path .. "/" .. text_dict .. ".txt"
-  local f = io.open(filename, "r")
+  -- local file_name = path .. "/" .. ( text_dict or "lua_custom_phrase" ) .. ".txt"  -- 如 text_dict 為 nil，下方已跳開，可不用 or
+  file_name = path .. "/" .. text_dict .. ".txt"
+  -- local f = io.open(file_name, "r")
 
   --- 當找不到該 txt 字典檔案則跳開，該函數為 nil。
-  -- if not isFile(filename) then return end  -- 在 widonws 中會有問題。
-  -- if io.open(filename) == nil then return log.error("lua_custom_phrase： Missing user_dict File!") end  -- 錯誤日誌中提示遺失檔案（不存在）
-  -- if io.open(filename, "r") == nil then return end
-  if f == nil then return end
+  -- if not isFile(file_name) then return end  -- 在 widonws 中會有問題。
+  -- if io.open(file_name) == nil then return log.error("lua_custom_phrase： Missing user_dict File!") end  -- 錯誤日誌中提示遺失檔案（不存在）
+  if io.open(file_name) == nil then return end
+  -- if f == nil then return end
 
   local tab = {}
-  for line in f:lines() do
-  -- for line in io.open(filename, "r"):lines() do
+  for line in io.open(file_name):lines() do
+  -- for line in f:lines() do
     if not line:match("^#") then
       if line:match("^[^\t]+\t[%d%l,./; -]+\t?%d*$") then
 
@@ -74,7 +74,7 @@ local function load_text_dict(text_dict)
     end
   end
 
-  f:close()
+  -- f:close()
 
   return tab
 end
