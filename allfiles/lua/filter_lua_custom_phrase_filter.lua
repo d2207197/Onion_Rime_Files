@@ -45,7 +45,7 @@ local function load_text_dict(text_dict)
   -- local filename = path .. "/" .. ( text_dict or "lua_custom_phrase" ) .. ".txt"  -- Mac 用（如 text_dict 為 nil，下方已跳開，可不用 or ）
   local filename_m = path .. "/" .. text_dict .. ".txt"  -- Mac 用
   local filename_w = path .. "\\" .. text_dict .. ".txt"  -- Windows 用
-  local f = io.open(filename_m, "r") or io.open(filename_w, "r") or nil
+  local f = io.open(filename_m, "r") or io.open(filename_w, "r")
 
   --- 當找不到該 txt 字典檔案則跳開，該函數為 nil。
   -- if not isFile(filename) then return end  -- 在 widonws 中會有問題。
