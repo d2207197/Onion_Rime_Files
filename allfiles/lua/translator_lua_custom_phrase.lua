@@ -75,7 +75,7 @@ local function load_text_dict(text_dict)
     end
   end
 
-  -- f:close()
+  f:close()
 
   return tab
 end
