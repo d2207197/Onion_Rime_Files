@@ -30,35 +30,36 @@ lua_custom_phrase_filter:
 --     end
 --     return false
 -- end
+
+-- local slash = package.path:sub(1,1)  -- package.path 跑出的內容太長，不用。
 ---------------------------------------------------------------
+--- 「load_text_dict」把 txt 檔變成 lua table 供後續查詢。
 
 local function load_text_dict(text_dict)
+  --- text_dict == "" 已會處理，但挪用此函數時此條有用。
+  if text_dict == "" then return end
   --- 當輸入 text_dict 不為 string 則跳開，該函數為 nil。
   if type(text_dict) ~= "string" then return end
 
-  -- local slash = package.path:sub(1,1)  -- package.path 跑出的內容太長，不用。
   local path= rime_api.get_user_data_dir()
-  filename = path .. "/" .. text_dict .. ".txt"  -- Mac 用
   -- local filename = path .. "/" .. ( text_dict or "lua_custom_phrase" ) .. ".txt"  -- Mac 用（如 text_dict 為 nil，下方已跳開，可不用 or ）
-
-  if io.open(filename) == nil then
-    filename = path .. "\\" .. text_dict .. ".txt"  -- Windows 用
-    -- filename = path .. "\\" .. ( text_dict or "lua_custom_phrase" ) .. ".txt"  -- Windows 用（如 text_dict 為 nil，下方已跳開，可不用 or ）
-  end
+  filename_m = path .. "/" .. text_dict .. ".txt"  -- Mac 用
+  filename_w = path .. "\\" .. text_dict .. ".txt"  -- Windows 用
+  local f = io.open(filename_m, "r") or io.open(filename_w, "r") or nil
 
   --- 當找不到該 txt 字典檔案則跳開，該函數為 nil。
   -- if not isFile(filename) then return end  -- 在 widonws 中會有問題。
   -- if io.open(filename) == nil then return log.error("lua_custom_phrase： Missing user_dict File!") end  -- 錯誤日誌中提示遺失檔案（不存在）
-  if io.open(filename) == nil then return end
+  if f == nil then return end
 
   local tab = {}
-  for line in io.open(filename):lines() do
+  for line in f:lines() do
     if not line:match("^#") then
       if line:match("^[^\t]+\t[%d%l,./; -]+\t?%d*$") then
 
-        local line = string.gsub(line,"^([^\t]+\t[^\t]+)\t?.*$","%1")
-        local v_text = string.gsub(line,"^(.+)\t.+$","%1")
-        local v_code = string.gsub(line,"^.+\t(.+)$","%1")
+        local line = line:gsub("^([^\t]+\t[^\t]+)\t?.*$","%1")
+        local v_text = line:gsub("^(.+)\t.+$","%1")
+        local v_code = line:gsub("^.+\t(.+)$","%1")
         -- tab[v_code] = v_text  -- 一個 code 只能有一條短語，下方可一個 code，多條短語。
         if tab[v_code] == nil then
           local nn={}
@@ -71,6 +72,8 @@ local function load_text_dict(text_dict)
       end
     end
   end
+
+  f:close()
 
   return tab
 end
@@ -99,14 +102,14 @@ local function filter(input,env)
   --- 以下 「load_text_dict」 可能為 nil 故要 or {}
   -- local text_dict_tab = load_text_dict("lua_custom_phrase") or {}  -- 直接限定 txt 字典
   -- local text_dict_tab = load_text_dict(env.textdict) or {}  -- 更新 txt 不需「重新部署」
-  --- {}['xxx'] 拋出 nil
+  --- {}['xxx'] 拋出 nil，{}不為 nil。
   -- local c_p_tab = text_dict_tab[c_input]  -- 更新 txt 不需「重新部署」
   -- local c_p_tab = text_dict_tab[o_input]  -- 更新 txt 不需「重新部署」
   local c_p_tab = env.tab[c_input]
 
   if env.textdict == "" then
   elseif env.tab == {} then
-  -- if text_dict_tab == {} then
+  -- elseif text_dict_tab == {} then
   elseif c_p_tab then
   -- elseif caret_pos == #o_input and c_p_tab then
     for _, v in pairs(c_p_tab) do
@@ -125,5 +128,5 @@ local function filter(input,env)
 end
 
 
--- return lua_custom_phrase_filter
 return { init = init, func = filter }
+-- return lua_custom_phrase_filter
