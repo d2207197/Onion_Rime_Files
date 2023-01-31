@@ -36,15 +36,15 @@ lua_custom_phrase_filter:
 --- 「load_text_dict」把 txt 檔變成 lua table 供後續查詢。
 
 local function load_text_dict(text_dict)
-  --- text_dict == "" 已會處理，但挪用此函數時此條有用。
-  if text_dict == "" then return end
+  -- --- text_dict == "" 已會處理，但挪用此函數時此條有用。
+  -- if text_dict == "" then return end
   --- 當輸入 text_dict 不為 string 則跳開，該函數為 nil。
   if type(text_dict) ~= "string" then return end
 
-  local path= rime_api.get_user_data_dir()
+  local path = rime_api.get_user_data_dir()
   -- local filename = path .. "/" .. ( text_dict or "lua_custom_phrase" ) .. ".txt"  -- Mac 用（如 text_dict 為 nil，下方已跳開，可不用 or ）
-  filename_m = path .. "/" .. text_dict .. ".txt"  -- Mac 用
-  filename_w = path .. "\\" .. text_dict .. ".txt"  -- Windows 用
+  local filename_m = path .. "/" .. text_dict .. ".txt"  -- Mac 用
+  local filename_w = path .. "\\" .. text_dict .. ".txt"  -- Windows 用
   local f = io.open(filename_m, "r") or io.open(filename_w, "r") or nil
 
   --- 當找不到該 txt 字典檔案則跳開，該函數為 nil。
@@ -57,9 +57,9 @@ local function load_text_dict(text_dict)
     if not line:match("^#") then
       if line:match("^[^\t]+\t[%d%l,./; -]+\t?%d*$") then
 
-        local line = line:gsub("^([^\t]+\t[^\t]+)\t?.*$","%1")
-        local v_text = line:gsub("^(.+)\t.+$","%1")
-        local v_code = line:gsub("^.+\t(.+)$","%1")
+        local line = string.gsub(line, "^([^\t]+\t[^\t]+)\t?.*$","%1")
+        local v_text = string.gsub(line, "^(.+)\t.+$","%1")
+        local v_code = string.gsub(line, "^.+\t(.+)$","%1")
         -- tab[v_code] = v_text  -- 一個 code 只能有一條短語，下方可一個 code，多條短語。
         if tab[v_code] == nil then
           local nn={}
