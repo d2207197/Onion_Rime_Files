@@ -80,8 +80,8 @@ local function init(env)
   engine = env.engine
   schema = engine.schema
   config = schema.config
-  namespace = "lua_custom_phrase_filter"
-  env.textdict = config:get_string(namespace .. "/user_dict") or ""
+  -- namespace = "lua_custom_phrase_filter"
+  env.textdict = config:get_string(env.name_space .. "/user_dict") or ""
   --- 以下 「load_text_dict」 可能為 nil 故要 or {}
   env.tab = load_text_dict(env.textdict) or {}  -- 更新 txt 需「重新部署」或方案變換
   -- log.info("lua_custom_phrase_filter: \'" .. env.textdict .. ".txt\' Initilized!")  -- 日誌中提示已經載入 txt 短語
