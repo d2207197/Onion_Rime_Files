@@ -48,7 +48,9 @@ local drop_cand = require("filter_cand/drop_cand")
 
 ----------------
 local function charset_filter2(inp, env)
-  local c_f2_s = env.engine.context:get_option("character_range_bhjm")
+  local engine = env.engine
+  local context = engine.context
+  local c_f2_s = context:get_option("character_range_bhjm")
   local tran = c_f2_s and Translation(drop_cand, inp, '᰼᰼') or inp
   for cand in tran:iter() do
     yield(cand)

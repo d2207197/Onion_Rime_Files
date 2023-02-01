@@ -15,10 +15,12 @@ local change_comment = require("filter_cand/change_comment")
 
 ----------------
 local function mix30_nil_comment_up_filter(inp, env)
-  local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
-  local s_up = env.engine.context:get_option("1_2_straight_up")
-  local find_prefix = env.engine.context.input  -- 原始未轉換輸入碼
-  local _end = env.engine.context:get_preedit().sel_end
+  local engine = env.engine
+  local context = engine.context
+  local s_c_f_p_s = context:get_option("simplify_comment")
+  local s_up = context:get_option("1_2_straight_up")
+  local find_prefix = context.input  -- 原始未轉換輸入碼
+  local _end = context:get_preedit().sel_end
   local array30_nil_cand = Candidate("array30nil", 0, _end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
   -- local array30_nil_cand = Candidate("array30nil", 0, string.len(find_prefix) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
   local check_ns = string.match(find_prefix, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )

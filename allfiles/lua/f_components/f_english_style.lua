@@ -18,8 +18,8 @@ local function english_u2(en)
   -- if string.match(en, "^[/.'-][a-z]") then
   --   en = string.upper(string.sub(en,1,2)) .. string.sub(en,3)
   -- end
-  en = en:gsub("^['.]%l",string.upper)
-  return en:gsub("[/-]%l",string.upper)
+  en = string.gsub(en, "^['.]%l", string.upper)
+  return string.gsub(en, "[/-]%l", string.upper)
 end
 
 local function english_u1(en)
@@ -27,14 +27,14 @@ local function english_u1(en)
   -- en = string.upper(string.sub(en,1,1)) .. string.sub(english_u2(english_s(en)),2)
   -- return en
   en = english_s(en)
-  return en:gsub("^%l",string.upper)
+  return string.gsub(en, "^%l", string.upper)
 end
 
 local function english_s2u(en)
   if en == "" then return "" end
   en = english_u1(en)
   en = english_u2(en)
-  return en:gsub(" %l",string.upper)
+  return string.gsub(en, " %l", string.upper)
 end
 
 ------------------------------------

@@ -2,7 +2,7 @@
 
 local function drop_cand(tran,mstr)
   for cand in tran:iter() do
-    if not cand.text:match(mstr) then
+    if not string.match(cand.text, mstr) then
       yield(cand)
     end
   end

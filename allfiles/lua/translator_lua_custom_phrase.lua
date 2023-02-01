@@ -44,7 +44,7 @@ local function load_text_dict(text_dict)
 
   local path = rime_api.get_user_data_dir()
   -- local file_name = path .. "/" .. ( text_dict or "lua_custom_phrase" ) .. ".txt"  -- 如 text_dict 為 nil，下方已跳開，可不用 or
-  file_name = path .. "/" .. text_dict .. ".txt"
+  local file_name = path .. "/" .. text_dict .. ".txt"
   -- local f = io.open(file_name, "r")
 
   --- 當找不到該 txt 字典檔案則跳開，該函數為 nil。
@@ -56,22 +56,18 @@ local function load_text_dict(text_dict)
   local tab = {}
   for line in io.open(file_name):lines() do
   -- for line in f:lines() do
-    if not line:match("^#") then
-      if line:match("^[^\t]+\t[%d%l,./; -]+\t?%d*$") then
+    local v_text, v_code = string.match(line, "^([^\t#][^\t]*)\t([%d%l,./; -]+)\t?.*$")
+    if v_text ~= nil then
 
-        local line = string.gsub(line, "^([^\t]+\t[^\t]+)\t?.*$","%1")
-        local v_text = string.gsub(line, "^(.+)\t.+$","%1")
-        local v_code = string.gsub(line, "^.+\t(.+)$","%1")
-        -- tab[v_code] = v_text  -- 一個 code 只能有一條短語，下方可一個 code，多條短語。
-        if tab[v_code] == nil then
-          local nn={}
-          table.insert(nn, v_text)
-          tab[v_code] = nn
-        else
-          table.insert(tab[v_code], v_text)
-        end
-
+      -- tab[v_code] = v_text  -- 一個 code 只能有一條短語，下方可一個 code，多條短語。
+      if tab[v_code] == nil then
+        local nn={}
+        table.insert(nn, v_text)
+        tab[v_code] = nn
+      else
+        table.insert(tab[v_code], v_text)
       end
+
     end
   end
 
@@ -82,7 +78,9 @@ end
 
 ---------------------------------------------------------------
 local function init(env)
-  config = env.engine.schema.config
+  engine = env.engine
+  schema = engine.schema
+  config = schema.config
   namespace = "lua_custom_phrase"
   env.textdict = config:get_string(namespace .. "/user_dict") or ""
   --- 以下 「load_text_dict」 可能為 nil 故要 or {}
@@ -97,8 +95,8 @@ local function translate(input, seg, env)
   -- if env.textdict == "" then return log.error("lua_custom_phrase： user_dict File Name is Wrong or Missing!") end  -- 錯誤日誌中提示名稱錯誤或遺失
   if env.textdict == "" then return end
 
-  local engine = env.engine
-  local context = engine.context
+  -- local engine = env.engine
+  -- local context = engine.context
   -- local caret_pos = context.caret_pos
   --- 以下 「load_text_dict」 可能為 nil 故要 or {}
   -- local text_dict_tab = load_text_dict("lua_custom_phrase") or {}  -- 直接限定 txt 字典

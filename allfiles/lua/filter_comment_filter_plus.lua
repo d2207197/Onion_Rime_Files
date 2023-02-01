@@ -22,7 +22,9 @@ local change_comment = require("filter_cand/change_comment")
 
 ----------------
 local function comment_filter_plus(inp,env)
-  local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
+  local engine = env.engine
+  local context = engine.context
+  local s_c_f_p_s = context:get_option("simplify_comment")
   for cand in inp:iter() do
     --  s_c_f_p_s true 時 清除 comment
     yield( s_c_f_p_s and change_comment(cand,"") or cand )

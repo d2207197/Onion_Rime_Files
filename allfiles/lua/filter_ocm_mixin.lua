@@ -28,9 +28,11 @@ local change_comment = require("filter_cand/change_comment")
 
 ----------------
 local function ocm_mixin_filter(inp, env)
-  local c_f2_s = env.engine.context:get_option("character_range_bhjm")
-  local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
-  local b_k = env.engine.context:get_option("back_mark")
+  local engine = env.engine
+  local context = engine.context
+  local c_f2_s = context:get_option("character_range_bhjm")
+  local s_c_f_p_s = context:get_option("simplify_comment")
+  local b_k = context:get_option("back_mark")
   local tran = c_f2_s and Translation(drop_cand, inp, '᰼᰼') or inp
   -- local bm_opencc = {}
   local bm_opencc = Opencc("back_mark.json") or {''}

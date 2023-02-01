@@ -79,7 +79,9 @@ end
 --]]
 local function charset_cjk_filter_plus(input, env)
   -- 使用 `iter()` 遍歷所有輸入候選項
-  local c_f_p_s = env.engine.context:get_option("only_cjk_filter")
+  local engine = env.engine
+  local context = engine.context
+  local c_f_p_s = context:get_option("only_cjk_filter")
   if (c_f_p_s) then
     for cand in input:iter() do
       -- 如果當前候選項 `cand` 不含 CJK 擴展漢字

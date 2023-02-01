@@ -20,7 +20,9 @@ local change_preedit = require("filter_cand/change_preedit")
 ----------------------------------------------------------------------------------------
 local M={}
 function M.init(env)
-  local config = env.engine.schema.config
+  local engine = env.engine
+  local schema = engine.schema
+  local config = schema.config
   -- namespace = "p_convert_english_filter"
   -- env.check_plus = config:get_string(namespace .. "/tags") or ""
 
@@ -67,7 +69,7 @@ function M.func(input,env)
   end
   
   if caret_pos == #o_input then
-    local mstr, cp, sp = o_input:match(env.match_pattern)  -- 取代 s1~ s5
+    local mstr, cp, sp = string.match(o_input, env.match_pattern)  -- 取代 s1~ s5
     local cp_tab = env.english_pattern[cp]
     if cp_tab then
       local e_cand = Candidate("en", start, caret_pos, cp_tab.func(mstr), cp_tab.comment)

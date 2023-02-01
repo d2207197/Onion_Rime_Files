@@ -4,8 +4,10 @@
 如同英漢字典一樣排序，候選項重新排序。開關（en_sort）
 --]]
 local function en_sort_filter(input, env)
-  local en_sort = env.engine.context:get_option("en_sort")
-  local input_in = env.engine.context.input  -- 原始未轉換輸入碼
+  local engine = env.engine
+  local context = engine.context
+  local en_sort = context:get_option("en_sort")
+  local input_in = context.input  -- 原始未轉換輸入碼
   -- local prefix = env.engine.schema.config:get_string("easy_en/prefix")
   -- local input_n = string.len(input_in)
   -- local caret_pos = env.engine.context.caret_pos

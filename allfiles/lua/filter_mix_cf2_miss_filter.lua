@@ -16,8 +16,10 @@ local change_comment = require("filter_cand/change_comment")
 
 --------------
 local function mix_cf2_miss_filter(inp, env)
-  local c_f2_s = env.engine.context:get_option("character_range_bhjm")
-  local p_key = env.engine.context.input
+  local engine = env.engine
+  local context = engine.context
+  local c_f2_s = context:get_option("character_range_bhjm")
+  local p_key = context.input
   local addcomment1 = string.match(p_key, '=%.$')
   local addcomment2 = string.match(p_key, '[][]$')
   local tran = c_f2_s and Translation(drop_cand, inp, '᰼᰼') or inp

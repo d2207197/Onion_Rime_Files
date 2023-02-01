@@ -23,7 +23,9 @@ local change_preedit = require("filter_cand/change_preedit")
 ----------------------------------------------------------------------------------------
 local M={}
 function M.init(env)
-  local config = env.engine.schema.config
+  local engine = env.engine
+  local schema = engine.schema
+  local config = schema.config
   local check_plus = config:get_string("translator/dictionary") or ""  -- 檢查為獨立方案或掛接方案
   env.p_prefix = check_plus ~= "jpnin1.extended" and config:get_string("japan/prefix") or ""
   env.match_pattern = env.p_prefix .. "([-/a-z.,;]+)(%., ?)$"  -- "[,46]([-/a-z][-/a-z.,;]*)(%., ?)$"：會有Bug

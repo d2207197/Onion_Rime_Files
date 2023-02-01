@@ -125,10 +125,12 @@ mf_translator:
 --]]
 ----------------------------------------------------------------------------------------
 local function init(env)
-   config = env.engine.schema.config
-   namespace = "mf_translator"
-   env.prefix = config:get_string(namespace .. "/prefix")
-   -- log.info("mf_translator Initilized!")
+  engine = env.engine
+  schema = engine.schema
+  config = schema.config
+  namespace = "mf_translator"
+  env.prefix = config:get_string(namespace .. "/prefix")
+  -- log.info("mf_translator Initilized!")
 end
 ----------------------------------------------------------------------------------------
 --- @@ mf_translator

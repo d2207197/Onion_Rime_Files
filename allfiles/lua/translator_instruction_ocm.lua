@@ -4,7 +4,9 @@
 --]]
 local function instruction_ocm(input, seg, env)
   -- if input:find('^;$') then
-  local caret_pos = env.engine.context.caret_pos
+  local engine = env.engine
+  local context = engine.context
+  local caret_pos = context.caret_pos
   if (string.match(input, "^;$")~=nil) and (caret_pos == 1) then
     -- for cand in input:iter() do
     --   yield(cand)
