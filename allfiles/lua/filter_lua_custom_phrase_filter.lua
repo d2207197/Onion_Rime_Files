@@ -76,10 +76,12 @@ local function load_text_dict(text_dict)
 end
 
 ---------------------------------------------------------------
-local function init(env)
-  engine = env.engine
-  schema = engine.schema
-  config = schema.config
+local M={}
+function M.init(env)
+-- local function init(env)
+  local engine = env.engine
+  local schema = engine.schema
+  local config = schema.config
   -- namespace = "lua_custom_phrase_filter"
   env.textdict = config:get_string(env.name_space .. "/user_dict") or ""
   --- 以下 「load_text_dict」 可能為 nil 故要 or {}
@@ -88,8 +90,13 @@ local function init(env)
 end
 
 
+function M.fini(env)
+end
+
+
 -- local function lua_custom_phrase_filter(input,env)
-local function filter(input,env)
+-- local function filter(input,env)
+function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
   local start = context:get_preedit().sel_start
@@ -127,5 +134,6 @@ local function filter(input,env)
 end
 
 
-return { init = init, func = filter }
+return M
+-- return { init = init, func = filter }
 -- return lua_custom_phrase_filter
