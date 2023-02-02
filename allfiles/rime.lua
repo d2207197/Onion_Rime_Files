@@ -174,19 +174,22 @@ kr_hnc_1m_filter = require("filter_kr_hnc_1m_filter")
 -- -- mix_cf2_cfp_smf_filter = require("filter_mix_cf2_cfp_smf_filter") --無效
 -- local filter_mix_cf2_cfp_smf_filter = require("filter_mix_cf2_cfp_smf_filter")
 -- mix_cf2_cfp_smf_filter = filter_mix_cf2_cfp_smf_filter.mix_cf2_cfp_smf_filter
+-- mix_cf2_cfp_smf_filter = require("filter_mix_cf2_cfp_smf_filter")
 
 
 --- ocm_mixin_filter （ocm_mixin）
 -- 同上條目，但附加 comment 不用 ReverseDb 方式，改用新版 lua 的 opencc 引入方式。
-local filter_ocm_mixin = require("filter_ocm_mixin")
-ocm_mixin_filter = filter_ocm_mixin.ocm_mixin_filter
+-- local filter_ocm_mixin = require("filter_ocm_mixin")
+-- ocm_mixin_filter = filter_ocm_mixin.ocm_mixin_filter
+ocm_mixin_filter = require("filter_ocm_mixin")
 
 
 --- charset_filter2 （ocm_onionmix）（手機全方案會用到）
 -- 把 opencc 轉換成「᰼」(或某個符號)，再用 lua 功能去除「᰼」
 -- charset_filter2 = require("filter_charset_filter2")
-local filter_charset_filter2 = require("filter_charset_filter2")
-charset_filter2 = filter_charset_filter2.charset_filter2
+-- local filter_charset_filter2 = require("filter_charset_filter2")
+-- charset_filter2 = filter_charset_filter2.charset_filter2
+charset_filter2 = require("filter_charset_filter2")
 
 
 --- 日文出羅馬字、全形羅馬字、半形片假名、全片假名、全平假名。
