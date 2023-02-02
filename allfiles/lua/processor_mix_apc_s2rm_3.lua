@@ -14,8 +14,8 @@ local function mix_apc_s2rm_3(key, env)
                   string.match(input_3, "^'/[';a-z0-9.,/-]*$") or
                   string.match(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9.,/-]*$") or
                   string.match(input_3, "=[0-9]'/[';a-z0-9.,/-]*$") or
-                  string.match(input_3, "=[][]'/[';a-z0-9.,/-]*$") or
-                  string.match(input_3, "=[][][][]'/[';a-z0-9.,/-]*$") or
+                  -- string.match(input_3, "=[][]'/[';a-z0-9.,/-]*$") or
+                  string.match(input_3, "=[][][][]?'/[';a-z0-9.,/-]*$") or
                   string.match(input_3, "=[-,.;=`]'/[';a-z0-9.,/-]*$") or
                   string.match(input_3, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9.,/-]*$") or
                   string.match(input_3, "=[-125890;,./]$") or
@@ -26,11 +26,11 @@ local function mix_apc_s2rm_3(key, env)
   --   return 2
   -- if (o_ascii_mode) then
   --   return 2
-  if (o_ascii_punct) and (not o_ascii_mode) then
+  if o_ascii_punct and not o_ascii_mode then
   -- elseif (o_ascii_punct) then
   -- if (context:get_option("ascii_punct")) and (not context:get_option("ascii_mode")) then
     if (key:repr() == "Shift+less") then
-      if (context:is_composing()) then
+      if context:is_composing() then
         -- local orig_3 = context:get_commit_text()
         engine:commit_text( orig_3 .. "," )
       else
@@ -39,7 +39,7 @@ local function mix_apc_s2rm_3(key, env)
       context:clear()
       return 1 -- kAccepted
     elseif (key:repr() == "Shift+greater") then
-      if (context:is_composing()) then
+      if context:is_composing() then
         -- local orig_3 = context:get_commit_text()
         engine:commit_text( orig_3 .. "." )
       else
@@ -47,10 +47,11 @@ local function mix_apc_s2rm_3(key, env)
       end
       context:clear()
       return 1 -- kAccepted
-    elseif (key:repr() == "space") and (context:is_composing()) then
+    elseif key:repr() == "space" and context:is_composing() then
     -- elseif (key:repr() == "space") and (context:has_menu()) then
       -- local input_3 = context.input
       if check_i then
+      -- if check_i1 or check_i2 or check_i3 or check_i4 or check_i5 or check_i6 or check_i7 or check_i8 or check_i9 or check_i10 then
       -- if ( string.match(input_3, "[@:]") or string.match(input_3, "^'/[';a-z0-9.,/-]*$") or string.match(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9.,/-]*$") or string.match(input_3, "=[0-9]'/[';a-z0-9.,/-]*$") or string.match(input_3, "=[][]'/[';a-z0-9.,/-]*$") or string.match(input_3, "=[][][][]'/[';a-z0-9.,/-]*$") or string.match(input_3, "=[-,.;=`]'/[';a-z0-9.,/-]*$") or string.match(input_3, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9.,/-]*$") or string.match(input_3, "=[-125890;,./]$") or string.match(input_3, "=[-;,./][-;,./]$") or string.match(input_3, "==[90]$") ) then  --or string.match(input_3, "==[,.]{2}$")
       -- if ( string.match(input_3, "[@:]") or string.match(input_3, "^'/[';a-z0-9./-]*$") or string.match(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.match(input_3, "=[0-9]'/[';a-z0-9./-]*$") or string.match(input_3, "=[][]'/[';a-z0-9./-]*$") or string.match(input_3, "=[][][][]'/[';a-z0-9./-]*$") or string.match(input_3, "=[-,.;=`]'/[';a-z0-9./-]*$") or string.match(input_3, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.match(input_3, "=[-125890;,./]$") or string.match(input_3, "=[-;,./][-;,./]$") or string.match(input_3, "==[90]$") or string.match(input_3, "==[,][,]?$") or string.match(input_3, "==[.][.]?$") ) then
       --「全，非精簡」 if ( string.match(input_3, "[@:]") or string.match(input_3, "^'/[';a-z0-9./-]*$") or string.match(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.match(input_3, "=[0-9]'/[';a-z0-9./-]*$") or string.match(input_3, "=[][]'/[';a-z0-9./-]*$") or string.match(input_3, "=[][][][]'/[';a-z0-9./-]*$") or string.match(input_3, "=[-,.;=`]'/[';a-z0-9./-]*$") or string.match(input_3, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.match(input_3, "=[-125890;,./]$") or string.match(input_3, "=[-][-]$") or string.match(input_3, "=[;][;]$") or string.match(input_3, "=[,][,]$") or string.match(input_3, "=[.][.]$") or string.match(input_3, "=[/][/]$") or string.match(input_3, "==[90]$") or string.match(input_3, "==[,][,]?$") or string.match(input_3, "==[.][.]?$") ) then
@@ -60,13 +61,14 @@ local function mix_apc_s2rm_3(key, env)
         return 1 -- kAccepted
       end
     end
-  elseif (not o_ascii_punct) and (not o_ascii_mode) then
+  elseif not o_ascii_punct and not o_ascii_mode then
   -- elseif (not o_ascii_punct) then
   -- elseif (not context:get_option("ascii_punct")) and (not context:get_option('ascii_mode')) then
-    if (key:repr() == "space") and (context:is_composing()) then
+    if key:repr() == "space" and context:is_composing() then
     -- if (key:repr() == "space") and (context:has_menu()) then
       -- local input_3 = context.input
       if check_i then
+      -- if check_i1 or check_i2 or check_i3 or check_i4 or check_i5 or check_i6 or check_i7 or check_i8 or check_i9 or check_i10 then
       -- if ( string.match(input_3, "[@:]") or string.match(input_3, "^'/[';a-z0-9.,/-]*$") or string.match(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9.,/-]*$") or string.match(input_3, "=[0-9]'/[';a-z0-9.,/-]*$") or string.match(input_3, "=[][]'/[';a-z0-9.,/-]*$") or string.match(input_3, "=[][][][]'/[';a-z0-9.,/-]*$") or string.match(input_3, "=[-,.;=`]'/[';a-z0-9.,/-]*$") or string.match(input_3, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9.,/-]*$") or string.match(input_3, "=[-125890;,./]$") or string.match(input_3, "=[-;,./][-;,./]$") or string.match(input_3, "==[90]$") ) then  --or string.match(input_3, "==[,.]{2}$")
       -- if ( string.match(input_3, "[@:]") or string.match(input_3, "^'/[';a-z0-9./-]*$") or string.match(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.match(input_3, "=[0-9]'/[';a-z0-9./-]*$") or string.match(input_3, "=[][]'/[';a-z0-9./-]*$") or string.match(input_3, "=[][][][]'/[';a-z0-9./-]*$") or string.match(input_3, "=[-,.;=`]'/[';a-z0-9./-]*$") or string.match(input_3, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.match(input_3, "=[-125890;,./]$") or string.match(input_3, "=[-;,./][-;,./]$") or string.match(input_3, "==[90]$") or string.match(input_3, "==[,][,]?$") or string.match(input_3, "==[.][.]?$") ) then
       --「全，非精簡」 if ( string.match(input_3, "[@:]") or string.match(input_3, "^'/[';a-z0-9./-]*$") or string.match(input_3, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.match(input_3, "=[0-9]'/[';a-z0-9./-]*$") or string.match(input_3, "=[][]'/[';a-z0-9./-]*$") or string.match(input_3, "=[][][][]'/[';a-z0-9./-]*$") or string.match(input_3, "=[-,.;=`]'/[';a-z0-9./-]*$") or string.match(input_3, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.match(input_3, "=[-125890;,./]$") or string.match(input_3, "=[-][-]$") or string.match(input_3, "=[;][;]$") or string.match(input_3, "=[,][,]$") or string.match(input_3, "=[.][.]$") or string.match(input_3, "=[/][/]$") or string.match(input_3, "==[90]$") or string.match(input_3, "==[,][,]?$") or string.match(input_3, "==[.][.]?$") ) then

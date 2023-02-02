@@ -21,7 +21,15 @@
 local change_comment = require("filter_cand/change_comment")
 
 ----------------
-local function comment_filter_plus(inp,env)
+local M={}
+-- function M.init(env)
+-- end
+
+-- function M.fini(env)
+-- end
+
+-- local function comment_filter_plus(inp,env)
+function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
   local s_c_f_p_s = context:get_option("simplify_comment")
@@ -31,7 +39,8 @@ local function comment_filter_plus(inp,env)
   end
 end
 ----------------
-return comment_filter_plus
+-- return comment_filter_plus
+return M
 ----------------
 
 

@@ -27,7 +27,16 @@ local drop_cand = require("filter_cand/drop_cand")
 local change_comment = require("filter_cand/change_comment")
 
 ----------------
-local function ocm_mixin_filter(inp, env)
+local M={}
+function M.init(env)
+  env.bm_opencc = Opencc("back_mark.json") or {''}
+end
+
+function M.fini(env)
+end
+
+-- local function ocm_mixin_filter(inp, env)
+function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
   local c_f2_s = context:get_option("character_range_bhjm")
@@ -35,10 +44,10 @@ local function ocm_mixin_filter(inp, env)
   local b_k = context:get_option("back_mark")
   local tran = c_f2_s and Translation(drop_cand, inp, '᰼᰼') or inp
   -- local bm_opencc = {}
-  local bm_opencc = Opencc("back_mark.json") or {''}
+  -- local bm_opencc = Opencc("back_mark.json") or {''}
   for cand in tran:iter() do
     -- local b_mark = {}
-    local b_mark = bm_opencc:convert_word(cand.text) or {''}
+    local b_mark = env.bm_opencc:convert_word(cand.text) or {''}
     yield( not s_c_f_p_s and b_k and change_comment(cand, cand.comment .. xform_mark(b_mark[1]))
         or s_c_f_p_s and b_k and change_comment(cand, xform_mark(b_mark[1]))
         or s_c_f_p_s and not b_k and change_comment(cand, "")
@@ -47,7 +56,8 @@ local function ocm_mixin_filter(inp, env)
   end
 end
 ----------------
-return { ocm_mixin_filter = ocm_mixin_filter }
+return M
+-- return { ocm_mixin_filter = ocm_mixin_filter }
 -- return { filter = charset_filter } --可變更名稱
 -- return mix_cf2_cfp_smf_filter -- 無法
 

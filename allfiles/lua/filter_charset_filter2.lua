@@ -47,7 +47,15 @@
 local drop_cand = require("filter_cand/drop_cand")
 
 ----------------
-local function charset_filter2(inp, env)
+local M={}
+-- function M.init(env)
+-- end
+
+-- function M.fini(env)
+-- end
+
+-- local function charset_filter2(inp, env)
+function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
   local c_f2_s = context:get_option("character_range_bhjm")
@@ -57,7 +65,8 @@ local function charset_filter2(inp, env)
   end
 end
 ----------------
-return { charset_filter2 = charset_filter2 }
+-- return { charset_filter2 = charset_filter2 }
+return M
 ----------------
 
 

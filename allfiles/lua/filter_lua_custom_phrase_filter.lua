@@ -39,7 +39,7 @@ local function load_text_dict(text_dict)
   -- --- text_dict == "" 已會處理，但挪用此函數時此條有用。
   -- if text_dict == "" then return end
   --- 當輸入 text_dict 不為 string 則跳開，該函數為 nil。
-  if type(text_dict) ~= "string" then return end
+  if (type(text_dict) ~= "string") then return end
 
   local path = rime_api.get_user_data_dir()
   -- local file_name = path .. "/" .. ( text_dict or "lua_custom_phrase" ) .. ".txt"  -- 如 text_dict 為 nil，下方已跳開，可不用 or
@@ -50,13 +50,13 @@ local function load_text_dict(text_dict)
   -- if not isFile(file_name) then return end  -- 在 widonws 中會有問題。
   -- if io.open(file_name) == nil then return log.error("lua_custom_phrase： Missing user_dict File!") end  -- 錯誤日誌中提示遺失檔案（不存在）
   if io.open(file_name) == nil then return end
-  -- if f == nil then return end
+  -- if (f == nil) then return end
 
   local tab = {}
   for line in io.open(file_name):lines() do
   -- for line in f:lines() do
     local v_text, v_code = string.match(line, "^([^\t#][^\t]*)\t([%d%l,./; -]+)\t?.*$")
-    if v_text ~= nil then
+    if v_text then
 
       -- tab[v_code] = v_text  -- 一個 code 只能有一條短語，下方可一個 code，多條短語。
       if tab[v_code] == nil then
@@ -110,7 +110,7 @@ local function filter(input,env)
   elseif env.tab == {} then
   -- elseif text_dict_tab == {} then
   elseif c_p_tab then
-  -- elseif caret_pos == #o_input and c_p_tab then
+  -- elseif (caret_pos == #o_input) and c_p_tab then
     for _, v in pairs(c_p_tab) do
       local v = string.gsub(v, "\\n", "\n")  -- 可以多行文本
       local v = string.gsub(v, "\\r", "\r")  -- 可以多行文本

@@ -47,19 +47,27 @@
 
 
 
-local function array30_nil_filter(input, env)
-  -- local array30_input = env.engine.context.input  -- 原始未轉換輸入碼
+local M={}
+-- function M.init(env)
+-- end
+
+-- function M.fini(env)
+-- end
+
+-- local function array30_nil_filter(inp, env)
+function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
   local p_key = context.input
+  -- local array30_input = env.engine.context.input  -- 原始未轉換輸入碼
   local array30_r = string.match(p_key, '^==')
   local _end2 = context:get_preedit().sel_end + 2
   local array30_nil_cand = Candidate("array30nil", 0, _end2, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
   -- local array30_nil_cand = Candidate("array30nil", 0, string.len(array30_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
   -- local array30_nil_cand = Candidate("array30nil", 0, string.len(commit) , "", "⎔")  -- 選擇空碼"⎔"效果為卡住，但 preedit 顯示會有問題
-  if (array30_r) then
-    for cand in input:iter() do
-      if (string.match(cand.text, '^⎔%d$' )) then
+  if array30_r then
+    for cand in inp:iter() do
+      if string.match(cand.text, '^⎔%d$' ) then
         -- local cccc = string.gsub(cand.text, "^⎔2$", "⎔")
         -- cand.text = '⎔'
         -- cand:get_genuine().text = '@'
@@ -90,10 +98,11 @@ local function array30_nil_filter(input, env)
     end
     -- return nil
   -- else
-  --   for cand in input:iter() do
+  --   for cand in inp:iter() do
   --     yield(cand)
   --   end
   end
 end
 
-return array30_nil_filter
+-- return array30_nil_filter
+return M

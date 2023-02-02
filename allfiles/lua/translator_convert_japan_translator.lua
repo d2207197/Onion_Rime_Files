@@ -19,7 +19,7 @@ local hira_t = c_k.hira_t
 local function convert_japan_translator(input, seg)
   local c = string.match(input, "([-/a-z.,;]+)%.,$")
   local tag_abc = seg:has_tag("abc")
-  if tag_abc and (c~=nil) then
+  if tag_abc and c then
     local hw = halfwidth_kata_t(c)
     yield(Candidate("jp", seg.start, seg._end, revise_t(c), "〔羅馬字〕"))
     yield(Candidate("jp", seg.start, seg._end, fullshape_t(c), "〔全形羅馬字〕"))
@@ -40,7 +40,7 @@ local function p_convert_japan_translator(input, seg)
   local c = string.match(input, "([-/a-z.,;]+)%.,$")
   local tag_jp = seg:has_tag("japan")
   local jp_p = tips_jp .. input
-  if tag_jp and (c~=nil) then
+  if tag_jp and c then
     local hw = halfwidth_kata_t(c)
     local roma = Candidate("jp", seg.start, seg._end, revise_t(c), "〔羅馬字〕")
     local roma_f = Candidate("jp", seg.start, seg._end, fullshape_t(c), "〔全形羅馬字〕")

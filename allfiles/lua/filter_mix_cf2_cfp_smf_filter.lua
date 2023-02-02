@@ -1,17 +1,17 @@
 --- @@ symbols_mark_filter
 --[[
-（關，但 mix_cf2_cfp_smf_filter 有用到某元件，部分開啟）
+（關，之前本方案 mix_cf2_cfp_smf_filter 有用到某元件，部分開啟。後來則全關閉）
 候選項註釋符號、音標等屬性之提示碼(comment)（用 opencc 可實現，但無法合併其他提示碼(comment)，改用 Lua 來實現）
 --]]
 
-local ocmdb = ReverseDb("build/symbols-mark.reverse.bin")
+-- local ocmdb = ReverseDb("build/symbols-mark.reverse.bin")
 
-local function xform_mark(inp)
-  if inp == "" then return "" end
-  inp = string.gsub(inp, "，", ", ")
-  -- inp = string.gsub(inp, "^(〔.+〕)(〔.+〕)$", "%1")
-  return inp
-end
+-- local function xform_mark(inp)
+--   if inp == "" then return "" end
+--   inp = string.gsub(inp, "，", ", ")
+--   -- inp = string.gsub(inp, "^(〔.+〕)(〔.+〕)$", "%1")
+--   return inp
+-- end
 
 -- function symbols_mark_filter(input, env)
 --   local b_k = env.engine.context:get_option("back_mark")
@@ -30,13 +30,26 @@ end
 
 
 
-
+----------------------------------------------------------------
 --- @@ mix_cf2_cfp_smf_filter
 --[[
-（ocm_mixin）
+（之前 ocm_mixin 用）
 合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
 沒用到 ocm_mixin 方案時，ReverseDb("build/symbols-mark.reverse.bin")會找不到。
 --]]
+
+
+----------------
+local function xform_mark(inp)
+  if inp == "" then return "" end
+  inp = string.gsub(inp, "，", ", ")
+  -- inp = string.gsub(inp, "^(〔.+〕)(〔.+〕)$", "%1")
+  return inp
+end
+----------------
+
+
+
 
 --- 以下新的寫法
 
@@ -46,7 +59,16 @@ local drop_cand = require("filter_cand/drop_cand")
 local change_comment = require("filter_cand/change_comment")
 
 ----------------
-local function mix_cf2_cfp_smf_filter(inp, env)
+local M={}
+function M.init(env)
+  env.ocmdb = ReverseDb("build/symbols-mark.reverse.bin")
+end
+
+function M.fini(env)
+end
+
+-- local function mix_cf2_cfp_smf_filter(inp, env)
+function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
   local c_f2_s = context:get_option("character_range_bhjm")
@@ -54,15 +76,16 @@ local function mix_cf2_cfp_smf_filter(inp, env)
   local b_k = context:get_option("back_mark")
   local tran = c_f2_s and Translation(drop_cand, inp, '᰼᰼') or inp
   for cand in tran:iter() do
-    yield( not s_c_f_p_s and b_k and change_comment( cand, cand.comment .. xform_mark(ocmdb:lookup(cand.text)) )
-        or s_c_f_p_s and b_k and change_comment( cand, xform_mark(ocmdb:lookup(cand.text)) )
+    yield( not s_c_f_p_s and b_k and change_comment( cand, cand.comment .. xform_mark(env.ocmdb:lookup(cand.text)) )
+        or s_c_f_p_s and b_k and change_comment( cand, xform_mark(env.ocmdb:lookup(cand.text)) )
         or s_c_f_p_s and not b_k and change_comment( cand, "" )
         -- or not s_c_f_p_s and not b_k and cand  --效果同下，省略
         or cand )
   end
 end
 ----------------
-return { mix_cf2_cfp_smf_filter = mix_cf2_cfp_smf_filter }
+return M
+-- return { mix_cf2_cfp_smf_filter = mix_cf2_cfp_smf_filter }
 -- return { filter = charset_filter } --可變更名稱
 -- return mix_cf2_cfp_smf_filter -- 無法
 

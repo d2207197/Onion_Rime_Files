@@ -56,7 +56,7 @@ end
 function M.fini(env)
 end
 
-function M.func(input,env)
+function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
   local o_input = context.input  -- 原始未轉換輸入碼
@@ -64,11 +64,11 @@ function M.func(input,env)
   -- local _end = context:get_preedit().sel_end + 1  --一般末尾「;」會多一。
   local caret_pos = context.caret_pos
 
-  for cand in input:iter() do
+  for cand in inp:iter() do
     yield(cand)
   end
   
-  if caret_pos == #o_input then
+  if (caret_pos == #o_input) then
     local mstr, cp, sp = string.match(o_input, env.match_pattern)  -- 取代 s1~ s5
     local cp_tab = env.english_pattern[cp]
     if cp_tab then

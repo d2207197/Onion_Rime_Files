@@ -36,7 +36,7 @@ end
 function M.fini(env)
 end
 
-function M.func(input,env)
+function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
   local o_input = context.input  -- 原始未轉換輸入碼
@@ -44,7 +44,7 @@ function M.func(input,env)
   local _end = context:get_preedit().sel_end
   local caret_pos = context.caret_pos
   local c, s = string.match(o_input, env.match_pattern)
-  if caret_pos == #o_input and (c~=nil) then
+  if caret_pos == #o_input and c then
     local es = _end - start - 2  --減二為扣掉「.,」兩個尾綴（c不包含，故前移兩位）
     local c = string.sub(c, -es)
     -- local c = string.sub(c, start ,_end)
@@ -68,7 +68,7 @@ function M.func(input,env)
     end
 
   else
-    for cand in input:iter() do
+    for cand in inp:iter() do
       yield(cand)
     end
   end

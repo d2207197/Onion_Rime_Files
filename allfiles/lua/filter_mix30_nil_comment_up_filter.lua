@@ -14,7 +14,15 @@
 local change_comment = require("filter_cand/change_comment")
 
 ----------------
-local function mix30_nil_comment_up_filter(inp, env)
+local M={}
+-- function M.init(env)
+-- end
+
+-- function M.fini(env)
+-- end
+
+-- local function mix30_nil_comment_up_filter(inp, env)
+function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
   local s_c_f_p_s = context:get_option("simplify_comment")
@@ -37,39 +45,56 @@ local function mix30_nil_comment_up_filter(inp, env)
   local check_kong = string.match(find_prefix, "^ou $" )
 
   for cand in inp:iter() do
-    if (string.match(cand.text, '^⎔%d$' )) then
+    if string.match(cand.text, '^⎔%d$' ) then
       -- local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
       -- array30_nil_cand.preedit = array30_preedit
       array30_nil_cand.preedit = cand.preedit
       yield(array30_nil_cand)
     else
-      if (s_up) then
-        if (check_ns) then
+      if s_up then
+
+        if check_ns then  -- 不含空格
           yield( s_c_f_p_s and change_comment(cand,"") or cand )
-         elseif (check_s1) and (not string.match(cand.comment, '▪' )) then
-          yield(cand)  --空格後，該字編碼不含「▪」直接上屏。
-        elseif (check_s2) then
-          yield(cand)  --同時含有「▫」和「▪」編碼的字，空格後，該字某編碼下可直接上屏，某編碼下不能直接上屏。
-        elseif (check_wu) and (string.match(cand.text, '毋' )) then
-          yield(cand)  --同時含有「▫」和「▪」編碼的字，但該編碼不只一個字。
-        elseif (check_ji) and (string.match(cand.text, '及' )) then
-          yield(cand)  --同時含有「▫」和「▪」編碼的字，但該編碼不只一個字。
-        elseif (check_kong) and (string.match(cand.text, '○' )) then
-          yield(cand)  --同時含有「▫」和「▪」編碼的字，但該編碼不只一個字。
+        else  -- 最後有空格
+          yield( check_s1 and not string.match(cand.comment, '▪' ) and cand or
+                 -- (check_s2 or check_s3 or check_s4 or check_s5 or check_s6 or check_s7 or check_s8) and cand or
+                 check_s2 and cand or
+                 check_wu and string.match(cand.text, '毋' ) and cand or
+                 check_ji and string.match(cand.text, '及' ) and cand or
+                 check_kong and string.match(cand.text, '○' ) and cand )
+        end
+
+        -- if check_ns then
+        --   yield( s_c_f_p_s and change_comment(cand,"") or cand )
+        -- elseif check_s1 and not string.match(cand.comment, '▪' ) then
+        --   yield(cand)  --空格後，該字編碼不含「▪」直接上屏。
+        -- elseif check_s2 or check_s3 or check_s4 or check_s5 or check_s6 or check_s7 or check_s8 then
+        --   yield(cand)  --同時含有「▫」和「▪」編碼的字，空格後，該字某編碼下可直接上屏，某編碼下不能直接上屏。
+        -- elseif check_wu and string.match(cand.text, '毋' ) then
+        --   yield(cand)  --同時含有「▫」和「▪」編碼的字，但該編碼不只一個字。
+        -- elseif check_ji and string.match(cand.text, '及' ) then
+        --   yield(cand)  --同時含有「▫」和「▪」編碼的字，但該編碼不只一個字。
+        -- elseif check_kong and string.match(cand.text, '○' ) then
+        --   yield(cand)  --同時含有「▫」和「▪」編碼的字，但該編碼不只一個字。
+
         -- elseif (string.match(find_prefix, "^www%..*$")) then
         --   yield(cand)
         -- elseif (string.match(find_prefix, "`.*$" )) or (string.match(find_prefix, "^w[0-9]$" ))  or (string.match(find_prefix, "^[a-z][-_.0-9a-z]*@.*$" )) or (string.match(find_prefix, "^(www[.]|https?:|ftp:|mailto:|file:).*$" )) then
         --   yield(cand)
-        end
-      elseif (not s_up) then
+
+        -- end
+
+      elseif not s_up then
         yield( s_c_f_p_s and change_comment(cand,"") or cand )
       end
+
     end
   end
 
 end
 ----------------
-return mix30_nil_comment_up_filter
+-- return mix30_nil_comment_up_filter
+return M
 ----------------
 
 

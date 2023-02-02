@@ -16,12 +16,12 @@ local function mix_apc_pluss(key, env)
   --   return 2
   -- if (o_ascii_mode) then
   --   return 2
-  if (o_ascii_punct) and (not o_ascii_mode) then
+  if o_ascii_punct and not o_ascii_mode then
   -- elseif (o_ascii_punct) then
   -- if (context:get_option("ascii_punct")) and (not context:get_option("ascii_mode")) then
     -- local caret_pos = context.caret_pos
     if (key:repr() == 'Shift+less') then
-      if (context:is_composing()) then
+      if context:is_composing() then
         -- local orig_ps = context:get_commit_text()
         engine:commit_text( orig_ps .. "," )
       else
@@ -31,7 +31,7 @@ local function mix_apc_pluss(key, env)
       return 1 -- kAccepted
     -- end
     elseif (key:repr() == "Shift+greater") then
-      if (context:is_composing()) then
+      if context:is_composing() then
         -- local orig_ps = context:get_commit_text()
         engine:commit_text( orig_ps .. "." )
       else
@@ -39,16 +39,16 @@ local function mix_apc_pluss(key, env)
       end
       context:clear()
       return 1 -- kAccepted
-    elseif (key:repr() == "space") and (caret_pos == 0) then
+    elseif key:repr() == "space" and caret_pos == 0 then
       engine:commit_text( " " )
       context:clear()
       return 1 -- kAccepted
     end
-  elseif (not o_ascii_punct) and (not o_ascii_mode) then
+  elseif not o_ascii_punct and not o_ascii_mode then
   -- elseif (not o_ascii_punct) then
   -- elseif (not context:get_option("ascii_punct")) and (not context:get_option("ascii_mode")) then
     -- local caret_pos = context.caret_pos
-    if (key:repr() == "space") and (caret_pos == 0) then
+    if key:repr() == "space" and caret_pos == 0 then
       engine:commit_text( " " )
       context:clear()
       return 1 -- kAccepted
