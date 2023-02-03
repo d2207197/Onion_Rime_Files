@@ -19,7 +19,7 @@ switches:
     states: [ On, Off ]
   - name: en_sort
     reset: 0
-    states: [ 無排, 序排 ]
+    states: [ 個排, 序排 ]
 
 engine:
   filters:

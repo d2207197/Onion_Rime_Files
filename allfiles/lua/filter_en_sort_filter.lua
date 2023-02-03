@@ -34,7 +34,7 @@ local function filter(inp, env)
     if es < 3 then
         -- yield(Candidate("en", start, _end, input_in, "〔小於〕"))  --測試
       for cand in inp:iter() do
-        cand.preedit = cand.preedit .. '\t（序排：二字母以下不排序）'
+        cand.preedit = cand.preedit .. '\t（序排：二字母以下按個排）'
         yield(cand)
       end
 
@@ -64,7 +64,7 @@ local function filter(inp, env)
   elseif not en_sort then
     for cand in inp:iter() do
       -- cand.preedit = cand.preedit .. '\t　　　開始：' .. start ..'結束：' .. _end  -- 測試位置用
-      cand.preedit = cand.preedit .. '\t（無排：字母數）'
+      cand.preedit = cand.preedit .. '\t（個排：字母數）'
       yield(cand)
     end
   end
