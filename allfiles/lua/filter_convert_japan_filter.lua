@@ -32,6 +32,7 @@ local function init(env)
   env.match_pattern = env.p_prefix .. "([-/a-z.,;]+)(%., ?)$"  -- "[,46]([-/a-z][-/a-z.,;]*)(%., ?)$"：會有Bug
   env.tips_jp = "《日-固列》"
   -- env.tips_jp = env.p_prefix ~= "" and "《日-固列》" or ""
+  -- env.prompt_jp = "〔日-固列〕"
 end
 
 -- function M.fini(env)
@@ -47,11 +48,13 @@ local function filter(inp, env)
   local _end = context:get_preedit().sel_end
   local caret_pos = context.caret_pos
   local c, s = string.match(o_input, env.match_pattern)
+
   if caret_pos == #o_input and c then
     local es = _end - start - 2  --減二為扣掉「.,」兩個尾綴（c不包含，故前移兩位）
     local c = string.sub(c, -es)
     -- local c = string.sub(c, start ,_end)
-    local jp_p = env.tips_jp .. c .. s
+    local jp_p = env.tips_jp .. string.upper(c) .. s
+    -- local jp_p = env.p_prefix ~= "" and "《純日語》" .. string.upper(c) .. s .. "\t" .. env.prompt_jp or string.upper(c) .. s .. "\t" .. env.prompt_jp
     local roma = Candidate("jp", start, caret_pos, revise_t(c) , "〔羅馬字〕")
     local roma_f = Candidate("jp", start, caret_pos, fullshape_t(c), "〔全形羅馬字〕")
     yield( change_preedit(roma, jp_p) )
@@ -75,6 +78,7 @@ local function filter(inp, env)
       yield(cand)
     end
   end
+
 end
 
 -- return convert_japan_filter
