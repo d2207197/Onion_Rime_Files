@@ -31,42 +31,65 @@ local function filter(inp, env)
   -- local input_n = string.len(input_in)
 
   if en_sort then
+
     if es < 3 then
-        -- yield(Candidate("en", start, _end, input_in, "〔小於〕"))  --測試
+
       for cand in inp:iter() do
-        cand.preedit = cand.preedit .. '\t（序排：二字母以下按個排）'
+        cand.preedit = cand.preedit .. "\t（序排：二字母以下按個排）"  -- （序排：單字母按個排）
         yield(cand)
       end
+      -- yield(Candidate("en", start, _end, input_in, "〔小於〕"))  -- 測試用
 
     else
+
       local cands = {}
-      for cand in inp:iter() do
-        table.insert(cands, cand)
-        --- 以下用遍尋重組一個table，再排序，再新組 Candidate，還是太慢！
+      -- local c = 1
+      for cand in inp:iter() do  -- 封進 cands 中，供後面排序。
+        --- 使用 table 的 size（實測效率最高）
+        cands[#cands+1] = cand
+
+        --- 使用計數器（效率較高）
+        -- cands[c] = cand
+        -- c = c+1
+
+        --- 原始（效率較低）
+        -- table.insert(cands, cand)
+
+        --- 以下用遍尋重組一個精簡 table，再排序，再新組 Candidate，還是太慢！且 comment 附加尚需解決。
         -- table.insert(cands, {text = cand.text, index = #cands})
         -- -- cand.preedit = '測試' .. cand:get_genuine().text .. cand.text ..'測試'
         -- yield(cand)
       end
-      if (#cands ~= 0) then
+
+      if (#cands ~= 0) then  -- 按字母順序進行排序。
         table.sort(cands, function(a, b) return a.text == b.text and string.len(a.text) < string.len(b.text) or a.text < b.text end)
+
         --- 以下用遍尋重組一個table，再排序，再新組 Candidate，還是太慢！
         -- table.sort(cands, function(a, b) return a.text == b.text and a.index < b.index or a.text < b.text end)  --Rime是按編碼長度排序,所以要重排
       end
-      for _, cand in ipairs(cands) do
-        --- 以下用遍尋重組一個table，再排序，再新組 Candidate，還是太慢！
-        -- newcand = Candidate('en',0,caret_pos,cand.text," ")
-        -- yield(newcand)
-        cand.preedit = cand.preedit .. '\t（序排：ａ～ｚ）'
+
+      --- ipairs 比 pairs 更快，效能更好。但 ipairs 遇不連續數組會中斷。
+      --- pairs：迭代 table，可遍歷表中所有的 key 可以返回 nil。
+      --- ipairs: 迭代數組，不能返回 nil,如果遇到 nil 則退出。
+      for _, cand in ipairs(cands) do  -- 顯示
+        cand.preedit = cand.preedit .. "\t（序排：a~z）"  -- （序排：ａ～ｚ）
         yield(cand)
+
+        --- 以下用遍尋重組一個精簡 table，再排序，再新組 Candidate，還是太慢！且 comment 附加尚需解決。
+        -- newcand = Candidate("en",0,caret_pos,cand.text," ")
+        -- yield(newcand)
       end
+
     end
 
   elseif not en_sort then
+
     for cand in inp:iter() do
-      -- cand.preedit = cand.preedit .. '\t　　　開始：' .. start ..'結束：' .. _end  -- 測試位置用
-      cand.preedit = cand.preedit .. '\t（個排：字母數）'
+      -- cand.preedit = cand.preedit .. "\t　　　開始：" .. start .. "結束：" .. _end  -- 測試位置用
+      cand.preedit = cand.preedit .. "\t（個排：字數）"  -- （個排：字母數）
       yield(cand)
     end
+
   end
 
 end
