@@ -27,16 +27,18 @@ local drop_cand = require("filter_cand/drop_cand")
 local change_comment = require("filter_cand/change_comment")
 
 ----------------
-local M={}
-function M.init(env)
+-- local M={}
+local function init(env)
+-- function M.init(env)
   env.bm_opencc = Opencc("back_mark.json") or {''}
 end
 
-function M.fini(env)
-end
+-- function M.fini(env)
+-- end
 
 -- local function ocm_mixin_filter(inp, env)
-function M.func(inp,env)
+local function filter(inp, env)
+-- function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
   local c_f2_s = context:get_option("character_range_bhjm")
@@ -56,7 +58,11 @@ function M.func(inp,env)
   end
 end
 ----------------
-return M
+-- return ocm_mixin_filter
+return { init = init, func = filter }
+-- return M
+
+
 -- return { ocm_mixin_filter = ocm_mixin_filter }
 -- return { filter = charset_filter } --可變更名稱
 -- return mix_cf2_cfp_smf_filter -- 無法

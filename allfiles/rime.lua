@@ -218,6 +218,7 @@ convert_english_filter = require("filter_convert_english_filter")
 -- -- 改用 convert_japan_translator 出半形片假名。
 -- local filter_halfwidth_katakana_filter = require("filter_halfwidth_katakana_filter")
 -- halfwidth_katakana_filter = filter_halfwidth_katakana_filter.halfwidth_katakana_filter
+-- halfwidth_katakana_filter = require("filter_halfwidth_katakana_filter")
 
 
 -- --- lua_custom_phrase_filter

@@ -140,12 +140,24 @@ end
 
 
 
-local function halfwidth_katakana_filter(input, env)
+
+-- local M={}
+-- local function init(env)
+-- function M.init(env)
+
+
+-- function M.fini(env)
+-- end
+
+
+-- local function halfwidth_katakana_filter(inp, env)
+local function filter(inp, env)
+-- function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
   local o_input = context.input  -- 原始未轉換輸入碼
   -- local newcand = {start = context:get_preedit().sel_start, _end = context:get_preedit().sel_end}
-  for cand in input:iter() do
+  for cand in inp:iter() do
     local start = context:get_preedit().sel_start
     local _end = context:get_preedit().sel_end
     -- if (string.match(o_input, "%.,$")) and (string.match(cand.text, "^[。、・ヲァィゥェォャュョッーアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワン゛゜]+$")) then
@@ -207,4 +219,8 @@ local function halfwidth_katakana_filter(input, env)
   end
 end
 
-return { halfwidth_katakana_filter = halfwidth_katakana_filter }
+-- return halfwidth_katakana_filter
+return { init = init, func = filter }
+-- return M
+
+-- return { halfwidth_katakana_filter = halfwidth_katakana_filter }

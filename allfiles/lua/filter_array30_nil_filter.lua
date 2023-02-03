@@ -47,7 +47,8 @@
 
 
 
-local M={}
+-- local M={}
+-- local function init(env)
 -- function M.init(env)
 -- end
 
@@ -55,7 +56,8 @@ local M={}
 -- end
 
 -- local function array30_nil_filter(inp, env)
-function M.func(inp,env)
+local function filter(inp, env)
+-- function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
   local p_key = context.input
@@ -105,4 +107,5 @@ function M.func(inp,env)
 end
 
 -- return array30_nil_filter
-return M
+return { func = filter }
+-- return M

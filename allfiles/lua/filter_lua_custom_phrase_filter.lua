@@ -76,9 +76,9 @@ local function load_text_dict(text_dict)
 end
 
 ---------------------------------------------------------------
-local M={}
-function M.init(env)
--- local function init(env)
+-- local M={}
+local function init(env)
+-- function M.init(env)
   local engine = env.engine
   local schema = engine.schema
   local config = schema.config
@@ -90,13 +90,13 @@ function M.init(env)
 end
 
 
-function M.fini(env)
-end
+-- function M.fini(env)
+-- end
 
 
--- local function lua_custom_phrase_filter(input,env)
--- local function filter(input,env)
-function M.func(inp,env)
+-- local function lua_custom_phrase_filter(inp,env)
+local function filter(inp,env)
+-- function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
   local start = context:get_preedit().sel_start
@@ -128,12 +128,12 @@ function M.func(inp,env)
     -- yield( custom_phrase_cand )
   end
 
-  for cand in input:iter() do
+  for cand in inp:iter() do
     yield(cand)
   end
 end
 
 
-return M
--- return { init = init, func = filter }
 -- return lua_custom_phrase_filter
+return { init = init, func = filter }
+-- return M

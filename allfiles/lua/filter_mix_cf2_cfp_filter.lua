@@ -15,15 +15,18 @@ local drop_cand = require("filter_cand/drop_cand")
 local change_comment = require("filter_cand/change_comment")
 
 ----------------
-local M={}
+-- local M={}
+-- local function init(env)
 -- function M.init(env)
 -- end
+
 
 -- function M.fini(env)
 -- end
 
 -- local function mix_cf2_cfp_filter(inp,env)
-function M.func(inp,env)
+local function filter(inp, env)
+-- function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
   local c_f2_s = context:get_option("character_range_bhjm")
@@ -38,7 +41,8 @@ function M.func(inp,env)
 end
 ----------------
 -- return mix_cf2_cfp_filter
-return M
+return { init = init, func = filter }
+-- return M
 ----------------
 
 

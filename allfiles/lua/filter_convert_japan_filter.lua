@@ -21,8 +21,9 @@ local hira_t = c_k.hira_t
 ----------------------------------------------------------------------------------------
 local change_preedit = require("filter_cand/change_preedit")
 ----------------------------------------------------------------------------------------
-local M={}
-function M.init(env)
+-- local M={}
+local function init(env)
+-- function M.init(env)
   local engine = env.engine
   local schema = engine.schema
   local config = schema.config
@@ -33,10 +34,12 @@ function M.init(env)
   -- env.tips_jp = env.p_prefix ~= "" and "《日-固列》" or ""
 end
 
-function M.fini(env)
-end
+-- function M.fini(env)
+-- end
 
-function M.func(inp,env)
+-- local function convert_japan_filter(inp, env)
+local function filter(inp, env)
+-- function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
   local o_input = context.input  -- 原始未轉換輸入碼
@@ -74,7 +77,9 @@ function M.func(inp,env)
   end
 end
 
-return M
+-- return convert_japan_filter
+return { init = init, func = filter }
+-- return M
 ----------------------------------------------------------------------------------------
 
 

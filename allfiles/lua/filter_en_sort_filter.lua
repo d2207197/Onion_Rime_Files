@@ -3,7 +3,9 @@
 （easy_en_super）
 如同英漢字典一樣排序，候選項重新排序。開關（en_sort）
 --]]
-local M={}
+
+-- local M={}
+-- local function init(env)
 -- function M.init(env)
 -- end
 
@@ -11,7 +13,8 @@ local M={}
 -- end
 
 -- local function en_sort_filter(inp, env)
-function M.func(inp,env)
+local function filter(inp, env)
+-- function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
   local en_sort = context:get_option("en_sort")
@@ -103,4 +106,5 @@ function M.func(inp,env)
 end
 
 -- return en_sort_filter
-return M
+return { func = filter }
+-- return M
