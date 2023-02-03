@@ -32,7 +32,7 @@ local function init(env)
   env.match_pattern = env.p_prefix .. "([-/a-z.,;]+)(%., ?)$"  -- "[,46]([-/a-z][-/a-z.,;]*)(%., ?)$"：會有Bug
   env.tips_jp = "《日-固列》"
   -- env.tips_jp = env.p_prefix ~= "" and "《日-固列》" or ""
-  -- env.prompt_jp = "〔日-固列〕"
+  -- env.prompt_jp = "（日-固列）"
 end
 
 -- function M.fini(env)
