@@ -60,6 +60,7 @@ local function load_text_dict(text_dict)
     if v_text then
 
       -- tab[v_code] = v_text  -- 一個 code 只能有一條短語，下方可一個 code，多條短語。
+      --- 下方 table 格式為：{[v_code1]={'v_text1','v_text2',...},[v_code2]={'v_text3'},...}
       if tab[v_code] == nil then
         local nn={}
         table.insert(nn, v_text)
