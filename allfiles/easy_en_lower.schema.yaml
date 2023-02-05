@@ -4,7 +4,7 @@
 schema:
   schema_id: easy_en_lower
   name: Easy English（英漢字典）-Lower
-  version: "202301"
+  version: "202302"
   author:
     - 洋蔥
   description:

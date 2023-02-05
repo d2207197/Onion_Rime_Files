@@ -92,9 +92,11 @@ end
 
 
 local function translate(input, seg, env)
-  --- 當 schema 中找不到設定則跳開（env.textdict為""，該函數為 nil）
+  local tag_abc = seg:has_tag("abc")
+  --- 當 schema 中找不到設定則跳開（env.textdict為""，translate 函數為 nil）
+  --- 預防出現在掛接輸入中，限定在 abc 段落（tag_abc）
   -- if env.textdict == "" then return log.error("lua_custom_phrase： user_dict File Name is Wrong or Missing!") end  -- 錯誤日誌中提示名稱錯誤或遺失
-  if env.textdict == "" then return end
+  if not tag_abc or env.textdict == "" then return end
 
   -- local engine = env.engine
   -- local context = engine.context

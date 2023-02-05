@@ -3,8 +3,8 @@
 把 recognizer 正則輸入網址使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
 該項多加「www.」
 --]]
-local function init(env)
-end
+-- local function init(env)
+-- end
 
 -- local function email_urlw_translator(input, seg)
 local function translate(input, seg)
@@ -40,4 +40,5 @@ local function translate(input, seg)
 end
 
 -- return email_urlw_translator
-return {init = init, func = translate}
+-- return {init = init, func = translate}
+return { func = translate }

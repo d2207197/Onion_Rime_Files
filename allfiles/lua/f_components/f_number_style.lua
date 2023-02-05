@@ -81,7 +81,7 @@ end
 
 local function purech_number(t)
   if t == "" then return "" end
-  local format1 = "xlit|0123456789|〇一二三四五六七八九|"
+  local format1 = "xlit|0123456789.|〇一二三四五六七八九點|"
   local proj = convert_format(format1)
   return proj:apply(t)
 end

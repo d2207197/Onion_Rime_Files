@@ -3,8 +3,8 @@
 把 recognizer 正則輸入 email 使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
 把 recognizer 正則輸入網址使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
 --]]
-local function init(env)
-end
+-- local function init(env)
+-- end
 
 -- local function email_url_translator(input, seg)
 local function translate(input, seg, env)
@@ -38,4 +38,5 @@ local function translate(input, seg, env)
 end
 
 -- return email_url_translator
-return {init = init, func = translate}
+-- return {init = init, func = translate}
+return { func = translate }

@@ -66,18 +66,19 @@ local function filter(inp, env)
 
         --- 以下用遍尋重組一個table，再排序，再新組 Candidate，還是太慢！
         -- table.sort(cands, function(a, b) return a.text == b.text and a.index < b.index or a.text < b.text end)  --Rime是按編碼長度排序,所以要重排
-      end
 
-      --- ipairs 比 pairs 更快，效能更好。但 ipairs 遇不連續數組會中斷。
-      --- pairs：迭代 table，可遍歷表中所有的 key 可以返回 nil。
-      --- ipairs: 迭代數組，不能返回 nil,如果遇到 nil 則退出。
-      for _, cand in ipairs(cands) do  -- 顯示
-        cand.preedit = cand.preedit .. "\t（序排：a~z）"  -- （序排：ａ～ｚ）
-        yield(cand)
+        --- ipairs 比 pairs 更快，效能更好。但 ipairs 遇不連續數組會中斷。
+        --- pairs：迭代 table，可遍歷表中所有的 key 可以返回 nil。
+        --- ipairs: 迭代數組，不能返回 nil,如果遇到 nil 則退出。
+        for _, cand in ipairs(cands) do  -- 顯示
+          cand.preedit = cand.preedit .. "\t（序排：a~z）"  -- （序排：ａ～ｚ）
+          yield(cand)
 
-        --- 以下用遍尋重組一個精簡 table，再排序，再新組 Candidate，還是太慢！且 comment 附加尚需解決。
-        -- newcand = Candidate("en",0,caret_pos,cand.text," ")
-        -- yield(newcand)
+          --- 以下用遍尋重組一個精簡 table，再排序，再新組 Candidate，還是太慢！且 comment 附加尚需解決。
+          -- newcand = Candidate("en",0,caret_pos,cand.text," ")
+          -- yield(newcand)
+        end
+
       end
 
     end

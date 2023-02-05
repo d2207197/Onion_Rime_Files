@@ -114,6 +114,11 @@ local url_encode = require("f_components/f_url_encode")
 local url_decode = require("f_components/f_url_decode")
 
 ----------------------------------------------------------------------------------------
+--- 計算機
+
+local simple_calculator = require("f_components/f_simple_calculator")
+
+----------------------------------------------------------------------------------------
 --- 置入方案範例
 --[[
 engine:
@@ -1521,21 +1526,27 @@ local function translate(input, seg, env)
       , { "  fn〔年月日 時:分〕  ft〔年月日 時:分:秒〕", "④" }
       , { "  p〔程式格式〕  z〔時區〕  s〔節氣〕  l〔月相〕", "⑤" }
       , { "  ○○○〔數字〕", "⑥" }
-      , { "  ○/○/○〔 ○ 年 ○ 月 ○ 日〕  ○/○〔 ○ 月 ○ 日〕", "⑦" }
-      , { "  ○-○-○〔○年○月○日〕  ○-○〔○月○日〕", "⑧" }
-      , { "  / [a-z , . - ' / ]+〔小寫字母〕", "⑨" }
-      , { "  ; [a-z , . - ' / ]+〔大寫字母〕", "⑩" }
-      , { "  \' [a-z , . - ' / ]+〔開頭大寫字母〕", "⑪" }
-      , { "  e [0-9a-f]+〔Percent/URL encoding〕", "⑫" }
-      , { "  u [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑬" }
-      , { "  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑭" }
-      , { "  c [0-9]+〔內碼十進制 Dec〕", "⑮" }
-      , { "  o [0-7]+〔內碼八進制 Oct〕", "⑯" }
-      , { "  v〔版本資訊〕", "⑰" }
-      , { "===========  結束  ===========    ", "⑱" }
-      , { "", "⑲" }
-      , { "", "⑳" }
-
+      -- , { "  ○/○/○〔 ○ 年 ○ 月 ○ 日〕  ○/○〔 ○ 月 ○ 日〕", "⑦" }
+      -- , { "  ○-○-○〔○年○月○日〕  ○-○〔○月○日〕", "⑧" }
+      , { "  ○ y ○ m ○ d〔○年○月○日〕", "⑦" }
+      , { "  ○ y ○ m〔○年○月〕    ○ m ○ d〔○月○日〕", "⑧" }
+      , { "  ○ y〔○年〕    ○ m〔○月〕    ○ d〔○日〕", "⑨" }
+      , { "  [0-9][0-9 + - * / ^ ( ) ]+〔簡易計算機〕", "⑩" }
+      , { "  算符： ‹+ a›   ‹- r›   ‹* x›   ‹/ v›   ‹^ s›   ‹ ( q›   ‹ ) w› ", "⑪" }
+      , { "  / [a-z , . - ' / ]+〔小寫字母〕", "⑫" }
+      , { "  ; [a-z , . - ' / ]+〔大寫字母〕", "⑬" }
+      , { "  \' [a-z , . - ' / ]+〔開頭大寫字母〕", "⑭" }
+      , { "  e [0-9a-f]+〔Percent/URL encoding〕", "⑮" }
+      , { "  u [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑯" }
+      , { "  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑰" }
+      , { "  c [0-9]+〔內碼十進制 Dec〕", "⑱" }
+      , { "  o [0-7]+〔內碼八進制 Oct〕", "⑲" }
+      , { "  v〔版本資訊〕", "⑳" }
+      , { "===========  結束  ===========    ", "㉑" }
+      , { "", "㉒" }
+      , { "", "㉓" }
+      -- , { "", "㉔" }
+      -- , { "", "㉕" }
       -- , { "〔夜思‧李白〕", "床前明月光，疑是地上霜。\r舉頭望明月，低頭思故鄉。" }
       }
       for k, v in ipairs(date_table) do
@@ -1780,82 +1791,8 @@ local function translate(input, seg, env)
     -- end
 
 
-    local y, m, d = string.match(input, env.prefix .. "(%d+)/(%d?%d)/(%d?%d)$")
-    if y and tonumber(m)<13 and tonumber(d)<32 then
-      yield(Candidate("date", seg.start, seg._end, " "..y.." 年 "..m.." 月 "..d.." 日 " , "〔*日期*〕"))
-      yield(Candidate("date", seg.start, seg._end, y.."年"..m.."月"..d.."日" , "〔日期〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(y).."年"..fullshape_number(m).."月"..fullshape_number(d).."日" , "〔全形日期〕"))
-      yield(Candidate("date", seg.start, seg._end, ch_y_date(y).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔小寫中文日期〕"))
-      yield(Candidate("date", seg.start, seg._end, chb_y_date(y).."年"..chb_m_date(m).."月"..chb_d_date(d).."日" , "〔大寫中文日期〕"))
-      if (tonumber(y) > 1911) then
-        yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(y).."年"..m.."月"..d.."日" , "〔民國〕"))
-        yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
-        yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
-      elseif (tonumber(y) <= 1911) then
-        yield(Candidate("date", seg.start, seg._end, "民國前"..min_guo(y).."年"..m.."月"..d.."日" , "〔民國〕"))
-        yield(Candidate("date", seg.start, seg._end, "民國前"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
-        yield(Candidate("date", seg.start, seg._end, "民國前"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
-      end
-      -- yield(Candidate("date", seg.start, seg._end, y.."年 "..jp_m_date(m)..jp_d_date(d), "〔日文日期〕"))
-      local jpymd2, jp_y2 = jp_ymd(y,m,d)
-      yield(Candidate("date", seg.start, seg._end, jp_y2..m.."月"..d.."日" , "〔日本元号〕"))
-      yield(Candidate("date", seg.start, seg._end, eng1_m_date(m).." "..eng2_d_date(d)..", "..y, "〔美式月日年〕"))
-      yield(Candidate("date", seg.start, seg._end, eng1_m_date(m).." "..eng3_d_date(d)..", "..y, "〔美式月日年〕"))
-      yield(Candidate("date", seg.start, seg._end, eng2_m_date(m).." "..eng3_d_date(d)..", "..y, "〔美式月日年〕"))
-      yield(Candidate("date", seg.start, seg._end, eng3_m_date(m).." "..eng4_d_date(d).." "..y, "〔美式月日年〕"))
-      yield(Candidate("date", seg.start, seg._end, eng1_m_date(m).." the "..eng1_d_date(d)..", "..y, "〔美式月日年〕"))
-      yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng1_m_date(m).." "..y, "〔英式日月年〕"))
-      yield(Candidate("date", seg.start, seg._end, eng3_d_date(d).." "..eng1_m_date(m).." "..y, "〔英式日月年〕"))
-      yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng2_m_date(m).." "..y, "〔英式日月年〕"))
-      yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
-      yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
-      if tonumber(y) > 1899 and tonumber(y) < 2101 then
-        -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
-        local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
-        -- if (Date2LunarDate~=nil) then
-        if ll_1b~=nil and ll_2b~=nil then
-          yield(Candidate("date", seg.start, seg._end, ll_1b, "〔西曆→農曆〕"))
-          yield(Candidate("date", seg.start, seg._end, ll_2b, "〔西曆→農曆〕"))
-        end
-      end
-      if tonumber(y) > 1901 and tonumber(y) < 2101 then
-        local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
-        if (All_g2~=nil) then
-          yield(Candidate("date", seg.start, seg._end, Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕"))
-        end
-        local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
-        local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
-        -- if (Date2LunarDate~=nil) then
-        if (LDD2D~=nil) then
-          yield(Candidate("date", seg.start, seg._end, LDD2D, "〔農曆→西曆〕"))
-          yield(Candidate("date", seg.start, seg._end, LDD2D_leap_year, "〔農曆(閏)→西曆〕"))
-        end
-      end
-      return
-    end
-
-    local m, d = string.match(input, env.prefix .. "(%d?%d)/(%d?%d)$")
-    if m and tonumber(m)<13 and tonumber(d)<32 then
-      yield(Candidate("date", seg.start, seg._end, " "..m.." 月 "..d.." 日 " , "〔*日期*〕"))
-      yield(Candidate("date", seg.start, seg._end, m.."月"..d.."日" , "〔日期〕"))
-      yield(Candidate("date", seg.start, seg._end, fullshape_number(m).."月"..fullshape_number(d).."日" , "〔全形日期〕"))
-      yield(Candidate("date", seg.start, seg._end, ch_m_date(m).."月"..ch_d_date(d).."日" , "〔小寫中文日期〕"))
-      yield(Candidate("date", seg.start, seg._end, chb_m_date(m).."月"..chb_d_date(d).."日" , "〔大寫中文日期〕"))
-      yield(Candidate("date", seg.start, seg._end, jp_m_date(m)..jp_d_date(d), "〔日文日期〕"))
-      yield(Candidate("date", seg.start, seg._end, eng1_m_date(m).." "..eng2_d_date(d), "〔美式月日〕"))
-      yield(Candidate("date", seg.start, seg._end, eng1_m_date(m).." "..eng3_d_date(d), "〔美式月日〕"))
-      yield(Candidate("date", seg.start, seg._end, eng2_m_date(m).." "..eng3_d_date(d), "〔美式月日〕"))
-      yield(Candidate("date", seg.start, seg._end, eng3_m_date(m).." "..eng4_d_date(d), "〔美式月日〕"))
-      yield(Candidate("date", seg.start, seg._end, eng1_m_date(m).." the "..eng1_d_date(d), "〔美式月日〕"))
-      yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng1_m_date(m), "〔英式日月〕"))
-      yield(Candidate("date", seg.start, seg._end, eng3_d_date(d).." "..eng1_m_date(m), "〔英式日月〕"))
-      yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng2_m_date(m), "〔英式日月〕"))
-      yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m), "〔英式日月〕"))
-      yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m), "〔英式日月〕"))
-      return
-    end
-
-    local y, m, d = string.match(input, env.prefix .. "(%d+)-(%d?%d)-(%d?%d)$")
+    local y, m, d = string.match(input, env.prefix .. "(%d+)y(%d?%d)m(%d?%d)d?$")
+    -- if not y then y, m, d = string.match(input, env.prefix .. "y(%d+)m(%d?%d)d(%d?%d)$") end
     if y and tonumber(m)<13 and tonumber(d)<32 then
       yield(Candidate("date", seg.start, seg._end, y.."年"..m.."月"..d.."日" , "〔日期〕"))
       yield(Candidate("date", seg.start, seg._end, " "..y.." 年 "..m.." 月 "..d.." 日 " , "〔*日期*〕"))
@@ -1913,7 +1850,8 @@ local function translate(input, seg, env)
       return
     end
 
-    local m, d = string.match(input, env.prefix .. "(%d?%d)-(%d?%d)$")
+    local m, d = string.match(input, env.prefix .. "(%d?%d)m(%d?%d)d?$")
+    -- if not m then m, d =  string.match(input, env.prefix .. "m(%d?%d)d(%d?%d)$") end
     if m and tonumber(m)<13 and tonumber(d)<32 then
       yield(Candidate("date", seg.start, seg._end, m.."月"..d.."日" , "〔日期〕"))
       yield(Candidate("date", seg.start, seg._end, " "..m.." 月 "..d.." 日 " , "〔*日期*〕"))
@@ -1934,17 +1872,226 @@ local function translate(input, seg, env)
       return
     end
 
+    local y, m = string.match(input, env.prefix .. "(%d+)y(%d?%d)m?$")
+    -- if not y then y, m = string.match(input, env.prefix .. "y(%d+)m(%d?%d)$") end
+    if y and tonumber(m)<13 then
+      yield(Candidate("date", seg.start, seg._end, y.."年"..m.."月" , "〔日期〕"))
+      yield(Candidate("date", seg.start, seg._end, " "..y.." 年 "..m.." 月 " , "〔*日期*〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(y).."年"..fullshape_number(m).."月" , "〔全形日期〕"))
+      yield(Candidate("date", seg.start, seg._end, ch_y_date(y).."年"..ch_m_date(m).."月" , "〔小寫中文日期〕"))
+      yield(Candidate("date", seg.start, seg._end, chb_y_date(y).."年"..chb_m_date(m).."月" , "〔大寫中文日期〕"))
+      if (tonumber(y) > 1911) then
+        yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(y).."年"..m.."月" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月" , "〔民國〕"))
+      elseif (tonumber(y) <= 1911) then
+        yield(Candidate("date", seg.start, seg._end, "民國前"..min_guo(y).."年"..m.."月" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國前"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國前"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月" , "〔民國〕"))
+      end
+      -- yield(Candidate("date", seg.start, seg._end, y.."年 "..jp_m_date(m), "〔日文日期〕"))
+      -- local jpymd2, jp_y2 = jp_ymd(y,m,'1')
+      -- yield(Candidate("date", seg.start, seg._end, jp_y2..m.."月" , "〔日本元号〕(沒有日，元号可能有誤)"))
+      yield(Candidate("date", seg.start, seg._end, eng1_m_date(m)..", "..y, "〔美式/英式月年〕"))
+      yield(Candidate("date", seg.start, seg._end, eng2_m_date(m)..", "..y, "〔美式月年〕"))
+      yield(Candidate("date", seg.start, seg._end, eng3_m_date(m).." "..y, "〔美式月年〕"))
+      yield(Candidate("date", seg.start, seg._end, eng1_m_date(m).." "..y, "〔英式月年〕"))
+      yield(Candidate("date", seg.start, seg._end, eng2_m_date(m).." "..y, "〔英式月年〕"))
+      return
+    end
+
+    local y = string.match(input, env.prefix .. "(%d+)y$")
+    -- if not y then y = string.match(input, env.prefix .. "y(%d+)$") end
+    if y then
+      yield(Candidate("date", seg.start, seg._end, y.."年" , "〔日期〕"))
+      yield(Candidate("date", seg.start, seg._end, " "..y.." 年 " , "〔*日期*〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(y).."年" , "〔全形日期〕"))
+      yield(Candidate("date", seg.start, seg._end, ch_y_date(y).."年" , "〔小寫中文日期〕"))
+      yield(Candidate("date", seg.start, seg._end, chb_y_date(y).."年" , "〔大寫中文日期〕"))
+      if (tonumber(y) > 1911) then
+        yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(y).."年" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(y)).."年" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(y)).."年" , "〔民國〕"))
+      elseif (tonumber(y) <= 1911) then
+        yield(Candidate("date", seg.start, seg._end, "民國前"..min_guo(y).."年" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國前"..purech_number(min_guo(y)).."年" , "〔民國〕"))
+        yield(Candidate("date", seg.start, seg._end, "民國前"..read_number(confs[1], min_guo(y)).."年" , "〔民國〕"))
+      end
+      -- yield(Candidate("date", seg.start, seg._end, y.."年 ", "〔日文日期〕"))
+      -- local jpymd2, jp_y2 = jp_ymd(y,'1','1')
+      -- yield(Candidate("date", seg.start, seg._end, jp_y2 , "〔日本元号〕(沒有月日，元号可能有誤)"))
+      yield(Candidate("date", seg.start, seg._end, y, "〔美式/英式月年〕"))
+
+      return
+    end
+
+    local m = string.match(input, env.prefix .. "(%d?%d)m$")
+    -- if not m then m =  string.match(input, env.prefix .. "m(%d?%d)$") end
+    if m and tonumber(m)<13 then
+      yield(Candidate("date", seg.start, seg._end, m.."月" , "〔日期〕"))
+      yield(Candidate("date", seg.start, seg._end, " "..m.." 月 " , "〔*日期*〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(m).."月" , "〔全形日期〕"))
+      yield(Candidate("date", seg.start, seg._end, ch_m_date(m).."月" , "〔小寫中文日期〕"))
+      yield(Candidate("date", seg.start, seg._end, chb_m_date(m).."月" , "〔大寫中文日期〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_m_date(m), "〔日文日期〕"))
+      yield(Candidate("date", seg.start, seg._end, eng1_m_date(m), "〔美式/英式月日〕"))
+      yield(Candidate("date", seg.start, seg._end, eng2_m_date(m), "〔美式/英式月日〕"))
+      yield(Candidate("date", seg.start, seg._end, eng3_m_date(m), "〔美式月日〕"))
+      return
+    end
+
+    local d = string.match(input, env.prefix .. "(%d?%d)d$")
+    -- if not d then d =  string.match(input, env.prefix .. "d(%d?%d)$") end
+    if d and tonumber(d)<32 then
+      yield(Candidate("date", seg.start, seg._end, d.."日" , "〔日期〕"))
+      yield(Candidate("date", seg.start, seg._end, " "..d.." 日 " , "〔*日期*〕"))
+      yield(Candidate("date", seg.start, seg._end, fullshape_number(d).."日" , "〔全形日期〕"))
+      yield(Candidate("date", seg.start, seg._end, ch_d_date(d).."日" , "〔小寫中文日期〕"))
+      yield(Candidate("date", seg.start, seg._end, chb_d_date(d).."日" , "〔大寫中文日期〕"))
+      yield(Candidate("date", seg.start, seg._end, jp_d_date(d), "〔日文日期〕"))
+      yield(Candidate("date", seg.start, seg._end, eng2_d_date(d), "〔美式/英式月日〕"))
+      yield(Candidate("date", seg.start, seg._end, eng3_d_date(d), "〔美式/英式月日〕"))
+      yield(Candidate("date", seg.start, seg._end, eng4_d_date(d), "〔美式月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d), "〔美式/英式月日〕"))
+      yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d), "〔英式日月〕"))
+      return
+    end
+
+
+    -- local y, m, d = string.match(input, env.prefix .. "(%d+)-(%d?%d)-(%d?%d)$")
+    -- if y and tonumber(m)<13 and tonumber(d)<32 then
+    --   yield(Candidate("date", seg.start, seg._end, y.."年"..m.."月"..d.."日" , "〔日期〕"))
+    --   yield(Candidate("date", seg.start, seg._end, " "..y.." 年 "..m.." 月 "..d.." 日 " , "〔*日期*〕"))
+    --   yield(Candidate("date", seg.start, seg._end, fullshape_number(y).."年"..fullshape_number(m).."月"..fullshape_number(d).."日" , "〔全形日期〕"))
+    --   yield(Candidate("date", seg.start, seg._end, ch_y_date(y).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔小寫中文日期〕"))
+    --   yield(Candidate("date", seg.start, seg._end, chb_y_date(y).."年"..chb_m_date(m).."月"..chb_d_date(d).."日" , "〔大寫中文日期〕"))
+    --   if (tonumber(y) > 1911) then
+    --     yield(Candidate("date", seg.start, seg._end, "民國"..min_guo(y).."年"..m.."月"..d.."日" , "〔民國〕"))
+    --     yield(Candidate("date", seg.start, seg._end, "民國"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+    --     yield(Candidate("date", seg.start, seg._end, "民國"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+    --   elseif (tonumber(y) <= 1911) then
+    --     yield(Candidate("date", seg.start, seg._end, "民國前"..min_guo(y).."年"..m.."月"..d.."日" , "〔民國〕"))
+    --     yield(Candidate("date", seg.start, seg._end, "民國前"..purech_number(min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+    --     yield(Candidate("date", seg.start, seg._end, "民國前"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月"..ch_d_date(d).."日" , "〔民國〕"))
+    --   end
+    --   -- yield(Candidate("date", seg.start, seg._end, y.."年 "..jp_m_date(m)..jp_d_date(d), "〔日文日期〕"))
+    --   local jpymd2, jp_y2 = jp_ymd(y,m,d)
+    --   yield(Candidate("date", seg.start, seg._end, jp_y2..m.."月"..d.."日" , "〔日本元号〕"))
+    --   yield(Candidate("date", seg.start, seg._end, eng1_m_date(m).." "..eng2_d_date(d)..", "..y, "〔美式月日年〕"))
+    --   yield(Candidate("date", seg.start, seg._end, eng1_m_date(m).." "..eng3_d_date(d)..", "..y, "〔美式月日年〕"))
+    --   yield(Candidate("date", seg.start, seg._end, eng2_m_date(m).." "..eng3_d_date(d)..", "..y, "〔美式月日年〕"))
+    --   yield(Candidate("date", seg.start, seg._end, eng3_m_date(m).." "..eng4_d_date(d).." "..y, "〔美式月日年〕"))
+    --   yield(Candidate("date", seg.start, seg._end, eng1_m_date(m).." the "..eng1_d_date(d)..", "..y, "〔美式月日年〕"))
+    --   yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng1_m_date(m).." "..y, "〔英式日月年〕"))
+    --   yield(Candidate("date", seg.start, seg._end, eng3_d_date(d).." "..eng1_m_date(m).." "..y, "〔英式日月年〕"))
+    --   yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng2_m_date(m).." "..y, "〔英式日月年〕"))
+    --   yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
+    --   yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m)..", "..y, "〔英式日月年〕"))
+    --   if tonumber(y) > 1899 and tonumber(y) < 2101 then
+    --     -- local chinese_date_input = to_chinese_cal_local(os.time({year = y, month = m, day = d, hour = 12}))
+    --     local ll_1b, ll_2b = Date2LunarDate(y .. string.format("%02d", m) .. string.format("%02d", d))
+    --     -- if (Date2LunarDate~=nil) then
+    --     if ll_1b~=nil and ll_2b~=nil then
+    --       yield(Candidate("date", seg.start, seg._end, ll_1b, "〔西曆→農曆〕"))
+    --       yield(Candidate("date", seg.start, seg._end, ll_2b, "〔西曆→農曆〕"))
+    --     end
+    --   end
+    --   if tonumber(y) > 1901 and tonumber(y) < 2101 then
+    --     local All_g2, Y_g2, M_g2, D_g2 = lunarJzl(y .. string.format("%02d", m) .. string.format("%02d", d) .. 12)
+    --     if (All_g2~=nil) then
+    --       yield(Candidate("date", seg.start, seg._end, Y_g2.."年"..M_g2.."月"..D_g2.."日", "〔西曆→農曆干支〕"))
+    --     end
+    --     local LDD2D = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 0 )
+    --     local LDD2D_leap_year  = LunarDate2Date(y .. string.format("%02d", m) .. string.format("%02d", d), 1 )
+    --     -- if (Date2LunarDate~=nil) then
+    --     if (LDD2D~=nil) then
+    --       yield(Candidate("date", seg.start, seg._end, LDD2D, "〔農曆→西曆〕"))
+    --       yield(Candidate("date", seg.start, seg._end, LDD2D_leap_year, "〔農曆(閏)→西曆〕"))
+    --     end
+    --     -- local chinese_date_input2 = to_chinese_cal(y, m, d)
+    --     -- if (chinese_date_input2~=nil) then
+    --     --   yield(Candidate("date", seg.start, seg._end, chinese_date_input2 .. " ", "〔農曆，可能有誤！〕"))
+    --     -- end
+    --   end
+    --   return
+    -- end
+
+    -- local m, d = string.match(input, env.prefix .. "(%d?%d)-(%d?%d)$")
+    -- if m and tonumber(m)<13 and tonumber(d)<32 then
+    --   yield(Candidate("date", seg.start, seg._end, m.."月"..d.."日" , "〔日期〕"))
+    --   yield(Candidate("date", seg.start, seg._end, " "..m.." 月 "..d.." 日 " , "〔*日期*〕"))
+    --   yield(Candidate("date", seg.start, seg._end, fullshape_number(m).."月"..fullshape_number(d).."日" , "〔全形日期〕"))
+    --   yield(Candidate("date", seg.start, seg._end, ch_m_date(m).."月"..ch_d_date(d).."日" , "〔小寫中文日期〕"))
+    --   yield(Candidate("date", seg.start, seg._end, chb_m_date(m).."月"..chb_d_date(d).."日" , "〔大寫中文日期〕"))
+    --   yield(Candidate("date", seg.start, seg._end, jp_m_date(m)..jp_d_date(d), "〔日文日期〕"))
+    --   yield(Candidate("date", seg.start, seg._end, eng1_m_date(m).." "..eng2_d_date(d), "〔美式月日〕"))
+    --   yield(Candidate("date", seg.start, seg._end, eng1_m_date(m).." "..eng3_d_date(d), "〔美式月日〕"))
+    --   yield(Candidate("date", seg.start, seg._end, eng2_m_date(m).." "..eng3_d_date(d), "〔美式月日〕"))
+    --   yield(Candidate("date", seg.start, seg._end, eng3_m_date(m).." "..eng4_d_date(d), "〔美式月日〕"))
+    --   yield(Candidate("date", seg.start, seg._end, eng1_m_date(m).." the "..eng1_d_date(d), "〔美式月日〕"))
+    --   yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng1_m_date(m), "〔英式日月〕"))
+    --   yield(Candidate("date", seg.start, seg._end, eng3_d_date(d).." "..eng1_m_date(m), "〔英式日月〕"))
+    --   yield(Candidate("date", seg.start, seg._end, eng2_d_date(d).." "..eng2_m_date(m), "〔英式日月〕"))
+    --   yield(Candidate("date", seg.start, seg._end, "the "..eng1_d_date(d).." of "..eng1_m_date(m), "〔英式日月〕"))
+    --   yield(Candidate("date", seg.start, seg._end, "The "..eng1_d_date(d).." of "..eng1_m_date(m), "〔英式日月〕"))
+    --   return
+    -- end
+
+
+    --- 補以下開頭負號缺漏
+    local neg_nf = string.match(input, env.prefix .. "[-]$")
+    if neg_nf then
+      yield(Candidate("number", seg.start, seg._end, '-', "〔一般負號〕"))
+      yield(Candidate("number", seg.start, seg._end, '－', "〔全形負號〕"))
+      yield(Candidate("number", seg.start, seg._end, '負', "〔中文負號〕"))
+      yield(Candidate("number", seg.start, seg._end, '槓', "〔軍中負號〕"))
+      yield(Candidate("number", seg.start, seg._end, '⁻', "〔上標負號〕"))
+      yield(Candidate("number", seg.start, seg._end, '₋', "〔下標負號〕"))
+      yield(Candidate("number", seg.start, seg._end, '㊀', "〔帶圈負號〕"))
+    end
+
+    --- 補以下開頭小數點缺漏
+    local dot = string.match(input, env.prefix .. "%.$")
+    if dot then
+      yield(Candidate("number", seg.start, seg._end, '.', "〔一般小數點〕"))
+      -- yield(Candidate("number", seg.start, seg._end, '．', "〔全形小數點〕"))
+      yield(Candidate("number", seg.start, seg._end, '點', "〔中文小數點〕"))
+      -- yield(Candidate("number", seg.start, seg._end, '點', "〔軍中小數點〕"))
+    end
+
+    --- 補以下開頭負號+小數點缺漏
+    local neg_nf_dot = string.match(input, env.prefix .. "[-][.]$")
+    if neg_nf_dot then
+      yield(Candidate("number", seg.start, seg._end, "-0.", "〔一般數字〕"))
+      yield(Candidate("number", seg.start, seg._end, ",", "〔千分位〕"))
+      yield(Candidate("number", seg.start, seg._end, "-0.000000E+00", "〔科學計數〕"))
+      yield(Candidate("number", seg.start, seg._end, "-0.000000e+00", "〔科學計數〕"))
+      yield(Candidate("number", seg.start, seg._end, "- 𝟎.", "〔數學粗體數字〕"))
+      yield(Candidate("number", seg.start, seg._end, "- 𝟘.", "〔數學空心數字〕"))
+      yield(Candidate("number", seg.start, seg._end, "－０.", "〔全形數字〕"))
+      yield(Candidate("number", seg.start, seg._end, "負點", "〔純中文數字〕"))
+      yield(Candidate("number", seg.start, seg._end, "槓點", "〔軍中數字〕"))
+    end
+
     -- local numberout = string.match(input, env.prefix .. "/?(%d+)$")
-    local dot0 ,numberout, dot1, afterdot = string.match(input, env.prefix .. "(%.?)(%d+)(%.?)(%d*)$")
+    local neg_n, dot0 ,numberout, dot1, afterdot = string.match(input, env.prefix .. "([-]?)([.]?)(%d+)(%.?)(%d*)$")
     if (tonumber(numberout)~=nil) then
-      if dot0=='.' and dot1=='.' then
+      if dot0~="" and dot1~="" then
         yield(Candidate("number", seg.start, seg._end, "" , "〔不能兩個小數點〕"))  --字符過濾可能會過濾掉""整個選項。
         return
-      elseif (dot0=='.') then
+      elseif (dot0~="") then
         afterdot = numberout
         dot1 = dot0
         numberout = '0'
       end
+
+      local neg_n_f = string.gsub(neg_n,'-','－')
+      local neg_n_ch = string.gsub(neg_n,'-','負')
+      local neg_n_m = string.gsub(neg_n,'-','槓')
+      local neg_n_l1 = string.gsub(neg_n,'-','⁻')
+      local neg_n_l2 = string.gsub(neg_n,'-','₋')
+      local neg_n_c = string.gsub(neg_n,'-','㊀')
+
     -- if numberout~=nil and tonumber(nn)~=nil then
       local nn = string.sub(numberout, 1)
       --[[ 用 yield 產生一個候選項
@@ -1955,9 +2102,9 @@ local function translate(input, seg, env)
       - text:  候選項的文本
       - comment: 候選項的注釋
       --]]
-      yield(Candidate("number", seg.start, seg._end, numberout .. dot1 .. afterdot , "〔一般數字〕"))
+      yield(Candidate("number", seg.start, seg._end, neg_n .. numberout .. dot1 .. afterdot , "〔一般數字〕"))
 
-      if (string.len(numberout) < 4) then
+      if string.len(numberout) < 4 or neg_n~="" then
         yield(Candidate("number", seg.start, seg._end, "," , "〔千分位〕"))
       else
         -- local k = string.sub(numberout, 1, -1) -- 取參數
@@ -1965,53 +2112,88 @@ local function translate(input, seg, env)
         yield(Candidate("number", seg.start, seg._end, result .. dot1 .. afterdot , "〔千分位〕"))
       end
 
-      yield(Candidate("number", seg.start, seg._end, string.format("%E", numberout .. dot1 .. afterdot ), "〔科學計數〕"))
-      yield(Candidate("number", seg.start, seg._end, string.format("%e", numberout .. dot1 .. afterdot ), "〔科學計數〕"))
-      yield(Candidate("number", seg.start, seg._end, math1_number(numberout) .. dot1 .. math1_number(afterdot), "〔數學粗體數字〕"))
-      yield(Candidate("number", seg.start, seg._end, math2_number(numberout) .. dot1 .. math2_number(afterdot), "〔數學空心數字〕"))
-      yield(Candidate("number", seg.start, seg._end, fullshape_number(numberout) .. dot1 .. fullshape_number(afterdot), "〔全形數字〕"))
+      yield(Candidate("number", seg.start, seg._end, string.format("%E", neg_n .. numberout .. dot1 .. afterdot ), "〔科學計數〕"))
+      yield(Candidate("number", seg.start, seg._end, string.format("%e", neg_n .. numberout .. dot1 .. afterdot ), "〔科學計數〕"))
+      yield(Candidate("number", seg.start, seg._end, neg_n .. " " .. math1_number(numberout) .. dot1 .. math1_number(afterdot), "〔數學粗體數字〕"))
+      yield(Candidate("number", seg.start, seg._end, neg_n .. " " .. math2_number(numberout) .. dot1 .. math2_number(afterdot), "〔數學空心數字〕"))
+      yield(Candidate("number", seg.start, seg._end, neg_n_f .. fullshape_number(numberout) .. dot1 .. fullshape_number(afterdot), "〔全形數字〕"))
 
-      if (dot1~='.') then
-        yield(Candidate("number", seg.start, seg._end, little1_number(numberout), "〔上標數字〕"))
-        yield(Candidate("number", seg.start, seg._end, little2_number(numberout), "〔下標數字〕"))
+      if (dot1=="") then
+        yield(Candidate("number", seg.start, seg._end, neg_n_l1 .. little1_number(numberout), "〔上標數字〕"))
+        yield(Candidate("number", seg.start, seg._end, neg_n_l2 .. little2_number(numberout), "〔下標數字〕"))
 
         -- for _, conf in ipairs(confs) do
         --   local r = read_number(conf, nn)
         --   yield(Candidate("number", seg.start, seg._end, r, conf.comment))
         -- end
-        yield(Candidate("number", seg.start, seg._end, read_number(confs[1], nn), confs[1].comment))
-        yield(Candidate("number", seg.start, seg._end, read_number(confs[2], nn), confs[2].comment))
+        yield(Candidate("number", seg.start, seg._end, neg_n_ch .. read_number(confs[1], nn), confs[1].comment))
+        yield(Candidate("number", seg.start, seg._end, neg_n_ch .. read_number(confs[2], nn), confs[2].comment))
 
         if (string.len(numberout) < 2) then
           yield(Candidate("number", seg.start, seg._end, "元整", "〔純中文數字〕"))
         else
-          yield(Candidate("number", seg.start, seg._end, purech_number(numberout), "〔純中文數字〕"))
+          yield(Candidate("number", seg.start, seg._end, neg_n_ch .. purech_number(numberout), "〔純中文數字〕"))
         end
 
-        yield(Candidate("number", seg.start, seg._end, military_number(numberout), "〔軍中數字〕"))
+        yield(Candidate("number", seg.start, seg._end, neg_n_m .. military_number(numberout), "〔軍中數字〕"))
 
-        yield(Candidate("number", seg.start, seg._end, circled1_number(numberout), "〔帶圈數字〕"))
-        yield(Candidate("number", seg.start, seg._end, circled2_number(numberout), "〔帶圈無襯線數字〕"))
-        yield(Candidate("number", seg.start, seg._end, circled3_number(numberout), "〔反白帶圈數字〕"))
-        yield(Candidate("number", seg.start, seg._end, circled4_number(numberout), "〔反白帶圈無襯線數字〕"))
-        yield(Candidate("number", seg.start, seg._end, circled5_number(numberout), "〔帶圈中文數字〕"))
+        yield(Candidate("number", seg.start, seg._end, neg_n_c .. circled1_number(numberout), "〔帶圈數字〕"))
+        yield(Candidate("number", seg.start, seg._end, neg_n_c .. circled2_number(numberout), "〔帶圈無襯線數字〕"))
+        yield(Candidate("number", seg.start, seg._end, neg_n_f .. circled3_number(numberout), "〔反白帶圈數字〕"))
+        yield(Candidate("number", seg.start, seg._end, neg_n_f .. circled4_number(numberout), "〔反白帶圈無襯線數字〕"))
+        yield(Candidate("number", seg.start, seg._end, neg_n_f .. circled5_number(numberout), "〔帶圈中文數字〕"))
 
-        if tonumber(numberout)==1 or tonumber(numberout)==0 then
-          yield(Candidate("number", seg.start, seg._end, string.sub(numberout, -1), "〔二進位〕"))
-        else
-          yield(Candidate("number", seg.start, seg._end, Dec2bin(numberout), "〔二進位〕"))
+        if (neg_n=="") then
+          if tonumber(numberout)==1 or tonumber(numberout)==0 then
+            yield(Candidate("number", seg.start, seg._end, string.sub(numberout, -1), "〔二進位〕"))
+          else
+            yield(Candidate("number", seg.start, seg._end, Dec2bin(numberout), "〔二進位〕"))
+          end
+
+          yield(Candidate("number", seg.start, seg._end, string.format("%o",numberout), "〔八進位〕"))
+          yield(Candidate("number", seg.start, seg._end, string.format("%X",numberout), "〔十六進位〕"))
+          yield(Candidate("number", seg.start, seg._end, string.format("%x",numberout), "〔十六進位〕"))
         end
 
-        yield(Candidate("number", seg.start, seg._end, string.format("%o",numberout), "〔八進位〕"))
-        yield(Candidate("number", seg.start, seg._end, string.format("%X",numberout), "〔十六進位〕"))
-        yield(Candidate("number", seg.start, seg._end, string.format("%x",numberout), "〔十六進位〕"))
-      elseif (dot0=='.') then
-        yield(Candidate("number", seg.start, seg._end, military_number(dot1..afterdot), "〔軍中數字〕"))
-      elseif dot0~='.' and dot1=='.' then
-        yield(Candidate("number", seg.start, seg._end, military_number(numberout..dot1..afterdot), "〔軍中數字〕"))
+      elseif (dot0~="") then
+        yield(Candidate("number", seg.start, seg._end, neg_n_ch .. purech_number(dot1..afterdot), "〔純中文數字〕"))
+        yield(Candidate("number", seg.start, seg._end, neg_n_m .. military_number(dot1..afterdot), "〔軍中數字〕"))
+      elseif dot0=="" and dot1~="" then
+        yield(Candidate("number", seg.start, seg._end, neg_n_ch .. purech_number(numberout..dot1..afterdot), "〔純中文數字〕"))
+        yield(Candidate("number", seg.start, seg._end, neg_n_m .. military_number(numberout..dot1..afterdot), "〔軍中數字〕"))
       end
+
       return
     end
+
+
+    --- 計算機
+    local c_input = string.match(input, env.prefix .. "([-.rq(]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*)$")
+    if c_input then
+      local c_input = string.gsub(c_input, "a", "+")
+      local c_input = string.gsub(c_input, "s", "^")
+      local c_input = string.gsub(c_input, "r", "-")
+      local c_input = string.gsub(c_input, "v", "/")
+      local c_input = string.gsub(c_input, "x", "*")
+      local c_input = string.gsub(c_input, "q", "(")
+      local c_input = string.gsub(c_input, "w", ")")
+      local c_input = string.gsub(c_input, "^[.]", "0.")
+      local c_input = string.gsub(c_input, "([-+*/^()])[.]", "%10.")
+      local c_input = string.gsub(c_input, "[.]([-+*/^()])", "%1")
+      local c_output = simple_calculator(c_input)
+      local c_preedit = string.gsub(c_input, "([-+*/^()])", " %1 ")
+
+      local cc_out = Candidate("s_cal", seg.start, seg._end, c_output , "〔結果〕")
+      local cc_error = Candidate("s_cal", seg.start, seg._end, "" , c_output.."〔結果〕")
+      local cc_exp = Candidate("s_cal", seg.start, seg._end, c_input .. "=" .. c_output , "〔算式〕")
+      cc_out.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
+      cc_error.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
+      cc_exp.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
+      yield( c_output:sub(1,1)=='E' and cc_error or cc_out )
+      yield(cc_exp)
+      return
+    end
+
 
     -- -- 測試空白不上屏在 translator 中直接處理！
     -- -- local engine = env.engine
