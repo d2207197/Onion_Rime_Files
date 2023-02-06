@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: Mount_bopomo.extended
-version: "202203"
+version: "202302"
 sort: by_weight
 vocabulary: essay-zh-hant-mc
 #use_preset_vocabulary: true
@@ -16,9 +16,6 @@ import_tables:
 #  - phrases.chtp
 #  - phrases.cht
 ...
-##### 測試字（測試是否少掉台灣以外的用字） #####
-# 裏面	li3 mian4
-# 高峯	gao1 feng1
 ##### 注音字碼補充 #####
 ### 一般ㄅㄆㄇ！ ###
 ㄅ	b	150000
@@ -59,6 +56,7 @@ import_tables:
 ㄥ	eng	150000
 ㄦ	er	150000
 ### 聲調 ###
+#ˉ	1	150000  #會影響到單注音上屏
 ˊ	2	150000
 ˇ	3	150000
 ˋ	4	150000

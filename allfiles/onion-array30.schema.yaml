@@ -272,7 +272,7 @@ reverse2_lookup:
   tips: "《注音反查》▶"
   closing_tips: "◀《注音反查》"
   preedit_format:
-    - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347 |ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙ˉ|"
+    - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
     - xform/^/《注音反查》/
     - xform/\|/  /
 
@@ -327,8 +327,7 @@ bpmf_reverse_lookup:
     - xform/er/R/
     - xform/eh/E/
     - xform/([iv])e/$1E/
-    - xform/1/ˉ/
-    - 'xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR2345|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|'
+    - "xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR12345|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
     - xform/^/ /
     - xform/ /  /
 #    - xform/ /] [/
@@ -424,7 +423,7 @@ recognizer:
   patterns:
     # punct: "^w[0-9]$"
     wsymbols: "^w[0-9]$" #（可用 symbols 更簡單實現，但沒有開頭提示）
-    reverse2_lookup: "^=[-.,;/0-9a-z]*'?$"
+    reverse2_lookup: "^=[-.,;/0-9a-z ]*'?$"
     reverse3_lookup: "^==[a-z,./; ]*'?$"
     lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|`[a-z]*$|`[;/'][a-z.,/'-]*$|`[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|`[xucoe][0-9a-f]+$"
     # lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|`[';/]?[a-z]*$|`[0-9./-]*$|`[xcoe][0-9a-z]+$"

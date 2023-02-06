@@ -6,7 +6,7 @@
 schema:
   schema_id: Mount_ocm
   name: "❖蝦米(單出-反查專用)❖"
-  version: "202301"
+  version: "202302"
   author:
     - 洋蔥
   description: |
@@ -46,6 +46,7 @@ engine:
     - reverse_lookup_filter@phonetic_reverse_lookup
     - uniquifier
   processors:
+    - lua_processor@zhuyin_space
     - ascii_composer
     - recognizer
     - key_binder
@@ -141,7 +142,7 @@ reverse2_lookup:
   tips: "《注音反查》▶"
   closing_tips: "◀《注音反查》"
   preedit_format:
-    - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|"
+    - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
     - xform/^/《注音反查》/
     - xform/\|/  /
     - xform/`/  /
@@ -214,8 +215,7 @@ phonetic_reverse_lookup:
     - xform/er/R/
     - xform/eh/E/
     - xform/([iv])e/$1E/
-    - xform/1/ˉ/
-    - 'xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR2345|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙|'
+    - "xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR12345|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
     - xform/^/ /
     - xform/ /  /
 
@@ -342,5 +342,5 @@ recognizer:
     # punct: "^;([a-z]+|[0-9]0?)$"
     pt: "^[,.][,.'a-z]*$|^'['a-z]*$|^,[][]+[a-z]*$|^,v[][]+$|^v[][]+v?$|^[][]+[a-z]*$"
     emoji_series: "^;[a-z]*$|^;;[-0-9a-z]$|^;[0-9]$|^;[0-9]-[0-9]?$"
-    reverse2_lookup: "^';[-.,;/0-9a-z|]*'?$"
+    reverse2_lookup: "^';[-.,;/0-9a-z |]*'?$"
     reverse3_lookup: "^;'[a-z`|]*'?$"
