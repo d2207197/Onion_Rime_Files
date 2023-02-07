@@ -25,7 +25,7 @@ local function array30up_mix(key, env)
                    string.match(c_input, "^file:.*$")
   -- local check_zh = string.match(c_input, "^=[a-z0-9,.;/-]+$")
   -- local check_w = string.match(c_input, "^w[0-9]$")
-  local check_abc = string.match(c_input, "^[a-z,./;]+$")
+  -- local check_abc = string.match(c_input, "^[a-z,./;]+$")
 
   if o_ascii_mode then
     return 2
@@ -65,8 +65,8 @@ local function array30up_mix(key, env)
   --- 使 w[0-9] 輸入符號時：空白鍵同某些行列 30 一樣為翻頁。
   --- KeyEvent 函數在舊版 librime-lua 中不支持。
   --- 增設開關。
-  -- elseif a_s_wp and check_w then
   elseif a_s_wp and comp:back():has_tag("wsymbols") then
+  -- elseif a_s_wp and check_w then
     if key:repr() == "space" then
       engine:process_key(KeyEvent("Page_Down"))
       return 1 -- kAccepted
