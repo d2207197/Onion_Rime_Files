@@ -11,6 +11,7 @@ local function array30up_mix(key, env)
   local c_input = context.input
   local o_ascii_mode = context:get_option("ascii_mode")
   local a_s_wp = context:get_option("array30_space_wp")
+  local a_r_abc = context:get_option("array30_return_abc")
   local g_c_t = context:get_commit_text()
   -- local g_s_t = context:get_script_text()
 
@@ -23,16 +24,31 @@ local function array30up_mix(key, env)
                    string.match(c_input, "^mailto:.*$") or
                    string.match(c_input, "^file:.*$")
   -- local check_zh = string.match(c_input, "^=[a-z0-9,.;/-]+$")
-  local check_w = string.match(c_input, "^w[0-9]$")
+  -- local check_w = string.match(c_input, "^w[0-9]$")
+  local check_abc = string.match(c_input, "^[a-z,./;]+$")
 
   if o_ascii_mode then
     return 2
 
-  elseif not context:has_menu() then
-  -- elseif not context:is_composing() then  -- 無法空碼清屏
+  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" then
     return 2
 
-  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" then
+  elseif comp:empty() then
+    return 2
+
+-----------------------------------------------------------------------------
+  --- return 上屏候選字或 abc 開關
+  elseif (a_r_abc) and (comp:back():has_tag("abc")) and (key:repr() == "Return" or key:repr() == "KP_Enter") then
+  -- elseif a_r_abc and check_abc and key:repr() == "Return" or key:repr() == "KP_Enter" then
+    if not comp:back():has_tag("paging") then
+      engine:commit_text(c_input)
+      context:clear()
+      return 1
+    end
+-----------------------------------------------------------------------------
+
+  elseif not context:has_menu() then
+  -- elseif not context:is_composing() then  -- 無法空碼清屏
     return 2
 
   elseif check_i1 or check_i2 or check_i3 or check_i4 then
@@ -46,14 +62,11 @@ local function array30up_mix(key, env)
     end
 
 -----------------------------------------------------------------------------
-  -- elseif comp:empty() then
-  --   return 2
-
   --- 使 w[0-9] 輸入符號時：空白鍵同某些行列 30 一樣為翻頁。
   --- KeyEvent 函數在舊版 librime-lua 中不支持。
   --- 增設開關。
-  elseif a_s_wp and check_w then
-  -- elseif a_s_wp and comp:back():has_tag("wsymbols") then
+  -- elseif a_s_wp and check_w then
+  elseif a_s_wp and comp:back():has_tag("wsymbols") then
     if key:repr() == "space" then
       engine:process_key(KeyEvent("Page_Down"))
       return 1 -- kAccepted
@@ -67,8 +80,9 @@ local function array30up_mix(key, env)
 --[[
 以下針對反查注音 Bug 作修正
 --]]
-  elseif comp:empty() then
-    return 2
+
+  -- elseif comp:empty() then
+  --   return 2
 
   elseif not comp:back():has_tag("reverse2_lookup") then
     return 2
