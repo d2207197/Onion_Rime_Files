@@ -30,6 +30,7 @@ local function filter(inp, env)
   local s_c_f_p_s = context:get_option("simplify_comment")
   local s_up = context:get_option("1_2_straight_up")
   local find_prefix = context.input  -- 原始未轉換輸入碼
+  -- local start = context:get_preedit().sel_start
   local _end = context:get_preedit().sel_end
   local array30_nil_cand = Candidate("array30nil", 0, _end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
   -- local array30_nil_cand = Candidate("array30nil", 0, string.len(find_prefix) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
@@ -58,12 +59,15 @@ local function filter(inp, env)
         if check_ns then  -- 不含空格
           yield( s_c_f_p_s and change_comment(cand,"") or cand )
         else  -- 最後有空格
-          yield( check_s1 and not string.match(cand.comment, '▪' ) and cand or
-                 -- (check_s2 or check_s3 or check_s4 or check_s5 or check_s6 or check_s7 or check_s8) and cand or
-                 check_s2 and cand or
-                 check_wu and string.match(cand.text, '毋' ) and cand or
-                 check_ji and string.match(cand.text, '及' ) and cand or
-                 check_kong and string.match(cand.text, '○' ) and cand )
+          local cand_filtr = check_s1 and not string.match(cand.comment, '▪' ) and cand or
+                             -- (check_s2 or check_s3 or check_s4 or check_s5 or check_s6 or check_s7 or check_s8) and cand or
+                             check_s2 and cand or
+                             check_wu and string.match(cand.text, '毋' ) and cand or
+                             check_ji and string.match(cand.text, '及' ) and cand or
+                             check_kong and string.match(cand.text, '○' ) and cand
+          if cand_filtr then
+            yield(cand_filtr)  -- yield(nil)不能為空，否則報錯。
+          end
         end
 
         -- if check_ns then

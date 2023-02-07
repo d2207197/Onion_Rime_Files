@@ -23,67 +23,49 @@ local function array30up_mix(key, env)
                    string.match(c_input, "^file:.*$")
   -- local check_s = string.match(c_input, "^=[a-z0-9,.;/-]+$")
 
-  -- if context:get_option("ascii_mode") then
-  --   return 2
-  -- if (not context:has_menu()) then
-  --   return 2
-
   if o_ascii_mode then
     return 2
 
   elseif not context:has_menu() then
-  -- elseif not context:is_composing() then  --無法空碼清屏
+  -- elseif not context:is_composing() then  -- 無法空碼清屏
     return 2
   
   elseif key:repr() ~= "space" and key:repr() ~= "Return" then
     return 2
-  -- elseif (key:repr() == "space") then
-  -- if (key:repr() == "space") and (context:is_composing()) then
-    -- local c_input = context.input
 
-  elseif (check_i1 or check_i2 or check_i3 or check_i4) and key:repr() == "space" then
-  -- if check_i or check_s then
-  -- if check_i1 or check_i2 or check_i3 or check_i4 or check_i5 or check_i6 or check_i7 or check_i8 or check_s then
-  -- if (string.match(c_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.match(c_input, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.match(c_input, "`.+$")) or (string.match(c_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.match(c_input, "^https?:.*$")) or (string.match(c_input, "^ftp:.*$")) or (string.match(c_input, "^mailto:.*$")) or (string.match(c_input, "^file:.*$")) or (string.match(c_input, "^=[a-z0-9,.;/-]+$")) then
-  -- if (string.match(c_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.match(c_input, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")) or (string.match(c_input, "`.+$")) or (string.match(c_input, "^[a-z][-_.0-9a-z]*@.*$")) or (string.match(c_input, "^https?:.*$")) or (string.match(c_input, "^ftp:.*$")) or (string.match(c_input, "^mailto:.*$")) or (string.match(c_input, "^file:.*$")) or (string.match(c_input, "^www%..+$")) or (string.match(c_input, "^=[a-z0-9,.;/-]+$")) then
-    -- local g_c_t = context:get_commit_text()
-    engine:commit_text(g_c_t)
-    context:clear()
-    return 1 -- kAccepted
+  elseif check_i1 or check_i2 or check_i3 or check_i4 then
+    if key:repr() == "space" then
+      -- local g_c_t = context:get_commit_text()
+      engine:commit_text(g_c_t)
+      context:clear()
+      return 1 -- kAccepted
+    else
+      return 2
+    end
 
+-----------------------------------------------------------------------------
   -- --- 使 w[0-9] 輸入符號時：空白鍵同某些行列 30 一樣為翻頁。
   -- --- KeyEvent 函數在舊版 librime-lua 中不支持，故遮屏。
-  -- elseif (string.match(c_input, "^w[0-9]$")) and key:repr() == "space" then
-  --   engine:process_key(KeyEvent("Page_Down"))
-  --   return 1 -- kAccepted
-
-  -- elseif key:repr() == "Return" and context:has_menu() then
-  -- elseif (key:repr() == "Return") then
-  -- elseif (key:repr() == "Return") and (context:is_composing()) then
-    -- local c_input = context.input
-
-    -- if check_s then
-    -- -- if (string.match(c_input, "^=[a-z0-9,.;/-]+$")) then
-    --   -- local g_c_t = context:get_commit_text()
-    --   engine:commit_text(g_c_t)
-    --   context:clear()
-    --   return 1 -- kAccepted
-
-    -- --- 使 w[0-9] 輸入符號時：
-    -- --- 搭配前面「空白鍵同某些行列 30 一樣為翻頁」，並且用 custom 檔設「return 上屏候選字」，校正 Return 能上屏候選項！
-    -- --- KeyEvent 函數在舊版 librime-lua 中不支持，故遮屏。
-    -- elseif (string.match(c_input, "^w[0-9]$")) then
-    --   engine:commit_text(g_c_t)
-    --   context:clear()
-    --   return 1 -- kAccepted
-
-    -- end
-
+  -- elseif string.match(c_input, "^w[0-9]$") then
+  --   if key:repr() == "space" then
+  --     engine:process_key(KeyEvent("Page_Down"))
+  --     return 1 -- kAccepted
+  --   --- 搭配前面「空白鍵同某些行列 30 一樣為翻頁」，並且用 custom 檔設「return 上屏候選字」，校正 Return 能上屏候選項！
+  --   elseif key:repr() == "Return" then
+  --     engine:commit_text(g_c_t)
+  --     context:clear()
+  --     return 1 -- kAccepted
+  --   end
+-----------------------------------------------------------------------------
+--[[
+以下針對反查注音 Bug 作修正
+--]]
   elseif comp:empty() then
     return 2
 
   elseif not comp:back():has_tag("reverse2_lookup") then
     return 2
+
 
   --- 以下修正：附加方案鍵盤範圍大於主方案時，選字時出現的 bug。
   elseif comp:back():has_tag("paging") then
@@ -101,7 +83,8 @@ local function array30up_mix(key, env)
     end
     return 1
 
-  --- 如果末尾為聲調則跳掉，如空白鍵，則 Rime 上屏，非 lua 作用。
+
+  --- 如果末尾為聲調則跳掉，按空白鍵，則 Rime 上屏，非 lua 作用。
   elseif string.match(c_input, "[ 3467]$") then
     return 2
 
