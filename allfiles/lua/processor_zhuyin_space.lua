@@ -39,7 +39,7 @@ local function zhuyin_space(key,env)
   -- elseif not context:is_composing() then  --無法空碼清屏
     return 2
 
-  elseif key:repr() ~= "space" and key:repr() ~= "Return" then
+  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" then
     return 2
 
   --- 以下修正：附加方案鍵盤範圍大於主方案時，選字時出現的 bug。

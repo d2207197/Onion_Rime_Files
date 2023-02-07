@@ -10,6 +10,7 @@ local function array30up_mix(key, env)
   local comp = context.composition
   local c_input = context.input
   local o_ascii_mode = context:get_option("ascii_mode")
+  local a_s_wp = context:get_option("array30_space_wp")
   local g_c_t = context:get_commit_text()
   -- local g_s_t = context:get_script_text()
 
@@ -21,7 +22,8 @@ local function array30up_mix(key, env)
                    string.match(c_input, "^ftp:.*$") or
                    string.match(c_input, "^mailto:.*$") or
                    string.match(c_input, "^file:.*$")
-  -- local check_s = string.match(c_input, "^=[a-z0-9,.;/-]+$")
+  -- local check_zh = string.match(c_input, "^=[a-z0-9,.;/-]+$")
+  local check_w = string.match(c_input, "^w[0-9]$")
 
   if o_ascii_mode then
     return 2
@@ -29,8 +31,8 @@ local function array30up_mix(key, env)
   elseif not context:has_menu() then
   -- elseif not context:is_composing() then  -- 無法空碼清屏
     return 2
-  
-  elseif key:repr() ~= "space" and key:repr() ~= "Return" then
+
+  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" then
     return 2
 
   elseif check_i1 or check_i2 or check_i3 or check_i4 then
@@ -44,19 +46,24 @@ local function array30up_mix(key, env)
     end
 
 -----------------------------------------------------------------------------
-  -- --- 使 w[0-9] 輸入符號時：空白鍵同某些行列 30 一樣為翻頁。
-  -- --- KeyEvent 函數在舊版 librime-lua 中不支持，故遮屏。
-  -- elseif string.match(c_input, "^w[0-9]$") then
-  --   if key:repr() == "space" then
-  --     engine:process_key(KeyEvent("Page_Down"))
-  --     return 1 -- kAccepted
-  --   --- 搭配前面「空白鍵同某些行列 30 一樣為翻頁」，並且用 custom 檔設「return 上屏候選字」，校正 Return 能上屏候選項！
-  --   elseif key:repr() == "Return" then
-  --     engine:commit_text(g_c_t)
-  --     context:clear()
-  --     return 1 -- kAccepted
-  --   end
------------------------------------------------------------------------------
+  -- elseif comp:empty() then
+  --   return 2
+
+  --- 使 w[0-9] 輸入符號時：空白鍵同某些行列 30 一樣為翻頁。
+  --- KeyEvent 函數在舊版 librime-lua 中不支持。
+  --- 增設開關。
+  elseif a_s_wp and check_w then
+  -- elseif a_s_wp and comp:back():has_tag("wsymbols") then
+    if key:repr() == "space" then
+      engine:process_key(KeyEvent("Page_Down"))
+      return 1 -- kAccepted
+    --- 搭配前面「空白鍵同某些行列 30 一樣為翻頁」，並且用 custom 檔設「return 上屏候選字」，校正 Return 能上屏候選項！
+    elseif key:repr() == "Return" or key:repr() == "KP_Enter" then
+      engine:commit_text(g_c_t)
+      context:clear()
+      return 1 -- kAccepted
+    end
+---------------------------------------------------------------------------
 --[[
 以下針對反查注音 Bug 作修正
 --]]
@@ -84,6 +91,12 @@ local function array30up_mix(key, env)
     return 1
 
 
+  --- 一般輸入 Return 出英文，該條限定注音 Return 一律直上中文。
+  elseif key:repr() == "Return" or key:repr() == "KP_Enter" then
+    engine:commit_text(g_c_t)
+    context:clear()
+    return 1
+
   --- 如果末尾為聲調則跳掉，按空白鍵，則 Rime 上屏，非 lua 作用。
   elseif string.match(c_input, "[ 3467]$") then
     return 2
@@ -91,11 +104,6 @@ local function array30up_mix(key, env)
   --- 補掛接反查注音不能使用空白當作一聲
   elseif key:repr() == "space" then
     context.input = c_input .. " "
-    return 1
-
-  elseif key:repr() == "Return" then
-    engine:commit_text(g_c_t)
-    context:clear()
     return 1
 
   end
