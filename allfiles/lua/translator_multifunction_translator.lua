@@ -2124,15 +2124,17 @@ local function translate(input, seg, env)
       local c_input = string.gsub(c_input, "x", "*")
       local c_input = string.gsub(c_input, "q", "(")
       local c_input = string.gsub(c_input, "w", ")")
-      local c_input = string.gsub(c_input, "^[.]", "0.")
-      local c_input = string.gsub(c_input, "([-+*/^()])[.]", "%10.")
-      local c_input = string.gsub(c_input, "[.]([-+*/^()])", "%1")
-      local c_output = simple_calculator(c_input)
+      local input_exp = string.gsub(c_input, "^[.]", "0.")
+      local input_exp = string.gsub(input_exp, "([-+*/^()])[.]", "%10.")
+      local input_exp = string.gsub(input_exp, "[.]([-+*/^()])", "%1")
+      local input_exp = string.gsub(input_exp, "^[0]+([%d])", "%1")
+      local input_exp = string.gsub(input_exp, "([-+*/^()])[0]+([%d])", "%1%2")
+      local c_output = simple_calculator(input_exp)
       local c_preedit = string.gsub(c_input, "([-+*/^()])", " %1 ")
 
       local cc_out = Candidate("s_cal", seg.start, seg._end, c_output , "〔結果〕")
       local cc_error = Candidate("s_cal", seg.start, seg._end, "" , c_output.."〔結果〕")
-      local cc_exp = Candidate("s_cal", seg.start, seg._end, c_input .. "=" .. c_output , "〔算式〕")
+      local cc_exp = Candidate("s_cal", seg.start, seg._end, input_exp .. "=" .. c_output , "〔規格化算式〕")
       cc_out.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
       cc_error.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
       cc_exp.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"

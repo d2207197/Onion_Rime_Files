@@ -9,7 +9,7 @@
 
 ----------------
 local function xform_mark(inp)
-  if inp == "" then return "" end
+  if inp == "" or nil then return "" end
   inp = string.gsub(inp, "@@+", "") --@@@@
   inp = string.gsub(inp, "@", " ")
   return inp
