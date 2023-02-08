@@ -1442,6 +1442,7 @@ use_preset_vocabulary: false
 ㄊㄧㄠˉ	＊＊tiao1	1
 ㄊㄧㄢˉ	＊＊tian1	1
 ㄊㄧㄥˉ	＊＊ting1	1
+ㄊㄧㄣˉ	＊＊tin1	0
 ㄊㄨˉ	＊＊tu1	1
 ㄊㄨㄛˉ	＊＊tuo1	1
 ㄊㄨㄟˉ	＊＊tui1	1
@@ -2699,7 +2700,7 @@ use_preset_vocabulary: false
 ㄊㄧㄝˋ	＊＊tie4	1
 ㄊㄧㄠˋ	＊＊tiao4	1
 ㄊㄧㄢˋ	＊＊tian4	1
-ㄊㄧㄣˋ	＊＊tin4	0
+#ㄊㄧㄣˋ	＊＊tin4	0
 ㄊㄧㄥˋ	＊＊ting4	1
 ㄊㄨˋ	＊＊tu4	1
 ㄊㄨㄛˋ	＊＊tuo4	1
