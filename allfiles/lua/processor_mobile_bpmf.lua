@@ -3,7 +3,9 @@
 （手機注音用）
 使 email_url_translator 功能按空白都能直接上屏
 --]]
-local function mobile_bpmf(key, env)
+
+-- local function mobile_bpmf(key, env)
+local function processor(key, env)
   local engine = env.engine
   local context = engine.context
   local input_m = context.input
@@ -38,6 +40,7 @@ local function mobile_bpmf(key, env)
   return 2 -- kNoop
 end
 
-return mobile_bpmf
+-- return mobile_bpmf
 -- return { mobile_bpmf = mobile_bpmf }
+return { func = processor }
 -- return { init = init, func = selector }

@@ -3,7 +3,9 @@
 （bopomo_onionplus_2和3）
 於注音方案改變在非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 --]]
-local function ascii_punct_change(key, env)
+
+-- local function ascii_punct_change(key, env)
+local function processor(key, env)
   local engine = env.engine
   local context = engine.context
   local orig_p23 = context:get_commit_text()
@@ -42,4 +44,5 @@ local function ascii_punct_change(key, env)
   return 2 -- kNoop
 end
 
-return ascii_punct_change
+-- return ascii_punct_change
+return { func = processor }

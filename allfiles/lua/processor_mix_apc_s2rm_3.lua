@@ -3,7 +3,9 @@
 （bo_mixin3）
 合併 ascii_punct_change 和 s2r_mixin3，增進效能。
 --]]
-local function mix_apc_s2rm_3(key, env)
+
+-- local function mix_apc_s2rm_3(key, env)
+local function processor(key, env)
   local engine = env.engine
   local context = engine.context
   local input_3 = context.input
@@ -82,4 +84,5 @@ local function mix_apc_s2rm_3(key, env)
   return 2 -- kNoop
 end
 
-return mix_apc_s2rm_3
+-- return mix_apc_s2rm_3
+return { func = processor }

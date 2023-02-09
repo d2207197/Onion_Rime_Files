@@ -4,7 +4,9 @@
 行列30三四碼字按空格直接上屏
 行列30注音反查 Return 和 space 上屏修正
 --]]
-local function array30up_mix(key, env)
+
+-- local function array30up_mix(key, env)
+local function processor(key, env)
   local engine = env.engine
   local context = engine.context
   local comp = context.composition
@@ -125,4 +127,5 @@ local function array30up_mix(key, env)
   return 2
 end
 
-return array30up_mix
+-- return array30up_mix
+return { func = processor }

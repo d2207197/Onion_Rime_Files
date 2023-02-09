@@ -10,7 +10,8 @@
 --     return stat
 -- end
 
-local function zhuyin_space(key,env)
+-- local function zhuyin_space(key,env)
+local function processor(key, env)
   local engine = env.engine
   local context = engine.context
   local comp = context.composition
@@ -86,4 +87,6 @@ local function zhuyin_space(key,env)
   return 2
 end
 
-return zhuyin_space
+
+-- return zhuyin_space
+return { func = processor }

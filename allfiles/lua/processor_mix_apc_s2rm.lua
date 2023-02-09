@@ -3,7 +3,9 @@
 （bo_mixin 1、2、4；bopomo_onionplus）
 合併 ascii_punct_change 和 s2r_most，增進效能。
 --]]
-local function mix_apc_s2rm(key, env)
+
+-- local function mix_apc_s2rm(key, env)
+local function processor(key, env)
   local engine = env.engine
   local context = engine.context
   local input_124 = context.input
@@ -83,4 +85,5 @@ local function mix_apc_s2rm(key, env)
   return 2 -- kNoop
 end
 
-return mix_apc_s2rm
+-- return mix_apc_s2rm
+return { func = processor }

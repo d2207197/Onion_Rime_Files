@@ -5,7 +5,9 @@
 使初始空白可以直接上屏
 於注音方案改變在非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 --]]
-local function mix_apc_pluss(key, env)
+
+-- local function mix_apc_pluss(key, env)
+local function processor(key, env)
   local engine = env.engine
   local context = engine.context
   local caret_pos = context.caret_pos
@@ -57,4 +59,5 @@ local function mix_apc_pluss(key, env)
   return 2 -- kNoop
 end
 
-return mix_apc_pluss
+-- return mix_apc_pluss
+return { func = processor }

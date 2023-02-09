@@ -220,7 +220,7 @@ local function filter(inp, env)
 end
 
 -- return halfwidth_katakana_filter
-return { init = init, func = filter }
+return { func = filter }
 -- return M
 
 -- return { halfwidth_katakana_filter = halfwidth_katakana_filter }
