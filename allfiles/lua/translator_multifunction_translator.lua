@@ -514,12 +514,12 @@ local function translate(input, seg, env)
       local jq_1, jq_2, jq_3 ,jq_4 = jieqi_out1()
       yield_c( jq_1, jq_2)
       yield_c( jq_3, jq_4)
-      -- local jqs = GetNowTimeJq(os.date("%Y%m%d"))
-      local jqsy = GetNextJQ(os.date("%Y"))
-      for i =1,#jqsy do
-        yield_c( jqsy[i], "〔節氣〕")
+      local nt_jqs = GetNowTimeJq(os.date("%Y%m%d"))
+      -- local n_jqsy = GetNextJQ(os.date("%Y"))  -- 會少最近一期節氣
+      for i =1,#nt_jqs do
+        yield_c( nt_jqs[i], "〔節氣〕")
       end
-      local jqsy = nil
+      -- local nt_jqs = nil
       return
     end
 
