@@ -8,6 +8,7 @@ local LunarDate2Date = lc_1.LunarDate2Date
 local GetNextJQ = lc_1.GetNextJQ
 local GetNowTimeJq = lc_1.GetNowTimeJq
 local lunarJzl = lc_1.lunarJzl
+local GetLunarSichen = lc_1.GetLunarSichen
 
 local lc_2 = require("lunar_calendar/lunar_calendar_2")
 local time_description_chinese = lc_2.time_description_chinese
@@ -494,6 +495,7 @@ local function translate(input, seg, env)
       yield_c( time_description_chinese(os.time()), "〔農曆〕")
       local All_g, Y_g, M_g, D_g, H_g = lunarJzl(os.date("%Y%m%d%H"))
       yield_c( H_g.."時", "〔農曆干支〕")
+      yield_c( GetLunarSichen(os.date("%H"),1), "〔農曆干支〕")
       return
     end
 

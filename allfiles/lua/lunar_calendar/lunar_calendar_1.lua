@@ -42,7 +42,7 @@ local function system(x,inPuttype,outputtype)
 	return r
 end
 
---農歷16進制數據分解
+--農曆16進制數據分解
 local function Analyze(Data)
 	local rtn1,rtn2,rtn3,rtn4
 	rtn1=system(string.sub(Data,1,3),16,2)
@@ -102,9 +102,9 @@ local function diffDate(date1,date2)
 	return total
 end
 
---公曆轉農歷，支持轉化範圍公元1900-2100年
+--公曆轉農曆，支持轉化範圍公元1900-2100年
 --公曆日期 Gregorian:格式 YYYYMMDD
---<返回值>農歷日期 中文 天干地支屬相
+--<返回值>農曆日期 中文 天干地支屬相
 local function Date2LunarDate(Gregorian)
 	--天干名稱
 	local cTianGan = {"甲","乙","丙","丁","戊","己","庚","辛","壬","癸"}
@@ -112,14 +112,14 @@ local function Date2LunarDate(Gregorian)
 	local cDiZhi = {"子","丑","寅","卯","辰","巳","午", "未","申","酉","戌","亥"}
 	--屬相名稱
 	local cShuXiang = {"鼠","牛","虎","兔","龍","蛇", "馬","羊","猴","雞","狗","豬"}
-	--農歷日期名
+	--農曆日期名
 	local cDayName ={"初一","初二","初三","初四","初五","初六","初七","初八","初九","初十",
 		"十一","十二","十三","十四","十五","十六","十七","十八","十九","二十",
 		"廿一","廿二","廿三","廿四","廿五","廿六","廿七","廿八","廿九","三十"}
-	--農歷月份名
+	--農曆月份名
 	local cMonName = {"正月","二月","三月","四月","五月","六月", "七月","八月","九月","十月","冬月","臘月"}
 
-	-- 農歷數據
+	-- 農曆數據
 	local wNongliData = {"AB500D2","4BD0883","4AE00DB","A5700D0","54D0581","D2600D8","D9500CC","655147D","56A00D5","9AD00CA","55D027A","4AE00D2"
 		,"A5B0682","A4D00DA","D2500CE","D25157E","B5500D6","56A00CC","ADA027B","95B00D3","49717C9","49B00DC","A4B00D0","B4B0580"
 		,"6A500D8","6D400CD","AB5147C","2B600D5","95700CA","52F027B","49700D2","6560682","D4A00D9","EA500CE","6A9157E","5AD00D6"
@@ -146,13 +146,13 @@ local function Date2LunarDate(Gregorian)
 		return "無效日期"
 	end
 	--print(Year .. "-" .. Month .. "-" .. Day)
-	--獲取兩百年內的農歷數據
+	--獲取兩百年內的農曆數據
 	Pos=Year-1900+2  Data0 =wNongliData[Pos-1]  Data1 =wNongliData[Pos]
-	--判斷農歷年份
+	--判斷農曆年份
 	local tb1=Analyze(Data1)
 	MonthInfo=tb1[1] LeapInfo=tb1[2] Leap=tb1[3] Newyear=tb1[4]
 	Date1 =Year .. Newyear  Date2 =Gregorian
-	Date3 =diffDate(Date1,Date2)   --和當年農歷新年相差的天數
+	Date3 =diffDate(Date1,Date2)   --和當年農曆新年相差的天數
 	--print(Date3 .. "-11")
 	if (Date3<0) then
 		--print(Data0 .. "-2")
@@ -164,7 +164,7 @@ local function Date2LunarDate(Gregorian)
 	end
 	--print(MonthInfo .. "-" .. LeapInfo .. "-" .. Leap .. "-" .. Newyear .. "-" .. Year)
 	Date3=Date3+1
-	LYear=Year    --農歷年份，就是上面計算後的值
+	LYear=Year    --農曆年份，就是上面計算後的值
 	if Leap>0 then    --有閏月
 		thisMonthInfo=string.sub(MonthInfo,1,Leap) .. LeapInfo .. string.sub(MonthInfo,Leap+1)
 	else
@@ -239,10 +239,10 @@ local function GettotalDay(Date,dayCount)
 	return Year .. "年" .. Month .. "月" .. total .. "日"
 end
 
---農歷轉公曆
---農歷 Gregorian:數字格式 YYYYMMDD
+--農曆轉公曆
+--農曆 Gregorian:數字格式 YYYYMMDD
 --<返回值>公曆日期 格式YYYY年MM月DD日
---農歷日期月份為閏月需指定參數IsLeap為1，非閏月需指定參數IsLeap為0
+--農曆日期月份為閏月需指定參數IsLeap為1，非閏月需指定參數IsLeap為0
 local function LunarDate2Date(Gregorian,IsLeap)
 	LunarData={"AB500D2","4BD0883",
 		"4AE00DB","A5700D0","54D0581","D2600D8","D9500CC","655147D","56A00D5","9AD00CA","55D027A","4AE00D2",
@@ -274,13 +274,13 @@ local function LunarDate2Date(Gregorian,IsLeap)
 		return "無效日期"
 	end
 
-	--獲取當年農歷數據
+	--獲取當年農曆數據
 	Pos=(Year-1899)+1    Data=LunarData[Pos]
 	--print(Data)
 	--判斷公曆日期
 	local tb1=Analyze(Data)
 	MonthInfo=tb1[1]  LeapInfo=tb1[2]  Leap=tb1[3]  Newyear=tb1[4]
-	--計算到當天到當年農歷新年的天數
+	--計算到當天到當年農曆新年的天數
 	Sum=0
 
 	if Leap>0 then    --有閏月
@@ -313,11 +313,11 @@ end
 
 
 ------------------------------------------------------------------------
---- @檔案：「 lunarJq.lua 」
+--- 檔案：「 lunarJq.lua 」
 --[[
-~~~~農歷節氣計算部分~~~~
+~~~~農曆節氣計算部分~~~~
 --]]
---*******農歷節氣計算部分
+--*******農曆節氣計算部分
 --========角度變換===============
 local rad = 180*3600/math.pi --每弧度的角秒數
 local RAD = 180/math.pi      --每弧度的角度數
@@ -395,7 +395,7 @@ end,
 toJD = function(JDate, UTC) --公曆轉儒略日,UTC=1表示原日期是UTC
 	local  y=JDate.Y m=JDate.M n=0 --取出年月
 	if m<=2 then  m=m+12 y=y-1 end
-	if JDate.Y*372+JDate.M*31+JDate.D>=588829 then --判斷是否為格里高利歷日1582*372+10*31+15
+	if JDate.Y*372+JDate.M*31+JDate.D>=588829 then --判斷是否為格里高利曆日1582*372+10*31+15
 		n =int2(y/100) n =2-n+int2(n/4)--加百年閏
 	end
 	n = n + int2(365.2500001*(y+4716))    --加上年引起的偏移日數
@@ -904,7 +904,7 @@ local function dingSuo(y,arc) --這是個測試函數
 	end
 end
 
---=================農歷計算========================
+--=================農曆計算========================
 --[[*****
 1.冬至所在的UTC日期保存在A[0],根據"規定1"得知在A[0]之前(含A[0])的那個UTC朔日定為年首日期
 冬至之後的中氣分保存在A[1],A[2],A[3]...A[13],其中A[12]又回到了冬至,共計算13次中氣
@@ -919,7 +919,7 @@ end
 當第13月(月編號12月)終止日期小等於冬至日,即C[12]≤A[12],那麼該月是本年的有效月份,本年共13個月
 4.閏年中處理閏月:
 13個月中至少1個月份無中氣,首個無中氣的月置閏,在n=1...12月中找到閏月,即C[n]≤A[n]
-從農歷年首的定義知道,0月一定含有中氣冬至,所以不可能是閏月。
+從農曆年首的定義知道,0月一定含有中氣冬至,所以不可能是閏月。
 首月有時很貪心,除冬至外還可能再吃掉本年或前年的另一個中氣
 定出閏月後,該月及以後的月編號減1
 5.以上所述的月編號不是日常生活中說的"正月","二月"等月名稱:
@@ -929,16 +929,16 @@ end
 
 --local yueMing={"正","二","三","四","五","六","七","八","九","十","冬","臘"}
 --
---function paiYue(inYear) --農歷排月序計算,可定出農歷
+--function paiYue(inYear) --農曆排月序計算,可定出農曆
 --  --y=in1.value-0
 --  local y = inYear-0
 --  local zq={},jq={}, hs={}  --中氣表,節氣表,日月合朔表
 --
 --  --從冬至開始,連續計算14個中氣時刻
---  local i,t1=365.2422*(y-2000)-50 --農歷年首始於前一年的冬至,為了節氣中氣一起算,取前年大雪之前
+--  local i,t1=365.2422*(y-2000)-50 --農曆年首始於前一年的冬至,為了節氣中氣一起算,取前年大雪之前
 --  for i=0,13 do   --計算節氣(從冬至開始),注意:返回的是力學時
 --	zq[i+1]=jiaoCal(t1+i*30.4,i*30-90, 0) --中氣計算,冬至的太陽黃經是270度(或-90度)
---	jq[i+1]=jiaoCal(t1+i*30.4,i*30-105,0) --順便計算節氣,它不是農歷定朔計算所必需的
+--	jq[i+1]=jiaoCal(t1+i*30.4,i*30-105,0) --順便計算節氣,它不是農曆定朔計算所必需的
 --end
 --...
 --end
@@ -969,21 +969,21 @@ end
 
 
 ------------------------------------------------------------------------
---- @檔案：「 lunarGz.lua 」
+--- 檔案：「 lunarGz.lua 」
 --[[
-~~~~公曆轉干支歷實現~~~~
+~~~~公曆轉干支曆實現~~~~
 --]]
 
 
---公曆轉干支歷實現
---[[干支歷的年以立春發生時刻（注意，不是立春日的0時）為年干支的起點；各月干支以十二節時刻（注意，不一定是各節氣日的0時）
+--公曆轉干支曆實現
+--[[干支曆的年以立春發生時刻（注意，不是立春日的0時）為年干支的起點；各月干支以十二節時刻（注意，不一定是各節氣日的0時）
 --]]
 -- require("ace/lunarJq")
 
 local GanZhiLi = {
 }
 
---創建干支歷對象
+--創建干支曆對象
 function GanZhiLi:new()
 	local o = {}
 	setmetatable(o, self)
@@ -1011,7 +1011,7 @@ local function calR2(n, round)
 	return x
 end
 
---設置用於轉換干支歷的公曆時間
+--設置用於轉換干支曆的公曆時間
 function GanZhiLi:setTime(t)
 	self.ttime = t
 	self.tday = os.date('*t', t)
@@ -1022,7 +1022,7 @@ function GanZhiLi:setTime(t)
 	self.jqs = getYearJQ(self.tday.year)
 	self.ganZhiYearNum = self:calGanZhiYearNum()
 	if self.ganZhiYearNum ~= self.tday.year then
-		--如果在節氣上還沒到今年的立春，則還沒到干支歷的今年，需要取干支歷的年份的24節氣
+		--如果在節氣上還沒到今年的立春，則還沒到干支曆的今年，需要取干支曆的年份的24節氣
 		self.jqs = getYearJQ(self.ganZhiYearNum)
 	end
 	self.ganZhiMonNum = self:calGanZhiMonthNum()
@@ -1044,7 +1044,7 @@ function GanZhiLi:getCurJQ()
 end
 
 
---根據公曆年份和節氣計算干支歷的年份
+--根據公曆年份和節氣計算干支曆的年份
 function GanZhiLi:calGanZhiYearNum()
 	if (self.ttime < self.jqs[1]) then return self.tday.year -1
 	else return self.tday.year end
@@ -1188,6 +1188,21 @@ end
 
 
 
+--- 補充時辰
+local GetLunarSichen = function(time,t)
+  local time=tonumber(time)
+  local LunarSichen = {"子時(夜半｜三更)", "丑時(雞鳴｜四更)", "寅時(平旦｜五更)", "卯時(日出)", "辰時(食時)", "巳時(隅中)", "午時(日中)", "未時(日昳)", "申時(哺時)", "酉時(日入)", "戌時(黃昏｜一更)", "亥時(人定｜二更)"}
+  if tonumber(t)==1 then
+    sj = math.floor((time+1)/2)+1
+  elseif tonumber(t)==0 then
+    sj=math.floor((time+13)/2)+1
+  end
+  if sj>12 then return LunarSichen[sj-12] else return LunarSichen[sj] end
+end
+
+
+
+
 ------------------------------------------------------------------------
 --[[
 ~~~~    ~~~~
@@ -1199,5 +1214,6 @@ return {
     LunarDate2Date = LunarDate2Date,
     GetNextJQ = GetNextJQ,
     GetNowTimeJq = GetNowTimeJq,
-    lunarJzl = lunarJzl
+    lunarJzl = lunarJzl,
+    GetLunarSichen = GetLunarSichen
 }
