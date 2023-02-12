@@ -36,6 +36,7 @@
   > ~/Library/Rime  ( Mac OS 鼠鬚管 )
   > ~/.config/ibus/rime  ( Linux 中州韻 )
   > ~/.config/fcitx/rime  ( Linux )
+  > ~/.local/share/fcitx5/rime ( Linux )
   > ```
 
 - Linux、Win、Mac 皆需注意核心 librime 版本問題：
