@@ -1085,11 +1085,11 @@ end
 
 --返回月的干支號
 function GanZhiLi:getMonGanZhi()
-	local ck ={year=2010,month=2,day=4,hour=6,min=42,sec=0}
+	local ck = {year=2010,month=2,day=4,hour=6,min=42,sec=0}
 	local x = os.time(ck) --參考月，立春時間2010-2-4 6:42:00對應的干支序號為15
 	local ydiff = self.ganZhiYearNum - ck.year
 	local mdiff = self.ganZhiMonNum-1
-	if ydiff >=0 then
+	if ydiff >= 0 then
 		mdiff = ydiff*12 + mdiff
 	else
 		mdiff = (ydiff+1)*12 + mdiff -12
@@ -1129,7 +1129,7 @@ end
 
 --返回時辰的干支號
 function GanZhiLi:getHourGanZhi()
-	local SHICHENSEC=3600*2
+	local SHICHENSEC = 3600*2
 	local jiaziShiTime = os.time({year=2012, month=8, day=30, hour=23, min=0, sec=0})
 	local shiDiff = math.floor((self.ttime - jiaziShiTime)/SHICHENSEC)
 	return self:calRound(1,shiDiff,60)
@@ -1170,14 +1170,14 @@ end
 
 local function lunarJzl(y)
 	local x,yidx,midx,didx,hidx
-	y=tostring(y)
+	y = tostring(y)
 	x = GanZhiLi:new()
-	x:setTime(os.time({year=tonumber(y.sub(y,1,4)),month=tonumber(y.sub(y,5,-5)), day=tonumber(y.sub(y,7,-3)),hour=tonumber(y.sub(y,9,-1)),min=4,sec=5}))
+	x:setTime(os.time({year=tonumber(y.sub(y,1,4)), month=tonumber(y.sub(y,5,-5)), day=tonumber(y.sub(y,7,-3)), hour=tonumber(y.sub(y,9,-1)), min=4,sec=5}))
 	yidx = x:getYearGanZhi()
 	midx = x:getMonGanZhi()
 	didx = x:getDayGanZhi()
 	hidx = x:getHourGanZhi()
-	GzData= get60JiaZiStr(yidx) .. '年' .. get60JiaZiStr(midx) .. '月' .. get60JiaZiStr(didx) .. '日' .. get60JiaZiStr(hidx) .. '時'
+	GzData = get60JiaZiStr(yidx) .. '年' .. get60JiaZiStr(midx) .. '月' .. get60JiaZiStr(didx) .. '日' .. get60JiaZiStr(hidx) .. '時'
 	--print('干支:'  .. GzData)
 	return GzData, get60JiaZiStr(yidx), get60JiaZiStr(midx), get60JiaZiStr(didx), get60JiaZiStr(hidx)
 end
@@ -1191,14 +1191,14 @@ end
 --- 補充時辰
 -- local GetLunarSichen = function(time,t)
 local function GetLunarSichen(time,t)
-  local time=tonumber(time)
-  local LunarSichen = {"子時(夜半｜三更)", "丑時(雞鳴｜四更)", "寅時(平旦｜五更)", "卯時(日出)", "辰時(食時)", "巳時(隅中)", "午時(日中)", "未時(日昳)", "申時(哺時)", "酉時(日入)", "戌時(黃昏｜一更)", "亥時(人定｜二更)"}
-  if tonumber(t)==1 then
+  local time = tonumber(time)
+  local LunarSichen = {"子時(夜半︱三更)", "丑時(雞鳴︱四更)", "寅時(平旦︱五更)", "卯時(日出)", "辰時(食時)", "巳時(隅中)", "午時(日中)", "未時(日昳)", "申時(哺時)", "酉時(日入)", "戌時(黃昏︱一更)", "亥時(人定︱二更)"}
+  if tonumber(t) == 1 then
     sj = math.floor((time+1)/2)+1
-  elseif tonumber(t)==0 then
-    sj=math.floor((time+13)/2)+1
+  elseif tonumber(t) == 0 then
+    sj = math.floor((time+13)/2)+1
   end
-  if sj>12 then
+  if sj > 12 then
     return LunarSichen[sj-12] or "無效時間"
   else
     return LunarSichen[sj] or "無效時間"
@@ -1220,5 +1220,5 @@ return {
     GetNextJQ = GetNextJQ,
     GetNowTimeJq = GetNowTimeJq,
     lunarJzl = lunarJzl,
-    GetLunarSichen = GetLunarSichen
+    GetLunarSichen = GetLunarSichen,
 }
