@@ -521,7 +521,7 @@ local function translate(input, seg, env)
       for i =1,#nt_jqs do
         yield_c( nt_jqs[i], "〔節氣〕")
       end
-      -- local nt_jqs = nil
+      local nt_jqs = nil
       return
     end
 
