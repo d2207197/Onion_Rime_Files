@@ -2,22 +2,6 @@
 從 lunar_calendar 資料夾匯入兩個農曆相關函數集合
 --]]
 
-local lc_1 = require("lunar_calendar/lunar_calendar_1")
-local Dec2bin = lc_1.Dec2bin
-local Date2LunarDate = lc_1.Date2LunarDate
-local LunarDate2Date = lc_1.LunarDate2Date
--- local GetNextJQ = lc_1.GetNextJQ
-local GetNowTimeJq = lc_1.GetNowTimeJq
-local lunarJzl = lc_1.lunarJzl
-
-local lc_2 = require("lunar_calendar/lunar_calendar_2")
-local time_description_chinese = lc_2.time_description_chinese
-local Moonphase_out1 = lc_2.Moonphase_out1
-local Moonphase_out2 = lc_2.Moonphase_out2
-local jieqi_out1 = lc_2.jieqi_out1
-
-local GetLunarSichen = require("lunar_calendar/lunar_time")
-
 ----------------------------------------------------------------------------------------
 --- 版本訊息
 
@@ -62,6 +46,24 @@ local weekstyle = require("f_components/f_week_style")
 local f_t_s = require("f_components/f_time_style")
 local time_out1 = f_t_s.time_out1
 local time_out2 = f_t_s.time_out2
+
+----------------------------------------------------------------------------------------
+--- 農曆相關轉換
+local lc_1 = require("lunar_calendar/lunar_calendar_1")
+local Dec2bin = lc_1.Dec2bin
+local Date2LunarDate = lc_1.Date2LunarDate
+local LunarDate2Date = lc_1.LunarDate2Date
+-- local GetNextJQ = lc_1.GetNextJQ
+local GetNowTimeJq = lc_1.GetNowTimeJq
+local lunarJzl = lc_1.lunarJzl
+
+local lc_2 = require("lunar_calendar/lunar_calendar_2")
+local time_description_chinese = lc_2.time_description_chinese
+local Moonphase_out1 = lc_2.Moonphase_out1
+local Moonphase_out2 = lc_2.Moonphase_out2
+local jieqi_out1 = lc_2.jieqi_out1
+
+local GetLunarSichen = require("lunar_calendar/lunar_time")
 
 ----------------------------------------------------------------------------------------
 --- 數字字母各種格式轉寫
@@ -154,9 +156,9 @@ local function init(env)
       , { "  ○ y〔○年〕    ○ m〔○月〕    ○ d〔○日〕", "⑨" }
       , { "  [0-9]+[ + - * / ^ ( ) ]...〔簡易計算機〕", "⑩" }
       , { "  算符： ‹+ a›   ‹- r›   ‹* x›   ‹/ v›   ‹^ s›   ‹ ( q›   ‹ ) w› ", "⑪" }
-      , { "  / [a-z , . - ' / ]+〔小寫字母〕", "⑫" }
-      , { "  ; [a-z , . - ' / ]+〔大寫字母〕", "⑬" }
-      , { "  \' [a-z , . - ' / ]+〔開頭大寫字母〕", "⑭" }
+      , { "  / [a-z , . - \' / ]+〔小寫字母〕", "⑫" }
+      , { "  ; [a-z , . - \' / ]+〔大寫字母〕", "⑬" }
+      , { "  \' [a-z , . - \' / ]+〔開頭大寫字母〕", "⑭" }
       , { "  e [0-9a-f]+〔Percent/URL encoding〕", "⑮" }
       , { "  u [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑯" }
       , { "  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑰" }
@@ -186,8 +188,8 @@ local function translate(input, seg, env)
 
   --- 精簡程式碼用
   local yield_c = function(cand_text, comment)
-    comment = comment == nil and '' or comment
-    yield(Candidate('mf_t', seg.start, seg._end, cand_text, comment))
+    comment = comment == nil and "" or comment
+    yield(Candidate("mf_t", seg.start, seg._end, cand_text, comment))
   end
 
   -- local start_key = string.match(input, env.prefix)
@@ -222,7 +224,7 @@ local function translate(input, seg, env)
 
       for k, v in ipairs(env.menu_table) do
         local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. '\t《時間日期數字字母》▶'
+        cand.preedit = input .. "\t《時間日期數字字母》▶"
         yield(cand)
       end
       return
@@ -230,56 +232,56 @@ local function translate(input, seg, env)
 
     if (input == env.prefix .. "/") then
       local cand2 = Candidate("tips", seg.start, seg._end, " ", "  [a-z]+〔小寫字母〕")
-      cand2.preedit = input .. '\t《小寫字母》▶'
+      cand2.preedit = input .. "\t《小寫字母》▶"
       yield(cand2)
       return
     end
 
     if (input == env.prefix .. ";") then
       local cand2 = Candidate("tips", seg.start, seg._end, " ", "  [a-z]+〔大寫字母〕")
-      cand2.preedit = input .. '\t《大寫字母》▶'
+      cand2.preedit = input .. "\t《大寫字母》▶"
       yield(cand2)
       return
     end
 
-    if (input == env.prefix .. "'") then
+    if (input == env.prefix .. "\'") then
       local cand2 = Candidate("tips", seg.start, seg._end, " ", "  [a-z]+〔開頭大寫字母〕")
-      cand2.preedit = input .. '\t《開頭大寫字母》▶'
+      cand2.preedit = input .. "\t《開頭大寫字母》▶"
       yield(cand2)
       return
     end
 
     if (input == env.prefix .. "x") then
       local cand2 = Candidate("tips", seg.start, seg._end, " ", "  [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)")
-      cand2.preedit = input .. '\t《內碼十六進制》▶'
+      cand2.preedit = input .. "\t《內碼十六進制》▶"
       yield(cand2)
       return
     end
 
     if (input == env.prefix .. "u") then
       local cand2 = Candidate("tips", seg.start, seg._end, " ", "  [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)")
-      cand2.preedit = input .. '\t《內碼十六進制》▶'
+      cand2.preedit = input .. "\t《內碼十六進制》▶"
       yield(cand2)
       return
     end
 
     if (input == env.prefix .. "c") then
       local cand2 = Candidate("tips", seg.start, seg._end, " ", "  [0-9]+〔內碼十進制 Dec〕")
-      cand2.preedit = input .. '\t《內碼十進制》▶'
+      cand2.preedit = input .. "\t《內碼十進制》▶"
       yield(cand2)
       return
     end
 
     if (input == env.prefix .. "o") then
       local cand2 = Candidate("tips", seg.start, seg._end, " ", "  [0-7]+〔內碼八進制 Oct〕")
-      cand2.preedit = input .. '\t《內碼八進制》▶'
+      cand2.preedit = input .. "\t《內碼八進制》▶"
       yield(cand2)
       return
     end
 
     if (input == env.prefix .. "e") then
       local cand2 = Candidate("tips", seg.start, seg._end, " ", "  [0-9a-f]+〔Percent/URL encoding〕")
-      cand2.preedit = input .. '\t《Percent/URL encoding》▶'
+      cand2.preedit = input .. "\t《Percent/URL encoding》▶"
       yield(cand2)
       return
     end
@@ -1650,7 +1652,7 @@ local function translate(input, seg, env)
       return
     end
 
-    local englishout2 = string.match(input, env.prefix .. "'([%l.,/'-]+)$")
+    local englishout2 = string.match(input, env.prefix .. "\'([%l.,/'-]+)$")
     if englishout2 then
       -- yield_c( string.upper(string.sub(englishout2,1,1)) .. string.sub(englishout2,2,-1) , "〔一般字母開頭大寫〕")
       yield_c( english_s2u(englishout2), "〔一般字母開頭大寫〕")
@@ -1785,13 +1787,13 @@ local function translate(input, seg, env)
     --   local u_3 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])$")
     --   local u_4 = string.match(url_c_input,"^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])$")
     --   if u_1 ~= nil or u_2 ~= nil or u_3 ~= nil or u_4 ~= nil then
-    --     url_c_input = url_c_input .. '0'
+    --     url_c_input = url_c_input .. "0"
     --   end
     --   local url_10 = url_decode(url_c_input)
     --   local uc_i = string.upper(string.sub(input, 4, 5)) .. " " .. string.upper(string.sub(input, 6, 7)) .. " " .. string.upper(string.sub(input, 8, 9)) .. " " .. string.upper(string.sub(input, 10, 11)) .. " " .. string.upper(string.sub(input, 12, 13)) .. " " .. string.upper(string.sub(input, 14, 15))
     --   local uc_i = string.gsub(uc_i, " +$", "" )
     --   if string.match(url_10, "無此編碼") ~= nil then
-    --     yield_c( url_10, '' )
+    --     yield_c( url_10, "" )
     --   elseif string.match(url_c_input, "^[0-9a-z]$") ~= nil then
     --     local cand_uci_a = Candidate("url_e", seg.start, seg._end, url_10, url_10 )
     --     cand_uci_a.preedit = env.prefix .. "e " .. uc_i
@@ -1923,7 +1925,7 @@ local function translate(input, seg, env)
         yield_c( "民國前"..read_number(confs[1], min_guo(y)).."年"..ch_m_date(m).."月" , "〔民國〕")
       end
       -- yield_c( y.."年 "..jp_m_date(m), "〔日文日期〕")
-      -- local jpymd2, jp_y2 = jp_ymd(y,m,'1')
+      -- local jpymd2, jp_y2 = jp_ymd(y,m,"1")
       -- yield_c( jp_y2..m.."月" , "〔日本元号〕(沒有日，元号可能有誤)")
       yield_c( eng1_m_date(m)..", "..y, "〔美式/英式月年〕")
       yield_c( eng2_m_date(m)..", "..y, "〔美式月年〕")
@@ -1951,7 +1953,7 @@ local function translate(input, seg, env)
         yield_c( "民國前"..read_number(confs[1], min_guo(y)).."年", "〔民國〕")
       end
       -- yield_c( y.."年 ", "〔日文日期〕")
-      -- local jpymd2, jp_y2 = jp_ymd(y,'1','1')
+      -- local jpymd2, jp_y2 = jp_ymd(y,"1","1")
       -- yield_c( jp_y2 , "〔日本元号〕(沒有月日，元号可能有誤)")
       yield_c( y, "〔美式/英式月年〕")
 
@@ -1994,23 +1996,23 @@ local function translate(input, seg, env)
     --- 補以下開頭負號缺漏
     local neg_nf = string.match(input, env.prefix .. "[-]$")
     if neg_nf then
-      yield_c( '-', "〔一般負號〕")
-      yield_c( '－', "〔全形負號〕")
-      yield_c( '負', "〔中文負號〕")
-      yield_c( '槓', "〔軍中負號〕")
-      yield_c( '⁻', "〔上標負號〕")
-      yield_c( '₋', "〔下標負號〕")
-      yield_c( '㊀', "〔帶圈負號〕")
+      yield_c( "-", "〔一般負號〕")
+      yield_c( "－", "〔全形負號〕")
+      yield_c( "負", "〔中文負號〕")
+      yield_c( "槓", "〔軍中負號〕")
+      yield_c( "⁻", "〔上標負號〕")
+      yield_c( "₋", "〔下標負號〕")
+      yield_c( "㊀", "〔帶圈負號〕")
       return
     end
 
     --- 補以下開頭小數點缺漏
     local dot = string.match(input, env.prefix .. "%.$")
     if dot then
-      yield_c( '.', "〔一般小數點〕")
-      -- yield_c( '．', "〔全形小數點〕")
-      yield_c( '點', "〔中文小數點〕")
-      -- yield_c( '點', "〔軍中小數點〕")
+      yield_c( ".", "〔一般小數點〕")
+      -- yield_c( "．", "〔全形小數點〕")
+      yield_c( "點", "〔中文小數點〕")
+      -- yield_c( "點", "〔軍中小數點〕")
       return
     end
 
@@ -2038,15 +2040,15 @@ local function translate(input, seg, env)
       elseif (dot0~="") then
         afterdot = numberout
         dot1 = dot0
-        numberout = '0'
+        numberout = "0"
       end
 
-      local neg_n_f = string.gsub(neg_n,'-','－')
-      local neg_n_ch = string.gsub(neg_n,'-','負')
-      local neg_n_m = string.gsub(neg_n,'-','槓')
-      local neg_n_l1 = string.gsub(neg_n,'-','⁻')
-      local neg_n_l2 = string.gsub(neg_n,'-','₋')
-      local neg_n_c = string.gsub(neg_n,'-','㊀')
+      local neg_n_f = string.gsub(neg_n, "-", "－")
+      local neg_n_ch = string.gsub(neg_n, "-", "負")
+      local neg_n_m = string.gsub(neg_n, "-", "槓")
+      local neg_n_l1 = string.gsub(neg_n, "-", "⁻")
+      local neg_n_l2 = string.gsub(neg_n, "-", "₋")
+      local neg_n_c = string.gsub(neg_n, "-", "㊀")
 
     -- if numberout~=nil and tonumber(nn)~=nil then
       local nn = string.sub(numberout, 1)
@@ -2152,7 +2154,7 @@ local function translate(input, seg, env)
       cc_out.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
       cc_error.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
       cc_exp.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
-      yield( c_output:sub(1,1)=='E' and cc_error or cc_out )
+      yield( c_output:sub(1,1)=="E" and cc_error or cc_out )
       yield(cc_exp)
       return
     end

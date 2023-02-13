@@ -837,20 +837,20 @@ local jqB={ --節氣表
 "春分","清明","谷雨","立夏","小滿","芒種","夏至","小暑","大暑","立秋","處暑","白露",
 "秋分","寒露","霜降","立冬","小雪","大雪","冬至","小寒","大寒","立春","雨水","驚蟄"}
 
-local function JQtest(y) --節氣使計算範例,y是年分,這是個測試函數
-	local i,q,s1,s2  y=tostring(y)
-	local jd=365.2422*(tonumber(y.sub(y,1,4))-2000)
-	for i=0,23 do
-		q=jiaoCal(jd+i*15.2,i*15,0)+J2000+8/24  --計算第i個節氣(i=0是春分),結果轉為北京時
-		--print('q=' .. q)
-		JDate:setFromJD(q,1)  s1=JDate:toStr()  --將儒略日轉成世界時
-		JDate:setFromJD(q,0)  s2=JDate:toStr()  --將儒略日轉成日期格式(輸出日期形式的力學時)
-		jqData=s1.sub(s1.gsub(s1, "^( )", ""),1,10)  jqData=jqData.gsub(jqData, "-", "")
-		--print(jqB[i+1] .. " : " .. jqData .. " " .. jqData.len(jqData) ) --顯示
-		if (jqData == y) then return "-" .. jqB[i+1] end
-	end
-	return ""
-end
+-- local function JQtest(y) --節氣使計算範例,y是年分,這是個測試函數
+-- 	local i,q,s1,s2  y=tostring(y)
+-- 	local jd=365.2422*(tonumber(y.sub(y,1,4))-2000)
+-- 	for i=0,23 do
+-- 		q=jiaoCal(jd+i*15.2,i*15,0)+J2000+8/24  --計算第i個節氣(i=0是春分),結果轉為北京時
+-- 		--print('q=' .. q)
+-- 		JDate:setFromJD(q,1)  s1=JDate:toStr()  --將儒略日轉成世界時
+-- 		JDate:setFromJD(q,0)  s2=JDate:toStr()  --將儒略日轉成日期格式(輸出日期形式的力學時)
+-- 		jqData=s1.sub(s1.gsub(s1, "^( )", ""),1,10)  jqData=jqData.gsub(jqData, "-", "")
+-- 		--print(jqB[i+1] .. " : " .. jqData .. " " .. jqData.len(jqData) ) --顯示
+-- 		if (jqData == y) then return "-" .. jqB[i+1] end
+-- 	end
+-- 	return ""
+-- end
 
 local function GetNextJQ(y) --節氣使計算範例,y是年分,這是個測試函數
 	local i,obj,q,s1,s2  y=tostring(y)
@@ -893,16 +893,16 @@ local function getYearJQ(y)
 end
 
 --=================定朔弦望計算========================
-local function dingSuo(y,arc) --這是個測試函數
-	local i,jd=365.2422*(y-2000),q,s1,s2
-	-- print("月份:世界時  原子時<br>")
-	for i=0,11 do
-		q=jiaoCal(jd+29.5*i,arc,1)+J2000+8/24    --計算第i個節氣(i=0是春風),結果轉為北京時
-		JDate.setFromJD(q,1)  s1=JDate:toStr()  --將儒略日轉成世界時
-		JDate.setFromJD(q,0)  s2=JDate:toStr()  --將儒略日轉成日期格式(輸出日期形式的力學時)
-		-- print((i+1) .. "月 : ".. s1 .. " " .. s2 ) --顯示
-	end
-end
+-- local function dingSuo(y,arc) --這是個測試函數
+-- 	local i,jd=365.2422*(y-2000),q,s1,s2
+-- 	-- print("月份:世界時  原子時<br>")
+-- 	for i=0,11 do
+-- 		q=jiaoCal(jd+29.5*i,arc,1)+J2000+8/24    --計算第i個節氣(i=0是春風),結果轉為北京時
+-- 		JDate.setFromJD(q,1)  s1=JDate:toStr()  --將儒略日轉成世界時
+-- 		JDate.setFromJD(q,0)  s2=JDate:toStr()  --將儒略日轉成日期格式(輸出日期形式的力學時)
+-- 		-- print((i+1) .. "月 : ".. s1 .. " " .. s2 ) --顯示
+-- 	end
+-- end
 
 --=================農曆計算========================
 --[[*****
@@ -980,8 +980,7 @@ end
 --]]
 -- require("ace/lunarJq")
 
-local GanZhiLi = {
-}
+local GanZhiLi = {}
 
 --創建干支曆對象
 function GanZhiLi:new()
@@ -1161,11 +1160,11 @@ local dizhi = {'子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '�
 
 --根據六十甲子序號，返回六十甲子字符串,甲子從1開始
 local function get60JiaZiStr(i)
-local gan = i % 10
-		if gan == 0  then gan = 10 end
-		local zhi = i % 12
-		if zhi == 0 then zhi = 12 end
-		return tiangan[gan]..dizhi[zhi]
+	local gan = i % 10
+	if gan == 0  then gan = 10 end
+	local zhi = i % 12
+	if zhi == 0 then zhi = 12 end
+	return tiangan[gan]..dizhi[zhi]
 end
 
 local function lunarJzl(y)
@@ -1194,10 +1193,10 @@ end
 --]]
 
 return {
-    Dec2bin = Dec2bin,
-    Date2LunarDate = Date2LunarDate,
-    LunarDate2Date = LunarDate2Date,
-    -- GetNextJQ = GetNextJQ,
-    GetNowTimeJq = GetNowTimeJq,
-    lunarJzl = lunarJzl
+		Dec2bin = Dec2bin,
+		Date2LunarDate = Date2LunarDate,
+		LunarDate2Date = LunarDate2Date,
+		-- GetNextJQ = GetNextJQ,
+		GetNowTimeJq = GetNowTimeJq,
+		lunarJzl = lunarJzl
 }
