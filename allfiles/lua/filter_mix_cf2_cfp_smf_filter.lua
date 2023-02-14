@@ -76,7 +76,7 @@ local function filter(inp, env)
   local c_f2_s = context:get_option("character_range_bhjm")
   local s_c_f_p_s = context:get_option("simplify_comment")
   local b_k = context:get_option("back_mark")
-  local tran = c_f2_s and Translation(drop_cand, inp, '᰼᰼') or inp
+  local tran = c_f2_s and Translation(drop_cand, inp, "᰼᰼") or inp
   for cand in tran:iter() do
     yield( not s_c_f_p_s and b_k and change_comment( cand, cand.comment .. xform_mark(env.ocmdb:lookup(cand.text)) )
         or s_c_f_p_s and b_k and change_comment( cand, xform_mark(env.ocmdb:lookup(cand.text)) )
@@ -120,13 +120,13 @@ local function mix_cf2_cfp_smf_filter(input, env)
   -- local pun4 = string.match(find_prefix, "^[;|][;]?$" )
   if (c_f2_s) and (b_k) then
     for cand in input:iter() do
-      if (not string.match(cand.text, '᰼᰼' )) and (not s_c_f_p_s) then
-      -- if (not string.match(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
+      if (not string.match(cand.text, "᰼᰼" )) and (not s_c_f_p_s) then
+      -- if (not string.match(cand.text, "᰼᰼" )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
         cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
         -- cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
         yield(cand)
-      elseif (not string.match(cand.text, '᰼᰼' )) and (s_c_f_p_s) then
-      -- elseif (not string.match(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
+      elseif (not string.match(cand.text, "᰼᰼" )) and (s_c_f_p_s) then
+      -- elseif (not string.match(cand.text, "᰼᰼" )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
         cand:get_genuine().comment = ""
         cand:get_genuine().comment = xform_mark( cand.comment .. ocmdb:lookup(cand.text) )
         -- cand:get_genuine().comment = cand.comment .. ocmdb:lookup(cand.text)
@@ -151,11 +151,11 @@ local function mix_cf2_cfp_smf_filter(input, env)
     end
   elseif (c_f2_s) and (not b_k) then
     for cand in input:iter() do
-      if (not string.match(cand.text, '᰼᰼' )) and (not s_c_f_p_s) then
-      -- if (not string.match(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
+      if (not string.match(cand.text, "᰼᰼" )) and (not s_c_f_p_s) then
+      -- if (not string.match(cand.text, "᰼᰼" )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
         yield(cand)
-      elseif (not string.match(cand.text, '᰼᰼' )) and (s_c_f_p_s) then
-      -- elseif (not string.match(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
+      elseif (not string.match(cand.text, "᰼᰼" )) and (s_c_f_p_s) then
+      -- elseif (not string.match(cand.text, "᰼᰼" )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
         cand:get_genuine().comment = ""
         yield(cand)
       end

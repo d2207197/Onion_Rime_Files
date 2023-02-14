@@ -20,6 +20,11 @@ local function processor(key, env)
   local check_i1 = string.match(c_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")
   local check_i2 = string.match(c_input, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")
   local check_i3 = string.match(c_input, "`.+$")
+  -- local check_i4 = string.match(c_input, "^[a-z][-_.0-9a-z]*@.*$")
+  -- local check_i5 = string.match(c_input, "^https?:.*$")
+  -- local check_i6 = string.match(c_input, "^ftp:.*$")
+  -- local check_i7 = string.match(c_input, "^mailto:.*$")
+  -- local check_i8 = string.match(c_input, "^file:.*$")
   local check_i4 = string.match(c_input, "^[a-z][-_.0-9a-z]*@.*$") or
                    string.match(c_input, "^https?:.*$") or
                    string.match(c_input, "^ftp:.*$") or
@@ -54,6 +59,7 @@ local function processor(key, env)
     return 2
 
   elseif check_i1 or check_i2 or check_i3 or check_i4 then
+  -- elseif check_i1 or check_i2 or check_i3 or check_i4 or check_i5 or check_i6 or check_i7 or check_i8 then
     if key:repr() == "space" then
       -- local g_c_t = context:get_commit_text()
       engine:commit_text(g_c_t)

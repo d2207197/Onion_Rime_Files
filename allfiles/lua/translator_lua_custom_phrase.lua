@@ -54,7 +54,8 @@ local function load_text_dict(text_dict)
   -- if (f == nil) then return end
 
   local tab = {}
-  for line in io.open(file_name):lines() do
+  -- for line in io.open(file_name):lines() do
+  for line in io.lines(file_name) do  -- 以讀的形式進行，如果文件不存在會報錯，故前面需判別是否為 nil。因 lines() 完自動關閉，後面不能 io.close() 關閉，否則會報錯。
   -- for line in f:lines() do
     local v_text, v_code = string.match(line, "^([^\t#][^\t]*)\t([%d%l,./; -]+)\t?.*$")
     if v_text then
@@ -62,7 +63,7 @@ local function load_text_dict(text_dict)
       -- tab[v_code] = v_text  -- 一個 code 只能有一條短語，下方可一個 code，多條短語。
       --- 下方 table 格式為：{[v_code1]={'v_text1','v_text2',...},[v_code2]={'v_text3'},...}
       if tab[v_code] == nil then
-        local nn={}
+        local nn = {}
         table.insert(nn, v_text)
         tab[v_code] = nn
       else
@@ -73,6 +74,7 @@ local function load_text_dict(text_dict)
   end
 
   -- f:close()
+  -- io.close(f)
 
   return tab
 end
@@ -122,7 +124,7 @@ local function translate(input, seg, env)
   -- --- 以下測試用
   -- if (string.match(input, "^11$")~=nil) then
   --   cand.quality = env.quality
-  --   yield( Candidate("short", seg.start, seg._end, '『測試用』', "〔短語〕") )
+  --   yield( Candidate("short", seg.start, seg._end, "『測試用』", "〔短語〕") )
   --   yield(cand)
 
 end

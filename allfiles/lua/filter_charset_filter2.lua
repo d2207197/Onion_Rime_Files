@@ -61,7 +61,7 @@ local function filter(inp, env)
   local engine = env.engine
   local context = engine.context
   local c_f2_s = context:get_option("character_range_bhjm")
-  local tran = c_f2_s and Translation(drop_cand, inp, '᰼᰼') or inp
+  local tran = c_f2_s and Translation(drop_cand, inp, "᰼᰼") or inp
   for cand in tran:iter() do
     yield(cand)
   end
@@ -86,8 +86,8 @@ local function charset_filter2(input, env)
   local c_f2_s = env.engine.context:get_option("character_range_bhjm")
   if (c_f2_s) then
     for cand in input:iter() do
-      if (not string.match(cand.text, '᰼᰼' )) then
-      -- if (not string.match(cand.text, '.*᰼᰼.*' )) then
+      if (not string.match(cand.text, "᰼᰼" )) then
+      -- if (not string.match(cand.text, ".*᰼᰼.*" )) then
         yield(cand)
       end
     end

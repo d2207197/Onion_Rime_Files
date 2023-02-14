@@ -31,11 +31,11 @@ local function filter(inp, env)
   local context = engine.context
   local c_f2_s = context:get_option("character_range_bhjm")
   local s_c_f_p_s = context:get_option("simplify_comment")
-  -- 當 c_f2_s true  去掉 cand.text 有'᰼᰼' 的cand
-  local tran = c_f2_s and Translation(drop_cand, inp, '᰼᰼') or inp
+  -- 當 c_f2_s true 去掉 cand.text 有 "᰼᰼" 的 cand
+  local tran = c_f2_s and Translation(drop_cand, inp, "᰼᰼") or inp
   
   for cand in tran:iter() do
-    --  s_c_f_p_s true 時 清除 comment
+    -- s_c_f_p_s true 時 清除 comment
     yield( s_c_f_p_s and change_comment(cand,"") or cand )
   end
 end

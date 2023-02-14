@@ -44,7 +44,7 @@ local function filter(inp, env)
   local c_f2_s = context:get_option("character_range_bhjm")
   local s_c_f_p_s = context:get_option("simplify_comment")
   local b_k = context:get_option("back_mark")
-  local tran = c_f2_s and Translation(drop_cand, inp, '᰼᰼') or inp
+  local tran = c_f2_s and Translation(drop_cand, inp, "᰼᰼") or inp
   -- local bm_opencc = {}
   -- local bm_opencc = Opencc("back_mark.json") or {''}
   for cand in tran:iter() do
@@ -96,12 +96,12 @@ local function ocm_mixin_filter(input, env)
     for cand in input:iter() do
       -- local b_mark = {}
       local b_mark = bm_opencc:convert_word(cand.text) or {''}
-      if (not string.match(cand.text, '᰼᰼' )) and (not s_c_f_p_s) then
-      -- if (not string.match(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
+      if (not string.match(cand.text, "᰼᰼" )) and (not s_c_f_p_s) then
+      -- if (not string.match(cand.text, "᰼᰼" )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
         cand:get_genuine().comment = cand.comment .. xform_mark(b_mark[1])
         yield(cand)
-      elseif (not string.match(cand.text, '᰼᰼' )) and (s_c_f_p_s) then
-      -- elseif (not string.match(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
+      elseif (not string.match(cand.text, "᰼᰼" )) and (s_c_f_p_s) then
+      -- elseif (not string.match(cand.text, "᰼᰼" )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
         -- cand:get_genuine().comment = ""
         -- cand:get_genuine().comment = cand.comment .. xform_mark(b_mark[1])
         cand:get_genuine().comment = xform_mark(b_mark[1])
@@ -131,11 +131,11 @@ local function ocm_mixin_filter(input, env)
     end
   elseif (c_f2_s) and (not b_k) then
     for cand in input:iter() do
-      if (not string.match(cand.text, '᰼᰼' )) and (not s_c_f_p_s) then
-      -- if (not string.match(cand.text, '᰼᰼' )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
+      if (not string.match(cand.text, "᰼᰼" )) and (not s_c_f_p_s) then
+      -- if (not string.match(cand.text, "᰼᰼" )) and (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
         yield(cand)
-      elseif (not string.match(cand.text, '᰼᰼' )) and (s_c_f_p_s) then
-      -- elseif (not string.match(cand.text, '᰼᰼' )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
+      elseif (not string.match(cand.text, "᰼᰼" )) and (s_c_f_p_s) then
+      -- elseif (not string.match(cand.text, "᰼᰼" )) and (s_c_f_p_s) and (not pun1) and (not pun2) and (not pun3) and (not pun4) then
         cand:get_genuine().comment = ""
         yield(cand)
       end

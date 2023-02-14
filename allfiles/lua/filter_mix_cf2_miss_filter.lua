@@ -30,20 +30,20 @@ local function filter(inp, env)
   local context = engine.context
   local c_f2_s = context:get_option("character_range_bhjm")
   local p_key = context.input
-  local addcomment1 = string.match(p_key, '=%.$')
-  local addcomment2 = string.match(p_key, '[][]$')
+  local addcomment1 = string.match(p_key, "=%.$")
+  local addcomment2 = string.match(p_key, "[][]$")
 
-  local tran = c_f2_s and Translation(drop_cand, inp, '᰼᰼') or inp
+  local tran = c_f2_s and Translation(drop_cand, inp, "᰼᰼") or inp
   for cand in tran:iter() do
     if addcomment1 then
       yield( cand.text== "。" and change_comment(cand,"〔句點〕") or cand )
-      -- yield( string.match(cand.text, '^。$') and change_comment(cand,"〔句點〕") or cand )
+      -- yield( string.match(cand.text, "^。$") and change_comment(cand,"〔句點〕") or cand )
     elseif addcomment2 then
       yield( cand.text == "〔" and change_comment(cand,"〔六角括號〕")
           or cand.text == "〕" and change_comment(cand,"〔六角括號〕")
           or cand )
-      -- yield( string.match(cand.text, '^〔$') and change_comment(cand,"〔六角括號〕")
-      --     or string.match(cand.text, '^〕$') and change_comment(cand,"〔六角括號〕")
+      -- yield( string.match(cand.text, "^〔$") and change_comment(cand,"〔六角括號〕")
+      --     or string.match(cand.text, "^〕$") and change_comment(cand,"〔六角括號〕")
       --     or cand )
     else
       yield(cand)

@@ -36,7 +36,7 @@ local function p_convert_japan_translator(input, seg)
 -- local function p_convert_japan_translator(input, seg, env)
   -- local tips_jp = env.engine.schema.config:get_string('japan/tips')
   -- local tips_jp = string.gsub(tips_jp, "▶", "")
-  local tips_jp = '《日-固列》'
+  local tips_jp = "《日-固列》"
   local c = string.match(input, "([-/a-z.,;]+)%.,$")
   local tag_jp = seg:has_tag("japan")
   local jp_p = tips_jp .. input

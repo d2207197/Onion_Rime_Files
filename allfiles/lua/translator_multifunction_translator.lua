@@ -231,56 +231,56 @@ local function translate(input, seg, env)
     end
 
     if (input == env.prefix .. "/") then
-      local cand2 = Candidate("tips", seg.start, seg._end, " ", "  [a-z]+〔小寫字母〕")
+      local cand2 = Candidate("tips", seg.start, seg._end, "", "  [a-z]+〔小寫字母〕")
       cand2.preedit = input .. "\t《小寫字母》▶"
       yield(cand2)
       return
     end
 
     if (input == env.prefix .. ";") then
-      local cand2 = Candidate("tips", seg.start, seg._end, " ", "  [a-z]+〔大寫字母〕")
+      local cand2 = Candidate("tips", seg.start, seg._end, "", "  [a-z]+〔大寫字母〕")
       cand2.preedit = input .. "\t《大寫字母》▶"
       yield(cand2)
       return
     end
 
     if (input == env.prefix .. "\'") then
-      local cand2 = Candidate("tips", seg.start, seg._end, " ", "  [a-z]+〔開頭大寫字母〕")
+      local cand2 = Candidate("tips", seg.start, seg._end, "", "  [a-z]+〔開頭大寫字母〕")
       cand2.preedit = input .. "\t《開頭大寫字母》▶"
       yield(cand2)
       return
     end
 
     if (input == env.prefix .. "x") then
-      local cand2 = Candidate("tips", seg.start, seg._end, " ", "  [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)")
+      local cand2 = Candidate("tips", seg.start, seg._end, "", "  [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)")
       cand2.preedit = input .. "\t《內碼十六進制》▶"
       yield(cand2)
       return
     end
 
     if (input == env.prefix .. "u") then
-      local cand2 = Candidate("tips", seg.start, seg._end, " ", "  [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)")
+      local cand2 = Candidate("tips", seg.start, seg._end, "", "  [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)")
       cand2.preedit = input .. "\t《內碼十六進制》▶"
       yield(cand2)
       return
     end
 
     if (input == env.prefix .. "c") then
-      local cand2 = Candidate("tips", seg.start, seg._end, " ", "  [0-9]+〔內碼十進制 Dec〕")
+      local cand2 = Candidate("tips", seg.start, seg._end, "", "  [0-9]+〔內碼十進制 Dec〕")
       cand2.preedit = input .. "\t《內碼十進制》▶"
       yield(cand2)
       return
     end
 
     if (input == env.prefix .. "o") then
-      local cand2 = Candidate("tips", seg.start, seg._end, " ", "  [0-7]+〔內碼八進制 Oct〕")
+      local cand2 = Candidate("tips", seg.start, seg._end, "", "  [0-7]+〔內碼八進制 Oct〕")
       cand2.preedit = input .. "\t《內碼八進制》▶"
       yield(cand2)
       return
     end
 
     if (input == env.prefix .. "e") then
-      local cand2 = Candidate("tips", seg.start, seg._end, " ", "  [0-9a-f]+〔Percent/URL encoding〕")
+      local cand2 = Candidate("tips", seg.start, seg._end, "", "  [0-9a-f]+〔Percent/URL encoding〕")
       cand2.preedit = input .. "\t《Percent/URL encoding》▶"
       yield(cand2)
       return
