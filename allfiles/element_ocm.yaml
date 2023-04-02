@@ -60,6 +60,16 @@ key_binder:
 #關#    - {accept: backslash, send: Shift+BackSpace, when: has_menu} #「\」鍵位刪除整組拼音字符（一個字）。
     - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
 #關#    - {accept: backslash, send: bar, when: has_menu} #「\」鍵位切分。
+### 小鍵盤選字修正 ###
+    - {accept: KP_0, send: Control+1, when: has_menu}
+    - {accept: KP_1, send: Control+2, when: has_menu}
+    - {accept: KP_2, send: Control+3, when: has_menu}
+    - {accept: KP_3, send: Control+4, when: has_menu}
+    - {accept: KP_4, send: Control+5, when: has_menu}
+    - {accept: KP_5, send: Control+6, when: has_menu}
+    - {accept: KP_6, send: Control+7, when: has_menu}
+    - {accept: KP_7, send: Control+8, when: has_menu}
+    - {accept: KP_8, send: Control+9, when: has_menu}
 ### 功能快捷鍵 ###
     - {accept: Control+apostrophe, toggle: character_range_bhjm, when: always}
     - {accept: Control+minus, toggle: simplify_comment, when: always } #「蝦米碼」提示碼開關

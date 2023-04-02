@@ -6,7 +6,7 @@
 schema:
   schema_id: Mount_ocm
   name: "❖蝦米(單出-反查專用)❖"
-  version: "202302"
+  version: "202304"
   author:
     - 洋蔥
   description: |
@@ -260,6 +260,16 @@ key_binder:
     #    - {accept: Return, send: space, when: has_menu} #return直出
     - {accept: space, send: Escape, when: composing} #空碼清屏用
     - {accept: space, send: space, when: has_menu} #補上一條產生之bug
+############## 小鍵盤選字修正 ###########
+    - {accept: KP_0, send: Control+1, when: has_menu}
+    - {accept: KP_1, send: Control+2, when: has_menu}
+    - {accept: KP_2, send: Control+3, when: has_menu}
+    - {accept: KP_3, send: Control+4, when: has_menu}
+    - {accept: KP_4, send: Control+5, when: has_menu}
+    - {accept: KP_5, send: Control+6, when: has_menu}
+    - {accept: KP_6, send: Control+7, when: has_menu}
+    - {accept: KP_7, send: Control+8, when: has_menu}
+    - {accept: KP_8, send: Control+9, when: has_menu}
 #######################################
     - {accept: Control+apostrophe, toggle: extended_charset, when: always } #增廣常用字符過濾，新增開關
     - {accept: Control+minus, toggle: simplify_comment, when: always } #提示碼開關
