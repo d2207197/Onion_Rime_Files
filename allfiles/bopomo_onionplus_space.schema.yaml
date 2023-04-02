@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onionplus_space
   name: "☆注音(洋蔥plus版 space )☆〔空白不直出〕"
-  version: "202302"
+  version: "202304"
   author:
     - 『洋蔥』
   description: |
@@ -178,9 +178,7 @@ convert_japan_filter:
 #   tags: [ punct, abc, reverse2_lookup ]
 ################################### 選單 ######################################
 menu:
-  # alternative_select_keys: "QAZWSXEDCRFV"
-  alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
-  page_size: 6
+  __include: element_bopomo:/menu
 ################################### 拼寫 ######################################
 speller:
   alphabet: "1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 3467"

@@ -4,7 +4,7 @@
 schema:
   schema_id: bo_mixin3
   name: "☆注音(洋蔥mix-in版 3 )☆〔  '  [  ]  →拉日韓〕"
-  version: "202302"
+  version: "202304"
   author:
     - 『洋蔥』
   description: |
@@ -176,9 +176,7 @@ convert_japan_filter:
 #   tags: [ punct, abc, reverse2_lookup ]
 ################################### 選單 ######################################
 menu:
-  # alternative_select_keys: "QAZWSXEDCRFV"
-  alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
-  page_size: 6
+  __include: element_bopomo:/menu
 ################################### 拼寫 ######################################
 speller:
   alphabet: "1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 3467'[]"
