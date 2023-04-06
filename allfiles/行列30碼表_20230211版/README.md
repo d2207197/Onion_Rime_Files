@@ -8,4 +8,4 @@
 
 - 該資料夾 20230211 版新增 CJK Extension G 該區字碼，並增刪中文和 w 符號許多編碼。
 
-- 承上詳見：https://github.com/gontera/array30/blob/master/OpenVanilla/README.md 和 https://github.com/gontera/array30/blob/master/README.md 說明。
+  > 詳見：https://github.com/gontera/array30/blob/master/OpenVanilla/README.md 和 https://github.com/gontera/array30/blob/master/README.md 說明。
