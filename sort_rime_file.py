@@ -530,7 +530,7 @@ shutil.copyfile("./allfiles/onion-array30-generally.dict.yaml", "./sort_rime/洋
 shutil.copyfile("./allfiles/rime.lua", "./sort_rime/洋蔥行列30/rime.lua")
 shutil.copytree("./allfiles/lua", "./sort_rime/洋蔥行列30/lua")
 
-shutil.copytree("./allfiles/行列20230211版", "./sort_rime/洋蔥行列30/行列20230211版")
+shutil.copytree("./allfiles/行列30碼表_20230211版", "./sort_rime/洋蔥行列30/行列30碼表_20230211版")
 
 shutil.copyfile("./allfiles/各方案default.custom/洋蔥行列30_custom/default.custom.yaml", "./sort_rime/洋蔥行列30/default.custom.yaml")
 
