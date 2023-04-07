@@ -25,6 +25,7 @@ switches:
     reset: 0
     states: [ "。，", "．，" ]
   - name: simplification
+    reset: 0
     states: [ 繁體, 简体 ]
   - name: extended_charset
     reset: 1
