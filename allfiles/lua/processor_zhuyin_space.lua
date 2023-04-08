@@ -72,17 +72,17 @@ local function processor(key, env)
     -- engine:commit_text(cand.text..start.." ".._end.." "..#c_input.." "..caret_pos )  --測試各個位置數值用
 
     --- 計算末尾殘留的非中文字元數（未被選擇的 cand.input 字元數）
-    local gct_cut = #string.gsub(g_c_t, "[^.,;/ %w-]", "")  -- 刪除中文編碼後，計算字數。
+    local n_gct_cut = #string.gsub(g_c_t, "[^.,;/ %w-]", "")  -- 刪除中文編碼後，計算字數。
     -- context:confirm_current_selection()
     -- context:refresh_non_confirmed_composition()
 
     --- 補前綴 "';" 或 "';'"，導入未上屏編碼，避免跳回主方案
-    if gct_cut == 0 then
+    if n_gct_cut == 0 then
       context:clear()
     elseif comp:back():has_tag("reverse2_lookup") then
-      context.input = "';" .. string.sub(c_input, -gct_cut)
+      context.input = "';" .. string.sub(c_input, -n_gct_cut)
     elseif comp:back():has_tag("all_bpm") then
-      context.input = "';'" .. string.sub(c_input, -gct_cut)
+      context.input = "';'" .. string.sub(c_input, -n_gct_cut)
     end
     return 1
 

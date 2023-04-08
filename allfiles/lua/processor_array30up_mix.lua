@@ -116,12 +116,12 @@ local function processor(key, env)
     engine:commit_text(cand.text)
 
     --- 計算末尾殘留的非中文字元數（未被選擇的 cand.input 字元數）
-    local gct_cut = #string.gsub(g_c_t, "[^.,;/ %w-]", "")
+    local n_gct_cut = #string.gsub(g_c_t, "[^.,;/ %w-]", "")
     --- 補前綴 "="，導入未上屏編碼，避免跳回主方案
-    if gct_cut == 0 then
+    if n_gct_cut == 0 then
       context:clear()
     else
-      context.input = "=" .. string.sub(c_input, -gct_cut)
+      context.input = "=" .. string.sub(c_input, -n_gct_cut)
     end
     return 1
 
