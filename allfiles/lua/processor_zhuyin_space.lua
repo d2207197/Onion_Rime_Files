@@ -16,6 +16,12 @@
 --     return stat
 -- end
 
+
+----------------------------------------------------------------------------------------
+local utf8_sub = require("f_components/f_utf8_sub")
+----------------------------------------------------------------------------------------
+
+
 -- local function zhuyin_space(key,env)
 local function processor(key, env)
   local engine = env.engine
@@ -66,17 +72,17 @@ local function processor(key, env)
     -- engine:commit_text(cand.text..start.." ".._end.." "..#c_input.." "..caret_pos )  --測試各個位置數值用
 
     --- 計算末尾殘留的非中文字元數（未被選擇的 cand.input 字元數）
-    local nn = #string.gsub(g_c_t, "[^.,;/ %w-]", "")  -- 刪除中文編碼後，計算字數。
+    local gct_cut = #string.gsub(g_c_t, "[^.,;/ %w-]", "")  -- 刪除中文編碼後，計算字數。
     -- context:confirm_current_selection()
     -- context:refresh_non_confirmed_composition()
 
     --- 補前綴 "';" 或 "';'"，導入未上屏編碼，避免跳回主方案
-    if nn == 0 then
+    if gct_cut == 0 then
       context:clear()
     elseif comp:back():has_tag("reverse2_lookup") then
-      context.input = "';" .. string.sub(c_input, -nn)
+      context.input = "';" .. string.sub(c_input, -gct_cut)
     elseif comp:back():has_tag("all_bpm") then
-      context.input = "';'" .. string.sub(c_input, -nn)
+      context.input = "';'" .. string.sub(c_input, -gct_cut)
     end
     return 1
 
@@ -102,40 +108,40 @@ local function processor(key, env)
     if comp:back():has_tag("reverse2_lookup") then
       --- 刪除已上屏之前頭字元。
       local cand_len = utf8.len(cand.text)
-      local nn = string.gsub(c_input, "^';", "")
+      local ci_cut = string.gsub(c_input, "^';", "")
       -- 上屏詞彙為單個注音
       if set_char_bpmf[cand.text] then
-        nn = string.gsub(nn, "^[.,;/ %w-]", "")
+        ci_cut = string.gsub(ci_cut, "^[.,;/ %w-]", "")
       -- 上屏詞彙為兩個注音
-      elseif (cand_len == 2) and set_char_bpmf[string.sub(cand.text, 1, 3)] and set_char_bpmf[string.sub(cand.text, 4, 6)] then
-        nn = string.gsub(nn, "^[.,;/ %w-][.,;/ %w-]", "")
+      elseif (cand_len == 2) and set_char_bpmf[utf8_sub(cand.text, 1, 1)] and set_char_bpmf[utf8_sub(cand.text, 2, 2)] then
+        ci_cut = string.gsub(ci_cut, "^[.,;/ %w-][.,;/ %w-]", "")
       -- 上屏詞彙為三個注音
-      elseif (cand_len == 3) and set_char_bpmf[string.sub(cand.text, 1, 3)] and set_char_bpmf[string.sub(cand.text, 4, 6)] and set_char_bpmf[string.sub(cand.text, 7, 9)] then
-        nn = string.gsub(nn, "^[.,;/ %w-][.,;/ %w-]", "")
+      elseif (cand_len == 3) and set_char_bpmf[utf8_sub(cand.text, 1, 1)] and set_char_bpmf[utf8_sub(cand.text, 2, 2)] and set_char_bpmf[utf8_sub(cand.text, 3, 3)] then
+        ci_cut = string.gsub(ci_cut, "^[.,;/ %w-][.,;/ %w-][.,;/ %w-]", "")
       -- 上屏詞彙沒有注音
       else
         for i = 1, cand_len do
-          nn = string.gsub(nn, "^[.,;/a-z125890-][.,;/a-z125890-]?[.,;/a-z125890-]?[ 3467]", "")
+          ci_cut = string.gsub(ci_cut, "^[.,;/a-z125890-][.,;/a-z125890-]?[.,;/a-z125890-]?[ 3467]", "")
         end
       end
       --- 補前綴 "';"，導入未上屏編碼，避免跳回主方案
-      if #nn == 0 then
+      if #ci_cut == 0 then
         context:clear()
       else
-        context.input = "';" .. nn
+        context.input = "';" .. ci_cut
       end
 
     elseif comp:back():has_tag("all_bpm") then
       local cand_len = utf8.len(cand.text)
-      local nn = string.gsub(c_input, "^';'", "")
+      local ci_cut = string.gsub(c_input, "^';'", "")
       for i = 1, cand_len do
-        nn = string.gsub(nn, "^[.,;/ %w-]", "")
+        ci_cut = string.gsub(ci_cut, "^[.,;/ %w-]", "")
       end
       --- 補前綴 "';'"，導入未上屏編碼，避免跳回主方案
-      if #nn == 0 then
+      if #ci_cut == 0 then
         context:clear()
       else
-        context.input = "';'" .. nn
+        context.input = "';'" .. ci_cut
       end
     end
 
