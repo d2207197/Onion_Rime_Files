@@ -16,14 +16,14 @@ local function processor(key, env)
   local engine = env.engine
   local context = engine.context
   local comp = context.composition
-  local c_input = context.input
+  local seg = comp:back()
+  local page_size = engine.schema.page_size
   local o_ascii_mode = context:get_option("ascii_mode")
   local a_s_wp = context:get_option("array30_space_wp")
   local a_r_abc = context:get_option("array30_return_abc")
-  local g_c_t = context:get_commit_text()
+  local c_input = context.input
   -- local g_s_t = context:get_script_text()
-  local seg = comp:back()
-  local page_size = engine.schema.page_size
+  local g_c_t = context:get_commit_text()
   local key_num = key:repr():match("KP_([0-9])")
 
   local set_char_bpmf = Set {"ㄅ", "ㄆ", "ㄇ", "ㄈ", "ㄉ", "ㄊ", "ㄋ", "ㄌ", "ㄍ", "ㄎ", "ㄏ", "ㄐ", "ㄑ", "ㄒ", "ㄓ", "ㄔ", "ㄕ", "ㄖ", "ㄗ", "ㄘ", "ㄙ", "ㄧ", "ㄨ", "ㄩ", "ㄚ", "ㄛ", "ㄜ", "ㄝ", "ㄞ", "ㄟ", "ㄠ", "ㄡ", "ㄢ", "ㄣ", "ㄤ", "ㄥ", "ㄦ", "ˉ", "ˊ", "ˇ", "ˋ", "˙", "ㄪ", "ㄫ", "ㄫ", "ㄬ", "ㄭ", "ㄮ", "ㄮ", "ㄯ", "ㄯ", "ㆠ", "ㆡ", "ㆢ", "ㆣ", "ㆤ", "ㆥ", "ㆦ", "ㆧ", "ㆨ", "ㆩ", "ㆪ", "ㆫ", "ㆬ", "ㆭ", "ㆭ", "ㆮ", "ㆯ", "ㆰ", "ㆰ", "ㆱ", "ㆱ", "ㆲ", "ㆲ", "ㆳ", "ㆴ", "ㆵ", "ㆶ", "ㆷ", "ㆸ", "ㆹ", "ㆺ"}
