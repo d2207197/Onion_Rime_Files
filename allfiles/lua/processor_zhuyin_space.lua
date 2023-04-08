@@ -1,3 +1,9 @@
+--- @@ zhuyin_space
+--[[
+注音反查 Return 和 space 和 小鍵盤數字鍵 上屏修正
+尚有bug待處理
+--]]
+
 
 -- local function status(ctx)
 --     local stat = metatable()
@@ -19,6 +25,11 @@ local function processor(key, env)
   local o_ascii_mode = context:get_option("ascii_mode")
   local g_c_t = context:get_commit_text()
   -- local g_s_t = context:get_script_text()
+  local seg = comp:back()
+  local page_size = engine.schema.page_size
+  local key_num = key:repr():match("KP_([0-9])")
+
+  local set_char_bpmf = Set {"ㄅ", "ㄆ", "ㄇ", "ㄈ", "ㄉ", "ㄊ", "ㄋ", "ㄌ", "ㄍ", "ㄎ", "ㄏ", "ㄐ", "ㄑ", "ㄒ", "ㄓ", "ㄔ", "ㄕ", "ㄖ", "ㄗ", "ㄘ", "ㄙ", "ㄧ", "ㄨ", "ㄩ", "ㄚ", "ㄛ", "ㄜ", "ㄝ", "ㄞ", "ㄟ", "ㄠ", "ㄡ", "ㄢ", "ㄣ", "ㄤ", "ㄥ", "ㄦ", "ˉ", "ˊ", "ˇ", "ˋ", "˙", "ㄪ", "ㄫ", "ㄫ", "ㄬ", "ㄭ", "ㄮ", "ㄮ", "ㄯ", "ㄯ", "ㆠ", "ㆡ", "ㆢ", "ㆣ", "ㆤ", "ㆥ", "ㆦ", "ㆧ", "ㆨ", "ㆩ", "ㆪ", "ㆫ", "ㆬ", "ㆭ", "ㆭ", "ㆮ", "ㆯ", "ㆰ", "ㆰ", "ㆱ", "ㆱ", "ㆲ", "ㆲ", "ㆳ", "ㆴ", "ㆵ", "ㆶ", "ㆷ", "ㆸ", "ㆹ", "ㆺ"}
 
   -- local s = status(context)
   --- 不要使用以下作為選擇項和未選擇項計算，太困難了，因 preedit 除注音字節，還包含不確定的分節空白。
@@ -40,11 +51,11 @@ local function processor(key, env)
   -- elseif not context:is_composing() then  --無法空碼清屏
     return 2
 
-  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" then
+  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_num then
     return 2
 
   --- 以下修正：附加方案鍵盤範圍大於主方案時，選字時出現的 bug。
-  elseif comp:back():has_tag("paging") then
+  elseif comp:back():has_tag("paging") and ( key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" ) then
 
     --- 先上屏 paging 時選擇的選項
     -- local segment = comp:back()
@@ -60,7 +71,7 @@ local function processor(key, env)
     -- context:refresh_non_confirmed_composition()
 
     --- 補前綴 "';" 或 "';'"，導入未上屏編碼，避免跳回主方案
-    if nn==0 then
+    if nn == 0 then
       context:clear()
     elseif comp:back():has_tag("reverse2_lookup") then
       context.input = "';" .. string.sub(c_input, -nn)
@@ -69,7 +80,69 @@ local function processor(key, env)
     end
     return 1
 
-  --- 如果末尾為聲調則跳掉，如空白鍵，則 Rime 上屏，非 lua 作用。
+
+  --- 以下修正：附加方案鍵盤範圍大於主方案時，小板數字鍵選擇出現之 bug。
+  elseif key_num then
+    --- 確定選項編號
+    local page_n = 9*(seg.selected_index // 9)    -- 先確定在第幾頁
+    local key_num2 = tonumber(key_num)
+    if key_num2 == 9 then    -- 方案預設沒有9選項，故跳掉。
+      return 1
+    elseif key_num2 > 0 then
+      key_num2 = key_num2 + page_n
+    elseif key_num2 == 0 then
+      key_num2 = key_num2 + page_n
+    end
+
+    --- 上屏選擇選項。
+    local cand = seg:get_candidate_at(key_num2)
+    engine:commit_text(cand.text)
+
+    --- 判別掛載方案，依不同方案分別處理。
+    if comp:back():has_tag("reverse2_lookup") then
+      --- 刪除已上屏之前頭字元。
+      local cand_len = utf8.len(cand.text)
+      local nn = string.gsub(c_input, "^';", "")
+      -- 上屏詞彙為單個注音
+      if set_char_bpmf[cand.text] then
+        nn = string.gsub(nn, "^[.,;/ %w-]", "")
+      -- 上屏詞彙為兩個注音
+      elseif (cand_len == 2) and set_char_bpmf[string.sub(cand.text, 1, 3)] and set_char_bpmf[string.sub(cand.text, 4, 6)] then
+        nn = string.gsub(nn, "^[.,;/ %w-][.,;/ %w-]", "")
+      -- 上屏詞彙為三個注音
+      elseif (cand_len == 3) and set_char_bpmf[string.sub(cand.text, 1, 3)] and set_char_bpmf[string.sub(cand.text, 4, 6)] and set_char_bpmf[string.sub(cand.text, 7, 9)] then
+        nn = string.gsub(nn, "^[.,;/ %w-][.,;/ %w-]", "")
+      -- 上屏詞彙沒有注音
+      else
+        for i = 1, cand_len do
+          nn = string.gsub(nn, "^[.,;/a-z125890-][.,;/a-z125890-]?[.,;/a-z125890-]?[ 3467]", "")
+        end
+      end
+      --- 補前綴 "';"，導入未上屏編碼，避免跳回主方案
+      if #nn == 0 then
+        context:clear()
+      else
+        context.input = "';" .. nn
+      end
+
+    elseif comp:back():has_tag("all_bpm") then
+      local cand_len = utf8.len(cand.text)
+      local nn = string.gsub(c_input, "^';'", "")
+      for i = 1, cand_len do
+        nn = string.gsub(nn, "^[.,;/ %w-]", "")
+      end
+      --- 補前綴 "';'"，導入未上屏編碼，避免跳回主方案
+      if #nn == 0 then
+        context:clear()
+      else
+        context.input = "';'" .. nn
+      end
+    end
+
+    return 1
+
+
+  --- 如果末尾為聲調則跳掉，按空白鍵，則 Rime 上屏，非 lua 作用。
   elseif string.match(c_input, "[ 3467]$") then
     return 2
 

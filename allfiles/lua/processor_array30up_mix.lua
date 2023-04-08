@@ -2,7 +2,8 @@
 --[[
 （onion-array30）
 行列30三四碼字按空格直接上屏
-行列30注音反查 Return 和 space 上屏修正
+行列30注音反查 Return 和 space 和 小鍵盤數字鍵 上屏修正
+尚有bug待處理
 --]]
 
 -- local function array30up_mix(key, env)
@@ -16,6 +17,11 @@ local function processor(key, env)
   local a_r_abc = context:get_option("array30_return_abc")
   local g_c_t = context:get_commit_text()
   -- local g_s_t = context:get_script_text()
+  local seg = comp:back()
+  local page_size = engine.schema.page_size
+  local key_num = key:repr():match("KP_([0-9])")
+
+  local set_char_bpmf = Set {"ㄅ", "ㄆ", "ㄇ", "ㄈ", "ㄉ", "ㄊ", "ㄋ", "ㄌ", "ㄍ", "ㄎ", "ㄏ", "ㄐ", "ㄑ", "ㄒ", "ㄓ", "ㄔ", "ㄕ", "ㄖ", "ㄗ", "ㄘ", "ㄙ", "ㄧ", "ㄨ", "ㄩ", "ㄚ", "ㄛ", "ㄜ", "ㄝ", "ㄞ", "ㄟ", "ㄠ", "ㄡ", "ㄢ", "ㄣ", "ㄤ", "ㄥ", "ㄦ", "ˉ", "ˊ", "ˇ", "ˋ", "˙", "ㄪ", "ㄫ", "ㄫ", "ㄬ", "ㄭ", "ㄮ", "ㄮ", "ㄯ", "ㄯ", "ㆠ", "ㆡ", "ㆢ", "ㆣ", "ㆤ", "ㆥ", "ㆦ", "ㆧ", "ㆨ", "ㆩ", "ㆪ", "ㆫ", "ㆬ", "ㆭ", "ㆭ", "ㆮ", "ㆯ", "ㆰ", "ㆰ", "ㆱ", "ㆱ", "ㆲ", "ㆲ", "ㆳ", "ㆴ", "ㆵ", "ㆶ", "ㆷ", "ㆸ", "ㆹ", "ㆺ"}
 
   local check_i1 = string.match(c_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")
   local check_i2 = string.match(c_input, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")
@@ -34,10 +40,12 @@ local function processor(key, env)
   -- local check_w = string.match(c_input, "^w[0-9]$")
   -- local check_abc = string.match(c_input, "^[a-z,./;]+$")
 
+
+-----------------------------------------------------------------------------
   if o_ascii_mode then
     return 2
 
-  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" then
+  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_num then
     return 2
 
   elseif comp:empty() then
@@ -97,7 +105,7 @@ local function processor(key, env)
 
 
   --- 以下修正：附加方案鍵盤範圍大於主方案時，選字時出現的 bug。
-  elseif comp:back():has_tag("paging") then
+  elseif comp:back():has_tag("paging") and ( key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" ) then
     --- 先上屏 paging 時選擇的選項
     local cand = context:get_selected_candidate()
     engine:commit_text(cand.text)
@@ -105,11 +113,67 @@ local function processor(key, env)
     --- 計算末尾殘留的非中文字元數（未被選擇的 cand.input 字元數）
     local nn = #string.gsub(g_c_t, "[^.,;/ %w-]", "")
     --- 補前綴 "="，導入未上屏編碼，避免跳回主方案
-    if nn==0 then
+    if nn == 0 then
       context:clear()
     else
       context.input = "=" .. string.sub(c_input, -nn)
     end
+    return 1
+
+
+  --- 以下修正：附加方案鍵盤範圍大於主方案時，小板數字鍵選擇出現之 bug。
+  elseif key_num then
+    --- 確定選項編號
+    local page_n = 10*(seg.selected_index // 10)    -- 先確定在第幾頁
+    local key_num2 = tonumber(key_num)
+    if key_num2 > 0 then
+      key_num2 = key_num2 - 1 + page_n
+    elseif key_num2 == 0 then
+      key_num2 = key_num2 - 1 + page_n + 10
+    elseif key_num2 < 0 then
+      key_num2 = page_size - 1
+    end
+
+    --- 上屏選擇選項。
+    -- local cand = context:get_selected_candidate()  -- 只是當前位置
+    local cand = seg:get_candidate_at(key_num2)
+    engine:commit_text(cand.text)
+
+    -- context:select(key_num)
+    -- context:confirm_current_selection()
+    -- local s_index = seg.selected_index
+    -- engine:commit_text(s_index)
+    -- engine:commit_text(g_s_t)
+    -- engine:commit_text(g_c_t)
+    -- engine:commit_text(key_num2)
+
+    --- 刪除已上屏之前頭字元。
+    -- local cand_len = #cand.text // 3
+    local cand_len = utf8.len(cand.text)
+    local nn = string.gsub(c_input, "^=", "")
+    -- 上屏詞彙為單個注音
+    if set_char_bpmf[cand.text] then
+      nn = string.gsub(nn, "^[.,;/ %w-]", "")
+    -- 上屏詞彙為兩個注音
+    elseif (cand_len == 2) and set_char_bpmf[string.sub(cand.text, 1, 3)] and set_char_bpmf[string.sub(cand.text, 4, 6)] then
+      nn = string.gsub(nn, "^[.,;/ %w-][.,;/ %w-]", "")
+    -- 上屏詞彙為三個注音
+    elseif (cand_len == 3) and set_char_bpmf[string.sub(cand.text, 1, 3)] and set_char_bpmf[string.sub(cand.text, 4, 6)] and set_char_bpmf[string.sub(cand.text, 7, 9)] then
+      nn = string.gsub(nn, "^[.,;/ %w-][.,;/ %w-]", "")
+    -- 上屏詞彙沒有注音
+    else
+      for i = 1, cand_len do
+        nn = string.gsub(nn, "^[.,;/a-z125890-][.,;/a-z125890-]?[.,;/a-z125890-]?[ 3467]", "")
+      end
+    end
+
+    --- 補前綴 "="，導入未上屏編碼，避免跳回主方案
+    if #nn == 0 then
+      context:clear()
+    else
+      context.input = "=" .. nn
+    end
+
     return 1
 
 
