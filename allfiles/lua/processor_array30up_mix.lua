@@ -58,9 +58,9 @@ local function processor(key, env)
 
 -----------------------------------------------------------------------------
   --- return 上屏候選字或 abc 開關
-  elseif (a_r_abc) and (comp:back():has_tag("abc")) and (key:repr() == "Return" or key:repr() == "KP_Enter") then
+  elseif (a_r_abc) and (seg:has_tag("abc")) and (key:repr() == "Return" or key:repr() == "KP_Enter") then
   -- elseif a_r_abc and check_abc and key:repr() == "Return" or key:repr() == "KP_Enter" then
-    if not comp:back():has_tag("paging") then
+    if not seg:has_tag("paging") then
       engine:commit_text(c_input)
       context:clear()
       return 1
@@ -86,7 +86,7 @@ local function processor(key, env)
   --- 使 w[0-9] 輸入符號時：空白鍵同某些行列 30 一樣為翻頁。
   --- KeyEvent 函數在舊版 librime-lua 中不支持。
   --- 增設開關。
-  elseif a_s_wp and comp:back():has_tag("wsymbols") then
+  elseif a_s_wp and seg:has_tag("wsymbols") then
   -- elseif a_s_wp and check_w then
     if key:repr() == "space" then
       engine:process_key(KeyEvent("Page_Down"))
@@ -105,12 +105,12 @@ local function processor(key, env)
   -- elseif comp:empty() then
   --   return 2
 
-  elseif not comp:back():has_tag("reverse2_lookup") then
+  elseif not seg:has_tag("reverse2_lookup") then
     return 2
 
 
   --- 以下修正：附加方案鍵盤範圍大於主方案時，選字時出現的 bug。
-  elseif comp:back():has_tag("paging") and ( key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" ) then
+  elseif seg:has_tag("paging") and ( key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" ) then
     --- 先上屏 paging 時選擇的選項
     local cand = context:get_selected_candidate()
     engine:commit_text(cand.text)

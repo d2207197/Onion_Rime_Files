@@ -50,7 +50,7 @@ local function processor(key, env)
   elseif comp:empty() then
     return 2
 
-  elseif not comp:back():has_tag("reverse2_lookup") and not comp:back():has_tag("all_bpm") then
+  elseif not seg:has_tag("reverse2_lookup") and not seg:has_tag("all_bpm") then
     return 2
 
   elseif not context:has_menu() then
@@ -61,11 +61,10 @@ local function processor(key, env)
     return 2
 
   --- 以下修正：附加方案鍵盤範圍大於主方案時，選字時出現的 bug。
-  elseif comp:back():has_tag("paging") and ( key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" ) then
+  elseif seg:has_tag("paging") and ( key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" ) then
 
     --- 先上屏 paging 時選擇的選項
-    -- local segment = comp:back()
-    -- local selected_candidate_index = segment.selected_index
+    -- local selected_candidate_index = seg.selected_index
     -- context:select(selected_candidate_index)
     local cand = context:get_selected_candidate()
     engine:commit_text(cand.text)
@@ -79,9 +78,9 @@ local function processor(key, env)
     --- 補前綴 "';" 或 "';'"，導入未上屏編碼，避免跳回主方案
     if n_gct_cut == 0 then
       context:clear()
-    elseif comp:back():has_tag("reverse2_lookup") then
+    elseif seg:has_tag("reverse2_lookup") then
       context.input = "';" .. string.sub(c_input, -n_gct_cut)
-    elseif comp:back():has_tag("all_bpm") then
+    elseif seg:has_tag("all_bpm") then
       context.input = "';'" .. string.sub(c_input, -n_gct_cut)
     end
     return 1
@@ -105,7 +104,7 @@ local function processor(key, env)
     engine:commit_text(cand.text)
 
     --- 判別掛載方案，依不同方案分別處理。
-    if comp:back():has_tag("reverse2_lookup") then
+    if seg:has_tag("reverse2_lookup") then
       --- 刪除已上屏之前頭字元。
       local cand_len = utf8.len(cand.text)
       local ci_cut = string.gsub(c_input, "^';", "")
@@ -131,7 +130,7 @@ local function processor(key, env)
         context.input = "';" .. ci_cut
       end
 
-    elseif comp:back():has_tag("all_bpm") then
+    elseif seg:has_tag("all_bpm") then
       local cand_len = utf8.len(cand.text)
       local ci_cut = string.gsub(c_input, "^';'", "")
       for i = 1, cand_len do
