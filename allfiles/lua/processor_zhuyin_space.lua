@@ -44,6 +44,9 @@ local function processor(key, env)
   -- local es = _end - start
   -- local caret_pos = context.caret_pos
 
+
+-----------------------------------------------------------------------------
+
   if o_ascii_mode then
     return 2
 
@@ -59,6 +62,11 @@ local function processor(key, env)
 
   elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_num then
     return 2
+
+---------------------------------------------------------------------------
+--[[
+以下針對反查注音 Bug 作修正
+--]]
 
   --- 以下修正：附加方案鍵盤範圍大於主方案時，選字時出現的 bug。
   elseif seg:has_tag("paging") and ( key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" ) then
@@ -146,6 +154,13 @@ local function processor(key, env)
 
     return 1
 
+---------------------------------------------------------------------------
+
+  --- 某些方案輸入 Return 出英文，該條限定注音 Return 一律直上中文。
+  elseif key:repr() == "Return" or key:repr() == "KP_Enter" then
+    engine:commit_text(g_c_t)
+    context:clear()
+    return 1
 
   --- 如果末尾為聲調則跳掉，按空白鍵，則 Rime 上屏，非 lua 作用。
   elseif string.match(c_input, "[ 3467]$") then

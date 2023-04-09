@@ -47,6 +47,7 @@ local function processor(key, env)
 
 
 -----------------------------------------------------------------------------
+
   if o_ascii_mode then
     return 2
 
@@ -57,6 +58,7 @@ local function processor(key, env)
     return 2
 
 -----------------------------------------------------------------------------
+
   --- return 上屏候選字或 abc 開關
   elseif (a_r_abc) and (seg:has_tag("abc")) and (key:repr() == "Return" or key:repr() == "KP_Enter") then
   -- elseif a_r_abc and check_abc and key:repr() == "Return" or key:repr() == "KP_Enter" then
@@ -65,6 +67,7 @@ local function processor(key, env)
       context:clear()
       return 1
     end
+
 -----------------------------------------------------------------------------
 
   elseif not context:has_menu() then
@@ -181,6 +184,7 @@ local function processor(key, env)
 
     return 1
 
+---------------------------------------------------------------------------
 
   --- 一般輸入 Return 出英文，該條限定注音 Return 一律直上中文。
   elseif key:repr() == "Return" or key:repr() == "KP_Enter" then
