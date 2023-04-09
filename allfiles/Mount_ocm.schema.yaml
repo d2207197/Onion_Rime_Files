@@ -270,6 +270,16 @@ key_binder:
     - {accept: KP_6, send: Control+7, when: has_menu}
     - {accept: KP_7, send: Control+8, when: has_menu}
     - {accept: KP_8, send: Control+9, when: has_menu}
+############# control 選字修正 ###########
+    - {accept: Control+0, send: Control+1, when: has_menu}
+    - {accept: Control+1, send: Control+2, when: has_menu}
+    - {accept: Control+2, send: Control+3, when: has_menu}
+    - {accept: Control+3, send: Control+4, when: has_menu}
+    - {accept: Control+4, send: Control+5, when: has_menu}
+    - {accept: Control+5, send: Control+6, when: has_menu}
+    - {accept: Control+6, send: Control+7, when: has_menu}
+    - {accept: Control+7, send: Control+8, when: has_menu}
+    - {accept: Control+8, send: Control+9, when: has_menu}
 #######################################
     - {accept: Control+apostrophe, toggle: extended_charset, when: always } #增廣常用字符過濾，新增開關
     - {accept: Control+minus, toggle: simplify_comment, when: always } #提示碼開關
