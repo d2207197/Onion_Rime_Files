@@ -132,14 +132,13 @@ local function processor(key, env)
   --- 以下修正：附加方案鍵盤範圍大於主方案時，小板數字鍵選擇出現之 bug。
   elseif key_num then
     --- 確定選項編號
-    local page_n = 10*(seg.selected_index // 10)    -- 先確定在第幾頁
+    -- 以下針對選字編碼為：1234567890
+    local page_n = 10 * (seg.selected_index // 10)    -- 先確定在第幾頁
     local key_num2 = tonumber(key_num)
     if key_num2 > 0 then
       key_num2 = key_num2 - 1 + page_n
     elseif key_num2 == 0 then
       key_num2 = key_num2 - 1 + page_n + 10
-    -- elseif key_num2 < 0 then
-    --   key_num2 = page_size - 1
     end
 
     --- 上屏選擇選項。
@@ -168,7 +167,7 @@ local function processor(key, env)
     -- 上屏詞彙為三個注音
     elseif (cand_len == 3) and set_char_bpmf[utf8_sub(cand.text, 1, 1)] and set_char_bpmf[utf8_sub(cand.text, 2, 2)] and set_char_bpmf[utf8_sub(cand.text, 3, 3)] then
       ci_cut = string.gsub(ci_cut, "^[.,;/ %w-][.,;/ %w-][.,;/ %w-]", "")
-    -- 上屏詞彙沒有注音
+    -- 上屏詞彙為全中文不含注音，但有狀況會缺漏出現 bug
     else
       for i = 1, cand_len do
         ci_cut = string.gsub(ci_cut, "^[.,;/a-z125890-][.,;/a-z125890-]?[.,;/a-z125890-]?[ 3467]", "")
