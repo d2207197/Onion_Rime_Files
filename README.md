@@ -47,7 +47,7 @@
   
   > 承上，有二個非注音方案確定使用最新 librime-lua 函數去達成功能，其他方案也不追求相容舊版，只確保這邊 Windows 和 Mac 兩者皆可正常運行出功能。
   
-  > 承上，使用 Windows 小狼毫官方最新編譯版本，方案內有 rime.lua 該檔，強烈建議更換核心！早期 librime-lua 版本使用遍尋候選項會產生記憶體洩漏，librime 核心更新版已解決。[fxliang](https://github.com/fxliang/weasel) 版小狼毫 librime-lua 也已升級解決。
+  > 承上，使用 Windows 小狼毫官方最新編譯版本，方案內有 rime.lua 該檔，強烈建議更換核心！早期 librime-lua 版本使用遍尋候選項會產生記憶體洩漏，librime-lua 更新版已解決。[fxliang](https://github.com/fxliang/weasel) 版小狼毫也已升級 librime-lua 解決。
   
   > 總結：20230130 目前方案編輯使用的版本：librime 1.8.3、librime-lua 200。由於 Rime 官方、librime-lua 官方、本方案皆不斷更新，需注意版本，才好相容。
 
