@@ -17,7 +17,7 @@ local function processor(key, env)
   local context = engine.context
   local comp = context.composition
   local seg = comp:back()
-  local page_size = engine.schema.page_size
+  -- local page_size = engine.schema.page_size
   local o_ascii_mode = context:get_option("ascii_mode")
   local a_s_wp = context:get_option("array30_space_wp")
   local a_r_abc = context:get_option("array30_return_abc")
@@ -135,8 +135,8 @@ local function processor(key, env)
       key_num2 = key_num2 - 1 + page_n
     elseif key_num2 == 0 then
       key_num2 = key_num2 - 1 + page_n + 10
-    elseif key_num2 < 0 then
-      key_num2 = page_size - 1
+    -- elseif key_num2 < 0 then
+    --   key_num2 = page_size - 1
     end
 
     --- 上屏選擇選項。
@@ -152,7 +152,7 @@ local function processor(key, env)
     -- engine:commit_text(g_c_t)
     -- engine:commit_text(key_num2)
 
-    --- 刪除已上屏之前頭字元。
+    --- 刪除已上屏字詞的前頭字元
     -- local cand_len = #cand.text // 3
     local cand_len = utf8.len(cand.text)
     local ci_cut = string.gsub(c_input, "^=", "")

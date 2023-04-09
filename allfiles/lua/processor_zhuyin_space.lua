@@ -28,7 +28,7 @@ local function processor(key, env)
   local context = engine.context
   local comp = context.composition
   local seg = comp:back()
-  local page_size = engine.schema.page_size
+  -- local page_size = engine.schema.page_size
   local o_ascii_mode = context:get_option("ascii_mode")
   local c_input = context.input
   -- local g_s_t = context:get_script_text()
@@ -103,9 +103,9 @@ local function processor(key, env)
     local cand = seg:get_candidate_at(key_num2)
     engine:commit_text(cand.text)
 
-    --- 判別掛載方案，依不同方案分別處理。
+    --- 判別掛載方案，依不同方案分別處理：
+    --- 刪除已上屏字詞的前頭字元。
     if seg:has_tag("reverse2_lookup") then
-      --- 刪除已上屏之前頭字元。
       local cand_len = utf8.len(cand.text)
       local ci_cut = string.gsub(c_input, "^';", "")
       -- 上屏詞彙為單個注音
