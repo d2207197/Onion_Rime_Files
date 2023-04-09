@@ -1,0 +1,32 @@
+# Win_官方小狼毫主程式
+
+### 原始程式出處：
+
+- https://github.com/rime/weasel/releases
+
+### 安裝後建議修改：
+    
+- 置換新版 librime 引擎：
+    - 官網 https://rime.im/ 下載 0.14.3 版，其中 librime 在使用 lua 某些功能會產生記憶體泄漏問題，強烈建議更換。
+    - rime-08dd95f-Windows.7z ⇨ dist ⇨ lib ⇨ 提取 rime.dll ⇨ 取代 C:\Program Files (x86)\Rime\weasel-0.14.3\rime.dll ⇨《重開機》！
+    - 如 Windows 出現執行中無法取代等訊息，於工作列點右鍵 ⇨《工作管理員》⇨點選《小狼毫算法服務》並結束工作，即可取代！
+
+### Version Info：
+
+置換 librime 核心後
+
+- Weasel 0.14.3
+
+- librime 1.8.5
+
+- librime-lua 200
+
+### plugins：
+
+- librime-lua
+
+- librime-octagram
+
+- librime-charcode
+
+
