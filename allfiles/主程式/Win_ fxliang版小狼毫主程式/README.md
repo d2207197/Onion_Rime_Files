@@ -6,7 +6,7 @@
 
 ### Version Info：
 
-- [Github Actions：Commit CI #154](https://github.com/fxliang/weasel/actions/runs/4634628840)
+- Github Actions：[Commit CI #154](https://github.com/fxliang/weasel/actions/runs/4634628840)
 
 - Weasel 0.14.3_dev_0.8
 
