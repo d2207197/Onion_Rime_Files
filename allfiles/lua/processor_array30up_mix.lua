@@ -51,15 +51,21 @@ local function processor(key, env)
   if o_ascii_mode then
     return 2
 
-  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_num then
+  --- prevent segmentation fault (core dumped) （避免進入死循環，有用到 seg=comp:back() 建議使用去排除？）
+  elseif comp:empty() then
     return 2
 
-  elseif comp:empty() then
+  --- pass release alt super (not pass ctrl)
+  elseif key:release() or key:alt() or key:super() then
+    return 2
+
+  --- pass not space Return KP_Enter key_num
+  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_num then
     return 2
 
 -----------------------------------------------------------------------------
 
-  --- return 上屏候選字或 abc 開關
+  --- return 上屏候選字或 abc 開關（此處 abc 非英文，而是中文主 segmentor）
   elseif (a_r_abc) and (seg:has_tag("abc")) and (key:repr() == "Return" or key:repr() == "KP_Enter") then
   -- elseif a_r_abc and check_abc and key:repr() == "Return" or key:repr() == "KP_Enter" then
     if not seg:has_tag("paging") then

@@ -50,6 +50,7 @@ local function processor(key, env)
   if o_ascii_mode then
     return 2
 
+  --- prevent segmentation fault (core dumped) （避免進入死循環，有用到 seg=comp:back() 建議使用去排除？）
   elseif comp:empty() then
     return 2
 
@@ -60,6 +61,11 @@ local function processor(key, env)
   -- elseif not context:is_composing() then  --無法空碼清屏
     return 2
 
+  --- pass release alt super (not pass ctrl)
+  elseif key:release() or key:alt() or key:super() then
+    return 2
+
+  --- pass not space Return KP_Enter key_num
   elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_num then
     return 2
 
