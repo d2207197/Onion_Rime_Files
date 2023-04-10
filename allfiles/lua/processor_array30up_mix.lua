@@ -68,11 +68,18 @@ local function processor(key, env)
   --- return 上屏候選字或 abc 開關（此處 abc 非英文，而是中文主 segmentor）
   elseif (a_r_abc) and (seg:has_tag("abc")) and (key:repr() == "Return" or key:repr() == "KP_Enter") then
   -- elseif a_r_abc and check_abc and key:repr() == "Return" or key:repr() == "KP_Enter" then
-    if not seg:has_tag("paging") then
-      engine:commit_text(c_input)
-      context:clear()
-      return 1
-    end
+
+    --- 選字時 Return 不上屏英文，上屏選項
+    -- if not seg:has_tag("paging") then
+    --   engine:commit_text(c_input)
+    --   context:clear()
+    --   return 1
+    -- end
+
+    --- 全狀態 Return 都上屏英文
+    engine:commit_text(c_input)
+    context:clear()
+    return 1
 
 -----------------------------------------------------------------------------
 
