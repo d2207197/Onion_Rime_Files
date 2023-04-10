@@ -65,18 +65,19 @@ local function processor(key, env)
 
 -----------------------------------------------------------------------------
 
-  --- return 上屏候選字或 abc 開關（此處 abc 非英文，而是中文主 segmentor）
+  --- return 上屏候選字或英文，設開關（以下 abc 非英文，而是中文主 segmentor）
+
   elseif (a_r_abc) and (seg:has_tag("abc")) and (key:repr() == "Return" or key:repr() == "KP_Enter") then
   -- elseif a_r_abc and check_abc and key:repr() == "Return" or key:repr() == "KP_Enter" then
 
-    --- 選字時 Return 不上屏英文，上屏選項
+    -- --- 選字時 Return 上屏選項
     -- if not seg:has_tag("paging") then
     --   engine:commit_text(c_input)
     --   context:clear()
     --   return 1
     -- end
 
-    --- 全狀態 Return 都上屏英文
+    --- 全狀態（開關符號以 space 翻頁時除外） Return 都上屏英文
     engine:commit_text(c_input)
     context:clear()
     return 1
@@ -107,12 +108,20 @@ local function processor(key, env)
     if key:repr() == "space" then
       engine:process_key(KeyEvent("Page_Down"))
       return 1 -- kAccepted
+    --- 修正 w[0-9] 空白鍵 設翻頁時，無上屏鍵問題。
     --- 搭配前面「空白鍵同某些行列 30 一樣為翻頁」，並且用 custom 檔設「return 上屏候選字」，校正 Return 能上屏候選項！
     elseif key:repr() == "Return" or key:repr() == "KP_Enter" then
       engine:commit_text(g_c_t)
       context:clear()
       return 1 -- kAccepted
     end
+
+  --- 修正 Return 都上屏英文時， w[0-9] 空白鍵為上屏鍵，Return 還是上屏候選項問題。
+  elseif (a_r_abc) and not a_s_wp and seg:has_tag("wsymbols") and (key:repr() == "Return" or key:repr() == "KP_Enter") then
+    engine:commit_text(c_input)
+    context:clear()
+    return 1
+
 ---------------------------------------------------------------------------
 --[[
 以下針對反查注音 Bug 作修正
