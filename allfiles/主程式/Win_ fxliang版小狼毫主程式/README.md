@@ -1,6 +1,6 @@
 # Win_fxliang版小狼毫主程式
 
-### 原始程式出處：
+### Source File：
 
 - https://github.com/fxliang/weasel/actions
 
