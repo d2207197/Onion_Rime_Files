@@ -78,7 +78,7 @@ patch:
 # 只限直排專用：左右鍵翻頁（ Testing！ ）
     # - { accept: Left, send: Page_Up, when: paging } #直式選單用 #has_menu
     # - { accept: Right, send: Page_Down, when: paging } #直式選單用 #has_menu
-    # - { accept: KP_Enter, send: Return, when: has_menu } #使小鍵盤Enter可選擇
+    # - { accept: KP_Enter, send: Return, when: always } #使小鍵盤Enter可選擇
 
 #  ascii_composer:
 #    good_old_caps_lock: false

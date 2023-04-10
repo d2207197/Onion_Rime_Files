@@ -3,7 +3,7 @@
 # 『洋蔥』製作
 
 key_binder:
-### 避 RIME 原設定鍵位衝突 ###
+######################## 避鍵位和 RIME 原設定鍵位衝突 ########################
     - {accept: comma, send: comma, when: has_menu}
     - {accept: comma, send: comma, when: paging}
     - {accept: period, send: period, when: has_menu}
@@ -15,7 +15,7 @@ key_binder:
 #    - {accept: equal, send: equal, when: always}
 ########################## 方向鍵：切分移位 和 翻頁 ##########################
 ### 翻頁時，回復到 composing 狀態 ###
-#關#    - {accept: Shift+space, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
+    # - {accept: Shift+space, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
     - {accept: Tab, send: Shift+Left, when: paging} #於選單列選字時，回復到輸入列（避免有時回復不了，故增加）。
 ### 切分移位 ###
     # - {accept: Up, send: KP_Left, when: composing} #左移一個注音
@@ -26,40 +26,42 @@ key_binder:
     # - {accept: Right, send: Shift+Right, when: composing} #右移一整個字
     # - {accept: Shift+Right, send: Right, when: composing} #右移一個注音
     # - {accept: Shift+Left, send: KP_Left, when: composing} #左移一個注音
-#關#    - {accept: Shift+space, send: Shift+Right, when: composing} #首節
+    # - {accept: Shift+space, send: Shift+Right, when: composing} #首節
     # - {accept: Shift+space, send: KP_Left, when: composing} #左移一個注音
-    # - {accept: Left, send: KP_Left, when: composing} #左移一個注音
 ##
     # - {accept: Shift+Tab, send: Right, when: composing} #右移一個注音
     # - {accept: Tab, send: KP_Left, when: composing} #左移一個注音
 ### 選字翻頁 ###
-## 直式選單（stacked-horizontal） ##
-#不符合#    - {accept: Right, send: Page_Down, when: has_menu}
-    - {accept: Left, send: Page_Up, when: paging} #has_menu
-    - {accept: Right, send: Page_Down, when: paging} #has_menu
-## 橫式選單（linear-horizontal） ##
+## 直式選單（stacked-horizontal）
+    - {accept: Left, send: Page_Up, when: paging} #不符合# has_menu
+    - {accept: Right, send: Page_Down, when: paging} #不符合# has_menu
+## 橫式選單（linear-horizontal）
     # - {accept: Up, send: Page_Up, when: paging}
     # - {accept: Down, send: Page_Down, when: paging}
     # - {accept: Left, send: Left, when: has_menu} #send: Shift+Up
     # - {accept: Right, send: Right, when: has_menu} #send: Shift+Down #send: Right
-##########################################################################
-#其他快捷鍵翻頁
+## 其他快捷鍵翻頁
     - {accept: Shift+Up, send: Page_Up, when: paging} #選字時「Shift」+「上」翻頁。
     - {accept: Shift+Down, send: Page_Down, when: has_menu} #選字時「Shift」+「下」翻頁。
-#關#    - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
-#關#    - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
+    # - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
+    # - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
     - {accept: Shift+C, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
     - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
+########################### Return、空白鍵、刪除鍵 ###########################
+### Return 鍵 ###
+    # - {accept: Return, send: space, when: has_menu} #return,enter直出
+    # - {accept: KP_Enter, send: space, when: has_menu} #KP_Enter直出
 ### 空白鍵 ###
     - {accept: space, send: Escape, when: composing} #空碼清屏用
     - {accept: space, send: space, when: has_menu} #補上一條產生之bug
 ### 刪除鍵 ###
-#    - {accept: BackSpace, send: Control+BackSpace, when: has_menu} #〔關〕刪除前一個拼音字符〔開〕：刪除整組拼音字符（一個字）
-#    - {accept: Shift+BackSpace, send: BackSpace, when: has_menu}
-#    - {accept: backslash, send: BackSpace, when: has_menu} #「\」鍵位刪除一個拼音字符。
-#關#    - {accept: backslash, send: Shift+BackSpace, when: has_menu} #「\」鍵位刪除整組拼音字符（一個字）。
+    # - {accept: BackSpace, send: Control+BackSpace, when: has_menu} #〔關〕刪除前一個拼音字符〔開〕：刪除整組拼音字符（一個字）
+    # - {accept: Shift+BackSpace, send: BackSpace, when: has_menu}
+    # - {accept: backslash, send: BackSpace, when: has_menu} #「\」鍵位刪除一個拼音字符。
+    # - {accept: backslash, send: Shift+BackSpace, when: has_menu} #「\」鍵位刪除整組拼音字符（一個字）。
     - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
-#關#    - {accept: backslash, send: bar, when: has_menu} #「\」鍵位切分。
+    # - {accept: backslash, send: bar, when: has_menu} #「\」鍵位切分。
+################################# 選字修正 #################################
 ### 小鍵盤選字修正 ###
     - {accept: KP_0, send: Control+1, when: has_menu}
     - {accept: KP_1, send: Control+2, when: has_menu}
@@ -80,8 +82,9 @@ key_binder:
     - {accept: Control+6, send: Control+7, when: has_menu}
     - {accept: Control+7, send: Control+8, when: has_menu}
     - {accept: Control+8, send: Control+9, when: has_menu}
-### 功能快捷鍵 ###
+################################ 功能快捷鍵 ################################
     - {accept: Control+apostrophe, toggle: character_range_bhjm, when: always}
+    # - {accept: Control+minus, toggle: extended_charset, when: always } #特例：增廣字符快捷鍵
     - {accept: Control+minus, toggle: simplify_comment, when: always } #「蝦米碼」提示碼開關
     - {accept: Control+equal, toggle: back_mark, when: always } #「國際音標和符號」提示碼開關
     - {accept: Control+bracketright, toggle: en_sort, when: always} #「easy」選單排序是否照英漢字典順序
@@ -90,15 +93,51 @@ key_binder:
     - {accept: Control+Shift+8, toggle: simplify_comment, when: always}
     - {accept: Control+Shift+9, toggle: back_mark, when: always}
     - {accept: Control+Shift+0, toggle: en_sort, when: always} #「排序Easy如同英漢字典」開關
-#    - {accept: Return, send: space, when: has_menu} #return,enter直出
 
 
 editor:
     Return: confirm #使用 express_editor 時開啟 #commit_composition
     KP_Enter: confirm #使用 express_editor 時開啟 #commit_composition
     Shift+Return: commit_raw_input # 上屏原始輸入
-#    Control+Return: commit_script_text # 上屏變換後輸入
-#    Shift+Return: commit_script_text # 上屏變換後輸入
+    # Control+Return: commit_script_text # 上屏變換後輸入
+    # Shift+Return: commit_script_text # 上屏變換後輸入
+
+
+# selector:
+#   bindings:  # vertical, stacked
+#     # Control+n: next_candidate
+#     # Control+p: previous_candidate
+#     Control+Up: previous_candidate
+#     Control+Down: next_candidate
+#     Control+Right: next_page
+#     Control+Left: previous_page
+#     # 以下 Right 和 Left 這樣會有問題，無法轉回。
+#     # Right: next_page
+#     # Left: previous_page
+#   linear:
+#     bindings:
+#       # Control+n: next_page
+#       # Control+p: previous_page
+#       Control+Up: previous_page
+#       Control+Down: next_page
+#       Control+Right: next_candidate
+#       Control+Left: previous_candidate
+#   vertical:
+#     bindings:
+#       # Control+b: next_candidate
+#       # Control+f: previous_candidate
+#       Control+Up: previous_page
+#       Control+Down: next_page
+#       Control+Right: previous_candidate
+#       Control+Left: next_candidate
+#     linear:
+#       bindings:
+#         # Control+b: next_page
+#         # Control+f: previous_page
+#         Control+Up: previous_candidate
+#         Control+Down: next_candidate
+#         Control+Right: previous_page
+#         Control+Left: next_page
 
 
 emoji_series:

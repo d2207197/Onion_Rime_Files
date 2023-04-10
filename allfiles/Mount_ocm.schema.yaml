@@ -247,17 +247,19 @@ key_binder:
 #######################################
     - {accept: Left, send: Page_Up, when: paging}
     - {accept: Right, send: Page_Down, when: paging}
-#    - {accept: Up, send: Page_Up, when: paging} #橫式選單用
-#    - {accept: Down, send: Page_Down, when: paging} #橫式選單用
-#    - {accept: Left, send: Left, when: has_menu} #橫式選單用
-#    - {accept: Right, send: Right, when: has_menu} #橫式選單用
+    # - {accept: Up, send: Page_Up, when: paging} #橫式選單用
+    # - {accept: Down, send: Page_Down, when: paging} #橫式選單用
+    # - {accept: Left, send: Left, when: has_menu} #橫式選單用
+    # - {accept: Right, send: Right, when: has_menu} #橫式選單用
     - {accept: Shift+Up, send: Page_Up, when: has_menu}
     - {accept: Shift+Down, send: Page_Down, when: has_menu}
     - {accept: Shift+Tab, send: Page_Up, when: has_menu}
     - {accept: Shift+space, send: Page_Down, when: has_menu}
     - {accept: Tab, send: Page_Down, when: has_menu}
 #######################################
-    #    - {accept: Return, send: space, when: has_menu} #return直出
+    # - {accept: Return, send: space, when: has_menu} #return直出
+    # - {accept: KP_Enter, send: space, when: has_menu} #KP_Enter直出
+    - {accept: KP_Enter, send: Return, when: always}
     - {accept: space, send: Escape, when: composing} #空碼清屏用
     - {accept: space, send: space, when: has_menu} #補上一條產生之bug
 ############## 小鍵盤選字修正 ###########
