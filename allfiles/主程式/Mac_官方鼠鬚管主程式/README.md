@@ -1,6 +1,6 @@
 # Mac_官方鼠鬚管主程式
 
-### 原始程式出處：
+### Source File：
 
 - https://github.com/rime/squirrel/releases
 
