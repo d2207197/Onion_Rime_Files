@@ -117,7 +117,7 @@ local function processor(key, env)
     end
 
   --- 修正 Return 都上屏英文時， w[0-9] 空白鍵為上屏鍵，Return 還是上屏候選項問題。
-  elseif (a_r_abc) and not a_s_wp and seg:has_tag("wsymbols") and (key:repr() == "Return" or key:repr() == "KP_Enter") then
+  elseif (a_r_abc) and (not a_s_wp) and (seg:has_tag("wsymbols")) and (key:repr() == "Return" or key:repr() == "KP_Enter") then
     engine:commit_text(c_input)
     context:clear()
     return 1
