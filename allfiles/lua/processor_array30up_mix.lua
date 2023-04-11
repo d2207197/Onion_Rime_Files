@@ -143,6 +143,8 @@ local function processor(key, env)
         context:clear()
         return 1
       end
+    else
+      return 2
     end
 
 ---------------------------------------------------------------------------
