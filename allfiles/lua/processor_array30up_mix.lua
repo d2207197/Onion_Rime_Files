@@ -134,6 +134,8 @@ local function processor(key, env)
         engine:commit_text(g_c_t)
         context:clear()
         return 1 -- kAccepted
+      else
+        return 2
       end
     --- 修正 Return 都上屏英文時， w[0-9] 空白鍵為上屏鍵，Return 還是上屏候選項問題。
     elseif a_r_abc then
@@ -142,6 +144,8 @@ local function processor(key, env)
         engine:commit_text(c_input)
         context:clear()
         return 1
+      else
+        return 2
       end
     else
       return 2
