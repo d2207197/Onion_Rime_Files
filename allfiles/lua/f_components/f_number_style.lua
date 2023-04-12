@@ -108,6 +108,23 @@ local function little2_number(t)
 end
 
 ------------------------------------
+
+local function keycap_number(dn)
+  if dn == "" then return "" end
+  dn = string.gsub(dn, "0", "0️⃣")
+  dn = string.gsub(dn, "1", "1️⃣")
+  dn = string.gsub(dn, "2", "2️⃣")
+  dn = string.gsub(dn, "3", "3️⃣")
+  dn = string.gsub(dn, "4", "4️⃣")
+  dn = string.gsub(dn, "5", "5️⃣")
+  dn = string.gsub(dn, "6", "6️⃣")
+  dn = string.gsub(dn, "7", "7️⃣")
+  dn = string.gsub(dn, "8", "8️⃣")
+  dn = string.gsub(dn, "9", "9️⃣")
+  return dn
+end
+
+------------------------------------
 --- 以下舊的寫法（備份參考）
 --[[
 local function fullshape_number(dn)
@@ -306,5 +323,6 @@ return {
         purech_number = purech_number,
         military_number = military_number,
         little1_number = little1_number,
-        little2_number = little2_number
+        little2_number = little2_number,
+        keycap_number = keycap_number
         }

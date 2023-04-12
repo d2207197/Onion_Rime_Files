@@ -82,6 +82,7 @@ local purech_number = f_n_s.purech_number
 local military_number = f_n_s.military_number
 local little1_number = f_n_s.little1_number
 local little2_number = f_n_s.little2_number
+local keycap_number = f_n_s.keycap_number
 
 local f_c_n = require("f_components/f_chinese_number")
 local read_number = f_c_n.read_number
@@ -2100,6 +2101,8 @@ local function translate(input, seg, env)
         yield_c( neg_n_f .. circled3_number(numberout), "〔反白帶圈數字〕")
         yield_c( neg_n_f .. circled4_number(numberout), "〔反白帶圈無襯線數字〕")
         yield_c( neg_n_f .. circled5_number(numberout), "〔帶圈中文數字〕")
+
+        yield_c( neg_n_f .. keycap_number(numberout), "〔鍵帽數字〕")
 
         if (neg_n=="") then
           if tonumber(numberout)==1 or tonumber(numberout)==0 then
