@@ -2146,9 +2146,9 @@ local function translate(input, seg, env)
             yield_c( Dec2bin(numberout), "〔二進位〕")
           end
 
-          yield_c( string.format("%o",numberout), "〔八進位〕")
           yield_c( string.format("%X",numberout), "〔十六進位〕")
           yield_c( string.format("%x",numberout), "〔十六進位〕")
+          yield_c( string.format("%o",numberout), "〔八進位〕")
         end
 
       elseif (dot0~="") then
