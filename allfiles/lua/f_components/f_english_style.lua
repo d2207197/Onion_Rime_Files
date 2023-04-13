@@ -139,7 +139,7 @@ end
 
 --- 以下參考：https://liblouis.io/translate/
 
-local function english_b_u(t)
+local function english_braille_c_u(t)
   if t == "" then return "" end
   local format1 = "xform|[.]/|⠀|"
   local format2 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ ,.-/'|⡁⡃⡉⡙⡑⡋⡛⡓⡊⡚⡅⡇⡍⡝⡕⡏⡟⡗⡎⡞⡥⡧⡺⡭⡽⡵⠀⠠⠨⠤⠌⠄|"
@@ -147,7 +147,7 @@ local function english_b_u(t)
   return proj:apply(t)
 end
 
-local function english_b_l(t)
+local function english_braille_c_l(t)
   if t == "" then return "" end
   local format1 = "xform|[.]/|⠀|"
   local format2 = "xlit|abcdefghijklmnopqrstuvwxyz ,.-/'|⠁⠃⠉⠙⠑⠋⠛⠓⠊⠚⠅⠇⠍⠝⠕⠏⠟⠗⠎⠞⠥⠧⠺⠭⠽⠵⠀⠠⠨⠤⠌⠄|"
@@ -155,7 +155,7 @@ local function english_b_l(t)
   return proj:apply(t)
 end
 
-local function english_b_u_u(t)
+local function english_braille_u_u(t)
   if t == "" then return "" end
   local format1 = "xform|[.]/|⠀|"
   local format2 = "xform|([A-Za-z]),([A-Za-z])|$1⠰⠂$2|"  -- "xform|([^.,/'-])[,]([^.,/'-])|$1⠰⠂$2|"
@@ -170,7 +170,7 @@ local function english_b_u_u(t)
   return proj:apply(t)
 end
 
-local function english_b_l_u(t)
+local function english_braille_u_l(t)
   if t == "" then return "" end
   local format1 = "xform|[.]/|⠀|"
   local format2 = "xform|([A-Za-z]),([A-Za-z])|$1⠰⠂$2|"
@@ -631,25 +631,25 @@ local function english_f_ul(en)
   return en
 end
 
-local function english_b_ul(en)
+local function english_braille_c_ul(en)
   if en == "" then return "" end
-  -- en = english_b_u(string.sub(en,1,1)) .. english_b_l(string.sub(en,2,-1))
+  -- en = english_braille_c_u(string.sub(en,1,1)) .. english_braille_c_l(string.sub(en,2,-1))
   en = english_s2u(en)
-  en = english_b_u(en)
+  en = english_braille_c_u(en)
   if string.match(en,"%l") then
-    en = english_b_l(en)
+    en = english_braille_c_l(en)
   end
   return en
 end
 
-local function english_b_ul_u(en)
+local function english_braille_u_ul(en)
   if en == "" then return "" end
-  -- en = english_b_u_u(string.sub(en,1,1)) .. english_b_l_u(string.sub(en,2,-1))
+  -- en = english_braille_u_u(string.sub(en,1,1)) .. english_braille_u_l(string.sub(en,2,-1))
   en = english_s2u(en)
   -- en = string.gsub(en, "([A-Z][A-Z]+)([a-z]+)", "%1⠠⠄%2")  -- AAa=>AA⠠⠄a
-  en = english_b_u_u(en)
+  en = english_braille_u_u(en)
   if string.match(en,"%l") then
-    en = english_b_l_u(en)
+    en = english_braille_u_l(en)
   end
   return en
 end
@@ -678,10 +678,10 @@ return {
         english_5_6 = english_5_6,
         english_f_ul = english_f_ul,
 
-        english_b_u = english_b_u,
-        english_b_l = english_b_l,
-        english_b_ul = english_b_ul,
-        english_b_u_u = english_b_u_u,
-        english_b_l_u = english_b_l_u,
-        english_b_ul_u = english_b_ul_u,
+        english_braille_c_u = english_braille_c_u,
+        english_braille_c_l = english_braille_c_l,
+        english_braille_c_ul = english_braille_c_ul,
+        english_braille_u_u = english_braille_u_u,
+        english_braille_u_l = english_braille_u_l,
+        english_braille_u_ul = english_braille_u_ul,
         }

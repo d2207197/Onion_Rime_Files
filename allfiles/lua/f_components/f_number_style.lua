@@ -107,7 +107,7 @@ local function little2_number(t)
   return proj:apply(t)
 end
 
-local function braille_number(t)
+local function braille_c_number(t)
   if t == "" then return "" end
   local format1 = "xlit|0123456789.|⠴⠂⠆⠒⠲⠢⠖⠶⠦⠔⠨|"
   local proj = convert_format(format1)
@@ -338,7 +338,7 @@ return {
         military_number = military_number,
         little1_number = little1_number,
         little2_number = little2_number,
-        braille_number = braille_number,
+        braille_c_number = braille_c_number,
         braille_u_number = braille_u_number,
         keycap_number = keycap_number,
         }
