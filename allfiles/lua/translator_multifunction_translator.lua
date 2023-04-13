@@ -82,6 +82,8 @@ local purech_number = f_n_s.purech_number
 local military_number = f_n_s.military_number
 local little1_number = f_n_s.little1_number
 local little2_number = f_n_s.little2_number
+local braille_number = f_n_s.braille_number
+local braille_u_number = f_n_s.braille_u_number
 local keycap_number = f_n_s.keycap_number
 
 local f_c_n = require("f_components/f_chinese_number")
@@ -107,6 +109,12 @@ local english_5_6 = f_e_s.english_5_6
 local english_f_ul = f_e_s.english_f_ul
 local english_s = f_e_s.english_s
 local english_s2u = f_e_s.english_s2u
+local english_b_u = f_e_s.english_b_u
+local english_b_l = f_e_s.english_b_l
+local english_b_ul = f_e_s.english_b_ul
+local english_b_u_u = f_e_s.english_b_u_u
+local english_b_l_u = f_e_s.english_b_l_u
+local english_b_ul_u = f_e_s.english_b_ul_u
 
 ----------------------------------------------------------------------------------------
 --- Unicode 等各種字符編碼轉換
@@ -1650,6 +1658,12 @@ local function translate(input, seg, env)
       -- yield_c( english_7(englishout1), "〔方框字母〕")
       -- yield_c( english_8(englishout1), "〔黑圈字母〕")
       -- yield_c( english_9(englishout1), "〔黑框字母〕")
+      if english_b_l(englishout1) ~= english_b_l_u(englishout1) then
+        yield_c( english_b_l(englishout1), "〔點字(computer)〕")
+        yield_c( english_b_l_u(englishout1), "〔點字(unified)〕")
+      else
+        yield_c( english_b_l(englishout1), "〔點字(computer/unified)〕")
+      end
       return
     end
 
@@ -1660,7 +1674,13 @@ local function translate(input, seg, env)
       yield_c( english_f_ul(englishout2), "〔全形字母開頭大寫〕")
       yield_c( english_1_2(englishout2), "〔數學字母開頭大寫〕")
       yield_c( english_3_4(englishout2), "〔帶圈字母開頭大寫〕")
-      yield_c( english_5_6(englishout2), "〔括號字母大寫〕")
+      yield_c( english_5_6(englishout2), "〔括號字母開頭大寫〕")
+      if english_b_ul(englishout2) ~= english_b_ul_u(englishout2) then
+        yield_c( english_b_ul(englishout2), "〔點字(computer)〕")
+        yield_c( english_b_ul_u(englishout2), "〔點字(unified)〕")
+      else
+        yield_c( english_b_ul(englishout2), "〔點字(computer/unified)〕")
+      end
       return
     end
 
@@ -1676,6 +1696,12 @@ local function translate(input, seg, env)
       yield_c( english_8(englishout3), "〔黑圈字母〕")
       yield_c( english_9(englishout3), "〔黑框字母〕")
       yield_c( english_s_u(englishout3), "〔小型字母大寫〕")
+      if english_b_u(englishout3) ~= english_b_u_u(englishout3) then
+        yield_c( english_b_u(englishout3), "〔點字(computer)〕")
+        yield_c( english_b_u_u(englishout3), "〔點字(unified)〕")
+      else
+        yield_c( english_b_u(englishout3), "〔點字(computer/unified)〕")
+      end
       return
     end
 
@@ -2004,6 +2030,7 @@ local function translate(input, seg, env)
       yield_c( "⁻", "〔上標負號〕")
       yield_c( "₋", "〔下標負號〕")
       yield_c( "㊀", "〔帶圈負號〕")
+      yield_c( "⠤", "〔點字(computer/unified)〕")
       return
     end
 
@@ -2014,6 +2041,8 @@ local function translate(input, seg, env)
       -- yield_c( "．", "〔全形小數點〕")
       yield_c( "點", "〔中文小數點〕")
       -- yield_c( "點", "〔軍中小數點〕")
+      yield_c( "⠨", "〔點字(computer)〕")
+      yield_c( "⠲", "〔點字(unified)〕")
       return
     end
 
@@ -2029,6 +2058,8 @@ local function translate(input, seg, env)
       yield_c( "－０.", "〔全形數字〕")
       yield_c( "負點", "〔純中文數字〕")
       yield_c( "槓點", "〔軍中數字〕")
+      yield_c( "⠤⠨", "〔點字(computer)〕")
+      yield_c( "⠤⠲", "〔點字(unified)〕")
       return
     end
 
@@ -2050,6 +2081,7 @@ local function translate(input, seg, env)
       local neg_n_l1 = string.gsub(neg_n, "-", "⁻")
       local neg_n_l2 = string.gsub(neg_n, "-", "₋")
       local neg_n_c = string.gsub(neg_n, "-", "㊀")
+      local neg_n_b = string.gsub(neg_n, "-", "⠤")
 
     -- if numberout~=nil and tonumber(nn)~=nil then
       local nn = string.sub(numberout, 1)
@@ -2103,6 +2135,9 @@ local function translate(input, seg, env)
         yield_c( neg_n_f .. circled5_number(numberout), "〔帶圈中文數字〕")
 
         yield_c( neg_n_f .. keycap_number(numberout), "〔鍵帽數字〕")
+        yield_c( neg_n_b .. braille_number(numberout), "〔點字(computer)〕")
+        -- yield_c( neg_n_b .. "⠼" .. braille_number(numberout), "〔點字(一般)〕")
+        yield_c( neg_n_b .. "⠼" .. braille_u_number(numberout), "〔點字(unified)〕")
 
         if (neg_n=="") then
           if tonumber(numberout)==1 or tonumber(numberout)==0 then
@@ -2119,10 +2154,16 @@ local function translate(input, seg, env)
       elseif (dot0~="") then
         yield_c( neg_n_ch .. purech_number(dot1..afterdot), "〔純中文數字〕")
         yield_c( neg_n_m .. military_number(dot1..afterdot), "〔軍中數字〕")
+        yield_c( neg_n_b .. braille_number(dot1..afterdot), "〔點字(computer)〕")
+        -- yield_c( neg_n_b .. "⠼" .. braille_number(dot1..afterdot), "〔點字(一般)〕")
+        yield_c( neg_n_b .. "⠼" .. braille_u_number(dot1..afterdot), "〔點字(unified)〕")
         return
       elseif dot0=="" and dot1~="" then
         yield_c( neg_n_ch .. purech_number(numberout..dot1..afterdot), "〔純中文數字〕")
         yield_c( neg_n_m .. military_number(numberout..dot1..afterdot), "〔軍中數字〕")
+        yield_c( neg_n_b .. braille_number(numberout..dot1..afterdot), "〔點字(computer)〕")
+        -- yield_c( neg_n_b .. "⠼" .. braille_number(numberout..dot1..afterdot), "〔點字(一般)〕")
+        yield_c( neg_n_b .. "⠼" .. braille_u_number(numberout..dot1..afterdot), "〔點字(unified)〕")
         return
       end
 

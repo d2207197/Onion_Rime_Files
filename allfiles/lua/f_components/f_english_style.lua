@@ -136,6 +136,52 @@ local function english_s_u(t)
   return proj:apply(t)
 end
 
+
+--- 以下參考：https://liblouis.io/translate/
+
+local function english_b_u(t)
+  if t == "" then return "" end
+  local format1 = "xform|[.]/|⠀|"
+  local format2 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ ,.-/'|⡁⡃⡉⡙⡑⡋⡛⡓⡊⡚⡅⡇⡍⡝⡕⡏⡟⡗⡎⡞⡥⡧⡺⡭⡽⡵⠀⠠⠨⠤⠌⠄|"
+  local proj = convert_format(format1,format2)
+  return proj:apply(t)
+end
+
+local function english_b_l(t)
+  if t == "" then return "" end
+  local format1 = "xform|[.]/|⠀|"
+  local format2 = "xlit|abcdefghijklmnopqrstuvwxyz ,.-/'|⠁⠃⠉⠙⠑⠋⠛⠓⠊⠚⠅⠇⠍⠝⠕⠏⠟⠗⠎⠞⠥⠧⠺⠭⠽⠵⠀⠠⠨⠤⠌⠄|"
+  local proj = convert_format(format1,format2)
+  return proj:apply(t)
+end
+
+local function english_b_u_u(t)
+  if t == "" then return "" end
+  local format1 = "xform|[.]/|⠀|"
+  local format2 = "xform|([A-Za-z]),([A-Za-z])|$1⠰⠂$2|"  -- "xform|([^.,/'-])[,]([^.,/'-])|$1⠰⠂$2|"
+  local format3 = "xform|([^A-Z])([A-Z]+)|$1⠠$2|"
+  local format4 = "xform|^([A-Z])|⠠$1|"
+  local format5 = "xform|(⠠)([A-Z][A-Z]+)|$1$1$2|"
+  local format6 = "xform|[/]|⠸⠌|"
+  -- local format7 = "xform|([^.])[.]$|$1⠲|"
+  -- local format8 = "xform|[']⠀|⠴⠄⠀|"
+  local format7 = "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ ,.-'|⠁⠃⠉⠙⠑⠋⠛⠓⠊⠚⠅⠇⠍⠝⠕⠏⠟⠗⠎⠞⠥⠧⠺⠭⠽⠵⠀⠂⠲⠤⠄|"
+  local proj = convert_format(format1,format2,format3,format4,format5,format6,format7)
+  return proj:apply(t)
+end
+
+local function english_b_l_u(t)
+  if t == "" then return "" end
+  local format1 = "xform|[.]/|⠀|"
+  local format2 = "xform|([A-Za-z]),([A-Za-z])|$1⠰⠂$2|"
+  local format3 = "xform|[/]|⠸⠌|"
+  -- local format3 = "xform|([^.])[.]$|$1⠲|"
+  -- local format3 = "xform|[']⠀|⠴⠄⠀|"
+  local format4 = "xlit|abcdefghijklmnopqrstuvwxyz ,.-/'|⠁⠃⠉⠙⠑⠋⠛⠓⠊⠚⠅⠇⠍⠝⠕⠏⠟⠗⠎⠞⠥⠧⠺⠭⠽⠵⠀⠂⠲⠤⠌⠄|"
+  local proj = convert_format(format1,format2,format3,format4)
+  return proj:apply(t)
+end
+
 ------------------------------------
 --- 以下舊的寫法（備份參考）
 --[[
@@ -585,7 +631,28 @@ local function english_f_ul(en)
   return en
 end
 
+local function english_b_ul(en)
+  if en == "" then return "" end
+  -- en = english_b_u(string.sub(en,1,1)) .. english_b_l(string.sub(en,2,-1))
+  en = english_s2u(en)
+  en = english_b_u(en)
+  if string.match(en,"%l") then
+    en = english_b_l(en)
+  end
+  return en
+end
 
+local function english_b_ul_u(en)
+  if en == "" then return "" end
+  -- en = english_b_u_u(string.sub(en,1,1)) .. english_b_l_u(string.sub(en,2,-1))
+  en = english_s2u(en)
+  -- en = string.gsub(en, "([A-Z][A-Z]+)([a-z]+)", "%1⠠⠄%2")  -- AAa=>AA⠠⠄a
+  en = english_b_u_u(en)
+  if string.match(en,"%l") then
+    en = english_b_l_u(en)
+  end
+  return en
+end
 
 
 return {
@@ -610,4 +677,11 @@ return {
         english_3_4 = english_3_4,
         english_5_6 = english_5_6,
         english_f_ul = english_f_ul,
+
+        english_b_u = english_b_u,
+        english_b_l = english_b_l,
+        english_b_ul = english_b_ul,
+        english_b_u_u = english_b_u_u,
+        english_b_l_u = english_b_l_u,
+        english_b_ul_u = english_b_ul_u,
         }
