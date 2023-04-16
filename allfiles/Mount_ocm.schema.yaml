@@ -284,7 +284,7 @@ key_binder:
     - {accept: Control+8, send: Control+9, when: has_menu}
 #######################################
     - {accept: Control+apostrophe, toggle: extended_charset, when: always } #增廣常用字符過濾，新增開關
-    - {accept: Control+minus, toggle: simplify_comment, when: always } #提示碼開關
+    - {accept: Control+bracketleft, toggle: simplify_comment, when: always } #提示碼開關
     - {accept: Control+Shift+7, toggle: simplify_comment, when: always}
 
 punctuator:
