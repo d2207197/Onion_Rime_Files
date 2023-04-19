@@ -80,9 +80,13 @@ local function filter(inp, env)
         end
 
         --- 以下防止記憶體洩漏暴漲？！測試！
-        local cands = {}
+        -- cands = {}
+        -- local cands = {}  -- 理論上不對，這邊不應該加local，但實際又效果好？
 
       end
+
+      --- 以下防止記憶體洩漏暴漲？！測試！
+      -- local cands = {}
 
     end
 
