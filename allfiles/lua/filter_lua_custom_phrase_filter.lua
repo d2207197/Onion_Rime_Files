@@ -126,6 +126,8 @@ local function filter(inp,env)
     end
     -- local custom_phrase_cand = Candidate("short", start, _end, c_p_tab, "〔短語〕")
     -- yield( custom_phrase_cand )
+    -- --- 以下防止記憶體洩漏暴漲？！測試！
+    -- local c_p_tab == {}
   end
 
   for cand in inp:iter() do

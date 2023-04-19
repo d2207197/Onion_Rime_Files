@@ -79,6 +79,9 @@ local function filter(inp, env)
           -- yield(newcand)
         end
 
+        --- 以下防止記憶體洩漏暴漲？！測試！
+        local cands = {}
+
       end
 
     end
