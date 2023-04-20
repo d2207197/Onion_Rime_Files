@@ -79,14 +79,18 @@ local function filter(inp, env)
           -- yield(newcand)
         end
 
-        --- 以下防止記憶體洩漏暴漲？！測試！
+        --- 以下防止記憶體洩漏暴漲？！不會立即清理記憶體，但會回退，測試！
         -- cands = {}
-        -- local cands = {}  -- 理論上不對，這邊不應該加local，但實際又效果好？
+        -- cands = nil
+        -- local cands = {}  -- 理論上不對，這邊不應該加local，但實際又有效果？觀察！
+        -- local cands = nil
 
       end
 
-      --- 以下防止記憶體洩漏暴漲？！測試！
+      --- 以下防止記憶體洩漏暴漲？！不會立即清理記憶體，但會回退，測試！
       -- local cands = {}
+      -- local cands = nil
+      cands = nil
 
     end
 
