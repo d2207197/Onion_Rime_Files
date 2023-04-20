@@ -303,6 +303,12 @@ local function translate(input, seg, env)
       yield_c( Ver_info()[3], "〔 librime-lua_version 〕")
       yield_c( Ver_info()[4], "〔 lua_version 〕")
       yield_c( Ver_info()[5], "〔 installation_id 〕")
+      -- yield_c( collectgarbage("count")*1024, "〔 the amount of memory 〕")
+      --- 記憶體回收，上方可能讓記憶暴漲，故增。
+      -- collectgarbage("collect")  -- 做一次完整的垃圾收集循環
+      collectgarbage()  -- 強制進行垃圾回收
+      -- yield_c( collectgarbage("count")*1024, "〔 the amount of memory 〕")
+      yield_c( ("%.f"):format(collectgarbage("count")*1024) .." Bytes", "〔 the amount of lua memory 〕")
       return
     end
 
