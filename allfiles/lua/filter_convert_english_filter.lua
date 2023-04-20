@@ -42,7 +42,7 @@ local function init(env)
   local check_plus = config:get_string("translator/dictionary") or ""  -- 檢查為獨立方案或掛接方案
   env.p_prefix = check_plus ~= "easy_en_lower" and config:get_string("easy_en/prefix") or ""
   -- env.enable_tips = check_plus ~= "easy_en_lower" and true or false
-  env.match_pattern = env.p_prefix .. "([-/a-z.,']+)([;/']*)( ?)$"  -- "[.3]?([-/a-z.,']+)([;/']*)( ?)$"：會有Bug
+  env.match_pattern = env.p_prefix .. "([- /a-z.,']+)([;/']*)( ?)$"  -- "[.3]?([-/a-z.,']+)([;/']*)( ?)$"：會有Bug
   env.tips_en = "《Easy》"
 
   env.english_pattern = {

@@ -4,7 +4,7 @@
 schema:
   schema_id: easy_en_lower
   name: Easy English（英漢字典）-Lower
-  version: "202302"
+  version: "202304"
   author:
     - 洋蔥
   description:
@@ -67,7 +67,8 @@ speller:
   delimiter: " "
   algebra:
     - derive/^\|$/ /
-    - xform|@|\.\/|
+    - derive|@|\.\/|
+    - xform|@| |
 
     # - derive/$/;/
     # - xform|^([-.'/])$|$1@|
