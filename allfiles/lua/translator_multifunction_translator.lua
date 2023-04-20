@@ -173,9 +173,9 @@ local function init(env)
       , { "  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑰" }
       , { "  c [0-9]+〔內碼十進制 Dec〕", "⑱" }
       , { "  o [0-7]+〔內碼八進制 Oct〕", "⑲" }
-      , { "  v〔版本資訊〕", "⑳" }
-      , { "===========  結束  ===========    ", "㉑" }
-      , { "", "㉒" }
+      , { "  g〔垃圾回收器〕", "⑳" }
+      , { "  v〔版本資訊〕", "㉑" }
+      , { "===========  結束  ===========    ", "㉒" }
       , { "", "㉓" }
       -- , { "", "㉔" }
       -- , { "", "㉕" }
@@ -303,12 +303,22 @@ local function translate(input, seg, env)
       yield_c( Ver_info()[3], "〔 librime-lua_version 〕")
       yield_c( Ver_info()[4], "〔 lua_version 〕")
       yield_c( Ver_info()[5], "〔 installation_id 〕")
-      -- yield_c( collectgarbage("count")*1024, "〔 the amount of memory 〕")
-      --- 記憶體回收，上方可能讓記憶暴漲，故增。
-      -- collectgarbage("collect")  -- 做一次完整的垃圾收集循環
+      --- 記憶體回收，上方可能讓記憶暴漲，故增 collectgarbage。
       collectgarbage()  -- 強制進行垃圾回收
-      -- yield_c( collectgarbage("count")*1024, "〔 the amount of memory 〕")
-      yield_c( ("%.f"):format(collectgarbage("count")*1024) .." Bytes", "〔 the amount of lua memory 〕")
+      -- collectgarbage("collect")  -- 做一次完整的垃圾收集循環
+      return
+    end
+
+    -- 垃圾回收器(Garbage Collection)
+    if (input == env.prefix .. "g") then
+      yield_c( ("%.f"):format(collectgarbage("count")) .." KB", "〔 the amount of lua memory before GC 〕")
+      -- yield_c( ("%.f"):format(collectgarbage("count")*1024) .." Bytes", "〔 the amount of lua memory before GC 〕")
+      -- yield_c( collectgarbage("count")*1024, "〔 the amount of lua memory before GC 〕")
+      collectgarbage()  -- 強制進行垃圾回收
+      -- collectgarbage("collect")  -- 做一次完整的垃圾收集循環
+      yield_c( ("%.f"):format(collectgarbage("count")) .." KB", "〔 the amount of lua memory after GC 〕")
+      -- yield_c( ("%.f"):format(collectgarbage("count")*1024) .." Bytes", "〔 the amount of lua memory after GC 〕")
+      -- yield_c( collectgarbage("count")*1024, "〔 the amount of lua memory after GC 〕")
       return
     end
 
