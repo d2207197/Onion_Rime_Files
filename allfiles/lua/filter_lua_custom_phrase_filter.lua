@@ -63,7 +63,7 @@ local function load_text_dict(text_dict)
         local nn={}
         table.insert(nn, v_text)
         tab[v_code] = nn
-        -- --- 以下防止記憶體洩漏暴漲？！測試！
+        --- 以下防止記憶體洩漏暴漲？！測試！
         -- local nn={}
       else
         table.insert(tab[v_code], v_text)
@@ -128,7 +128,7 @@ local function filter(inp,env)
     end
     -- local custom_phrase_cand = Candidate("short", start, _end, c_p_tab, "〔短語〕")
     -- yield( custom_phrase_cand )
-    -- --- 以下防止記憶體洩漏暴漲？！測試！
+    --- 以下防止記憶體洩漏暴漲？！測試！
     -- c_p_tab = {}
   end
 
