@@ -72,6 +72,7 @@ engine:
     - reverse_lookup_filter@e_reverse_lookup
     - uniquifier
   processors:
+    - lua_processor@lua_tran_kp  #使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入。
     - lua_processor@mix_apc_pluss
     - ascii_composer
     - recognizer

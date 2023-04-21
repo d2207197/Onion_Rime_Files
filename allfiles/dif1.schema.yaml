@@ -8,7 +8,7 @@ schema:
 
   name: "❖分別調出蝦米(plus)❖"
   schema_id: dif1
-  version: "202302"
+  version: "202304"
   dependencies:
     - punct_ovff
     - dif1_jphi
@@ -87,6 +87,7 @@ engine:
     - reverse_lookup_filter@e_reverse_lookup
     - uniquifier
   processors:
+    - lua_processor@lua_tran_kp  #使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入。
     - lua_processor@zhuyin_space
     - ascii_composer
     - recognizer
