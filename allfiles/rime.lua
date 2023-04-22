@@ -84,6 +84,7 @@
 --      - lua_processor@mix_apc_s2rm                 --（引lua資料夾）（bo_mixin 1、2、4；bopomo_onionplus） 注音掛接，合併 ascii_punct_change 和 s2r_most，增進效能。
 --      - lua_processor@mix_apc_s2rm_3               --（引lua資料夾）（bo_mixin3） 注音掛接，合併 ascii_punct_change 和 s2r_mixin3，增進效能。
 --      - lua_processor@mix_apc_pluss                --（引lua資料夾）（bopomo_onionplus_space） 以原 ascii_punct_change 增加功能，使初始空白可以直接上屏
+--      - lua_processor@mix_zhs_ltk                  --（引lua資料夾）（ocm_mixin、dif1、ocm_mix） 合併 zhuyin_space 和 lua_tran_kp
 --      ...
 
 
@@ -276,6 +277,11 @@ zhuyin_space = require("processor_zhuyin_space")
 --- lua_tran_kp
 -- 使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入。
 lua_tran_kp = require("processor_lua_tran_kp")
+
+
+--- mix_zhs_ltk
+-- 合併 zhuyin_space 和 lua_tran_kp
+mix_zhs_ltk = require("processor_mix_zhs_ltk")
 
 
 --- kr_2set_0m_choice （hangeul2set_zeromenu）

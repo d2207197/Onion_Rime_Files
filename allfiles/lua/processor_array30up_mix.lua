@@ -4,29 +4,68 @@
 行列30三四碼字按空格直接上屏
 行列30注音反查 Return 和 space 和 小鍵盤數字鍵 上屏修正
 尚有bug待處理
+合併 lua_tran_kp
 --]]
 
 ----------------------------------------------------------------------------------------
 local utf8_sub = require("f_components/f_utf8_sub")
 ----------------------------------------------------------------------------------------
 
+-- local function init(env)
+--   env.kp_pattern = {
+--     ["0"] = "0",
+--     ["1"] = "1",
+--     ["2"] = "2",
+--     ["3"] = "3",
+--     ["4"] = "4",
+--     ["5"] = "5",
+--     ["6"] = "6",
+--     ["7"] = "7",
+--     ["8"] = "8",
+--     ["9"] = "9",
+--     ["Add"] = "+",
+--     ["Subtract"] = "-",
+--     ["Multiply"] = "*",
+--     ["Divide"] = "/",
+--     ["Decimal"] = ".",
+--    }
+--   env.set_char_bpmf = Set {"ㄅ", "ㄆ", "ㄇ", "ㄈ", "ㄉ", "ㄊ", "ㄋ", "ㄌ", "ㄍ", "ㄎ", "ㄏ", "ㄐ", "ㄑ", "ㄒ", "ㄓ", "ㄔ", "ㄕ", "ㄖ", "ㄗ", "ㄘ", "ㄙ", "ㄧ", "ㄨ", "ㄩ", "ㄚ", "ㄛ", "ㄜ", "ㄝ", "ㄞ", "ㄟ", "ㄠ", "ㄡ", "ㄢ", "ㄣ", "ㄤ", "ㄥ", "ㄦ", "ˉ", "ˊ", "ˇ", "ˋ", "˙", "ㄪ", "ㄫ", "ㄫ", "ㄬ", "ㄭ", "ㄮ", "ㄮ", "ㄯ", "ㄯ", "ㆠ", "ㆡ", "ㆢ", "ㆣ", "ㆤ", "ㆥ", "ㆦ", "ㆧ", "ㆨ", "ㆩ", "ㆪ", "ㆫ", "ㆬ", "ㆭ", "ㆭ", "ㆮ", "ㆯ", "ㆰ", "ㆰ", "ㆱ", "ㆱ", "ㆲ", "ㆲ", "ㆳ", "ㆴ", "ㆵ", "ㆶ", "ㆷ", "ㆸ", "ㆹ", "ㆺ"}
+-- end
+
+local kp_pattern = {
+  ["0"] = "0",
+  ["1"] = "1",
+  ["2"] = "2",
+  ["3"] = "3",
+  ["4"] = "4",
+  ["5"] = "5",
+  ["6"] = "6",
+  ["7"] = "7",
+  ["8"] = "8",
+  ["9"] = "9",
+  ["Add"] = "+",
+  ["Subtract"] = "-",
+  ["Multiply"] = "*",
+  ["Divide"] = "/",
+  ["Decimal"] = ".",
+ }
+
+local set_char_bpmf = Set {"ㄅ", "ㄆ", "ㄇ", "ㄈ", "ㄉ", "ㄊ", "ㄋ", "ㄌ", "ㄍ", "ㄎ", "ㄏ", "ㄐ", "ㄑ", "ㄒ", "ㄓ", "ㄔ", "ㄕ", "ㄖ", "ㄗ", "ㄘ", "ㄙ", "ㄧ", "ㄨ", "ㄩ", "ㄚ", "ㄛ", "ㄜ", "ㄝ", "ㄞ", "ㄟ", "ㄠ", "ㄡ", "ㄢ", "ㄣ", "ㄤ", "ㄥ", "ㄦ", "ˉ", "ˊ", "ˇ", "ˋ", "˙", "ㄪ", "ㄫ", "ㄫ", "ㄬ", "ㄭ", "ㄮ", "ㄮ", "ㄯ", "ㄯ", "ㆠ", "ㆡ", "ㆢ", "ㆣ", "ㆤ", "ㆥ", "ㆦ", "ㆧ", "ㆨ", "ㆩ", "ㆪ", "ㆫ", "ㆬ", "ㆭ", "ㆭ", "ㆮ", "ㆯ", "ㆰ", "ㆰ", "ㆱ", "ㆱ", "ㆲ", "ㆲ", "ㆳ", "ㆴ", "ㆵ", "ㆶ", "ㆷ", "ㆸ", "ㆹ", "ㆺ"}
 
 -- local function array30up_mix(key, env)
 local function processor(key, env)
   local engine = env.engine
   local context = engine.context
+  local c_input = context.input
   local comp = context.composition
   local seg = comp:back()
+  -- local g_s_t = context:get_script_text()
+  local g_c_t = context:get_commit_text()
   -- local page_size = engine.schema.page_size
   local o_ascii_mode = context:get_option("ascii_mode")
   local a_s_wp = context:get_option("array30_space_wp")
   local a_r_abc = context:get_option("array30_return_abc")
-  local c_input = context.input
-  -- local g_s_t = context:get_script_text()
-  local g_c_t = context:get_commit_text()
   local key_num = key:repr():match("KP_([0-9])") or key:repr():match("Control%+([0-9])")
-
-  local set_char_bpmf = Set {"ㄅ", "ㄆ", "ㄇ", "ㄈ", "ㄉ", "ㄊ", "ㄋ", "ㄌ", "ㄍ", "ㄎ", "ㄏ", "ㄐ", "ㄑ", "ㄒ", "ㄓ", "ㄔ", "ㄕ", "ㄖ", "ㄗ", "ㄘ", "ㄙ", "ㄧ", "ㄨ", "ㄩ", "ㄚ", "ㄛ", "ㄜ", "ㄝ", "ㄞ", "ㄟ", "ㄠ", "ㄡ", "ㄢ", "ㄣ", "ㄤ", "ㄥ", "ㄦ", "ˉ", "ˊ", "ˇ", "ˋ", "˙", "ㄪ", "ㄫ", "ㄫ", "ㄬ", "ㄭ", "ㄮ", "ㄮ", "ㄯ", "ㄯ", "ㆠ", "ㆡ", "ㆢ", "ㆣ", "ㆤ", "ㆥ", "ㆦ", "ㆧ", "ㆨ", "ㆩ", "ㆪ", "ㆫ", "ㆬ", "ㆭ", "ㆭ", "ㆮ", "ㆯ", "ㆰ", "ㆰ", "ㆱ", "ㆱ", "ㆲ", "ㆲ", "ㆳ", "ㆴ", "ㆵ", "ㆶ", "ㆷ", "ㆸ", "ㆹ", "ㆺ"}
 
   local check_i1 = string.match(c_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")
   local check_i2 = string.match(c_input, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")
@@ -41,10 +80,16 @@ local function processor(key, env)
                    string.match(c_input, "^ftp:.*$") or
                    string.match(c_input, "^mailto:.*$") or
                    string.match(c_input, "^file:.*$")
+
   -- local check_zh = string.match(c_input, "^=[a-z0-9,.;/-]+$")
   -- local check_w = string.match(c_input, "^w[0-9]$")
   -- local check_abc = string.match(c_input, "^[a-z,./;]+$")
 
+  local check_pre = string.match(c_input, "`[-]?[.]?$")
+  local check_num_cal = string.match(c_input, "`[-]?[.]?%d+%.?%d*$") or
+                        string.match(c_input, "`[-.rq(]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*$")
+  -- local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
+  -- local kp_p = env.kp_pattern[key_kp]
 
 -----------------------------------------------------------------------------
 
@@ -59,14 +104,59 @@ local function processor(key, env)
   elseif key:release() or key:alt() or key:super() then
     return 2
 
+-----------------------------------------------------------------------------
+--[[
+以下開始使得純數字和計算機時，於小鍵盤可輸入數字和運算符
+--]]
+
+  -- elseif seg:has_tag("lua") and kp_p ~= nil then
+  elseif seg:has_tag("lua") and key:repr() ~= "space" then
+    -- local kp_pattern = {
+    --   ["0"] = "0",
+    --   ["1"] = "1",
+    --   ["2"] = "2",
+    --   ["3"] = "3",
+    --   ["4"] = "4",
+    --   ["5"] = "5",
+    --   ["6"] = "6",
+    --   ["7"] = "7",
+    --   ["8"] = "8",
+    --   ["9"] = "9",
+    --   ["Add"] = "+",
+    --   ["Subtract"] = "-",
+    --   ["Multiply"] = "*",
+    --   ["Divide"] = "/",
+    --   ["Decimal"] = ".",
+    --  }
+    local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
+    local kp_p = kp_pattern[key_kp]
+    if kp_p ~= nil then
+      if not check_pre and not check_num_cal then
+        return 2
+      elseif string.match(kp_p, "[%d.-]") then
+        context.input = c_input .. kp_p
+        return 1
+      --- 防開頭後接[+*/]
+      elseif check_pre then
+        return 2
+      elseif string.match(kp_p, "[+*/]") then
+        context.input = c_input .. kp_p
+        return 1
+      end
+    end
+
+-----------------------------------------------------------------------------
+
   --- pass not space Return KP_Enter key_num
   elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" and not key_num then
     return 2
 
 -----------------------------------------------------------------------------
+--[[
+以下 return 上屏候選字或英文，設開關
+--]]
 
-  --- return 上屏候選字或英文，設開關（以下 abc 非英文，而是中文主 segmentor）
-
+  --- 以下 abc 非英文，而是中文主 segmentor
   elseif (a_r_abc) and (seg:has_tag("abc")) and (key:repr() == "Return" or key:repr() == "KP_Enter") then
   -- elseif a_r_abc and check_abc and key:repr() == "Return" or key:repr() == "KP_Enter" then
 
@@ -83,6 +173,9 @@ local function processor(key, env)
     return 1
 
 -----------------------------------------------------------------------------
+--[[
+以下特殊時 space 直上屏
+--]]
 
   elseif not context:has_menu() then
   -- elseif not context:is_composing() then  -- 無法空碼清屏
@@ -100,9 +193,11 @@ local function processor(key, env)
     end
 
 -----------------------------------------------------------------------------
-  --- 使 w[0-9] 輸入符號時：空白鍵同某些行列 30 一樣為翻頁。
-  --- KeyEvent 函數在舊版 librime-lua 中不支持。
-  --- 增設開關。
+--[[
+使 w[0-9] 輸入符號時：空白鍵同某些行列 30 一樣為翻頁。
+KeyEvent 函數在舊版 librime-lua 中不支持。
+增設開關。
+--]]
 
   -- elseif a_s_wp and seg:has_tag("wsymbols") then
   -- -- elseif a_s_wp and check_w then
@@ -156,12 +251,10 @@ local function processor(key, env)
 以下針對反查注音 Bug 作修正
 --]]
 
-  -- elseif comp:empty() then
-  --   return 2
-
   elseif not seg:has_tag("reverse2_lookup") then
     return 2
 
+-----------------------
 
   --- 以下修正：附加方案鍵盤範圍大於主方案時，選字時出現的 bug。
   elseif seg:has_tag("paging") and ( key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" ) then
@@ -179,6 +272,7 @@ local function processor(key, env)
     end
     return 1
 
+-----------------------
 
   --- 以下修正：附加方案鍵盤範圍大於主方案時，小板數字鍵選擇出現之 bug。
   elseif key_num then
@@ -206,6 +300,7 @@ local function processor(key, env)
     -- engine:commit_text(key_num2)
 
     --- 刪除已上屏字詞的前頭字元
+    -- local set_char_bpmf = Set {"ㄅ", "ㄆ", "ㄇ", "ㄈ", "ㄉ", "ㄊ", "ㄋ", "ㄌ", "ㄍ", "ㄎ", "ㄏ", "ㄐ", "ㄑ", "ㄒ", "ㄓ", "ㄔ", "ㄕ", "ㄖ", "ㄗ", "ㄘ", "ㄙ", "ㄧ", "ㄨ", "ㄩ", "ㄚ", "ㄛ", "ㄜ", "ㄝ", "ㄞ", "ㄟ", "ㄠ", "ㄡ", "ㄢ", "ㄣ", "ㄤ", "ㄥ", "ㄦ", "ˉ", "ˊ", "ˇ", "ˋ", "˙", "ㄪ", "ㄫ", "ㄫ", "ㄬ", "ㄭ", "ㄮ", "ㄮ", "ㄯ", "ㄯ", "ㆠ", "ㆡ", "ㆢ", "ㆣ", "ㆤ", "ㆥ", "ㆦ", "ㆧ", "ㆨ", "ㆩ", "ㆪ", "ㆫ", "ㆬ", "ㆭ", "ㆭ", "ㆮ", "ㆯ", "ㆰ", "ㆰ", "ㆱ", "ㆱ", "ㆲ", "ㆲ", "ㆳ", "ㆴ", "ㆵ", "ㆶ", "ㆷ", "ㆸ", "ㆹ", "ㆺ"}
     -- local cand_len = #cand.text // 3
     local cand_len = utf8.len(cand.text)
     local ci_cut = string.gsub(c_input, "^=", "")
@@ -234,8 +329,9 @@ local function processor(key, env)
 
     return 1
 
----------------------------------------------------------------------------
+-----------------------
 
+  --- 以下注音反查末尾處理
   --- 一般輸入 Return 出英文，該條限定注音 Return 一律直上中文。
   elseif key:repr() == "Return" or key:repr() == "KP_Enter" then
     engine:commit_text(g_c_t)
@@ -251,6 +347,8 @@ local function processor(key, env)
     context.input = c_input .. " "
     return 1
 
+---------------------------------------------------------------------------
+
   end
 
   return 2
@@ -258,3 +356,4 @@ end
 
 -- return array30up_mix
 return { func = processor }
+-- return { init = init, func = processor }

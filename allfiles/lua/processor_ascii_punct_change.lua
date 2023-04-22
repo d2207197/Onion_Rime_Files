@@ -8,7 +8,7 @@
 local function processor(key, env)
   local engine = env.engine
   local context = engine.context
-  local orig_p23 = context:get_commit_text()
+  local g_c_t = context:get_commit_text()
   local o_ascii_punct = context:get_option("ascii_punct")
   local o_ascii_mode = context:get_option("ascii_mode")
 
@@ -18,7 +18,7 @@ local function processor(key, env)
   elseif o_ascii_punct then
     if key:repr() == "Shift+less" then
       if context:is_composing() then
-        engine:commit_text( orig_p23 .. "," )
+        engine:commit_text( g_c_t .. "," )
       else
         engine:commit_text( "," )
       end
@@ -26,7 +26,7 @@ local function processor(key, env)
       return 1 -- kAccepted
     elseif key:repr() == "Shift+greater" then
       if context:is_composing() then
-        engine:commit_text( orig_p23 .. "." )
+        engine:commit_text( g_c_t .. "." )
       else
         engine:commit_text( "." )
       end

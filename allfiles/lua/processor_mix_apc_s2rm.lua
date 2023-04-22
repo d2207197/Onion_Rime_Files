@@ -1,31 +1,94 @@
 --- @@ mix_apc_s2rm 注音mixin 1_2_4 和 plus 專用
 --[[
 （bo_mixin 1、2、4；bopomo_onionplus）
-合併 ascii_punct_change 和 s2r_most，增進效能。
+合併 ascii_punct_change、s2r_most、lua_tran_kp，增進效能。
 --]]
+
+-- local function init(env)
+--   env.kp_pattern = {
+--     ["0"] = "0",
+--     ["1"] = "1",
+--     ["2"] = "2",
+--     ["3"] = "3",
+--     ["4"] = "4",
+--     ["5"] = "5",
+--     ["6"] = "6",
+--     ["7"] = "7",
+--     ["8"] = "8",
+--     ["9"] = "9",
+--     ["Add"] = "+",
+--     ["Subtract"] = "-",
+--     ["Multiply"] = "*",
+--     ["Divide"] = "/",
+--     ["Decimal"] = ".",
+--    }
+-- end
+
+local kp_pattern = {
+  ["0"] = "0",
+  ["1"] = "1",
+  ["2"] = "2",
+  ["3"] = "3",
+  ["4"] = "4",
+  ["5"] = "5",
+  ["6"] = "6",
+  ["7"] = "7",
+  ["8"] = "8",
+  ["9"] = "9",
+  ["Add"] = "+",
+  ["Subtract"] = "-",
+  ["Multiply"] = "*",
+  ["Divide"] = "/",
+  ["Decimal"] = ".",
+ }
 
 -- local function mix_apc_s2rm(key, env)
 local function processor(key, env)
   local engine = env.engine
   local context = engine.context
-  local input_124 = context.input
-  local orig_124 = context:get_commit_text()
+  local c_input = context.input
+  local comp = context.composition
+  local seg = comp:back()
+  local g_c_t = context:get_commit_text()
   local o_ascii_punct = context:get_option("ascii_punct")
   local o_ascii_mode = context:get_option("ascii_mode")
-  -- local check_i1 = string.match(input_124, "[@:]")
-  -- local check_i2 = string.match(input_124, "'/")
-  -- local check_i3 = string.match(input_124, "=[-125890;,./]$")
-  -- local check_i4 = string.match(input_124, "=[-;,./][-;,./]$")
-  -- local check_i5 = string.match(input_124, "==[90]$")
-  local check_i = string.match(input_124, "[@:]") or
-                  string.match(input_124, "'/") or
-                  string.match(input_124, "=[-125890;,./]$") or
-                  string.match(input_124, "=[-;,./][-;,./]$") or
-                  string.match(input_124, "==[90]$")
   -- local c_i_c = context:is_composing()
+
+  -- local check_i1 = string.match(c_input, "[@:]")
+  -- local check_i2 = string.match(c_input, "'/")
+  -- local check_i3 = string.match(c_input, "=[-125890;,./]$")
+  -- local check_i4 = string.match(c_input, "=[-;,./][-;,./]$")
+  -- local check_i5 = string.match(c_input, "==[90]$")
+  local check_i = string.match(c_input, "[@:]") or
+                  string.match(c_input, "'/") or
+                  string.match(c_input, "=[-125890;,./]$") or
+                  string.match(c_input, "=[-;,./][-;,./]$") or
+                  string.match(c_input, "==[90]$")
+
+  local check_pre = string.match(c_input, "'/[-]?[.]?$")
+  local check_num_cal = string.match(c_input, "'/[-]?[.]?%d+%.?%d*$") or
+                        string.match(c_input, "'/[-.rq(]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*$")
+  -- local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
+  -- local kp_p = env.kp_pattern[key_kp]
+
+---------------------------------------------------------------------------
 
   if o_ascii_mode then
     return 2
+
+  -- --- 該條目移到下方，這邊開啟 Shift+less 和 Shift+greater 啟始無法作用
+  -- --- prevent segmentation fault (core dumped) （避免進入死循環，有用到 seg=comp:back() 建議使用去排除？）
+  -- elseif comp:empty() then
+  --   return 2
+
+  --- pass release ctrl alt super
+  elseif key:release() or key:ctrl() or key:alt() or key:super() then
+    return 2
+
+---------------------------------------------------------------------------
+--[[
+以下特殊時 space 直上屏
+--]]
 
   elseif key:repr() == "space" and context:is_composing() then
   -- elseif key:repr() == "space" and context:has_menu() then
@@ -33,19 +96,24 @@ local function processor(key, env)
   -- elseif (key:repr() == "space") then
     if check_i then
     -- if check_i1 or check_i2 or check_i3 or check_i4 or check_i5 then
-    -- if ( string.match(input_124, "[@:]") or string.match(input_124, "'/") or string.match(input_124, "=[-125890;,./]$") or string.match(input_124, "=[-;,./][-;,./]$") or string.match(input_124, "==[90]$") ) then  --or string.match(input_124, "==[,.]{2}$")
-    -- if ( string.match(input_124, "[@:]") or string.match(input_124, "'/") or string.match(input_124, "=[-125890;,./]$") or string.match(input_124, "=[-;,./][-;,./]$") or string.match(input_124, "==[90]$") or string.match(input_124, "==[,][,]?$") or string.match(input_124, "==[.][.]?$") ) then
-    -- -- 「全，非精簡」 if ( string.match(input_124, "[@:]") or string.match(input_124, "'/") or string.match(input_124, "=[-125890;,./]$") or string.match(input_124, "=[-][-]$") or string.match(input_124, "=[;][;]$") or string.match(input_124, "=[,][,]$") or string.match(input_124, "=[.][.]$") or string.match(input_124, "=[/][/]$") or string.match(input_124, "==[90]$") or string.match(input_124, "==[,][,]?$") or string.match(input_124, "==[.][.]?$") ) then
-      engine:commit_text(orig_124)
+    -- if ( string.match(c_input, "[@:]") or string.match(c_input, "'/") or string.match(c_input, "=[-125890;,./]$") or string.match(c_input, "=[-;,./][-;,./]$") or string.match(c_input, "==[90]$") ) then  --or string.match(c_input, "==[,.]{2}$")
+    -- if ( string.match(c_input, "[@:]") or string.match(c_input, "'/") or string.match(c_input, "=[-125890;,./]$") or string.match(c_input, "=[-;,./][-;,./]$") or string.match(c_input, "==[90]$") or string.match(c_input, "==[,][,]?$") or string.match(c_input, "==[.][.]?$") ) then
+    -- -- 「全，非精簡」 if ( string.match(c_input, "[@:]") or string.match(c_input, "'/") or string.match(c_input, "=[-125890;,./]$") or string.match(c_input, "=[-][-]$") or string.match(c_input, "=[;][;]$") or string.match(c_input, "=[,][,]$") or string.match(c_input, "=[.][.]$") or string.match(c_input, "=[/][/]$") or string.match(c_input, "==[90]$") or string.match(c_input, "==[,][,]?$") or string.match(c_input, "==[.][.]?$") ) then
+      engine:commit_text(g_c_t)
       context:clear()
       return 1 -- kAccepted
     end
+
+---------------------------------------------------------------------------
+--[[
+以下 ascii_punct 標點轉寫
+--]]
 
   elseif o_ascii_punct then
     if key:repr() == "Shift+less" then
       if context:is_composing() then
       -- if c_i_c then
-        engine:commit_text( orig_124 .. "," )
+        engine:commit_text( g_c_t .. "," )
       else
         engine:commit_text( "," )
       end
@@ -54,13 +122,59 @@ local function processor(key, env)
     elseif key:repr() == "Shift+greater" then
       if context:is_composing() then
       -- if c_i_c then
-        engine:commit_text( orig_124 .. "." )
+        engine:commit_text( g_c_t .. "." )
       else
         engine:commit_text( "." )
       end
       context:clear()
       return 1 -- kAccepted
     end
+
+---------------------------------------------------------------------------
+--[[
+以下使得純數字和計算機時，於小鍵盤可輸入數字和運算符
+--]]
+
+  --- prevent segmentation fault (core dumped) （避免進入死循環，有用到 seg=comp:back() 建議使用去排除？）
+  elseif comp:empty() then
+    return 2
+
+  elseif seg:has_tag("lua") then
+    -- local kp_pattern = {
+    --   ["0"] = "0",
+    --   ["1"] = "1",
+    --   ["2"] = "2",
+    --   ["3"] = "3",
+    --   ["4"] = "4",
+    --   ["5"] = "5",
+    --   ["6"] = "6",
+    --   ["7"] = "7",
+    --   ["8"] = "8",
+    --   ["9"] = "9",
+    --   ["Add"] = "+",
+    --   ["Subtract"] = "-",
+    --   ["Multiply"] = "*",
+    --   ["Divide"] = "/",
+    --   ["Decimal"] = ".",
+    --  }
+    local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
+    local kp_p = kp_pattern[key_kp]
+    if kp_p ~= nil then
+      if not check_pre and not check_num_cal then
+        return 2
+      elseif string.match(kp_p, "[%d.-]") then
+        context.input = c_input .. kp_p
+        return 1
+      --- 防開頭後接[+*/]
+      elseif check_pre then
+        return 2
+      elseif string.match(kp_p, "[+*/]") then
+        context.input = c_input .. kp_p
+        return 1
+      end
+    end
+
+---------------------------------------------------------------------------
 
   end
 
@@ -69,3 +183,4 @@ end
 
 -- return mix_apc_s2rm
 return { func = processor }
+-- return { init = init, func = processor }

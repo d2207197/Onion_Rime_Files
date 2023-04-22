@@ -1,29 +1,56 @@
---- @@ zhuyin_space
+--- @@ mix_zhs_ltk
 --[[
 注音反查 Return 和 space 和 小鍵盤數字鍵 上屏修正
 尚有bug待處理
+合併 zhuyin_space、lua_tran_kp
 --]]
-
-
--- local function status(ctx)
---     local stat = metatable()
---     local comp = ctx.composition
---     stat.always = true
---     stat.composing = ctx:is_composing()
---     stat.empty = not stat.composing
---     stat.has_menu = ctx:has_menu()
---     stat.paging = not comp:empty() and comp:back():has_tag("paging")
---     return stat
--- end
-
 
 ----------------------------------------------------------------------------------------
 local utf8_sub = require("f_components/f_utf8_sub")
 ----------------------------------------------------------------------------------------
 
+-- local function init(env)
+--   env.kp_pattern = {
+--     ["0"] = "0",
+--     ["1"] = "1",
+--     ["2"] = "2",
+--     ["3"] = "3",
+--     ["4"] = "4",
+--     ["5"] = "5",
+--     ["6"] = "6",
+--     ["7"] = "7",
+--     ["8"] = "8",
+--     ["9"] = "9",
+--     ["Add"] = "+",
+--     ["Subtract"] = "-",
+--     ["Multiply"] = "*",
+--     ["Divide"] = "/",
+--     ["Decimal"] = ".",
+--    }
+--   env.set_char_bpmf = Set {"ㄅ", "ㄆ", "ㄇ", "ㄈ", "ㄉ", "ㄊ", "ㄋ", "ㄌ", "ㄍ", "ㄎ", "ㄏ", "ㄐ", "ㄑ", "ㄒ", "ㄓ", "ㄔ", "ㄕ", "ㄖ", "ㄗ", "ㄘ", "ㄙ", "ㄧ", "ㄨ", "ㄩ", "ㄚ", "ㄛ", "ㄜ", "ㄝ", "ㄞ", "ㄟ", "ㄠ", "ㄡ", "ㄢ", "ㄣ", "ㄤ", "ㄥ", "ㄦ", "ˉ", "ˊ", "ˇ", "ˋ", "˙", "ㄪ", "ㄫ", "ㄫ", "ㄬ", "ㄭ", "ㄮ", "ㄮ", "ㄯ", "ㄯ", "ㆠ", "ㆡ", "ㆢ", "ㆣ", "ㆤ", "ㆥ", "ㆦ", "ㆧ", "ㆨ", "ㆩ", "ㆪ", "ㆫ", "ㆬ", "ㆭ", "ㆭ", "ㆮ", "ㆯ", "ㆰ", "ㆰ", "ㆱ", "ㆱ", "ㆲ", "ㆲ", "ㆳ", "ㆴ", "ㆵ", "ㆶ", "ㆷ", "ㆸ", "ㆹ", "ㆺ"}
+-- end
+
+local kp_pattern = {
+  ["0"] = "0",
+  ["1"] = "1",
+  ["2"] = "2",
+  ["3"] = "3",
+  ["4"] = "4",
+  ["5"] = "5",
+  ["6"] = "6",
+  ["7"] = "7",
+  ["8"] = "8",
+  ["9"] = "9",
+  ["Add"] = "+",
+  ["Subtract"] = "-",
+  ["Multiply"] = "*",
+  ["Divide"] = "/",
+  ["Decimal"] = ".",
+ }
+
 local set_char_bpmf = Set {"ㄅ", "ㄆ", "ㄇ", "ㄈ", "ㄉ", "ㄊ", "ㄋ", "ㄌ", "ㄍ", "ㄎ", "ㄏ", "ㄐ", "ㄑ", "ㄒ", "ㄓ", "ㄔ", "ㄕ", "ㄖ", "ㄗ", "ㄘ", "ㄙ", "ㄧ", "ㄨ", "ㄩ", "ㄚ", "ㄛ", "ㄜ", "ㄝ", "ㄞ", "ㄟ", "ㄠ", "ㄡ", "ㄢ", "ㄣ", "ㄤ", "ㄥ", "ㄦ", "ˉ", "ˊ", "ˇ", "ˋ", "˙", "ㄪ", "ㄫ", "ㄫ", "ㄬ", "ㄭ", "ㄮ", "ㄮ", "ㄯ", "ㄯ", "ㆠ", "ㆡ", "ㆢ", "ㆣ", "ㆤ", "ㆥ", "ㆦ", "ㆧ", "ㆨ", "ㆩ", "ㆪ", "ㆫ", "ㆬ", "ㆭ", "ㆭ", "ㆮ", "ㆯ", "ㆰ", "ㆰ", "ㆱ", "ㆱ", "ㆲ", "ㆲ", "ㆳ", "ㆴ", "ㆵ", "ㆶ", "ㆷ", "ㆸ", "ㆹ", "ㆺ"}
 
--- local function zhuyin_space(key,env)
+-- local function mix_zhs_ltk(key,env)
 local function processor(key, env)
   local engine = env.engine
   local context = engine.context
@@ -36,13 +63,11 @@ local function processor(key, env)
   local o_ascii_mode = context:get_option("ascii_mode")
   local key_num = key:repr():match("KP_([0-9])") or key:repr():match("Control%+([0-9])")
 
-  -- local s = status(context)
-  --- 不要使用以下作為選擇項和未選擇項計算，太困難了，因 preedit 除注音字節，還包含不確定的分節空白。
-  -- local start = context:get_preedit().sel_start
-  -- local _end = context:get_preedit().sel_end
-  -- local es = _end - start
-  -- local caret_pos = context.caret_pos
-
+  local check_pre = string.match(c_input, "'/[-]?[.]?$")
+  local check_num_cal = string.match(c_input, "'/[-]?[.]?%d+%.?%d*$") or
+                        string.match(c_input, "'/[-.rq(]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*$")
+  -- local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
+  -- local kp_p = env.kp_pattern[key_kp]
 
 -----------------------------------------------------------------------------
 
@@ -56,6 +81,47 @@ local function processor(key, env)
   --- pass release alt super (not pass ctrl)
   elseif key:release() or key:alt() or key:super() then
     return 2
+
+---------------------------------------------------------------------------
+--[[
+以下開始使得純數字和計算機時，於小鍵盤可輸入數字和運算符
+--]]
+
+  -- elseif seg:has_tag("lua") and kp_p ~= nil then
+  elseif seg:has_tag("lua") then
+    -- local kp_pattern = {
+    --   ["0"] = "0",
+    --   ["1"] = "1",
+    --   ["2"] = "2",
+    --   ["3"] = "3",
+    --   ["4"] = "4",
+    --   ["5"] = "5",
+    --   ["6"] = "6",
+    --   ["7"] = "7",
+    --   ["8"] = "8",
+    --   ["9"] = "9",
+    --   ["Add"] = "+",
+    --   ["Subtract"] = "-",
+    --   ["Multiply"] = "*",
+    --   ["Divide"] = "/",
+    --   ["Decimal"] = ".",
+    --  }
+    local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
+    local kp_p = kp_pattern[key_kp]
+    if kp_p ~= nil then
+      if not check_pre and not check_num_cal then
+        return 2
+      elseif string.match(kp_p, "[%d.-]") then
+        context.input = c_input .. kp_p
+        return 1
+      --- 防開頭後接[+*/]
+      elseif check_pre then
+        return 2
+      elseif string.match(kp_p, "[+*/]") then
+        context.input = c_input .. kp_p
+        return 1
+      end
+    end
 
 ---------------------------------------------------------------------------
 --[[
@@ -193,5 +259,6 @@ local function processor(key, env)
 end
 
 
--- return zhuyin_space
+-- return mix_zhs_ltk
 return { func = processor }
+-- return { init = init, func = processor }

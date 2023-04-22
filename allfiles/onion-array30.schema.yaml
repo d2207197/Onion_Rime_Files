@@ -58,7 +58,6 @@ engine:
     # - uniquifier
     # - single_char_filter
   processors:
-    - lua_processor@lua_tran_kp  #使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入。
     - lua_processor@array30up_mix
     # - lua_processor@array30up #三、四、五碼空白鍵直上屏
     # - lua_processor@array30up_zy #注音反查 Return 和 space 上屏修正。 #架構關係，反查輸入法使用鍵位大於主輸入法，仍會產生 Bug。
