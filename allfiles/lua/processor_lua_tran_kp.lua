@@ -3,29 +3,29 @@
 使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入
 --]]
 
--- local function init(env)
---   engine = env.engine
---   schema = engine.schema
---   config = schema.config
---   env.prefix = config:get_string("mf_translator/prefix")
---   env.kp_pattern = {
---     ["0"] = "0",
---     ["1"] = "1",
---     ["2"] = "2",
---     ["3"] = "3",
---     ["4"] = "4",
---     ["5"] = "5",
---     ["6"] = "6",
---     ["7"] = "7",
---     ["8"] = "8",
---     ["9"] = "9",
---     ["Add"] = "+",
---     ["Subtract"] = "-",
---     ["Multiply"] = "*",
---     ["Divide"] = "/",
---     ["Decimal"] = ".",
---    }
--- end
+local function init(env)
+  engine = env.engine
+  schema = engine.schema
+  config = schema.config
+  env.prefix = config:get_string("mf_translator/prefix")
+  -- env.kp_pattern = {
+  --   ["0"] = "0",
+  --   ["1"] = "1",
+  --   ["2"] = "2",
+  --   ["3"] = "3",
+  --   ["4"] = "4",
+  --   ["5"] = "5",
+  --   ["6"] = "6",
+  --   ["7"] = "7",
+  --   ["8"] = "8",
+  --   ["9"] = "9",
+  --   ["Add"] = "+",
+  --   ["Subtract"] = "-",
+  --   ["Multiply"] = "*",
+  --   ["Divide"] = "/",
+  --   ["Decimal"] = ".",
+  --  }
+end
 
 local kp_pattern = {
   ["0"] = "0",
@@ -49,11 +49,11 @@ local kp_pattern = {
 local function processor(key, env)
   local engine = env.engine
   local context = engine.context
-  local schema = engine.schema -- init
+  -- local schema = engine.schema -- init
   local c_input = context.input
   local comp = context.composition
-  local config = schema.config -- init
-  local prefix = config:get_string("mf_translator/prefix") -- init
+  -- local config = schema.config -- init
+  -- local prefix = config:get_string("mf_translator/prefix") -- init
   local seg = comp:back()
   -- local g_c_t = context:get_commit_text()
   local o_ascii_mode = context:get_option("ascii_mode")
