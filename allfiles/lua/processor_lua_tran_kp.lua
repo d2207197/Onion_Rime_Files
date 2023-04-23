@@ -62,9 +62,9 @@ local function processor(key, env)
   -- local check_num_cal = string.match(c_input, "`[-]?[.]?%d+%.?%d*$") or
   --                       string.match(c_input, "`[-.rq(]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*$")
 
-  local check_pre = string.match(c_input, prefix .. "[-]?[.]?$")
-  local check_num_cal = string.match(c_input, prefix .. "[-]?[.]?%d+%.?%d*$") or
-                        string.match(c_input, prefix .. "[-.rq(]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*$")
+  local check_pre = string.match(c_input, env.prefix .. "[-]?[.]?$")
+  local check_num_cal = string.match(c_input, env.prefix .. "[-]?[.]?%d+%.?%d*$") or
+                        string.match(c_input, env.prefix .. "[-.rq(]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*$")
   -- local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
   -- local kp_p = env.kp_pattern[key_kp]
 
@@ -207,5 +207,5 @@ local function processor(key, env)
 end
 
 -- return lua_tran_kp
-return { func = processor }
--- return { init = init, func = processor }
+-- return { func = processor }
+return { init = init, func = processor }
