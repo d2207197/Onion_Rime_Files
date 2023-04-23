@@ -181,7 +181,8 @@ local function processor(key, env)
   -- elseif key:repr() == "space" then
   -- elseif key:repr() == "space" and context:has_menu() then
     -- engine:commit_text(c_input .. "_")
-    context.input = c_input .. " "
+    -- context.input = c_input .. " "
+    context:push_input( " " )
     -- context:clear()
     return 1
 

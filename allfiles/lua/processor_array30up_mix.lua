@@ -134,13 +134,15 @@ local function processor(key, env)
       if not check_pre and not check_num_cal then
         return 2
       elseif string.match(kp_p, "[%d.-]") then
-        context.input = c_input .. kp_p
+        -- context.input = c_input .. kp_p
+        context:push_input( kp_p )
         return 1
       --- 防開頭後接[+*/]
       elseif check_pre then
         return 2
       elseif string.match(kp_p, "[+*/]") then
-        context.input = c_input .. kp_p
+        -- context.input = c_input .. kp_p
+        context:push_input( kp_p )
         return 1
       end
     end
@@ -344,7 +346,8 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
 
   --- 補掛接反查注音不能使用空白當作一聲
   elseif key:repr() == "space" then
-    context.input = c_input .. " "
+    -- context.input = c_input .. " "
+    context:push_input( " " )
     return 1
 
 ---------------------------------------------------------------------------

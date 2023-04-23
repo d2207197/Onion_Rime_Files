@@ -3,54 +3,57 @@
 使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入
 --]]
 
-local function init(env)
-  engine = env.engine
-  schema = engine.schema
-  config = schema.config
-  env.prefix = config:get_string("mf_translator/prefix")
-  env.kp_pattern = {
-    ["0"] = "0",
-    ["1"] = "1",
-    ["2"] = "2",
-    ["3"] = "3",
-    ["4"] = "4",
-    ["5"] = "5",
-    ["6"] = "6",
-    ["7"] = "7",
-    ["8"] = "8",
-    ["9"] = "9",
-    ["Add"] = "+",
-    ["Subtract"] = "-",
-    ["Multiply"] = "*",
-    ["Divide"] = "/",
-    ["Decimal"] = ".",
-   }
-end
+-- local function init(env)
+--   engine = env.engine
+--   schema = engine.schema
+--   config = schema.config
+--   env.prefix = config:get_string("mf_translator/prefix")
+--   env.kp_pattern = {
+--     ["0"] = "0",
+--     ["1"] = "1",
+--     ["2"] = "2",
+--     ["3"] = "3",
+--     ["4"] = "4",
+--     ["5"] = "5",
+--     ["6"] = "6",
+--     ["7"] = "7",
+--     ["8"] = "8",
+--     ["9"] = "9",
+--     ["Add"] = "+",
+--     ["Subtract"] = "-",
+--     ["Multiply"] = "*",
+--     ["Divide"] = "/",
+--     ["Decimal"] = ".",
+--    }
+-- end
 
--- local kp_pattern = {
---   ["0"] = "0",
---   ["1"] = "1",
---   ["2"] = "2",
---   ["3"] = "3",
---   ["4"] = "4",
---   ["5"] = "5",
---   ["6"] = "6",
---   ["7"] = "7",
---   ["8"] = "8",
---   ["9"] = "9",
---   ["Add"] = "+",
---   ["Subtract"] = "-",
---   ["Multiply"] = "*",
---   ["Divide"] = "/",
---   ["Decimal"] = ".",
---  }
+local kp_pattern = {
+  ["0"] = "0",
+  ["1"] = "1",
+  ["2"] = "2",
+  ["3"] = "3",
+  ["4"] = "4",
+  ["5"] = "5",
+  ["6"] = "6",
+  ["7"] = "7",
+  ["8"] = "8",
+  ["9"] = "9",
+  ["Add"] = "+",
+  ["Subtract"] = "-",
+  ["Multiply"] = "*",
+  ["Divide"] = "/",
+  ["Decimal"] = ".",
+ }
 
 -- local function lua_tran_kp(key, env)
 local function processor(key, env)
   local engine = env.engine
   local context = engine.context
+  local schema = engine.schema -- init
   local c_input = context.input
   local comp = context.composition
+  local config = schema.config -- init
+  local prefix = config:get_string("mf_translator/prefix") -- init
   local seg = comp:back()
   -- local g_c_t = context:get_commit_text()
   local o_ascii_mode = context:get_option("ascii_mode")
@@ -59,9 +62,9 @@ local function processor(key, env)
   -- local check_num_cal = string.match(c_input, "`[-]?[.]?%d+%.?%d*$") or
   --                       string.match(c_input, "`[-.rq(]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*$")
 
-  local check_pre = string.match(c_input, env.prefix .. "[-]?[.]?$")
-  local check_num_cal = string.match(c_input, env.prefix .. "[-]?[.]?%d+%.?%d*$") or
-                        string.match(c_input, env.prefix .. "[-.rq(]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*$")
+  local check_pre = string.match(c_input, prefix .. "[-]?[.]?$")
+  local check_num_cal = string.match(c_input, prefix .. "[-]?[.]?%d+%.?%d*$") or
+                        string.match(c_input, prefix .. "[-.rq(]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*$")
   -- local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
   -- local kp_p = env.kp_pattern[key_kp]
 
@@ -110,18 +113,20 @@ local function processor(key, env)
     --   ["Decimal"] = ".",
     --  }
     local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
-    local kp_p = env.kp_pattern[key_kp]
+    local kp_p = kp_pattern[key_kp]
     if kp_p ~= nil then
       if not check_pre and not check_num_cal then
         return 2
       elseif string.match(kp_p, "[%d.-]") then
-        context.input = c_input .. kp_p
+        -- context.input = c_input .. kp_p
+        context:push_input( kp_p )
         return 1
       --- 防開頭後接[+*/]
       elseif check_pre then
         return 2
       elseif string.match(kp_p, "[+*/]") then
-        context.input = c_input .. kp_p
+        -- context.input = c_input .. kp_p
+        context:push_input( kp_p )
         return 1
       end
     end
@@ -202,5 +207,5 @@ local function processor(key, env)
 end
 
 -- return lua_tran_kp
--- return { func = processor }
-return { init = init, func = processor }
+return { func = processor }
+-- return { init = init, func = processor }

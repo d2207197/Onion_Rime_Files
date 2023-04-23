@@ -163,13 +163,15 @@ local function processor(key, env)
       if not check_pre and not check_num_cal then
         return 2
       elseif string.match(kp_p, "[%d.-]") then
-        context.input = c_input .. kp_p
+        -- context.input = c_input .. kp_p
+        context:push_input( kp_p )
         return 1
       --- 防開頭後接[+*/]
       elseif check_pre then
         return 2
       elseif string.match(kp_p, "[+*/]") then
-        context.input = c_input .. kp_p
+        -- context.input = c_input .. kp_p
+        context:push_input( kp_p )
         return 1
       end
     end
