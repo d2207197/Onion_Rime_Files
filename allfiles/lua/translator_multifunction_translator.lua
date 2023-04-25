@@ -163,7 +163,7 @@ local function init(env)
       , { "  ○ y ○ m ○ d〔○年○月○日〕", "⑦" }
       , { "  ○ y ○ m〔○年○月〕    ○ m ○ d〔○月○日〕", "⑧" }
       , { "  ○ y〔○年〕    ○ m〔○月〕    ○ d〔○日〕", "⑨" }
-      , { "  [0-9]+[ + - * / ^ ( ) ]...〔簡易計算機〕", "⑩" }
+      , { "  [0-9.]+[ + - * / ^ ( ) ]...〔簡易計算機〕", "⑩" }
       , { "  算符： ‹+ a›   ‹- r›   ‹* x›   ‹/ v›   ‹^ s›   ‹ ( q›   ‹ ) w› ", "⑪" }
       , { "  / [a-z , . - \' / ]+〔小寫字母〕", "⑫" }
       , { "  ; [a-z , . - \' / ]+〔大寫字母〕", "⑬" }
@@ -173,10 +173,10 @@ local function init(env)
       , { "  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑰" }
       , { "  c [0-9]+〔內碼十進制 Dec〕", "⑱" }
       , { "  o [0-7]+〔內碼八進制 Oct〕", "⑲" }
-      , { "  g〔垃圾回收器〕", "⑳" }
-      , { "  v〔版本資訊〕", "㉑" }
-      , { "===========  結束  ===========    ", "㉒" }
-      , { "", "㉓" }
+      , { "  v〔版本資訊〕", "⑳" }
+      , { "  g〔Lua 所佔垃圾/記憶體〕", "㉑" }
+      , { "  gc〔垃圾/記憶體回收器〕", "㉒" }
+      , { "===========  結束  ===========    ", "㉓" }
       -- , { "", "㉔" }
       -- , { "", "㉕" }
       -- , { "", "㉖" }
@@ -184,6 +184,12 @@ local function init(env)
       -- , { "", "㉘" }
       -- , { "", "㉙" }
       -- , { "", "㉚" }
+      -- , { "", "㉛" }
+      -- , { "", "㉜" }
+      -- , { "", "㉝" }
+      -- , { "", "㉞" }
+      -- , { "", "㉟" }
+      -- , { "", "㊱" }
       -- , { "〔夜思‧李白〕", "床前明月光，疑是地上霜。\r舉頭望明月，低頭思故鄉。" }
       }
   -- log.info("mf_translator Initilized!")
@@ -309,8 +315,14 @@ local function translate(input, seg, env)
       return
     end
 
-    -- 垃圾回收器(Garbage Collection)
+    -- lua 所佔垃圾/記憶體(Garbage)
     if (input == env.prefix .. "g") then
+      yield_c( ("%.f"):format(collectgarbage("count")) .." KB", "〔 the amount of lua memory 〕")
+      return
+    end
+
+    -- 垃圾回收器(Garbage Collection)
+    if (input == env.prefix .. "gc") then
       yield_c( ("%.f"):format(collectgarbage("count")) .." KB", "〔 the amount of lua memory before GC 〕")
       -- yield_c( ("%.f"):format(collectgarbage("count")*1024) .." Bytes", "〔 the amount of lua memory before GC 〕")
       -- yield_c( collectgarbage("count") .." KB", "〔 the amount of lua memory before GC 〕")
