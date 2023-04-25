@@ -2143,12 +2143,18 @@ local function translate(input, seg, env)
         yield_c( neg_n_l1 .. little1_number(numberout), "〔上標數字〕")
         yield_c( neg_n_l2 .. little2_number(numberout), "〔下標數字〕")
 
-        -- for _, conf in ipairs(confs) do
-        --   local r = read_number(conf, nn)
-        --   yield_c( r, conf.comment)
-        -- end
-        yield_c( neg_n_ch .. read_number(confs[1], nn), confs[1].comment)
-        yield_c( neg_n_ch .. read_number(confs[2], nn), confs[2].comment)
+        --- 超過「1000垓」則不顯示中文數字
+        if (string.len(numberout) < 25) then
+          -- for _, conf in ipairs(confs) do
+          --   local r = read_number(conf, nn)
+          --   yield_c( r, conf.comment)
+          -- end
+          yield_c( neg_n_ch .. read_number(confs[1], nn), confs[1].comment)
+          yield_c( neg_n_ch .. read_number(confs[2], nn), confs[2].comment)
+        -- else
+        --   yield_c( "超過位數", confs[1].comment)
+        --   yield_c( "超過位數", confs[2].comment)
+        end
 
         if (string.len(numberout) < 2) then
           yield_c( "元整", "〔純中文數字〕")
@@ -2172,13 +2178,21 @@ local function translate(input, seg, env)
         if (neg_n=="") then
           if tonumber(numberout)==1 or tonumber(numberout)==0 then
             yield_c( string.sub(numberout, -1), "〔二進位〕")
-          else
+          --- 等於大於9999999999999999（16位-1），lua中幾個轉換函數都會出錯，運算會不正確
+          elseif (tonumber(numberout) < 9999999999999999) then
+          -- elseif (string.len(numberout) < 16) then
             yield_c( Dec2bin(numberout), "〔二進位〕")
+          -- else
+          --   yield_c( "", "〔二進位〕(數值超過 16位-1 會不正確)")
           end
 
-          yield_c( string.format("%X",numberout), "〔十六進位〕")
-          yield_c( string.format("%x",numberout), "〔十六進位〕")
-          yield_c( string.format("%o",numberout), "〔八進位〕")
+          --- 整數庫限制：二進制超過64位等同十進制2^63，超過則報錯，設定不顯示
+          if (tonumber(numberout) < 9223372036854775807) then
+          -- if (string.len(numberout) < 19) then
+            yield_c( string.format("%X",numberout), "〔十六進位〕")
+            yield_c( string.format("%x",numberout), "〔十六進位〕")
+            yield_c( string.format("%o",numberout), "〔八進位〕")
+          end
         end
 
       elseif (dot0~="") then
