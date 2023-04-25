@@ -83,14 +83,25 @@ local function filter(inp, env)
         -- local cands = {}  -- 理論上不對，這邊不應該加local，但實際又有效果？觀察！
         -- local cands = nil
         cands = nil
-        --- 以下回收記憶體
+        --- 以下執行清理記憶體
         if collectgarbage('count') < 3000 then
-            collectgarbage("step")
+          collectgarbage("step")
         else
-            collectgarbage('collect')
+          collectgarbage('collect')
+          -- collectgarbage()
         end
 
       end
+
+      -- --- 以下防止記憶體洩漏暴漲？！不會立即清理記憶體，但會回退，測試！
+      -- cands = nil
+      -- --- 以下執行清理記憶體
+      -- if collectgarbage('count') < 3000 then
+      --     collectgarbage("step")
+      -- else
+      --     collectgarbage('collect')
+      --     -- collectgarbage()
+      -- end
 
     end
 
