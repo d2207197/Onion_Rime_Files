@@ -43,14 +43,14 @@ local function filter(inp, env)
     else
 
       local cands = {}
-      -- local c = 1
+      local c = 1
       for cand in inp:iter() do  -- 封進 cands 中，供後面排序。
-        --- 使用 table 的 size（實測效率最高）
-        cands[#cands+1] = cand
+        --- 使用 table 的 size（效率較高）
+        -- cands[#cands+1] = cand
 
-        --- 使用計數器（效率較高）
-        -- cands[c] = cand
-        -- c = c+1
+        --- 使用計數器（秒數最短）
+        cands[c] = cand
+        c = c+1
 
         --- 原始（效率較低）
         -- table.insert(cands, cand)
@@ -80,17 +80,17 @@ local function filter(inp, env)
         end
 
         --- 以下防止記憶體洩漏暴漲？！不會立即清理記憶體，但會回退，測試！
-        -- cands = {}
-        -- cands = nil
         -- local cands = {}  -- 理論上不對，這邊不應該加local，但實際又有效果？觀察！
         -- local cands = nil
+        cands = nil
+        --- 以下回收記憶體
+        if collectgarbage('count') < 3000 then
+            collectgarbage("step")
+        else
+            collectgarbage('collect')
+        end
 
       end
-
-      --- 以下防止記憶體洩漏暴漲？！不會立即清理記憶體，但會回退，測試！
-      -- local cands = {}
-      -- local cands = nil
-      cands = nil
 
     end
 
