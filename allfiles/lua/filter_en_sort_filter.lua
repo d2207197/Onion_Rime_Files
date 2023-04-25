@@ -84,10 +84,13 @@ local function filter(inp, env)
         -- local cands = nil
         cands = nil
         --- 以下執行清理記憶體
-        if collectgarbage('count') < 3000 then
+        -- if collectgarbage("count") > 3000 then
+        --   collectgarbage("collect")
+        -- end
+        if collectgarbage("count") < 3000 then
           collectgarbage("step")
         else
-          collectgarbage('collect')
+          collectgarbage("collect")
           -- collectgarbage()
         end
 
@@ -96,10 +99,13 @@ local function filter(inp, env)
       -- --- 以下防止記憶體洩漏暴漲？！不會立即清理記憶體，但會回退，測試！
       -- cands = nil
       -- --- 以下執行清理記憶體
-      -- if collectgarbage('count') < 3000 then
+      -- -- if collectgarbage("count") > 3000 then
+      -- --   collectgarbage("collect")
+      -- -- end
+      -- if collectgarbage("count") < 3000 then
       --     collectgarbage("step")
       -- else
-      --     collectgarbage('collect')
+      --     collectgarbage("collect")
       --     -- collectgarbage()
       -- end
 

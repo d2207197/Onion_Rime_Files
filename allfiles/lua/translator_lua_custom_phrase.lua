@@ -62,13 +62,19 @@ local function load_text_dict(text_dict)
 
       -- tab[v_code] = v_text  -- 一個 code 只能有一條短語，下方可一個 code，多條短語。
       --- 下方 table 格式為：{[v_code1]={'v_text1','v_text2',...},[v_code2]={'v_text3'},...}
+      local nn = {}
       if tab[v_code] == nil then
-        local nn = {}
-        table.insert(nn, v_text)
+        -- local nn = {}
+        -- table.insert(nn, v_text)
+        -- nn[#nn+1] = v_text
+        nn[1] = v_text
         tab[v_code] = nn
       else
-        table.insert(tab[v_code], v_text)
+        -- table.insert(tab[v_code], v_text)
+        tab[v_code][#tab[v_code]+1] = v_text
       end
+      --- 以下防止記憶體洩漏暴漲？！不會立即清理記憶體，但會回退，測試！
+      nn = nil
 
     end
   end
