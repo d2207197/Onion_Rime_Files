@@ -317,19 +317,19 @@ local function translate(input, seg, env)
 
     -- lua 所佔垃圾/記憶體(Garbage)
     if (input == env.prefix .. "g") then
-      yield_c( ("%.f"):format(collectgarbage("count")) .." KB", "〔 the amount of lua memory 〕")
+      yield_c( ("%.f"):format(collectgarbage("count")) .." KB", "〔 the amount of Lua memory 〕")
       return
     end
 
     -- 垃圾回收器(Garbage Collection)
     if (input == env.prefix .. "gc") then
-      yield_c( ("%.f"):format(collectgarbage("count")) .." KB", "〔 the amount of lua memory before GC 〕")
+      yield_c( ("%.f"):format(collectgarbage("count")) .." KB", "〔 the amount of Lua memory before GC 〕")
       -- yield_c( ("%.f"):format(collectgarbage("count")*1024) .." Bytes", "〔 the amount of lua memory before GC 〕")
       -- yield_c( collectgarbage("count") .." KB", "〔 the amount of lua memory before GC 〕")
       -- yield_c( collectgarbage("count")*1024, "〔 the amount of lua memory before GC 〕")
       collectgarbage()  -- 強制進行垃圾回收
       -- collectgarbage("collect")  -- 做一次完整的垃圾收集循環
-      yield_c( ("%.f"):format(collectgarbage("count")) .." KB", "〔 the amount of lua memory after GC 〕")
+      yield_c( ("%.f"):format(collectgarbage("count")) .." KB", "〔 the amount of Lua memory after GC 〕")
       -- yield_c( ("%.f"):format(collectgarbage("count")*1024) .." Bytes", "〔 the amount of lua memory after GC 〕")
       -- yield_c( collectgarbage("count") .." KB", "〔 the amount of lua memory after GC 〕")
       -- yield_c( collectgarbage("count")*1024, "〔 the amount of lua memory after GC 〕")
