@@ -2192,7 +2192,7 @@ local function translate(input, seg, env)
           end
 
           --- 整數庫限制：最大的64位元整數超過64位等同十進制2^63，超過則報錯，極限2^63-1，超過設定不顯示
-          if (tonumber(numberout) < 9223372036854775807) then
+          if (tonumber(numberout) < 9223372036854775808) then
           -- if (string.len(numberout) < 19) then
             yield_c( string.format("%X",numberout), "〔十六進位〕")
             yield_c( string.format("%x",numberout), "〔十六進位〕")
