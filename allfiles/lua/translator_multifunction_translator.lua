@@ -2178,15 +2178,20 @@ local function translate(input, seg, env)
         if (neg_n=="") then
           if tonumber(numberout)==1 or tonumber(numberout)==0 then
             yield_c( string.sub(numberout, -1), "〔二進位〕")
-          --- 等於大於9999999999999999（16位-1），lua中幾個轉換函數都會出錯，運算會不正確
-          elseif (tonumber(numberout) < 9999999999999999) then
+          --- 浮點精度關係，二進制轉換運算中：
+          --- math.floor 極限是小數點後15位(小於16位，1.9999999999999999)
+          --- math.fmod 極限是小數點後13位(小於14位，1.99999999999999，14位開頭為偶數時除2是正確的，奇數則不正確)
+          elseif (string.len(numberout) < 14) then
+          --- （以下還是有錯誤！）等於大於9999999999999999（16位-1），lua中幾個轉換函數都會出錯，運算會不正確
+          -- elseif (tonumber(numberout) < 9999999999999999) then
           -- elseif (string.len(numberout) < 16) then
             yield_c( Dec2bin(numberout), "〔二進位〕")
           -- else
-          --   yield_c( "", "〔二進位〕(數值超過 16位-1 會不正確)")
+          --   yield_c( "", "〔二進位〕(數值超過 14位 可能會不正確)")
+          --   -- yield_c( "", "〔二進位〕(數值超過 16位-1 會不正確)")
           end
 
-          --- 整數庫限制：二進制超過64位等同十進制2^63，超過則報錯，設定不顯示
+          --- 整數庫限制：最大的64位元整數超過64位等同十進制2^63，超過則報錯，極限2^63-1，超過設定不顯示
           if (tonumber(numberout) < 9223372036854775807) then
           -- if (string.len(numberout) < 19) then
             yield_c( string.format("%X",numberout), "〔十六進位〕")
