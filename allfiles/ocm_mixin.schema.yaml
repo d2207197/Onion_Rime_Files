@@ -719,9 +719,9 @@ all_bpm:
   enable_sentence: false
   enable_user_dict: false
   prefix: "';'"
-  # suffix: "'"
+  suffix: "'"
   tips: "《注音文》▶"
-  # closing_tips: "◀《注音文》"
+  closing_tips: "◀《注音文》"
   preedit_format:
     - xform/^/《注音文》/
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
@@ -734,7 +734,9 @@ emoji_series:
   enable_sentence: false
   enable_user_dict: true
   prefix: ";"
+  suffix: "'" #注意開啟會干擾「;'」開頭之掛載，需特別設定
   tips: "《EMOJI集》▶"
+  closing_tips: "◀《EMOJI集》"
   preedit_format:
     __include: element_ocm:/emoji_series
 ################################### 標點符號處理 #######################################
@@ -761,9 +763,10 @@ recognizer:
     reverse3_lookup: "^;'[a-z`|]*'?$"
     easy_en: "^'[.][a-z;/.,'-]*$"
     japan: "^',[-a-z,.;/|]*'?$"
-    emoji_series: "^;[a-z]*$|^;;[-0-9a-z]$|^;[0-9]$|^;[0-9]-[0-9]?$"
+    emoji_series: "^;$|^;[a-z]+'?$|^;;[-0-9a-z]'?$|^;[0-9]'?$|^;[0-9]-[0-9]?'?$"
+    # emoji_series: "^;[a-z]*$|^;;[-0-9a-z]$|^;[0-9]$|^;[0-9]-[0-9]?$"
     gr: "^'[[][a-z';]*$"
     cyr: "^'[]][a-z';]*$"
     fs: "^'=[-a-z';]*$"
-    all_bpm: "^';'[-a-z0-9.,/; ]*$"
+    all_bpm: "^';'[-a-z0-9.,/; ]*'?$"
     lua: "^;;$|^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^'/[a-z]*$|^'/[;/'][a-z.,/'-]*$|^'/[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|^'/[xucoe][0-9a-f]+$"

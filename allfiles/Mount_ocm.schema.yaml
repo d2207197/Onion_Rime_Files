@@ -226,9 +226,10 @@ emoji_series:
   enable_sentence: false
   enable_user_dict: true
   prefix: ";"
+  suffix: "'" #注意開啟會干擾「;'」開頭之掛載，需特別設定
 #  suffix: '"'
   tips: "《EMOJI集》▶"
-#  closing_tips: "◀《EMOJI集》"
+  closing_tips: "◀《EMOJI集》"
   preedit_format:
     __include: element_ocm:/emoji_series
 
@@ -363,6 +364,7 @@ recognizer:
   patterns:
     # punct: "^;([a-z]+|[0-9]0?)$"
     pt: "^[,.][,.'a-z]*$|^'['a-z]*$|^,[][]+[a-z]*$|^,v[][]+$|^v[][]+v?$|^[][]+[a-z]*$"
-    emoji_series: "^;[a-z]*$|^;;[-0-9a-z]$|^;[0-9]$|^;[0-9]-[0-9]?$"
+    emoji_series: "^;$|^;[a-z]+'?$|^;;[-0-9a-z]'?$|^;[0-9]'?$|^;[0-9]-[0-9]?'?$"
+    # emoji_series: "^;[a-z]*$|^;;[-0-9a-z]$|^;[0-9]$|^;[0-9]-[0-9]?$"
     reverse2_lookup: "^';[-.,;/0-9a-z |]*'?$"
     reverse3_lookup: "^;'[a-z`|]*'?$"
