@@ -40,7 +40,7 @@ engine:
     - matcher
     - ascii_segmentor
     - abc_segmentor
-    - affix_segmentor@easy_en_upper  #不「tag」可直接附加在「abc」上
+    # - affix_segmentor@easy_en_upper  #不「tag」可直接附加在「abc」上  #單純只附在「abc」上不調出，可不用affix_segmentor。
     - punct_segmentor
     - fallback_segmentor
   translators:
