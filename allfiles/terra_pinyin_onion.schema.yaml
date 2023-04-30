@@ -174,7 +174,7 @@ translator:
   prism: terra_pinyin_onion
   preedit_format:
     - "xlit|;/,'.|¹²³⁴⁵|"
-    - xform|¹|⁽¹˸⁾|
+    - xform|¹|⁽¹’̇⁾|
     - xform|²|⁽²ˊ⁾|
     - xform|³|⁽³’⁾|
     - xform|⁴|⁽⁴'⁾|
@@ -362,7 +362,74 @@ reverse_lookup:
     - xform/([a-z]+)5/$1/
 
 punctuator:
-  import_preset: default
+  # import_preset: default
+  full_shape:
+    " ": {commit: "　"}
+    "!": {commit: "！"}
+    "\"": {pair: ["“", "”"]}
+    "#": ["＃", "⌘"]
+    "$": ["￥", "$", "€", "£", "¥", "¢", "¤"]
+    "%": ["％", "°", "℃"]
+    "&": "＆"
+    "'": {pair: ["‘", "’"]}
+    "(": "（"
+    ")": "）"
+    "*": ["＊", "·", "・", "×", "※", "❂"]
+    "+": "＋"
+    ",": {commit: "，"}
+    "-": "－"
+    .: {commit: "。"}
+    "/": ["／", "÷"]
+    ":": {commit: "："}
+    ";": {commit: "；"}
+    "<": ["《", "〈", "«", "‹"]
+    "=": "＝"
+    ">": ["》", "〉", "»", "›"]
+    "?": {commit: "？"}
+    "@": ["＠", "☯"]
+    "[": ["「", "【", "〔", "［"]
+    "\\": ["、", "＼"]
+    "]": ["」", "】", "〕", "］"]
+    "^": {commit: "……"}
+    _: "——"
+    "`": "｀"
+    "{": ["『", "〖", "｛"]
+    "|": ["·", "｜", "§", "¦"]
+    "}": ["』", "〗", "｝"]
+    "~": "～"
+  half_shape:
+    "!": {commit: "！"}
+    "\"": {pair: ["“", "”"]}
+    "#": "#"
+    "$": ["￥", "$", "€", "£", "¥", "¢", "¤"]
+    "%": ["%", "％", "°", "℃"]
+    "&": "&"
+    "'": {pair: ["‘", "’"]}
+    "(": "（"
+    ")": "）"
+    "*": ["*", "＊", "·", "・", "×", "※", "❂"]
+    "+": "+"
+    ",": {commit: "，"}
+#    "-": "-"
+    .: {commit: "。"}
+    "/": ["、", "/", "／", "÷"]
+    ":": {commit: "："}
+    ";": {commit: "；"}
+    "<": ["《", "〈", "«", "‹"]
+    "=": "="
+    ">": ["》", "〉", "»", "›"]
+    "?": {commit: "？"}
+    "@": "@"
+    "[": ["「", "【", "〔", "［"]
+    "\\": ["、", "\\", "＼"]
+    "]": ["」", "】", "〕", "］"]
+    "^": {commit: "……"}
+    _: "——"
+    "`": "`"
+    "{": ["『", "〖", "｛"]
+    "|": ["·", "|", "｜", "§", "¦"]
+    "}": ["』", "〗", "｝"]
+    "~": ["~", "～"]
 
 key_binder:
   import_preset: default
@@ -412,8 +479,8 @@ key_binder:
 ##    - {accept: space, send: Down, when: has_menu}
 ##    - {accept: space, send: Down, when: paging}
 ##    - {accept: space, send: space, when: composing}
-    - {accept: space, send: Escape, when: composing} #空碼時，按空格清除
-    - {accept: space, send: space, when: has_menu} #非空碼時，空白還是空白
+#    - {accept: space, send: Escape, when: composing} #空碼時，按空格清除
+#    - {accept: space, send: space, when: has_menu} #非空碼時，空白還是空白
 ### 刪除鍵 ###
 #    - {accept: BackSpace, send: Control+BackSpace, when: has_menu} #〔關〕刪除前一個拼音字符〔開〕：刪除整組拼音字符（一個字）
 #    - {accept: Shift+BackSpace, send: BackSpace, when: has_menu}
@@ -437,9 +504,11 @@ editor:
 #    Shift+Return: commit_script_text
 
 recognizer:
-  import_preset: default
+  # import_preset: default
   patterns:
     reverse_lookup: "`[a-z]*'?$"
+    email: "^[a-z][-_.0-9a-z]*@.*$"
+    url: "^(https?:|ftp[.:]|mailto:|file:).*$$"
 
 # __patch:
 #   # 使用八股文語言模型
