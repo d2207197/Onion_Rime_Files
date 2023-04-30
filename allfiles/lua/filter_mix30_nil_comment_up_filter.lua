@@ -53,6 +53,7 @@ local function filter(inp, env)
   local check_wu = string.match(find_prefix, "^sf $" )
   local check_ji = string.match(find_prefix, "^lb $" )
   local check_kong = string.match(find_prefix, "^ou $" )
+  -- local check_www = string.match(find_prefix, "^www[.].*$" )  -- 直接判別 comment 即可
 
   for cand in inp:iter() do
     if string.match(cand.text, "^⎔%d$" ) then
@@ -60,6 +61,9 @@ local function filter(inp, env)
       -- array30_nil_cand.preedit = array30_preedit
       array30_nil_cand.preedit = cand.preedit
       yield(array30_nil_cand)
+    elseif string.match(cand.comment, "〔URL〕" ) then
+    -- elseif check_www and string.match(cand.comment, "〔URL〕" ) then  -- 直接判別 comment 即可
+      yield(cand)
     else
       if s_up then
 

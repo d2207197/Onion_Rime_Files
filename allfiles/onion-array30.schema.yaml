@@ -81,14 +81,14 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - lua_translator@mf_translator
-    # - lua_translator@t_translator
-    - lua_translator@email_url_translator
     # - script_translator
     - table_translator
     - table_translator@wsymbols #（可用 symbols 更簡單實現，但沒有開頭提示）
     - script_translator@reverse2_lookup
     - table_translator@reverse3_lookup
+    - lua_translator@mf_translator
+    # - lua_translator@t_translator
+    - lua_translator@email_url_translator
 
 
 mf_translator:
@@ -438,7 +438,7 @@ recognizer:
     reverse2_lookup: "^=[-.,;/0-9a-z ]*'?$"
     reverse3_lookup: "^==[a-z,./; ]*'?$"
     # lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|`[a-z]*$|`[;/'][a-z.,/'-]*$|`[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|`[xucoe][0-9a-f]+$"
-    email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$"
+    email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$"
     mf_translator: "`[a-z]*$|`[;/'][a-z.,/'-]*$|`[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|`[xucoe][0-9a-f]+$"
     # lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|`[';/]?[a-z]*$|`[0-9./-]*$|`[xcoe][0-9a-z]+$"
     # lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|`[';a-z0-9./-]*$"
