@@ -8,19 +8,21 @@
 local function processor(key, env)
   local engine = env.engine
   local context = engine.context
+  local c_input = context.input
+  local comp = context.composition
+  local seg = comp:back()
+  local g_c_t = context:get_commit_text()
   local o_ascii_mode = context:get_option("ascii_mode")
-  local input_m = context.input
-  local orig_m = context:get_commit_text()
-  -- local check_i1 = string.match(input_m, "^[a-z][-_.0-9a-z]*@.*$")
-  -- local check_i2 = string.match(input_m, "^https?:.*$")
-  -- local check_i3 = string.match(input_m, "^ftp:.*$")
-  -- local check_i4 = string.match(input_m, "^mailto:.*$")
-  -- local check_i5 = string.match(input_m, "^file:.*$")
-  local check_i = string.match(input_m, "^[a-z][-_.0-9a-z]*@.*$") or
-                  string.match(input_m, "^https?:.*$") or
-                  string.match(input_m, "^ftp:.*$") or
-                  string.match(input_m, "^mailto:.*$") or
-                  string.match(input_m, "^file:.*$")
+  -- local check_i1 = string.match(c_input, "^[a-z][-_.0-9a-z]*@.*$")
+  -- local check_i2 = string.match(c_input, "^https?:.*$")
+  -- local check_i3 = string.match(c_input, "^ftp:.*$")
+  -- local check_i4 = string.match(c_input, "^mailto:.*$")
+  -- local check_i5 = string.match(c_input, "^file:.*$")
+  -- local check_i = string.match(c_input, "^[a-z][-_.0-9a-z]*@.*$") or
+  --                 string.match(c_input, "^https?:.*$") or
+  --                 string.match(c_input, "^ftp:.*$") or
+  --                 string.match(c_input, "^mailto:.*$") or
+  --                 string.match(c_input, "^file:.*$")
 
   -- if context:get_option("ascii_mode") then
   if o_ascii_mode then
@@ -29,10 +31,11 @@ local function processor(key, env)
     return 2
   elseif key:repr() == "space" then
   -- if key:repr() == "space" and context:is_composing() then
-    if check_i then
+    if seg:has_tag("email_url_translator") then
+    -- if check_i then
     -- if check_i1 or check_i2 or check_i3 or check_i4 or check_i5 then
-    -- if ( string.match(input_m, "[@:]")) then
-      engine:commit_text(orig_m)
+    -- if ( string.match(c_input, "[@:]")) then
+      engine:commit_text(g_c_t)
       context:clear()
       return 1 -- kAccepted
     end

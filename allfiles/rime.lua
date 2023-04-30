@@ -20,8 +20,7 @@
 --      - lua_translator@instruction_dbpmf           --（引lua資料夾）選項中顯示洋蔥雙拼各種說明
 --      - lua_translator@instruction_grave_bpmf      --（引lua資料夾）選項中顯示洋蔥注音各種說明
 --      - lua_translator@instruction_ocm             --（引lua資料夾）選項中顯示洋蔥蝦米各種說明
---      - lua_translator@email_url_translator        --（引lua資料夾）輸入email、網址
---      - lua_translator@email_urlw_translator       --（引lua資料夾）輸入email、網址（多了www.）
+--      - lua_translator@email_url_translator        --（引lua資料夾）輸入email、網址（可多加www.）
 --      - lua_translator@convert_japan_translator    --（關）（效能不佳）日文出羅馬字、全形羅馬字、半形片假名、全片假名、全平假名。
 --      - lua_translator@p_convert_japan_translator  --（關）（效能不佳）同 convert_japan_translator，掛接方案用。
 --      - lua_translator@lua_custom_phrase           --（引lua資料夾）取代原先 table_translator@custom_phrase。可多行，用\n\r。
@@ -313,13 +312,8 @@ kr_2set_0m_choice = require("processor_kr_2set_0m_choice")
 --- email_url_translator
 -- 把 recognizer 正則輸入 email 使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
 -- 把 recognizer 正則輸入網址使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
+-- 可多加「www.」
 email_url_translator = require("translator_email_url_translator")
-
-
---- email_urlw_translator
--- 把 recognizer 正則輸入網址使用 lua 實現，使之有選項，避免設定空白清屏時無法上屏。
--- 該項多加「www.」
-email_urlw_translator = require("translator_email_urlw_translator")
 
 
 --- instruction_grave_bpmf

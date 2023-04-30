@@ -119,7 +119,8 @@ local function processor(key, env)
   elseif comp:empty() then
     return 2
 
-  elseif seg:has_tag("lua") then
+  elseif seg:has_tag("mf_translator") then
+  -- elseif seg:has_tag("lua") then
     -- local kp_pattern = {
     --   ["0"] = "0",
     --   ["1"] = "1",

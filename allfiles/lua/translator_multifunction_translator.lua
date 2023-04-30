@@ -207,9 +207,11 @@ local function translate(input, seg, env)
     yield(Candidate("mf_t", seg.start, seg._end, cand_text, comment))
   end
 
+  if seg:has_tag("mf_translator") then
+  -- if seg:has_tag("mf_translator") and string.match(input, env.prefix) then
+  -- if string.match(input, env.prefix) then
   -- local start_key = string.match(input, env.prefix)
   -- if start_key then
-  if string.match(input, env.prefix) then
 
     -- local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
     -- local chinese_time = time_description_chinese(os.time())

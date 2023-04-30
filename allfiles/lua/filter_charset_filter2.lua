@@ -84,10 +84,10 @@ return { func = filter }
 local function charset_filter2(input, env)
 -- local function filter2(input, env)
   local c_f2_s = env.engine.context:get_option("character_range_bhjm")
-  if (c_f2_s) then
+  if c_f2_s then
     for cand in input:iter() do
-      if (not string.match(cand.text, "᰼᰼" )) then
-      -- if (not string.match(cand.text, ".*᰼᰼.*" )) then
+      if not string.match(cand.text, "᰼᰼" ) then
+      -- if not string.match(cand.text, ".*᰼᰼.*" ) then
         yield(cand)
       end
     end
@@ -95,7 +95,7 @@ local function charset_filter2(input, env)
     for cand in input:iter() do
       yield(cand)
     end
-    -- if (input == nil) then
+    -- if input == nil then
     --   cand = nil
     -- end
   end

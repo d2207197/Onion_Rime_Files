@@ -64,17 +64,20 @@ local function processor(key, env)
   -- local check_i8 = string.match(c_input, "=[-125890;,./]$")
   -- local check_i9 = string.match(c_input, "=[-;,./][-;,./]$")
   -- local check_i10 = string.match(c_input, "==[90]$")
-  local check_i = string.match(c_input, "[@:]") or
-                  string.match(c_input, "^'/[';a-z0-9.,/-]*$") or
-                  string.match(c_input, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9.,/-]*$") or
-                  string.match(c_input, "=[0-9]'/[';a-z0-9.,/-]*$") or
-                  -- string.match(c_input, "=[][]'/[';a-z0-9.,/-]*$") or
-                  string.match(c_input, "=[][][][]?'/[';a-z0-9.,/-]*$") or
-                  string.match(c_input, "=[-,.;=`]'/[';a-z0-9.,/-]*$") or
-                  string.match(c_input, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9.,/-]*$") or
-                  string.match(c_input, "=[-125890;,./]$") or
-                  string.match(c_input, "=[-;,./][-;,./]$") or
-                  string.match(c_input, "==[90]$")
+  -- local check_i = string.match(c_input, "[@:]") or
+  --                 string.match(c_input, "^'/[';a-z0-9.,/-]*$") or
+  --                 string.match(c_input, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9.,/-]*$") or
+  --                 string.match(c_input, "=[0-9]'/[';a-z0-9.,/-]*$") or
+  --                 -- string.match(c_input, "=[][]'/[';a-z0-9.,/-]*$") or
+  --                 string.match(c_input, "=[][][][]?'/[';a-z0-9.,/-]*$") or
+  --                 string.match(c_input, "=[-,.;=`]'/[';a-z0-9.,/-]*$") or
+  --                 string.match(c_input, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9.,/-]*$") or
+  --                 string.match(c_input, "=[-125890;,./]$") or
+  --                 string.match(c_input, "=[-;,./][-;,./]$") or
+  --                 string.match(c_input, "==[90]$")
+  local check_punct = string.match(c_input, "=[-125890;,./]$") or
+                      string.match(c_input, "=[-;,./][-;,./]$") or
+                      string.match(c_input, "==[90]$")
 
   local check_pre = string.match(c_input, "'/[-]?[.]?$")
   local check_num_cal = string.match(c_input, "'/[-]?[.]?%d+%.?%d*$") or
@@ -103,7 +106,8 @@ local function processor(key, env)
 
   elseif key:repr() == "space" and context:is_composing() then
   -- elseif key:repr() == "space" and context:has_menu() then
-    if check_i then
+    if check_punct or seg:has_tag("mf_translator") or seg:has_tag("email_url_translator") then
+    -- if check_i then
     -- if check_i1 or check_i2 or check_i3 or check_i4 or check_i5 or check_i6 or check_i7 or check_i8 or check_i9 or check_i10 then
     -- if ( string.match(c_input, "[@:]") or string.match(c_input, "^'/[';a-z0-9.,/-]*$") or string.match(c_input, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9.,/-]*$") or string.match(c_input, "=[0-9]'/[';a-z0-9.,/-]*$") or string.match(c_input, "=[][]'/[';a-z0-9.,/-]*$") or string.match(c_input, "=[][][][]'/[';a-z0-9.,/-]*$") or string.match(c_input, "=[-,.;=`]'/[';a-z0-9.,/-]*$") or string.match(c_input, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9.,/-]*$") or string.match(c_input, "=[-125890;,./]$") or string.match(c_input, "=[-;,./][-;,./]$") or string.match(c_input, "==[90]$") ) then  --or string.match(c_input, "==[,.]{2}$")
     -- if ( string.match(c_input, "[@:]") or string.match(c_input, "^'/[';a-z0-9./-]*$") or string.match(c_input, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9./-]*$") or string.match(c_input, "=[0-9]'/[';a-z0-9./-]*$") or string.match(c_input, "=[][]'/[';a-z0-9./-]*$") or string.match(c_input, "=[][][][]'/[';a-z0-9./-]*$") or string.match(c_input, "=[-,.;=`]'/[';a-z0-9./-]*$") or string.match(c_input, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9./-]*$") or string.match(c_input, "=[-125890;,./]$") or string.match(c_input, "=[-;,./][-;,./]$") or string.match(c_input, "==[90]$") or string.match(c_input, "==[,][,]?$") or string.match(c_input, "==[.][.]?$") ) then
@@ -146,7 +150,8 @@ local function processor(key, env)
   elseif comp:empty() then
     return 2
 
-  elseif seg:has_tag("lua") then
+  elseif seg:has_tag("mf_translator") then
+  -- elseif seg:has_tag("lua") then
     -- local kp_pattern = {
     --   ["0"] = "0",
     --   ["1"] = "1",

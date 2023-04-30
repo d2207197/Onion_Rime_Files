@@ -147,7 +147,7 @@ engine:
     - script_translator@japan
     - lua_translator@mf_translator
     # - lua_translator@t2_translator
-    - lua_translator@email_urlw_translator
+    - lua_translator@email_url_translator
     - lua_translator@instruction_ocm
     # - lua_translator@p_convert_japan_translator
 ################################# lua 引用 ####################################
@@ -668,4 +668,7 @@ recognizer:
 #    第一個不能刪，否則無法用數字選擇。
 #    「-」不能刪，顏文字會用到。
     all_bpm: "^';'[-a-z0-9.,/; ]*'?$"
-    lua: "^;;$|^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^'/[a-z]*$|^'/[;/'][a-z.,/'-]*$|^'/[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|^'/[xucoe][0-9a-f]+$"
+    # lua: "^;;$|^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^'/[a-z]*$|^'/[;/'][a-z.,/'-]*$|^'/[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|^'/[xucoe][0-9a-f]+$"
+    instruction_ocm: "^;;?$"  #不開起，「;;」會顯示不了。
+    email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$"
+    mf_translator: "^'/[a-z]*$|^'/[;/'][a-z.,/'-]*$|^'/[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|^'/[xucoe][0-9a-f]+$"

@@ -59,11 +59,14 @@ local function processor(key, env)
   -- local check_i3 = string.match(c_input, "=[-125890;,./]$")
   -- local check_i4 = string.match(c_input, "=[-;,./][-;,./]$")
   -- local check_i5 = string.match(c_input, "==[90]$")
-  local check_i = string.match(c_input, "[@:]") or
-                  string.match(c_input, "'/") or
-                  string.match(c_input, "=[-125890;,./]$") or
-                  string.match(c_input, "=[-;,./][-;,./]$") or
-                  string.match(c_input, "==[90]$")
+  -- local check_i = string.match(c_input, "[@:]") or
+  --                 string.match(c_input, "'/") or
+  --                 string.match(c_input, "=[-125890;,./]$") or
+  --                 string.match(c_input, "=[-;,./][-;,./]$") or
+  --                 string.match(c_input, "==[90]$")
+  local check_punct = string.match(c_input, "=[-125890;,./]$") or
+                      string.match(c_input, "=[-;,./][-;,./]$") or
+                      string.match(c_input, "==[90]$")
 
   local check_pre = string.match(c_input, "'/[-]?[.]?$")
   local check_num_cal = string.match(c_input, "'/[-]?[.]?%d+%.?%d*$") or
@@ -94,7 +97,8 @@ local function processor(key, env)
   -- elseif key:repr() == "space" and context:has_menu() then
   -- elseif key:repr() == "space" and c_i_c then
   -- elseif (key:repr() == "space") then
-    if check_i then
+    if check_punct or seg:has_tag("mf_translator") or seg:has_tag("email_url_translator") then
+    -- if check_i then
     -- if check_i1 or check_i2 or check_i3 or check_i4 or check_i5 then
     -- if ( string.match(c_input, "[@:]") or string.match(c_input, "'/") or string.match(c_input, "=[-125890;,./]$") or string.match(c_input, "=[-;,./][-;,./]$") or string.match(c_input, "==[90]$") ) then  --or string.match(c_input, "==[,.]{2}$")
     -- if ( string.match(c_input, "[@:]") or string.match(c_input, "'/") or string.match(c_input, "=[-125890;,./]$") or string.match(c_input, "=[-;,./][-;,./]$") or string.match(c_input, "==[90]$") or string.match(c_input, "==[,][,]?$") or string.match(c_input, "==[.][.]?$") ) then
@@ -139,7 +143,8 @@ local function processor(key, env)
   elseif comp:empty() then
     return 2
 
-  elseif seg:has_tag("lua") then
+  elseif seg:has_tag("mf_translator") then
+  -- elseif seg:has_tag("lua") then
     -- local kp_pattern = {
     --   ["0"] = "0",
     --   ["1"] = "1",

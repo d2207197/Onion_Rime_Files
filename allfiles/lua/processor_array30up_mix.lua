@@ -69,17 +69,17 @@ local function processor(key, env)
 
   local check_i1 = string.match(c_input, "^[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")
   local check_i2 = string.match(c_input, "^==[a-z.,/;][a-z.,/;][a-z.,/;][a-z.,/;]?i?$")
-  local check_i3 = string.match(c_input, "`.+$")
+  -- local check_i3 = string.match(c_input, "`.+$")
   -- local check_i4 = string.match(c_input, "^[a-z][-_.0-9a-z]*@.*$")
   -- local check_i5 = string.match(c_input, "^https?:.*$")
   -- local check_i6 = string.match(c_input, "^ftp:.*$")
   -- local check_i7 = string.match(c_input, "^mailto:.*$")
   -- local check_i8 = string.match(c_input, "^file:.*$")
-  local check_i4 = string.match(c_input, "^[a-z][-_.0-9a-z]*@.*$") or
-                   string.match(c_input, "^https?:.*$") or
-                   string.match(c_input, "^ftp:.*$") or
-                   string.match(c_input, "^mailto:.*$") or
-                   string.match(c_input, "^file:.*$")
+  -- local check_i4 = string.match(c_input, "^[a-z][-_.0-9a-z]*@.*$") or
+  --                  string.match(c_input, "^https?:.*$") or
+  --                  string.match(c_input, "^ftp:.*$") or
+  --                  string.match(c_input, "^mailto:.*$") or
+  --                  string.match(c_input, "^file:.*$")
 
   -- local check_zh = string.match(c_input, "^=[a-z0-9,.;/-]+$")
   -- local check_w = string.match(c_input, "^w[0-9]$")
@@ -109,8 +109,9 @@ local function processor(key, env)
 以下開始使得純數字和計算機時，於小鍵盤可輸入數字和運算符
 --]]
 
+  elseif seg:has_tag("mf_translator") and key:repr() ~= "space" then
+  -- elseif seg:has_tag("lua") and key:repr() ~= "space" then
   -- elseif seg:has_tag("lua") and kp_p ~= nil then
-  elseif seg:has_tag("lua") and key:repr() ~= "space" then
     -- local kp_pattern = {
     --   ["0"] = "0",
     --   ["1"] = "1",
@@ -183,7 +184,8 @@ local function processor(key, env)
   -- elseif not context:is_composing() then  -- 無法空碼清屏
     return 2
 
-  elseif check_i1 or check_i2 or check_i3 or check_i4 then
+  elseif check_i1 or check_i2 or seg:has_tag("mf_translator") or seg:has_tag("email_url_translator") then
+  -- elseif check_i1 or check_i2 or check_i3 or check_i4 then
   -- elseif check_i1 or check_i2 or check_i3 or check_i4 or check_i5 or check_i6 or check_i7 or check_i8 then
     if key:repr() == "space" then
       -- local g_c_t = context:get_commit_text()

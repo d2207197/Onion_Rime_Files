@@ -87,8 +87,9 @@ local function processor(key, env)
 以下開始使得純數字和計算機時，於小鍵盤可輸入數字和運算符
 --]]
 
+  elseif seg:has_tag("mf_translator") then
+  -- elseif seg:has_tag("lua") then
   -- elseif seg:has_tag("lua") and kp_p ~= nil then
-  elseif seg:has_tag("lua") then
     -- local kp_pattern = {
     --   ["0"] = "0",
     --   ["1"] = "1",
