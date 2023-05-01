@@ -1,17 +1,19 @@
 # Rime dictionary
 # encoding: utf-8
-# 《韓語HNC字詞庫匯入頁》
+# 《韓語 HNC 鍵位 字詞庫匯入頁》
 # 『洋蔥』製作
 ---
 name: hangeul_hnc.extended
-version: "202301"
+version: "202304"
 sort: by_weight #original
-use_preset_vocabulary: false
+vocabulary: essay-kr-hanja
+# use_preset_vocabulary: false
 # max_phrase_length: 7
 # min_phrase_weight: 100
 import_tables:
   - hangeul_hnc
   - hangeul_hnc_hanja
+  # - phrases.kr_more
   - space  #空格，特殊方案用
 ...
 ##### 補充標點 #####
