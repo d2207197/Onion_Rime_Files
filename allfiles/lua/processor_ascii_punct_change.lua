@@ -1,6 +1,7 @@
---- @@ ascii_punct_change 改變標點符號
+--- @@ ascii_punct_change
 --[[
 （bopomo_onionplus_2和3）
+改變標點符號
 於注音方案改變在非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 --]]
 

@@ -75,8 +75,8 @@
 --      - lua_processor@mobile_bpmf                  --（引lua資料夾）（手機注音專用） 使 email_url_translator 功能按空白都能直接上屏
 --      - lua_processor@kr_2set_0m_choice            --（引lua資料夾）（hangeul2set_zeromenu）韓語成零選項。開關（space_mode）、開關（kr_0m）
 --      - lua_processor@kr_2set_0m                   --（關）（hangeul2set_zeromenu）韓語成零選項。開關（space_mode）
---      - lua_processor@zhuyin_space                 --（引lua資料夾）（ocm_mixin、dif1、ocm_mix、Mount_ocm）補注音反查無法使用空白鍵和選字後跳掉之 bug。
---      - lua_processor@lua_tran_kp                  --（引lua資料夾）使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入。
+--      - lua_processor@zhuyin_space                 --（引lua資料夾）（Mount_ocm）補注音反查無法使用空白鍵和選字後跳掉之 bug。
+--      - lua_processor@lua_tran_kp                  --（引lua資料夾）（bopomo_onion_double）使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入。
 --
 --      - ＊合併兩個以上函數：
 --      - lua_processor@array30up_mix                --（引lua資料夾）（onion-array30） 合併 array30up 和 array30up_zy，增進效能。
@@ -239,7 +239,8 @@ convert_english_filter = require("filter_convert_english_filter")
 --]]
 
 
---- ascii_punct_change 改變標點符號 （bopomo_onionplus_2和3）
+--- ascii_punct_change （bopomo_onionplus_2和3）
+-- 改變標點符號
 -- 於注音方案改變在非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 ascii_punct_change = require("processor_ascii_punct_change")
 
@@ -251,12 +252,12 @@ ascii_punct_change = require("processor_ascii_punct_change")
 array30up_mix = require("processor_array30up_mix")
 
 
---- mix_apc_s2rm 注音mixin 1_2_4 和 plus 專用 （bo_mixin 1、2、4；bopomo_onionplus）
+--- mix_apc_s2rm （bo_mixin 1、2、4；bopomo_onionplus）
 -- 合併 ascii_punct_change 和 s2r_most，增進效能。
 mix_apc_s2rm = require("processor_mix_apc_s2rm")
 
 
---- mix_apc_s2rm_3 注音mixin 3 （bo_mixin3）
+--- mix_apc_s2rm_3 （bo_mixin3）
 -- 合併 ascii_punct_change 和 s2r_mixin3，增進效能。
 mix_apc_s2rm_3 = require("processor_mix_apc_s2rm_3")
 
@@ -268,17 +269,17 @@ mix_apc_s2rm_3 = require("processor_mix_apc_s2rm_3")
 mix_apc_pluss = require("processor_mix_apc_pluss")
 
 
---- zhuyin_space （ocm_mixin、dif1、ocm_mix、Mount_ocm）
+--- zhuyin_space （Mount_ocm）
 -- 補注音反查無法使用空白鍵和選字後跳調之 bug。
 zhuyin_space = require("processor_zhuyin_space")
 
 
---- lua_tran_kp
+--- lua_tran_kp （bopomo_onion_double）
 -- 使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入。
 lua_tran_kp = require("processor_lua_tran_kp")
 
 
---- mix_zhs_ltk
+--- mix_zhs_ltk （ocm_mixin、dif1、ocm_onionmix）
 -- 合併 zhuyin_space 和 lua_tran_kp
 mix_zhs_ltk = require("processor_mix_zhs_ltk")
 

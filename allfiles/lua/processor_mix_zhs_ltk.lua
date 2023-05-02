@@ -1,5 +1,6 @@
 --- @@ mix_zhs_ltk
 --[[
+（ocm_mixin、dif1、ocm_onionmix）
 注音反查 Return 和 space 和 小鍵盤數字鍵 上屏修正
 尚有bug待處理
 合併 zhuyin_space、lua_tran_kp

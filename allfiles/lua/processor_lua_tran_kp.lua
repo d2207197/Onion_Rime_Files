@@ -1,5 +1,6 @@
---- @@ lua_tran_kp 改變標點符號
+--- @@ lua_tran_kp
 --[[
+（bopomo_onion_double）
 使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入
 --]]
 

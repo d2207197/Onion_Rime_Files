@@ -601,7 +601,6 @@ recognizer:
     email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$"
     mf_translator: "'/[-+*^/.,'();0-9a-z]*$"
     #舊# lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|'/[';/]?[a-z]*$|'/[0-9./-]*$|'/[xcoe][0-9a-z]+$"
-    # ap_apostrophe: "^'$"  #移到 punct  #使 ascii_punct 時能使用 mf_translator，需配合 lua_filter。
 
 # __patch:
 #   # 使用八股文語言模型

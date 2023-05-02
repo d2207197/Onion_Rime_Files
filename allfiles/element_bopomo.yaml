@@ -496,8 +496,6 @@ patterns_mixin_1_2_4:
     # instruction_grave_bpmf: "[^=]``?$"  #不要開啟，開啟反而耗效能，且可能有bug，需要再調整。
     email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$"
     mf_translator: "'/[-+*^/.,'();0-9a-z]*$"
-##### ascii_punct 時特殊功能 #####
-    # ap_apostrophe: "^'$"  #移到 punct  #使 ascii_punct 時能使用 mf_translator，需配合 lua_filter。
 ##### 《 patterns_mixin_1_2_4 END 》 #####
 
 
@@ -535,6 +533,4 @@ patterns_mixin_3:
     # instruction_grave_bpmf: "[^=]``?$"  #不要開啟，開啟反而耗效能，且可能有bug，需要再調整。
     email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$"
     mf_translator: "^'/[-+*^/.,'();0-9a-z]*$|(?<=[-,./;a-z125890][][3467 '])'/[-+*^/.,'();0-9a-z]*$|(?<=[=][0-9])'/[-+*^/.,'();0-9a-z]*$|(?<=[=][][])'/[-+*^/.,'();0-9a-z]*$|(?<=[=][][][][])'/[-+*^/.,'();0-9a-z]*$|(?<=[=][-,.;=`])'/[-+*^/.,'();0-9a-z]*$|(?<=[=][-,.;'=`][-,.;'=`])'/[-+*^/.,'();0-9a-z]*$"
-##### ascii_punct 時特殊功能 #####
-    # ap_apostrophe: "^'$"  #移到 punct  #使 ascii_punct 時能使用 mf_translator，需配合 lua_filter。
 ##### 《 patterns_mixin_3 END 》 #####
