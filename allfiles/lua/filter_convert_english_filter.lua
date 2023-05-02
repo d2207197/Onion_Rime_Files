@@ -39,10 +39,12 @@ local function init(env)
   --   -- env.enable_tips = false
   -- end
 
-  local check_plus = config:get_string("translator/dictionary") or ""  -- 檢查為獨立方案或掛接方案
-  env.p_prefix = check_plus ~= "easy_en_lower" and config:get_string("easy_en/prefix") or ""
-  -- env.enable_tips = check_plus ~= "easy_en_lower" and true or false
-  env.match_pattern = env.p_prefix .. "([- /a-z.,']+)([;/']*)( ?)$"  -- "[.3]?([-/a-z.,']+)([;/']*)( ?)$"：會有Bug
+  local check_schema_id = config:get_string("schema/schema_id") or ""
+  -- local check_mount = config:get_string("translator/dictionary") or ""  -- 檢查為獨立方案或掛接方案
+  env.p_prefix = check_schema_id ~= "easy_en_lower" and config:get_string("easy_en/prefix") or ""
+  -- env.p_prefix = check_mount ~= "easy_en_lower" and config:get_string("easy_en/prefix") or ""
+  -- env.enable_tips = check_mount ~= "easy_en_lower" and true or false
+  env.match_pattern = check_schema_id ~= "bopomo_onionplus_space" and env.p_prefix .. "([-/a-z.,']+)([;/']*)( ?)$" or env.p_prefix .. "([- /a-z.,']+)([;/']*)( ?)$"  -- "[.3]?([-/a-z.,']+)([;/']*)( ?)$"：會有Bug
   env.tips_en = "《Easy》"
 
   env.english_pattern = {

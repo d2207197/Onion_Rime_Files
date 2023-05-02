@@ -28,10 +28,14 @@ local function filter(inp, env)
 -- function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
+  local c_input = context.input
   local c_f2_s = context:get_option("character_range_bhjm")
-  local p_key = context.input
-  local addcomment1 = string.match(p_key, "=%.$")
-  local addcomment2 = string.match(p_key, "[][]$")
+  local o_ascii_punct = context:get_option("ascii_punct")
+  -- local start = context:get_preedit().sel_start
+  -- local _end = context:get_preedit().sel_end
+  local addcomment1 = string.match(c_input, "=%.$")
+  local addcomment2 = string.match(c_input, "[][]$")
+  local addcand = string.match(c_input, "^'$")
 
   local tran = c_f2_s and Translation(drop_cand, inp, "᰼᰼") or inp
   for cand in tran:iter() do
@@ -45,10 +49,15 @@ local function filter(inp, env)
       -- yield( string.match(cand.text, "^〔$") and change_comment(cand,"〔六角括號〕")
       --     or string.match(cand.text, "^〕$") and change_comment(cand,"〔六角括號〕")
       --     or cand )
+    elseif addcand and o_ascii_punct then
+      local cand_add = Candidate("apostrophe", 0, 1, "'", "")
+      yield(cand_add)
+      return
     else
       yield(cand)
     end
   end
+
 end
 ----------------
 -- return mix_cf2_miss_filter
@@ -64,9 +73,9 @@ return { func = filter }
 --[[
 local function mix_cf2_miss_filter(input, env)
   local c_f2_s = env.engine.context:get_option("character_range_bhjm")
-  local p_key = env.engine.context.input
-  local addcomment1 = string.match(p_key, '=%.$')
-  local addcomment2 = string.match(p_key, '[][]$')
+  local c_input = env.engine.context.input
+  local addcomment1 = string.match(c_input, '=%.$')
+  local addcomment2 = string.match(c_input, '[][]$')
   if (c_f2_s) then
     for cand in input:iter() do
       -- local dnch = string.match(cand.text, '᰼᰼' )
