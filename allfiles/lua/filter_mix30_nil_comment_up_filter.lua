@@ -29,31 +29,31 @@ local function filter(inp, env)
   local context = engine.context
   local s_c_f_p_s = context:get_option("simplify_comment")
   local s_up = context:get_option("1_2_straight_up")
-  local find_prefix = context.input  -- 原始未轉換輸入碼
+  local c_input = context.input  -- 原始未轉換輸入碼
   -- local start = context:get_preedit().sel_start
   local _end = context:get_preedit().sel_end
   local array30_nil_cand = Candidate("array30nil", 0, _end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
-  -- local array30_nil_cand = Candidate("array30nil", 0, string.len(find_prefix) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
-  local check_ns = string.match(find_prefix, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )
-  local check_s1 = string.match(find_prefix, "^[a-z,./;][a-z,./;]? $" )
-  -- local check_s2 = string.match(find_prefix, "^a[k,] $" )
-  -- local check_s3 = string.match(find_prefix, "^lr $" )
-  -- local check_s4 = string.match(find_prefix, "^ol $" )
-  -- local check_s5 = string.match(find_prefix, "^q[ka] $" )
-  -- local check_s6 = string.match(find_prefix, "^%.b $" )
-  -- local check_s7 = string.match(find_prefix, "^/%. $" )
-  -- local check_s8 = string.match(find_prefix, "^pe $" )
-  local check_s2 = string.match(find_prefix, "^a[k,] $" ) or
-                   string.match(find_prefix, "^lr $" ) or
-                   string.match(find_prefix, "^ol $" ) or
-                   string.match(find_prefix, "^q[ka] $" ) or
-                   string.match(find_prefix, "^%.b $" ) or
-                   string.match(find_prefix, "^/%. $" ) or
-                   string.match(find_prefix, "^pe $" )
-  local check_wu = string.match(find_prefix, "^sf $" )
-  local check_ji = string.match(find_prefix, "^lb $" )
-  local check_kong = string.match(find_prefix, "^ou $" )
-  -- local check_www = string.match(find_prefix, "^www[.].*$" )  -- 直接判別 comment 即可
+  -- local array30_nil_cand = Candidate("array30nil", 0, string.len(c_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+  local check_ns = string.match(c_input, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )
+  local check_s1 = string.match(c_input, "^[a-z,./;][a-z,./;]? $" )
+  -- local check_s2 = string.match(c_input, "^a[k,] $" )
+  -- local check_s3 = string.match(c_input, "^lr $" )
+  -- local check_s4 = string.match(c_input, "^ol $" )
+  -- local check_s5 = string.match(c_input, "^q[ka] $" )
+  -- local check_s6 = string.match(c_input, "^%.b $" )
+  -- local check_s7 = string.match(c_input, "^/%. $" )
+  -- local check_s8 = string.match(c_input, "^pe $" )
+  local check_s2 = string.match(c_input, "^a[k,] $" ) or
+                   string.match(c_input, "^lr $" ) or
+                   string.match(c_input, "^ol $" ) or
+                   string.match(c_input, "^q[ka] $" ) or
+                   string.match(c_input, "^%.b $" ) or
+                   string.match(c_input, "^/%. $" ) or
+                   string.match(c_input, "^pe $" )
+  local check_wu = string.match(c_input, "^sf $" )
+  local check_ji = string.match(c_input, "^lb $" )
+  local check_kong = string.match(c_input, "^ou $" )
+  -- local check_www = string.match(c_input, "^www[.].*$" )  -- 直接判別 comment 即可
 
   for cand in inp:iter() do
     if string.match(cand.text, "^⎔%d$" ) then
@@ -94,9 +94,9 @@ local function filter(inp, env)
         -- elseif check_kong and string.match(cand.text, "○" ) then
         --   yield(cand)  --同時含有「▫」和「▪」編碼的字，但該編碼不只一個字。
 
-        -- elseif (string.match(find_prefix, "^www%..*$")) then
+        -- elseif (string.match(c_input, "^www%..*$")) then
         --   yield(cand)
-        -- elseif (string.match(find_prefix, "`.*$" )) or (string.match(find_prefix, "^w[0-9]$" ))  or (string.match(find_prefix, "^[a-z][-_.0-9a-z]*@.*$" )) or (string.match(find_prefix, "^(www[.]|https?:|ftp:|mailto:|file:).*$" )) then
+        -- elseif (string.match(c_input, "`.*$" )) or (string.match(c_input, "^w[0-9]$" ))  or (string.match(c_input, "^[a-z][-_.0-9a-z]*@.*$" )) or (string.match(c_input, "^(www[.]|https?:|ftp:|mailto:|file:).*$" )) then
         --   yield(cand)
 
         -- end
@@ -124,29 +124,29 @@ return { func = filter }
 local function mix30_nil_comment_up_filter(input, env)
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
   local s_up = env.engine.context:get_option("1_2_straight_up")
-  local find_prefix = env.engine.context.input  -- 原始未轉換輸入碼
+  local c_input = env.engine.context.input  -- 原始未轉換輸入碼
   local _end = env.engine.context:get_preedit().sel_end
   local array30_nil_cand = Candidate("array30nil", 0, _end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
-  local check_ns = string.match(find_prefix, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )
-  local check_s1 = string.match(find_prefix, "^[a-z,./;][a-z,./;]? $" )
-  local check_s2 = string.match(find_prefix, "^a[k,] $" ) or
-                   string.match(find_prefix, "^lr $" ) or
-                   string.match(find_prefix, "^ol $" ) or
-                   string.match(find_prefix, "^q[ka] $" ) or
-                   string.match(find_prefix, "^%.b $" ) or
-                   string.match(find_prefix, "^/%. $" ) or
-                   string.match(find_prefix, "^pe $" )
-  local check_wu = string.match(find_prefix, "^sf $" )
-  local check_ji = string.match(find_prefix, "^lb $" )
-  local check_kong = string.match(find_prefix, "^ou $" )
+  local check_ns = string.match(c_input, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )
+  local check_s1 = string.match(c_input, "^[a-z,./;][a-z,./;]? $" )
+  local check_s2 = string.match(c_input, "^a[k,] $" ) or
+                   string.match(c_input, "^lr $" ) or
+                   string.match(c_input, "^ol $" ) or
+                   string.match(c_input, "^q[ka] $" ) or
+                   string.match(c_input, "^%.b $" ) or
+                   string.match(c_input, "^/%. $" ) or
+                   string.match(c_input, "^pe $" )
+  local check_wu = string.match(c_input, "^sf $" )
+  local check_ji = string.match(c_input, "^lb $" )
+  local check_kong = string.match(c_input, "^ou $" )
 
   if (not s_c_f_p_s) then
-  -- if (not s_c_f_p_s) or (string.match(find_prefix, "`" )) then
+  -- if (not s_c_f_p_s) or (string.match(c_input, "`" )) then
     for cand in input:iter() do
-      -- local find_prefix = env.engine.context.input  -- 原始未轉換輸入碼
+      -- local c_input = env.engine.context.input  -- 原始未轉換輸入碼
       -- local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
       -- local array30_nil_cand = Candidate("array30nil", 0, _end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
-      -- local array30_nil_cand = Candidate("array30nil", 0, string.len(find_prefix) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+      -- local array30_nil_cand = Candidate("array30nil", 0, string.len(c_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
       if (string.match(cand.text, '^⎔%d$' )) then
         array30_nil_cand.preedit = cand.preedit
         -- array30_nil_cand.preedit = array30_preedit
@@ -165,9 +165,9 @@ local function mix30_nil_comment_up_filter(input, env)
             yield(cand)
           elseif (check_kong) and (string.match(cand.text, "○" )) then
             yield(cand)
-          -- elseif (string.match(find_prefix, "^www%..*$")) then
+          -- elseif (string.match(c_input, "^www%..*$")) then
           --   yield(cand)
-          -- elseif (string.match(find_prefix, "`.*$" )) or (string.match(find_prefix, "^w[0-9]$" ))  or (string.match(find_prefix, "^[a-z][-_.0-9a-z]*@.*$" )) or (string.match(find_prefix, "^(www[.]|https?:|ftp:|mailto:|file:).*$" )) then
+          -- elseif (string.match(c_input, "`.*$" )) or (string.match(c_input, "^w[0-9]$" ))  or (string.match(c_input, "^[a-z][-_.0-9a-z]*@.*$" )) or (string.match(c_input, "^(www[.]|https?:|ftp:|mailto:|file:).*$" )) then
           --   yield(cand)
           end
         elseif (not s_up) then
@@ -177,10 +177,10 @@ local function mix30_nil_comment_up_filter(input, env)
     end
   else
     for cand in input:iter() do
-      -- local find_prefix = env.engine.context.input  -- 原始未轉換輸入碼
+      -- local c_input = env.engine.context.input  -- 原始未轉換輸入碼
       -- local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
       -- local array30_nil_cand = Candidate("array30nil", 0, _end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
-      -- local array30_nil_cand = Candidate("array30nil", 0, string.len(find_prefix) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+      -- local array30_nil_cand = Candidate("array30nil", 0, string.len(c_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
       if (string.match(cand.text, '^⎔%d$' )) then
         array30_nil_cand.preedit = cand.preedit
         -- array30_nil_cand.preedit = array30_preedit
@@ -205,9 +205,9 @@ local function mix30_nil_comment_up_filter(input, env)
           elseif (check_kong) and (string.match(cand.text, "○" )) then
             -- cand:get_genuine().comment = ""  --直上不用特別遮
             yield(cand)
-          -- elseif (string.match(find_prefix, "^www%..*$")) then
+          -- elseif (string.match(c_input, "^www%..*$")) then
           --   yield(cand)
-          -- elseif (string.match(find_prefix, "`.*$" )) or (string.match(find_prefix, "^w[0-9]$" ))  or (string.match(find_prefix, "^[a-z][-_.0-9a-z]*@.*$" )) or (string.match(find_prefix, "^(www[.]|https?:|ftp:|mailto:|file:).*$" )) then
+          -- elseif (string.match(c_input, "`.*$" )) or (string.match(c_input, "^w[0-9]$" ))  or (string.match(c_input, "^[a-z][-_.0-9a-z]*@.*$" )) or (string.match(c_input, "^(www[.]|https?:|ftp:|mailto:|file:).*$" )) then
           --   yield(cand)
           end
         elseif (not s_up) then

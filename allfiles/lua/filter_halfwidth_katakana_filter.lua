@@ -155,21 +155,21 @@ local function filter(inp, env)
 -- function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
-  local o_input = context.input  -- 原始未轉換輸入碼
+  local c_input = context.input  -- 原始未轉換輸入碼
   -- local newcand = {start = context:get_preedit().sel_start, _end = context:get_preedit().sel_end}
   for cand in inp:iter() do
     local start = context:get_preedit().sel_start
     local _end = context:get_preedit().sel_end
-    -- if (string.match(o_input, "%.,$")) and (string.match(cand.text, "^[。、・ヲァィゥェォャュョッーアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワン゛゜]+$")) then
-    -- if (string.match(o_input, "%.,$")) and (string.gmatch(cand.text, "^[\x30a1-\x30ab\x30ad\x30af\x30b1\x30b3\x30b5\x30b7\x30b9\x30bb\x30bd\x30bf\x30c1\x30c3\x30c4\x30c6\x30c8\x30ca-\x30cf\x30d2\x30d5\x30d8\x30db\x30de-\x30ed\x30ef\x30f2\x30f3\x30fb\x30fc\x3001\x3002\x309b\x309c]+$")) then
-    -- if (not string.match(o_input, "%.$")) then
+    -- if (string.match(c_input, "%.,$")) and (string.match(cand.text, "^[。、・ヲァィゥェォャュョッーアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワン゛゜]+$")) then
+    -- if (string.match(c_input, "%.,$")) and (string.gmatch(cand.text, "^[\x30a1-\x30ab\x30ad\x30af\x30b1\x30b3\x30b5\x30b7\x30b9\x30bb\x30bd\x30bf\x30c1\x30c3\x30c4\x30c6\x30c8\x30ca-\x30cf\x30d2\x30d5\x30d8\x30db\x30de-\x30ed\x30ef\x30f2\x30f3\x30fb\x30fc\x3001\x3002\x309b\x309c]+$")) then
+    -- if (not string.match(c_input, "%.$")) then
  -- and (string.match(cand.text, "^[ナ]+$"))
       -- if (string.gmatch(cand.text, "^[\x30a1-\x30ab\x30ad\x30af\x30b1\x30b3\x30b5\x30b7\x30b9\x30bb\x30bd\x30bf\x30c1\x30c3\x30c4\x30c6\x30c8\x30ca-\x30cf\x30d2\x30d5\x30d8\x30db\x30de-\x30ed\x30ef\x30f2\x30f3\x30fb\x30fc\x3001\x3002\x309b\x309c]+$")) then
       -- if (string.gmatch(cand.text, "^[\x30a1-\x30f3]+$")) then
       -- if (exists(is_katakana, cand.text)) then
       -- if (string.match(cand.text, "^[。、・ヲァィゥェォャュョッーアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワン゛゜]+$")) then
     local kana = Candidate("halfwidth_katakana", start, _end, halfwidth_katakana(cand.text), "〔ｶﾀｶﾅ〕")
-      -- local kana = Candidate("halfwidth_katakana", 0, string.len(o_input), halfwidth_katakana(cand.text), " ｶﾀｶﾅ")
+      -- local kana = Candidate("halfwidth_katakana", 0, string.len(c_input), halfwidth_katakana(cand.text), " ｶﾀｶﾅ")
       -- local kana = Candidate("halfwidth_katakana", context:get_preedit().sel_start, context:get_preedit().sel_end, halfwidth_katakana(cand.text), " ﹙ｶﾀｶﾅ﹚")
         -- local kana = Candidate("halfwidth_katakana", 0, 3, halfwidth_katakana(cand.text), " ｶﾀｶﾅ")
       -- yield(kana)

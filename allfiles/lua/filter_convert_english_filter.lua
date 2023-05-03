@@ -64,7 +64,7 @@ local function filter(inp, env)
 -- function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
-  local o_input = context.input  -- 原始未轉換輸入碼
+  local c_input = context.input  -- 原始未轉換輸入碼
   local start = context:get_preedit().sel_start
   -- local _end = context:get_preedit().sel_end + 1  --一般末尾「;」會多一。
   local caret_pos = context.caret_pos
@@ -73,8 +73,8 @@ local function filter(inp, env)
     yield(cand)
   end
   
-  if (caret_pos == #o_input) then
-    local mstr, cp, sp = string.match(o_input, env.match_pattern)  -- 取代 s1~ s5
+  if (caret_pos == #c_input) then
+    local mstr, cp, sp = string.match(c_input, env.match_pattern)  -- 取代 s1~ s5
     local cp_tab = env.english_pattern[cp]
     if cp_tab then
       local e_cand = Candidate("en", start, caret_pos, cp_tab.func(mstr), cp_tab.comment)
@@ -117,15 +117,15 @@ local function convert_english_filter(input, env)
   local engine = env.engine
   local context = engine.context
   local caret_pos = context.caret_pos
-  local o_input = context.input  -- 原始未轉換輸入碼
+  local c_input = context.input  -- 原始未轉換輸入碼
   local start = context:get_preedit().sel_start
   local _end = context:get_preedit().sel_end
   -- local _end = caret_pos
   for cand in input:iter() do
     yield(cand)
   end
-  if caret_pos == #o_input then
-    local mstr, cp = o_input:match("^([-/a-z.,']+)([;/']*)$") -- 取代 s1~ s5
+  if caret_pos == #c_input then
+    local mstr, cp = c_input:match("^([-/a-z.,']+)([;/']*)$") -- 取代 s1~ s5
     local cp_tab = english_pattern[cp]
     if cp_tab then
       yield( Candidate("en", start, _end, cp_tab.func(mstr), cp_tab.comment) )
@@ -139,7 +139,7 @@ local function p_convert_english_filter(input, env)
   local engine = env.engine
   local context = engine.context
   local caret_pos = context.caret_pos
-  local o_input = context.input  -- 原始未轉換輸入碼
+  local c_input = context.input  -- 原始未轉換輸入碼
   local start = context:get_preedit().sel_start
   -- local _end = context:get_preedit().sel_end + 1  --一般末尾「;」會多一。
   local _end = caret_pos
@@ -148,8 +148,8 @@ local function p_convert_english_filter(input, env)
     yield(cand)
   end
   
-  if caret_pos == #o_input then
-    local mstr, cp, sp = o_input:match("[.3]([-/a-z.,']+)([;/']*)( ?)$")  -- 取代 s1~ s5
+  if caret_pos == #c_input then
+    local mstr, cp, sp = c_input:match("[.3]([-/a-z.,']+)([;/']*)( ?)$")  -- 取代 s1~ s5
     local cp_tab = english_pattern[cp]
     if cp_tab then
       local e_cand = Candidate("en", start, _end, cp_tab.func(mstr), cp_tab.comment)
@@ -175,21 +175,21 @@ local function convert_english_filter(input, env)
   local engine = env.engine
   local context = engine.context
   local caret_pos = context.caret_pos
-  local o_input = context.input  -- 原始未轉換輸入碼
+  local c_input = context.input  -- 原始未轉換輸入碼
   local start = context:get_preedit().sel_start
   local _end = context:get_preedit().sel_end
   -- local _end = caret_pos
-  local c1 = string.match(o_input, "^([-/a-z.,']+);;$")
-  local c2 = string.match(o_input, "^([-/a-z.,']+);$")
-  local c3 = string.match(o_input, "^([-/a-z.,']+);/$")
-  local c4 = string.match(o_input, "^([-/a-z.,']+);'$")
-  local c5 = string.match(o_input, "^([-/a-z.,']+)$")
+  local c1 = string.match(c_input, "^([-/a-z.,']+);;$")
+  local c2 = string.match(c_input, "^([-/a-z.,']+);$")
+  local c3 = string.match(c_input, "^([-/a-z.,']+);/$")
+  local c4 = string.match(c_input, "^([-/a-z.,']+);'$")
+  local c5 = string.match(c_input, "^([-/a-z.,']+)$")
 
   for cand in input:iter() do
     yield(cand)
   end
 
-  if caret_pos ~= #o_input then
+  if caret_pos ~= #c_input then
   elseif (c1~=nil) then
     -- local es = _end - start - 1  --減一為扣掉「;」一個尾綴
     -- local c1 = string.sub(c1, -es)
@@ -202,7 +202,7 @@ local function convert_english_filter(input, env)
     -- local es = _end - start - 1  --減二為扣掉「;;」兩個尾綴
     -- local c3 = string.sub(c3, -es)
     yield(Candidate("en", start, _end, english_s(c3), "〔全小寫〕"))
-    -- yield(Candidate("en", start, _end, '字串總數：'..#o_input..' 開始：'..start..' 末尾數：'.._end..' 游標數：'..caret_pos, "〔測試〕"))  --測試用
+    -- yield(Candidate("en", start, _end, '字串總數：'..#c_input..' 開始：'..start..' 末尾數：'.._end..' 游標數：'..caret_pos, "〔測試〕"))  --測試用
   elseif (c4~=nil) then
     yield(Candidate("en", start, _end, english_s2u(c4), "〔間隔後大寫〕"))
   elseif (c5~=nil) and (not context:has_menu()) then
@@ -217,24 +217,24 @@ local function p_convert_english_filter(input, env)
   local engine = env.engine
   local context = engine.context
   local caret_pos = context.caret_pos
-  local o_input = context.input  -- 原始未轉換輸入碼
+  local c_input = context.input  -- 原始未轉換輸入碼
   local start = context:get_preedit().sel_start
   -- local _end = context:get_preedit().sel_end + 1  --一般末尾「;」會多一。
   local _end = caret_pos
   local tips_en = '《Easy》'
-  local c1 , s1 = string.match(o_input, "[.3]([-/a-z.,']+)(;; ?)$")
-  local c2 , s2 = string.match(o_input, "[.3]([-/a-z.,']+)(; ?)$")
-  local c3 , s3 = string.match(o_input, "[.3]([-/a-z.,']+)(;/ ?)$")
-  local c4 , s4 = string.match(o_input, "[.3]([-/a-z.,']+)(;' ?)$")
-  local c5 , s5 = string.match(o_input, "[.3]([-/a-z.,']+)( ?)$")
+  local c1 , s1 = string.match(c_input, "[.3]([-/a-z.,']+)(;; ?)$")
+  local c2 , s2 = string.match(c_input, "[.3]([-/a-z.,']+)(; ?)$")
+  local c3 , s3 = string.match(c_input, "[.3]([-/a-z.,']+)(;/ ?)$")
+  local c4 , s4 = string.match(c_input, "[.3]([-/a-z.,']+)(;' ?)$")
+  local c5 , s5 = string.match(c_input, "[.3]([-/a-z.,']+)( ?)$")
 
   for cand in input:iter() do
     yield(cand)
   end
 
-  if caret_pos ~= #o_input then
+  if caret_pos ~= #c_input then
   elseif (c1~=nil) then
-    -- local english = Candidate("en", start, _end, '字串總數：'..#o_input..' 開始：'..start..' 末尾數加一：'.._end..' 游標數：'..caret_pos, "〔測試〕")  --測試用
+    -- local english = Candidate("en", start, _end, '字串總數：'..#c_input..' 開始：'..start..' 末尾數加一：'.._end..' 游標數：'..caret_pos, "〔測試〕")  --測試用
     local english = Candidate("en", start, _end, string.upper(english_s(c1)), "〔全大寫〕")
     english.preedit = tips_en .. c1 .. s1
     yield(english)

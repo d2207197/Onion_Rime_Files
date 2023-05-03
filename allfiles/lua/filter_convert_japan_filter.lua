@@ -43,13 +43,13 @@ local function filter(inp, env)
 -- function M.func(inp,env)
   local engine = env.engine
   local context = engine.context
-  local o_input = context.input  -- 原始未轉換輸入碼
+  local c_input = context.input  -- 原始未轉換輸入碼
   local start = context:get_preedit().sel_start
   local _end = context:get_preedit().sel_end
   local caret_pos = context.caret_pos
-  local c, s = string.match(o_input, env.match_pattern)
+  local c, s = string.match(c_input, env.match_pattern)
 
-  if caret_pos == #o_input and c then
+  if caret_pos == #c_input and c then
     local es = _end - start - 2  --減二為扣掉「.,」兩個尾綴（c不包含，故前移兩位）
     local c = string.sub(c, -es)
     -- local c = string.sub(c, start ,_end)
@@ -99,15 +99,15 @@ local function convert_japan_filter(input, env)
   local engine = env.engine
   local context = engine.context
   local caret_pos = context.caret_pos
-  local o_input = context.input  -- 原始未轉換輸入碼
+  local c_input = context.input  -- 原始未轉換輸入碼
   local start = context:get_preedit().sel_start
   local _end = context:get_preedit().sel_end
   -- local _end = caret_pos
-  local c = string.match(o_input, "^([-/a-z.,;]+)%.,$")
-  if caret_pos == #o_input and (c~=nil) then
+  local c = string.match(c_input, "^([-/a-z.,;]+)%.,$")
+  if caret_pos == #c_input and (c~=nil) then
     local es = _end - start - 2  --減二為扣掉「.,」兩個尾綴
     local c = string.sub(c, -es)
-    -- yield(Candidate("jp", start, _end, '字串總數：'..#o_input..' 開始：'..start..' 末尾數：'.._end..' 游標數：'..caret_pos, "〔測試〕"))  --測試用
+    -- yield(Candidate("jp", start, _end, '字串總數：'..#c_input..' 開始：'..start..' 末尾數：'.._end..' 游標數：'..caret_pos, "〔測試〕"))  --測試用
     yield(Candidate("jp", start, _end, revise_t(c), "〔羅馬字〕"))
     yield(Candidate("jp", start, _end, fullshape_t(c), "〔全形羅馬字〕"))
     local hw = halfwidth_kata_t(c)
@@ -132,19 +132,19 @@ local function p_convert_japan_filter(input, env)
   local engine = env.engine
   local context = engine.context
   local caret_pos = context.caret_pos
-  local o_input = context.input  -- 原始未轉換輸入碼
+  local c_input = context.input  -- 原始未轉換輸入碼
   local start = context:get_preedit().sel_start
   -- local _end = context:get_preedit().sel_end + 1  --一般日語末尾只有「.」或「,」，「.,」會多一。
   local _end = caret_pos
   local tips_jp = "《日-固列》"
-  local c, s = string.match(o_input, "[,46]([-/a-z][-/a-z.,;]*)(%., ?)$")
-  if caret_pos == #o_input and (c~=nil) then
-  -- if (c~=nil) and #o_input <= _end then
+  local c, s = string.match(c_input, "[,46]([-/a-z][-/a-z.,;]*)(%., ?)$")
+  if caret_pos == #c_input and (c~=nil) then
+  -- if (c~=nil) and #c_input <= _end then
   -- if (c~=nil) and context:is_composing() then
   -- if (c~=nil) then
 
     local jp_p = tips_jp .. c .. s
-    -- local roma = Candidate("jp", start, _end, '字串總數：'..#o_input..' 開始：'..start..' 末尾數加一：'.._end..' 游標數：'..caret_pos, "〔測試〕")  --測試用
+    -- local roma = Candidate("jp", start, _end, '字串總數：'..#c_input..' 開始：'..start..' 末尾數加一：'.._end..' 游標數：'..caret_pos, "〔測試〕")  --測試用
     local roma = Candidate("jp", start, _end, revise_t(c) , "〔羅馬字〕")
     local roma_f = Candidate("jp", start, _end, fullshape_t(c), "〔全形羅馬字〕")
     -- yield( change_preedit(roma, jp_p) )

@@ -54,11 +54,11 @@ return { func = filter }
 --[[
 local function comment_filter_plus(input, env)
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
-  -- local find_prefix = env.engine.context.input
-  -- local pun1 = string.match(find_prefix, "^'/" )
-  -- local pun2 = string.match(find_prefix, "==?[]`0-9-=';,./[]*$" )
-  -- local pun3 = string.match(find_prefix, "[]\\[]+$" )
-  -- local pun4 = string.match(find_prefix, "^[;|][;]?$" )
+  -- local c_input = env.engine.context.input
+  -- local pun1 = string.match(c_input, "^'/" )
+  -- local pun2 = string.match(c_input, "==?[]`0-9-=';,./[]*$" )
+  -- local pun3 = string.match(c_input, "[]\\[]+$" )
+  -- local pun4 = string.match(c_input, "^[;|][;]?$" )
   if (not s_c_f_p_s) then
   -- if (not s_c_f_p_s) or (pun1) or (pun2) or (pun3) or (pun4) then
   -- 使用 `iter()` 遍歷所有輸入候選項

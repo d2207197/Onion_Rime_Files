@@ -109,21 +109,21 @@ local function filter(inp,env)
   local _end = context:get_preedit().sel_end
   local caret_pos = context.caret_pos
   local es = _end - start
-  local o_input = context.input  -- 原始未轉換輸入碼
-  local c_input = string.sub(o_input, -es)
+  local c_input = context.input  -- 原始未轉換輸入碼
+  local cut_input = string.sub(c_input, -es)
   --- 以下 「load_text_dict」 可能為 nil 故要 or {}
   -- local text_dict_tab = load_text_dict("lua_custom_phrase") or {}  -- 直接限定 txt 字典
   -- local text_dict_tab = load_text_dict(env.textdict) or {}  -- 更新 txt 不需「重新部署」
   --- {}['xxx'] 拋出 nil，{}不為 nil。
+  -- local c_p_tab = text_dict_tab[cut_input]  -- 更新 txt 不需「重新部署」
   -- local c_p_tab = text_dict_tab[c_input]  -- 更新 txt 不需「重新部署」
-  -- local c_p_tab = text_dict_tab[o_input]  -- 更新 txt 不需「重新部署」
-  local c_p_tab = env.tab[c_input]
+  local c_p_tab = env.tab[cut_input]
 
   if env.textdict == "" then
   elseif env.tab == {} then
   -- elseif text_dict_tab == {} then
   elseif c_p_tab then
-  -- elseif (caret_pos == #o_input) and c_p_tab then
+  -- elseif (caret_pos == #c_input) and c_p_tab then
     for _, v in pairs(c_p_tab) do
       local v = string.gsub(v, "\\n", "\n")  -- 可以多行文本
       local v = string.gsub(v, "\\r", "\r")  -- 可以多行文本

@@ -22,13 +22,13 @@ local function filter(inp, env)
   local engine = env.engine
   local context = engine.context
   local en_sort = context:get_option("en_sort")
-  -- local input_in = context.input  -- 原始未轉換輸入碼
+  -- local c_input = context.input  -- 原始未轉換輸入碼
   -- local caret_pos = context.caret_pos
   local start = context:get_preedit().sel_start
   local _end = context:get_preedit().sel_end
   local es = _end - start
   -- local prefix = env.engine.schema.config:get_string("easy_en/prefix")
-  -- local input_n = string.len(input_in)
+  -- local input_n = string.len(c_input)
 
   if en_sort then
 
@@ -38,7 +38,7 @@ local function filter(inp, env)
         cand.preedit = cand.preedit .. "\t（序排：二字母以下按個排）"  -- （序排：單字母按個排）
         yield(cand)
       end
-      -- yield(Candidate("en", start, _end, input_in, "〔小於〕"))  -- 測試用
+      -- yield(Candidate("en", start, _end, c_input, "〔小於〕"))  -- 測試用
 
     else
 
@@ -142,13 +142,13 @@ local function filter(inp, env)
   local engine = env.engine
   local context = engine.context
   local en_sort = context:get_option("en_sort")
-  -- local input_in = context.input  -- 原始未轉換輸入碼
+  -- local c_input = context.input  -- 原始未轉換輸入碼
   -- local caret_pos = context.caret_pos
   local start = context:get_preedit().sel_start
   local _end = context:get_preedit().sel_end
   local es = _end-start
   -- local prefix = env.engine.schema.config:get_string("easy_en/prefix")
-  -- local input_n = string.len(input_in)
+  -- local input_n = string.len(c_input)
 
   if en_sort then
     -- if prefix ~= nil then
@@ -169,17 +169,17 @@ local function filter(inp, env)
       -- local start = env.engine.context:get_preedit().sel_start
       -- local _end = env.engine.context:get_preedit().sel_end
       -- local nnn = _end - start
-      -- if (not string.match(input_in, ' $' )) then  --空格避免注音掛接出現 Bug
-      -- if (not string.match(input_in, ' $' )) and (not string.match(cand.text, ' ' )) then  --空格避免注音掛接出現 Bug
-      -- if ((string.len(cand.text) >= nnn) and (not string.match(input_in, ' $' ))) then  --空格避免注音掛接出現 Bug
-      -- if (string.match(cand.text, '%u' )) or ((string.len(cand.text) >= nnn) and (not string.match(input_in, ' $' ))) then  --空格避免注音掛接出現 Bug
+      -- if (not string.match(c_input, ' $' )) then  --空格避免注音掛接出現 Bug
+      -- if (not string.match(c_input, ' $' )) and (not string.match(cand.text, ' ' )) then  --空格避免注音掛接出現 Bug
+      -- if ((string.len(cand.text) >= nnn) and (not string.match(c_input, ' $' ))) then  --空格避免注音掛接出現 Bug
+      -- if (string.match(cand.text, '%u' )) or ((string.len(cand.text) >= nnn) and (not string.match(c_input, ' $' ))) then  --空格避免注音掛接出現 Bug
 
         -- table.insert(cands, {text = cand.text , comment = cand.comment, index = #cands})
         -- table.insert(cands, {text = preedit.t .. cand.comment:sub(2), comment = cand.text, index = #cands})
         -- table.insert(cands, {text = cand.text , comment = cand.comment})
 
       -- elseif (string.match(cand.text, '%u' )) then
-      -- -- elseif (string.match(cand.text, '%u' )) or (string.match(input_in, "'" )) then
+      -- -- elseif (string.match(cand.text, '%u' )) or (string.match(c_input, "'" )) then
       --   table.insert(u, cand)
 
       -- elseif (string.match(en_preedit, " " )) then  --放在注音掛接，可能會衝突？

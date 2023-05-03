@@ -85,11 +85,11 @@ local function ocm_mixin_filter(input, env)
   local c_f2_s = env.engine.context:get_option("character_range_bhjm")
   local s_c_f_p_s = env.engine.context:get_option("simplify_comment")
   local b_k = env.engine.context:get_option("back_mark")
-  -- local find_prefix = env.engine.context.input
-  -- local pun1 = string.match(find_prefix, "^'/" )
-  -- local pun2 = string.match(find_prefix, "==?[]`0-9-=';,./[]*$" )
-  -- local pun3 = string.match(find_prefix, "[]\\[]+$" )
-  -- local pun4 = string.match(find_prefix, "^[;|][;]?$" )
+  -- local c_input = env.engine.context.input
+  -- local pun1 = string.match(c_input, "^'/" )
+  -- local pun2 = string.match(c_input, "==?[]`0-9-=';,./[]*$" )
+  -- local pun3 = string.match(c_input, "[]\\[]+$" )
+  -- local pun4 = string.match(c_input, "^[;|][;]?$" )
   if (c_f2_s) and (b_k) then
     -- local bm_opencc = {}
     local bm_opencc = Opencc("back_mark.json") or {''}
