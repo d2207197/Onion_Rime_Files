@@ -61,19 +61,21 @@
 ├─ dif1_la.extended.dict.yaml                 
 ├─ dif1_la.schema.yaml                        
 ├─ dif1_phrase.txt                            
-├─ easy_en_lower.dict.yaml                    〈掛載用 英漢字典 方案〉「主字詞典」（小寫）
-├─ easy_en_lower.schema.yaml                  〈掛載用 英漢字典 方案〉「設定檔」（小寫）
-├─ easy_en_upper.dict.yaml                    〈掛載用 英漢字典 方案〉「主字詞典」（大寫或大小寫混合）
-├─ easy_en_upper.schema.yaml                  〈掛載用 英漢字典 方案〉「設定檔」（大寫或大小寫混合）
 ├─ easy_en_lcomment.dict.yaml                 〈掛載用 英漢字典 方案〉「主字詞典」（單純 Comment 濾鏡用）
 ├─ easy_en_lcomment.schema.yaml               〈掛載用 英漢字典 方案〉「設定檔」（單純 Comment 濾鏡用）
+├─ easy_en_lower.dict.yaml                    〈掛載用 英漢字典 方案〉「主字詞典」（小寫）
+├─ easy_en_lower.schema.yaml                  〈掛載用 英漢字典 方案〉「設定檔」（小寫）
 ├─ easy_en_super.dict.yaml                    （未引用）〈掛載用 英漢字典 方案〉「主字詞典」
 ├─ easy_en_super.schema.yaml                  （未引用）〈掛載用 英漢字典 方案〉「設定檔」（因 Comment 合一，排序會有問題）
 ├─ easy_en_super_original.dict.yaml           （未引用）〈掛載用 英漢字典 方案〉「字詞典」  （未排序前之 easy_en_super.dict.yaml 原始檔）
+├─ easy_en_upper.dict.yaml                    〈掛載用 英漢字典 方案〉「主字詞典」（大寫或大小寫混合）
+├─ easy_en_upper.schema.yaml                  〈掛載用 英漢字典 方案〉「設定檔」（大寫或大小寫混合）
 ├─ element_bopomo.yaml                        〈注音 mixin 和 plus 方案〉程式碼「引入檔」
 ├─ element_double_bopomo.yaml                 〈雙拼注音 方案〉程式碼「引入檔」
 ├─ element_ocm.yaml                           
 ├─ essay-jp-onion.txt                         〈八股文檔〉日文  （只針對假名，因日文一個漢字都對應太多發音，故不包括含有漢字詞彙，漢字詞頻直接在字詞典附註）
+├─ essay-kr-hanja.txt                         〈八股文檔〉韓文  （只針韓文漢字）
+├─ essay-zh-hant-mc-mixin.txt                 〈八股文檔〉多國語言  （注音 mixin 系列所使用）
 ├─ essay-zh-hant-mc.txt                       〈八股文檔〉中文  （較輕量化，詞頻引自小麥注音）
 ├─ fullshape.dict.yaml                        〈掛載用 全形字母 方案〉「字典」
 ├─ fullshape.extended.dict.yaml               〈掛載用 全形字母 方案〉「主字詞典」
@@ -81,9 +83,10 @@
 ├─ greek.dict.yaml                            〈掛載用 希臘文 方案〉「字典」  （注音方案掛載）
 ├─ greek.extended.dict.yaml                   〈掛載用 希臘文 方案〉「主字詞典」  （注音方案掛載）
 ├─ greek.schema.yaml                          〈掛載用 希臘文 方案〉「設定檔」  （注音方案掛載）
-├─ hangeul.dict.yaml                          （未引用）〈掛載用 韓文形碼 方案〉「字典」  （改用 HNC 版）
+├─ hangeul.dict.yaml                          （未引用）〈掛載用 韓文形碼 方案〉「韓文諺文字典」  （改用 HNC 版）
 ├─ hangeul.extended.dict.yaml                 （未引用）〈掛載用 韓文形碼 方案〉「主字詞典」  （改用 HNC 版）
 ├─ hangeul.schema.yaml                        （未引用）〈掛載用 韓文形碼 方案〉「設定檔」  （改用 HNC 版）
+├─ hangeul_hanja.dict.yaml                    （未引用）〈掛載用 韓文形碼 方案〉「韓文漢字字典」  （改用 HNC 版）
 ├─ hangeul_hnc.dict.yaml                      〈掛載用 韓文 HNC 方案〉「字典」  （注音方案掛載）
 ├─ hangeul_hnc.extended.dict.yaml             〈掛載用 韓文 HNC 方案〉「主字詞典」  （注音方案掛載）
 ├─ hangeul_hnc.schema.yaml                    〈掛載用 韓文 HNC 方案〉「設定檔」  （注音方案掛載）
