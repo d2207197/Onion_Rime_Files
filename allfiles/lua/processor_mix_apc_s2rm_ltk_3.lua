@@ -122,24 +122,27 @@ local function processor(key, env)
 以下 ascii_punct 標點轉寫
 --]]
 
-  elseif o_ascii_punct then
-    if key:repr() == "Shift+less" then
-      if context:is_composing() then
-        engine:commit_text( g_c_t .. "," )
-      else
-        engine:commit_text( "," )
-      end
-      context:clear()
-      return 1 -- kAccepted
-    elseif key:repr() == "Shift+greater" then
-      if context:is_composing() then
-        engine:commit_text( g_c_t .. "." )
-      else
-        engine:commit_text( "." )
-      end
-      context:clear()
-      return 1 -- kAccepted
+  elseif o_ascii_punct and key:repr() == "Shift+less" then
+    if context:is_composing() then
+      -- local cand = context:get_selected_candidate()
+      -- engine:commit_text( cand.text .. "," )  -- ascii_punct 時選擇選項與其他標點不統一
+      engine:commit_text( g_c_t .. "," )
+    else
+      engine:commit_text( "," )
     end
+    context:clear()
+    return 1 -- kAccepted
+
+  elseif o_ascii_punct and key:repr() == "Shift+greater" then
+    if context:is_composing() then
+      -- local cand = context:get_selected_candidate()
+      -- engine:commit_text( cand.text .. "." )  -- ascii_punct 時選擇選項與其他標點不統一
+      engine:commit_text( g_c_t .. "." )
+    else
+      engine:commit_text( "." )
+    end
+    context:clear()
+    return 1 -- kAccepted
 
 ---------------------------------------------------------------------------
 --[[
