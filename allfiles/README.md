@@ -83,11 +83,11 @@
 ├─ greek.dict.yaml                            〈掛載用 希臘文 方案〉「字典」  （注音方案掛載）
 ├─ greek.extended.dict.yaml                   〈掛載用 希臘文 方案〉「主字詞典」  （注音方案掛載）
 ├─ greek.schema.yaml                          〈掛載用 希臘文 方案〉「設定檔」  （注音方案掛載）
-├─ hangeul.dict.yaml                          （未引用）〈掛載用 韓文形碼 方案〉「韓文諺文字典」  （改用 HNC 版）
+├─ hangeul.dict.yaml                          （未引用）〈掛載用 韓文形碼 方案〉諺文「字典」  （改用 HNC 版）
 ├─ hangeul.extended.dict.yaml                 （未引用）〈掛載用 韓文形碼 方案〉「主字詞典」  （改用 HNC 版）
 ├─ hangeul.schema.yaml                        （未引用）〈掛載用 韓文形碼 方案〉「設定檔」  （改用 HNC 版）
-├─ hangeul_hanja.dict.yaml                    （未引用）〈掛載用 韓文形碼 方案〉「韓文漢字字典」  （改用 HNC 版）
-├─ hangeul_hnc.dict.yaml                      〈掛載用 韓文 HNC 方案〉「字典」  （注音方案掛載）
+├─ hangeul_hanja.dict.yaml                    （未引用）〈掛載用 韓文形碼 方案〉漢字「字典」  （改用 HNC 版）
+├─ hangeul_hnc.dict.yaml                      〈掛載用 韓文 HNC 方案〉諺文「字典」  （注音方案掛載）
 ├─ hangeul_hnc.extended.dict.yaml             〈掛載用 韓文 HNC 方案〉「主字詞典」  （注音方案掛載）
 ├─ hangeul_hnc.schema.yaml                    〈掛載用 韓文 HNC 方案〉「設定檔」  （注音方案掛載）
 ├─ hangeul_hnc_hanja.dict.yaml                〈掛載用 韓文 HNC 方案〉漢字「字典」  （注音方案掛載）
