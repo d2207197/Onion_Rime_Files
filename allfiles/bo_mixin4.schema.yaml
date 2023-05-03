@@ -4,7 +4,7 @@
 schema:
   schema_id: bo_mixin4
   name: "☆注音(洋蔥mix-in版 4 )☆〔全 ˊ ˇ ˋ ˙ 〕"
-  version: "202304"
+  version: "202305"
   author:
     - 『洋蔥』
   description: |
@@ -79,7 +79,7 @@ engine:
     - reverse_lookup_filter@e_reverse_lookup
     - uniquifier
   processors:
-    - lua_processor@mix_apc_s2rm
+    - lua_processor@mix_apc_s2rm_ltk
     # - lua_processor@ascii_punct_change
     # - lua_processor@s2r_most
     - ascii_composer

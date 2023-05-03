@@ -1,4 +1,4 @@
---- @@ mix_apc_s2rm_3 注音mixin 3
+--- @@ mix_apc_s2rm_ltk_3 注音mixin 3
 --[[
 （bo_mixin3）
 合併 ascii_punct_change、s2r_mixin3、lua_tran_kp，增進效能。
@@ -42,7 +42,7 @@ local kp_pattern = {
   ["Decimal"] = ".",
  }
 
--- local function mix_apc_s2rm_3(key, env)
+-- local function mix_apc_s2rm_ltk_3(key, env)
 local function processor(key, env)
   local engine = env.engine
   local context = engine.context
@@ -195,6 +195,6 @@ local function processor(key, env)
   return 2 -- kNoop
 end
 
--- return mix_apc_s2rm_3
+-- return mix_apc_s2rm_ltk_3
 return { func = processor }
 -- return { init = init, func = processor }

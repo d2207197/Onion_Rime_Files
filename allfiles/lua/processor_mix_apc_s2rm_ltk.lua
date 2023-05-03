@@ -1,9 +1,7 @@
---- @@ mix_apc_pluss
+--- @@ mix_apc_s2rm_ltk 注音mixin 1_2_4 和 plus 專用
 --[[
-（bopomo_onionplus_space）
-合併 ascii_punct_change、lua_tran_kp 並增加功能
-使初始空白可以直接上屏
-於注音方案改變在非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
+（bo_mixin 1、2、4；bopomo_onionplus）
+合併 ascii_punct_change、s2r_most、lua_tran_kp，增進效能。
 --]]
 
 -- local function init(env)
@@ -44,17 +42,31 @@ local kp_pattern = {
   ["Decimal"] = ".",
  }
 
--- local function mix_apc_pluss(key, env)
+-- local function mix_apc_s2rm_ltk(key, env)
 local function processor(key, env)
   local engine = env.engine
   local context = engine.context
   local c_input = context.input
-  local caret_pos = context.caret_pos
   local comp = context.composition
   local seg = comp:back()
   local g_c_t = context:get_commit_text()
   local o_ascii_punct = context:get_option("ascii_punct")
   local o_ascii_mode = context:get_option("ascii_mode")
+  -- local c_i_c = context:is_composing()
+
+  -- local check_i1 = string.match(c_input, "[@:]")
+  -- local check_i2 = string.match(c_input, "'/")
+  -- local check_i3 = string.match(c_input, "=[-125890;,./]$")
+  -- local check_i4 = string.match(c_input, "=[-;,./][-;,./]$")
+  -- local check_i5 = string.match(c_input, "==[90]$")
+  -- local check_i = string.match(c_input, "[@:]") or
+  --                 string.match(c_input, "'/") or
+  --                 string.match(c_input, "=[-125890;,./]$") or
+  --                 string.match(c_input, "=[-;,./][-;,./]$") or
+  --                 string.match(c_input, "==[90]$")
+  local check_punct = string.match(c_input, "=[-125890;,./]$") or
+                      string.match(c_input, "=[-;,./][-;,./]$") or
+                      string.match(c_input, "==[90]$")
 
   local check_pre = string.match(c_input, "'/[-]?[.]?$")
   local check_num_cal = string.match(c_input, "'/[-]?[.]?%d+%.?%d*$") or
@@ -81,10 +93,20 @@ local function processor(key, env)
 以下特殊時 space 直上屏
 --]]
 
-  elseif key:repr() == "space" and caret_pos == 0 then
-      engine:commit_text( " " )
+  elseif key:repr() == "space" and context:is_composing() then
+  -- elseif key:repr() == "space" and context:has_menu() then
+  -- elseif key:repr() == "space" and c_i_c then
+  -- elseif (key:repr() == "space") then
+    if check_punct or seg:has_tag("mf_translator") or seg:has_tag("email_url_translator") then
+    -- if check_i then
+    -- if check_i1 or check_i2 or check_i3 or check_i4 or check_i5 then
+    -- if ( string.match(c_input, "[@:]") or string.match(c_input, "'/") or string.match(c_input, "=[-125890;,./]$") or string.match(c_input, "=[-;,./][-;,./]$") or string.match(c_input, "==[90]$") ) then  --or string.match(c_input, "==[,.]{2}$")
+    -- if ( string.match(c_input, "[@:]") or string.match(c_input, "'/") or string.match(c_input, "=[-125890;,./]$") or string.match(c_input, "=[-;,./][-;,./]$") or string.match(c_input, "==[90]$") or string.match(c_input, "==[,][,]?$") or string.match(c_input, "==[.][.]?$") ) then
+    -- -- 「全，非精簡」 if ( string.match(c_input, "[@:]") or string.match(c_input, "'/") or string.match(c_input, "=[-125890;,./]$") or string.match(c_input, "=[-][-]$") or string.match(c_input, "=[;][;]$") or string.match(c_input, "=[,][,]$") or string.match(c_input, "=[.][.]$") or string.match(c_input, "=[/][/]$") or string.match(c_input, "==[90]$") or string.match(c_input, "==[,][,]?$") or string.match(c_input, "==[.][.]?$") ) then
+      engine:commit_text(g_c_t)
       context:clear()
       return 1 -- kAccepted
+    end
 
 ---------------------------------------------------------------------------
 --[[
@@ -94,6 +116,7 @@ local function processor(key, env)
   elseif o_ascii_punct then
     if key:repr() == "Shift+less" then
       if context:is_composing() then
+      -- if c_i_c then
         engine:commit_text( g_c_t .. "," )
       else
         engine:commit_text( "," )
@@ -102,6 +125,7 @@ local function processor(key, env)
       return 1 -- kAccepted
     elseif key:repr() == "Shift+greater" then
       if context:is_composing() then
+      -- if c_i_c then
         engine:commit_text( g_c_t .. "." )
       else
         engine:commit_text( "." )
@@ -164,6 +188,6 @@ local function processor(key, env)
   return 2 -- kNoop
 end
 
--- return mix_apc_pluss
+-- return mix_apc_s2rm_ltk
 return { func = processor }
 -- return { init = init, func = processor }

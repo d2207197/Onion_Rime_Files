@@ -80,9 +80,9 @@
 --
 --      - ＊合併兩個以上函數：
 --      - lua_processor@array30up_mix                --（引lua資料夾）（onion-array30） 合併 array30up 和 array30up_zy，增進效能。
---      - lua_processor@mix_apc_s2rm                 --（引lua資料夾）（bo_mixin 1、2、4；bopomo_onionplus） 注音掛接，合併 ascii_punct_change 和 s2r_most，增進效能。
---      - lua_processor@mix_apc_s2rm_3               --（引lua資料夾）（bo_mixin3） 注音掛接，合併 ascii_punct_change 和 s2r_mixin3，增進效能。
---      - lua_processor@mix_apc_pluss                --（引lua資料夾）（bopomo_onionplus_space） 以原 ascii_punct_change 增加功能，使初始空白可以直接上屏
+--      - lua_processor@mix_apc_s2rm_ltk             --（引lua資料夾）（bo_mixin 1、2、4；bopomo_onionplus） 合併 ascii_punct_change、s2r_most、lua_tran_kp，增進效能。
+--      - lua_processor@mix_apc_s2rm_ltk_3           --（引lua資料夾）（bo_mixin3） 合併 ascii_punct_change、s2r_mixin3、lua_tran_kp，增進效能。
+--      - lua_processor@mix_apc_ltk_pluss            --（引lua資料夾）（bopomo_onionplus_space） 以原 ascii_punct_change 增加功能，使初始空白可以直接上屏
 --      - lua_processor@mix_zhs_ltk                  --（引lua資料夾）（ocm_mixin、dif1、ocm_mix） 合併 zhuyin_space 和 lua_tran_kp
 --      ...
 
@@ -252,21 +252,21 @@ ascii_punct_change = require("processor_ascii_punct_change")
 array30up_mix = require("processor_array30up_mix")
 
 
---- mix_apc_s2rm （bo_mixin 1、2、4；bopomo_onionplus）
--- 合併 ascii_punct_change 和 s2r_most，增進效能。
-mix_apc_s2rm = require("processor_mix_apc_s2rm")
+--- mix_apc_s2rm_ltk （bo_mixin 1、2、4；bopomo_onionplus）
+-- 合併 ascii_punct_change、s2r_most、lua_tran_kp，增進效能。
+mix_apc_s2rm_ltk = require("processor_mix_apc_s2rm_ltk")
 
 
---- mix_apc_s2rm_3 （bo_mixin3）
--- 合併 ascii_punct_change 和 s2r_mixin3，增進效能。
-mix_apc_s2rm_3 = require("processor_mix_apc_s2rm_3")
+--- mix_apc_s2rm_ltk_3 （bo_mixin3）
+-- 合併 ascii_punct_change、s2r_mixin3、lua_tran_kp，增進效能。
+mix_apc_s2rm_ltk_3 = require("processor_mix_apc_s2rm_ltk_3")
 
 
---- mix_apc_pluss （bopomo_onionplus_space）
+--- mix_apc_ltk_pluss （bopomo_onionplus_space）
 -- 以原 ascii_punct_change 增加功能
 -- 使初始空白可以直接上屏
 -- 於注音方案改變在非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
-mix_apc_pluss = require("processor_mix_apc_pluss")
+mix_apc_ltk_pluss = require("processor_mix_apc_ltk_pluss")
 
 
 --- zhuyin_space （Mount_ocm）
