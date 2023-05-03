@@ -6,7 +6,7 @@
 schema:
   schema_id: Mount_ocm
   name: "❖蝦米(單出-反查專用)❖"
-  version: "202304"
+  version: "202305"
   author:
     - 洋蔥
   description: |
@@ -76,7 +76,7 @@ engine:
     - script_translator@reverse3_lookup_extra
 
 comment_filter_plus:
-  tags: [ abc ]
+  tags: [ abc, pt ]
 
 menu:
   alternative_select_keys: "0123456789"
