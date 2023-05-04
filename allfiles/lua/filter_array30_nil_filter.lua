@@ -61,12 +61,13 @@ local function filter(inp, env)
   local engine = env.engine
   local context = engine.context
   local c_input = context.input  -- 原始未轉換輸入碼
-  local array30_r = string.match(c_input, "^==")
+  -- local array30_r = string.match(c_input, "^==")  -- 改用 schema 內限制
   local _end2 = context:get_preedit().sel_end + 2
   local array30_nil_cand = Candidate("array30nil", 0, _end2, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
   -- local array30_nil_cand = Candidate("array30nil", 0, string.len(c_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
   -- local array30_nil_cand = Candidate("array30nil", 0, string.len(g_c_t) , "", "⎔")  -- 選擇空碼"⎔"效果為卡住，但 preedit 顯示會有問題
-  if array30_r then
+
+  -- if array30_r then
     for cand in inp:iter() do
       if string.match(cand.text, "^⎔%d$" ) then
         -- local cccc = string.gsub(cand.text, "^⎔2$", "⎔")
@@ -102,7 +103,8 @@ local function filter(inp, env)
   --   for cand in inp:iter() do
   --     yield(cand)
   --   end
-  end
+  -- end
+
 end
 
 -- return array30_nil_filter

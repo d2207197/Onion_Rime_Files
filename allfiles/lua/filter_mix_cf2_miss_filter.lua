@@ -35,21 +35,22 @@ local function filter(inp, env)
   -- local _end = context:get_preedit().sel_end
   local addcomment1 = string.match(c_input, "=%.$")
   local addcomment2 = string.match(c_input, "[][]$")
-  local addcand = string.match(c_input, "^'$")
+  -- local addcand = string.match(c_input, "^'$")
 
   local tran = c_f2_s and Translation(drop_cand, inp, "᰼᰼") or inp
   for cand in tran:iter() do
     if addcomment1 then
-      yield( cand.text== "。" and change_comment(cand,"〔句點〕") or cand )
+      yield( cand.text == "。" and change_comment(cand,"〔句點〕") or cand )
       -- yield( string.match(cand.text, "^。$") and change_comment(cand,"〔句點〕") or cand )
     elseif addcomment2 then
-      yield( cand.text == "〔" and change_comment(cand,"〔六角括號〕")
-          or cand.text == "〕" and change_comment(cand,"〔六角括號〕")
+      yield( (cand.text == "〔" or cand.text == "〕") and change_comment(cand,"〔六角括號〕")
+          -- or cand.text == "〕" and change_comment(cand,"〔六角括號〕")
           or cand )
       -- yield( string.match(cand.text, "^〔$") and change_comment(cand,"〔六角括號〕")
       --     or string.match(cand.text, "^〕$") and change_comment(cand,"〔六角括號〕")
       --     or cand )
-    elseif addcand and o_ascii_punct then
+    elseif c_input == "'" and o_ascii_punct then
+    -- elseif addcand and o_ascii_punct then
       local cand_add = Candidate("apostrophe", 0, 1, "'", "")
       yield(cand_add)
       return
