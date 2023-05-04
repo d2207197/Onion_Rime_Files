@@ -4,7 +4,7 @@
 schema:
   schema_id: terra_pinyin_onion
   name: "★地球拼音(洋蔥mix-in版)★"
-  version: "202304"
+  version: "202305"
   author:
     - 佛振 <chen.sst@gmail.com>
     - 『洋蔥』
@@ -26,7 +26,7 @@ switches:
     reset: 0
     states: [ 。，, ．， ]
   - name: simplification
-    # reset: 0
+    reset: 0
     states: [ 漢字, 汉字 ]
   - name: back_mark
     reset: 0
@@ -79,6 +79,7 @@ menu:
 speller:
   alphabet: "zyxwvutsrqponmlkjihgfedcba-;,./'"
   initials: "zyxwvutsrqponmlkjihgfedcba-"
+  # finals: ";,./'" #不能開啟，否則組合變音無法打出
   delimiter: " "
   algebra:
 ##### 非正確注音（補空碼或慣用發音）轉寫 #####

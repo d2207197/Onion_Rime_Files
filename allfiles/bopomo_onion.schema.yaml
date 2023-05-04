@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion
   name: "☆注音(洋蔥純注音版)☆"
-  version: "202301"
+  version: "202305"
   author:
     - 『洋蔥』
   description: |
@@ -318,7 +318,7 @@ key_binder:
     - {accept: Shift+L, send: space, when: has_menu}
     - {accept: Shift+E, send: Shift+Return, when: composing}
     - {accept: Shift+O, send: Shift+Return, when: composing}
-### 純注音專門上屏注音文用 ###
+### 上屏 preedit（注音文）編碼 ###
     - {accept: Shift+F, send: Control+Return, when: has_menu}
 ### 刪除鍵 ###
     - {accept: BackSpace, send: Control+BackSpace, when: has_menu} #〔關〕刪除前一個拼音字符〔開〕：刪除整組拼音字符（一個字）
@@ -329,6 +329,11 @@ key_binder:
 ### 另設快捷刪除鍵 ###
     - {accept: Shift+R, send: BackSpace, when: composing}
     - {accept: Shift+P, send: BackSpace, when: composing}
+    - {accept: Shift+T, send: Delete, when: composing}
+    - {accept: Shift+G, send: Escape, when: composing}
+### 另設快捷鍵 ###
+    - {accept: Shift+V, send: Home, when: composing}
+    - {accept: Shift+B, send: End, when: composing}
 ### 功能快捷鍵 ###
     # - {accept: Return, send: space, when: has_menu}
 ### 避聲調重複按 ###
