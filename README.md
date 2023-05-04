@@ -144,8 +144,7 @@
   
 - 注音洋蔥版選字鍵位
 
-  #### <img src="https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_select_keys_keyboard.png" width = "595" alt="image" /><br>
-
+  #### <img src="https://user-images.githubusercontent.com/54584047/236190921-a2c86863-ed81-4a28-ae37-07566aa9c3a9.png" width = "595" alt="image" /><br>
 
 ## 贊助 Donate
 
