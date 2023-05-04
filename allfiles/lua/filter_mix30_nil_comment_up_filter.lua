@@ -13,6 +13,8 @@
 
 local change_comment = require("filter_cand/change_comment")
 
+local change_preedit = require("filter_cand/change_preedit")
+
 ----------------
 -- local M={}
 -- local function init(env)
@@ -56,12 +58,15 @@ local function filter(inp, env)
   -- local check_www = string.match(c_input, "^www[.].*$" )  -- 直接判別 comment 即可
 
   for cand in inp:iter() do
-    if string.match(cand.text, "^⎔%d$" ) then
-      -- local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
-      -- array30_nil_cand.preedit = array30_preedit
-      array30_nil_cand.preedit = cand.preedit
-      yield(array30_nil_cand)
-    elseif string.match(cand.comment, "〔URL〕" ) then
+    if #c_input<3 and string.match(cand.text, "^⎔%d$" ) then
+      yield(change_preedit(array30_nil_cand, cand.preedit))
+    -- if string.match(cand.text, "^⎔%d$" ) then
+    --   -- local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
+    --   -- array30_nil_cand.preedit = array30_preedit
+    --   array30_nil_cand.preedit = cand.preedit
+    --   yield(array30_nil_cand)
+    elseif #c_input>3 and cand.comment == "〔URL〕" then
+    -- elseif string.match(cand.comment, "〔URL〕" ) then
     -- elseif check_www and string.match(cand.comment, "〔URL〕" ) then  -- 直接判別 comment 即可
       yield(cand)
     else

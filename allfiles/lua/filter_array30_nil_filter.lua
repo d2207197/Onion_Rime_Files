@@ -45,8 +45,11 @@
 -- end
 
 
+----------------
 
+local change_preedit = require("filter_cand/change_preedit")
 
+----------------
 -- local M={}
 -- local function init(env)
 -- function M.init(env)
@@ -67,42 +70,54 @@ local function filter(inp, env)
   -- local array30_nil_cand = Candidate("array30nil", 0, string.len(c_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
   -- local array30_nil_cand = Candidate("array30nil", 0, string.len(g_c_t) , "", "⎔")  -- 選擇空碼"⎔"效果為卡住，但 preedit 顯示會有問題
 
-  -- if array30_r then
-    for cand in inp:iter() do
-      if string.match(cand.text, "^⎔%d$" ) then
-        -- local cccc = string.gsub(cand.text, "^⎔2$", "⎔")
-        -- cand.text = '⎔'
-        -- cand:get_genuine().text = '@'
-        -- cand:get_genuine().comment = cand.comment .. "⎔"
-  --[[
-        欲定義的 translator 包含三個輸入參數：
-        - input: 待翻譯的字符串
-        - seg: 包含 `start` 和 `_end` 兩個屬性，分別表示當前串在輸入框中的起始和結束位置
-        - env: 可選參數，表示 translator 所處的環境
-  --]]
-        -- yield(Candidate("date", seg.start, seg._end, "⎔" , "〔日期〕"))
-        -- yield(Candidate("date", seg.start, seg._end, string.gsub(cand.text, "^⎔2$", "⎔") , "〔日期〕"))
-  --[[
-        -- local g_c_t = env.engine.context:get_commit_text()  -- 原版樣式
-        -- local text = cand.text  -- 原版樣式
-        -- yield(Candidate("cap", 0, string.len(g_c_t) , text, cand.comment))  -- 原版樣式
-  --]]
-        -- local array30_nil_preedit = cand:get_genuine().preedit  -- 效用同下，獲取原 preedit
-        -- local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
-        -- local c_input = env.engine.context.input  -- 原始未轉換輸入碼
-        -- array30_nil_cand.preedit = array30_preedit
-        -- array30_nil_cand.preedit = xform_array30_input(c_input)  -- 使用 gsub 函數轉換，上列為不使用 gsub 轉換更精簡寫法
-        array30_nil_cand.preedit = cand.preedit
-        yield(array30_nil_cand)
-      else
-        yield(cand)
-      end
+  for cand in inp:iter() do
+    if #c_input<5 then
+      -- array30_nil_cand.preedit = cand.preedit
+      -- yield(string.match(cand.text, "^⎔%d$" ) and array30_nil_cand or cand)
+      local cand_filtr = string.match(cand.text, "^⎔%d$" ) and change_preedit(array30_nil_cand, cand.preedit) or cand
+      yield(cand_filtr)
+    else
+      yield(cand)
     end
-    -- return nil
-  -- else
+  end
+
+  -- --- 以下舊寫法
+  -- if array30_r then
   --   for cand in inp:iter() do
-  --     yield(cand)
+  --     if string.match(cand.text, "^⎔%d$" ) then
+  --       -- local cccc = string.gsub(cand.text, "^⎔2$", "⎔")
+  --       -- cand.text = '⎔'
+  --       -- cand:get_genuine().text = '@'
+  --       -- cand:get_genuine().comment = cand.comment .. "⎔"
+  -- --[[
+  --       欲定義的 translator 包含三個輸入參數：
+  --       - input: 待翻譯的字符串
+  --       - seg: 包含 `start` 和 `_end` 兩個屬性，分別表示當前串在輸入框中的起始和結束位置
+  --       - env: 可選參數，表示 translator 所處的環境
+  -- --]]
+  --       -- yield(Candidate("date", seg.start, seg._end, "⎔" , "〔日期〕"))
+  --       -- yield(Candidate("date", seg.start, seg._end, string.gsub(cand.text, "^⎔2$", "⎔") , "〔日期〕"))
+  -- --[[
+  --       -- local g_c_t = env.engine.context:get_commit_text()  -- 原版樣式
+  --       -- local text = cand.text  -- 原版樣式
+  --       -- yield(Candidate("cap", 0, string.len(g_c_t) , text, cand.comment))  -- 原版樣式
+  -- --]]
+  --       -- local array30_nil_preedit = cand:get_genuine().preedit  -- 效用同下，獲取原 preedit
+  --       -- local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
+  --       -- local c_input = env.engine.context.input  -- 原始未轉換輸入碼
+  --       -- array30_nil_cand.preedit = array30_preedit
+  --       -- array30_nil_cand.preedit = xform_array30_input(c_input)  -- 使用 gsub 函數轉換，上列為不使用 gsub 轉換更精簡寫法
+  --       array30_nil_cand.preedit = cand.preedit
+  --       yield(array30_nil_cand)
+  --     else
+  --       yield(cand)
+  --     end
   --   end
+  --   -- return nil
+  -- -- else
+  -- --   for cand in inp:iter() do
+  -- --     yield(cand)
+  -- --   end
   -- end
 
 end
