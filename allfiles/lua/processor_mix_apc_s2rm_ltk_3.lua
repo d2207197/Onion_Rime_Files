@@ -75,9 +75,9 @@ local function processor(key, env)
   --                 string.match(c_input, "=[-125890;,./]$") or
   --                 string.match(c_input, "=[-;,./][-;,./]$") or
   --                 string.match(c_input, "==[90]$")
-  local check_punct = string.match(c_input, "=[-125890;,./]$") or
-                      string.match(c_input, "=[-;,./][-;,./]$") or
-                      string.match(c_input, "==[90]$")
+  -- local check_punct = string.match(c_input, "=[-125890;,./]$") or
+  --                     string.match(c_input, "=[-;,./][-;,./]$") or
+  --                     string.match(c_input, "==[90]$")
 
   local check_pre = string.match(c_input, "'/[-]?[.]?$")
   local check_num_cal = string.match(c_input, "'/[-]?[.]?%d+%.?%d*$") or
@@ -106,7 +106,8 @@ local function processor(key, env)
 
   elseif key:repr() == "space" and context:is_composing() then
   -- elseif key:repr() == "space" and context:has_menu() then
-    if check_punct or seg:has_tag("mf_translator") or seg:has_tag("email_url_translator") then
+    if seg:has_tag("punct") or seg:has_tag("mf_translator") or seg:has_tag("email_url_translator") then
+    -- if check_punct or seg:has_tag("mf_translator") or seg:has_tag("email_url_translator") then
     -- if check_i then
     -- if check_i1 or check_i2 or check_i3 or check_i4 or check_i5 or check_i6 or check_i7 or check_i8 or check_i9 or check_i10 then
     -- if ( string.match(c_input, "[@:]") or string.match(c_input, "^'/[';a-z0-9.,/-]*$") or string.match(c_input, "[-,./;a-z125890][]['3467%s]'/[';a-z0-9.,/-]*$") or string.match(c_input, "=[0-9]'/[';a-z0-9.,/-]*$") or string.match(c_input, "=[][]'/[';a-z0-9.,/-]*$") or string.match(c_input, "=[][][][]'/[';a-z0-9.,/-]*$") or string.match(c_input, "=[-,.;=`]'/[';a-z0-9.,/-]*$") or string.match(c_input, "=[-,.;'=`][-,.;'=`]'/[';a-z0-9.,/-]*$") or string.match(c_input, "=[-125890;,./]$") or string.match(c_input, "=[-;,./][-;,./]$") or string.match(c_input, "==[90]$") ) then  --or string.match(c_input, "==[,.]{2}$")

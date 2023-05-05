@@ -12,7 +12,6 @@
 ----------------
 
 local change_comment = require("filter_cand/change_comment")
-
 local change_preedit = require("filter_cand/change_preedit")
 
 ----------------
@@ -55,62 +54,87 @@ local function filter(inp, env)
   local check_wu = string.match(c_input, "^sf $" )
   local check_ji = string.match(c_input, "^lb $" )
   local check_kong = string.match(c_input, "^ou $" )
-  -- local check_www = string.match(c_input, "^www[.].*$" )  -- 直接判別 comment 即可
+  local check_www = string.match(c_input, "^www[.]" )  -- 直接判別 comment 即可
 
   for cand in inp:iter() do
-    if #c_input<3 and string.match(cand.text, "^⎔%d$" ) then
-      yield(change_preedit(array30_nil_cand, cand.preedit))
-    -- if string.match(cand.text, "^⎔%d$" ) then
-    --   -- local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
-    --   -- array30_nil_cand.preedit = array30_preedit
-    --   array30_nil_cand.preedit = cand.preedit
-    --   yield(array30_nil_cand)
-    elseif #c_input>3 and cand.comment == "〔URL〕" then
-    -- elseif string.match(cand.comment, "〔URL〕" ) then
-    -- elseif check_www and string.match(cand.comment, "〔URL〕" ) then  -- 直接判別 comment 即可
-      yield(cand)
-    else
-      if s_up then
 
-        if check_ns then  -- 不含空格
-          yield( s_c_f_p_s and change_comment(cand,"") or cand )
-        else  -- 最後有空格
-          local cand_filtr = check_s1 and not string.match(cand.comment, "▪" ) and cand or
-                             -- (check_s2 or check_s3 or check_s4 or check_s5 or check_s6 or check_s7 or check_s8) and cand or
-                             check_s2 and cand or
-                             check_wu and string.match(cand.text, "毋" ) and cand or
-                             check_ji and string.match(cand.text, "及" ) and cand or
-                             check_kong and string.match(cand.text, "○" ) and cand
-          if cand_filtr then
-            yield(cand_filtr)  -- yield(nil)不能為空，否則報錯。
-          end
+    if #c_input<3 then
+      if string.match(cand.text, "^⎔%d$" ) then
+        yield(change_preedit(array30_nil_cand, cand.preedit))
+        goto nil_label
+      else
+        goto normal_label
+      end
+    elseif #c_input>3 then
+      if check_www then
+        if cand.comment == "〔URL〕" then
+          yield(cand)
+          goto nil_label
+        else
+          goto normal_label
         end
+      else
+        goto normal_label
+      end
+    end
+    -- if #c_input<3 and string.match(cand.text, "^⎔%d$" ) then
+    --   yield(change_preedit(array30_nil_cand, cand.preedit))
+    -- -- if string.match(cand.text, "^⎔%d$" ) then
+    -- --   -- local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
+    -- --   -- array30_nil_cand.preedit = array30_preedit
+    -- --   array30_nil_cand.preedit = cand.preedit
+    -- --   yield(array30_nil_cand)
+    -- elseif #c_input>3 and cand.comment == "〔URL〕" then
+    -- -- elseif string.match(cand.comment, "〔URL〕" ) then
+    -- -- elseif check_www and string.match(cand.comment, "〔URL〕" ) then  -- 直接判別 comment 即可
+    --   yield(cand)
 
-        -- if check_ns then
-        --   yield( s_c_f_p_s and change_comment(cand,"") or cand )
-        -- elseif check_s1 and not string.match(cand.comment, "▪" ) then
-        --   yield(cand)  --空格後，該字編碼不含「▪」直接上屏。
-        -- elseif check_s2 or check_s3 or check_s4 or check_s5 or check_s6 or check_s7 or check_s8 then
-        --   yield(cand)  --同時含有「▫」和「▪」編碼的字，空格後，該字某編碼下可直接上屏，某編碼下不能直接上屏。
-        -- elseif check_wu and string.match(cand.text, "毋" ) then
-        --   yield(cand)  --同時含有「▫」和「▪」編碼的字，但該編碼不只一個字。
-        -- elseif check_ji and string.match(cand.text, "及" ) then
-        --   yield(cand)  --同時含有「▫」和「▪」編碼的字，但該編碼不只一個字。
-        -- elseif check_kong and string.match(cand.text, "○" ) then
-        --   yield(cand)  --同時含有「▫」和「▪」編碼的字，但該編碼不只一個字。
+    ::normal_label::
 
-        -- elseif (string.match(c_input, "^www%..*$")) then
-        --   yield(cand)
-        -- elseif (string.match(c_input, "`.*$" )) or (string.match(c_input, "^w[0-9]$" ))  or (string.match(c_input, "^[a-z][-_.0-9a-z]*@.*$" )) or (string.match(c_input, "^(www[.]|https?:|ftp:|mailto:|file:).*$" )) then
-        --   yield(cand)
+    -- else
+    if s_up then
 
-        -- end
-
-      elseif not s_up then
+      if check_ns then  -- 不含空格
         yield( s_c_f_p_s and change_comment(cand,"") or cand )
+      else  -- 最後有空格
+        local cand_filtr = check_s1 and not string.match(cand.comment, "▪" ) and cand or
+                           -- (check_s2 or check_s3 or check_s4 or check_s5 or check_s6 or check_s7 or check_s8) and cand or
+                           check_s2 and cand or
+                           check_wu and string.match(cand.text, "毋" ) and cand or
+                           check_ji and string.match(cand.text, "及" ) and cand or
+                           check_kong and string.match(cand.text, "○" ) and cand
+        if cand_filtr then
+          yield(cand_filtr)  -- yield(nil)不能為空，否則報錯。
+        end
       end
 
+      -- if check_ns then
+      --   yield( s_c_f_p_s and change_comment(cand,"") or cand )
+      -- elseif check_s1 and not string.match(cand.comment, "▪" ) then
+      --   yield(cand)  --空格後，該字編碼不含「▪」直接上屏。
+      -- elseif check_s2 or check_s3 or check_s4 or check_s5 or check_s6 or check_s7 or check_s8 then
+      --   yield(cand)  --同時含有「▫」和「▪」編碼的字，空格後，該字某編碼下可直接上屏，某編碼下不能直接上屏。
+      -- elseif check_wu and string.match(cand.text, "毋" ) then
+      --   yield(cand)  --同時含有「▫」和「▪」編碼的字，但該編碼不只一個字。
+      -- elseif check_ji and string.match(cand.text, "及" ) then
+      --   yield(cand)  --同時含有「▫」和「▪」編碼的字，但該編碼不只一個字。
+      -- elseif check_kong and string.match(cand.text, "○" ) then
+      --   yield(cand)  --同時含有「▫」和「▪」編碼的字，但該編碼不只一個字。
+
+      -- elseif (string.match(c_input, "^www%..*$")) then
+      --   yield(cand)
+      -- elseif (string.match(c_input, "`.*$" )) or (string.match(c_input, "^w[0-9]$" ))  or (string.match(c_input, "^[a-z][-_.0-9a-z]*@.*$" )) or (string.match(c_input, "^(www[.]|https?:|ftp:|mailto:|file:).*$" )) then
+      --   yield(cand)
+
+      -- end
+
+    elseif not s_up then
+      yield( s_c_f_p_s and change_comment(cand,"") or cand )
     end
+
+    ::nil_label::
+
+      -- end
   end
 
 end

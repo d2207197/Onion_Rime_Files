@@ -64,9 +64,9 @@ local function processor(key, env)
   --                 string.match(c_input, "=[-125890;,./]$") or
   --                 string.match(c_input, "=[-;,./][-;,./]$") or
   --                 string.match(c_input, "==[90]$")
-  local check_punct = string.match(c_input, "=[-125890;,./]$") or
-                      string.match(c_input, "=[-;,./][-;,./]$") or
-                      string.match(c_input, "==[90]$")
+  -- local check_punct = string.match(c_input, "=[-125890;,./]$") or
+  --                     string.match(c_input, "=[-;,./][-;,./]$") or
+  --                     string.match(c_input, "==[90]$")
 
   local check_pre = string.match(c_input, "'/[-]?[.]?$")
   local check_num_cal = string.match(c_input, "'/[-]?[.]?%d+%.?%d*$") or
@@ -97,7 +97,8 @@ local function processor(key, env)
   -- elseif key:repr() == "space" and context:has_menu() then
   -- elseif key:repr() == "space" and c_i_c then
   -- elseif (key:repr() == "space") then
-    if check_punct or seg:has_tag("mf_translator") or seg:has_tag("email_url_translator") then
+    if seg:has_tag("punct") or seg:has_tag("mf_translator") or seg:has_tag("email_url_translator") then
+    -- if check_punct or seg:has_tag("mf_translator") or seg:has_tag("email_url_translator") then
     -- if check_i then
     -- if check_i1 or check_i2 or check_i3 or check_i4 or check_i5 then
     -- if ( string.match(c_input, "[@:]") or string.match(c_input, "'/") or string.match(c_input, "=[-125890;,./]$") or string.match(c_input, "=[-;,./][-;,./]$") or string.match(c_input, "==[90]$") ) then  --or string.match(c_input, "==[,.]{2}$")
