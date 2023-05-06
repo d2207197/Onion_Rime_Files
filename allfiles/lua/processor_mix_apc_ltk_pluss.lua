@@ -124,23 +124,7 @@ local function processor(key, env)
 
   elseif seg:has_tag("mf_translator") then
   -- elseif seg:has_tag("lua") then
-    -- local kp_pattern = {
-    --   ["0"] = "0",
-    --   ["1"] = "1",
-    --   ["2"] = "2",
-    --   ["3"] = "3",
-    --   ["4"] = "4",
-    --   ["5"] = "5",
-    --   ["6"] = "6",
-    --   ["7"] = "7",
-    --   ["8"] = "8",
-    --   ["9"] = "9",
-    --   ["Add"] = "+",
-    --   ["Subtract"] = "-",
-    --   ["Multiply"] = "*",
-    --   ["Divide"] = "/",
-    --   ["Decimal"] = ".",
-    --  }
+
     local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
     local kp_p = kp_pattern[key_kp]
     if kp_p ~= nil then
@@ -159,6 +143,14 @@ local function processor(key, env)
         return 1
       end
     end
+
+---------------------------------------------------------------------------
+--- 測試
+  -- elseif seg:has_tag("japan") then
+  --   if key:repr() == "space" then
+  --     context:push_input( "|" )
+  --     return 1
+  --   end
 
 ---------------------------------------------------------------------------
 

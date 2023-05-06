@@ -487,7 +487,7 @@ easy_en:
   # spelling_hints: 2
   # initial_quality: 1000
   prefix: "3"
-  suffix: " "
+  # suffix: " "
   tips: "《Easy》▶"
   closing_tips: "◀《Easy》"
   extra_tags:
@@ -549,7 +549,7 @@ japan:
   enable_sentence: false
   enable_user_dict: true
   prefix: "4"
-  suffix: " "
+  suffix: "'"
   tips: "《純日語》▶"
   closing_tips: "◀《純日語》"
   disable_user_dict_for_patterns:
@@ -581,7 +581,7 @@ cyr2:
   enable_sentence: false
   enable_user_dict: true
   prefix: "6"
-  suffix: " "
+  suffix: "'"
   tips: "《俄》▶"
   closing_tips: "◀《俄》"
   disable_user_dict_for_patterns:
@@ -603,7 +603,7 @@ gr2:
   enable_sentence: false
   enable_user_dict: true
   prefix: "7"
-  suffix: " "
+  suffix: "'"
   tips: "《希》▶"
   closing_tips: "◀《希》"
   disable_user_dict_for_patterns:
@@ -620,7 +620,7 @@ fs2:
   enable_sentence: false
   enable_user_dict: true
   prefix: "]["
-  suffix: " "
+  suffix: "'"
   tips: "《全》▶"
   closing_tips: "◀《全》"
   disable_user_dict_for_patterns:
@@ -662,7 +662,7 @@ reverse2_lookup:
   enable_sentence: false
   enable_user_dict: true
   prefix: "="
-  suffix: " "
+  suffix: "'"
   tips: "《查》▶"
   closing_tips: "◀《查》"
   preedit_format:
@@ -711,7 +711,7 @@ emoji_series:
   enable_sentence: false
   enable_user_dict: true
   prefix: "`"
-  suffix: " "
+  suffix: "'"
   tips: "《emoji集》▶"
   closing_tips: "◀《emoji集》"
   preedit_format:
