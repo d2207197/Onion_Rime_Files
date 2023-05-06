@@ -104,9 +104,75 @@ local function processor(key, env)
 
 ---------------------------------------------------------------------------
 --[[
+以下 ascii_punct 標點轉寫
+--]]
+
+  elseif o_ascii_punct and key:repr() == "Shift+less" then
+    if context:is_composing() then
+    -- if c_i_c then
+      -- local cand = context:get_selected_candidate()
+      -- engine:commit_text( cand.text .. "," )  -- ascii_punct 時選擇選項與其他標點不統一
+      engine:commit_text( g_c_t .. "," )
+    else
+      engine:commit_text( "," )
+    end
+    context:clear()
+    return 1 -- kAccepted
+
+  elseif o_ascii_punct and key:repr() == "Shift+greater" then
+    if context:is_composing() then
+    -- if c_i_c then
+      -- local cand = context:get_selected_candidate()
+      -- engine:commit_text( cand.text .. "." )  -- ascii_punct 時選擇選項與其他標點不統一
+      engine:commit_text( g_c_t .. "." )
+    else
+      engine:commit_text( "." )
+    end
+    context:clear()
+    return 1 -- kAccepted
+
+---------------------------------------------------------------------------
+--[[
+以下使得純數字和計算機時，於小鍵盤可輸入數字和運算符
+--]]
+
+  --- prevent segmentation fault (core dumped) （避免進入死循環，有用到 seg=comp:back() 建議使用去排除？）
+  elseif comp:empty() then
+    return 2
+
+  elseif seg:has_tag("mf_translator") then
+  -- elseif seg:has_tag("lua") then
+
+    local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
+    local kp_p = kp_pattern[key_kp]
+    if kp_p ~= nil then
+      if not check_pre and not check_num_cal then
+        return 2
+      elseif string.match(kp_p, "[%d.-]") then
+        -- context.input = c_input .. kp_p
+        context:push_input( kp_p )
+        return 1
+      --- 防開頭後接[+*/]
+      elseif check_pre then
+        return 2
+      elseif string.match(kp_p, "[+*/]") then
+        -- context.input = c_input .. kp_p
+        context:push_input( kp_p )
+        return 1
+      end
+    end
+
+---------------------------------------------------------------------------
+--[[
 以下特殊時 space 直上屏和修正
 以下掛接 return 上屏修正
 --]]
+
+  elseif not context:is_composing() then
+    return 2
+
+  elseif seg:has_tag("abc") or seg:has_tag("all_bpm") then
+    return 2
 
   elseif key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" then
   -- elseif key:repr() == "space" then
@@ -116,11 +182,11 @@ local function processor(key, env)
 
     -- if comp:empty() then
     --   return 2
-    if not context:is_composing() then
-      return 2
-    elseif seg:has_tag("abc") or seg:has_tag("all_bpm") then
-      return 2
-    elseif seg:has_tag("paging") and #c_input == caret_pos then  -- 加限定防止游標移中時，不能翻頁選字。
+    -- if not context:is_composing() then
+    --   return 2
+    -- elseif seg:has_tag("abc") or seg:has_tag("all_bpm") then
+    --   return 2
+    if seg:has_tag("paging") and #c_input == caret_pos then  -- 加限定防止游標移中時，不能翻頁選字。
       return 2
     -- elseif #c_input == caret_pos and (key:repr() == "Return" or key:repr() == "KP_Enter") then
     --   return 2
@@ -255,66 +321,6 @@ local function processor(key, env)
   --     -- end
   --     return 1 -- kAccepted
   --   end
-
----------------------------------------------------------------------------
---[[
-以下 ascii_punct 標點轉寫
---]]
-
-  elseif o_ascii_punct and key:repr() == "Shift+less" then
-    if context:is_composing() then
-    -- if c_i_c then
-      -- local cand = context:get_selected_candidate()
-      -- engine:commit_text( cand.text .. "," )  -- ascii_punct 時選擇選項與其他標點不統一
-      engine:commit_text( g_c_t .. "," )
-    else
-      engine:commit_text( "," )
-    end
-    context:clear()
-    return 1 -- kAccepted
-
-  elseif o_ascii_punct and key:repr() == "Shift+greater" then
-    if context:is_composing() then
-    -- if c_i_c then
-      -- local cand = context:get_selected_candidate()
-      -- engine:commit_text( cand.text .. "." )  -- ascii_punct 時選擇選項與其他標點不統一
-      engine:commit_text( g_c_t .. "." )
-    else
-      engine:commit_text( "." )
-    end
-    context:clear()
-    return 1 -- kAccepted
-
----------------------------------------------------------------------------
---[[
-以下使得純數字和計算機時，於小鍵盤可輸入數字和運算符
---]]
-
-  --- prevent segmentation fault (core dumped) （避免進入死循環，有用到 seg=comp:back() 建議使用去排除？）
-  elseif comp:empty() then
-    return 2
-
-  elseif seg:has_tag("mf_translator") then
-  -- elseif seg:has_tag("lua") then
-
-    local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
-    local kp_p = kp_pattern[key_kp]
-    if kp_p ~= nil then
-      if not check_pre and not check_num_cal then
-        return 2
-      elseif string.match(kp_p, "[%d.-]") then
-        -- context.input = c_input .. kp_p
-        context:push_input( kp_p )
-        return 1
-      --- 防開頭後接[+*/]
-      elseif check_pre then
-        return 2
-      elseif string.match(kp_p, "[+*/]") then
-        -- context.input = c_input .. kp_p
-        context:push_input( kp_p )
-        return 1
-      end
-    end
 
 ---------------------------------------------------------------------------
 

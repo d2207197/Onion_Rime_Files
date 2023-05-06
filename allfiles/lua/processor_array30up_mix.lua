@@ -8,7 +8,7 @@
 --]]
 
 ----------------------------------------------------------------------------------------
-local utf8_sub = require("f_components/f_utf8_sub")
+-- local utf8_sub = require("f_components/f_utf8_sub")
 ----------------------------------------------------------------------------------------
 
 -- local function init(env)
@@ -245,8 +245,74 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
 
 -----------------------
 
+  --- 以下修正：附加方案鍵盤範圍大於主方案時，小板數字鍵選擇出現之 bug。
+  elseif key_num then
+    --- 確定選項編號
+    -- 以下針對選字編碼為：1234567890
+    local page_n = 10 * (seg.selected_index // 10)    -- 先確定在第幾頁
+    local key_num2 = tonumber(key_num)
+    if key_num2 > 0 then
+      key_num2 = key_num2 - 1 + page_n
+    elseif key_num2 == 0 then
+      key_num2 = key_num2 - 1 + page_n + 10
+    end
+
+    --- 上屏選擇選項。
+    -- local cand = context:get_selected_candidate()  -- 只是當前位置
+    local cand = seg:get_candidate_at(key_num2)
+    -- local up_number = #g_c_t + cand._end - caret_pos
+    -- local f_cand = string.sub(g_c_t, 1, up_number)
+    -- engine:commit_text(f_cand)  -- 數字鍵選字時會消失
+    engine:commit_text(cand.text)  -- 一般abc輸入後接掛接，一般輸入會消失
+
+    --- 刪除已上屏字詞的前頭字元
+    local retain_number = #c_input - cand._end  -- 刪除中文編碼後，計算字數。
+    local ci_cut = string.sub(c_input, -retain_number)
+
+    -- context:select(key_num)
+    -- context:confirm_current_selection()
+    -- local s_index = seg.selected_index
+    -- engine:commit_text(s_index)
+    -- engine:commit_text(g_s_t)
+    -- engine:commit_text(g_c_t)
+    -- engine:commit_text(key_num2)
+
+    -- --- 刪除已上屏字詞的前頭字元
+    -- -- local cand_len = #cand.text // 3
+    -- local cand_len = utf8.len(cand.text)
+    -- local ci_cut = string.gsub(c_input, "^=", "")
+    -- -- 上屏詞彙為單個注音
+    -- if set_char_bpmf[cand.text] then
+    --   ci_cut = string.gsub(ci_cut, "^[.,;/ %w-]", "")
+    -- -- 上屏詞彙為兩個注音
+    -- elseif (cand_len == 2) and set_char_bpmf[utf8_sub(cand.text, 1, 1)] and set_char_bpmf[utf8_sub(cand.text, 2, 2)] then
+    --   ci_cut = string.gsub(ci_cut, "^[.,;/ %w-][.,;/ %w-]", "")
+    -- -- 上屏詞彙為三個注音
+    -- elseif (cand_len == 3) and set_char_bpmf[utf8_sub(cand.text, 1, 1)] and set_char_bpmf[utf8_sub(cand.text, 2, 2)] and set_char_bpmf[utf8_sub(cand.text, 3, 3)] then
+    --   ci_cut = string.gsub(ci_cut, "^[.,;/ %w-][.,;/ %w-][.,;/ %w-]", "")
+    -- -- 上屏詞彙為全中文不含注音，但有狀況會缺漏出現 bug
+    -- else
+    --   for i = 1, cand_len do
+    --     ci_cut = string.gsub(ci_cut, "^[.,;/a-z125890-][.,;/a-z125890-]?[.,;/a-z125890-]?[ 3467]", "")
+    --   end
+    -- end
+
+    --- 補前綴 "="，導入未上屏編碼，避免跳回主方案
+    -- if #ci_cut == 0 then
+    if retain_number == 0 then
+      context:clear()
+    else
+      context.input = "=" .. ci_cut
+    end
+
+    return 1
+
+-----------------------
+
   --- 以下修正：附加方案鍵盤範圍大於主方案時，選字時出現的 bug。
-  elseif key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" then
+  -- elseif key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" then
+  -- elseif not key_num then
+  else
 
     --- paging 時和游標不在尾端時，需分割上屏之處理
     if seg:has_tag("paging") or #c_input ~= caret_pos then
@@ -310,70 +376,6 @@ KeyEvent 函數在舊版 librime-lua 中不支持。
       return 1
 
     end
-
------------------------
-
-  --- 以下修正：附加方案鍵盤範圍大於主方案時，小板數字鍵選擇出現之 bug。
-  elseif key_num then
-    --- 確定選項編號
-    -- 以下針對選字編碼為：1234567890
-    local page_n = 10 * (seg.selected_index // 10)    -- 先確定在第幾頁
-    local key_num2 = tonumber(key_num)
-    if key_num2 > 0 then
-      key_num2 = key_num2 - 1 + page_n
-    elseif key_num2 == 0 then
-      key_num2 = key_num2 - 1 + page_n + 10
-    end
-
-    --- 上屏選擇選項。
-    -- local cand = context:get_selected_candidate()  -- 只是當前位置
-    local cand = seg:get_candidate_at(key_num2)
-    -- local up_number = #g_c_t + cand._end - caret_pos
-    -- local f_cand = string.sub(g_c_t, 1, up_number)
-    -- engine:commit_text(f_cand)  -- 數字鍵選字時會消失
-    engine:commit_text(cand.text)  -- 一般abc輸入後接掛接，一般輸入會消失
-
-    --- 刪除已上屏字詞的前頭字元
-    local retain_number = #c_input - cand._end  -- 刪除中文編碼後，計算字數。
-    local ci_cut = string.sub(c_input, -retain_number)
-
-    -- context:select(key_num)
-    -- context:confirm_current_selection()
-    -- local s_index = seg.selected_index
-    -- engine:commit_text(s_index)
-    -- engine:commit_text(g_s_t)
-    -- engine:commit_text(g_c_t)
-    -- engine:commit_text(key_num2)
-
-    -- --- 刪除已上屏字詞的前頭字元
-    -- -- local cand_len = #cand.text // 3
-    -- local cand_len = utf8.len(cand.text)
-    -- local ci_cut = string.gsub(c_input, "^=", "")
-    -- -- 上屏詞彙為單個注音
-    -- if set_char_bpmf[cand.text] then
-    --   ci_cut = string.gsub(ci_cut, "^[.,;/ %w-]", "")
-    -- -- 上屏詞彙為兩個注音
-    -- elseif (cand_len == 2) and set_char_bpmf[utf8_sub(cand.text, 1, 1)] and set_char_bpmf[utf8_sub(cand.text, 2, 2)] then
-    --   ci_cut = string.gsub(ci_cut, "^[.,;/ %w-][.,;/ %w-]", "")
-    -- -- 上屏詞彙為三個注音
-    -- elseif (cand_len == 3) and set_char_bpmf[utf8_sub(cand.text, 1, 1)] and set_char_bpmf[utf8_sub(cand.text, 2, 2)] and set_char_bpmf[utf8_sub(cand.text, 3, 3)] then
-    --   ci_cut = string.gsub(ci_cut, "^[.,;/ %w-][.,;/ %w-][.,;/ %w-]", "")
-    -- -- 上屏詞彙為全中文不含注音，但有狀況會缺漏出現 bug
-    -- else
-    --   for i = 1, cand_len do
-    --     ci_cut = string.gsub(ci_cut, "^[.,;/a-z125890-][.,;/a-z125890-]?[.,;/a-z125890-]?[ 3467]", "")
-    --   end
-    -- end
-
-    --- 補前綴 "="，導入未上屏編碼，避免跳回主方案
-    -- if #ci_cut == 0 then
-    if retain_number == 0 then
-      context:clear()
-    else
-      context.input = "=" .. ci_cut
-    end
-
-    return 1
 
 ---------------------------------------------------------------------------
 
