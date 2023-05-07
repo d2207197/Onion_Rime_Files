@@ -139,40 +139,13 @@ local function processor(key, env)
 
 ---------------------------------------------------------------------------
 --[[
-以下使得純數字和計算機時，於小鍵盤可輸入數字和運算符
+以下特殊時 space 直上屏和修正
+以下掛接 return 上屏修正
 --]]
 
   --- prevent segmentation fault (core dumped) （避免進入死循環，有用到 seg=comp:back() 建議使用去排除？）
   elseif comp:empty() then
     return 2
-
-  elseif seg:has_tag("mf_translator") then
-  -- elseif seg:has_tag("lua") then
-
-    local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
-    local kp_p = kp_pattern[key_kp]
-    if kp_p ~= nil then
-      if not check_pre and not check_num_cal then
-        return 2
-      elseif string.match(kp_p, "[%d.-]") then
-        -- context.input = c_input .. kp_p
-        context:push_input( kp_p )
-        return 1
-      --- 防開頭後接[+*/]
-      elseif check_pre then
-        return 2
-      elseif string.match(kp_p, "[+*/]") then
-        -- context.input = c_input .. kp_p
-        context:push_input( kp_p )
-        return 1
-      end
-    end
-
----------------------------------------------------------------------------
---[[
-以下特殊時 space 直上屏和修正
-以下掛接 return 上屏修正
---]]
 
   elseif not context:is_composing() then
     return 2
@@ -221,16 +194,18 @@ local function processor(key, env)
     --   return 2
 
     --- 以下掛接上屏 bug 修正
-    elseif seg:has_tag("easy_en") or seg:has_tag("japan") or seg:has_tag("cyr2") or seg:has_tag("gr2") or seg:has_tag("fs2") or seg:has_tag("reverse2_lookup") then
     -- elseif seg:has_tag("easy_en") or seg:has_tag("japan") or seg:has_tag("cyr2") or seg:has_tag("gr2") or seg:has_tag("fs2") or seg:has_tag("reverse2_lookup") or seg:has_tag("european") or seg:has_tag("korea") then
-      local prefix_key = seg:has_tag("easy_en") and env.en_prefix
-                      or seg:has_tag("japan") and env.jp_prefix
+    elseif seg:has_tag("easy_en") or seg:has_tag("japan") or seg:has_tag("cyr2") or seg:has_tag("gr2") or seg:has_tag("fs2") or seg:has_tag("reverse2_lookup") then
+    -- elseif seg:has_tag("japan") or seg:has_tag("cyr2") or seg:has_tag("gr2") or seg:has_tag("fs2") or seg:has_tag("reverse2_lookup") then
+    -- elseif not seg:has_tag("punct") and not seg:has_tag("mf_translator") and not not seg:has_tag("email_url_translator") then
+      local prefix_key = seg:has_tag("japan") and env.jp_prefix
                       or seg:has_tag("cyr2") and env.cyr_prefix
                       or seg:has_tag("gr2") and env.gr_prefix
                       or seg:has_tag("fs2") and env.fs_prefix
                       or seg:has_tag("reverse2_lookup") and env.rl_prefix
                       -- or seg:has_tag("european") and env.eu_prefix
                       -- or seg:has_tag("korea") and env.kr_prefix
+                      or seg:has_tag("easy_en") and env.en_prefix
                       or ""
 
       -- if seg:has_tag("paging") and #c_input == caret_pos then
@@ -284,6 +259,33 @@ local function processor(key, env)
       -- end
       return 1 -- kAccepted
     -- end
+    end
+
+---------------------------------------------------------------------------
+--[[
+以下使得純數字和計算機時，於小鍵盤可輸入數字和運算符
+--]]
+
+  elseif seg:has_tag("mf_translator") then
+  -- elseif seg:has_tag("lua") then
+
+    local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
+    local kp_p = kp_pattern[key_kp]
+    if kp_p ~= nil then
+      if not check_pre and not check_num_cal then
+        return 2
+      elseif string.match(kp_p, "[%d.-]") then
+        -- context.input = c_input .. kp_p
+        context:push_input( kp_p )
+        return 1
+      --- 防開頭後接[+*/]
+      elseif check_pre then
+        return 2
+      elseif string.match(kp_p, "[+*/]") then
+        -- context.input = c_input .. kp_p
+        context:push_input( kp_p )
+        return 1
+      end
     end
 
 ---------------------------------------------------------------------------
