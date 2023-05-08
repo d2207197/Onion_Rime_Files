@@ -4,7 +4,7 @@
 schema:
   schema_id: easy_en_lower
   name: Easy English（英漢字典）-Lower
-  version: "202304"
+  version: "202305"
   author:
     - 洋蔥
   description:
@@ -23,9 +23,10 @@ switches:
 
 engine:
   filters:
+    - reverse_lookup_filter@e_reverse_lookup
     - lua_filter@en_sort_filter  #lua_filter 一定要放在 uniquifier 之前，因某些計算會先算，如抓取候選條，會去重不到。
     - lua_filter@convert_english_filter
-    - reverse_lookup_filter@e_reverse_lookup
+    # - reverse_lookup_filter@e_reverse_lookup
     - uniquifier  #需放在 filters 最後，否則有些選項無法去重。
   processors:
     - ascii_composer

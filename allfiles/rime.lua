@@ -49,6 +49,7 @@
 --      - lua_filter@p_convert_japan_filter          --（關）同 convert_japan_filter，掛接方案用。
 --      - lua_filter@halfwidth_katakana_filter       --（關）（jpnin1）片假名後附加半形片假名。選單顯示太雜亂，故不用。
 --      - lua_filter@lua_custom_phrase_filter        --（關）取代原先 table_translator@custom_phrase。接續掛接方案後，有 bug，上不了屏，改用 translator 實現。
+--      - lua_filter@preedit_model_filter            --（引lua資料夾）（bo_mixin 全系列）切換 preedit 樣式
 --
 --      - ＊合併兩個以上函數：
 --      - lua_filter@mix30_nil_comment_filter        --（關） 合併 array30_nil_filter 和 array30_comment_filter，兩個 lua filter 太耗效能。
@@ -158,6 +159,11 @@ mix_cf2_miss_filter = require("filter_mix_cf2_miss_filter")
 -- 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
 mix_cf2_cfp_filter = require("filter_mix_cf2_cfp_filter")
 mix30_nil_comment_up_filter = require("filter_mix30_nil_comment_up_filter")
+
+
+--- preedit_model_filter （bo_mixin 全系列）
+-- 切換 preedit 樣式
+preedit_model_filter = require("filter_preedit_model_filter")
 
 
 --- en_sort_filter （easy_en_super）

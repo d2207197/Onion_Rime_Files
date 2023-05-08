@@ -4,17 +4,45 @@
 如同英漢字典一樣排序，候選項重新排序。開關（en_sort）
 --]]
 
+----------------------------------------------------------------------------------------
+
+local truncate_comment = require("filter_cand/truncate_comment")
+
+local change_comment = require("filter_cand/change_comment")
+
+local get_os_name = require("f_components/f_get_os_name")
+
+----------------------------------------------------------------------------------------
+
+
+local function revise_comment_by_os(os_name, cand, comment)
+  -- if os_name ~= 0 and os_name ~= 2 then
+  if os_name == 1 then
+  -- if os_name == 0 then  -- 測試用
+    local comment = string.gsub(truncate_comment(comment), "[\n%s]", "")  -- %s 為空白符
+    local cand = change_comment(cand, comment)
+  end
+  return cand
+end
+
 
 -- local M={}
--- local function init(env)
+local function init(env)
 -- function M.init(env)
--- end
+  local os_name = get_os_name() or ""
+  if os_name == "Mac" then
+    env.os_name = 0
+  elseif os_name == "Windows" then
+    env.os_name = 1
+  elseif os_name == "Linux" then
+    env.os_name = 2
+  else
+    env.os_name = 3
+  end
+end
 
 -- function M.fini(env)
 -- end
-
-
-
 
 -- local function en_sort_filter(inp, env)
 local function filter(inp, env)
@@ -72,6 +100,7 @@ local function filter(inp, env)
         --- ipairs: 迭代數組，不能返回 nil,如果遇到 nil 則退出。
         for _, cand in ipairs(cands) do  -- 顯示
           cand.preedit = cand.preedit .. "\t（序排：a~z）"  -- （序排：ａ～ｚ）
+          local cand = revise_comment_by_os(env.os_name, cand, cand.comment)
           yield(cand)
 
           --- 以下用遍尋重組一個精簡 table，再排序，再新組 Candidate，還是太慢！且 comment 附加尚需解決。
@@ -116,6 +145,7 @@ local function filter(inp, env)
     for cand in inp:iter() do
       -- cand.preedit = cand.preedit .. "\t　　　開始：" .. start .. "結束：" .. _end  -- 測試位置用
       cand.preedit = cand.preedit .. "\t（個排：字數）"  -- （個排：字母數）
+      local cand = revise_comment_by_os(env.os_name, cand, cand.comment)
       yield(cand)
     end
 
@@ -127,7 +157,8 @@ end
 
 
 -- return en_sort_filter
-return { func = filter }
+-- return { func = filter }
+return { init = init, func = filter }
 -- return M
 ------------------------------------------------
 

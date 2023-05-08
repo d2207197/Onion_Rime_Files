@@ -58,8 +58,11 @@ local function processor(key, env)
   local engine = env.engine
   local context = engine.context
   local c_input = context.input
+  local caret_pos = context.caret_pos
   local comp = context.composition
   local seg = comp:back()
+  -- local g_s_t = context:get_script_text()
+  -- local _end = context:get_preedit().sel_end
   local g_c_t = context:get_commit_text()
   local o_ascii_punct = context:get_option("ascii_punct")
   local o_ascii_mode = context:get_option("ascii_mode")
