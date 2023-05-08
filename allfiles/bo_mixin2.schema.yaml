@@ -51,7 +51,7 @@ switches:
     reset: 0
     states: [ 個排, 序排 ]
   - options: [ preedit_1, preedit_2, preedit_3 ]
-    reset: 2
+    reset: 0
     states:
       - "Back 模式"
       - "Insert 模式"
