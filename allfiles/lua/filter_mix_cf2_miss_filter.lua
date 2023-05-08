@@ -12,12 +12,21 @@
 ----------------
 
 local drop_cand = require("filter_cand/drop_cand")
+
 local change_comment = require("filter_cand/change_comment")
 
+-- local revise_preedit_by_os = require("filter_cand/revise_preedit_by_os")
+
 --------------
--- local M={}
+
+-- -- local M={}
 -- local function init(env)
--- function M.init(env)
+-- -- function M.init(env)
+--   local engine = env.engine
+--   local schema = engine.schema
+--   local config = schema.config
+--   local schema_id = config:get_string("schema/schema_id") or ""
+--   env.check_id = string.match(schema_id, "mixin") and true or false
 -- end
 
 -- function M.fini(env)
@@ -38,6 +47,23 @@ local function filter(inp, env)
   -- local addcand = string.match(c_input, "^'$")
 
   local tran = c_f2_s and Translation(drop_cand, inp, "᰼᰼") or inp
+
+  -- if env.check_id then  -- 會覆蓋到不是abc的段落
+  --   local p_1 = context:get_option("preedit_1")
+  --   local p_2 = context:get_option("preedit_2")
+  --   local p_3 = context:get_option("preedit_3")
+  --   if p_1 then
+  --     g_op = 1
+  --   elseif p_2 then
+  --     g_op = 2
+  --   elseif p_3 then
+  --     g_op = 3
+  --   else
+  --     g_op = 0
+  --   end
+  --   tran = Translation(revise_preedit_by_os, tran, g_op) or tran
+  -- end
+
   for cand in tran:iter() do
     if addcomment1 then
       yield( cand.text == "。" and change_comment(cand,"〔句點〕") or cand )
@@ -63,6 +89,7 @@ end
 ----------------
 -- return mix_cf2_miss_filter
 return { func = filter }
+-- return { init = init, func = filter }
 -- return M
 ----------------
 

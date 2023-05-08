@@ -1,8 +1,5 @@
---- @@ preedit_model_filter
---[[
-（ mixin 全方案）
-改變 preedit 樣式
---]]
+--- 修改 preedit 樣式
+-- 可用 Translation(revise_preedit_by_os, inp, g_op) 導出
 
 ----------------------------------------------------------------------------------------
 
@@ -10,11 +7,21 @@ local change_preedit = require("filter_cand/change_preedit")
 
 local get_os_name = require("f_components/f_get_os_name")
 
--- local revise_preedit_by_os = require("filter_cand/revise_preedit_by_os")
-
 ----------------------------------------------------------------------------------------
 
-local function revise_preedit_by_os(os_name, model, cand, preedit)
+local function revise_preedit_by_os(model, cand, preedit)
+
+  local os_name = get_os_name() or ""
+  if os_name == "Mac" then
+    os_name = 1
+  elseif os_name == "Windows" then
+    os_name = 2
+  elseif os_name == "Linux" then
+    os_name = 3
+  else
+    os_name = 0
+  end
+
   -- if model == 2 then
   --   preedit = string.gsub(preedit, "\n", "")
   --   preedit = string.gsub(preedit, "⁞", "@")
@@ -31,6 +38,7 @@ local function revise_preedit_by_os(os_name, model, cand, preedit)
   -- elseif model == 3 and os_name == 1 then
   --   preedit = string.gsub(preedit, "　", " ")
   --   preedit = string.gsub(preedit, "^([^\n]+) \n([^\n]+)", "%2　%1")
+
   if model == 2 then
     preedit = string.gsub(preedit, "⁞", "@")
     preedit = string.gsub(preedit, "　", " ")
@@ -44,65 +52,19 @@ local function revise_preedit_by_os(os_name, model, cand, preedit)
     preedit = string.gsub(preedit, "^(.+)　(.+)", "%2　\n%1")
     preedit = string.gsub(preedit, " ", "　")
   end
+
   local cand = change_preedit(cand, preedit)
+
   return cand
 end
 
 
--- local M={}
-local function init(env)
--- function M.init(env)
-  local os_name = get_os_name() or ""
-  if os_name == "Mac" then
-    env.os_name = 1
-  elseif os_name == "Windows" then
-    env.os_name = 2
-  elseif os_name == "Linux" then
-    env.os_name = 3
-  else
-    env.os_name = 0
-  end
-end
-
-
--- function M.fini(env)
--- end
-
-
--- local function preedit_model_filter(inp, env)
-local function filter(inp, env)
--- function M.func(inp,env)
-  local engine = env.engine
-  local context = engine.context
-  local p_1 = context:get_option("preedit_1")
-  local p_2 = context:get_option("preedit_2")
-  local p_3 = context:get_option("preedit_3")
-
-  if p_1 then
-    g_op = 1
-  elseif p_2 then
-    g_op = 2
-  elseif p_3 then
-    g_op = 3
-  else
-    g_op = 0
-  end
-
-  for cand in inp:iter() do
-    local cand = revise_preedit_by_os(env.os_name, g_op, cand, cand.preedit)
+local function output(tran, g_op)
+  for cand in tran:iter() do
+    local cand = revise_preedit_by_os(g_op, cand, cand.preedit)
     yield(cand)
   end
-
-  -- --- 以下用導入 Translation
-  -- local tran = Translation(revise_preedit_by_os, inp, g_op) or inp
-  -- for cand in tran:iter() do
-  --   yield(cand)
-  -- end
-
 end
 
 
--- return preedit_model_filter
--- return { func = filter }
-return { init = init, func = filter }
--- return M
+return output

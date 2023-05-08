@@ -14,10 +14,9 @@ local get_os_name = require("f_components/f_get_os_name")
 
 ----------------------------------------------------------------------------------------
 
-
 local function revise_comment_by_os(os_name, cand, comment)
   -- if os_name ~= 0 and os_name ~= 2 then
-  if os_name == 1 then
+  if os_name == 1 or os_name == 3 then
   -- if os_name == 0 then  -- 測試用
     local comment = string.gsub(truncate_comment(comment), "[\n%s]", "")  -- %s 為空白符
     local cand = change_comment(cand, comment)
@@ -41,8 +40,10 @@ local function init(env)
   end
 end
 
+
 -- function M.fini(env)
 -- end
+
 
 -- local function en_sort_filter(inp, env)
 local function filter(inp, env)
