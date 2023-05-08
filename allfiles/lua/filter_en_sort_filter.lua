@@ -12,12 +12,14 @@ local change_comment = require("filter_cand/change_comment")
 
 local get_os_name = require("f_components/f_get_os_name")
 
+-- local revise_comment_by_os = require("filter_cand/revise_comment_by_os")
+
 ----------------------------------------------------------------------------------------
 
 local function revise_comment_by_os(os_name, cand, comment)
-  -- if os_name ~= 0 and os_name ~= 2 then
-  if os_name == 1 or os_name == 3 then
-  -- if os_name == 0 then  -- 測試用
+  if os_name ~= 1 and os_name ~= 3 then
+  -- if os_name == 2 or os_name == 0 then
+  -- if os_name == 1 then  -- 測試用
     local comment = string.gsub(truncate_comment(comment), "[\n%s]", "")  -- %s 為空白符
     local cand = change_comment(cand, comment)
   end
@@ -30,13 +32,13 @@ local function init(env)
 -- function M.init(env)
   local os_name = get_os_name() or ""
   if os_name == "Mac" then
-    env.os_name = 0
-  elseif os_name == "Windows" then
     env.os_name = 1
-  elseif os_name == "Linux" then
+  elseif os_name == "Windows" then
     env.os_name = 2
-  else
+  elseif os_name == "Linux" then
     env.os_name = 3
+  else
+    env.os_name = 0
   end
 end
 
@@ -65,9 +67,16 @@ local function filter(inp, env)
 
       for cand in inp:iter() do
         cand.preedit = cand.preedit .. "\t（序排：二字母以下按個排）"  -- （序排：單字母按個排）
+        local cand = revise_comment_by_os(env.os_name, cand, cand.comment)
         yield(cand)
       end
       -- yield(Candidate("en", start, _end, c_input, "〔小於〕"))  -- 測試用
+
+      -- local tran = Translation(revise_comment_by_os, env.os_name, inp) or inp
+      -- for cand in tran:iter() do
+      --   cand.preedit = cand.preedit .. "\t（序排：二字母以下按個排）"  -- （序排：單字母按個排）
+      --   yield(cand)
+      -- end
 
     else
 
@@ -109,6 +118,15 @@ local function filter(inp, env)
           -- yield(newcand)
         end
 
+        -- --- 以下尚有問題未解決
+        -- -- local tran = cands:query()
+        -- local tran = Translation(revise_comment_by_os, env.os_name, cands)
+        -- -- for _, cand in ipairs(tran) do  -- 顯示
+        -- for cand in tran:iter() do
+        --   cand.preedit = cand.preedit .. "\t（序排：a~z）"  -- （序排：ａ～ｚ）
+        --   yield(cand)
+        -- end
+
         --- 以下防止記憶體洩漏暴漲？！不會立即清理記憶體，但會回退，測試！
         -- local cands = {}  -- 理論上不對，這邊不應該加local，但實際又有效果？觀察！
         -- local cands = nil
@@ -149,6 +167,12 @@ local function filter(inp, env)
       local cand = revise_comment_by_os(env.os_name, cand, cand.comment)
       yield(cand)
     end
+
+    -- local tran = Translation(revise_comment_by_os, env.os_name, inp) or inp
+    -- for cand in tran:iter() do
+    --   cand.preedit = cand.preedit .. "\t（個排：字數）"  -- （個排：字母數）
+    --   yield(cand)
+    -- end
 
   end
 

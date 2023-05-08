@@ -180,7 +180,8 @@ convert_english_filter:
 convert_japan_filter:
   tags: [ japan ]
 
-# mix_cf2_miss_filter:
+mix_cf2_miss_filter:
+  tags: [ punct, reverse2_lookup ]
 #   tags: [ punct, abc, reverse2_lookup ]
 ################################### 選單 ######################################
 menu:
