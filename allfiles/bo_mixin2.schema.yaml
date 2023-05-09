@@ -53,9 +53,9 @@ switches:
   - options: [ preedit_1, preedit_2, preedit_3 ]
     reset: 0
     states:
-      - "Back 模式"
-      - "Insert 模式"
-      - "Paragraph 模式（Mac專用）"
+      - "Back 樣式"
+      - "Insert 樣式"
+      - "Paragraph 樣式（Mac專用）"
 
 engine:
   filters:
