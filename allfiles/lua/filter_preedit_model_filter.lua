@@ -33,7 +33,9 @@ local drop_cand = require("filter_cand/drop_cand")
 --   -- elseif model == 3 and os_name == 1 then
 --   --   preedit = string.gsub(preedit, "　", " ")
 --   --   preedit = string.gsub(preedit, "^([^\n]+) \n([^\n]+)", "%2　%1")
---   if model == 2 then
+--   if model == 1 then
+--     preedit = string.gsub(preedit, "^(.+)　(.+)", "%1\t（ %2 ）")
+--   elseif model == 2 then
 --     preedit = string.gsub(preedit, "⁞", "@")
 --     preedit = string.gsub(preedit, "　", " ")
 --     n = 14
@@ -80,15 +82,18 @@ local function filter(inp, env)
   local p_1 = context:get_option("preedit_1")
   local p_2 = context:get_option("preedit_2")
   local p_3 = context:get_option("preedit_3")
+  local p_4 = context:get_option("preedit_4")
 
   if p_1 then
-    g_op = 1
+    g_op = 0
   elseif p_2 then
-    g_op = 2
+    g_op = 1
   elseif p_3 then
+    g_op = 2
+  elseif p_4 then
     g_op = 3
   else
-    g_op = 0
+    g_op = 4
   end
 
   local tran = c_f2_s and Translation(drop_cand, inp, "᰼᰼") or inp
@@ -99,7 +104,7 @@ local function filter(inp, env)
   -- end
 
   --- 以下用導入 Translation
-  local tran = Translation(revise_preedit_by_os, tran, g_op, env.os_name) or tran
+  local tran = Translation(revise_preedit_by_os, env.os_name, g_op, tran) or tran
   for cand in tran:iter() do
     yield(cand)
   end

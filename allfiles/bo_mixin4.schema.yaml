@@ -60,10 +60,11 @@ switches:
   - name: en_sort
     reset: 0
     states: [ 個排, 序排 ]
-  - options: [ preedit_1, preedit_2, preedit_3 ]
+  - options: [ preedit_1, preedit_2, preedit_3, preedit_4 ]
     reset: 0
     states:
       - "Back 樣式"
+      - "Separate 樣式"
       - "Insert 樣式"
       - "Paragraph 樣式（Mac專用）"
 
