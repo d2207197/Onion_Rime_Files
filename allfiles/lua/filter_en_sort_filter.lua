@@ -35,15 +35,6 @@ local function init(env)
              or os_name == "Windows" and 2
              or os_name == "Linux" and 3
              or 4
-  -- if os_name == "Mac" then
-  --   env.os_name = 1
-  -- elseif os_name == "Windows" then
-  --   env.os_name = 2
-  -- elseif os_name == "Linux" then
-  --   env.os_name = 3
-  -- else
-  --   env.os_name = 0
-  -- end
 end
 
 
@@ -81,7 +72,7 @@ local function filter(inp, env)
         cand.preedit = cand.preedit .. "\t（序排：二字母以下按個排）"  -- （序排：單字母按個排）
         yield(cand)
       end
-      tran = nil
+      -- tran = nil  -- 記憶體較易回退
 
     else
 
@@ -129,22 +120,22 @@ local function filter(inp, env)
           cand.preedit = cand.preedit .. "\t（序排：a~z）"  -- （序排：ａ～ｚ）
           yield(cand)
         end
-        --- 以下防止記憶體洩漏暴漲？！不會立即清理記憶體，但會回退，測試！
-        -- local cands = {}  -- 理論上不對，這邊不應該加local，但實際又有效果？觀察！
-        -- local cands = nil
-        cands = nil
-        tran = nil
+        -- --- 以下防止記憶體洩漏暴漲？！不會立即清理記憶體，但會回退，測試！
+        -- -- local cands = {}  -- 理論上不對，這邊不應該加local，但實際又有效果？觀察！
+        -- -- local cands = nil
+        -- cands = nil  -- 記憶體較易回退
+        -- tran = nil  -- 記憶體較易回退
 
-        --- 以下執行清理記憶體
-        -- if collectgarbage("count") > 3000 then
+        -- --- 以下執行清理記憶體
+        -- -- if collectgarbage("count") > 3000 then
+        -- --   collectgarbage("collect")
+        -- -- end
+        -- if collectgarbage("count") < 3000 then
+        --   collectgarbage("step")
+        -- else
         --   collectgarbage("collect")
+        --   -- collectgarbage()
         -- end
-        if collectgarbage("count") < 3000 then
-          collectgarbage("step")
-        else
-          collectgarbage("collect")
-          -- collectgarbage()
-        end
 
       end
 
@@ -177,7 +168,7 @@ local function filter(inp, env)
       cand.preedit = cand.preedit .. "\t（個排：字數）"  -- （個排：字母數）
       yield(cand)
     end
-    tran = nil
+    -- tran = nil  -- 記憶體較易回退
 
   end
 

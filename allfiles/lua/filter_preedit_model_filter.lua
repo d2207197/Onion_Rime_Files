@@ -61,15 +61,6 @@ local function init(env)
              or os_name == "Windows" and 2
              or os_name == "Linux" and 3
              or 4
-  -- if os_name == "Mac" then
-  --   env.os_name = 1
-  -- elseif os_name == "Windows" then
-  --   env.os_name = 2
-  -- elseif os_name == "Linux" then
-  --   env.os_name = 3
-  -- else
-  --   env.os_name = 0
-  -- end
 end
 
 
@@ -87,7 +78,6 @@ local function filter(inp, env)
   local p_2 = context:get_option("preedit_2")
   local p_3 = context:get_option("preedit_3")
   local p_4 = context:get_option("preedit_4")
-
   local g_op = p_1 and 0 or p_2 and 1 or p_3 and 2 or p_4 and 3 or 4
 
   local tran = c_f2_s and Translation(drop_cand, inp, "᰼᰼") or inp
@@ -102,8 +92,7 @@ local function filter(inp, env)
   for cand in tran:iter() do
     yield(cand)
   end
-
-  tran = nil
+  -- tran = nil  -- 記憶體較易回退
 
 end
 

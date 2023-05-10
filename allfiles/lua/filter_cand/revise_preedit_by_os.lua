@@ -10,17 +10,14 @@ local change_preedit = require("filter_cand/change_preedit")
 ----------------------------------------------------------------------------------------
 
 local function revise_preedit_by_os(os_name, model, cand, preedit)
-  --- 在使用 init(env) 可定住參數，不用一直跑，故遮屏。
+
+  --- 使用 init(env) 可定住參數，不用一直跑，故遮屏。
   -- local os_name = get_os_name() or ""
-  -- if os_name == "Mac" then
-  --   os_name = 1
-  -- elseif os_name == "Windows" then
-  --   os_name = 2
-  -- elseif os_name == "Linux" then
-  --   os_name = 3
-  -- else
-  --   os_name = 0
-  -- end
+  -- env.os_name = os_name == "Mac" and 1
+  --            or os_name == "Windows" and 2
+  --            or os_name == "Linux" and 3
+  --            or 4
+
   -- if model == 2 then
   --   preedit = string.gsub(preedit, "\n", "")
   --   preedit = string.gsub(preedit, "⁞", "@")
@@ -37,6 +34,7 @@ local function revise_preedit_by_os(os_name, model, cand, preedit)
   -- elseif model == 3 and os_name == 1 then
   --   preedit = string.gsub(preedit, "　", " ")
   --   preedit = string.gsub(preedit, "^([^\n]+) \n([^\n]+)", "%2　%1")
+
   if model == 1 then
     preedit = string.gsub(preedit, "^(.+)　(.+)", "%1\t（ %2 ）")
   elseif model == 2 then
@@ -52,7 +50,9 @@ local function revise_preedit_by_os(os_name, model, cand, preedit)
     preedit = string.gsub(preedit, "^(.+)　(.+)", "%2　\n%1")
     preedit = string.gsub(preedit, " ", "　")
   end
+
   local cand = change_preedit(cand, preedit)
+
   return cand
 end
 

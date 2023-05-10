@@ -13,17 +13,12 @@ local change_comment = require("filter_cand/change_comment")
 
 local function revise_comment_by_os(os_name, cand, comment)
 
-  --- 在使用 init(env) 可定住參數，不用一直跑，故遮屏。
+  --- 使用 init(env) 可定住參數，不用一直跑，故遮屏。
   -- local os_name = get_os_name() or ""
-  -- if os_name == "Mac" then
-  --   os_name = 1
-  -- elseif os_name == "Windows" then
-  --   os_name = 2
-  -- elseif os_name == "Linux" then
-  --   os_name = 3
-  -- else
-  --   os_name = 0
-  -- end
+  -- env.os_name = os_name == "Mac" and 1
+  --            or os_name == "Windows" and 2
+  --            or os_name == "Linux" and 3
+  --            or 4
 
   if os_name ~= 1 and os_name ~= 3 then
   -- if os_name == 2 or os_name == 0 then
