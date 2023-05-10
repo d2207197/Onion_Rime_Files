@@ -57,15 +57,19 @@ local drop_cand = require("filter_cand/drop_cand")
 local function init(env)
 -- function M.init(env)
   local os_name = get_os_name() or ""
-  if os_name == "Mac" then
-    env.os_name = 1
-  elseif os_name == "Windows" then
-    env.os_name = 2
-  elseif os_name == "Linux" then
-    env.os_name = 3
-  else
-    env.os_name = 0
-  end
+  env.os_name = os_name == "Mac" and 1
+             or os_name == "Windows" and 2
+             or os_name == "Linux" and 3
+             or 4
+  -- if os_name == "Mac" then
+  --   env.os_name = 1
+  -- elseif os_name == "Windows" then
+  --   env.os_name = 2
+  -- elseif os_name == "Linux" then
+  --   env.os_name = 3
+  -- else
+  --   env.os_name = 0
+  -- end
 end
 
 
@@ -84,17 +88,7 @@ local function filter(inp, env)
   local p_3 = context:get_option("preedit_3")
   local p_4 = context:get_option("preedit_4")
 
-  if p_1 then
-    g_op = 0
-  elseif p_2 then
-    g_op = 1
-  elseif p_3 then
-    g_op = 2
-  elseif p_4 then
-    g_op = 3
-  else
-    g_op = 4
-  end
+  local g_op = p_1 and 0 or p_2 and 1 or p_3 and 2 or p_4 and 3 or 4
 
   local tran = c_f2_s and Translation(drop_cand, inp, "᰼᰼") or inp
 
