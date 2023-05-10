@@ -103,6 +103,8 @@ local function filter(inp, env)
     yield(cand)
   end
 
+  tran = nil
+
 end
 
 
