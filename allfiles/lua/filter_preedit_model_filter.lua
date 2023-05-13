@@ -8,9 +8,9 @@
 
 -- local change_preedit = require("filter_cand/change_preedit")
 
-local get_os_name = require("f_components/f_get_os_name")
+-- local get_os_name = require("f_components/f_get_os_name")
 
-local revise_preedit_by_os = require("filter_cand/revise_preedit_by_os")
+-- local revise_preedit_by_os = require("filter_cand/revise_preedit_by_os")
 
 local drop_cand = require("filter_cand/drop_cand")
 
@@ -53,15 +53,15 @@ local drop_cand = require("filter_cand/drop_cand")
 -- end
 
 
--- local M={}
-local function init(env)
--- function M.init(env)
-  local os_name = get_os_name() or ""
-  env.os_name = os_name == "Mac" and 1
-             or os_name == "Windows" and 2
-             or os_name == "Linux" and 3
-             or 4
-end
+-- -- local M={}
+-- local function init(env)
+-- -- function M.init(env)
+--   local os_name = get_os_name() or ""
+--   env.os_name = os_name == "Mac" and 1
+--              or os_name == "Windows" and 2
+--              or os_name == "Linux" and 3
+--              or 4
+-- end
 
 
 -- function M.fini(env)
@@ -74,11 +74,11 @@ local function filter(inp, env)
   local engine = env.engine
   local context = engine.context
   local c_f2_s = context:get_option("character_range_bhjm")
-  local p_1 = context:get_option("preedit_1")
-  local p_2 = context:get_option("preedit_2")
-  local p_3 = context:get_option("preedit_3")
-  local p_4 = context:get_option("preedit_4")
-  local g_op = p_1 and 0 or p_2 and 1 or p_3 and 2 or p_4 and 3 or 4
+  -- local p_1 = context:get_option("preedit_1")
+  -- local p_2 = context:get_option("preedit_2")
+  -- local p_3 = context:get_option("preedit_3")
+  -- local p_4 = context:get_option("preedit_4")
+  -- local g_op = p_1 and 0 or p_2 and 1 or p_3 and 2 or p_4 and 3 or 4
 
   local tran = c_f2_s and Translation(drop_cand, inp, "᰼᰼") or inp
 
@@ -88,7 +88,7 @@ local function filter(inp, env)
   -- end
 
   --- 以下用導入 Translation
-  local tran = Translation(revise_preedit_by_os, env.os_name, g_op, tran) or tran
+  -- local tran = Translation(revise_preedit_by_os, env.os_name, g_op, tran) or tran
   for cand in tran:iter() do
     yield(cand)
   end
@@ -98,6 +98,6 @@ end
 
 
 -- return preedit_model_filter
--- return { func = filter }
-return { init = init, func = filter }
+return { func = filter }
+-- return { init = init, func = filter }
 -- return M
