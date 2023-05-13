@@ -578,12 +578,12 @@ preedit_b_1_2_4:
     - xform/p@/ㄞ/
     - xform/q@/ㄢ/
     - "xlit|qazwsxedcrfvtgbyhnujmikolp|ㄆㄇㄈㄊㄋㄌㄍㄎㄏㄐㄑㄒㄔㄕㄖㄗㄘㄙㄧㄨㄩㄛㄜㄟㄠㄣ|"
-    - xform/A@/a/
-    - xform/B@/b/
-    - xform/C@/c/
-    - xform/D@/d/
-    - xform/E@/e/
-    - xform/F@/f/ #ˉ拉
+    - xform|A@|a|
+    - xform|B@|b|
+    - xform|C@|c|
+    - xform|D@|d|
+    - xform|E@|e|
+    - xform|F@|f| #ˉ拉
     - xform/G@/1/
     - xform/H@/2/
     - xform/I@/3/ #3ˇ
@@ -640,12 +640,12 @@ preedit_b_3:
     - xform/p@/ㄞ/
     - xform/q@/ㄢ/
     - "xlit|qazwsxedcrfvtgbyhnujmikolp|ㄆㄇㄈㄊㄋㄌㄍㄎㄏㄐㄑㄒㄔㄕㄖㄗㄘㄙㄧㄨㄩㄛㄜㄟㄠㄣ|"
-    - xform/A@/a/
-    - xform/B@/b/
-    - xform/C@/c/
-    - xform/D@/d/
-    - xform/E@/e/
-    - xform/F@/f/
+    - xform|A@|a|
+    - xform|B@|b|
+    - xform|C@|c|
+    - xform|D@|d|
+    - xform|E@|e|
+    - xform|F@|f|
     - xform/G@/1/
     - xform/H@/2/
     - xform/I@/3/
@@ -702,12 +702,12 @@ preedit_s_1_2_4:
     - xform/p@/ㄞ/
     - xform/q@/ㄢ/
     - "xlit|qazwsxedcrfvtgbyhnujmikolp|ㄆㄇㄈㄊㄋㄌㄍㄎㄏㄐㄑㄒㄔㄕㄖㄗㄘㄙㄧㄨㄩㄛㄜㄟㄠㄣ|"
-    - xform/A@/a/
-    - xform/B@/b/
-    - xform/C@/c/
-    - xform/D@/d/
-    - xform/E@/e/
-    - xform/F@/f/ #ˉ拉
+    - xform|A@|a|
+    - xform|B@|b|
+    - xform|C@|c|
+    - xform|D@|d|
+    - xform|E@|e|
+    - xform|F@|f| #ˉ拉
     - xform/G@/1/
     - xform/H@/2/
     - xform/I@/3/ #3ˇ
@@ -764,12 +764,12 @@ preedit_s_3:
     - xform/p@/ㄞ/
     - xform/q@/ㄢ/
     - "xlit|qazwsxedcrfvtgbyhnujmikolp|ㄆㄇㄈㄊㄋㄌㄍㄎㄏㄐㄑㄒㄔㄕㄖㄗㄘㄙㄧㄨㄩㄛㄜㄟㄠㄣ|"
-    - xform/A@/a/
-    - xform/B@/b/
-    - xform/C@/c/
-    - xform/D@/d/
-    - xform/E@/e/
-    - xform/F@/f/
+    - xform|A@|a|
+    - xform|B@|b|
+    - xform|C@|c|
+    - xform|D@|d|
+    - xform|E@|e|
+    - xform|F@|f|
     - xform/G@/1/
     - xform/H@/2/
     - xform/I@/3/
@@ -950,12 +950,12 @@ preedit_p_1_2_4:
     - xform/p@/ㄞ/
     - xform/q@/ㄢ/
     - "xlit|qazwsxedcrfvtgbyhnujmikolp|ㄆㄇㄈㄊㄋㄌㄍㄎㄏㄐㄑㄒㄔㄕㄖㄗㄘㄙㄧㄨㄩㄛㄜㄟㄠㄣ|"
-    - xform/A@/a/
-    - xform/B@/b/
-    - xform/C@/c/
-    - xform/D@/d/
-    - xform/E@/e/
-    - xform/F@/f/ #ˉ拉
+    - xform|A@|a|
+    - xform|B@|b|
+    - xform|C@|c|
+    - xform|D@|d|
+    - xform|E@|e|
+    - xform|F@|f| #ˉ拉
     - xform/G@/1/
     - xform/H@/2/
     - xform/I@/3/ #3ˇ
