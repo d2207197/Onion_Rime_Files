@@ -856,10 +856,6 @@ preedit_i_3:
     - xform|-|d@|
     - xform|;|e@|
     - xform| |f@|
-    - xform|[]]|`````|
-    - xform|[[]|````|
-    - xform|=|```|
-    - xform|'|``|
     - xform/1/g@/
     - xform/2/h@/
     - xform/3/i@/
@@ -870,6 +866,10 @@ preedit_i_3:
     - xform/8/n@/
     - xform/9/p@/
     - xform/0/q@/
+    - xform|[]]|`````|
+    - xform|[[]|````|
+    - xform|=|```|
+    - xform|'|``|
     - xform|([a-z@`0-9 ]+)|$1(\U$1\E)|
     - xform/a@/ㄝ/
     - xform/b@/ㄡ/
@@ -909,7 +909,7 @@ preedit_i_3:
     - xform|```|i| #=
     - xform|``|j| #'拉
     ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
-    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890)(abcdefghij|ᴀʙcᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏz₁₂³⁴₅⁶⁷₈₉₀›‹,.⸝-;⸋˺˹⁼'|" #/°₃₄₆₇₎₍⸣⸢▫
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890)(abcdefghij|ᴀʙcᴅᴇꜰɢʜɪᴊᴋʟᴍɴoᴘǫʀsᴛᴜᴠᴡxʏz₁₂³⁴₅⁶⁷₈₉₀›‹,.⸝-;⸋˺˹⁼'|"
     - 'xform/\\//'
     - 'xform/›/› /'
 
@@ -932,7 +932,7 @@ preedit_p_1_2_4:
     - xform/8/n@/
     - xform/9/p@/
     - xform/0/q@/
-    - xform/^([a-z@\\]+)$/\U$1\E　\n$1/ #₍₎#\r #\r\n
+    - xform/^([a-z@\\]+)$/\U$1\E　\n$1/
     - xform/a@/ㄝ/
     - xform/b@/ㄡ/
     - xform/c@/ㄥ/
@@ -969,7 +969,7 @@ preedit_p_1_2_4:
     - xform/([0-9A-Zabcdef])\\/$1　/
     ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
     - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdef|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ₁₂³⁴₅⁶⁷₈₉₀,.⸝-;⸋|"
-    - 'xform/\\/⁞/' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
+    - 'xform/\\/⁞/'
 
 
 preedit_p_3:
@@ -980,10 +980,6 @@ preedit_p_3:
     - xform|-|d@|
     - xform|;|e@|
     - xform| |f@|
-    - xform|[]]|`````|
-    - xform|[[]|````|
-    - xform|=|```|
-    - xform|'|``|
     - xform/1/g@/
     - xform/2/h@/
     - xform/3/i@/
@@ -994,7 +990,11 @@ preedit_p_3:
     - xform/8/n@/
     - xform/9/p@/
     - xform/0/q@/
-    - xform/^([a-z@`\\]+)$/\U$1\E　\n$1/ #₍₎#\r #\r\n
+    - xform|[]]|`````|
+    - xform|[[]|````|
+    - xform|=|```|
+    - xform|'|``|
+    - xform/^([a-z@`\\]+)$/\U$1\E　\n$1/
     - xform/a@/ㄝ/
     - xform/b@/ㄡ/
     - xform/c@/ㄥ/
@@ -1018,10 +1018,6 @@ preedit_p_3:
     - xform|D@|d|
     - xform|E@|e|
     - xform|F@|f|
-    - xform|`````|g| #]韓
-    - xform|````|h| #[日
-    - xform|```|i| #=
-    - xform|``|j| #'拉
     - xform/G@/1/
     - xform/H@/2/
     - xform/I@/3/ #3ˇ
@@ -1032,8 +1028,12 @@ preedit_p_3:
     - xform/N@/8/
     - xform/P@/9/
     - xform/Q@/0/
+    - xform|`````|g| #]韓
+    - xform|````|h| #[日
+    - xform|```|i| #=
+    - xform|``|j| #'拉
     - xform/([0-9A-Zabcdefghij])\\/$1　/
     ## 以上英文數字符號不先轉成最終顯示，方便下面作轉換。
     - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghij|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ₁₂³⁴₅⁶⁷₈₉₀,.⸝-;⸋˺˹⁼'|"
-    - 'xform/\\/⁞/' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
+    - 'xform/\\/⁞/'
     - 'xform/　([ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦ])/⁞$1/'
