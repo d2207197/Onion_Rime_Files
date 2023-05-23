@@ -54,14 +54,15 @@ engine:
     - reverse_lookup_translator
     - script_translator
   filters:
-    - simplifier
+    - simplifier@zh_cn
     - simplifier@back_mark
     - reverse_lookup_filter@top_reverse_lookup
     - uniquifier
 
-simplifier:
+zh_cn:
   opencc_config: tw2s.json
   tips: all
+  tags: [ abc ]
 
 back_mark:
   opencc_config: back_mark_ocm.json

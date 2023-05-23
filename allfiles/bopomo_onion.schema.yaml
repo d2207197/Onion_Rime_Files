@@ -37,7 +37,7 @@ engine:
   filters:
 #     - charset_filter@big5
 #     - charset_filter@gbk
-    - simplifier
+    - simplifier@zh_cn
     - reverse_lookup_filter@bpm_reverse_lookup
     - uniquifier
   processors:
@@ -63,9 +63,10 @@ engine:
     - script_translator@reverse2_lookup
     - script_translator
 ################################### 濾鏡 ######################################
-simplifier:
+zh_cn:
   opencc_config: tw2s.json
   tips: all
+  tags: [ abc ]
 
 # big5:
 #   tags: [ abc ]

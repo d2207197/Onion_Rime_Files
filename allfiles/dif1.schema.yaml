@@ -72,7 +72,7 @@ engine:
 #    - charset_filter@gbk
 #    - charset_filter@gb2312
     - simplifier@emoji_switch
-    - simplifier
+    - simplifier@zh_cn
     - reverse_lookup_filter@top_reverse_lookup
     - reverse_lookup_filter@pt_reverse_lookup
     - lua_filter@mix_cf2_cfp_filter  # 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
@@ -159,9 +159,10 @@ lua_custom_phrase:
   user_dict: "dif1_phrase"
   # user_dict: "lua_custom_phrase"
 ################################### 濾鏡 ######################################
-simplifier:
+zh_cn:
   opencc_config: tw2s.json
   tips: all
+  tags: [ abc ]
 
 character_range_bhjm:
   opencc_config: ocm_moedict_big5e_hkscs_jis.json #s2tw.json #t2tw.json

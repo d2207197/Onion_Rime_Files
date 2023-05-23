@@ -38,7 +38,7 @@ switches:
 
 engine:
   filters:
-    - simplifier
+    - simplifier@zh_cn
     - reverse_lookup_filter@tr_reverse_lookup
     - reverse_lookup_filter@tr2_reverse_lookup
     - lua_filter@comment_filter_plus
@@ -74,6 +74,11 @@ engine:
     - script_translator@reverse2_lookup
     - table_translator@reverse3_lookup
     - script_translator@reverse3_lookup_extra
+
+zh_cn:
+  opencc_config: tw2s.json
+  tips: all
+  tags: [ abc ]
 
 comment_filter_plus:
   tags: [ abc, pt ]
@@ -155,10 +160,6 @@ ovff_reverse_lookup:
     - xform/ /  /
     - xform/^/  /
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
-
-simplifier:
-  opencc_config: tw2s.json
-  tips: all
 
 reverse3_lookup:
   __include: /translator

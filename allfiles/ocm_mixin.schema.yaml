@@ -87,7 +87,7 @@ engine:
     - lua_filter@convert_english_filter
     - lua_filter@convert_japan_filter
     - simplifier@emoji_switch
-    - simplifier
+    - simplifier@zh_cn
     - simplifier@punct_mark
     - reverse_lookup_filter@ovff_reverse_lookup
     - reverse_lookup_filter@phonetic_reverse_lookup
@@ -157,9 +157,10 @@ lua_custom_phrase:
   user_dict: "ocm_mixin_phrase"
   # user_dict: "lua_custom_phrase"
 ################################### 濾鏡 ######################################
-simplifier:
+zh_cn:
   opencc_config: tw2s.json
   tips: all
+  tags: [ abc ]
 
 character_range_bhjm:
   opencc_config: ocm_moedict_big5e_hkscs_jis.json #s2tw.json #t2tw.json

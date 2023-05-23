@@ -64,21 +64,20 @@ switches:
 engine:
   filters:
     - simplifier@character_range_bhjm
+    - reverse_lookup_filter@e_reverse_lookup
     - lua_filter@mix_cf2_miss_filter  #合併 charset_filter2 和 missing_mark_filter，兩個 lua filter 太耗效能。
     # - lua_filter@charset_filter2  #去除opencc轉換後留下的「᰼᰼」。
     # - lua_filter@charset_filter  #打開後中文只保留CJK（精簡），但外語不受影響。
     # - lua_filter@missing_mark_filter  #補上標點符號因直上和 opencc 衝突沒附註之選項
     - lua_filter@preedit_model_filter
-    - reverse_lookup_filter@e_reverse_lookup
     - lua_filter@en_sort_filter
     - lua_filter@convert_english_filter
     - lua_filter@convert_japan_filter
     - simplifier@emoji_switch
-    - simplifier
+    - simplifier@zh_cn
     - simplifier@back_mark
     - simplifier@punct_mark
     - reverse_lookup_filter@bpm_reverse_lookup
-    # - reverse_lookup_filter@e_reverse_lookup
     - uniquifier
   processors:
     - lua_processor@mix_apc_s2rm_ltk_3
@@ -137,9 +136,10 @@ lua_custom_phrase:
   user_dict: "bo_mixin_phrase"
   # user_dict: "lua_custom_phrase"
 ################################### 濾鏡 ######################################
-simplifier:
+zh_cn:
   opencc_config: tw2s.json
   tips: all
+  tags: [ abc ]
 
 character_range_bhjm:
   opencc_config: ocm_moedict_big5e_hkscs_jis.json #s2tw.json #t2tw.json

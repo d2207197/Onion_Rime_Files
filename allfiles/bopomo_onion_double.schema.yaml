@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion_double
   name: "☆注音(洋蔥雙拼版)☆"
-  version: "202304"
+  version: "202305"
   author:
     - 『洋蔥』
   description: |
@@ -42,7 +42,7 @@ engine:
 #    - charset_filter@big5
 #    - charset_filter@gbk
     - lua_filter@charset_cjk_filter_plus
-    - simplifier
+    - simplifier@zh_cn
     - reverse_lookup_filter@bpm_reverse_lookup
     - uniquifier
   processors:
@@ -82,9 +82,10 @@ mf_translator:
 #   user_dict: "bopomo_onion_phrase"
 #   # user_dict: "lua_custom_phrase"
 ################################### 濾鏡 ######################################
-simplifier:
+zh_cn:
   opencc_config: tw2s.json
   tips: all
+  tags: [ abc ]
 
 charset_cjk_filter_plus:
   tags: [ abc, reverse2_lookup ]
