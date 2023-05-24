@@ -176,7 +176,7 @@ translator:
   prism: terra_pinyin_onion
   preedit_format:
     - "xlit|;/,'.|¹²³⁴⁵|"
-    - xform|¹|⁽¹’̇⁾|
+    - xform|¹|⁽¹˸⁾| #’̇
     - xform|²|⁽²ˊ⁾|
     - xform|³|⁽³’⁾|
     - xform|⁴|⁽⁴'⁾|
