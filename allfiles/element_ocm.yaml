@@ -88,24 +88,36 @@ key_binder:
     # - {accept: Control+bracketleft, toggle: simplify_comment, when: always } #「蝦米碼」提示碼開關
     # - {accept: Control+bracketright, toggle: back_mark, when: always } #「國際音標和符號」提示碼開關
     # - {accept: Control+equal, toggle: en_sort, when: always} #「easy」選單排序是否照英漢字典順序
-## 上排切換
+## 上排切換(Mac)
     - {accept: Control+Shift+6, toggle: character_range_bhjm, when: always}
     - {accept: Control+Shift+7, toggle: emoji_segestion, when: always}
     - {accept: Control+Shift+8, toggle: simplify_comment, when: always}
     - {accept: Control+Shift+9, toggle: back_mark, when: always}
     - {accept: Control+Shift+0, toggle: en_sort, when: always} #「排序Easy如同英漢字典」開關
+## 上排切換(Win)
+    - {accept: Control+Shift+asciicircum, toggle: character_range_bhjm, when: always}
+    - {accept: Control+Shift+ampersand, toggle: emoji_segestion, when: always}
+    - {accept: Control+Shift+asterisk, toggle: simplify_comment, when: always}
+    - {accept: Control+Shift+parenleft, toggle: back_mark, when: always}
+    - {accept: Control+Shift+parenright, toggle: en_sort, when: always} #「排序Easy如同英漢字典」開關
 ## 切換樣態
     - {accept: Control+apostrophe, set_option: character_range_bhjm, when: always}
     # - {accept: Control+bracketleft, set_option: extended_charset, when: always } #特例：增廣字符快捷鍵
     - {accept: Control+bracketleft, set_option: simplify_comment, when: always } #「蝦米碼」提示碼開關
     - {accept: Control+bracketright, unset_option: back_mark, when: always } #「國際音標和符號」提示碼開關
     - {accept: Control+equal, set_option: en_sort, when: always} #「easy」選單排序是否照英漢字典順序
-## 初始樣態
+## 初始樣態(Mac)
     - {accept: Control+Shift+apostrophe, unset_option: character_range_bhjm, when: always}
     # - {accept: Control+Shift+bracketleft, unset_option: extended_charset, when: always } #特例：增廣字符快捷鍵
     - {accept: Control+Shift+bracketleft, unset_option: simplify_comment, when: always } #「蝦米碼」提示碼開關
     - {accept: Control+Shift+bracketright, set_option: back_mark, when: always } #「國際音標和符號」提示碼開關
     - {accept: Control+Shift+equal, unset_option: en_sort, when: always} #「easy」選單排序是否照英漢字典順序
+## 初始樣態(Win)
+    - {accept: Control+Shift+quotedbl, unset_option: character_range_bhjm, when: always}
+    # - {accept: Control+Shift+braceleft, unset_option: extended_charset, when: always } #特例：增廣字符快捷鍵
+    - {accept: Control+Shift+braceleft, unset_option: simplify_comment, when: always } #「蝦米碼」提示碼開關
+    - {accept: Control+Shift+braceright, set_option: back_mark, when: always } #「國際音標和符號」提示碼開關
+    - {accept: Control+Shift+plus, unset_option: en_sort, when: always} #「easy」選單排序是否照英漢字典順序
 
 
 editor:
