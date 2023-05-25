@@ -395,25 +395,46 @@ key_binder:
     - {accept: space, send: Escape, when: composing} #空碼清屏用
     - {accept: space, send: space, when: has_menu} #補上一條產生之bug
     - {accept: space, send: KP_Space, when: paging} #方向鍵選字時，space直接上屏（避免被空格影響）
-###  新增下排功能快捷鍵 ###
-    # - { accept: Shift+space, toggle: ascii_mode, when: always }
-    - { accept: Control+comma, toggle: ascii_mode, when: always } #新增！
-#    - { accept: Control+Shift+space, toggle: ascii_mode, when: always } #新增！
-#    - { accept: Control+Shift+comma, toggle: ascii_mode, when: always } #新增！
-    - { accept: Control+period, toggle: full_shape, when: always } #新增！
-#    - { accept: Control+Shift+period, toggle: full_shape, when: always } #新增！
-    - { accept: Control+semicolon, toggle: simplification, when: always } #新增！
-#    - { accept: Control+Shift+slash, toggle: simplification, when: always } #新增！
-    - { accept: Control+slash, toggle: ascii_punct, when: always } #新增！
-    - { accept: Control+apostrophe, toggle: extended_charset, when: always } #增廣常用字符過濾，新增開關
-    - { accept: Control+bracketleft, toggle: simplify_comment, when: always } #編碼提示開關
-    - { accept: Control+bracketright, toggle: 1_2_straight_up, when: always } #空白直上開關
-    - { accept: Control+minus, toggle: array30_space_wp, when: always } #輸入w[0-9]符號，空白為翻頁或直上開關
-    - { accept: Control+equal, toggle: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
+###  功能快捷鍵 ###
+#     # - { accept: Shift+space, toggle: ascii_mode, when: always }
+#     - { accept: Control+comma, toggle: ascii_mode, when: always } #新增！
+# #    - { accept: Control+Shift+space, toggle: ascii_mode, when: always } #新增！
+# #    - { accept: Control+Shift+comma, toggle: ascii_mode, when: always } #新增！
+#     - { accept: Control+period, toggle: full_shape, when: always } #新增！
+# #    - { accept: Control+Shift+period, toggle: full_shape, when: always } #新增！
+#     - { accept: Control+semicolon, toggle: simplification, when: always } #新增！
+# #    - { accept: Control+Shift+slash, toggle: simplification, when: always } #新增！
+#     - { accept: Control+slash, toggle: ascii_punct, when: always } #新增！
+#     - { accept: Control+apostrophe, toggle: extended_charset, when: always } #增廣常用字符過濾，新增開關
+#     - { accept: Control+bracketleft, toggle: simplify_comment, when: always } #編碼提示開關
+#     - { accept: Control+bracketright, toggle: 1_2_straight_up, when: always } #空白直上開關
+#     - { accept: Control+minus, toggle: array30_space_wp, when: always } #輸入w[0-9]符號，空白為翻頁或直上開關
+#     - { accept: Control+equal, toggle: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
+## 上排切換
     - { accept: Control+Shift+7, toggle: simplify_comment, when: always } #編碼提示開關
     - { accept: Control+Shift+8, toggle: 1_2_straight_up, when: always } #空白直上開關
     - { accept: Control+Shift+9, toggle: array30_space_wp, when: always } #輸入w[0-9]符號，空白為翻頁或直上開關
     - { accept: Control+Shift+0, toggle: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
+## 切換樣態
+    - { accept: Control+comma, set_option: ascii_mode, when: always } #新增！
+    - { accept: Control+period, set_option: full_shape, when: always } #新增！
+    - { accept: Control+semicolon, set_option: simplification, when: always } #新增！
+    - { accept: Control+slash, set_option: ascii_punct, when: always } #新增！
+    - { accept: Control+apostrophe, unset_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
+    - { accept: Control+bracketleft, set_option: simplify_comment, when: always } #編碼提示開關
+    - { accept: Control+bracketright, unset_option: 1_2_straight_up, when: always } #空白直上開關
+    - { accept: Control+minus, set_option: array30_space_wp, when: always } #輸入w[0-9]符號，空白為翻頁或直上開關
+    - { accept: Control+equal, unset_option: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
+## 初始樣態
+    - { accept: Control+Shift+comma, unset_option: ascii_mode, when: always } #新增！
+    - { accept: Control+Shift+period, unset_option: full_shape, when: always } #新增！
+    - { accept: Control+Shift+semicolon, unset_option: simplification, when: always } #新增！
+    - { accept: Control+Shift+slash, unset_option: ascii_punct, when: always } #新增！
+    - { accept: Control+Shift+apostrophe, set_option: extended_charset, when: always } #增廣常用字符過濾，新增開關
+    - { accept: Control+Shift+bracketleft, unset_option: simplify_comment, when: always } #編碼提示開關
+    - { accept: Control+Shift+bracketright, set_option: 1_2_straight_up, when: always } #空白直上開關
+    - { accept: Control+Shift+minus, unset_option: array30_space_wp, when: always } #輸入w[0-9]符號，空白為翻頁或直上開關
+    - { accept: Control+Shift+equal, set_option: array30_return_abc, when: always } # return 上屏候選字或 abc 開關
 ### Return/Enter鍵 ###
     - {accept: Return, send: KP_Space, when: paging} #選字時 Return/Enter 鍵同空白鍵上屏中文
     - {accept: KP_Enter, send: KP_Space, when: paging} #選字時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文

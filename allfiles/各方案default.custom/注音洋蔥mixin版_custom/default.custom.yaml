@@ -60,19 +60,29 @@ patch:
     - { when: always, accept: Control+Shift+4, toggle: ascii_punct } #新增！
     - { when: always, accept: Control+Shift+5, toggle: simplification } #Control+Shift+4
     - { when: always, accept: Control+Shift+6, toggle: extended_charset } #Control+Shift+5
-    - { when: always, accept: Control+Shift+exclam, select: .next }
-    - { when: always, accept: Control+Shift+at, toggle: ascii_mode }
-    - { when: always, accept: Control+Shift+numbersign, toggle: full_shape }
-    - { when: always, accept: Control+Shift+dollar, toggle: ascii_punct }
-    - { when: always, accept: Control+Shift+percent, toggle: simplification }
-    - { when: always, accept: Control+Shift+asciicircum, toggle: extended_charset }
-# 新增下排功能快捷鍵
+    # - { when: always, accept: Control+Shift+exclam, select: .next }
+    # - { when: always, accept: Control+Shift+at, toggle: ascii_mode }
+    # - { when: always, accept: Control+Shift+numbersign, toggle: full_shape }
+    # - { when: always, accept: Control+Shift+dollar, toggle: ascii_punct }
+    # - { when: always, accept: Control+Shift+percent, toggle: simplification }
+    # - { when: always, accept: Control+Shift+asciicircum, toggle: extended_charset }
+    # 新增下排功能快捷鍵
     - { when: always, accept: Shift+space, toggle: ascii_mode }
-    - { when: always, accept: Control+comma, toggle: ascii_mode }
-    - { when: always, accept: Control+period, toggle: full_shape }
-    - { when: always, accept: Control+semicolon, toggle: simplification }
-    - { when: always, accept: Control+slash, toggle: ascii_punct }
-# 只限直排專用：左右鍵翻頁（ Testing！ ）
+    # - { when: always, accept: Control+comma, toggle: ascii_mode }
+    # - { when: always, accept: Control+period, toggle: full_shape }
+    # - { when: always, accept: Control+semicolon, toggle: simplification }
+    # - { when: always, accept: Control+slash, toggle: ascii_punct }
+    # 切換樣態
+    - { accept: Control+comma, set_option: ascii_mode, when: always }
+    - { accept: Control+period, set_option: full_shape, when: always }
+    - { accept: Control+semicolon, set_option: simplification, when: always }
+    - { accept: Control+slash, set_option: ascii_punct, when: always }
+    # 初始樣態
+    - { accept: Control+Shift+comma, unset_option: ascii_mode, when: always }
+    - { accept: Control+Shift+period, unset_option: full_shape, when: always }
+    - { accept: Control+Shift+semicolon, unset_option: simplification, when: always }
+    - { accept: Control+Shift+slash, unset_option: ascii_punct, when: always }
+    # 只限直排專用：左右鍵翻頁（ Testing！ ）
     # - { accept: Left, send: Page_Up, when: paging } #直式選單用 #has_menu
     # - { accept: Right, send: Page_Down, when: paging } #直式選單用 #has_menu
     # - { accept: KP_Enter, send: Return, when: always } #使小鍵盤Enter可選擇
