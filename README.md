@@ -43,7 +43,7 @@
   
   > 承上，有二個非注音方案確定使用最新 librime-lua 函數去達成功能，其他方案也不追求相容舊版，只確保這邊 Windows 和 Mac 兩者皆可正常運行出功能。
   
-  > 先前 Windows 上官方小狼毫多年未更新，核心和 librime-lua 版本陳舊，推薦使用：[fxliang](https://github.com/fxliang/weasel)；近期 [小狼毫](https://github.com/rime/weasel) 更新，也可使用。
+  > 先前 Windows 小狼毫官方多年未更新，核心和 librime-lua 版本陳舊，推薦使用網友修改封裝：[fxliang](https://github.com/fxliang/weasel)；近期官方 [小狼毫](https://github.com/rime/weasel) 更新，也可使用。
   
   > 總結：20230130 目前方案編輯使用的版本：librime 1.8.3、librime-lua 200。由於 Rime 官方、librime-lua 官方、本方案皆不斷更新，需注意版本，才好相容。
 
