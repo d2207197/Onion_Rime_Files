@@ -174,13 +174,13 @@ local function init(env)
       , { "  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑰" }
       , { "  c [0-9]+〔內碼十進制 Dec〕", "⑱" }
       , { "  o [0-7]+〔內碼八進制 Oct〕", "⑲" }
-      , { "  v〔版本資訊〕", "⑳" }
-      , { "  g〔Lua 所佔記憶體〕(Garbage)", "㉑" }
-      , { "  gc〔垃圾回收〕(Garbage Collection)", "㉒" }
-      , { "===========  結束  ===========    ", "㉓" }
-      -- , { "", "㉔" }
-      -- , { "", "㉕" }
-      -- , { "", "㉖" }
+      , { "  kj〔日文 羅馬字 鍵位〕", "⑳" }
+      , { "  kh〔韓文 HNC 鍵位〕", "㉑" }
+      , { "  ks〔韓文 洋蔥形碼 鍵位〕", "㉒" }
+      , { "  v〔版本資訊〕", "㉓" }
+      , { "  g〔Lua 所佔記憶體〕(Garbage)", "㉔" }
+      , { "  gc〔垃圾回收〕(Garbage Collection)", "㉕" }
+      , { "===========  結束  ===========    ", "㉖" }
       -- , { "", "㉗" }
       -- , { "", "㉘" }
       -- , { "", "㉙" }
@@ -301,6 +301,168 @@ local function translate(input, seg, env)
       local cand2 = Candidate("tips", seg.start, seg._end, "", "  [0-9a-f]+〔Percent/URL encoding〕")
       cand2.preedit = input .. "\t《Percent/URL encoding》▶"
       yield(cand2)
+      return
+    end
+
+
+    -- 多國語言鍵位說明
+    if (input == env.prefix .. "k") then
+      local keys_table = {
+          { "  ~j 〔日文 羅馬字 鍵位〕", "⓿" }
+        , { "  ~h 〔韓文 HNC 鍵位〕", "❶" }
+        , { "  ~s 〔韓文 洋蔥形碼 鍵位〕", "❷" }
+        -- , { "  ~p 〔拉丁 音標 鍵位〕", "❸" }
+        }
+      for k, v in ipairs(keys_table) do
+        local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
+        -- cand.preedit = input .. "\t《多國語言鍵位》▶"
+        yield(cand)
+      end
+      return
+    end
+
+    -- if (input == env.prefix .. "kk") then
+    --   local keys_table = {
+    --       { "  h〔韓文 HNC 鍵位〕", "⁰" }
+    --     , { "  s〔韓文 洋蔥形碼 鍵位〕", "¹" }
+    --     }
+    --   for k, v in ipairs(keys_table) do
+    --     local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
+    --     cand.preedit = input .. "\t《韓文鍵位》▶"
+    --     yield(cand)
+    --   end
+    --   return
+    -- end
+
+    if (input == env.prefix .. "kh") then
+      local keys_table = {
+          { " （ i ↔ y 可互換）", "⁰" }
+        , { " 單母音：", "¹" }
+        , { " 　ㅣ i   　ㅏ a  　ㅑ ya　", "²" }
+        , { " 　ㅡ w 　ㅜ u  　ㅠ yu　", "³" }
+        , { " 　　     　ㅓ e  　ㅕ ye　", "⁴" }
+        , { " 　　     　ㅗ o  　ㅛ yo　", "⁵" }
+        , { " 雙母音：", "⁶" }
+        , { " 　ㅐ ai 　ㅒ yai 　ㅘ oa  　ㅝ ue　", "⁷" }
+        , { " 　ㅔ ei 　ㅖ yei 　ㅙ oai 　ㅞ uei　", "⁸" }
+        , { " 　　    　　        　ㅚ oi    　ㅟ ui 　ㅢ wi　", "⁹" }
+        , { "單子音：", "¹⁰" }
+        , { "　ㄱ g 　ㄷ d      　ㅂ b     　ㅅ s 　ㅇ x (ng)　", "¹¹" }
+        , { "　ㅋ k 　ㅌ t       　ㅍ p (f)　ㅈ j 　ㅎ h　", "¹²" }
+        , { "　ㄴ n 　ㄹ L (r) 　ㅁ m    　ㅊ c　", "¹³" }
+        , { "雙子音：", "¹⁴" }
+        , { "　ㄲ gg　ㄸ dd　ㅃ bb　ㅆ ss　ㅉ jj　", "¹⁵" }
+        }
+      for k, v in ipairs(keys_table) do
+        local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
+        cand.preedit = input .. "\t《韓文 HNC 鍵位》"
+        yield(cand)
+      end
+      return
+    end
+
+    if (input == env.prefix .. "ks") then
+      local keys_table = {
+          { "  基礎字根：", "₀" }
+        , { "　  A ㅂ　　B ㅅ　　C ㄷ　　D ㅊ　　E ㅌ　　F ㅑ　　G ㅕ　", "₁" }
+        , { "　  H ㅐ　　I ㅣ　　J ㅓ　　K ㅏ　　L ㄴ　　M ㅛ　　N ㅗ　", "₂" }
+        , { "　  O ㅁ　　P ㅔ　　Q ㅇ　　R ㅠ　　S ㄹ　　T ㅜ　　U ㅈ　", "₃" }
+        , { "　  V ㅡ　　W ㅎ　　X ㅍ　　Y ㄱ　　Z ㅋ　", "₄" }
+        , { "　  AA ㅃ  /  BB  ㅆ  /  CC ㄸ  /  HH ㅒ  /  PP ㅖ  /  UU ㅉ  /  YY ㄲ　", "₅" }
+        , { "  簡速字根：", "₆" }
+        , { "　  A ㅝ　　D ㅟ　　E ㅘ　　F ㄲ　　G ㄸ/ㄶ　", "₇" }
+        , { "　  H ㅄ　　I ㄿ　　J ㄺ　　K ㅉ/ㄵ　　L ㅢ　", "₈" }
+        , { "　  M ㅆ　　N ㄻ　　O ㅒ　　P ㄽ　　Q ㅖ", "₉" }
+        , { "　R ㅃ/ㄼ　　S ㅙ　　T ㄾ　　V ㄳ　　W ㅀ　　", "₁₀" }
+        , { "　X ㅚ　　Z ㅞ　", "₁₁" }
+        }
+      for k, v in ipairs(keys_table) do
+        local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
+        cand.preedit = input .. "\t《韓文 洋蔥形碼 鍵位》"
+        yield(cand)
+      end
+      return
+    end
+
+    if (input == env.prefix .. "kj") then
+      local keys_table = {
+          { "　五十音：", "０" }
+        , { "　　あ/ア a　い/イ i　う/ウ u　え/エ e　お/オ o　", "１" }
+        , { "　　か/カ ka　き/キ ki　く/ク ku　け/ケ ke　こ/コ ko　", "２" }
+        , { "　　さ/サ sa　し/シ shi (si)　す/ス su　せ/セ se　そ/ソ so　", "３" }
+        , { "　　た/タ ta　ち/チ chi (ti)　つ/ツ tsu (tu)　て/テ te　と/ト to　", "４" }
+        , { "　　な/ナ na　に/ニ ni　ぬ/ヌ nu　ね/ネ ne　の/ノ no　", "５" }
+        , { "　　は/ハ ha　ひ/ヒ hi　ふ/フ fu (hu)　へ/ヘ he　ほ/ホ ho　", "６" }
+        , { "　　ま/マ ma　み/ミ mi　む/ム mu　め/メ me　も/モ mo　", "７" }
+        , { "　　や/ヤ ya　ゆ/ユ yu　よ/ヨ yo　", "８" }
+        , { "　　ら/ラ ra　り/リ ri　る/ル ru　れ/レ re　ろ/ロ ro　", "９" }
+        , { "　わ/ワ wa　を/ヲ wo　ん/ン n", "１０" }
+        , { "　ゐ/ヰ wi (i/wyi)　ゑ/ヱ we (e/wye)　", "１１" }
+        , { "濁音和半濁音：", "１２" }
+        , { "　が/ガ ga　ぎ/ギ gi　ぐ/グ gu　げ/ゲ ge　ご/ゴ go　", "１３" }
+        , { "　ざ/ザ za　じ/ジ ji (zi)　ず/ズ zu　ぜ/ゼ ze　ぞ/ゾ zo　", "１４" }
+        , { "　だ/ダ da　ぢ/ヂ di　づ/ヅ du　で/デ de　ど/ド do　", "１５" }
+        , { "　ば/バ ba　び/ビ bi　ぶ/ブ bu　べ/ベ be　ぼ/ボ bo　", "１６" }
+        , { "　ぱ/パ pa　ぴ/ピ pi　ぷ/プ pu　ぺ/ペ pe　ぽ/ポ po　", "１７" }
+        , { "　ヷ va　ヸ vi　ゔ/ヴ vu　ヹ ve　ヺ vo　", "１８" }
+        , { "小寫：", "１９" }
+        , { "　ぁ/ァ xa　ぃ/ィ xi　ぅ/ゥ xu　ぇ/ェ xe　ぉ/ォ xo　", "２０" }
+        , { "　っ/ッ xtu (xtsu)　ゎ/ヮ xwa　", "２１" }
+        , { "　ゃ/ャ xya　ゅ/ュ xyu　ょ/ョ xyo　", "２２" }
+        , { "　ゕ/ヵ xka (ヵ=ka)　ゖ/ヶ xke (ヶ=ke/ga)　", "２３" }
+        , { "拗音：", "２４" }
+        , { "　きゃ/キャ kya　きゅ/キュ kyu　きょ/キョ kyo　", "２５" }
+        , { "　ぎゃ/ギャ gya　ぎゅ/ギュ gyu　ぎょ/ギョ gyo　", "２６" }
+        , { "　しゃ/シャ sha (sya)　しゅ/シュ shu (syu)　しょ/ショ sho (syo)　", "２７" }
+        , { "　じゃ/ジャ ja (jya/zya)　じゅ/ジュ ju (jyu/zyu)　じょ/ジョ jo (jyo/zyo)　", "２８" }
+        , { "　ぢゃ/ヂャ dya (ja/zya)　ぢゅ/ヂュ dyu (ju/zyu)　ぢょ/ヂョ dyo (jo/zyo)　", "２９" }
+        , { "　ちゃ/チャ cha (tya/cya)　ちゅ/チュ chu (tyu/cyu)　ちょ/チョ cho (tyo/cyo)　", "３０" }
+        , { "　にゃ/ニャ nya　にゅ/ニュ nyu　にょ/ニョ nyo　", "３１" }
+        , { "　ひゃ/ヒャ hya　ひゅ/ヒュ hyu　ひょ/ヒョ hyo　", "３２" }
+        , { "　びゃ/ビャ bya　びゅ/ビュ byu　びょ/ビョ byo　", "３３" }
+        , { "　ぴゃ/ピャ pya　ぴゅ/ピュ pyu　ぴょ/ピョ pyo　", "３４" }
+        , { "　みゃ/ミャ mya　みゅ/ミュ myu　みょ/ミョ myo　", "３５" }
+        , { "　りゃ/リャ rya　りゅ/リュ ryu　リョ/りょ ryo　", "３６" }
+        , { "外來語：", "３７" }
+        , { "　いぃ/イィ yi　いぇ/イェ ye　うぃ/ウィ wi　うゅ/ウュ wyu　うぇ/ウェ we　", "３８" }
+        , { "　うぁ/ウァ wha　うぃ/ウィ whi　うぅ/ウゥ whu　うぇ/ウェ whe　うぉ/ウォ who　", "３９" }
+        , { "　ゔぁ/ヴァ va　ゔぃ/ヴィ vi　ゔぇ/ヴェ ve　ゔぉ/ヴォ vo　", "４０" }
+        , { "　ゔゃ/ヴャ vya　ゔぃ/ヴィ vyi　ゔゅ/ヴュ vyu　ゔぇ/ヴェ vye　ゔょ/ヴョ vyo　", "４１" }
+        , { "　ゔぃぇ/ヴィェ vye　", "４２" }
+        , { "　くぁ/クァ/くゎ/クヮ kwa　くぃ/クィ kwi　くぅ/クゥ kwu　くぇ/クェ kwe　くぉ/クォ kwo　", "４３" }
+        , { "　くぁ/クァ qwa　くぃ/クィ qwi (qyi)　くぅ/クゥ qwu　くぇ/クェ qwe (qye)　くぉ/クォ qwo　", "４４" }
+        , { "　くゃ/クャ qya　くゅ/クュ qyu　くょ/クョ qyo　", "４５" }
+        , { "　ぐぁ/グァ/ぐゎ/グヮ gwa　ぐぃ/グィ gwi　ぐぅ/グゥ gwu　ぐぇ/グェ gwe　ぐぉ/グォ gwo　", "４６" }
+        , { "　きぇ/キェ kye　きぃ/キィ kyi　", "４７" }
+        , { "　ぎぃ/ギィ gyi　ぎぇ/ギェ gye　", "４８" }
+        , { "　しぇ/シェ she　しぃ/シィ syi　しぇ/シェ sye　", "４９" }
+        , { "　ジェ je (jye zye)　ジィ jyi (zyi)　", "５０" }
+        , { "　すぁ/スァ swa　すぃ/スィ swi　すぅ/スゥ swu　すぇ/スェ swe　すぉ/スォ swo　", "５１" }
+        , { "　すゅ/スュ syu　ずゅ/ズュ zyu　ずぃ/ズィ zwi　ずゎ/ズヮ zwa　", "５２" }
+        , { "　ちぃ/チィ cyi (tyi)　ちぇ/チェ che (cye tye)　", "５３" }
+        , { "　ぢぃ/ヂィ dyi　ぢぇ/ヂェ dye　", "５４" }
+        , { "　てゃ/テャ tha　てぃ/ティ thi　てゅ/テュ thu (tyu)　てぇ/テェ the　てょ/テョ tho　", "５５" }
+        , { "　でゃ/デャ dha　でぃ/ディ dhi　でゅ/デュ dhu (dyu)　でぇ/デェ dhe　でょ/デョ dho　", "５６" }
+        , { "　つぁ/ツァ tsa　つぃ/ツィ tsi　つゅ/ツュ tsyu　つぇ/ツェ tse　つぉ/ツォ tso　", "５７" }
+        , { "　とぁ/トァ twa　とぃ/トィ twi　とぅ/トゥ twu　とぇ/トェ twe　とぉ/トォ two　", "５８" }
+        , { "　どぁ/ドァ dwa　どぃ/ドィ dwi　どぅ/ドゥ dwu　どぇ/ドェ dwe　どぉ/ドォ dwo　", "５９" }
+        , { "　にぃ/ニィ nyi　にぇ/ニェ nye　", "６０" }
+        , { "　ひぃ/ヒィ hyi　ひぇ/ヒェ hye　", "６１" }
+        , { "　びぃ/ビィ byi　びぇ/ビェ bye　", "６２" }
+        , { "　びゎ/ビヮ bwa　", "６３" }
+        , { "　ぴぃ/ピィ pyi　ぴぇ/ピェ pye　", "６４" }
+        , { "　ふぁ/ファ fwa (fa)　ふぃ/フィ fwi (fi fyi)　ふぅ/フゥ fwu　ふぇ/フェ fwe (fe fye)　ふぉ/フォ fwo (fo)　", "６５" }
+        , { "　ふゅ/フュ fyu　ふょ/フョ fyo　ふゃ/フャ fya　", "６６" }
+        , { "　ふぃぇ/フィェ fye　ぷゎ/プヮ pwa　", "６７" }
+        , { "　ほぅ/ホゥ hwu　", "６８" }
+        , { "　みぃ/ミィ myi　みぇ/ミェ mye　", "６９" }
+        , { "　りぇ/リェ rye (lye)　りぃ/リィ ryi (lyi)　", "７０" }
+        }
+      for k, v in ipairs(keys_table) do
+        local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
+        cand.preedit = input .. "\t《日文 羅馬字 鍵位》"
+        yield(cand)
+      end
       return
     end
 
