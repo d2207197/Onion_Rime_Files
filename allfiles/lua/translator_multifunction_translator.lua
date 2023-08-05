@@ -371,9 +371,9 @@ local function translate(input, seg, env)
         , { "　  AA ㅃ  /  BB  ㅆ  /  CC ㄸ  /  HH ㅒ  /  PP ㅖ  /  UU ㅉ  /  YY ㄲ　", "₅" }
         , { "  簡速字根：", "₆" }
         , { "　  A ㅝ　　D ㅟ　　E ㅘ　　F ㄲ　　G ㄸ/ㄶ　", "₇" }
-        , { "　  H ㅄ　　I ㄿ　　J ㄺ　　K ㅉ/ㄵ　　L ㅢ　", "₈" }
-        , { "　  M ㅆ　　N ㄻ　　O ㅒ　　P ㄽ　　Q ㅖ", "₉" }
-        , { "　R ㅃ/ㄼ　　S ㅙ　　T ㄾ　　V ㄳ　　W ㅀ　　", "₁₀" }
+        , { "　  H ㅄ　　I ㄿ　　J ㄺ　　K ㅉ/ㄵ　L ㅢ　", "₈" }
+        , { "　  M ㅆ　　N ㄻ　　O ㅒ　　P ㄽ　　Q ㅖ　", "₉" }
+        , { "　R ㅃ/ㄼ　S ㅙ　　T ㄾ　　V ㄳ　　W ㅀ (對調前碼)", "₁₀" }
         , { "　X ㅚ　　Z ㅞ　", "₁₁" }
         }
       for k, v in ipairs(keys_table) do
