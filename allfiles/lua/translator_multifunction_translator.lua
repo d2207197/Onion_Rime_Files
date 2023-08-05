@@ -426,11 +426,11 @@ local function translate(input, seg, env)
         , { "外來語：", "３７" }
         , { "　いぃ/イィ yi　いぇ/イェ ye　うぃ/ウィ wi　うゅ/ウュ wyu　うぇ/ウェ we　", "３８" }
         , { "　うぁ/ウァ wha　うぃ/ウィ whi　うぅ/ウゥ whu　うぇ/ウェ whe　うぉ/ウォ who　", "３９" }
-        , { "　ゔぁ/ヴァ va　ゔぃ/ヴィ vi　ゔぇ/ヴェ ve　ゔぉ/ヴォ vo　", "４０" }
-        , { "　ゔゃ/ヴャ vya　ゔぃ/ヴィ vyi　ゔゅ/ヴュ vyu　ゔぇ/ヴェ vye　ゔょ/ヴョ vyo　", "４１" }
+        , { "　ゔぁ/ヴァ va　ゔぃ/ヴィ vi (vyi)　ゔぇ/ヴェ ve (vye)　ゔぉ/ヴォ vo　", "４０" }
+        , { "　ゔゃ/ヴャ vya　ゔゅ/ヴュ vyu　ゔょ/ヴョ vyo　", "４１" }
         , { "　ゔぃぇ/ヴィェ vye　", "４２" }
-        , { "　くぁ/クァ/くゎ/クヮ kwa　くぃ/クィ kwi　くぅ/クゥ kwu　くぇ/クェ kwe　くぉ/クォ kwo　", "４３" }
-        , { "　くぁ/クァ qwa　くぃ/クィ qwi (qyi)　くぅ/クゥ qwu　くぇ/クェ qwe (qye)　くぉ/クォ qwo　", "４４" }
+        , { "　くぁ/クァ qwa　くぃ/クィ qwi (qyi)　くぅ/クゥ qwu　くぇ/クェ qwe (qye)　くぉ/クォ qwo　", "４３" }
+        , { "　くぁ/クァ/くゎ/クヮ kwa　くぃ/クィ kwi　くぅ/クゥ kwu　くぇ/クェ kwe　くぉ/クォ kwo　", "４４" }
         , { "　くゃ/クャ qya　くゅ/クュ qyu　くょ/クョ qyo　", "４５" }
         , { "　ぐぁ/グァ/ぐゎ/グヮ gwa　ぐぃ/グィ gwi　ぐぅ/グゥ gwu　ぐぇ/グェ gwe　ぐぉ/グォ gwo　", "４６" }
         , { "　きぇ/キェ kye　きぃ/キィ kyi　", "４７" }
@@ -452,11 +452,11 @@ local function translate(input, seg, env)
         , { "　びゎ/ビヮ bwa　", "６３" }
         , { "　ぴぃ/ピィ pyi　ぴぇ/ピェ pye　", "６４" }
         , { "　ふぁ/ファ fwa (fa)　ふぃ/フィ fwi (fi fyi)　ふぅ/フゥ fwu　ふぇ/フェ fwe (fe fye)　ふぉ/フォ fwo (fo)　", "６５" }
-        , { "　ふゅ/フュ fyu　ふょ/フョ fyo　ふゃ/フャ fya　", "６６" }
+        , { "　ふゃ/フャ fya　ふゅ/フュ fyu　ふょ/フョ fyo　", "６６" }
         , { "　ふぃぇ/フィェ fye　ぷゎ/プヮ pwa　", "６７" }
         , { "　ほぅ/ホゥ hwu　", "６８" }
         , { "　みぃ/ミィ myi　みぇ/ミェ mye　", "６９" }
-        , { "　りぇ/リェ rye (lye)　りぃ/リィ ryi (lyi)　", "７０" }
+        , { "　りぃ/リィ ryi (lyi)　りぇ/リェ rye (lye)　", "７０" }
         }
       for k, v in ipairs(keys_table) do
         local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
