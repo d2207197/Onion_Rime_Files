@@ -229,9 +229,15 @@ key_binder:
     # - {accept: Return, send: space, when: composing}
     # - {accept: Return, send: Return, when: paging}
 ######################
+## 上排切換(Mac)
     - {accept: Control+Shift+5, toggle: kr_1m, when: always}
+## 上排切換(Win)
+    - {accept: Control+Shift+percent, toggle: kr_1m, when: always}
+## 切換樣態
     - {accept: Control+semicolon, unset_option: kr_1m, when: always}
+## 初始樣態(Mac)
     - {accept: Control+Shift+semicolon, set_option: kr_1m, when: always}
+## 初始樣態(Win)
     - {accept: Control+Shift+colon, set_option: kr_1m, when: always}
 ######################
 
