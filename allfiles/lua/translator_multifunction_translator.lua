@@ -177,12 +177,12 @@ local function init(env)
       , { "  kj〔日文 羅馬字 鍵位〕", "⑳" }
       , { "  kh〔韓文 HNC 鍵位〕", "㉑" }
       , { "  ks〔韓文 洋蔥形碼 鍵位〕", "㉒" }
-      , { "  v〔版本資訊〕", "㉓" }
-      , { "  g〔Lua 所佔記憶體〕(Garbage)", "㉔" }
-      , { "  gc〔垃圾回收〕(Garbage Collection)", "㉕" }
-      , { "===========  結束  ===========    ", "㉖" }
-      -- , { "", "㉗" }
-      -- , { "", "㉘" }
+      , { "  kp〔拉丁 KK/DJ/IPA音標 鍵位〕", "㉓" }
+      , { "  ki〔拉丁 IPA國際音標 鍵位〕", "㉔" }
+      , { "  v〔版本資訊〕", "㉕" }
+      , { "  g〔Lua 所佔記憶體〕(Garbage)", "㉖" }
+      , { "  gc〔垃圾回收〕(Garbage Collection)", "㉗" }
+      , { "===========  結束  ===========    ", "㉘" }
       -- , { "", "㉙" }
       -- , { "", "㉚" }
       -- , { "", "㉛" }
@@ -308,10 +308,11 @@ local function translate(input, seg, env)
     -- 多國語言鍵位說明
     if (input == env.prefix .. "k") then
       local keys_table = {
-          { "  ~j 〔日文 羅馬字 鍵位〕", "⓿" }
-        , { "  ~h 〔韓文 HNC 鍵位〕", "❶" }
-        , { "  ~s 〔韓文 洋蔥形碼 鍵位〕", "❷" }
-        -- , { "  ~p 〔拉丁 音標 鍵位〕", "❸" }
+          { "  ~j 〔日文 羅馬字 鍵位〕", "⓵" }
+        , { "  ~h 〔韓文 HNC 鍵位〕", "⓶" }
+        , { "  ~s 〔韓文 洋蔥形碼 鍵位〕", "⓷" }
+        , { "  ~p 〔拉丁 KK/DJ/IPA音標 鍵位〕", "⓸" }
+        , { "  ~i 〔拉丁 IPA國際音標 鍵位〕", "⓹" }
         }
       for k, v in ipairs(keys_table) do
         local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
@@ -364,15 +365,15 @@ local function translate(input, seg, env)
     if (input == env.prefix .. "ks") then
       local keys_table = {
           { "  基礎字根：", "₀" }
-        , { "　  A ㅂ　　B ㅅ　　C ㄷ　　D ㅊ　　E ㅌ　　F ㅑ　　G ㅕ　", "₁" }
-        , { "　  H ㅐ　　I ㅣ　　J ㅓ　　K ㅏ　　L ㄴ　　M ㅛ　　N ㅗ　", "₂" }
-        , { "　  O ㅁ　　P ㅔ　　Q ㅇ　　R ㅠ　　S ㄹ　　T ㅜ　　U ㅈ　", "₃" }
-        , { "　  V ㅡ　　W ㅎ　　X ㅍ　　Y ㄱ　　Z ㅋ　", "₄" }
-        , { "　  AA ㅃ  /  BB  ㅆ  /  CC ㄸ  /  HH ㅒ  /  PP ㅖ  /  UU ㅉ  /  YY ㄲ　", "₅" }
+        , { "  　A ㅂ　　B ㅅ　　C ㄷ　　D ㅊ　　E ㅌ　　F ㅑ　　G ㅕ　", "₁" }
+        , { "  　H ㅐ　　I ㅣ　　J ㅓ　　K ㅏ　　L ㄴ　　M ㅛ　　N ㅗ　", "₂" }
+        , { "  　O ㅁ　　P ㅔ　　Q ㅇ　　R ㅠ　　S ㄹ　　T ㅜ　　U ㅈ　", "₃" }
+        , { "  　V ㅡ　　W ㅎ　　X ㅍ　　Y ㄱ　　Z ㅋ　", "₄" }
+        , { "  　AA ㅃ  /  BB  ㅆ  /  CC ㄸ  /  HH ㅒ  /  PP ㅖ  /  UU ㅉ  /  YY ㄲ　", "₅" }
         , { "  簡速字根：", "₆" }
-        , { "　  A ㅝ　　D ㅟ　　E ㅘ　　F ㄲ　　G ㄸ/ㄶ　", "₇" }
-        , { "　  H ㅄ　　I ㄿ　　J ㄺ　　K ㅉ/ㄵ　L ㅢ　", "₈" }
-        , { "　  M ㅆ　　N ㄻ　　O ㅒ　　P ㄽ　　Q ㅖ　", "₉" }
+        , { "  　A ㅝ　　D ㅟ　　E ㅘ　　F ㄲ　　G ㄸ/ㄶ　", "₇" }
+        , { "  　H ㅄ　　I ㄿ　　J ㄺ　　K ㅉ/ㄵ　L ㅢ　", "₈" }
+        , { "  　M ㅆ　　N ㄻ　　O ㅒ　　P ㄽ　　Q ㅖ　", "₉" }
         , { "　R ㅃ/ㄼ　S ㅙ　　T ㄾ　　V ㄳ　　W ㅀ (對調前碼)", "₁₀" }
         , { "　X ㅚ　　Z ㅞ　", "₁₁" }
         }
@@ -468,6 +469,164 @@ local function translate(input, seg, env)
       for k, v in ipairs(keys_table) do
         local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
         cand.preedit = input .. "\t《日文 羅馬字 鍵位》"
+        yield(cand)
+      end
+      return
+    end
+
+    if (input == env.prefix .. "ki") then
+      local keys_table = {
+          { "　(…) 內為編碼，前為 IPA 字符", "🄋" }
+        , { "　「;」→ 大寫　「''」→ 組合附加符號（注音方案改「;;」）", "➀" }
+        , { "　==============================", "➁" }
+        , { "　「母音/元音」：", "➂" }
+        -- , { "　　　前｜央｜後", "➂" }
+        , { "　閉　：i(i)　y(y)｜ɨ(it)　ʉ(ut)｜ɯ(mq)　u(u)", "➃" }
+        , { "　次閉：ɪ(ii;)　ʏ(yi;)｜｜ʊ(wk)", "➄" }
+        , { "　半閉：e(e)　ø(ox)｜ɘ(ek) ɵ(qi)｜ɤ(vo/yo/oy)　o(o)", "➅" }
+        , { "　中　：　｜ə(eq)｜　", "➆" }
+        , { "　半開：ɛ(ei)　œ(ohe)｜ɜ(zi)　ɞ(bf)｜ʌ(li/vk)　ɔ(jf/ck)", "➇" }
+        , { "　次開：æ(ahe)｜ɐ(aq)｜　", "➈" }
+        , { "開　：a(a)　ɶ(ohe;)｜｜ɑ(ai)　ɒ(aq)", "➀🄋" }
+        , { "==============================", "➀➀" }
+        , { "「子音/輔音(肺部氣流音)」：", "➀➁" }
+        , { "塞音：p(p)　b(b)　t(t)　d(d)　ʈ(ti/tc)　ɖ(dc/dt)　c(c)　ɟ(jt)", "➀➂" }
+        , { "　　　k(k)　ɡ(gi)　q(q)　ɢ(gi;)　ʔ(jfy/jy/jfk)", "➀➃" }
+        , { "鼻音：m(m)　ɱ(mj)　n(n)　ɳ(nc)　ɲ(nj)　ŋ(nj)　ɴ(ni;)", "➀➄" }
+        , { "顫音：ʙ(bi;)　r(r)　ʀ(ri;/ihr;)", "➀➅" }
+        , { "閃音：ⱱ(vr)　ɾ(jq/lfk)　ɽ(rc)", "➀➆" }
+        , { "擦音：ɸ(fi)　β(bi)　f(f)　v(v)　θ(qi)　ð(dfx/dx/dt)　s(s)　z(z)", "➀➇" }
+        , { "　　　ʃ(sf)　ʒ(zf)　ʂ(sc)　ʐ(zc)　ç(cj)　ʝ(jg/ig)", "➀➈" }
+        , { "　　　x(x)　ɣ(vo/no/go)　χ(xi)", "➁🄋" }
+        , { "　　　ʁ(rk;)　ħ(ht)　ʕ(cfy/cy/cfk)　h(h)　ɦ(hr)", "➁➀" }
+        , { "邊擦音：ɬ(lk/ik)　ɮ(lzf/lhzf)", "➁➁" }
+        , { "近音：ʋ(vf/yi)　ɹ(rq)　ɻ(rrq/rqc)", "➁➂" }
+        , { "　　　j(j)　ɰ(xf/mqy/mrq/wy/whi/uhu)", "➁➃" }
+        , { "邊近音：l(l)　ɭ(lc)　ʎ(yq)　ʟ(li;)", "➁➄" }
+        , { "==============================", "➁➅" }
+        , { "「子音/輔音(非肺部氣流音)」：", "➁➆" }
+        , { "搭嘴音：ʘ(oma)　ǀ(iw)　ǃ(ifk)　ǂ(itt/ltt/nfq/iwtt/tft)　ǁ(iwiw)", "➁➇" }
+        , { "內爆音：ɓ(br/gq)　ɗ(dr)　ʄ(sft/sftt)　ɠ(gr)　ʛ(gr;)", "➁➈" }
+        , { "擠喉音：ʼ(dw)　pʼ(p)(dw)　tʼ(t)(dw)　kʼ(k)(dw)　sʼ(s)(dw)", "➂🄋" }
+        , { "==============================", "➂➀" }
+        , { "「其他記號」：", "➂➁" }
+        , { "　ʍ(wk)　w(w)　ɥ(hq/ui)　ʜ(hi;)", "➂➂" }
+        , { "　ʢ(cfyt/cyt/cfkt/cftf)　ʡ(jfyt/jyt/jfkt/jftf)", "➂➃" }
+        , { "　ɕ(cg/gfq)　ʑ(zg)　ɻ(rrq/rqc)　ɧ(hrj/hjr/jqg/hrc/hcr)", "➂➄" }
+        , { "　ts͜(t)(s)(du'')　kp͡(k)(p)(m'')", "➂➅" }
+        , { "==============================", "➂➆" }
+        , { "「變音符號」：", "➂➇" }
+        , { "　◌̥(do'') ˳(dow)　◌̬(dv'') ˬ(dvw)　◌ͪ(hh'') ʰ(hh)", "➂➈" }
+        , { "　◌̹(dj'') ˒(djw/jw)　◌̜(dc'') ˓(dcw/cw)　◌̟(dt'') ˖(dtw/tw/dtfh)", "➃🄋" }
+        , { "　◌̠(de'') ˍ(dew) ˗(dew/ew)　◌̈(b'') ¨(bw)　◌̽(x'') ˟(xw) ˣ(xh)", "➃➀" }
+        , { "　◌̩(dp'') ˌ(dpw/yw/dyw)　◌̯(dm'')", "➃➁" }
+        , { "　˞(kw) ɚ(eqk) ɝ(zk/zr) a˞(a)(kw)", "➃➂" }
+        , { "　◌̤(db'')　◌̰(ds'') ˷(dsw)　◌̼(dy'')", "➃➃" }
+        , { "　ʷ(wh)　ʲ(jh)　ˠ(voh/noh/goh)　ˤ(cfyh/cfkh/cyh)", "➃➄" }
+        , { "　◌̪(dr'')　◌̺(drk'')　◌̻(do'')　◌̃(s'') ˜(sw)　ⁿ(nh)　ˡ(lh)", "➃➅" }
+        , { "　◌̚(gk'') ˺(gwk)　◌̴(z'') ~(sw) ɫ(lz/iz) ᵶ(zz)", "➃➆" }
+        , { "　◌̝(dtk'') ˔(dtwk/twk)　◌̞(dt'') ˕(dtw/tw)　◌̘(dtq'')　◌̙(dtq'')", "➃➇" }
+        , { "==============================", "➃➈" }
+        , { "「超音段成分」：", "➄🄋" }
+        , { "　ˈ(pw)　ˌ(dpw/yw/dyw)　ː(dfkdf/dkd/dfdf/dfhdf)　ˑ(dfk/dk/df)", "➄➀" }
+        , { "　◌̆(u'') ˘(uw/ufh)　|(iw)　‖(iwiw)", "➄➁" }
+        , { "　·(aw)　◌͜(du/dufh'') ‿(duw)", "➄➂" }
+        , { "------------------------------", "➄➃" }
+        , { "「聲調重音」：", "➄➄" }
+        , { "　◌̋(pp'') ˝(pwpw)　◌́(p'') ˊ(pw)　◌̄(e'') ˉ(ew)", "➄➅" }
+        , { "　◌̀(n'') ˋ(nw)　◌̏(n'')", "➄➆" }
+        , { "　˥(gwk)　˦(twq)　˧(twq)　˨(twq)　˩(gwq)", "➄➇" }
+        , { "　◌̌(v'') ˇ(vw)　◌̂(l'') ˆ(lw)", "➄➈" }
+        , { "　ꜜ(lwk)　ꜛ(lw)　↗(lwq)　↘(lwq)", "➅🄋" }
+        , { "==============================", "➅➀" }
+        -- , { "", "➅➁" }
+        , { "〔資料來源〕", "https://www.internationalphoneticassociation.org/IPAcharts/IPA_chart_orig/pdfs/IPA_Kiel_2020_full.pdf" }
+        -- 以下中文 Wiki 內容較多，但較雜！
+        -- , { "　閉：i(i) y(y)｜ɨ(it) ʉ(ut)｜ɯ(mq) u(u)", "³" }
+        -- , { "次閉：　ɪ(ii;) ʏ(yi;)　ɨ̞(it)(dt@) ʉ̞(ut)(dt@)　ɯ̞(mq)(dt@) ʊ(wk)", "⁴" }
+        -- , { "半閉：e(e) ø(ox)｜ɘ(ek) ɵ(qi)｜ɤ(vo/yo/oy) o(o)", "⁵" }
+        -- , { "　中：e̞(e)(dt@) ø̞(ox)(dt@)｜ə(eq)｜ɤ̞(vo/yo/oy)(dt@) o̞(o)(dt@)", "⁶" }
+        -- , { "半開：ɛ(ei) œ(ohe)｜ɜ(zi) ɞ(bf)｜ʌ(li/vk) ɔ(jf/ck)", "⁷" }
+        -- , { "次開：æ(ahe)｜ɐ(aq)｜", "⁸" }
+        -- , { "　開：a(a) ɶ(ohe;)｜ä(ab) ɒ̈(aq)(b@)｜ɑ(ai) ɒ(aq)", "⁹" }
+        -- , { "｢肺部氣流音｣：", "¹⁰" }
+        -- , { "鼻音：m̥(m)(do@) m(m) ɱ(mj) n̼(n)(dy@) n̥(n)(do@) n(n) ɳ̊(nc)(o@) ɳ(nc) ɲ̊(nj)(o@) ɲ(nj) ŋ̊(nj)(o@) ŋ(nj) ɴ(ni;)", "¹¹" }
+        -- , { "塞音：p(p) b(b) p̪(p)(dr@) b̪(b)(dr@) t̼(t)(dy@) d̼(d)(dy@) t(t) d(d) ʈ(ti/tc) ɖ(dc/dt) c(c) ɟ(jt) k(k) ɡ(gi) q(q) ɢ(gi;) ʡ(jfyt/jyt/jfkt/jftf) ʔ(jfy/jy/jfk)", "¹²" }
+        -- , { "有噝塞擦音：", "¹³" }
+        -- , { "無噝塞擦音：", "¹⁴" }
+        -- , { "有噝擦音：", "¹⁵" }
+        -- , { "無噝擦音：", "¹⁶" }
+        }
+      for k, v in ipairs(keys_table) do
+        local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
+        cand.preedit = input .. "\t《拉丁 IPA國際音標 鍵位》"
+        yield(cand)
+      end
+      return
+    end
+
+    if (input == env.prefix .. "kp") then
+      local keys_table = {
+          { "　[…] 內為音標字符　(…) 內為編碼", "⓿" }
+        , { "　　 KK  ┊  DJ  ┊  IPA  ‖  單字示例", "❶" }
+        , { "　==============================", "❷" }
+        , { "　「單元音/單母音」：", "❸" }
+        , { "　　[i] (i) ┊ [iː] (i)(dfkdf/dkd/dfdf/dfhdf) ┊ [iː] ‖ seat", "❹" }
+        , { "　　[ɪ] (ii;) ┊ [ɪ] ┊ [ɪ] ‖ sit", "❺" }
+        , { "　　[e] (e) ┊ [eɪ] (e)(ii;) ┊ [eɪ] ‖ pain", "❻" }
+        , { "　　[ɛ] (ei) ┊ [e] (e) ┊ [e] ‖ head ", "❼" }
+        , { "　　[æ] (ahe) ┊ [æ] ┊ [æ] ‖ fat", "❽" }
+        , { "　　[ɑ] (ai) ┊ [ɑː] (ai)(dfkdf/dkd/dfdf/dfhdf) ┊ [ɑ] ‖ hot", "❾" }
+        , { "　[o] (o) ┊ [əʊ] (eq)(wk) ┊ [əʊ] ‖ nose", "❶⓿" }
+        , { "　[ɔ] (jf/ck) ┊ [ɔː] (jf/ck)(dfkdf/dkd/dfdf/dfhdf) ┊ [ɔː] ‖ four", "❶❶" }
+        , { "　[ɔ] (jf/ck) ┊ [ɔ] ┊ [ɒ] (aq) ‖ dog", "❶❷" }
+        , { "　[u] (u) ┊ [uː] (u)(dfkdf/dkd/dfdf/dfhdf) ┊ [uː] ‖ too", "❶❸" }
+        , { "　[ᴜ] (ui;) ┊ [ʊ] (wk) ┊ [ʊ] ‖ put", "❶❹" }
+        , { "　[ʌ] (li/vk) ┊ [ʌ] ┊ [ʌ] ‖ sun", "❶❺" }
+        , { "　[ə] (eq) ┊ [ə] ┊ [ə] ‖ again", "❶❻" }
+        , { "　[ɪr] (ii;)(r) ┊ [ɪə] (ii;)(eq) ┊ [ɪə] ‖ rear", "❶❼" }
+        , { "　[ɚ] (eqk) ┊ [ə] (eq) ┊ [ə˞] (eq)(kw) ‖ brother", "❶❽" }
+        , { "　[ɝ] (zk/zr) ┊ [ɜ] (zi) ┊ [ɜ˞] (zi)(kw) ‖ bird ", "❶❾" }
+        , { "------------------------------", "❷⓿" }
+        , { "「雙元音/雙母音」：", "❷❶" }
+        , { "　[aɪ] (a)(ii;) ┊ [aɪ] ┊ [aɪ] ‖ pie", "❷❷" }
+        , { "　[aᴜ] (a)(ui;) ┊ [aʊ] (a)(wk) ┊ [aʊ] ‖ house", "❷❸" }
+        , { "　[ɔɪ] (jf/ck)(ii;) ┊ [ɔɪ] ┊ [ɔɪ] ‖ coin", "❷❹" }
+        , { "==============================", "❷❺" }
+        , { "「子音/輔音(清音)」：", "❷❻" }
+        , { "　[p] (p) ┊ [p] ┊ [p] ‖ pet", "❷❼" }
+        , { "　[t] (t) ┊ [t] ┊ [t] ‖ ten", "❷❽" }
+        , { "　[k] (k) ┊ [k] ┊ [k] ‖ key ", "❷❾" }
+        , { "　[f] (f) ┊ [f] ┊ [f] ‖ fat ", "❸⓿" }
+        , { "　[s] (s) ┊ [s] ┊ [s] ‖ sing", "❸❶" }
+        , { "　[θ] (qi) ┊ [θ] ┊ [θ] ‖ thank", "❸❷" }
+        , { "　[ʃ] (sf) ┊ [ʃ] ┊ [ʃ] ‖ short", "❸❸" }
+        , { "　[tʃ] (t)(sf) ┊ [tʃ] ┊ [tʃ] ‖ chair", "❸❹" }
+        , { "　[h] (h) ┊ [h] ┊ [h] ‖ ha", "❸❺" }
+        , { "------------------------------", "❸❻" }
+        , { "「子音/輔音(濁音)」：", "❸❼" }
+        , { "　[b] (b) ┊ [b] ┊ [b] ‖ book", "❸❽" }
+        , { "　[d] (d) ┊ [d] ┊ [d] ‖ desk", "❸❾" }
+        , { "　[g] (g) ┊ [g] ┊ [ɡ] (gi) ‖ get", "❹⓿" }
+        , { "　[v] (v) ┊ [v] ┊ [v] ‖ vest", "❹❶" }
+        , { "　[z] (z) ┊ [z] ┊ [z] ‖ zoo", "❹❷" }
+        , { "　[ð] (dfx/dx/dt) ┊ [ð] ┊ [ð] ‖ this", "❹❸" }
+        , { "　[ʒ] (zf) ┊ [ʒ] ┊ [ʒ] ‖ measure", "❹❹" }
+        , { "　[dʒ] (d)(zf) ┊ [dʒ] ┊ [dʒ] ‖ john", "❹❺" }
+        , { "　[m] (m) ┊ [m] ┊ [m] ‖ mom", "❹❻" }
+        , { "　[n] (n) ┊ [n] ┊ [n] ‖ nose", "❹❼" }
+        , { "　[ŋ] (nj) ┊ [ŋ] ┊ [ŋ] ‖ sing", "❹❽" }
+        , { "　[l] (l) ┊ [l] ┊ [l] ‖ long", "❹❾" }
+        , { "　[r] (r) ┊ [r] ┊ [r] ‖ red", "❺⓿" }
+        , { "　[j] (j) ┊ [j] ┊ [j] ‖ yes", "❺❶" }
+        , { "　[w] (w) ┊ [w] ┊ [w] ‖ we", "❺❷" }
+        , { "==============================", "❺❸" }
+        -- , { "", "❺❹" }
+        , { "〔資料來源〕", "https://zh.wikipedia.org/wiki/KK%E9%9F%B3%E6%A8%99" }
+        }
+      for k, v in ipairs(keys_table) do
+        local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
+        cand.preedit = input .. "\t《拉丁 KK/DJ/IPA音標 鍵位》"
         yield(cand)
       end
       return
