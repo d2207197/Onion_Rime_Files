@@ -118,6 +118,7 @@ local function translate(input, seg, env)
     for k, v in ipairs(env.table_sd_2) do
       local cand = Candidate("help", seg.start, seg._end, v[2], " " .. v[1])
       -- cand.preedit = input .. "\t※ 輸入【項目】每字第一個注音，調出相關符號。"
+      cand.preedit = input .. "\t《EMOJI集》▶"
       yield(cand)
     end
   end
