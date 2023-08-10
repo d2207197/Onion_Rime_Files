@@ -343,7 +343,7 @@ local function translate(input, seg, env)
         }
       for k, v in ipairs(keys_table) do
         local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《各種說明》▶"
+        cand.preedit = input .. "\t《各種鍵位說明》▶"
         yield(cand)
       end
       return
