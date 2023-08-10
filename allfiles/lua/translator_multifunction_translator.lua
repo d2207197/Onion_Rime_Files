@@ -133,6 +133,11 @@ local url_decode = require("f_components/f_url_decode")
 local simple_calculator = require("f_components/f_simple_calculator")
 
 ----------------------------------------------------------------------------------------
+--- 按鍵說明
+
+local hotkeys = require("f_components/f_hot_keys")
+
+----------------------------------------------------------------------------------------
 --- 置入方案範例
 --[[
 engine:
@@ -149,6 +154,7 @@ local function init(env)
   config = schema.config
   -- namespace = "mf_translator"
   env.prefix = config:get_string(env.name_space .. "/prefix")
+  env.name_id = config:get_string("schema/schema_id")
   env.menu_table = {
         -- { "〔半角〕", "`" }
         { "  f〔年月日〕  ym〔年月〕  md〔月日〕", "⓪" }
@@ -174,17 +180,17 @@ local function init(env)
       , { "  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑰" }
       , { "  c [0-9]+〔內碼十進制 Dec〕", "⑱" }
       , { "  o [0-7]+〔內碼八進制 Oct〕", "⑲" }
-      , { "  kj〔日文 羅馬字 鍵位〕", "⑳" }
-      , { "  kh〔韓文 HNC 鍵位〕", "㉑" }
-      , { "  ks〔韓文 洋蔥形碼 鍵位〕", "㉒" }
-      , { "  ki〔拉丁 IPA國際音標 鍵位〕", "㉓" }
-      , { "  kp〔拉丁 KK/DJ/IPA音標 鍵位〕", "㉔" }
-      , { "  v〔版本資訊〕", "㉕" }
-      , { "  g〔Lua 所佔記憶體〕(Garbage)", "㉖" }
-      , { "  gc〔垃圾回收〕(Garbage Collection)", "㉗" }
-      , { "═══  結束  ═══  ", "㉘" }
-      -- , { "===========  結束  ===========    ", "㉘" }
-      , { "", "㉙" }
+      , { "  h〔按鍵說明〕", "⑳" }
+      , { "  kj〔日文 羅馬字 鍵位〕", "㉑" }
+      , { "  kh〔韓文 HNC 鍵位〕", "㉒" }
+      , { "  ks〔韓文 洋蔥形碼 鍵位〕", "㉓" }
+      , { "  ki〔拉丁 IPA國際音標 鍵位〕", "㉔" }
+      , { "  kp〔拉丁 KK/DJ/IPA音標 鍵位〕", "㉕" }
+      , { "  v〔版本資訊〕", "㉖" }
+      , { "  g〔Lua 所佔記憶體〕(Garbage)", "㉗" }
+      , { "  gc〔垃圾回收〕(Garbage Collection)", "㉘" }
+      , { "═══  結束  ═══  ", "㉙" }
+      -- , { "===========  結束  ===========    ", "㉙" }
       , { "", "㉚" }
       , { "", "㉛" }
       , { "", "㉜" }
@@ -316,6 +322,17 @@ local function translate(input, seg, env)
       local cand2 = Candidate("tips", seg.start, seg._end, "", "  [0-9a-f]+〔Percent/URL encoding〕")
       cand2.preedit = input .. "\t《Percent/URL encoding》▶"
       yield(cand2)
+      return
+    end
+
+
+    if (input == env.prefix .. "h") then
+      local hot_keys = hotkeys(env.name_id)
+      for k, v in ipairs(hot_keys) do
+        local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
+        cand.preedit = input .. "\t《按鍵說明》"
+        yield(cand)
+      end
       return
     end
 
