@@ -154,7 +154,7 @@ local function init(env)
   config = schema.config
   -- namespace = "mf_translator"
   env.prefix = config:get_string(env.name_space .. "/prefix")
-  env.name_id = config:get_string("schema/schema_id")
+  env.schema_id = config:get_string("schema/schema_id")
   env.menu_table = {
         -- { "〔半角〕", "`" }
         { "  f〔年月日〕  ym〔年月〕  md〔月日〕", "⓪" }
@@ -350,8 +350,9 @@ local function translate(input, seg, env)
     end
 
     if (input == env.prefix .. "kk") then
-      local hot_keys = hotkeys(env.name_id)
-      for k, v in ipairs(hot_keys) do
+      -- local keys_table = hotkeys(env.schema_id)
+      -- for k, v in ipairs(keys_table) do
+      for k, v in ipairs(hotkeys(env.schema_id)) do
         local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
         cand.preedit = input .. "\t《按/熱鍵 說明》"
         yield(cand)
