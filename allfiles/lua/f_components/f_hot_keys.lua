@@ -3,7 +3,7 @@
 --]]
 
 local bo_mixin_plus_table = {
-    { "　【注音 mixin 和 plus 系列】", "🄋" }
+    { "【注音 mixin 和 plus 系列】", "🄋" }
   , { "　＊中/英", "➀" }
   , { "　　［shift］+［space］變換中英（未打字時）", "➁" }
   , { "　　［control］+［shift］+［2］變換中英", "➂" }
@@ -107,23 +107,23 @@ local bo_mixin_plus_table = {
   }
 
 local bo_double_table = {
-    { "　【雙拼注音】", "🄋" }
-  , { "待補", "➀" }
+    { "【雙拼注音】", "🄋" }
+  , { "　待補", "➀" }
   }
 
 local array30_table = {
-    { "　【行列３０（洋蔥版）】", "🄋" }
-  , { "待補", "➀" }
+    { "【行列３０（洋蔥版）】", "🄋" }
+  , { "　待補", "➀" }
   }
 
 local ocm_table = {
-    { "　【形碼方案】", "🄋" }
-  , { "待補", "➀" }
+    { "【形碼方案】", "🄋" }
+  , { "　待補", "➀" }
   }
 
 local unknown_table = {
-    { "　【不明方案】", "🄋" }
-  , { "待補", "➀" }
+    { "【不明方案】", "🄋" }
+  , { "　待補", "➀" }
   }
 
 local function hotkeys(name_id)

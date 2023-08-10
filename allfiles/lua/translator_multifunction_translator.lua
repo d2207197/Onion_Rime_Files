@@ -180,12 +180,12 @@ local function init(env)
       , { "  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑰" }
       , { "  c [0-9]+〔內碼十進制 Dec〕", "⑱" }
       , { "  o [0-7]+〔內碼八進制 Oct〕", "⑲" }
-      , { "  h〔按鍵說明〕", "⑳" }
-      , { "  kj〔日文 羅馬字 鍵位〕", "㉑" }
-      , { "  kh〔韓文 HNC 鍵位〕", "㉒" }
-      , { "  ks〔韓文 洋蔥形碼 鍵位〕", "㉓" }
-      , { "  ki〔拉丁 IPA國際音標 鍵位〕", "㉔" }
-      , { "  kp〔拉丁 KK/DJ/IPA音標 鍵位〕", "㉕" }
+      , { "  kk〔按/熱鍵 說明〕", "⑳" }
+      , { "  kj〔日文 羅馬字 說明〕", "㉑" }
+      , { "  kh〔韓文 HNC 說明〕", "㉒" }
+      , { "  ks〔韓文 洋蔥形碼 說明〕", "㉓" }
+      , { "  ki〔拉丁 IPA國際音標 說明〕", "㉔" }
+      , { "  kp〔拉丁 KK/DJ/IPA音標 說明〕", "㉕" }
       , { "  v〔版本資訊〕", "㉖" }
       , { "  g〔Lua 所佔記憶體〕(Garbage)", "㉗" }
       , { "  gc〔垃圾回收〕(Garbage Collection)", "㉘" }
@@ -326,35 +326,34 @@ local function translate(input, seg, env)
     end
 
 
-    if (input == env.prefix .. "h") then
-      local hot_keys = hotkeys(env.name_id)
-      for k, v in ipairs(hot_keys) do
-        local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《按鍵說明》"
-        yield(cand)
-      end
-      return
-    end
-
-
-    -- 多國語言鍵位說明
+    -- 各種鍵位說明
     if (input == env.prefix .. "k") then
       local keys_table = {
-          { "  ~j 〔日文 羅馬字 鍵位〕", "⓵" }
-        , { "  ~h 〔韓文 HNC 鍵位〕", "⓶" }
-        , { "  ~s 〔韓文 洋蔥形碼 鍵位〕", "⓷" }
-        , { "  ~i 〔拉丁 IPA國際音標 鍵位〕", "⓸" }
-        , { "  ~p 〔拉丁 KK/DJ/IPA音標 鍵位〕", "⓹" }
-        , { "═══  結束  ═══  ", "⓺" }
-        -- , { "===========  結束  ===========    ", "⓺" }
-        , { "", "⓻" }
+          { "  ~k 〔按/熱鍵 說明〕", "⓵" }
+        , { "  ~j 〔日文 羅馬字 說明〕", "⓶" }
+        , { "  ~h 〔韓文 HNC 說明〕", "⓷" }
+        , { "  ~s 〔韓文 洋蔥形碼 說明〕", "⓸" }
+        , { "  ~i 〔拉丁 IPA國際音標 說明〕", "⓹" }
+        , { "  ~p 〔拉丁 KK/DJ/IPA音標 說明〕", "⓺" }
+        , { "═══  結束  ═══  ", "⓻" }
+        -- , { "===========  結束  ===========    ", "⓻" }
         , { "", "⓼" }
         , { "", "⓽" }
         , { "", "⓾" }
         }
       for k, v in ipairs(keys_table) do
         local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《各種鍵位說明》▶"
+        cand.preedit = input .. "\t《各種說明》▶"
+        yield(cand)
+      end
+      return
+    end
+
+    if (input == env.prefix .. "kk") then
+      local hot_keys = hotkeys(env.name_id)
+      for k, v in ipairs(hot_keys) do
+        local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
+        cand.preedit = input .. "\t《按/熱鍵 說明》"
         yield(cand)
       end
       return
@@ -401,7 +400,7 @@ local function translate(input, seg, env)
         }
       for k, v in ipairs(keys_table) do
         local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《韓文 HNC 鍵位》"
+        cand.preedit = input .. "\t《韓文 HNC 說明》"
         yield(cand)
       end
       return
@@ -424,7 +423,7 @@ local function translate(input, seg, env)
         }
       for k, v in ipairs(keys_table) do
         local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《韓文 洋蔥形碼 鍵位》"
+        cand.preedit = input .. "\t《韓文 洋蔥形碼 說明》"
         yield(cand)
       end
       return
@@ -514,7 +513,7 @@ local function translate(input, seg, env)
         }
       for k, v in ipairs(keys_table) do
         local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《日文 羅馬字 鍵位》"
+        cand.preedit = input .. "\t《日文 羅馬字 說明》"
         yield(cand)
       end
       return
@@ -613,7 +612,7 @@ local function translate(input, seg, env)
         }
       for k, v in ipairs(keys_table) do
         local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《拉丁 IPA國際音標 鍵位》"
+        cand.preedit = input .. "\t《拉丁 IPA國際音標 說明》"
         yield(cand)
       end
       return
@@ -693,7 +692,7 @@ local function translate(input, seg, env)
         }
       for k, v in ipairs(keys_table) do
         local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《拉丁 KK/DJ/IPA音標 鍵位》"
+        cand.preedit = input .. "\t《拉丁 KK/DJ/IPA音標 說明》"
         yield(cand)
       end
       return
