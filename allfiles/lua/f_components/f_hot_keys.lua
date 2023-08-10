@@ -107,12 +107,12 @@ local bo_mixin_plus_table = {
   }
 
 local bo_double_table = {
-    { "【雙拼注音】", "🄋" }
+    { "【注音雙拼】", "🄋" }
   , { "　待補", "➀" }
   }
 
 local array30_table = {
-    { "【行列３０（洋蔥版）】", "🄋" }
+    { "【行列３０】", "🄋" }
   , { "　待補", "➀" }
   }
 
