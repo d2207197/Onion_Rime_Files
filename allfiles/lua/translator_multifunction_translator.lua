@@ -180,18 +180,18 @@ local function init(env)
       , { "  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑰" }
       , { "  c [0-9]+〔內碼十進制 Dec〕", "⑱" }
       , { "  o [0-7]+〔內碼八進制 Oct〕", "⑲" }
-      , { "  kk〔按/熱鍵 說明〕", "⑳" }
-      , { "  kj〔日文 羅馬字 說明〕", "㉑" }
+      , { "  kk〔快捷鍵 說明〕", "⑳" }
+      , { "  ko〔操作鍵 說明〕", "㉑" }
       , { "  kh〔韓文 HNC 說明〕", "㉒" }
       , { "  ks〔韓文 洋蔥形碼 說明〕", "㉓" }
-      , { "  ki〔拉丁 IPA國際音標 說明〕", "㉔" }
-      , { "  kp〔拉丁 KK/DJ/IPA音標 說明〕", "㉕" }
-      , { "  v〔版本資訊〕", "㉖" }
-      , { "  g〔Lua 所佔記憶體〕(Garbage)", "㉗" }
-      , { "  gc〔垃圾回收〕(Garbage Collection)", "㉘" }
-      , { "═══  結束  ═══  ", "㉙" }
-      -- , { "===========  結束  ===========    ", "㉙" }
-      , { "", "㉚" }
+      , { "  kj〔日文 羅馬字 說明〕", "㉔" }
+      , { "  ki〔拉丁 IPA國際音標 說明〕", "㉕" }
+      , { "  kp〔拉丁 KK/DJ/IPA音標 說明〕", "㉖" }
+      , { "  v〔版本資訊〕", "㉗" }
+      , { "  g〔Lua 所佔記憶體〕(Garbage)", "㉘" }
+      , { "  gc〔垃圾回收〕(Garbage Collection)", "㉙" }
+      , { "═══  結束  ═══  ", "㉚" }
+      -- , { "===========  結束  ===========    ", "㉚" }
       , { "", "㉛" }
       , { "", "㉜" }
       , { "", "㉝" }
@@ -329,15 +329,15 @@ local function translate(input, seg, env)
     -- 各種鍵位說明
     if (input == env.prefix .. "k") then
       local keys_table = {
-          { "  ~k 〔按/熱鍵 說明〕", "⓵" }
-        , { "  ~j 〔日文 羅馬字 說明〕", "⓶" }
+          { "  ~k 〔快捷鍵 說明〕", "⓵" }
+        , { "  ~o 〔操作鍵 說明〕", "⓶" }
         , { "  ~h 〔韓文 HNC 說明〕", "⓷" }
         , { "  ~s 〔韓文 洋蔥形碼 說明〕", "⓸" }
-        , { "  ~i 〔拉丁 IPA國際音標 說明〕", "⓹" }
-        , { "  ~p 〔拉丁 KK/DJ/IPA音標 說明〕", "⓺" }
-        , { "═══  結束  ═══  ", "⓻" }
-        -- , { "===========  結束  ===========    ", "⓻" }
-        , { "", "⓼" }
+        , { "  ~j 〔日文 羅馬字 說明〕", "⓹" }
+        , { "  ~i 〔拉丁 IPA國際音標 說明〕", "⓺" }
+        , { "  ~p 〔拉丁 KK/DJ/IPA音標 說明〕", "⓻" }
+        , { "═══  結束  ═══  ", "⓼" }
+        -- , { "===========  結束  ===========    ", "⓼" }
         , { "", "⓽" }
         , { "", "⓾" }
         }
@@ -349,12 +349,23 @@ local function translate(input, seg, env)
       return
     end
 
-    if (input == env.prefix .. "kk") then
-      -- local keys_table = hotkeys(env.schema_id)
+    if (input == env.prefix .. "ko") then
+      -- local keys_table = hotkeys(env.schema_id)[1]
       -- for k, v in ipairs(keys_table) do
-      for k, v in ipairs(hotkeys(env.schema_id)) do
+      for k, v in ipairs(hotkeys(env.schema_id)[1]) do
         local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《按/熱鍵 說明》"
+        cand.preedit = input .. "\t《操作鍵 說明》"
+        yield(cand)
+      end
+      return
+    end
+
+    if (input == env.prefix .. "kk") then
+      -- local keys_table = hotkeys(env.schema_id)[2]
+      -- for k, v in ipairs(keys_table) do
+      for k, v in ipairs(hotkeys(env.schema_id)[2]) do
+        local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
+        cand.preedit = input .. "\t《快捷鍵 說明》"
         yield(cand)
       end
       return
