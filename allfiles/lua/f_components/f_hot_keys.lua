@@ -20,29 +20,29 @@ local function hotkeys(n)
       , { "　　［control］+［shift］+［ ，］切換中文", "➄" }
       , { "　『 打字輸入 』", "➅" }
       , { "　 • 上屏", "➆" }
-      , { "　　［return/Enter］上屏中文（有選項時）", "➇" }
-      , { "　　［space］上屏中文（末尾為聲調時）", "➈" }
+      , { "　　［Enter］上屏中文（有選項時）", "➇" }
+      , { "　　［space］上屏中文（末尾為聲調或選字時）", "➈" }
       , { " • 特殊上屏", "➀🄋" }
-      , { "　［shift］+［return/Enter］輸出所對應的英文、數字、符號", "➀➀" }
-      , { "　［control］+［return/Enter］輸出顯示編碼，如注音符號", "➀➁" }
-      , { "　［control］+［shift］+［return/Enter］輸出選項注釋", "➀➂" }
+      , { "　［shift］+［Enter］輸出所對應的英文、數字、符號", "➀➀" }
+      , { "　［control］+［Enter］輸出顯示編碼，如注音符號", "➀➁" }
+      , { "　［control］+［shift］+［Enter］輸出選項注釋", "➀➂" }
       , { " • 刪除", "➀➃" }
       , { "　［esc］消除未上屏注音（清空）", "➀➄" }
-      , { "　［delete/BackSpace］刪除單個字全部注音", "➀➅" }
-      , { "　［shift］+［delete/BackSpace］刪除一個注音符號", "➀➆" }
+      , { "　［BackSpace］刪除單個字全部注音", "➀➅" }
+      , { "　［shift］+［BackSpace］刪除一個注音符號", "➀➆" }
       , { "　［ \\ ］刪除一個注音符號（選單出現時）", "➀➇" }
       , { " • 游標移位", "➀➈" }
-      , { "　［right/left］游標向左右一整個字（打字時）", "➁🄋" }
-      , { "　［shift］+［right/left］游標向左右一個注音", "➁➀" }
+      , { "　［right / left］游標向左右一整個字（打字時）", "➁🄋" }
+      , { "　［shift］+［right / left］游標向左右一個注音", "➁➀" }
       , { "　［up］游標向左一個注音（打字時）", "➁➁" }
       , { "　［tab］和［shift］+［tab］首節（下一節）和上一節", "➁➂" }
       , { "　（↑ 首個中文字，好用可善用！）", "➁➃" }
       , { "　［tab］跳回游標切分狀態（選字時）", "➁➄" }
       , { " • 翻頁", "➁➅" }
-      , { "　［right/left］選字單翻頁（選字時）", "➁➆" }
-      , { "　［shift］+［up/down］選字單翻頁", "➁➇" }
-      , { "　［shift］+［C］和［shift］+［space］選字單翻頁（輸入時）", "➁➈" }
-      , { "　［shift］+［I］和［shift］+［K］選字單翻頁（輸入時）", "➂🄋" }
+      , { "　［right / left］選字單翻頁（選字時）", "➁➆" }
+      , { "　［shift］+［up / down］選字單翻頁", "➁➇" }
+      , { "　［shift］+［C / space］選字單翻頁（輸入時）", "➁➈" }
+      , { "　［shift］+［I / K］選字單翻頁（輸入時）", "➂🄋" }
       , { " • 選字", "➂➀" }
       , { "　［shift］+［QAZWSX］選字（左邊）", "➂➁" }
       , { "　［shift］+［YHNUJM］選字（右邊）", "➂➂" }
@@ -50,10 +50,13 @@ local function hotkeys(n)
       , { " • 刪除自動記憶", "➂➄" }
       , { "　［fn］+［shift］+［BackSpace］選詞時，刪除自動記錄詞", "➂➅" }
       , { "　（↑ Mac）", "➂➆" }
-      , { "　［shift/control］+［BackSpace］選詞時，刪除自動記錄詞", "➂➇" }
+      , { "　［shift / control］+［BackSpace］選詞時，刪除自動記錄詞", "➂➇" }
       , { "　（↑ Win）", "➂➈" }
       , { "　［shift］+［Delete］Mac 外接鍵盤沒 fn 鍵，刪除自動記錄詞", "➃🄋" }
-      , { "　（↑ 注意該 Delete 非 BackSpace）", "➃➀" }
+      , { "　（↑ 該 Delete 非 BackSpace）", "➃➀" }
+      , { "　────────────  ", "➃➁" }
+      , { "　※ 以上［Enter］於 Mac 名稱為［return］", "➃➂" }
+      , { "　※ 以上［BackSpace］於 Mac 名稱為［delete］", "➃➃" }
       }
 
     k2_table = {
@@ -128,39 +131,42 @@ local function hotkeys(n)
       , { "　『 打字輸入 』", "➅" }
       , { "　 • 上屏", "➆" }
       , { "　　［space］上屏中文（有選項時）", "➇" }
-      , { "　　［return/Enter］上屏中文（有選項時）", "➈" }
+      , { "　　［Enter］上屏中文（有選項時）", "➈" }
       , { " • 特殊上屏", "➀🄋" }
-      , { "　［shift］+［return/Enter］輸出所對應的英文、數字、符號", "➀➀" }
-      , { "　［control］+［return/Enter］輸出顯示編碼，如：ji/（ㄐㄧˊ）", "➀➁" }
-      , { "　［control］+［shift］+［return/Enter］輸出選項注釋", "➀➂" }
+      , { "　［shift］+［Enter］輸出所對應的英文、數字、符號", "➀➀" }
+      , { "　［control］+［Enter］輸出顯示編碼，如：ji/（ㄐㄧˊ）", "➀➁" }
+      , { "　［control］+［shift］+［Enter］輸出選項注釋", "➀➂" }
       , { " • 刪除", "➀➃" }
       , { "　［esc］消除未上屏注音（清空）", "➀➄" }
       , { "　［space］消除未上屏輸入（清空）（空碼時）", "➀➅" }
-      , { "　［delete/BackSpace］刪除一個注音符號", "➀➆" }
-      , { "　［shift］+［delete/BackSpace］刪除單個字全部注音", "➀➇" }
+      , { "　［BackSpace］刪除一個注音符號", "➀➆" }
+      , { "　［shift］+［BackSpace］刪除單個字全部注音", "➀➇" }
       , { " • 分節", "➀➈" }
       , { "　［ \\ ］分節（選單出現時）", "➁🄋" }
       , { " • 游標移位", "➁➀" }
-      , { "　［right/left］游標向左右一個注音", "➁➁" }
-      , { "　［shift］+［right/left］游標向左右一整個字（打字時）", "➁➂" }
+      , { "　［right / left］游標向左右一個注音", "➁➁" }
+      , { "　［shift］+［right / left］游標向左右一整個字（打字時）", "➁➂" }
       , { "　［up］游標向左一整個字（打字時）", "➁➃" }
       , { "　［tab］和［shift］+［tab］首節（下一節）和上一節", "➁➄" }
       , { "　（↑ 首個中文字，好用可善用！）", "➁➅" }
       , { "　［tab］跳回游標切分狀態（選字時）", "➁➆" }
       , { " • 翻頁", "➁➇" }
-      , { "　［right/left］選字單翻頁（選字時）", "➁➈" }
-      , { "　［shift］+［up/down］選字單翻頁", "➂🄋" }
-      , { "　［shift］+［space］和［shift］+［tab］選字單翻頁（輸入時）", "➂➀" }
+      , { "　［right / left］選字單翻頁（選字時）", "➁➈" }
+      , { "　［shift］+［up / down］選字單翻頁", "➂🄋" }
+      , { "　［shift］+［tab / space］選字單翻頁（輸入時）", "➂➀" }
       , { " • 選字", "➂➁" }
       , { "　［123456］選字", "➂➂" }
       , { "　［control］+［123456］選字！（Mac會鍵位衝突！）", "➂➃" }
       , { " • 刪除自動記憶", "➂➄" }
       , { "　［fn］+［shift］+［BackSpace］選詞時，刪除自動記錄詞", "➂➅" }
       , { "　（↑ Mac）", "➂➆" }
-      , { "　［shift/control］+［BackSpace］選詞時，刪除自動記錄詞", "➂➇" }
+      , { "　［shift / control］+［BackSpace］選詞時，刪除自動記錄詞", "➂➇" }
       , { "　（↑ Win）", "➂➈" }
       , { "　［shift］+［Delete］Mac 外接鍵盤沒 fn 鍵，刪除自動記錄詞", "➃🄋" }
-      , { "　（↑ 注意該 Delete 非 BackSpace）", "➃➀" }
+      , { "　（↑ 該 Delete 非 BackSpace）", "➃➀" }
+      , { "　────────────  ", "➃➁" }
+      , { "　※ 以上［Enter］於 Mac 名稱為［return］", "➃➂" }
+      , { "　※ 以上［BackSpace］於 Mac 名稱為［delete］", "➃➃" }
       }
 
     k2_table = {
@@ -207,21 +213,23 @@ local function hotkeys(n)
       , { "　 • 上屏", "➆" }
       , { "　　［space］上屏中文（有選項時）", "➇" }
       , { "　 • 特殊上屏", "➈" }
-      , { "　［shift］+［return/Enter］輸出所對應的英文、數字、符號", "➀🄋" }
-      , { "　［control］+［return/Enter］輸出顯示編碼，如：「7⇣4-9-」", "➀➀" }
-      , { "　［control］+［shift］+［return/Enter］輸出選項注釋", "➀➁" }
+      , { "　［shift］+［Enter］輸出所對應的英文、數字、符號", "➀🄋" }
+      , { "　［control］+［Enter］輸出顯示編碼，如：「7⇣4-9-」", "➀➀" }
+      , { "　［control］+［shift］+［Enter］輸出選項注釋", "➀➁" }
       , { " • 刪除", "➀➂" }
       , { "　［esc］消除未上屏輸入（清空）", "➀➃" }
       , { "　［space］消除未上屏輸入（清空）（空碼時）", "➀➄" }
-      , { "　［delete/BackSpace］刪除一個輸入碼", "➀➅" }
+      , { "　［BackSpace］刪除一個輸入碼", "➀➅" }
       , { " • 翻頁", "➀➆" }
-      , { "　［right/left］選字單翻頁（選字時）", "➀➇" }
-      , { "　［shift］+［up/down］選字單翻頁", "➀➈" }
-      , { "　［shift］+［space］和［shift］+［tab］選字單翻頁（輸入時）", "➁🄋" }
+      , { "　［right / left］選字單翻頁（選字時）", "➀➇" }
+      , { "　［shift］+［up / down］選字單翻頁", "➀➈" }
+      , { "　［shift］+［tab / space］選字單翻頁（輸入時）", "➁🄋" }
       , { " • 選字", "➁➀" }
       , { "　［1234567890］選字", "➁➁" }
       , { "　［control］+［1234567890］選字！（Mac會鍵位衝突！）", "➁➂" }
-      -- , { "", "➁➃" }
+      , { "　────────────  ", "➁➃" }
+      , { "　※ 以上［Enter］於 Mac 名稱為［return］", "➁➄" }
+      , { "　※ 以上［BackSpace］於 Mac 名稱為［delete］", "➁➅" }
       }
 
     k2_table = {
@@ -240,7 +248,7 @@ local function hotkeys(n)
       , { "　［control］+［shift］+［7］變換編碼標注有無", "➊➋" }
       , { "　［control］+［shift］+［8］變換上屏簡碼(多個)為直上或香草", "➊➌" }
       , { "　［control］+［shift］+［9］變換 w 符號 space 為翻頁或上屏", "➊➍" }
-      , { "　［control］+［shift］+［0］變換 return/Enter 是否上屏中文", "➊➎" }
+      , { "　［control］+［shift］+［0］變換 Enter 是否上屏中文", "➊➎" }
       , { "　（↑ Win 會鍵位衝突！）", "➊➏" }
       , { "『 快捷鍵（下排/指定）』", "➊➐" }
       , { "　［control］+［ ，］切換英文", "➊➑" }
@@ -267,15 +275,15 @@ local function hotkeys(n)
       , { "　［control］+［ - ］切換 w 符號 space 為翻頁", "➌➒" }
       , { "　［control］+［shift］+［ - ］切換 w 符號 space 為上屏", "➍🄌" }
       , { "　　--", "➍➊" }
-      , { "　［control］+［ = ］切換 return/Enter 上屏中文", "➍➋" }
-      , { "　［control］+［shift］+［ = ］切換 return/Enter 上屏原始輸入碼", "➍➌" }
+      , { "　［control］+［ = ］切換 Enter 上屏中文", "➍➋" }
+      , { "　［control］+［shift］+［ = ］切換 Enter 上屏原始輸入碼", "➍➌" }
       , { "　────────────  ", "➍➍" }
       , { "　※ 以上某些鍵位須用內附的 default.custom.yaml 檔", "➍➎" }
       }
-      -- , { "　［shift］+［delete/BackSpace］刪除一個輸入碼", "➀➀" }
+      -- , { "　［shift］+［BackSpace］刪除一個輸入碼", "➀➀" }
       -- , { " • 游標移位", "➀➅" }
-      -- , { "　［right/left］游標向左右一個編碼", "➀➆" }
-      -- , { "　［shift］+［right/left］游標向左右一整個字（打字時）", "➀➇" }
+      -- , { "　［right / left］游標向左右一個編碼", "➀➆" }
+      -- , { "　［shift］+［right / left］游標向左右一整個字（打字時）", "➀➇" }
       -- , { "　（↑ 不上屏中文，則上屏原始輸入碼）", "➅➅" }
 
   elseif s_5 or s_6 then
@@ -289,38 +297,41 @@ local function hotkeys(n)
       , { "　『 打字輸入 』", "➅" }
       , { "　 • 上屏", "➆" }
       , { "　　［space］上屏中文（有選項時）", "➇" }
-      , { "　　［return/Enter］上屏中文（有選項時）", "➈" }
+      , { "　　［Enter］上屏中文（有選項時）", "➈" }
       , { " • 特殊上屏", "➀🄋" }
-      , { "　［shift］+［return/Enter］輸出所對應的英文、數字、符號", "➀➀" }
-      , { "　［control］+［return/Enter］輸出顯示編碼，如：DJ", "➀➁" }
-      , { "　［control］+［shift］+［return/Enter］輸出選項注釋", "➀➂" }
+      , { "　［shift］+［Enter］輸出所對應的英文、數字、符號", "➀➀" }
+      , { "　［control］+［Enter］輸出顯示編碼，如：DJ", "➀➁" }
+      , { "　［control］+［shift］+［Enter］輸出選項注釋", "➀➂" }
       , { " • 刪除", "➀➃" }
       , { "　［esc］消除未上屏注音（清空）", "➀➄" }
-      , { "　［delete/BackSpace］刪除一個注音符號", "➀➅" }
-      , { "　［shift］+［delete/BackSpace］刪除單個字全部注音", "➀➆" }
+      , { "　［BackSpace］刪除一個注音符號", "➀➅" }
+      , { "　［shift］+［BackSpace］刪除單個字全部注音", "➀➆" }
       , { " • 分節", "➀➇" }
       , { "　［ | ］分節（選單出現時）", "➀➈" }
       , { " • 游標移位", "➁🄋" }
-      , { "　［right/left］游標向左右一個編碼（打字時）", "➁➀" }
-      , { "　［shift］+［right/left］游標向左右一整個字", "➁➁" }
+      , { "　［right / left］游標向左右一個編碼（打字時）", "➁➀" }
+      , { "　［shift］+［right / left］游標向左右一整個字", "➁➁" }
       , { "　［up］游標向左一整個字（打字時）", "➁➂" }
       , { "　［tab］和［shift］+［tab］首節（下一節）和上一節", "➁➃" }
       , { "　（↑ 首個中文字，好用可善用！）", "➁➄" }
       , { "　［tab］跳回游標切分狀態（選字時）", "➁➅" }
       , { " • 翻頁", "➁➆" }
-      , { "　［right/left］選字單翻頁（選字時）", "➁➇" }
-      , { "　［shift］+［up/down］選字單翻頁", "➁➈" }
-      , { "　［shift］+［C］和［shift］+［space］選字單翻頁（輸入時）", "➂🄋" }
+      , { "　［right / left］選字單翻頁（選字時）", "➁➇" }
+      , { "　［shift］+［up / down］選字單翻頁", "➁➈" }
+      , { "　［shift］+［C / space］選字單翻頁（輸入時）", "➂🄋" }
       , { " • 選字", "➂➀" }
       , { "　［012345678］選字", "➂➁" }
       , { "　［control］+［012345678］選字！（Mac會鍵位衝突！）", "➂➂" }
       , { " • 刪除自動記憶", "➂➃" }
       , { "　［fn］+［shift］+［BackSpace］選詞時，刪除自動記錄詞", "➂➄" }
       , { "　（↑ Mac）", "➂➅" }
-      , { "　［shift/control］+［BackSpace］選詞時，刪除自動記錄詞", "➂➆" }
+      , { "　［shift / control］+［BackSpace］選詞時，刪除自動記錄詞", "➂➆" }
       , { "　（↑ Win）", "➂➇" }
       , { "　［shift］+［Delete］Mac 外接鍵盤沒 fn 鍵，刪除自動記錄詞", "➂➈" }
-      , { "　（↑ 注意該 Delete 非 BackSpace）", "➃🄋" }
+      , { "　（↑ 該 Delete 非 BackSpace）", "➃🄋" }
+      , { "　────────────  ", "➃➀" }
+      , { "　※ 以上［Enter］於 Mac 名稱為［return］", "➃➁" }
+      , { "　※ 以上［BackSpace］於 Mac 名稱為［delete］", "➃➂" }
       }
 
     k2_table = {
