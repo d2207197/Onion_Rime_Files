@@ -23,9 +23,9 @@ local function hotkeys(n)
       , { "　　［Enter］上屏中文（有選項時）", "➇" }
       , { "　　［space］上屏中文（末尾為聲調或選字時）", "➈" }
       , { " • 特殊上屏", "➀🄋" }
-      , { "　［shift］+［Enter］輸出所對應的英文、數字、符號", "➀➀" }
-      , { "　［control］+［Enter］輸出顯示編碼，如注音符號", "➀➁" }
-      , { "　［control］+［shift］+［Enter］輸出選項注釋", "➀➂" }
+      , { "　［shift］+［Enter］上屏所對應的英文、數字、符號", "➀➀" }
+      , { "　［control］+［Enter］上屏顯示編碼，如注音符號", "➀➁" }
+      , { "　［control］+［shift］+［Enter］上屏選項注釋", "➀➂" }
       , { " • 刪除", "➀➃" }
       , { "　［esc］消除未上屏注音（清空）", "➀➄" }
       , { "　［BackSpace］刪除單個字全部注音", "➀➅" }
@@ -55,8 +55,8 @@ local function hotkeys(n)
       , { "　［shift］+［Delete］Mac 外接鍵盤沒 fn 鍵，刪除自動記錄詞", "➃🄋" }
       , { "　（↑ 該 Delete 非 BackSpace）", "➃➀" }
       , { "　────────────  ", "➃➁" }
-      , { "　※ 以上［Enter］於 Mac 名稱為［return］", "➃➂" }
-      , { "　※ 以上［BackSpace］於 Mac 名稱為［delete］", "➃➃" }
+      , { "　※ ［Enter］於 Mac 名稱為［return］", "➃➂" }
+      , { "　※ ［BackSpace］於 Mac 名稱為［delete］", "➃➃" }
       }
 
     k2_table = {
@@ -133,9 +133,9 @@ local function hotkeys(n)
       , { "　　［space］上屏中文（有選項時）", "➇" }
       , { "　　［Enter］上屏中文（有選項時）", "➈" }
       , { " • 特殊上屏", "➀🄋" }
-      , { "　［shift］+［Enter］輸出所對應的英文、數字、符號", "➀➀" }
-      , { "　［control］+［Enter］輸出顯示編碼，如：ji/（ㄐㄧˊ）", "➀➁" }
-      , { "　［control］+［shift］+［Enter］輸出選項注釋", "➀➂" }
+      , { "　［shift］+［Enter］上屏所對應的英文、數字、符號", "➀➀" }
+      , { "　［control］+［Enter］上屏顯示編碼，如：ji/（ㄐㄧˊ）", "➀➁" }
+      , { "　［control］+［shift］+［Enter］上屏選項注釋", "➀➂" }
       , { " • 刪除", "➀➃" }
       , { "　［esc］消除未上屏注音（清空）", "➀➄" }
       , { "　［space］消除未上屏輸入（清空）（空碼時）", "➀➅" }
@@ -165,8 +165,8 @@ local function hotkeys(n)
       , { "　［shift］+［Delete］Mac 外接鍵盤沒 fn 鍵，刪除自動記錄詞", "➃🄋" }
       , { "　（↑ 該 Delete 非 BackSpace）", "➃➀" }
       , { "　────────────  ", "➃➁" }
-      , { "　※ 以上［Enter］於 Mac 名稱為［return］", "➃➂" }
-      , { "　※ 以上［BackSpace］於 Mac 名稱為［delete］", "➃➃" }
+      , { "　※ ［Enter］於 Mac 名稱為［return］", "➃➂" }
+      , { "　※ ［BackSpace］於 Mac 名稱為［delete］", "➃➃" }
       }
 
     k2_table = {
@@ -213,9 +213,9 @@ local function hotkeys(n)
       , { "　 • 上屏", "➆" }
       , { "　　［space］上屏中文（有選項時）", "➇" }
       , { "　 • 特殊上屏", "➈" }
-      , { "　［shift］+［Enter］輸出所對應的英文、數字、符號", "➀🄋" }
-      , { "　［control］+［Enter］輸出顯示編碼，如：「7⇣4-9-」", "➀➀" }
-      , { "　［control］+［shift］+［Enter］輸出選項注釋", "➀➁" }
+      , { "　［shift］+［Enter］上屏所對應的英文、數字、符號", "➀🄋" }
+      , { "　［control］+［Enter］上屏顯示編碼，如：「7⇣4-9-」", "➀➀" }
+      , { "　［control］+［shift］+［Enter］上屏選項注釋", "➀➁" }
       , { " • 刪除", "➀➂" }
       , { "　［esc］消除未上屏輸入（清空）", "➀➃" }
       , { "　［space］消除未上屏輸入（清空）（空碼時）", "➀➄" }
@@ -228,8 +228,8 @@ local function hotkeys(n)
       , { "　［1234567890］選字", "➁➁" }
       , { "　［control］+［1234567890］選字！（Mac會鍵位衝突！）", "➁➂" }
       , { "　────────────  ", "➁➃" }
-      , { "　※ 以上［Enter］於 Mac 名稱為［return］", "➁➄" }
-      , { "　※ 以上［BackSpace］於 Mac 名稱為［delete］", "➁➅" }
+      , { "　※ ［Enter］於 Mac 名稱為［return］", "➁➄" }
+      , { "　※ ［BackSpace］於 Mac 名稱為［delete］", "➁➅" }
       }
 
     k2_table = {
@@ -299,9 +299,9 @@ local function hotkeys(n)
       , { "　　［space］上屏中文（有選項時）", "➇" }
       , { "　　［Enter］上屏中文（有選項時）", "➈" }
       , { " • 特殊上屏", "➀🄋" }
-      , { "　［shift］+［Enter］輸出所對應的英文、數字、符號", "➀➀" }
-      , { "　［control］+［Enter］輸出顯示編碼，如：DJ", "➀➁" }
-      , { "　［control］+［shift］+［Enter］輸出選項注釋", "➀➂" }
+      , { "　［shift］+［Enter］上屏所對應的英文、數字、符號", "➀➀" }
+      , { "　［control］+［Enter］上屏顯示編碼，如：DJ", "➀➁" }
+      , { "　［control］+［shift］+［Enter］上屏選項注釋", "➀➂" }
       , { " • 刪除", "➀➃" }
       , { "　［esc］消除未上屏注音（清空）", "➀➄" }
       , { "　［BackSpace］刪除一個注音符號", "➀➅" }
@@ -330,8 +330,8 @@ local function hotkeys(n)
       , { "　［shift］+［Delete］Mac 外接鍵盤沒 fn 鍵，刪除自動記錄詞", "➂➈" }
       , { "　（↑ 該 Delete 非 BackSpace）", "➃🄋" }
       , { "　────────────  ", "➃➀" }
-      , { "　※ 以上［Enter］於 Mac 名稱為［return］", "➃➁" }
-      , { "　※ 以上［BackSpace］於 Mac 名稱為［delete］", "➃➂" }
+      , { "　※ ［Enter］於 Mac 名稱為［return］", "➃➁" }
+      , { "　※ ［BackSpace］於 Mac 名稱為［delete］", "➃➂" }
       }
 
     k2_table = {
