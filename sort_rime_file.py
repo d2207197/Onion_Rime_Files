@@ -253,7 +253,7 @@ shutil.copyfile("./allfiles/opencc/punct_mark.txt", "./sort_rime/注音洋蔥plu
 # shutil.copyfile("./allfiles/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/注音洋蔥plus版/plus注音_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml")
 # shutil.copyfile("./allfiles/easy_en_lower_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml", "./sort_rime/注音洋蔥plus版/plus注音_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml")
 shutil.copytree('./allfiles/jpnin1只出假名custom/', './sort_rime/注音洋蔥plus版/jpnin1只出假名custom/')
-shutil.copytree('./allfiles/jpnin1完整轉寫custom/', './sort_rime/注音洋蔥plus版/jpnin1完整轉寫custom/')
+shutil.copytree('./allfiles/jpnin1精簡轉寫custom/', './sort_rime/注音洋蔥plus版/jpnin1精簡轉寫custom/')
 
 
 #複製檔案(地球拼音洋蔥mix-in版)

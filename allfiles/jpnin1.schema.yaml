@@ -4,7 +4,7 @@
 schema:
   schema_id: jpnin1 # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
   name: ❃日語 in 1❃
-  version: "202305"
+  version: "202308"
   author:
     - 『洋蔥』
   description: |
@@ -22,7 +22,7 @@ switches:
 
 engine:
   filters:
-    - reverse_lookup_filter@c_reverse_lookup
+    # - reverse_lookup_filter@c_reverse_lookup  #由於碼表改用每個音節皆分段，故不能直接引用反查。（反查只能反查「字」，不能反查「詞」，分段視為「詞」）
     - lua_filter@convert_japan_filter
     # - uniquifier
   processors:
@@ -39,13 +39,13 @@ engine:
     - ascii_segmentor
     - matcher
     - abc_segmentor
-    - affix_segmentor@kanji_input
+    # - affix_segmentor@kanji_input
     - punct_segmentor
     - fallback_segmentor
   translators:
     - punct_translator
     # - table_translator@custom_phrase
-    - script_translator@kanji_input
+    # - script_translator@kanji_input
     - script_translator
     # - lua_translator@convert_japan_translator
 
@@ -62,55 +62,55 @@ speller:
     # - xform/n(?![nyaeiou])/nn/
     # - xform/^nng/ng/
 ##### 字詞彙中的漢字，拼音轉寫開始（以下到結束可遮屏，節省部屬時間） #####
-# ### 漢字中的促音 ###
-#     - derive/cchi(?=.*;)/qchi/ #っち
-#     - derive/sshi(?=.*;)/qshi/ #っし
-#     - derive/ffu(?=.*;)/qfu/ #っふ
-#     - derive/ttsu(?=.*;)/qtsu/ #っつ
-#     - derive/jji(?=.*;)/qji/ #っじ
-# ##
-#     - derive/kky(?=[auo].*;)/qky/ #っきょ
-#     - derive/ggy(?=[auo].*;)/qgy/ #っぎょ #目前詞庫漢字無此拼音#
-#     - derive/ssh(?=[auo].*;)/qsh/ #っしゃ
-#     - derive/jj(?=[auo].*;)/qj/ #っじゅ #目前詞庫漢字無此拼音#
-#     - derive/ddy(?=[auo].*;)/qdy/ #っぢょ #目前詞庫漢字無此拼音#
-#     - derive/cch(?=[auo].*;)/qch/ #っちゅ
-#     - derive/(`)nny(?=[auo].*;)/q$1ny/ #っにゃ #目前詞庫漢字無此拼音#
-#     - derive/hhy(?=[auo].*;)/qhy/ #っひゃ #目前詞庫漢字無此拼音#
-#     - derive/bby(?=[auo].*;)/qby/ #っびゃ #目前詞庫漢字無此拼音#
-#     - derive/ppy(?=[auo].*;)/qpy/ #っぴゃ
-#     - derive/mmy(?=[auo].*;)/qmy/ #っみゃ #目前詞庫漢字無此拼音#
-#     - derive/rry(?=[auo].*;)/qry/ #っりゃ #目前詞庫漢字無此拼音#
-# ##
-#     - derive/kk(?=[auoie].*;)/qk/ #っか
-#     - derive/ss(?=[auoe].*;)/qs/ #っさ #「ssi」沒有（後面才轉寫）
-#     - derive/tt(?=[aoe].*;)/qt/ #った #「ttu」和「tti」沒有（後面才轉寫）
-# #漢字無此拼音，且會干擾ん(なにぬねの)，有標注之假名無此發音#    - derive/nn(?=[auoie].*;)/qn/ #っな
-#     - derive/hh(?=[aoie].*;)/qh/ #っは #「hhu」沒有（後面才轉寫）
-#     - derive/ff(?=[u].*;)/qf/ #っふ #f[aoie]沒有
-#     - derive/mm(?=[auoie].*;)/qm/ #っま
-#     - derive/yy(?=[auoie].*;)/qy/ #っや #打開會衝突？？？
-#     - derive/rr(?=[auoie].*;)/qr/ #っら
-# #漢字無此拼音，有標注之假名無此發音#    - derive/ww(?=[auoie].*;)/qw/ #っわ #打開會衝突？？？
-# ##
-#     - derive/gg(?=[auoie].*;)/qg/ #っが
-#     - derive/zz(?=[auoie].*;)/qz/ #っざ
-#     - derive/dd(?=[auoie].*;)/qd/ #っだ
-#     - derive/bb(?=[auoie].*;)/qb/ #っば
-#     - derive/pp(?=[auoie].*;)/qp/ #っぱ
-# ### 漢字中的拗音 ### @此轉寫太影響效能，折衷可只遮屏此處@
-#     - derive/ky(?=[auo].*;)/kixy/ #きゃ
-#     - derive/gy(?=[auo].*;)/gixy/ #ぎゃ
-#     - derive/sh(?=[auo].*;)/shixy/ #しゃ
-#     - derive/j(?=[auo].*;)/jixy/ #じゃ
-#     - derive/dy(?=[auo].*;)/dixy/ #ぢゃ
-#     - derive/ch(?=[auo].*;)/chixy/ #ちゃ #ch「e」沒有（後面才轉寫）
-#     - derive/`ny(?=[auoie].*;)/nixy/ #にゃ
-#     - derive/hy(?=[auoie].*;)/hixy/ #ひゃ
-#     - derive/by(?=[auoe].*;)/bixy/ #びゃ
-#     - derive/py(?=[auoie].*;)/pixy/ #ぴゃ
-#     - derive/my(?=[auoie].*;)/mixy/ #みゃ
-#     - derive/ry(?=[auoie].*;)/rixy/ #りゃ
+### 漢字中的促音 ###
+    - derive/cchi(?=.*;)/qchi/ #っち
+    - derive/sshi(?=.*;)/qshi/ #っし
+    - derive/ffu(?=.*;)/qfu/ #っふ
+    - derive/ttsu(?=.*;)/qtsu/ #っつ
+    - derive/jji(?=.*;)/qji/ #っじ
+##
+    - derive/kky(?=[auo].*;)/qky/ #っきょ
+    - derive/ggy(?=[auo].*;)/qgy/ #っぎょ #目前詞庫漢字無此拼音#
+    - derive/ssh(?=[auo].*;)/qsh/ #っしゃ
+    - derive/jj(?=[auo].*;)/qj/ #っじゅ #目前詞庫漢字無此拼音#
+    - derive/ddy(?=[auo].*;)/qdy/ #っぢょ #目前詞庫漢字無此拼音#
+    - derive/cch(?=[auo].*;)/qch/ #っちゅ
+    - derive/(`)nny(?=[auo].*;)/q$1ny/ #っにゃ #目前詞庫漢字無此拼音#
+    - derive/hhy(?=[auo].*;)/qhy/ #っひゃ #目前詞庫漢字無此拼音#
+    - derive/bby(?=[auo].*;)/qby/ #っびゃ #目前詞庫漢字無此拼音#
+    - derive/ppy(?=[auo].*;)/qpy/ #っぴゃ
+    - derive/mmy(?=[auo].*;)/qmy/ #っみゃ #目前詞庫漢字無此拼音#
+    - derive/rry(?=[auo].*;)/qry/ #っりゃ #目前詞庫漢字無此拼音#
+##
+    - derive/kk(?=[auoie].*;)/qk/ #っか
+    - derive/ss(?=[auoe].*;)/qs/ #っさ #「ssi」沒有（後面才轉寫）
+    - derive/tt(?=[aoe].*;)/qt/ #った #「ttu」和「tti」沒有（後面才轉寫）
+#漢字無此拼音，且會干擾ん(なにぬねの)，有標注之假名無此發音#    - derive/nn(?=[auoie].*;)/qn/ #っな
+    - derive/hh(?=[aoie].*;)/qh/ #っは #「hhu」沒有（後面才轉寫）
+    - derive/ff(?=[u].*;)/qf/ #っふ #f[aoie]沒有
+    - derive/mm(?=[auoie].*;)/qm/ #っま
+    - derive/yy(?=[auoie].*;)/qy/ #っや #打開會衝突？？？
+    - derive/rr(?=[auoie].*;)/qr/ #っら
+#漢字無此拼音，有標注之假名無此發音#    - derive/ww(?=[auoie].*;)/qw/ #っわ #打開會衝突？？？
+##
+    - derive/gg(?=[auoie].*;)/qg/ #っが
+    - derive/zz(?=[auoie].*;)/qz/ #っざ
+    - derive/dd(?=[auoie].*;)/qd/ #っだ
+    - derive/bb(?=[auoie].*;)/qb/ #っば
+    - derive/pp(?=[auoie].*;)/qp/ #っぱ
+### 漢字中的拗音 ### @此轉寫太影響效能，折衷可只遮屏此處@
+    - derive/ky(?=[auo].*;)/kixy/ #きゃ
+    - derive/gy(?=[auo].*;)/gixy/ #ぎゃ
+    - derive/sh(?=[auo].*;)/shixy/ #しゃ
+    - derive/j(?=[auo].*;)/jixy/ #じゃ
+    - derive/dy(?=[auo].*;)/dixy/ #ぢゃ
+    - derive/ch(?=[auo].*;)/chixy/ #ちゃ #ch「e」沒有（後面才轉寫）
+    - derive/`ny(?=[auoie].*;)/nixy/ #にゃ
+    - derive/hy(?=[auoie].*;)/hixy/ #ひゃ
+    - derive/by(?=[auoe].*;)/bixy/ #びゃ
+    - derive/py(?=[auoie].*;)/pixy/ #ぴゃ
+    - derive/my(?=[auoie].*;)/mixy/ #みゃ
+    - derive/ry(?=[auoie].*;)/rixy/ #りゃ
 ##### 字詞彙中的漢字，拼音轉寫結束（以上到開頭可遮屏，節省部屬時間） #####
 ### 漢字中的外語轉換 ###
     - derive/ty(?=[auoie].*;)/chix/ #ちぇ
@@ -188,18 +188,18 @@ speller:
     - derive|^(xx)[.]$|$1,|
     - derive|^xx(?=[.,])|shime|
     - derive|^xx(?=[.])|kigou| #只片假名
-    # - derive/q(?![yw][aeiou][,.])/xtu/ #っッ #可擴充讓「q」能輸出「っ」「ッ」
-    - xform/q(?![yw][aeiou][,.])/xtu/ #っッ #完全轉走，不能用「q」輸出「っ」「ッ」
-    #略# - derive/xtu/ltu/ #っッ
+    - derive/q(?![yw][aeiou][,.])/xtu/ #っッ #可擴充讓「q」能輸出「っ」「ッ」
+    #可和上條替換# - xform/q(?![yw][aeiou][,.])/xtu/ #っッ #完全轉走，不能用「q」輸出「っ」「ッ」
+    - derive/xtu/ltu/ #っッ #可略#
     - derive/xtu/xtsu/ #っッ
-    #略# - derive/xtu/ltsu/ #っッ
-    #略# - derive/xy/ly/ #ゃゅょ
-    #略# - derive/xwa/lwa/ #ゎ ヮ
-    #略# - derive/x([aeiou])/l$1/ #ぁぇぃぉぅ
-    #略# - derive/xke/lke/ #ヶゖ
+    - derive/xtu/ltsu/ #っッ #可略#
+    - derive/xy/ly/ #ゃゅょ #可略#
+    - derive/xwa/lwa/ #ゎ ヮ #可略#
+    - derive/x([aeiou])/l$1/ #ぁぇぃぉぅ #可略#
+    - derive/xke/lke/ #ヶゖ #可略#
     - derive/xke(?=[.])/ke/ #ヶ
     - derive/xke(?=[.])/ga/ #ヶ #新增碼表沒有
-    #略# - derive/xka/lka/ #ヵゕ
+    - derive/xka/lka/ #ヵゕ #可略#
     - derive/xka(?=[.])/ka/ #ヵ
     - derive/^noma(?=[.])/dou/ #符號
     - derive/^dou(?=[.])/onaji/ #符號
@@ -216,10 +216,12 @@ speller:
     - xform/`//
 ##### 簡化和消除含促音字詞後綴 #####
     # - xform/^([kspt])[,.](.+)$/$1$2/
-    - xform/^([ksptgchmyrwdbzf])[,.]/$1/
+    # - xform/^([ksptgchmyrwdbzf])[,.]/$1/
+    - derive/^([ksptgchmyrwdbzf])[,.]/$1/ #20230820測#
     # - xform/^([ksptgchmyrwdbz])[,.]/$1/ #「n」無法，會有bug
     # - xform/^([a-z])[,.]([a-z])/$1$2/
-    - xform/;(?=[ksptgchmyrwdbzf])// #解放漢字，不用輸入「;」即會顯示
+    # - xform/;(?=[ksptgchmyrwdbzf])// #解放漢字，不用輸入「;」即會顯示
+    - derive/;(?=[ksptgchmyrwdbzf])// #20230820測#
     # - xform/;([ksptgchmyrwdbz])/$1/
     # - xform/;([a-z])/$1/
 #舊版漢字中有分段才有用到#    - derive/^([a-z-]+)(;)([a-z-]+)(;)$/$1$3$4/ #漢字中含促音
@@ -236,7 +238,7 @@ speller:
     - abbrev/^([kstnhmyrwgzdbpjlfxv])[naiueo][,.]$/$1/
     - abbrev/^(c)h[aiueo][,.]$/$1/ #避免「c」開頭沒有對應假名
     - abbrev/^([kstnhmyrwgzdbpjlfcxvq][kstnhmyrwgzdbpjlfc]y?)[aiueo][,.]$/$1/
-    - abbrev/^(q)[wy][aiueo][,.]$/$1/ #避免「q」開頭沒有對應假名
+    #可略# - abbrev/^(q)[wy][aiueo][,.]$/$1/ #避免「q」開頭沒有對應假名
     - derive/^\|$/ /
 
 translator:
@@ -271,25 +273,25 @@ translator:
 #   enable_sentence: false
 #   initial_quality: 1
 
-kanji_input:
-  tag: kanji_input
-  dictionary: cangjie5
-  enable_user_dict: true
-  prefix: "`"
-  suffix: "'"
-  tips: 〔漢字反查〕
-  preedit_format:
-    - xform/^/〔漢字反查〕/
-    # - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
-    - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
+# kanji_input:
+#   tag: kanji_input
+#   dictionary: cangjie5
+#   enable_user_dict: true
+#   prefix: "`"
+#   suffix: "'"
+#   tips: 〔漢字反查〕
+#   preedit_format:
+#     - xform/^/〔漢字反查〕/
+#     # - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
+#     - "xlit|abcdefghijklmnopqrstuvwxyz|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
 
-c_reverse_lookup:
-  tags: [ kanji_input ]
-  dictionary: jpnin1.extended
-  # spelling_hints: 10
-  comment_format:
-    - "xlit|`|'|"
-    - xform/q/xtsu/
+# c_reverse_lookup:
+#   tags: [ kanji_input ]
+#   dictionary: jpnin1.extended
+#   # spelling_hints: 10
+#   comment_format:
+#     - "xlit|`|'|"
+#     - xform/q/xtsu/
 
 punctuator:
   full_shape:
@@ -403,5 +405,5 @@ recognizer:
     uppercase: "[A-Z].*$"
     email: "^[a-z][-_.0-9a-z]*@.*$"
     url: "^(https?:|ftp:|mailto:|file:).*$" #|^[a-z]+[.].+$
-    kanji_input: "^`[a-z]*'?$"
+    # kanji_input: "^`[a-z]*'?$"
 
