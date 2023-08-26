@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion_double
   name: "☆注音(洋蔥雙拼版)☆"
-  version: "202305"
+  version: "202308"
   author:
     - 『洋蔥』
   description: |
@@ -515,6 +515,13 @@ key_binder:
     - {accept: Control+Shift+apostrophe, set_option: only_cjk_filter, when: always}
 ## 初始樣態(Win)
     - {accept: Control+Shift+quotedbl, set_option: only_cjk_filter, when: always}
+# ### Return/Enter鍵上屏(取代 editor/bindings 使可空碼清屏) ###
+#     - {accept: Return, send: space, when: paging} #選字時 Return/Enter 鍵同空白鍵上屏中文
+#     - {accept: Return, send: space, when: has_menu} #有選單時 Return/Enter 鍵同空白鍵上屏中文
+#     - {accept: Return, send: Escape, when: composing} #空碼清屏用
+#     - {accept: KP_Enter, send: space, when: paging} #選字時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
+#     - {accept: KP_Enter, send: space, when: has_menu} #有選單時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
+#     - {accept: KP_Enter, send: Escape, when: composing} #空碼清屏用
 
 editor:
   bindings:
