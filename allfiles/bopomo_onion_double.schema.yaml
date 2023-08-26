@@ -36,6 +36,9 @@ switches:
 #       - UTF-8
 #       - BIG5
 #       - GBK
+  - name: return_mode
+    reset: 0
+    states: [ "Return & Space" , "Space" ]
 
 engine:
   filters:
@@ -46,7 +49,8 @@ engine:
     - reverse_lookup_filter@bpm_reverse_lookup
     - uniquifier
   processors:
-    - lua_processor@lua_tran_kp  #使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入。
+    # - lua_processor@lua_tran_kp  #使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入。
+    - lua_processor@mix_kp_return  #合併 lua_tran_kp 和 return 上屏模式切換。
     - ascii_composer
     - recognizer
     - key_binder
@@ -495,7 +499,8 @@ key_binder:
 ##    - {accept: space, send: Down, when: has_menu}
 ##    - {accept: space, send: Down, when: paging}
 ##    - {accept: space, send: space, when: composing}
-    - {accept: space, send: Escape, when: composing} #空碼時，按空格清除
+    # - {accept: space, send: Escape, when: composing} #空碼時，按空格清除
+    - {accept: space, send_sequence: "{Escape}{space}", when: composing} #空碼時，按空格清除（測試，如：輸入heart，前面碼有候選項，後面碼無候選項，還是可上屏前面）
     - {accept: space, send: space, when: has_menu} #非空碼時，空白還是空白
 ### 刪除鍵 ###
 #    - {accept: BackSpace, send: Control+BackSpace, when: has_menu} #〔關〕刪除前一個拼音字符〔開〕：刪除整組拼音字符（一個字）
@@ -504,31 +509,38 @@ key_binder:
 #略#    - {accept: backslash, send: Shift+BackSpace, when: has_menu} #「\」鍵位刪除整組拼音字符（一個字）。
 #    - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
 ### 功能快捷鍵 ###
+    # - {accept: Control+apostrophe, toggle: only_cjk_filter, when: always}
 ## 上排切換(Mac)
     - {accept: Control+Shift+6, toggle: only_cjk_filter, when: always}
-    # - {accept: Control+apostrophe, toggle: only_cjk_filter, when: always}
+    - {accept: Control+Shift+7, toggle: return_mode, when: always}
 ## 上排切換(Win)
     - {accept: Control+Shift+asciicircum, toggle: only_cjk_filter, when: always}
+    - {accept: Control+Shift+ampersand, toggle: return_mode, when: always}
 ## 切換樣態
     - {accept: Control+apostrophe, unset_option: only_cjk_filter, when: always}
+    - {accept: Control+equal, set_option: return_mode, when: always}
 ## 初始樣態(Mac)
     - {accept: Control+Shift+apostrophe, set_option: only_cjk_filter, when: always}
+    - {accept: Control+Shift+equal, unset_option: return_mode, when: always}
 ## 初始樣態(Win)
     - {accept: Control+Shift+quotedbl, set_option: only_cjk_filter, when: always}
-# ### Return/Enter鍵上屏(取代 editor/bindings 使可空碼清屏) ###
-#     - {accept: Return, send: space, when: paging} #選字時 Return/Enter 鍵同空白鍵上屏中文
-#     - {accept: Return, send: space, when: has_menu} #有選單時 Return/Enter 鍵同空白鍵上屏中文
-#     - {accept: Return, send: Escape, when: composing} #空碼清屏用
-#     - {accept: KP_Enter, send: space, when: paging} #選字時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
-#     - {accept: KP_Enter, send: space, when: has_menu} #有選單時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
-#     - {accept: KP_Enter, send: Escape, when: composing} #空碼清屏用
+    - {accept: Control+Shift+plus, set_option: return_mode, when: always}
+### Return/Enter鍵上屏(取代 editor/bindings 使可空碼清屏) ###
+    # - {accept: Return, send: Escape, when: composing} #空碼清屏用
+    - {accept: Return, send_sequence: "{Escape}{space}", when: composing} #空碼清屏用（測試，如：輸入heart，前面碼有候選項，後面碼無候選項，還是可上屏前面）
+    - {accept: Return, send: space, when: has_menu} #有選單時 Return/Enter 鍵同空白鍵上屏中文
+    - {accept: Return, send: space, when: paging} #選字時 Return/Enter 鍵同空白鍵上屏中文
+    # - {accept: KP_Enter, send: Escape, when: composing} #空碼清屏用
+    - {accept: KP_Enter, send_sequence: "{Escape}{space}", when: composing} #空碼清屏用（測試，如：輸入heart，前面碼有候選項，後面碼無候選項，還是可上屏前面）
+    - {accept: KP_Enter, send: space, when: has_menu} #有選單時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
+    - {accept: KP_Enter, send: space, when: paging} #選字時右側小鍵盤 Return/Enter 鍵同空白鍵上屏中文
 
 editor:
   bindings:
 #    space: commit_composition #使用 fluency_editor 時開啟(直接上屏)
 #    space: toggle_selection #使用 fluency_editor 時開啟(不直接上屏)
-    Return: confirm #使用 express_editor 時開啟 #commit_composition
-    KP_Enter: confirm #使用 express_editor 時開啟 #commit_composition
+    # Return: confirm #使用 express_editor 時開啟 #commit_composition
+    # KP_Enter: confirm #使用 express_editor 時開啟 #commit_composition
     Shift+Return: commit_raw_input # 上屏原始輸入
     Control+Return: commit_script_text # 上屏變換後輸入
 ########################## 用正則調出各種功能 ##############################

@@ -77,14 +77,15 @@
 --      - lua_processor@kr_2set_0m_choice            --（引lua資料夾）（hangeul2set_zeromenu）韓語成零選項。開關（space_mode）、開關（kr_0m）
 --      - lua_processor@kr_2set_0m                   --（關）（hangeul2set_zeromenu）韓語成零選項。開關（space_mode）
 --      - lua_processor@zhuyin_space                 --（引lua資料夾）（Mount_ocm）補注音反查無法使用空白鍵和選字後跳掉之 bug。
---      - lua_processor@lua_tran_kp                  --（引lua資料夾）（bopomo_onion_double）使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入。
+--      - lua_processor@lua_tran_kp                  --（關）（bopomo_onion_double）使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入。
 --
 --      - ＊合併兩個以上函數：
 --      - lua_processor@array30up_mix                --（引lua資料夾）（onion-array30） 合併 array30up 和 array30up_zy，增進效能。
 --      - lua_processor@mix_apc_s2rm_ltk             --（引lua資料夾）（bo_mixin 1、2、4；bopomo_onionplus） 合併 ascii_punct_change、s2r_most、lua_tran_kp，增進效能。
 --      - lua_processor@mix_apc_s2rm_ltk_3           --（引lua資料夾）（bo_mixin3） 合併 ascii_punct_change、s2r_mixin3、lua_tran_kp，增進效能。
---      - lua_processor@mix_apc_ltk_pluss            --（引lua資料夾）（bopomo_onionplus_space） 以原 ascii_punct_change 增加功能，使初始空白可以直接上屏
---      - lua_processor@mix_zhs_ltk                  --（引lua資料夾）（ocm_mixin、dif1、ocm_mix） 合併 zhuyin_space 和 lua_tran_kp
+--      - lua_processor@mix_apc_ltk_pluss            --（引lua資料夾）（bopomo_onionplus_space） 以原 ascii_punct_change 增加功能，使初始空白可以直接上屏。
+--      - lua_processor@mix_zhs_ltk                  --（引lua資料夾）（ocm_mixin、dif1、ocm_mix） 合併 zhuyin_space 和 lua_tran_kp。
+--      - lua_processor@mix_kp_return                --（引lua資料夾）（bopomo_onion_double） 合併 lua_tran_kp 並增加 return 上屏模式切換。
 --      ...
 
 
@@ -280,9 +281,15 @@ mix_apc_ltk_pluss = require("processor_mix_apc_ltk_pluss")
 zhuyin_space = require("processor_zhuyin_space")
 
 
---- lua_tran_kp （bopomo_onion_double）
+-- --- lua_tran_kp （bopomo_onion_double）
+-- -- 使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入。
+-- lua_tran_kp = require("processor_lua_tran_kp")
+
+
+--- mix_kp_return （bopomo_onion_double）
 -- 使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入。
-lua_tran_kp = require("processor_lua_tran_kp")
+-- 使 return 上屏模式切換
+mix_kp_return = require("processor_mix_kp_return")
 
 
 --- mix_zhs_ltk （ocm_mixin、dif1、ocm_onionmix）
