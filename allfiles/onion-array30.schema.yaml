@@ -41,7 +41,7 @@ switches:
     states: [ "Confirm", "Paging" ]
   - name: array30_return_abc
     reset: 1
-    states: [ "Return & Space" , "Space" ]
+    states: [ "Return & Space", "Space" ]
 
 
 engine:

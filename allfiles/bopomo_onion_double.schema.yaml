@@ -38,7 +38,7 @@ switches:
 #       - GBK
   - name: return_mode
     reset: 0
-    states: [ "Return & Space" , "Space" ]
+    states: [ "Return & Space", "Space" ]
 
 engine:
   filters:
