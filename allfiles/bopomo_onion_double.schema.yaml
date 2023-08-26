@@ -524,7 +524,7 @@ key_binder:
     - {accept: Control+Shift+equal, unset_option: return_mode, when: always}
 ## 初始樣態(Win)
     - {accept: Control+Shift+quotedbl, set_option: only_cjk_filter, when: always}
-    - {accept: Control+Shift+plus, set_option: return_mode, when: always}
+    - {accept: Control+Shift+plus, unset_option: return_mode, when: always}
 ### Return/Enter鍵上屏(取代 editor/bindings 使可空碼清屏) ###
     # - {accept: Return, send: Escape, when: composing} #空碼清屏用
     - {accept: Return, send_sequence: "{Escape}{space}", when: composing} #空碼清屏用（測試，如：輸入heart，前面碼有候選項，後面碼無候選項，還是可上屏前面）
