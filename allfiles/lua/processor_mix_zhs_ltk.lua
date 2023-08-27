@@ -10,6 +10,7 @@
 ----------------------------------------------------------------------------------------
 -- local utf8_sub = require("f_components/f_utf8_sub")
 local generic_open = require("p_components/p_generic_open")
+local pattern_list = require("p_components/p_pattern_list")
 ----------------------------------------------------------------------------------------
 
 local function init(env)
@@ -21,7 +22,8 @@ local function init(env)
   local path = rime_api.get_user_data_dir()
   env.prefix = config:get_string(namespace1 .. "/prefix") or ""
   env.textdict = config:get_string(namespace2 .. "/user_dict") or ""
-  env.custom_phrase_file_name = path .. "/" .. env.textdict .. ".txt" or ""
+  env.custom_phrase = path .. "/" .. env.textdict .. ".txt" or ""
+  env.pattern_list = path .. "/lua/p_components/p_pattern_list.lua" or ""
   -- log.info("lua_custom_phrase: \'" .. env.textdict .. ".txt\' Initilized!")  -- 日誌中提示已經載入 txt 短語
   -- env.kp_pattern = {
   --   ["0"] = "0",
@@ -104,7 +106,7 @@ local function processor(key, env)
   -- elseif seg:has_tag("lua") then
   -- elseif seg:has_tag("lua") and kp_p ~= nil then
 
-    local key_kp = key:repr():match("KP_([%d%a]+)")  -- KP_([ASDM%d][%a]*)
+    local key_kp = key:repr():match("KP_([%d%a]+)$")  -- KP_([ASDM%d][%a]*)
     local kp_p = kp_pattern[key_kp]
     if kp_p ~= nil then
       if not check_pre and not check_num_cal then
@@ -126,30 +128,27 @@ local function processor(key, env)
     -- elseif env.prefix == "" then  -- 前面 seg:has_tag 已確定
     --   return 2
     elseif c_input == env.prefix .. "op" then
-      if key:repr() == "r" then
-        generic_open("https://github.com/rime")
+      local key_kp = key:repr():match("^([a-z])$")
+      local kp_p = pattern_list[key_kp]
+      if key:repr() == "l" then
+        generic_open(env.pattern_list)
         context:clear()
         return 1
-      elseif key:repr() == "o" then
-        generic_open("https://github.com/oniondelta/Onion_Rime_Files")
+
+      elseif kp_p ~= nil then
+        -- engine:commit_text(kp_p)  -- 測試用
+        generic_open(kp_p)
         context:clear()
         return 1
-      -- elseif key:repr() == "t" then  -- 測試用
-      --   -- io.popen("env.custom_phrase_file_name")  -- 無效！
-      --   -- engine:commit_text(env.textdict)  -- 測試用
-      --   generic_open("/System/Applications/Dictionary.app")
-      --   context:clear()
-      --   return 1
-      -- elseif key:repr() == "自行定義鍵位" then
-      --   generic_open("自行定義欲開啟程式或網站")
-      --   context:clear()
-      --   return 1
+
       elseif env.textdict == "" then
         return 2
       elseif key:repr() == "p" then
-        generic_open(env.custom_phrase_file_name)
+        -- io.popen("env.custom_phrase")  -- 無效！
+        generic_open(env.custom_phrase)
         context:clear()
         return 1
+
       end
 
     end

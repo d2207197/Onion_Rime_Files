@@ -718,11 +718,11 @@ local function translate(input, seg, env)
     if (input == env.prefix .. "op") then
       local keys_table = {
           { " ※ 限開頭輸入", "⓿" }
-        , { "  ~p 〔編輯短語〕", "❶" }  --  "────────────  "
-        , { "  ~r 〔官方 GitHub 〕", "❷" }
-        , { "  ~o 〔洋蔥 GitHub 〕", "❸" }
-        , { " ═══  結束  ═══  ", "❹" }
-        , { "", "❺" }
+        , { "  ~l 〔編輯開啟清單〕", "❶" }  --  "────────────  "
+        , { "  ~p 〔編輯短語〕", "❷" }
+        , { "  ~r 〔官方 GitHub 〕", "❸" }
+        , { "  ~o 〔洋蔥 GitHub 〕", "❹" }
+        , { " ═══  結束  ═══  ", "❺" }
         , { "", "❻" }
         , { "", "❼" }
         , { "", "❽" }
@@ -747,7 +747,7 @@ local function translate(input, seg, env)
       return
     end
 
-    local op_check = string.match(input, env.prefix .. "op([a-z]+)$")
+    local op_check = string.match(input, env.prefix .. "op([a-z])$")
     local first_check = caret_pos - #input
     if op_check and first_check ~= 0 then
       local cand2 = Candidate("tips", seg.start, seg._end, "", "〔非開頭輸入〕")
