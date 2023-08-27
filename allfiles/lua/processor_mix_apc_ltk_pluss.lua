@@ -4,27 +4,42 @@
 合併 ascii_punct_change、lua_tran_kp 並增加功能
 使初始空白可以直接上屏
 於注音方案改變在非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
+新增快捷鍵開啟檔案/程式/網站
 --]]
 
--- local function init(env)
---   env.kp_pattern = {
---     ["0"] = "0",
---     ["1"] = "1",
---     ["2"] = "2",
---     ["3"] = "3",
---     ["4"] = "4",
---     ["5"] = "5",
---     ["6"] = "6",
---     ["7"] = "7",
---     ["8"] = "8",
---     ["9"] = "9",
---     ["Add"] = "+",
---     ["Subtract"] = "-",
---     ["Multiply"] = "*",
---     ["Divide"] = "/",
---     ["Decimal"] = ".",
---    }
--- end
+----------------------------------------------------------------------------------------
+local generic_open = require("p_components/p_generic_open")
+----------------------------------------------------------------------------------------
+
+local function init(env)
+  local engine = env.engine
+  local schema = engine.schema
+  local config = schema.config
+  local namespace1 = "mf_translator"
+  local namespace2 = "lua_custom_phrase"
+  local path = rime_api.get_user_data_dir()
+  env.prefix = config:get_string(namespace1 .. "/prefix") or ""
+  env.textdict = config:get_string(namespace2 .. "/user_dict") or ""
+  env.custom_phrase_file_name = path .. "/" .. env.textdict .. ".txt" or ""
+  -- log.info("lua_custom_phrase: \'" .. env.textdict .. ".txt\' Initilized!")  -- 日誌中提示已經載入 txt 短語
+  -- env.kp_pattern = {
+  --   ["0"] = "0",
+  --   ["1"] = "1",
+  --   ["2"] = "2",
+  --   ["3"] = "3",
+  --   ["4"] = "4",
+  --   ["5"] = "5",
+  --   ["6"] = "6",
+  --   ["7"] = "7",
+  --   ["8"] = "8",
+  --   ["9"] = "9",
+  --   ["Add"] = "+",
+  --   ["Subtract"] = "-",
+  --   ["Multiply"] = "*",
+  --   ["Divide"] = "/",
+  --   ["Decimal"] = ".",
+  --  }
+end
 
 local kp_pattern = {
   ["0"] = "0",
@@ -142,6 +157,37 @@ local function processor(key, env)
         context:push_input( kp_p )
         return 1
       end
+    -- end
+
+    -- elseif env.prefix == "" then  -- 前面 seg:has_tag 已確定
+    --   return 2
+    elseif c_input == env.prefix .. "op" then
+      if key:repr() == "r" then
+        generic_open("https://github.com/rime")
+        context:clear()
+        return 1
+      elseif key:repr() == "o" then
+        generic_open("https://github.com/oniondelta/Onion_Rime_Files")
+        context:clear()
+        return 1
+      -- elseif key:repr() == "t" then  -- 測試用
+      --   -- io.popen("env.custom_phrase_file_name")  -- 無效！
+      --   -- engine:commit_text(env.textdict)  -- 測試用
+      --   generic_open("/System/Applications/Dictionary.app")
+      --   context:clear()
+      --   return 1
+      -- elseif key:repr() == "自行定義鍵位" then
+      --   generic_open("自行定義欲開啟程式或網站")
+      --   context:clear()
+      --   return 1
+      elseif env.textdict == "" then
+        return 2
+      elseif key:repr() == "p" then
+        generic_open(env.custom_phrase_file_name)
+        context:clear()
+        return 1
+      end
+
     end
 
 ---------------------------------------------------------------------------
@@ -160,5 +206,5 @@ local function processor(key, env)
 end
 
 -- return mix_apc_ltk_pluss
-return { func = processor }
--- return { init = init, func = processor }
+-- return { func = processor }
+return { init = init, func = processor }

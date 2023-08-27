@@ -4,32 +4,44 @@
 注音反查 Return 和 space 和 小鍵盤數字鍵 上屏修正
 尚有bug待處理
 合併 zhuyin_space、lua_tran_kp
+新增快捷鍵開啟檔案/程式/網站
 --]]
 
 ----------------------------------------------------------------------------------------
 -- local utf8_sub = require("f_components/f_utf8_sub")
+local generic_open = require("p_components/p_generic_open")
 ----------------------------------------------------------------------------------------
 
--- local function init(env)
---   env.kp_pattern = {
---     ["0"] = "0",
---     ["1"] = "1",
---     ["2"] = "2",
---     ["3"] = "3",
---     ["4"] = "4",
---     ["5"] = "5",
---     ["6"] = "6",
---     ["7"] = "7",
---     ["8"] = "8",
---     ["9"] = "9",
---     ["Add"] = "+",
---     ["Subtract"] = "-",
---     ["Multiply"] = "*",
---     ["Divide"] = "/",
---     ["Decimal"] = ".",
---    }
---   env.set_char_bpmf = Set {"ㄅ", "ㄆ", "ㄇ", "ㄈ", "ㄉ", "ㄊ", "ㄋ", "ㄌ", "ㄍ", "ㄎ", "ㄏ", "ㄐ", "ㄑ", "ㄒ", "ㄓ", "ㄔ", "ㄕ", "ㄖ", "ㄗ", "ㄘ", "ㄙ", "ㄧ", "ㄨ", "ㄩ", "ㄚ", "ㄛ", "ㄜ", "ㄝ", "ㄞ", "ㄟ", "ㄠ", "ㄡ", "ㄢ", "ㄣ", "ㄤ", "ㄥ", "ㄦ", "ˉ", "ˊ", "ˇ", "ˋ", "˙", "ㄪ", "ㄫ", "ㄫ", "ㄬ", "ㄭ", "ㄮ", "ㄮ", "ㄯ", "ㄯ", "ㆠ", "ㆡ", "ㆢ", "ㆣ", "ㆤ", "ㆥ", "ㆦ", "ㆧ", "ㆨ", "ㆩ", "ㆪ", "ㆫ", "ㆬ", "ㆭ", "ㆭ", "ㆮ", "ㆯ", "ㆰ", "ㆰ", "ㆱ", "ㆱ", "ㆲ", "ㆲ", "ㆳ", "ㆴ", "ㆵ", "ㆶ", "ㆷ", "ㆸ", "ㆹ", "ㆺ"}
--- end
+local function init(env)
+  local engine = env.engine
+  local schema = engine.schema
+  local config = schema.config
+  local namespace1 = "mf_translator"
+  local namespace2 = "lua_custom_phrase"
+  local path = rime_api.get_user_data_dir()
+  env.prefix = config:get_string(namespace1 .. "/prefix") or ""
+  env.textdict = config:get_string(namespace2 .. "/user_dict") or ""
+  env.custom_phrase_file_name = path .. "/" .. env.textdict .. ".txt" or ""
+  -- log.info("lua_custom_phrase: \'" .. env.textdict .. ".txt\' Initilized!")  -- 日誌中提示已經載入 txt 短語
+  -- env.kp_pattern = {
+  --   ["0"] = "0",
+  --   ["1"] = "1",
+  --   ["2"] = "2",
+  --   ["3"] = "3",
+  --   ["4"] = "4",
+  --   ["5"] = "5",
+  --   ["6"] = "6",
+  --   ["7"] = "7",
+  --   ["8"] = "8",
+  --   ["9"] = "9",
+  --   ["Add"] = "+",
+  --   ["Subtract"] = "-",
+  --   ["Multiply"] = "*",
+  --   ["Divide"] = "/",
+  --   ["Decimal"] = ".",
+  --  }
+  -- env.set_char_bpmf = Set {"ㄅ", "ㄆ", "ㄇ", "ㄈ", "ㄉ", "ㄊ", "ㄋ", "ㄌ", "ㄍ", "ㄎ", "ㄏ", "ㄐ", "ㄑ", "ㄒ", "ㄓ", "ㄔ", "ㄕ", "ㄖ", "ㄗ", "ㄘ", "ㄙ", "ㄧ", "ㄨ", "ㄩ", "ㄚ", "ㄛ", "ㄜ", "ㄝ", "ㄞ", "ㄟ", "ㄠ", "ㄡ", "ㄢ", "ㄣ", "ㄤ", "ㄥ", "ㄦ", "ˉ", "ˊ", "ˇ", "ˋ", "˙", "ㄪ", "ㄫ", "ㄫ", "ㄬ", "ㄭ", "ㄮ", "ㄮ", "ㄯ", "ㄯ", "ㆠ", "ㆡ", "ㆢ", "ㆣ", "ㆤ", "ㆥ", "ㆦ", "ㆧ", "ㆨ", "ㆩ", "ㆪ", "ㆫ", "ㆬ", "ㆭ", "ㆭ", "ㆮ", "ㆯ", "ㆰ", "ㆰ", "ㆱ", "ㆱ", "ㆲ", "ㆲ", "ㆳ", "ㆴ", "ㆵ", "ㆶ", "ㆷ", "ㆸ", "ㆹ", "ㆺ"}
+end
 
 local kp_pattern = {
   ["0"] = "0",
@@ -109,6 +121,37 @@ local function processor(key, env)
         context:push_input( kp_p )
         return 1
       end
+    -- end
+
+    -- elseif env.prefix == "" then  -- 前面 seg:has_tag 已確定
+    --   return 2
+    elseif c_input == env.prefix .. "op" then
+      if key:repr() == "r" then
+        generic_open("https://github.com/rime")
+        context:clear()
+        return 1
+      elseif key:repr() == "o" then
+        generic_open("https://github.com/oniondelta/Onion_Rime_Files")
+        context:clear()
+        return 1
+      -- elseif key:repr() == "t" then  -- 測試用
+      --   -- io.popen("env.custom_phrase_file_name")  -- 無效！
+      --   -- engine:commit_text(env.textdict)  -- 測試用
+      --   generic_open("/System/Applications/Dictionary.app")
+      --   context:clear()
+      --   return 1
+      -- elseif key:repr() == "自行定義鍵位" then
+      --   generic_open("自行定義欲開啟程式或網站")
+      --   context:clear()
+      --   return 1
+      elseif env.textdict == "" then
+        return 2
+      elseif key:repr() == "p" then
+        generic_open(env.custom_phrase_file_name)
+        context:clear()
+        return 1
+      end
+
     end
 
 ---------------------------------------------------------------------------
@@ -291,5 +334,5 @@ end
 
 
 -- return mix_zhs_ltk
-return { func = processor }
--- return { init = init, func = processor }
+-- return { func = processor }
+return { init = init, func = processor }

@@ -180,19 +180,19 @@ local function init(env)
       , { "  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑰" }
       , { "  c [0-9]+〔內碼十進制 Dec〕", "⑱" }
       , { "  o [0-7]+〔內碼八進制 Oct〕", "⑲" }
-      , { "  kk〔快捷鍵 說明〕", "⑳" }
-      , { "  ko〔操作鍵 說明〕", "㉑" }
-      , { "  kh〔韓文 HNC 說明〕(注音系列)", "㉒" }
-      , { "  ks〔韓文 洋蔥形碼 說明〕(形碼系列)", "㉓" }
-      , { "  kj〔日文 羅馬字 說明〕", "㉔" }
-      , { "  ki〔拉丁 IPA國際音標 說明〕", "㉕" }
-      , { "  kp〔拉丁 KK/DJ/IPA音標 說明〕", "㉖" }
-      , { "  v〔版本資訊〕", "㉗" }
-      , { "  g〔Lua 所佔記憶體〕(Garbage)", "㉘" }
-      , { "  gc〔垃圾回收〕(Garbage Collection)", "㉙" }
-      , { "═══  結束  ═══  ", "㉚" }
-      -- , { "===========  結束  ===========    ", "㉚" }
-      , { "", "㉛" }
+      , { "  op [a-z]+〔開啟 檔案/程式/網站〕", "⑳" }
+      , { "  kk〔快捷鍵 說明〕", "㉑" }
+      , { "  ko〔操作鍵 說明〕", "㉒" }
+      , { "  kh〔韓文 HNC 說明〕(注音系列)", "㉓" }
+      , { "  ks〔韓文 洋蔥形碼 說明〕(形碼系列)", "㉔" }
+      , { "  kj〔日文 羅馬字 說明〕", "㉕" }
+      , { "  ki〔拉丁 IPA國際音標 說明〕", "㉖" }
+      , { "  kp〔拉丁 KK/DJ/IPA音標 說明〕", "㉗" }
+      , { "  v〔版本資訊〕", "㉘" }
+      , { "  g〔Lua 所佔記憶體〕(Garbage)", "㉙" }
+      , { "  gc〔垃圾回收〕(Garbage Collection)", "㉚" }
+      , { "═══  結束  ═══  ", "㉛" }
+      -- , { "===========  結束  ===========    ", "㉛" }
       , { "", "㉜" }
       , { "", "㉝" }
       , { "", "㉞" }
@@ -222,6 +222,9 @@ end
 掛載 mf_translator 函數開始
 --]]
 local function translate(input, seg, env)
+  local engine = env.engine
+  local context = engine.context
+  local caret_pos = context.caret_pos or 0
 
   --- 精簡程式碼用
   local yield_c = function(cand_text, comment)
@@ -707,6 +710,60 @@ local function translate(input, seg, env)
         cand.preedit = input .. "\t《拉丁 KK/DJ/IPA音標 說明》"
         yield(cand)
       end
+      return
+    end
+
+
+    -- 開啟網站或檔案
+    if (input == env.prefix .. "op") then
+      local keys_table = {
+          { " ※ 限開頭輸入", "⓿" }
+        , { "  ~p 〔編輯短語〕", "❶" }  --  "────────────  "
+        , { "  ~r 〔官方 GitHub 〕", "❷" }
+        , { "  ~o 〔洋蔥 GitHub 〕", "❸" }
+        , { " ═══  結束  ═══  ", "❹" }
+        , { "", "❺" }
+        , { "", "❻" }
+        , { "", "❼" }
+        , { "", "❽" }
+        , { "", "❾" }
+        , { "", "❿" }
+        , { "", "⓫" }
+        , { "", "⓬" }
+        , { "", "⓭" }
+        , { "", "⓮" }
+        , { "", "⓯" }
+        , { "", "⓰" }
+        , { "", "⓱" }
+        , { "", "⓲" }
+        , { "", "⓳" }
+        , { "", "⓴" }
+        }
+      for k, v in ipairs(keys_table) do
+        local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
+        cand.preedit = input .. "\t《開啟 檔案/程式/網站》▶"
+        yield(cand)
+      end
+      return
+    end
+
+    local op_check = string.match(input, env.prefix .. "op([a-z]+)$")
+    local first_check = caret_pos - #input
+    if op_check and first_check ~= 0 then
+      local cand2 = Candidate("tips", seg.start, seg._end, "", "〔非開頭輸入〕")
+      cand2.preedit = env.prefix .. "op " .. op_check .. "\t《開啟 檔案/程式/網站》"
+      yield(cand2)
+      return
+    elseif op_check == "p" then
+      local cand2 = Candidate("tips", seg.start, seg._end, "", "〔無短語功能〕or〔錯誤〕")
+      cand2.preedit = env.prefix .. "op " .. op_check .. "\t《開啟 檔案/程式/網站》"
+      yield(cand2)
+      return
+    elseif op_check and first_check == 0 then
+    -- if (input == env.prefix .. "opp" ) then
+      local cand2 = Candidate("tips", seg.start, seg._end, "", "〔無此開啟碼〕or〔錯誤〕")
+      cand2.preedit = env.prefix .. "op " .. op_check .. "\t《開啟 檔案/程式/網站》"
+      yield(cand2)
       return
     end
 
@@ -2209,7 +2266,7 @@ local function translate(input, seg, env)
       local preedit_url_e = string.gsub(preedit_url_e, "^(%x)$", "%%%1")
       local url_e_cand = url_decode(url_e_input)
 
-      local unfinished=string.match(url_e_cand, "… $")
+      local unfinished = string.match(url_e_cand, "… $")
       if unfinished then
         judge_unfinished = "〈輸入未完〉"
       else
