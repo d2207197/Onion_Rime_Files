@@ -7,7 +7,7 @@
 
 ----------------------------------------------------------------------------------------
 local generic_open = require("p_components/p_generic_open")
-local pattern_list = require("p_components/p_pattern_list")
+local op_pattern = require("p_components/p_op_pattern")
 ----------------------------------------------------------------------------------------
 
 local function init(env)
@@ -20,7 +20,7 @@ local function init(env)
   env.prefix = config:get_string(namespace1 .. "/prefix") or ""
   env.textdict = config:get_string(namespace2 .. "/user_dict") or ""
   env.custom_phrase = path .. "/" .. env.textdict .. ".txt" or ""
-  env.pattern_list = path .. "/lua/p_components/p_pattern_list.lua" or ""
+  env.op_pattern = path .. "/lua/p_components/p_op_pattern.lua" or ""
   -- log.info("lua_custom_phrase: \'" .. env.textdict .. ".txt\' Initilized!")  -- 日誌中提示已經載入 txt 短語
   env.en_prefix = config:get_string("easy_en/prefix") or ""
   env.jp_prefix = config:get_string("japan/prefix") or ""
@@ -309,13 +309,13 @@ local function processor(key, env)
     -- if env.prefix == "" then  -- 前面 seg:has_tag 已確定
     --   return 2
 
-    local op1, op2 = string.match(c_input, "^" .. env.prefix .. "(op)([a-z]?)")
-    -- if c_input == env.prefix .. "op" then
+    local op1, op2 = string.match(c_input, "^" .. env.prefix .. "(r)([a-z]?)$")
+    -- if c_input == env.prefix .. "r" then
     if op1 then
       local key_kp = key:repr():match("^([a-z])$")
-      local kp_p = pattern_list[ op2 .. key_kp ]
-      if key:repr() == "l" then
-        generic_open(env.pattern_list)
+      local kp_p = op_pattern[ op2 .. key_kp ]
+      if op2 == "f" and key:repr() == "t" then
+        generic_open(env.op_pattern)
         context:clear()
         return 1
       elseif kp_p ~= nil then
@@ -325,7 +325,7 @@ local function processor(key, env)
         return 1
       elseif env.textdict == "" then
         return 2
-      elseif key:repr() == "p" then
+      elseif op2 == "f" and key:repr() == "c" then
         -- io.popen("env.custom_phrase")  -- 無效！
         generic_open(env.custom_phrase)
         context:clear()

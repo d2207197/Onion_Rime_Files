@@ -1,0 +1,20 @@
+--[[
+可快捷開啟（run/read）之 檔案/程式/網址 列表。
+
+只限開頭輸入「前綴」「r」「開啟碼」。（防止輸入長碼時，誤按整個長碼跳掉）
+開啟碼為英文 ≤ 2。（單碼按鍵數少，方便輸入，但可用組數少，故延伸至兩碼，組數多）
+注意！：單碼會有劫碼情形，如：「p」已設定開啟某檔，p[a-z]將無法輸入並開啟。
+開啟碼規律（非強制性設定）：「前綴」「r」後接「f」為開啟檔案、「w」為開啟網址、「a」為開啟 app。
+修改後需「重新部署」才可生效。
+--]]
+
+local op_pattern = {
+  ["wo"] = "https://github.com/oniondelta/Onion_Rime_Files",
+  ["wr"] = "https://github.com/rime",
+  -- ["開啟碼"] = "檔案or程式or網址位置",
+  -- ["ac"] = "/System/Applications/Calculator.app",    -- mac 專用：計算機
+  -- ["ad"] = "/System/Applications/Dictionary.app",    -- mac 專用：字典
+  -- ["at"] = "/System/Applications/TextEdit.app",    -- mac 專用：文字編輯
+ }
+
+return op_pattern
