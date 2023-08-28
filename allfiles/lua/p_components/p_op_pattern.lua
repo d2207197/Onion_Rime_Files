@@ -14,6 +14,7 @@ local op_pattern = {
   ["wo"] = "https://github.com/oniondelta/Onion_Rime_Files",
   ["wr"] = "https://github.com/rime",
 --------------------------------------------------------------------------
+  -- ["as"] = "/Applications/Sublime\\ Text.app",       -- mac 專用：路徑中空格用「\\ 」標示
   -- ["ac"] = "/System/Applications/Calculator.app",    -- mac 專用：計算機
   -- ["at"] = "/System/Applications/TextEdit.app",      -- mac 專用：文字編輯
   -- ["ad"] = "/System/Applications/Dictionary.app",    -- mac 專用：字典
