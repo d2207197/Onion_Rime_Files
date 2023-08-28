@@ -14,15 +14,17 @@ local op_pattern = {
   ["wo"] = "https://github.com/oniondelta/Onion_Rime_Files",
   ["wr"] = "https://github.com/rime",
 --------------------------------------------------------------------------
-  -- ["as"] = "/Applications/Sublime' 'Text.app",       -- mac 專用：路徑中空格用「' '」標示
-  -- ["as"] = "/Applications/Sublime\\ Text.app",       -- mac 專用：路徑中空格用「\\ 」標示
-  -- ["ac"] = "/System/Applications/Calculator.app",    -- mac 專用：計算機
-  -- ["at"] = "/System/Applications/TextEdit.app",      -- mac 專用：文字編輯
-  -- ["ad"] = "/System/Applications/Dictionary.app",    -- mac 專用：字典
+  -- ["ac"] = "/System/Applications/Calculator.app",           -- mac 專用：計算機
+  -- ["at"] = "/System/Applications/TextEdit.app",             -- mac 專用：文字編輯
+  -- ["ad"] = "/System/Applications/Dictionary.app",           -- mac 專用：字典
+  -- ["ac"] = "/Applications/CotEditor.app",                   -- mac 專用：一般 app
+  -- ["as"] = "/Applications/Sublime' 'Text.app",              -- mac 專用：路徑中空格用「' '」標示
+  -- ["as"] = "/Applications/Sublime\\ Text.app",              -- mac 專用：路徑中空格用「\\ 」標示
 --------------------------------------------------------------------------
-  -- ["ac"] = [["C:\WINDOWS\system32\calc.exe"]],       -- win 專用：計算機
-  -- ["an"] = [["C:\WINDOWS\system32\notepad.exe"]],    -- win 專用：記事本
-  -- ["ap"] = [["C:\WINDOWS\system32\mspaint.exe"]],    -- win 專用：小畫家
+  -- ["ac"] = [["C:\WINDOWS\system32\calc.exe"]],              -- win 專用：計算機
+  -- ["an"] = [["C:\WINDOWS\system32\notepad.exe"]],           -- win 專用：記事本
+  -- ["ap"] = [["C:\WINDOWS\system32\mspaint.exe"]],           -- win 專用：小畫家
+  -- ["aa"] = [["C:\Program Files\Notepad++\notepad++.exe"]],  -- win 專用：路徑中空格不用更動
 --------------------------------------------------------------------------
  }
 
