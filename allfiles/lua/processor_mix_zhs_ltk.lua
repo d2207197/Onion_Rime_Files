@@ -106,7 +106,7 @@ local function processor(key, env)
   -- elseif seg:has_tag("lua") then
   -- elseif seg:has_tag("lua") and kp_p ~= nil then
 
-    local key_kp = key:repr():match("KP_([%d%a]+)$")  -- KP_([ASDM%d][%a]*)
+    local key_kp = key:repr():match("^KP_([%d%a]+)$")  -- KP_([ASDM%d][%a]*)
     local kp_p = kp_pattern[key_kp]
     if kp_p ~= nil then
       if not check_pre and not check_num_cal then
@@ -123,24 +123,25 @@ local function processor(key, env)
         context:push_input( kp_p )
         return 1
       end
-    -- end
+    end
 
-    -- elseif env.prefix == "" then  -- 前面 seg:has_tag 已確定
+    -- if env.prefix == "" then  -- 前面 seg:has_tag 已確定
     --   return 2
-    elseif c_input == env.prefix .. "op" then
+
+    local op1, op2 = string.match(c_input, "^" .. env.prefix .. "(op)([a-z]?)")
+    -- if c_input == env.prefix .. "op" then
+    if op1 then
       local key_kp = key:repr():match("^([a-z])$")
-      local kp_p = pattern_list[key_kp]
+      local kp_p = pattern_list[ op2 .. key_kp ]
       if key:repr() == "l" then
         generic_open(env.pattern_list)
         context:clear()
         return 1
-
       elseif kp_p ~= nil then
         -- engine:commit_text(kp_p)  -- 測試用
         generic_open(kp_p)
         context:clear()
         return 1
-
       elseif env.textdict == "" then
         return 2
       elseif key:repr() == "p" then
@@ -148,9 +149,7 @@ local function processor(key, env)
         generic_open(env.custom_phrase)
         context:clear()
         return 1
-
       end
-
     end
 
 ---------------------------------------------------------------------------

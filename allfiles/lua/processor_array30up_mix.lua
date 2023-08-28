@@ -23,7 +23,7 @@ local function init(env)
   local path = rime_api.get_user_data_dir()
   env.prefix = config:get_string(namespace1 .. "/prefix") or ""
   -- env.textdict = config:get_string(namespace2 .. "/user_dict") or ""
-  -- env.custom_phrase_file_name = path .. "/" .. env.textdict .. ".txt" or ""
+  -- env.custom_phrase = path .. "/" .. env.textdict .. ".txt" or ""
   env.pattern_list = path .. "/lua/p_components/p_pattern_list.lua" or ""
   -- log.info("lua_custom_phrase: \'" .. env.textdict .. ".txt\' Initilized!")  -- 日誌中提示已經載入 txt 短語
   -- env.kp_pattern = {
@@ -145,24 +145,25 @@ local function processor(key, env)
         context:push_input( kp_p )
         return 1
       end
-    -- end
+    end
 
-    -- elseif env.prefix == "" then  -- 前面 seg:has_tag 已確定
+    -- if env.prefix == "" then  -- 前面 seg:has_tag 已確定
     --   return 2
-    elseif c_input == env.prefix .. "op" then
+
+    local op1, op2 = string.match(c_input, "^" .. env.prefix .. "(op)([a-z]?)")
+    -- if c_input == env.prefix .. "op" then
+    if op1 then
       local key_kp = key:repr():match("^([a-z])$")
-      local kp_p = pattern_list[key_kp]
+      local kp_p = pattern_list[ op2 .. key_kp ]
       if key:repr() == "l" then
         generic_open(env.pattern_list)
         context:clear()
         return 1
-
       elseif kp_p ~= nil then
         -- engine:commit_text(kp_p)  -- 測試用
         generic_open(kp_p)
         context:clear()
         return 1
-
       -- elseif env.textdict == "" then
       --   return 2
       -- elseif key:repr() == "p" then
@@ -170,9 +171,7 @@ local function processor(key, env)
       --   generic_open(env.custom_phrase)
       --   context:clear()
       --   return 1
-
       end
-
     end
 
 -----------------------------------------------------------------------------

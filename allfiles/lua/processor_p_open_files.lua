@@ -57,21 +57,20 @@ local function processor(key, env)
     return 2
 
   elseif seg:has_tag("mf_translator") then  -- 開頭
-    -- if string.match(c_input, env.prefix .. "op$") then  -- 隨時
-    if c_input == env.prefix .. "op" then
+    local op1, op2 = string.match(c_input, "^" .. env.prefix .. "(op)([a-z]?)")
+    -- if c_input == env.prefix .. "op" then
+    if op1 then
       local key_kp = key:repr():match("^([a-z])$")
-      local kp_p = pattern_list[key_kp]
+      local kp_p = pattern_list[ op2 .. key_kp ]
       if key:repr() == "l" then
         generic_open(env.pattern_list)
         context:clear()
         return 1
-
       elseif kp_p ~= nil then
         -- engine:commit_text(kp_p)  -- 測試用
         generic_open(kp_p)
         context:clear()
         return 1
-
       elseif env.textdict == "" then
         return 2
       elseif key:repr() == "p" then
@@ -79,7 +78,6 @@ local function processor(key, env)
         generic_open(env.custom_phrase)
         context:clear()
         return 1
-
       end
     end
 

@@ -747,7 +747,7 @@ local function translate(input, seg, env)
       return
     end
 
-    local op_check = string.match(input, env.prefix .. "op([a-z])$")
+    local op_check = string.match(input, env.prefix .. "op([a-z][a-z]?)$")
     local first_check = caret_pos - #input
     if op_check and first_check ~= 0 then
       local cand2 = Candidate("tips", seg.start, seg._end, "", "〔非開頭輸入〕")
