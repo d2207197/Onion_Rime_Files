@@ -723,8 +723,8 @@ local function translate(input, seg, env)
         , { "  ~fc 〔編輯 custom 短語〕", "❸" }
         , { "  ~wr 〔 Rime 官方 GitHub 〕", "❹" }
         , { "  ~wo 〔 Onion 洋蔥 GitHub 〕", "❺" }
-        , { "═══  結束  ═══  ", "❻" }
-        , { "", "❼" }
+        , { "  ~wwo 〔 Onion 洋蔥 GitHub Wiki 〕", "❻" }
+        , { "═══  結束  ═══  ", "❼" }
         , { "", "❽" }
         , { "", "❾" }
         , { "", "❿" }
