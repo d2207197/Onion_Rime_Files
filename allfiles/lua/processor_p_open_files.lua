@@ -57,7 +57,7 @@ local function processor(key, env)
     return 2
 
   elseif seg:has_tag("mf_translator") then  -- 開頭
-    local op1, op2 = string.match(c_input, "^" .. env.prefix .. "(r)([a-z]?)$")
+    local op1, op2 = string.match(c_input, "^" .. env.prefix .. "(r)([a-z]*)$")
     -- if c_input == env.prefix .. "r" then
     if op1 then
       local key_kp = key:repr():match("^([a-z])$")

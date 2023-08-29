@@ -342,7 +342,7 @@ local function processor(key, env)
     -- if env.prefix == "" then  -- 前面 seg:has_tag 已確定
     --   return 2
 
-    local op1, op2 = string.match(c_input, "^" .. env.prefix .. "(r)([a-z]?)$")
+    local op1, op2 = string.match(c_input, "^" .. env.prefix .. "(r)([a-z]*)$")
     -- if c_input == env.prefix .. "r" then
     if op1 then
       local key_kp = key:repr():match("^([a-z])$")

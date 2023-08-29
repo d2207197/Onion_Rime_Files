@@ -180,7 +180,7 @@ local function init(env)
       , { "  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑰" }
       , { "  c [0-9]+〔內碼十進制 Dec〕", "⑱" }
       , { "  o [0-7]+〔內碼八進制 Oct〕", "⑲" }
-      , { "  r [a-z][a-z]〔檔案/程式/網站〕", "⑳" }
+      , { "  r [a-z]+〔檔案/程式/網站〕", "⑳" }
       , { "  kk〔快捷鍵 說明〕", "㉑" }
       , { "  ko〔操作鍵 說明〕", "㉒" }
       , { "  kh〔韓文 HNC 說明〕(注音系列)", "㉓" }
@@ -717,7 +717,7 @@ local function translate(input, seg, env)
     -- 開啟檔案/程式/網站
     if (input == env.prefix .. "r") then
       local keys_table = {
-          { "※ 限開頭輸入，限英文 ≤ 2  ", "⓿" }
+          { "※ 限起始輸入，限英文[a-z]  ", "⓿" }  -- ≤ 2
         , { "※ 編輯後「重新部署」才生效  ", "❶" }  --  "────────────  "
         , { "  ~ft 〔編輯 檔案/程式/網站 table 〕", "❷" }
         , { "  ~fc 〔編輯 custom 短語〕", "❸" }
@@ -747,10 +747,10 @@ local function translate(input, seg, env)
       return
     end
 
-    local op_check = string.match(input, env.prefix .. "r([a-z][a-z]?)$")
+    local op_check = string.match(input, env.prefix .. "r([a-z]+)$")
     local first_check = caret_pos - #input
     if op_check and first_check ~= 0 then
-      local cand2 = Candidate("tips", seg.start, seg._end, "", "〔非開頭輸入〕")
+      local cand2 = Candidate("tips", seg.start, seg._end, "", "〔非起始輸入〕")
       cand2.preedit = env.prefix .. "r " .. op_check .. "\t《檔案/程式/網站》"
       yield(cand2)
       return
