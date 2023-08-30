@@ -2550,7 +2550,7 @@ local function translate(input, seg, env)
 
 
     --- 補以下開頭負號缺漏
-    local neg_nf = string.match(input, env.prefix .. "[-]$")
+    local neg_nf = string.match(input, env.prefix .. "[-r]$")
     if neg_nf then
       yield_c( "-", "〔一般負號〕")
       yield_c( "－", "〔全形負號〕")
@@ -2576,7 +2576,7 @@ local function translate(input, seg, env)
     end
 
     --- 補以下開頭負號+小數點缺漏
-    local neg_nf_dot = string.match(input, env.prefix .. "[-][.]$")
+    local neg_nf_dot = string.match(input, env.prefix .. "[-r][.]$")
     if neg_nf_dot then
       yield_c( "-0.", "〔一般數字〕")
       yield_c( ",", "〔千分位〕")
@@ -2593,8 +2593,11 @@ local function translate(input, seg, env)
     end
 
     -- local numberout = string.match(input, env.prefix .. "/?(%d+)$")
-    local neg_n, dot0 ,numberout, dot1, afterdot = string.match(input, env.prefix .. "([-]?)([.]?)(%d+)(%.?)(%d*)$")
+    local neg_n, dot0 ,numberout, dot1, afterdot = string.match(input, env.prefix .. "([-rq(]?)([.]?)(%d+)(%.?)(%d*)$")
     if (tonumber(numberout)~=nil) then
+      local neg_n = string.gsub(neg_n, "r", "-")  --配合計算機算符
+      local neg_n = string.gsub(neg_n, "[q(]", "")  --配合計算機算符
+
       if dot0~="" and dot1~="" then
         yield_c( "" , "〔不能兩個小數點〕")  --字符過濾可能會過濾掉""整個選項。
         return
