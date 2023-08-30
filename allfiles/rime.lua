@@ -65,7 +65,7 @@
 --      - lua_processor@ascii_punct_change           --（引lua資料夾）（bopomo_onionplus_2和3） 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 --      - lua_processor@array30up                    --（關） 行列30三四碼字按空格直接上屏
 --      - lua_processor@array30up_zy                 --（關） 行列30注音反查 Return 和 space 上屏修正
---      - lua_processor@p_open_files                 --（關） （bopomo_onionplus_2）快捷鍵開啟檔案/程式/網站
+--      - lua_processor@p_open_files/p_run_files     --（關） （bopomo_onionplus_2）快捷鍵開啟檔案/程式/網站
 --
 --      = 以下針對「編碼有用到空白鍵」方案，如：注音一聲，去除空白上屏產生莫名之空格 =
 --      - lua_processor@s2r_ss                       --（關） 注音掛接 t2_translator 空白上屏產生莫名空格去除（只有開頭 ^'/ 才作用，比下條目更精簡，少了 is_composing 限定）
@@ -310,7 +310,9 @@ kr_2set_0m_choice = require("processor_kr_2set_0m_choice")
 
 -- --- p_open_files （bopomo_onionplus_2）
 -- -- 快捷鍵開啟檔案/程式/網站
--- p_open_files = require("processor_p_open_files")
+-- -- p_open_files：英文字母開啟/p_run_files：上屏鍵開啟。
+-- -- p_open_files = require("processor_p_open_files")
+-- p_run_files = require("processor_p_run_files")
 
 
 

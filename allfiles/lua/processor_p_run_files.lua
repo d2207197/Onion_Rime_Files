@@ -1,11 +1,11 @@
---- @@ p_open_files
+--- @@ p_run_files
 --[[
 快捷鍵開啟檔案/程式/網站
 --]]
 
 ----------------------------------------------------------------------------------------
 local generic_open = require("p_components/p_generic_open")
-local op_pattern = require("p_components/p_op_pattern")
+local run_pattern = require("p_components/p_run_pattern")
 ----------------------------------------------------------------------------------------
 
 -- local function generic_open(dest)
@@ -29,7 +29,7 @@ local function init(env)
   env.prefix = config:get_string(namespace1 .. "/prefix") or ""
   env.textdict = config:get_string(namespace2 .. "/user_dict") or ""
   env.custom_phrase = path .. "/" .. env.textdict .. ".txt" or ""
-  env.op_pattern = path .. "/lua/p_components/p_op_pattern.lua" or ""
+  env.run_pattern = path .. "/lua/p_components/p_run_pattern.lua" or ""
   -- log.info("lua_custom_phrase: \'" .. env.textdict .. ".txt\' Initilized!")  -- 日誌中提示已經載入 txt 短語
 end
 
@@ -56,36 +56,46 @@ local function processor(key, env)
   elseif key:release() or key:ctrl() or key:alt() or key:super() then
     return 2
 
+-----------------------------------------------------------------------------
+
+  --- pass not space Return KP_Enter key_num
+  elseif key:repr() ~= "space" and key:repr() ~= "Return" and key:repr() ~= "KP_Enter" then
+    return 2
+
+-----------------------------------------------------------------------------
+
   elseif seg:has_tag("mf_translator") then  -- 開頭
-    local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]*)$")
-    -- if c_input == env.prefix .. "r" then
+    local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]+)$")
+    local run_in = run_pattern[ op_code ] -- 此處不能「.open」，如 op_code 不符合會報錯！
     if op_code then
-      local key_kp = key:repr():match("^([a-z])$")
-      local kp_p = op_pattern[ op_code .. key_kp ]
-      if op_code == "f" and key:repr() == "t" then
-        generic_open(env.op_pattern)
+      if op_code == "t" then
+        -- engine:commit_text( "TEST！！！" )  -- 測試用
+        generic_open(env.run_pattern)
         context:clear()
         return 1
-      elseif kp_p ~= nil then
-        -- engine:commit_text(kp_p)  -- 測試用
-        generic_open(kp_p)
+      elseif run_in ~= nil then
+        -- engine:commit_text(run_in)  -- 測試用
+        generic_open(run_in.open)  -- 要確定 run_in 不為 nil，才能加.open
         context:clear()
         return 1
       elseif env.textdict == "" then
         return 2
-      elseif op_code == "f" and key:repr() == "c" then
+      elseif op_code == "c" then
         -- io.popen("env.custom_phrase")  -- 無效！
         generic_open(env.custom_phrase)
         context:clear()
         return 1
+      else  -- 沒有該碼，空白鍵清空
+        -- context:confirm_current_selection()
+        context:clear()
+        return 1
       end
     end
-
   end
 
   return 2 -- kNoop
 end
 
--- return p_open_files
+-- return p_run_files
 -- return { func = processor }
 return { init = init, func = processor }

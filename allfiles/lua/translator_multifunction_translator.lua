@@ -138,6 +138,11 @@ local simple_calculator = require("f_components/f_simple_calculator")
 local hotkeys = require("f_components/f_hot_keys")
 
 ----------------------------------------------------------------------------------------
+--- 開啟
+
+local run_pattern = require("p_components/p_run_pattern")
+
+----------------------------------------------------------------------------------------
 --- 置入方案範例
 --[[
 engine:
@@ -180,7 +185,7 @@ local function init(env)
       , { "  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑰" }
       , { "  c [0-9]+〔內碼十進制 Dec〕", "⑱" }
       , { "  o [0-7]+〔內碼八進制 Oct〕", "⑲" }
-      , { "  r [a-z]+〔檔案/程式/網站〕", "⑳" }
+      , { "  j [a-z]+〔檔案/程式/網站〕", "⑳" }
       , { "  kk〔快捷鍵 說明〕", "㉑" }
       , { "  ko〔操作鍵 說明〕", "㉒" }
       , { "  kh〔韓文 HNC 說明〕(注音系列)", "㉓" }
@@ -715,15 +720,15 @@ local function translate(input, seg, env)
 
 
     -- 開啟檔案/程式/網站
-    if (input == env.prefix .. "r") then
+    if (input == env.prefix .. "j") then
       local keys_table = {
           { "※ 限起始輸入，限英文[a-z]  ", "⓿" }  -- ≤ 2
         , { "※ 編輯後「重新部署」才生效  ", "❶" }  --  "────────────  "
-        , { "  ~ft 〔編輯 檔案/程式/網站 table 〕", "❷" }
-        , { "  ~fc 〔編輯 custom 短語〕", "❸" }
-        , { "  ~wr 〔 Rime 官方 GitHub 〕", "❹" }
-        , { "  ~wo 〔 Onion 洋蔥 GitHub 〕", "❺" }
-        , { "  ~wwo 〔 Onion 洋蔥 GitHub Wiki 〕", "❻" }
+        , { "  ~t␣ 〔編輯 檔案/程式/網站 table 〕", "❷" }
+        , { "  ~c␣ 〔編輯 custom 短語〕", "❸" }
+        , { "  ~r␣ 〔 Rime 官方 GitHub 〕", "❹" }
+        , { "  ~o␣ 〔 Onion 洋蔥 GitHub 〕", "❺" }
+        , { "  ~ow␣ 〔 Onion 洋蔥 GitHub Wiki 〕", "❻" }
         , { "═══  結束  ═══  ", "❼" }
         , { "", "❽" }
         , { "", "❾" }
@@ -747,24 +752,52 @@ local function translate(input, seg, env)
       return
     end
 
-    local op_check = string.match(input, env.prefix .. "r([a-z]+)$")
+    local op_check = string.match(input, env.prefix .. "j([a-z]+)$")
     local first_check = caret_pos - #input
     if op_check and first_check ~= 0 then
       local cand2 = Candidate("tips", seg.start, seg._end, "", "〔非起始輸入〕")
-      cand2.preedit = env.prefix .. "r " .. op_check .. "\t《檔案/程式/網站》"
+      cand2.preedit = env.prefix .. "j " .. op_check .. "\t《檔案/程式/網站》"
       yield(cand2)
       return
-    elseif op_check == "fc" then
+    elseif op_check == "t" then
+      local cand2 = Candidate("tips", seg.start, seg._end, "", "  ~␣ 〔編輯 檔案/程式/網站 table 〕")  -- or〔錯誤〕
+      cand2.preedit = env.prefix .. "j " .. op_check .. "\t《檔案/程式/網站》"
+      yield(cand2)
+      return
+    elseif op_check == "c" and env.prefix == "`" then
       local cand2 = Candidate("tips", seg.start, seg._end, "", "〔無短語功能〕")  -- or〔錯誤〕
-      cand2.preedit = env.prefix .. "r " .. op_check .. "\t《檔案/程式/網站》"
+      cand2.preedit = env.prefix .. "j " .. op_check .. "\t《檔案/程式/網站》"
+      yield(cand2)
+      return
+    elseif op_check == "c" then
+      local cand2 = Candidate("tips", seg.start, seg._end, "", "  ~␣ 〔編輯 custom 短語〕")  -- or〔錯誤〕
+      cand2.preedit = env.prefix .. "j " .. op_check .. "\t《檔案/程式/網站》"
       yield(cand2)
       return
     elseif op_check and first_check == 0 then
-    -- if (input == env.prefix .. "opp" ) then
-      local cand2 = Candidate("tips", seg.start, seg._end, "", "〔無此開啟碼〕")  -- or〔錯誤〕
-      cand2.preedit = env.prefix .. "r " .. op_check .. "\t《檔案/程式/網站》"
-      yield(cand2)
+      local run_in = run_pattern[ op_check ]
+      if run_in ~= nil then
+        local cand2 = Candidate("tips", seg.start, seg._end, "", "  ~␣ 〔" .. run_in.name .. "〕")  -- or〔錯誤〕
+        cand2.preedit = env.prefix .. "j " .. op_check .. "\t《檔案/程式/網站》"
+        yield(cand2)
       return
+      elseif run_in == nil then
+        local cand2 = Candidate("tips", seg.start, seg._end, "", "〔無〕")  -- 〔無此開啟碼〕or〔錯誤〕
+        cand2.preedit = env.prefix .. "j " .. op_check .. "\t《檔案/程式/網站》"
+        yield(cand2)
+        return
+      end
+    -- elseif op_check == "fc" then
+    --   local cand2 = Candidate("tips", seg.start, seg._end, "", "〔無短語功能〕")  -- or〔錯誤〕
+    --   cand2.preedit = env.prefix .. "j " .. op_check .. "\t《檔案/程式/網站》"
+    --   yield(cand2)
+    --   return
+    -- elseif op_check and first_check == 0 then
+    -- -- if (input == env.prefix .. "opp" ) then
+    --   local cand2 = Candidate("tips", seg.start, seg._end, "", "〔無此開啟碼〕")  -- or〔錯誤〕
+    --   cand2.preedit = env.prefix .. "j " .. op_check .. "\t《檔案/程式/網站》"
+    --   yield(cand2)
+    --   return
     end
 
 
