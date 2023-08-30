@@ -23,18 +23,20 @@ local run_pattern = {
   -- ["as"] = { name = "Sublime", open = "/Applications/Sublime' 'Text.app" },          -- mac 專用：路徑中空格用「' '」標示
   -- ["as"] = { name = "Sublime", open = "/Applications/Sublime\\ Text.app" },          -- mac 專用：路徑中空格用「\\ 」標示
 --------------------------------------------------------------------------
-  -- ["r"] = { name = " Rime 官方 GitHub ", open = "-a '/Applications/Firefox.app' https://github.com/rime" },                               -- mac 專用：指定程式開啟
-  -- ["o"] = { name = " Onion 洋蔥 GitHub ", open = "-a '/Applications/Firefox.app' https://github.com/oniondelta/Onion_Rime_Files" },        -- mac 專用：指定程式開啟
+  -- ["r"] = { name = " Rime 官方 GitHub ", open = "-a '/Applications/Firefox.app' https://github.com/rime" },                                     -- mac 專用：指定程式開啟
+  -- ["o"] = { name = " Onion 洋蔥 GitHub ", open = "-a '/Applications/Firefox.app' https://github.com/oniondelta/Onion_Rime_Files" },             -- mac 專用：指定程式開啟
   -- ["ow"] = { name = " Onion 洋蔥 GitHub Wiki ", open = "-a '/Applications/Firefox.app' https://github.com/oniondelta/Onion_Rime_Files/wiki" },  -- mac 專用：指定程式開啟
 --------------------------------------------------------------------------
-  -- ["ft"] = { name = " TEST ", open = "-a '/Applications/CotEditor.app' /Users/使用者名稱/test.txt",     -- mac 專用：指定程式開啟
-  -- ["ft"] = { name = " TEST ", open = "-a '/Applications/Sublime Text.app' /Users/使用者名稱/test.txt",  -- mac 專用：指定程式開啟（此處程式名稱空格不用更動）
+  -- ["ft"] = { name = " TEST ", open = "-a '/Applications/CotEditor.app' /Users/使用者名稱/test.txt" },     -- mac 專用：指定程式開啟
+  -- ["ft"] = { name = " TEST ", open = "-a '/Applications/Sublime Text.app' /Users/使用者名稱/test.txt" },  -- mac 專用：指定程式開啟（此處前方程式名稱空格不用更動，後方路徑空格需補「' '」或「\\ 」）
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
-  -- ["ac"] = { name = "計算機", open = [["C:\WINDOWS\system32\calc.exe"]] },              -- win 專用：計算機
-  -- ["an"] = { name = "記事本", open = [["C:\WINDOWS\system32\notepad.exe"]] },           -- win 專用：記事本
-  -- ["ap"] = { name = "小畫家", open = [["C:\WINDOWS\system32\mspaint.exe"]] },           -- win 專用：小畫家
+  -- ["ac"] = { name = "計算機", open = [["C:\WINDOWS\system32\calc.exe"]] },                    -- win 專用：計算機
+  -- ["an"] = { name = "記事本", open = [["C:\WINDOWS\system32\notepad.exe"]] },                 -- win 專用：記事本
+  -- ["ap"] = { name = "小畫家", open = [["C:\WINDOWS\system32\mspaint.exe"]] },                 -- win 專用：小畫家
   -- ["aa"] = { name = " Notepad++ ", open = [["C:\Program Files\Notepad++\notepad++.exe"]] },  -- win 專用：路徑中空格不用更動
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
   -- ["r"] = "https://github.com/rime",                             -- 測試用

@@ -723,7 +723,7 @@ local function translate(input, seg, env)
     if (input == env.prefix .. "j") then
       local keys_table = {
           { "※ 限起始輸入，限英文[a-z]  ", "⓿" }  -- ≤ 2
-        , { "※ 編輯後「重新部署」才生效  ", "❶" }  --  "────────────  "
+        , { "※ 編輯後須「重新部署」生效  ", "❶" }  --  "────────────  "
         , { "  ~t␣ 〔編輯 檔案/程式/網站 table 〕", "❷" }
         , { "  ~c␣ 〔編輯 custom 短語〕", "❸" }
         , { "  ~r␣ 〔 Rime 官方 GitHub 〕", "❹" }
