@@ -12,6 +12,9 @@ local run_pattern = {
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
   ["r"] = { name = " Rime 官方 GitHub ", open = "https://github.com/rime" },
+  ["rw"] = { name = " Rime 詳解 ", open = "https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md" },
+  ["l"] = { name = " librime-lua 官方 GitHub ", open = "https://github.com/hchunhui/librime-lua" },
+  ["lw"] = { name = " librime-lua 腳本開發指南 ", open = "https://github.com/hchunhui/librime-lua/wiki/Scripting" },
   ["o"] = { name = " Onion 洋蔥 GitHub ", open = "https://github.com/oniondelta/Onion_Rime_Files" },
   ["ow"] = { name = " Onion 洋蔥 GitHub Wiki ", open = "https://github.com/oniondelta/Onion_Rime_Files/wiki" },
 --------------------------------------------------------------------------
@@ -23,9 +26,12 @@ local run_pattern = {
   -- ["as"] = { name = "Sublime", open = "/Applications/Sublime' 'Text.app" },          -- mac 專用：路徑中空格用「' '」標示
   -- ["as"] = { name = "Sublime", open = "/Applications/Sublime\\ Text.app" },          -- mac 專用：路徑中空格用「\\ 」標示
 --------------------------------------------------------------------------
-  -- ["r"] = { name = " Rime 官方 GitHub ", open = "-a '/Applications/Firefox.app' https://github.com/rime" },                                     -- mac 專用：指定程式開啟
-  -- ["o"] = { name = " Onion 洋蔥 GitHub ", open = "-a '/Applications/Firefox.app' https://github.com/oniondelta/Onion_Rime_Files" },             -- mac 專用：指定程式開啟
-  -- ["ow"] = { name = " Onion 洋蔥 GitHub Wiki ", open = "-a '/Applications/Firefox.app' https://github.com/oniondelta/Onion_Rime_Files/wiki" },  -- mac 專用：指定程式開啟
+  -- ["r"] = { name = " Rime 官方 GitHub ", open = "-a '/Applications/Firefox.app' https://github.com/rime" },                                                     -- mac 專用：指定程式開啟
+  -- ["rw"] = { name = " Rime 詳解 ", open = "-a '/Applications/Firefox.app' https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md" },  -- mac 專用：指定程式開啟
+  -- ["l"] = { name = " librime-lua 官方 GitHub ", open = "-a '/Applications/Firefox.app' https://github.com/hchunhui/librime-lua" },                              -- mac 專用：指定程式開啟
+  -- ["lw"] = { name = " librime-lua 腳本開發指南 ", open = "-a '/Applications/Firefox.app' https://github.com/hchunhui/librime-lua/wiki/Scripting" },              -- mac 專用：指定程式開啟
+  -- ["o"] = { name = " Onion 洋蔥 GitHub ", open = "-a '/Applications/Firefox.app' https://github.com/oniondelta/Onion_Rime_Files" },                             -- mac 專用：指定程式開啟
+  -- ["ow"] = { name = " Onion 洋蔥 GitHub Wiki ", open = "-a '/Applications/Firefox.app' https://github.com/oniondelta/Onion_Rime_Files/wiki" },                  -- mac 專用：指定程式開啟
 --------------------------------------------------------------------------
   -- ["ft"] = { name = " TEST ", open = "-a '/Applications/CotEditor.app' /Users/使用者名稱/test.txt" },     -- mac 專用：指定程式開啟
   -- ["ft"] = { name = " TEST ", open = "-a '/Applications/Sublime Text.app' /Users/使用者名稱/test.txt" },  -- mac 專用：指定程式開啟（此處前方程式名稱空格不用更動，後方路徑空格需補「' '」或「\\ 」）
@@ -37,11 +43,12 @@ local run_pattern = {
   -- ["aa"] = { name = " Notepad++ ", open = [["C:\Program Files\Notepad++\notepad++.exe"]] },  -- win 專用：路徑中空格不用更動
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
---------------------------------------------------------------------------
---------------------------------------------------------------------------
-  -- ["r"] = "https://github.com/rime",                             -- 測試用
-  -- ["x"] = { name = "缺省測試" },                                  -- 測試用
-  -- ["y"] = { name = "油管", open = "https://www.youtube.com/" },   -- 測試用
+--[[
+以下測試用
+--]]
+  -- ["r"] = "https://github.com/rime",
+  -- ["x"] = { name = "缺省測試" },
+  -- ["y"] = { name = "油管", open = "https://www.youtube.com/" },
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
  }

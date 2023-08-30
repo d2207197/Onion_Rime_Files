@@ -724,15 +724,15 @@ local function translate(input, seg, env)
       local keys_table = {
           { "※ 限起始輸入，限英文[a-z]  ", "⓿" }  -- ≤ 2
         , { "※ 編輯後須「重新部署」生效  ", "❶" }  --  "────────────  "
-        , { "  ~t␣ 〔編輯 檔案/程式/網站 table 〕", "❷" }
-        , { "  ~c␣ 〔編輯 custom 短語〕", "❸" }
-        , { "  ~r␣ 〔 Rime 官方 GitHub 〕", "❹" }
-        , { "  ~o␣ 〔 Onion 洋蔥 GitHub 〕", "❺" }
-        , { "  ~ow␣ 〔 Onion 洋蔥 GitHub Wiki 〕", "❻" }
-        , { "═══  結束  ═══  ", "❼" }
-        , { "", "❽" }
-        , { "", "❾" }
-        , { "", "❿" }
+        , { "  ~t␣   〔編輯 檔案/程式/網站 table 〕", "❷" }
+        , { "  ~c␣   〔編輯 custom 短語〕", "❸" }
+        , { "  ~r␣   〔 Rime 官方 GitHub 〕", "❹" }
+        , { "  ~rw␣ 〔 Rime 詳解 〕", "❺" }
+        , { "  ~l␣   〔 librime-lua 官方 GitHub 〕", "❻" }
+        , { "  ~lw␣ 〔 librime-lua 腳本開發指南 〕", "❼" }
+        , { "  ~o␣   〔 Onion 洋蔥 GitHub 〕", "❽" }
+        , { "  ~ow␣ 〔 Onion 洋蔥 GitHub Wiki 〕", "❾" }
+        , { "═══  結束  ═══  ", "❿" }
         , { "", "⓫" }
         , { "", "⓬" }
         , { "", "⓭" }
