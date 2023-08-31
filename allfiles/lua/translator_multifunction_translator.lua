@@ -185,7 +185,7 @@ local function init(env)
       , { "  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑰" }
       , { "  c [0-9]+〔內碼十進制 Dec〕", "⑱" }
       , { "  o [0-7]+〔內碼八進制 Oct〕", "⑲" }
-      , { "  j [a-z]+ ␣〔快捷開啟〕", "⑳" }
+      , { "  j [a-z]+〔快捷開啟〕", "⑳" }
       , { "  kk〔快捷鍵 說明〕", "㉑" }
       , { "  ko〔操作鍵 說明〕", "㉒" }
       , { "  kh〔韓文 HNC 說明〕(注音系列)", "㉓" }
@@ -724,14 +724,14 @@ local function translate(input, seg, env)
       local keys_table = {
           { "※ 限起始輸入，限英文 [a-z]+  ", "⓿" }  -- ≤ 2
         , { "※ 編輯後須「重新部署」生效  ", "❶" }  --  "────────────  "
-        , { "  ~t ␣  〔編輯 快捷開啟 table 〕", "❷" }
-        , { "  ~c ␣  〔編輯 custom 短語〕", "❸" }
-        , { "  ~r ␣  〔 Rime 官方 GitHub 〕", "❹" }
-        , { "  ~rw ␣〔 Rime 詳解 〕", "❺" }
-        , { "  ~l ␣  〔 librime-lua 官方 GitHub 〕", "❻" }
-        , { "  ~lw ␣〔 librime-lua 腳本開發指南 〕", "❼" }
-        , { "  ~o ␣  〔 Onion 洋蔥 GitHub 〕", "❽" }
-        , { "  ~ow ␣〔 Onion 洋蔥 GitHub Wiki 〕", "❾" }
+        , { "  ~t   〔編輯 快捷開啟 table 〕", "❷" }
+        , { "  ~c   〔編輯 custom 短語〕", "❸" }
+        , { "  ~r   〔 Rime 官方 GitHub 〕", "❹" }
+        , { "  ~rw 〔 Rime 詳解 〕", "❺" }
+        , { "  ~l   〔 librime-lua 官方 GitHub 〕", "❻" }
+        , { "  ~lw 〔 librime-lua 腳本開發指南 〕", "❼" }
+        , { "  ~o   〔 Onion 洋蔥 GitHub 〕", "❽" }
+        , { "  ~ow 〔 Onion 洋蔥 GitHub Wiki 〕", "❾" }
         , { "═══  結束  ═══  ", "❿" }
         , { "", "⓫" }
         , { "", "⓬" }
@@ -760,7 +760,7 @@ local function translate(input, seg, env)
       yield(cand2)
       return
     elseif op_check == "t" then
-      local cand2 = Candidate("tips", seg.start, seg._end, "", "  ~ ␣ 〔編輯 快捷開啟 table 〕")  -- or〔錯誤〕
+      local cand2 = Candidate("tips", seg.start, seg._end, "", "〔編輯 快捷開啟 table 〕")  -- or〔錯誤〕
       cand2.preedit = env.prefix .. "j " .. op_check .. "\t《快捷開啟》"
       yield(cand2)
       return
@@ -770,14 +770,14 @@ local function translate(input, seg, env)
       yield(cand2)
       return
     elseif op_check == "c" then
-      local cand2 = Candidate("tips", seg.start, seg._end, "", "  ~ ␣〔編輯 custom 短語〕")  -- or〔錯誤〕
+      local cand2 = Candidate("tips", seg.start, seg._end, "", "〔編輯 custom 短語〕")  -- or〔錯誤〕
       cand2.preedit = env.prefix .. "j " .. op_check .. "\t《快捷開啟》"
       yield(cand2)
       return
     elseif op_check and first_check == 0 then
       local run_in = run_pattern[ op_check ]
       if run_in ~= nil then
-        local cand2 = Candidate("tips", seg.start, seg._end, "", "  ~ ␣〔" .. run_in.name .. "〕")  -- or〔錯誤〕
+        local cand2 = Candidate("tips", seg.start, seg._end, "", "〔" .. run_in.name .. "〕")  -- or〔錯誤〕
         cand2.preedit = env.prefix .. "j " .. op_check .. "\t《快捷開啟》"
         yield(cand2)
       return
