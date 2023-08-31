@@ -722,7 +722,7 @@ local function translate(input, seg, env)
     -- 快捷開啟（開啟檔案/程式/網站）
     if (input == env.prefix .. "j") then
       local keys_table = {
-          { "※ 限起始輸入，限英文[a-z]  ", "⓿" }  -- ≤ 2
+          { "※ 限起始輸入，限英文 [a-z]+  ", "⓿" }  -- ≤ 2
         , { "※ 編輯後須「重新部署」生效  ", "❶" }  --  "────────────  "
         , { "  ~t ␣  〔編輯 快捷開啟 table 〕", "❷" }
         , { "  ~c ␣  〔編輯 custom 短語〕", "❸" }
