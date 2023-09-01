@@ -726,8 +726,8 @@ local function translate(input, seg, env)
       -- local keys_table = {
       --     { "※ 限起始輸入，限英文 [a-z]+  ", "⓿" }  -- ≤ 2
       --   , { "※ 編輯後須「重新部署」生效  ", "❶" }  --  "────────────  "
-      --   , { "  ~t   〔編輯 快捷開啟 table 〕", "❷" }
-      --   , { "  ~c   〔編輯 custom 短語〕", "❸" }
+      --   , { "  ~t   〔 編輯 快捷開啟 table 〕", "❷" }
+      --   , { "  ~c   〔 編輯 custom 短語 〕", "❸" }
       --   , { "  ~r   〔 Rime 官方 GitHub 〕", "❹" }
       --   , { "  ~rw 〔 Rime 詳解 〕", "❺" }
       --   , { "  ~l   〔 librime-lua 官方 GitHub 〕", "❻" }
@@ -765,7 +765,7 @@ local function translate(input, seg, env)
       yield(cand2)
       return
     elseif op_check == "t" then
-      local cand2 = Candidate("tips", seg.start, seg._end, "", "〔編輯 快捷開啟 table 〕")  -- or〔錯誤〕
+      local cand2 = Candidate("tips", seg.start, seg._end, "", "〘 編輯 快捷開啟 table 〙")  -- or〔錯誤〕
       cand2.preedit = env.prefix .. "j " .. op_check .. "\t《快捷開啟》"
       yield(cand2)
       return
@@ -775,14 +775,14 @@ local function translate(input, seg, env)
       yield(cand2)
       return
     elseif op_check == "c" then
-      local cand2 = Candidate("tips", seg.start, seg._end, "", "〔編輯 custom 短語〕")  -- or〔錯誤〕
+      local cand2 = Candidate("tips", seg.start, seg._end, "", "〘 編輯 custom 短語 〙")  -- or〔錯誤〕
       cand2.preedit = env.prefix .. "j " .. op_check .. "\t《快捷開啟》"
       yield(cand2)
       return
     elseif op_check and first_check == 0 then
       local run_in = run_pattern[ op_check ]
       if run_in ~= nil then
-        local cand2 = Candidate("tips", seg.start, seg._end, "", "〔" .. run_in.name .. "〕")  -- or〔錯誤〕
+        local cand2 = Candidate("tips", seg.start, seg._end, "", "〘 " .. run_in.name .. " 〙")  -- or〔錯誤〕
         cand2.preedit = env.prefix .. "j " .. op_check .. "\t《快捷開啟》"
         yield(cand2)
       return

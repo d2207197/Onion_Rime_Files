@@ -8,8 +8,8 @@ local function run_menu(pattern)
       { "※ 限起始輸入，限英文 [a-z]+  ", "⓿" }
     , { "※ 編輯後須「重新部署」生效  ", "❶" }
     , { "════════════  ", "❷" }
-    , { "  ~t  〔編輯 快捷開啟 table 〕", "❸" }
-    , { "  ~c  〔編輯 custom 短語〕", "❹" }
+    , { "  ~t  〔 編輯 快捷開啟 table 〕", "❸" }
+    , { "  ~c  〔 編輯 custom 短語 〕", "❹" }
     , { "────────────  ", "❺" }
     , { "", "❻" }
     , { "", "❼" }
@@ -43,7 +43,7 @@ local function run_menu(pattern)
     if v[1] == "" and n_insert < 16 and f == 0 then
     -- if v[1] == "" and f == 0 then
       if insert_table[n_insert] ~= nil then
-        v[1] = "  ~" .. insert_table[n_insert][1] .. " 〔" .. insert_table[n_insert][2] .. "〕"
+        v[1] = "  ~" .. insert_table[n_insert][1] .. "  〔 " .. insert_table[n_insert][2] .. " 〕"
         n_insert = n_insert+1
       elseif insert_table[n_insert] == nil then
         v[1] = "═══  結束  ═══  "
@@ -62,7 +62,7 @@ local function run_menu(pattern)
     local n_all = 22  -- 總條目數
     for k, v in ipairs(insert_table) do
       if k > n_empty then
-        local comment = "  ~" .. v[1] .. " 〔" .. v[2] .. "〕"
+        local comment = "  ~" .. v[1] .. "  〔 " .. v[2] .. " 〕"
         table.insert(keys_table, {comment, n_all-1})
        -- keys_table[n_all] = {comment, n_all-1}
         n_all=n_all+1
