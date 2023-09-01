@@ -27,6 +27,7 @@ local function run_menu(pattern)
     , { "", "⓳" }
     , { "", "⓴" }
     }
+
   local insert_table = {}
   for i, v in pairs(pattern) do
     local name = v.name or "NONAME"  -- 防疏漏
@@ -37,6 +38,7 @@ local function run_menu(pattern)
   -- 以(指定)排序 v.s (a[3]<b[3])優先比較，如 v.s (a[3]==b[3])一樣，比 i (開啟碼)。
   table.sort(insert_table, function(a,b) return (a[3]==b[3] and a[1]<b[1] or a[3]<b[3]) end)
 
+  local end_mark = "═══  結束  ═══  "
   local n_insert = 1  -- 插入條目數（-1也為空條目數）
   local f = 0  -- 檢驗是否末尾
   for k, v in ipairs(keys_table) do
@@ -46,7 +48,7 @@ local function run_menu(pattern)
         v[1] = "  ~" .. insert_table[n_insert][1] .. "  〔 " .. insert_table[n_insert][2] .. " 〕"
         n_insert = n_insert+1
       elseif insert_table[n_insert] == nil then
-        v[1] = "═══  結束  ═══  "
+        v[1] = end_mark
         f = f+1
       end
     elseif v[1] == "" then  -- 繼續計算空條目(n_insert-1)，後面有用到。
@@ -56,8 +58,10 @@ local function run_menu(pattern)
   end
 
   local n_empty = n_insert-1  -- n_empty：預設為 15
-  if #insert_table == n_empty and keys_table[21][1] ~= "═══  結束  ═══  " then
-    table.insert(keys_table, { "═══  結束  ═══  ", "21"})
+  if #insert_table == n_empty and keys_table[21] ~= nil then
+    if keys_table[21][1] ~= end_mark then
+      table.insert(keys_table, {end_mark, "21"})
+    end
   elseif #insert_table > n_empty then
     local n_all = 22  -- 總條目數
     for k, v in ipairs(insert_table) do
@@ -68,7 +72,7 @@ local function run_menu(pattern)
         n_all=n_all+1
       end
     end
-    table.insert(keys_table, { "═══  結束  ═══  ", n_all-1})
+    table.insert(keys_table, {end_mark, n_all-1})
   end
 
   return keys_table
