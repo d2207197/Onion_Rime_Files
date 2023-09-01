@@ -138,9 +138,10 @@ local simple_calculator = require("f_components/f_simple_calculator")
 local hotkeys = require("f_components/f_hot_keys")
 
 ----------------------------------------------------------------------------------------
---- 開啟
+--- 快捷開啟
 
 local run_pattern = require("p_components/p_run_pattern")
+local run_menu = require("p_components/p_run_menu")
 
 ----------------------------------------------------------------------------------------
 --- 置入方案範例
@@ -154,10 +155,10 @@ mf_translator:
 --]]
 ----------------------------------------------------------------------------------------
 local function init(env)
-  engine = env.engine
-  schema = engine.schema
-  config = schema.config
-  -- namespace = "mf_translator"
+  local engine = env.engine
+  local schema = engine.schema
+  local config = schema.config
+  -- local namespace = "mf_translator"
   env.prefix = config:get_string(env.name_space .. "/prefix")
   env.schema_id = config:get_string("schema/schema_id")
   env.menu_table = {
@@ -219,6 +220,7 @@ local function init(env)
       , { "", "㊿" }
       -- , { "〔夜思‧李白〕", "床前明月光，疑是地上霜。\r舉頭望明月，低頭思故鄉。" }
       }
+  env.run_menu_table = run_menu(run_pattern)
   -- log.info("mf_translator Initilized!")
 end
 ----------------------------------------------------------------------------------------
@@ -721,30 +723,33 @@ local function translate(input, seg, env)
 
     -- 快捷開啟（開啟檔案/程式/網站）
     if (input == env.prefix .. "j") then
-      local keys_table = {
-          { "※ 限起始輸入，限英文 [a-z]+  ", "⓿" }  -- ≤ 2
-        , { "※ 編輯後須「重新部署」生效  ", "❶" }  --  "────────────  "
-        , { "  ~t   〔編輯 快捷開啟 table 〕", "❷" }
-        , { "  ~c   〔編輯 custom 短語〕", "❸" }
-        , { "  ~r   〔 Rime 官方 GitHub 〕", "❹" }
-        , { "  ~rw 〔 Rime 詳解 〕", "❺" }
-        , { "  ~l   〔 librime-lua 官方 GitHub 〕", "❻" }
-        , { "  ~lw 〔 librime-lua 腳本開發指南 〕", "❼" }
-        , { "  ~o   〔 Onion 洋蔥 GitHub 〕", "❽" }
-        , { "  ~ow 〔 Onion 洋蔥 GitHub Wiki 〕", "❾" }
-        , { "═══  結束  ═══  ", "❿" }
-        , { "", "⓫" }
-        , { "", "⓬" }
-        , { "", "⓭" }
-        , { "", "⓮" }
-        , { "", "⓯" }
-        , { "", "⓰" }
-        , { "", "⓱" }
-        , { "", "⓲" }
-        , { "", "⓳" }
-        , { "", "⓴" }
-        }
-      for k, v in ipairs(keys_table) do
+      -- local keys_table = {
+      --     { "※ 限起始輸入，限英文 [a-z]+  ", "⓿" }  -- ≤ 2
+      --   , { "※ 編輯後須「重新部署」生效  ", "❶" }  --  "────────────  "
+      --   , { "  ~t   〔編輯 快捷開啟 table 〕", "❷" }
+      --   , { "  ~c   〔編輯 custom 短語〕", "❸" }
+      --   , { "  ~r   〔 Rime 官方 GitHub 〕", "❹" }
+      --   , { "  ~rw 〔 Rime 詳解 〕", "❺" }
+      --   , { "  ~l   〔 librime-lua 官方 GitHub 〕", "❻" }
+      --   , { "  ~lw 〔 librime-lua 腳本開發指南 〕", "❼" }
+      --   , { "  ~o   〔 Onion 洋蔥 GitHub 〕", "❽" }
+      --   , { "  ~ow 〔 Onion 洋蔥 GitHub Wiki 〕", "❾" }
+      --   , { "═══  結束  ═══  ", "❿" }
+      --   , { "", "⓫" }
+      --   , { "", "⓬" }
+      --   , { "", "⓭" }
+      --   , { "", "⓮" }
+      --   , { "", "⓯" }
+      --   , { "", "⓰" }
+      --   , { "", "⓱" }
+      --   , { "", "⓲" }
+      --   , { "", "⓳" }
+      --   , { "", "⓴" }
+      --   }
+
+      -- local keys_table = run_menu(run_pattern)  -- 不用 init 引入，直接引入
+      -- for k, v in ipairs(keys_table) do
+      for k, v in ipairs(env.run_menu_table) do -- init 引入
         local cand = Candidate("tips", seg.start, seg._end, v[2], " " .. v[1])
         cand.preedit = input .. "\t《快捷開啟》▶"
         yield(cand)
