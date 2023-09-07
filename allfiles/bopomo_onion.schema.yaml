@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion
   name: "☆注音(洋蔥純注音版)☆"
-  version: "202305"
+  version: "202309"
   author:
     - 『洋蔥』
   description: |
@@ -74,8 +74,9 @@ zh_cn:
 #   tags: [ abc ]
 ################################### 選單 ######################################
 menu:
+  alternative_select_keys: "QAZWSXEDCRFV3467"  #刻意讓「3467」置後，使聲調後按「3467」不上屏選字。
   # alternative_select_keys: "QAZWSXEDCRFV"
-  alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
+  # alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
   page_size: 6
 ################################### 拼寫 ######################################
 speller:
@@ -338,13 +339,17 @@ key_binder:
 ### 功能快捷鍵 ###
     # - {accept: Return, send: space, when: has_menu}
 ### 避聲調重複按 ###
-    - {accept: 3, send: Escape, when: composing}
+    - {accept: 3, send: Escape, when: always}
+    # - {accept: 3, send: Escape, when: composing}
     - {accept: 3, send: 3, when: has_menu}
-    - {accept: 4, send: Escape, when: composing}
+    - {accept: 4, send: Escape, when: always}
+    # - {accept: 4, send: Escape, when: composing}
     - {accept: 4, send: 4, when: has_menu}
-    - {accept: 6, send: Escape, when: composing}
+    - {accept: 6, send: Escape, when: always}
+    # - {accept: 6, send: Escape, when: composing}
     - {accept: 6, send: 6, when: has_menu}
-    - {accept: 7, send: Escape, when: composing}
+    - {accept: 7, send: Escape, when: always}
+    # - {accept: 7, send: Escape, when: composing}
     - {accept: 7, send: 7, when: has_menu}
 ### ctrl 打出標點 ###
 #關#    - {accept: "Control+comma", send: "less", when: always} #「逗號」#接受「Contol」+「,」直出「<」
