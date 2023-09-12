@@ -4,6 +4,7 @@
 ####  ※ Commercial use is prohibited
 
 ## 內容說明
+
 - allfiles 包含九個主方案和一眾掛接方案。
 
 - 主方案：三個注音、一個注音雙拼、一個拼音、三個形碼、一個行列30。
@@ -17,9 +18,12 @@
 - 提供 sort_rime_file.py，把所需 Rime 文件放到各個方案資料夾。
 
 ## sort_rime_file.py 使用方法
+
 - 本倉庫 Onion_Rime_Files 按右上綠色 〔↓Code〕 ⇨ Download ZIP ⇨ 解壓縮 ZIP 進入資料夾 ⇨ Python 執行 sort_rime_file.py ⇨ 產生『電腦RIME方案_{當天日期}』資料夾
 
 - 『電腦RIME方案_{當天日期}』，各個方案所需文件，分別放置於下層『方案名稱』資料夾。
+
+- 「 Actions 」中，其 sort_output 裡面下方 artifact 有利用 GitHub 功能跑好 sort_rime_file.py 分類之檔案（不一定更到最新）！
 
 - 選取欲使用方案，內含文件通通放入『 Rime 』用戶設定資料夾，如已有 opencc 資料夾，移動 opencc 裡面檔案到 opencc 資料夾內，沒有則整個 opencc 移過去，「重新部署」方可。
 
