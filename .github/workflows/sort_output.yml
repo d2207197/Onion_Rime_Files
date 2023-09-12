@@ -37,8 +37,8 @@ jobs:
           }
 
           function copy_dir() {
-              TARGET=`find ${SOURCE} -name "$1" -type f`
-              cp -r $TARGET $OUTPUT
+              SOURCE=`find ${FOLDER} -name "$1" -type d`
+              cp -r $SOURCE $OUTPUT
           }
 
           # create_zip "電腦RIME*" "output_onion.zip"
