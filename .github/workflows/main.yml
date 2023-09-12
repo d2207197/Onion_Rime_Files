@@ -36,7 +36,7 @@ jobs:
               cp $TARGET $RELEASE
           }
 
-          create_zip "注音洋蔥純注音版_*" "bopomo_onion.zip"
+          create_zip "電腦RIME*" "output_onion.zip"
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
