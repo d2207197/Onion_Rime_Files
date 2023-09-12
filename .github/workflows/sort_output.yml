@@ -36,8 +36,8 @@ jobs:
               cp $TARGET $OUTPUT
           }
 
-          # create_zip "電腦RIME*" "output_onion.zip"
-          copy "電腦RIME*"
+          create_zip "電腦RIME*" "output_onion.zip"
+          # copy "電腦RIME*"
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
