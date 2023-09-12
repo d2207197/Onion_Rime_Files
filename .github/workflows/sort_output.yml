@@ -1,4 +1,4 @@
-name: Release
+name: sort_output
 
 on:
   workflow_dispatch:
@@ -21,28 +21,28 @@ jobs:
           python sort_rime_file.py
           BASEDIR=`pwd`
           FOLDER=`find ${BASEDIR} -name "電腦RIME*" -type d`
-          RELEASE="${BASEDIR}/release"
-          mkdir -p $RELEASE
+          OUTPUT="${BASEDIR}/output"
+          mkdir -p $OUTPUT
 
           function create_zip() {
               SOURCE=`find ${FOLDER} -name "$1" -type d`
               cd $SOURCE
-              zip -qq -r $RELEASE/$2 ./
+              zip -qq -r $OUTPUT/$2 ./
           }
 
           function copy() {
               SOURCE=`find ${FOLDER} -name "$1" -type d`
               TARGET=`find ${SOURCE} -name "$2" -type f`
-              cp $TARGET $RELEASE
+              cp $TARGET $OUTPUT
           }
 
-          create_zip "電腦RIME*" "output_onion.zip"
+          # create_zip "電腦RIME*" "output_onion.zip"
+          copy "電腦RIME*"
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
           if-no-files-found: error
           path: |
-            # .\release\*
-            release/*
+            output/*
    
