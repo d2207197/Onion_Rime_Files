@@ -43,5 +43,5 @@ jobs:
         with:
           if-no-files-found: error
           path: |
-            .\output\archives\bopomo_onion.zip
+            .\release\bopomo_onion.zip
    
