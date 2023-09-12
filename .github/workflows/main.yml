@@ -38,12 +38,10 @@ jobs:
 
           create_zip "注音洋蔥純注音版_*" "bopomo_onion.zip"
 
-      - uses: ncipollo/release-action@v1
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
         with:
-          allowUpdates: true
-          artifacts: release/*
-          token: ${{ secrets.GITHUB_TOKEN }}
-          omitBody: true
-          omitBodyDuringUpdate: true
-          omitDraftDuringUpdate: true
+          if-no-files-found: error
+          path: |
+            .\output\archives\bopomo_onion.zip
    
