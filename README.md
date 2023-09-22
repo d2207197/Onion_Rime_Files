@@ -17,6 +17,8 @@
 
 - 提供 sort_rime_file.py，把所需 Rime 文件放到各個方案資料夾。
 
+- 本倉庫 Releases 中，有分類好之檔案。（不一定更到最新，無形碼方案）
+
 - 本倉庫 Actions 中，其 sort_rime_output 裡 artifact 有已跑好 sort_rime_file.py 分類之檔案！（不一定更到最新，需登錄 GitHub 帳號）
 
 ## sort_rime_file.py 使用方法
