@@ -176,8 +176,8 @@ local function processor(key, env)
     -- elseif seg:has_tag("abc") or seg:has_tag("all_bpm") then
     --   return 2
 
-    local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]+)$")
-    if seg:has_tag("mf_translator") and op_code and #c_input == caret_pos then  -- 開頭
+    local op_code = #c_input == caret_pos and string.match(c_input, "^" .. env.prefix .. "j([a-z]+)$")
+    if seg:has_tag("mf_translator") and op_code then  -- 開頭
       local run_in = run_pattern[ op_code ] -- 此處不能「.open」，如 op_code 不符合會報錯！
       if op_code == "t" then
         -- engine:commit_text( "TEST！！！" )  -- 測試用
