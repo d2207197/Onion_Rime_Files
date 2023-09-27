@@ -39,6 +39,7 @@ local function processor(key, env)
   local engine = env.engine
   local context = engine.context
   local c_input = context.input
+  local caret_pos = context.caret_pos
   local comp = context.composition
   local seg = comp:back()
   local o_ascii_mode = context:get_option("ascii_mode")
@@ -67,7 +68,7 @@ local function processor(key, env)
   elseif seg:has_tag("mf_translator") then  -- 開頭
     local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]+)$")
     local run_in = run_pattern[ op_code ] -- 此處不能「.open」，如 op_code 不符合會報錯！
-    if op_code then
+    if op_code and #c_input == caret_pos then
       if op_code == "t" then
         -- engine:commit_text( "TEST！！！" )  -- 測試用
         generic_open(env.run_pattern)

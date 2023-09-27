@@ -208,7 +208,7 @@ local function processor(key, env)
 開啟檔案程式網址功能
 --]]
 
-  elseif seg:has_tag("mf_translator") and string.match(c_input, "^" .. env.prefix .. "j[a-z]+$") then  -- 開頭
+  elseif seg:has_tag("mf_translator") and string.match(c_input, "^" .. env.prefix .. "j[a-z]+$") and #c_input == caret_pos then  -- 開頭
     if key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter" then
       local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]+)$")
       local run_in = run_pattern[ op_code ] -- 此處不能「.open」，如 op_code 不符合會報錯！
