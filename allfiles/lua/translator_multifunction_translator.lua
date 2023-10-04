@@ -86,6 +86,7 @@ local braille_c_number = f_n_s.braille_c_number
 local braille_u_number = f_n_s.braille_u_number
 local keycap_number = f_n_s.keycap_number
 
+-- local f_c_n = require("f_components/f_chinese_number_new")
 local f_c_n = require("f_components/f_chinese_number")
 local read_number = f_c_n.read_number
 local confs = f_c_n.confs
