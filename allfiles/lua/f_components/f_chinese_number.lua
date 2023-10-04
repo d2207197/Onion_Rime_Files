@@ -5,7 +5,7 @@ number_translator: 將 `'/` + 阿拉伯數字 翻譯為大小寫漢字
 local confs = {
   {
     comment = "〔小寫中文數字〕",
-    numeral = { [0] = "零", "一", "二", "三", "四", "五", "六", "七", "八", "九" },
+    numeral = { [0] = "〇", "一", "二", "三", "四", "五", "六", "七", "八", "九" },
     place = { [0] = "", "十", "百", "千" },
     group = { [0] = "", "萬", "億", "兆", "京", "垓" }
   },
@@ -49,6 +49,7 @@ local confs = {
   -- },
 }
 
+
 local function read_seg(conf, n)
   local s = ""
   local i = 0
@@ -76,6 +77,7 @@ local function read_seg(conf, n)
   return i < 4, s
 end
 
+
 local function read_number(conf, n)
   local s = ""
   local i = 0
@@ -102,13 +104,16 @@ local function read_number(conf, n)
     i = i + 1
     n = string.sub(n, 1, -5)
   end
+
   return s
 end
 
-local function read_seg_old(conf, n)
+
+local function read_seg_bank(conf, n)
   local s = ""
   local i = 0
   local zf = true
+
   while string.len(n) > 0 do
     local d = tonumber(string.sub(n, -1, -1))
     if d ~= 0 then
@@ -123,21 +128,28 @@ local function read_seg_old(conf, n)
     i = i + 1
     n = string.sub(n, 1, -2)
   end
+
   return i < 4, s
 end
 
-local function read_number_old(conf, n)
+
+local function read_number_bank(conf, n)
   local s = ""
   local i = 0
   local zf = false
+
   n = string.gsub(n, "^0+", "")
+
   if n == "" then
     return conf.numeral[0]
   end
+
   while string.len(n) > 0 do
-    local zf2, r = read_seg_old(conf, string.sub(n, -4, -1))
+    local zf2, r = read_seg_bank(conf, string.sub(n, -4, -1))
     if r ~= "" then
-      if zf and s ~= "" then
+      if conf.group == nil then
+        s = r .. s
+      elseif zf and s ~= "" then
         s = r .. conf.group[i] .. conf.numeral[0] .. s
       else
         s = r .. conf.group[i] .. s
@@ -147,10 +159,11 @@ local function read_number_old(conf, n)
     i = i + 1
     n = string.sub(n, 1, -5)
   end
+
   return s
 end
 
--- print(read_number(confs[2],'191223'))
--- print(read_number_old(confs[2],'191223'))
 
-return {confs = confs, read_number = read_number, read_number_old = read_number_old}
+-- print(read_number(confs[2],'191223'))
+-- print(read_number_bank(confs[2],'191223'))
+return {confs = confs, read_number = read_number, read_number_bank = read_number_bank}

@@ -88,13 +88,8 @@ local keycap_number = f_n_s.keycap_number
 
 local f_c_n = require("f_components/f_chinese_number")
 local read_number = f_c_n.read_number
-local read_number_old = f_c_n.read_number_old
+local read_number_bank = f_c_n.read_number_bank
 local confs = f_c_n.confs
-
--- local f_c_n_n = require("f_components/f_chinese_number_new")
--- local read_number_new = f_c_n_n.read_number
--- local read_number_old_new = f_c_n_n.read_number_old
--- local confs_new = f_c_n_n.confs
 
 local f_e_s = require("f_components/f_english_style")
 local english_1 = f_e_s.english_1
@@ -2668,7 +2663,7 @@ local function translate(input, seg, env)
           --   yield_c( r, conf.comment)
           -- end
           yield_c( neg_n_ch .. read_number(confs[1], nn), confs[1].comment)
-          yield_c( neg_n_ch .. read_number_old(confs[2], nn), confs[2].comment)
+          yield_c( neg_n_ch .. read_number_bank(confs[2], nn), confs[2].comment)
         -- else
         --   yield_c( "超過位數", confs[1].comment)
         --   yield_c( "超過位數", confs[2].comment)
