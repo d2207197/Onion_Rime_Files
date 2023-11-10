@@ -41,8 +41,14 @@ jobs:
               cp -r $SOURCE $OUTPUT
           }
 
+          function remove_dir() {
+              SOURCE=`find ${FOLDER} -name "$1" -type d`
+              rm -f $SOURCE
+          }
+
           # create_zip "電腦RIME*" "電腦RIME.zip"
           # copy "電腦RIME*" "注音洋蔥純注音版*"
+          remove_dir() "ocm_20*"
           copy_dir "電腦RIME*"
 
       - name: Upload artifacts
