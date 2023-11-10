@@ -42,7 +42,7 @@ jobs:
           }
 
           function remove_dir() {
-              rm -f $1
+              rm -r $1
           }
 
           # create_zip "電腦RIME*" "電腦RIME.zip"
