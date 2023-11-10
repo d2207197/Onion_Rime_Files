@@ -42,8 +42,7 @@ jobs:
           }
 
           function remove_dir() {
-              SOURCE=`find ${FOLDER} -name "$1" -type d`
-              rm -f $SOURCE
+              rm -f $1
           }
 
           # create_zip "電腦RIME*" "電腦RIME.zip"
