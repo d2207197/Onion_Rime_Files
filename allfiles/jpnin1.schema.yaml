@@ -295,6 +295,7 @@ translator:
 #   comment_format:
 #     - "xlit|`|'|"
 #     - xform/q/xtsu/
+#     - xform/ /   /
 
 punctuator:
   full_shape:
