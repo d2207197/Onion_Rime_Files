@@ -53,9 +53,9 @@ patch:
 #     - derive/py(?=[auoie].*;)/pixy/ #ぴゃ
 #     - derive/my(?=[auoie].*;)/mixy/ #みゃ
 #     - derive/ry(?=[auoie].*;)/rixy/ #りゃ
-# ##
-#     # - derive/`ny(?=[ie].*;)/nix/ #無相關詞彙
-#     - derive/(?<=[hbpmr])y(?=[ie].*;)/ix/
+##
+    # - derive/`ny(?=[ie].*;)/nix/ #無相關詞彙
+    - derive/(?<=[hbpmr])y(?=[ie].*;)/ix/
 ##### 字詞彙中的漢字，拼音轉寫結束（以上到開頭可遮屏，節省部屬時間） #####
 ### 漢字中的外語轉換 ###
     - derive/ty(?=[auoie].*;)/chix/ #ちぇ
@@ -135,16 +135,16 @@ patch:
     - derive|^xx(?=[.])|kigou| #只片假名
     # - derive/q(?![yw][aeiou][,.])/xtu/ #っッ #可擴充讓「q」能輸出「っ」「ッ」
     - xform/q(?![yw][aeiou][,.])/xtu/ #っッ #完全轉走，不能用「q」輸出「っ」「ッ」
-    #略# - derive/xtu/ltu/ #っッ
+    #可略# - derive/xtu/ltu/ #っッ #可略#
     - derive/xtu/xtsu/ #っッ
-    #略# - derive/xtu/ltsu/ #っッ
-    #略# - derive/xy/ly/ #ゃゅょ
-    #略# - derive/xwa/lwa/ #ゎ ヮ
-    #略# - derive/x([aeiou])/l$1/ #ぁぇぃぉぅ
-    #略# - derive/xke/lke/ #ヶゖ
+    #可略# - derive/xtu/ltsu/ #っッ #可略#
+    #可略# - derive/xy/ly/ #ゃゅょ #可略#
+    #可略# - derive/xwa/lwa/ #ゎ ヮ #可略#
+    #可略# - derive/x([aeiou])/l$1/ #ぁぇぃぉぅ #可略#
+    #可略# - derive/xke/lke/ #ヶゖ #可略#
     - derive/xke(?=[.])/ke/ #ヶ
     - derive/xke(?=[.])/ga/ #ヶ #新增碼表沒有
-    #略# - derive/xka/lka/ #ヵゕ
+    #可略# - derive/xka/lka/ #ヵゕ #可略#
     - derive/xka(?=[.])/ka/ #ヵ
     - derive/^noma(?=[.])/dou/ #符號
     - derive/^dou(?=[.])/onaji/ #符號
