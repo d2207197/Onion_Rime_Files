@@ -46,13 +46,13 @@ local function Ver_info(env)
     rime_api.get_distribution_version(),
     rime_api.get_distribution_name()) or ""
     librime_v = string.format("librime %s", rime_api.get_rime_version()) or ""
-    librime_lua_v = string.format("librime-lua %s", version_n) or ""
+    librime_lua_v = string.format("librime-lua #%s", version_n) or ""
     lua_v = string.format("%s", _VERSION) or ""
     i_id = string.format("%s", rime_api.get_user_id()) or ""
   elseif version_n >= 9 then
     distribution_v = "librime-lua 小於 185，無判定函數"
     librime_v = string.format("librime %s", rime_api.get_rime_version()) or ""
-    librime_lua_v = string.format("librime-lua %s", version_n) or ""
+    librime_lua_v = string.format("librime-lua #%s", version_n) or ""
     lua_v = string.format("%s", _VERSION) or ""
     i_id = "librime-lua 小於 185，無判定 id 函數"
   else
