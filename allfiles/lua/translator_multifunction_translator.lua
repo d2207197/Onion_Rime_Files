@@ -815,7 +815,7 @@ local function translate(input, seg, env)
       yield_c( Ver_info(env)[4], "〔 lua_version 〕")
       yield_c( Ver_info(env)[5], "〔 installation_id 〕")
       --- 記憶體回收，上方可能讓記憶暴漲，故增 collectgarbage。
-      collectgarbage()  -- 強制進行垃圾回收
+      -- collectgarbage()  -- 強制進行垃圾回收
       -- collectgarbage("collect")  -- 做一次完整的垃圾收集循環
       return
     end
