@@ -4,7 +4,7 @@
 
 - 「Win_新0.15.0.0版小狼毫主程式_Actions」：https://github.com/rime/weasel/actions
 
-- 「Win_fxliang版小狼毫主程式」：https://github.com/fxliang/weasel/actions
+- 「Win_fxliang版小狼毫主程式_Actions」：https://github.com/fxliang/weasel/actions
 
 - 「Win_舊0.14.3.0版小狼毫主程式」：https://github.com/rime/weasel/releases
 
