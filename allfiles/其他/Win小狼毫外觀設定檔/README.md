@@ -6,11 +6,9 @@
 
 ### 字型說明
 
-  - 使用本外觀設定檔，不管哪版，皆有引用 NotoSansCJK 該字型，都需安裝。
+  - 本外觀設定檔，不論哪版，weasel.custom.yaml 當中皆有引用 Noto Sans Mono CJK TC Regular 該字型，使用本外觀設定檔需安裝。
 
-  - 選單左側 QAZWSX 選項應用等寬英文字型！才不會參差不齊，故附上字型！
-
-  - weasel.custom.yaml 當中有引用 Noto Sans Mono CJK TC Regular 該等寬英文字型。
+  - 選單左側 QAZWSX 選項應用等寬英文字型！才不會參差不齊，故設定檔中限定，並附上字型！
 
   - 名稱有 Mono 才是等寬。
 
