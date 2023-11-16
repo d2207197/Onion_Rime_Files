@@ -19,7 +19,7 @@
 
 - librime 1.8.5
 
-- librime-lua 200
+- librime-lua #200
 
 ### plugins
 
