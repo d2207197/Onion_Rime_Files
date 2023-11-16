@@ -1,10 +1,10 @@
 # Mac_官方鼠鬚管主程式
 
-### Source File：
+### Source File
 
 - https://github.com/rime/squirrel/releases
 
-### Version Info：
+### Version Info
 
 - Squirrel 0.16.2
 
@@ -12,7 +12,7 @@
 
 - librime-lua 200
 
-### plugins：
+### plugins
 
 - librime-lua
 
