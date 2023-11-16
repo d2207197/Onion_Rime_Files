@@ -1,4 +1,4 @@
-# Mac_官方鼠鬚管主程式
+# Mac_鼠鬚管主程式
 
 ### Source File
 
