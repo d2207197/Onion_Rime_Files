@@ -1,10 +1,10 @@
 # Win_fxliang版小狼毫主程式
 
-### Source File：
+### Source File
 
 - https://github.com/fxliang/weasel/actions
 
-### Version Info：
+### Version Info
 
 - Github Actions：[Commit CI #154](https://github.com/fxliang/weasel/actions/runs/4634628840)
 
@@ -14,7 +14,7 @@
 
 - librime-lua #215
 
-### plugins：
+### plugins
 
 - librime-lua
 
