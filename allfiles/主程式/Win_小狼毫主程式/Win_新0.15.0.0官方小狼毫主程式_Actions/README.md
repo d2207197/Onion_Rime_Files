@@ -1,10 +1,10 @@
-# Win_官方小狼毫主程式
+# Win_新0.15.0.0官方小狼毫主程式_Actions
 
-### Source File：
+### Source File
 
 - https://github.com/rime/weasel/actions
 
-### Version Info：
+### Version Info
 
 - Github Actions：[Commit CI #161](https://github.com/rime/weasel/actions/runs/6865929650)
 
@@ -14,7 +14,7 @@
 
 - librime-lua #215
 
-### plugins：
+### plugins
 
 - librime-lua
 
