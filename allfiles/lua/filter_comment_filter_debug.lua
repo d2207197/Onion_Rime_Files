@@ -53,8 +53,8 @@ local function filter(inp, env)
 ---- 寫法二
 
   for cand in inp:iter() do
-    local debugcomment = debugcomment(cand)
-    yield(ShadowCandidate(cand, "shadow_debug", cand.text, debugcomment .. cand.comment))
+    -- local debugcomment = debugcomment(cand)
+    yield(ShadowCandidate(cand, "shadow_debug", cand.text, debugcomment(cand) .. cand.comment))
   end
 
 --------------------------------------------
