@@ -100,9 +100,10 @@ local function filter(inp, env)
 ---- 寫法二
 
   for cand in inp:iter() do
-    local utf8comment = utf8comment(cand.text)
-    yield(not exclude_seg and check_input and utf8.len(cand.text) == 1
-          and UniquifiedCandidate(cand, "uniq_utf", cand.text, utf8comment .. cand.comment) or
+    -- local utf8comment = utf8comment(cand.text)
+    local cand_t = cand.text
+    yield(not exclude_seg and check_input and utf8.len(cand_t) == 1
+          and UniquifiedCandidate(cand, "uniq_utf", cand_t, utf8comment(cand_t) .. cand.comment) or
           cand
           )
   end
