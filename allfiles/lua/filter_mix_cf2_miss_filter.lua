@@ -77,7 +77,7 @@ local function filter(inp, env)
       --     or cand )
     elseif c_input == "'" and o_ascii_punct then
     -- elseif addcand and o_ascii_punct then
-      local cand_add = Candidate("apostrophe", 0, 1, "'", "")
+      local cand_add = Candidate("simp_apostrophe", 0, 1, "'", "")
       yield(cand_add)
       return
     else

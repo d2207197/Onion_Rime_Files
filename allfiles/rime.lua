@@ -49,7 +49,9 @@
 --      - lua_filter@p_convert_japan_filter          --（關）同 convert_japan_filter，掛接方案用。
 --      - lua_filter@halfwidth_katakana_filter       --（關）（jpnin1）片假名後附加半形片假名。選單顯示太雜亂，故不用。
 --      - lua_filter@lua_custom_phrase_filter        --（關）取代原先 table_translator@custom_phrase。接續掛接方案後，有 bug，上不了屏，改用 translator 實現。
---      - lua_filter@preedit_model_filter            --（引lua資料夾）（bo_mixin 全系列）切換 preedit 樣式
+--      - lua_filter@preedit_model_filter            --（引lua資料夾）（bo_mixin 全系列）切換 preedit 樣式。
+--      - lua_filter@comment_filter_unicode          --（關）註釋 Unicode 編碼。
+--      - lua_filter@comment_filter_debug            --（關）註釋 debug 訊息。
 --
 --      - ＊合併兩個以上函數：
 --      - lua_filter@mix30_nil_comment_filter        --（關） 合併 array30_nil_filter 和 array30_comment_filter，兩個 lua filter 太耗效能。
@@ -58,6 +60,7 @@
 --      - lua_filter@mix_cf2_cfp_filter              --（引lua資料夾）（dif1） 合併 charset_filter2 和 comment_filter_plus，兩個 lua filter 太耗效能。
 --      - lua_filter@mix_cf2_cfp_smf_filter          --（關）（ocm_mixin） 合併 charset_filter2 和 comment_filter_plus 和 symbols_mark_filter，三個 lua filter 太耗效能。
 --      - lua_filter@ocm_mixin_filter                --（引lua資料夾）（ocm_mixin）同上條目，comment 附加改用 opencc 方式。
+--      - lua_filter@comment_filter_unicode_debug    --（引lua資料夾）（注音plus、注音mixin、ocm全系列）合併 comment_filter_unicode 和 comment_filter_debug，註釋 Unicode 編碼 和 debug 訊息。
 --
 --
 --      《 ＊ 以下「處理」注意在 processors 中的順序，基本放在最前面 》
@@ -145,6 +148,13 @@ charset_cjk_filter_plus = charset_cjk.charset_cjk_filter_plus
 --- comment_filter_plus （Mount_ocm）
 -- 去除後面編碼註釋
 comment_filter_plus = require("filter_comment_filter_plus")
+
+
+--- comment_filter_unicode_debug （注音plus、注音mixin、ocm全系列）
+-- 註釋 Unicode 編碼 和 debug 訊息
+comment_filter_unicode_debug = require("filter_comment_filter_unicode_debug")
+-- comment_filter_unicode = require("filter_comment_filter_unicode")
+-- comment_filter_debug = require("filter_comment_filter_debug")
 
 
 --- array30_nil_filter （onion-array30）

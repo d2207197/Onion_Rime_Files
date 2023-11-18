@@ -65,7 +65,7 @@ local function filter(inp, env)
       --   local cand = revise_comment_by_os(env.os_name, cand, cand.comment)
       --   yield(cand)
       -- end
-      -- -- yield(Candidate("en", start, _end, c_input, "〔小於〕"))  -- 測試用
+      -- -- yield(Candidate("simp_ensort", start, _end, c_input, "〔小於〕"))  -- 測試用
 
       local tran = Translation(revise_comment_by_os, env.os_name, inp) or inp
       for cand in tran:iter() do
@@ -110,7 +110,7 @@ local function filter(inp, env)
         --   yield(cand)
 
         --   --- 以下用遍尋重組一個精簡 table，再排序，再新組 Candidate，還是太慢！且 comment 附加尚需解決。
-        --   -- newcand = Candidate("en",0,caret_pos,cand.text," ")
+        --   -- newcand = Candidate("simp_ensort",0,caret_pos,cand.text," ")
         --   -- yield(newcand)
         -- end
 

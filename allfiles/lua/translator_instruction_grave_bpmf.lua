@@ -105,7 +105,7 @@ local function translate(input, seg, env)
     --   yield(cand)
     -- end
     for k, v in ipairs(env.table_gb_1) do
-      local cand = Candidate("help", seg.start, seg._end, v[2], " " .. v[1])
+      local cand = Candidate("simp_help", seg.start, seg._end, v[2], " " .. v[1])
       -- cand.preedit = input .. "\t※ 輸入【項目】每字第一個注音，調出相關符號。"
       yield(cand)
     end
@@ -115,7 +115,7 @@ local function translate(input, seg, env)
   -- if check_grave2 then
   if input == "``" then
     for k, v in ipairs(env.table_gb_2) do
-      local cand = Candidate("help", seg.start, seg._end, v[2], " " .. v[1])
+      local cand = Candidate("simp_help", seg.start, seg._end, v[2], " " .. v[1])
       -- cand.preedit = input .. "\t※ 輸入【項目】每字第一個注音，調出相關符號。"
       -- cand.preedit = input .. "\t《emoji集》▶"
       yield(cand)

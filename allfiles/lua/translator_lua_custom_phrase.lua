@@ -121,7 +121,7 @@ local function translate(input, seg, env)
     for _, v in pairs(c_p_tab) do
       local v = string.gsub(v, "\\n", "\n")  -- 可以多行文本
       local v = string.gsub(v, "\\r", "\r")  -- 可以多行文本
-      local cand = Candidate("short", seg.start, seg._end, v, "〔短語〕")
+      local cand = Candidate("simp_short", seg.start, seg._end, v, "〔短語〕")
       cand.quality = env.quality
       yield(cand)
     end

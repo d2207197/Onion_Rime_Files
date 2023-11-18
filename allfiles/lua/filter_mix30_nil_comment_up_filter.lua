@@ -33,8 +33,8 @@ local function filter(inp, env)
   local c_input = context.input  -- 原始未轉換輸入碼
   -- local start = context:get_preedit().sel_start
   local _end = context:get_preedit().sel_end
-  local array30_nil_cand = Candidate("array30nil", 0, _end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
-  -- local array30_nil_cand = Candidate("array30nil", 0, string.len(c_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+  local array30_nil_cand = Candidate("simp_mix30nil", 0, _end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+  -- local array30_nil_cand = Candidate("simp_mix30nil", 0, string.len(c_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
   local check_ns = string.match(c_input, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )
   local check_s1 = string.match(c_input, "^[a-z,./;][a-z,./;]? $" )
   -- local check_s2 = string.match(c_input, "^a[k,] $" )
@@ -155,7 +155,7 @@ local function mix30_nil_comment_up_filter(input, env)
   local s_up = env.engine.context:get_option("1_2_straight_up")
   local c_input = env.engine.context.input  -- 原始未轉換輸入碼
   local _end = env.engine.context:get_preedit().sel_end
-  local array30_nil_cand = Candidate("array30nil", 0, _end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+  local array30_nil_cand = Candidate("simp_mix30nil", 0, _end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len('⎔')等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
   local check_ns = string.match(c_input, "^[a-z.,/;][a-z.,/;]?[a-z.,/;']?[a-z.,/;']?[i']?$" )
   local check_s1 = string.match(c_input, "^[a-z,./;][a-z,./;]? $" )
   local check_s2 = string.match(c_input, "^a[k,] $" ) or
@@ -174,8 +174,8 @@ local function mix30_nil_comment_up_filter(input, env)
     for cand in input:iter() do
       -- local c_input = env.engine.context.input  -- 原始未轉換輸入碼
       -- local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
-      -- local array30_nil_cand = Candidate("array30nil", 0, _end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
-      -- local array30_nil_cand = Candidate("array30nil", 0, string.len(c_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+      -- local array30_nil_cand = Candidate("simp_mix30nil", 0, _end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+      -- local array30_nil_cand = Candidate("simp_mix30nil", 0, string.len(c_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
       if (string.match(cand.text, '^⎔%d$' )) then
         array30_nil_cand.preedit = cand.preedit
         -- array30_nil_cand.preedit = array30_preedit
@@ -208,8 +208,8 @@ local function mix30_nil_comment_up_filter(input, env)
     for cand in input:iter() do
       -- local c_input = env.engine.context.input  -- 原始未轉換輸入碼
       -- local array30_preedit = cand.preedit  -- 轉換後輸入碼，如：ㄅㄆㄇㄈ、1-2⇡9⇡
-      -- local array30_nil_cand = Candidate("array30nil", 0, _end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
-      -- local array30_nil_cand = Candidate("array30nil", 0, string.len(c_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+      -- local array30_nil_cand = Candidate("simp_mix30nil", 0, _end, "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
+      -- local array30_nil_cand = Candidate("simp_mix30nil", 0, string.len(c_input) , "", "⎔")  -- 選擇空碼"⎔"效果為取消，測試string.len("⎔")等於「3」，如設置「4」為==反查時就不會露出原英文編碼（"⎔"只出現在一二碼字）
       if (string.match(cand.text, '^⎔%d$' )) then
         array30_nil_cand.preedit = cand.preedit
         -- array30_nil_cand.preedit = array30_preedit

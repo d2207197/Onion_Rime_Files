@@ -9,7 +9,7 @@ schema:
 
   name: "❖超級混合蝦米(mix-in)❖"
   schema_id: ocm_mixin
-  version: "202305"
+  version: "202311"
   dependencies:
     - punct_ovff
     - symbols_ocm
@@ -58,6 +58,14 @@ switches:
   - name: punct_mark
     reset: 1
 #    states: [ 無, 註 ]
+  - name: unicode_comment
+    reset: 0
+    states: [ '🄽', '🅄' ]
+    # states: [ 'nil', 'Unicode(URL)' ]
+  - name: debug_comment
+    reset: 0
+    # states: [ 'Ⓝ', 'Ⓓ' ]
+    # states: [ 'normal', 'Debug' ]
   - name: en_sort
     reset: 0
     states: [ 個排, 序排 ]
@@ -92,6 +100,9 @@ engine:
     - reverse_lookup_filter@ovff_reverse_lookup
     - reverse_lookup_filter@phonetic_reverse_lookup
     # - reverse_lookup_filter@e_reverse_lookup
+    # - lua_filter@comment_filter_unicode  # unicode 和 debug 分開，同時開啟無法記憶
+    # - lua_filter@comment_filter_debug  # unicode 和 debug 分開，同時開啟無法記憶
+    - lua_filter@comment_filter_unicode_debug
     - uniquifier
   processors:
     - lua_processor@mix_zhs_ltk

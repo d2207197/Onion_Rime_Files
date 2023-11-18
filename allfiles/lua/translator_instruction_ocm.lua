@@ -108,7 +108,7 @@ local function translate(input, seg, env)
     --   yield(cand)
     -- end
     for k, v in ipairs(env.table_sd_1) do
-      local cand = Candidate("help", seg.start, seg._end, v[2], " " .. v[1])
+      local cand = Candidate("simp_help", seg.start, seg._end, v[2], " " .. v[1])
       -- cand.preedit = input .. "\t※ 輸入〔項目〕每字第一個注音，調出相關符號。"
       yield(cand)
     end
@@ -118,7 +118,7 @@ local function translate(input, seg, env)
   -- if check_semicolon2 and caret_pos == 2 then
   if  input == ";;" and caret_pos == 2 then
     for k, v in ipairs(env.table_sd_2) do
-      local cand = Candidate("help", seg.start, seg._end, v[2], " " .. v[1])
+      local cand = Candidate("simp_help", seg.start, seg._end, v[2], " " .. v[1])
       -- cand.preedit = input .. "\t※ 輸入【項目】每字第一個注音，調出相關符號。"
       cand.preedit = input .. "\t《EMOJI集》▶"
       yield(cand)
