@@ -7,7 +7,7 @@
 
 -- local change_comment = require("filter_cand/change_comment")
 -- local change_preedit = require("filter_cand/change_preedit")
-local utf8comment = require("filter_cand/utf8comment")
+local utf8_comment = require("filter_cand/utf8_comment")
 -- local url_encode = require("f_components/f_url_encode")
 
 ----------------
@@ -32,6 +32,7 @@ local function init(env)
     else
       check_input = not string.match(input, "^;;?$")
     end
+    return check_input
   end
 end
 
@@ -41,11 +42,13 @@ end
 local function tags_match(seg,env)
   local engine = env.engine
   local context = engine.context
-  seg_1 = seg:has_tag("mf_translator")
-  seg_2 = seg:has_tag("email_url_translator")
-  seg_3 = seg:has_tag("easy_en") or seg:has_tag("easy_en_upper")
   local u_c = context:get_option("unicode_comment")
-  return u_c
+  local seg_1 = seg:has_tag("mf_translator")
+  local seg_2 = seg:has_tag("email_url_translator")
+  local seg_3 = seg:has_tag("easy_en")
+  local seg_4 = seg:has_tag("easy_en_upper")
+  local exclude_seg = seg_1 or seg_2 or seg_3 or seg_4
+  return u_c and not exclude_seg
 end
 
 -- local function comment_filter_unicode(inp,env)
@@ -53,18 +56,17 @@ local function filter(inp, env)
   local engine = env.engine
   local context = engine.context
   local c_input = context.input
-  local exclude_seg = seg_1 or seg_2 or seg_3
-  check_schema(c_input)
+  local check_inp = check_schema(c_input)
   -- local tab={}
 
 --------------------------------------------
 ---- 寫法一
 
   -- for cand in inp:iter() do
-  --   local utf8comment = utf8comment(cand.text)
+  --   local utf8comment = utf8_comment(cand.text)
   --   -- local utf8comment = "  U+" .. string.format("%X",utf8.codepoint(cand.text)) .. "  ( " .. url_encode(cand.text) .. " ）"
 
-  --   if not exclude_seg and check_input and utf8.len(cand.text) == 1 then
+  --   if not exclude_seg and check_inp and utf8.len(cand.text) == 1 then
   --     -- local cand = change_comment(cand, utf8comment .. cand.comment)
   --     -- local cand = ShadowCandidate(cand, "shadow_utf", cand.text, utf8comment .. cand.comment)
   --     local cand = UniquifiedCandidate(cand, "uniq_utf", cand.text, utf8comment .. cand.comment)
@@ -100,10 +102,10 @@ local function filter(inp, env)
 ---- 寫法二
 
   for cand in inp:iter() do
-    -- local utf8comment = utf8comment(cand.text)
     local cand_t = cand.text
-    yield(not exclude_seg and check_input and utf8.len(cand_t) == 1
-          and UniquifiedCandidate(cand, "uniq_utf", cand_t, utf8comment(cand_t) .. cand.comment) or
+    local utf8comment = utf8_comment(cand_t)
+    yield( check_inp -- and utf8.len(cand_t) == 1 -- 改用 utf8_comment(cand_t) 內限定
+          and UniquifiedCandidate(cand, "uniq_utf", cand_t, utf8comment .. cand.comment) or
           cand
           )
   end

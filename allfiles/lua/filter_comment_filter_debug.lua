@@ -7,7 +7,7 @@
 
 -- local change_comment = require("filter_cand/change_comment")
 -- local change_preedit = require("filter_cand/change_preedit")
-local debugcomment = require("filter_cand/debugcomment")
+local debug_comment = require("filter_cand/debug_comment")
 
 ----------------
 -- local M={}
@@ -35,7 +35,7 @@ local function filter(inp, env)
 ---- 寫法一
 
   -- for cand in inp:iter() do
-  --   local debugcomment = debugcomment(cand)
+  --   local debugcomment = debug_comment(cand)
   --   -- local debugcomment = "【"..cand:get_dynamic_type()..":"..cand.type.."| $ "..string.format("%6.6f", cand.quality).." | ‸ "..cand.start.."~"..cand._end.." 】"
   --   -- -- local debugcomment = "【 "..cand:get_dynamic_type().."|"..cand.type.."┃q: "..string.format("%6.6f", cand.quality).."┃s: "..cand.start.." e: "..cand._end.." 】"
 
@@ -53,8 +53,10 @@ local function filter(inp, env)
 ---- 寫法二
 
   for cand in inp:iter() do
-    -- local debugcomment = debugcomment(cand)
-    yield(ShadowCandidate(cand, "shadow_debug", cand.text, debugcomment(cand) .. cand.comment))
+    local debugcomment = debug_comment(cand)
+    yield(UniquifiedCandidate(cand, "shadow_debug", cand.text, debugcomment .. cand.comment))
+    --- 用 ShadowCandidate 某些狀況下，無法記憶
+    -- yield(ShadowCandidate(cand, "shadow_debug", cand.text, debugcomment .. cand.comment))
   end
 
 --------------------------------------------
