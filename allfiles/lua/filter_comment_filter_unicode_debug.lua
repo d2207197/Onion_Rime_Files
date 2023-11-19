@@ -23,11 +23,11 @@ local debug_comment = require("filter_cand/debug_comment")
 --   for cand in tran:iter() do
 --     local cand_text = cand.text
 --     if utf8.len(cand_text) == 1 then
---       cand = UniquifiedCandidate(cand, "Uniq_Unicode_debug", cand_text, debug_comment(cand) .. utf8_comment(cand_text) .. cand.comment)
+--       cand = UniquifiedCandidate(cand, "Uniq_unicode_debug", cand_text, debug_comment(cand) .. utf8_comment(cand_text) .. cand.comment)
 --     else
---       cand = UniquifiedCandidate(cand, "Uniq_Unicode_debug", cand_text, debug_comment(cand) .. cand.comment)
+--       cand = UniquifiedCandidate(cand, "Uniq_unicode_debug", cand_text, debug_comment(cand) .. cand.comment)
 --     end
---     -- local cand = UniquifiedCandidate(cand, "Uniq_Unicode_debug", cand_text, debug_comment(cand) .. utf8_comment(cand_text) .. cand.comment)
+--     -- local cand = UniquifiedCandidate(cand, "Uniq_unicode_debug", cand_text, debug_comment(cand) .. utf8_comment(cand_text) .. cand.comment)
 --     yield(cand)
 --   end
 -- end
@@ -88,7 +88,7 @@ local function filter(inp, env)
   -- if not u_c and d_c then
   --   for cand in inp:iter() do
   --     local debugcomment = debug_comment(cand)
-  --     local cand = UniquifiedCandidate(cand, "Uniq_Unicode_debug", cand.text, debugcomment .. cand.comment)
+  --     local cand = UniquifiedCandidate(cand, "Uniq_unicode_debug", cand.text, debugcomment .. cand.comment)
   --     yield(cand)
   --   end
   -- elseif u_c and not d_c then
@@ -97,7 +97,7 @@ local function filter(inp, env)
   --       local utf8comment = utf8_comment(cand.text)
   --       -- local cand = change_comment(cand, utf8comment .. cand.comment)
   --       -- local cand = ShadowCandidate(cand, "Shad", cand.text, utf8comment .. cand.comment)
-  --       local cand = UniquifiedCandidate(cand, "Uniq_Unicode_debug", cand.text, utf8comment .. cand.comment)
+  --       local cand = UniquifiedCandidate(cand, "Uniq_unicode_debug", cand.text, utf8comment .. cand.comment)
   --       yield(cand)
   --     else
   --       yield(cand)
@@ -108,10 +108,10 @@ local function filter(inp, env)
   --     local debugcomment = debug_comment(cand)
   --     if utf8.len(cand.text) == 1 and not exclude_seg and check_inp then
   --       local utf8comment = utf8_comment(cand.text)
-  --       local cand = UniquifiedCandidate(cand, "Uniq_Unicode_debug", cand.text, debugcomment .. utf8comment .. cand.comment )
+  --       local cand = UniquifiedCandidate(cand, "Uniq_unicode_debug", cand.text, debugcomment .. utf8comment .. cand.comment )
   --       yield(cand)
   --     else
-  --       local cand = UniquifiedCandidate(cand, "Uniq_Unicode_debug", cand.text, debugcomment .. cand.comment)
+  --       local cand = UniquifiedCandidate(cand, "Uniq_unicode_debug", cand.text, debugcomment .. cand.comment)
   --       yield(cand)
   --     end
   --   end
@@ -128,13 +128,13 @@ local function filter(inp, env)
   --   -- -- local debugcomment = "【 "..cand:get_dynamic_type().."|"..cand.type.."┃q: "..string.format("%6.6f", cand.quality).."┃s: "..cand.start.." e: "..cand._end.." 】"
 
   --   if not u_c and d_c then
-  --     local cand = UniquifiedCandidate(cand, "Uniq_Unicode_debug", cand.text, debugcomment .. cand.comment)
+  --     local cand = UniquifiedCandidate(cand, "Uniq_unicode_debug", cand.text, debugcomment .. cand.comment)
   --     yield(cand)
 
   --   elseif u_c and not d_c and utf8.len(cand.text) == 1 and not exclude_seg and check_inp then
   --     -- local cand = change_comment(cand, utf8comment .. cand.comment)
   --     -- local cand = ShadowCandidate(cand, "Shad", cand.text, utf8comment .. cand.comment)
-  --     local cand = UniquifiedCandidate(cand, "Uniq_Unicode_debug", cand.text, utf8comment .. cand.comment)
+  --     local cand = UniquifiedCandidate(cand, "Uniq_unicode_debug", cand.text, utf8comment .. cand.comment)
   --     yield(cand)
 
   --     -- if tab[cand.text] then
@@ -146,10 +146,10 @@ local function filter(inp, env)
 
   --   elseif u_c and d_c then
   --     if utf8.len(cand.text) == 1 and not exclude_seg and check_inp then
-  --       local cand = UniquifiedCandidate(cand, "Uniq_Unicode_debug", cand.text, debugcomment .. utf8comment .. cand.comment )
+  --       local cand = UniquifiedCandidate(cand, "Uniq_unicode_debug", cand.text, debugcomment .. utf8comment .. cand.comment )
   --       yield(cand)
   --     else
-  --       local cand = UniquifiedCandidate(cand, "Uniq_Unicode_debug", cand.text, debugcomment .. cand.comment)
+  --       local cand = UniquifiedCandidate(cand, "Uniq_unicode_debug", cand.text, debugcomment .. cand.comment)
   --       yield(cand)
   --     end
 
@@ -180,14 +180,14 @@ local function filter(inp, env)
     local utf8comment = utf8_comment(cand_t)
     local debugcomment = debug_comment(cand)
     yield(-- not u_c and d_c
-          -- and UniquifiedCandidate(cand, "Uniq_Unicode_debug", cand_t, debugcomment .. cand.comment) or
+          -- and UniquifiedCandidate(cand, "Uniq_unicode_debug", cand_t, debugcomment .. cand.comment) or
           u_c and not d_c and not exclude_seg and check_inp and utf8.len(cand_t) == 1 -- 可改用 utf8_comment(cand_t) 內限定
-          and UniquifiedCandidate(cand, "Uniq_Unicode_debug", cand_t, utf8comment .. cand.comment) or
+          and UniquifiedCandidate(cand, "Uniq_unicode_debug", cand_t, utf8comment .. cand.comment) or
           u_c and d_c and not exclude_seg and check_inp and utf8.len(cand_t) == 1 -- 可改用 utf8_comment(cand_t) 內限定
-          and UniquifiedCandidate(cand, "Uniq_Unicode_debug", cand_t, debugcomment .. utf8comment .. cand.comment) or
+          and UniquifiedCandidate(cand, "Uniq_unicode_debug", cand_t, debugcomment .. utf8comment .. cand.comment) or
           -- u_c and d_c
           d_c
-          and UniquifiedCandidate(cand, "Uniq_Unicode_debug", cand_t, debugcomment .. cand.comment) or
+          and UniquifiedCandidate(cand, "Uniq_unicode_debug", cand_t, debugcomment .. cand.comment) or
           cand
           )
   end

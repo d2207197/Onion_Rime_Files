@@ -71,8 +71,8 @@ local function filter(inp, env)
 
   --   if not exclude_seg and check_inp and utf8.len(cand.text) == 1 then
   --     -- local cand = change_comment(cand, utf8comment .. cand.comment)
-  --     -- local cand = ShadowCandidate(cand, "shadow_utf", cand.text, utf8comment .. cand.comment)
-  --     local cand = UniquifiedCandidate(cand, "uniq_utf", cand.text, utf8comment .. cand.comment)
+  --     -- local cand = ShadowCandidate(cand, "shadow_unicode", cand.text, utf8comment .. cand.comment)
+  --     local cand = UniquifiedCandidate(cand, "uniq_unicode", cand.text, utf8comment .. cand.comment)
   --     yield(cand)
 
   --     -- if tab[cand.text] then
@@ -85,7 +85,7 @@ local function filter(inp, env)
   --   -- if u_c and utf8.len(cand.text) == 1 and cand.type == "simplified" then
   --   --   local newpreedit = cand.preedit
   --   --   local _end2 = context:get_preedit().sel_end
-  --   --   local cand = Candidate("simp_utf", 0, _end2, cand.text, cand.type .. utf8comment .. cand.comment)
+  --   --   local cand = Candidate("simp_unicode", 0, _end2, cand.text, cand.type .. utf8comment .. cand.comment)
   --   --   yield(change_preedit(cand,newpreedit))
   --   --   yield(cand)
   --   -- elseif u_c and utf8.len(cand.text) == 1 then
@@ -105,12 +105,22 @@ local function filter(inp, env)
 ---- 寫法二
 
   for cand in inp:iter() do
+
     local cand_t = cand.text
     local utf8comment = utf8_comment(cand_t)
     yield(check_inp and utf8.len(cand_t) == 1 -- 可改用 utf8_comment(cand_t) 內限定
-          and UniquifiedCandidate(cand, "uniq_utf", cand_t, utf8comment .. cand.comment) or
+          and UniquifiedCandidate(cand, "uniq_unicode", cand_t, utf8comment .. cand.comment) or
           cand
           )
+
+    -- local cand_t = cand.text
+    -- if check_inp and utf8.len(cand_t) == 1 then -- 可改用 utf8_comment(cand_t) 內限定
+    --   local utf8comment = utf8_comment(cand_t)
+    --   yield(UniquifiedCandidate(cand, "uniq_unicode", cand_t, utf8comment .. cand.comment))
+    -- else
+    --   yield(cand)
+    -- end
+
   end
 
 --------------------------------------------
