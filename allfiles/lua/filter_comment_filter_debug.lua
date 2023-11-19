@@ -7,7 +7,10 @@
 
 -- local change_comment = require("filter_cand/change_comment")
 -- local change_preedit = require("filter_cand/change_preedit")
+
 local debug_comment = require("filter_cand/debug_comment")
+-- local debug_comment = require("filter_cand/debug_comment").debug_comment
+-- local t_debug_comment = require("filter_cand/debug_comment").t_debug_comment
 
 ----------------
 -- local M={}
@@ -58,6 +61,14 @@ local function filter(inp, env)
     --- 用 ShadowCandidate 某些狀況下，無法記憶
     -- yield(ShadowCandidate(cand, "shadow_debug", cand.text, debugcomment .. cand.comment))
   end
+
+--------------------------------------------
+---- 寫法三
+
+  -- local tran = Translation(t_debug_comment, inp) or inp
+  -- for cand in tran:iter() do
+  --   yield(cand)
+  -- end
 
 --------------------------------------------
 

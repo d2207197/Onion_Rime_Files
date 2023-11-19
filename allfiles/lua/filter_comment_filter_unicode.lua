@@ -7,8 +7,11 @@
 
 -- local change_comment = require("filter_cand/change_comment")
 -- local change_preedit = require("filter_cand/change_preedit")
-local utf8_comment = require("filter_cand/utf8_comment")
 -- local url_encode = require("f_components/f_url_encode")
+
+local utf8_comment = require("filter_cand/utf8_comment")
+-- local utf8_comment = require("filter_cand/utf8_comment").utf8_comment
+-- local t_utf8_comment = require("filter_cand/utf8_comment").t_utf8_comment
 
 ----------------
 -- local M={}
@@ -104,11 +107,19 @@ local function filter(inp, env)
   for cand in inp:iter() do
     local cand_t = cand.text
     local utf8comment = utf8_comment(cand_t)
-    yield( check_inp -- and utf8.len(cand_t) == 1 -- 改用 utf8_comment(cand_t) 內限定
+    yield(check_inp and utf8.len(cand_t) == 1 -- 可改用 utf8_comment(cand_t) 內限定
           and UniquifiedCandidate(cand, "uniq_utf", cand_t, utf8comment .. cand.comment) or
           cand
           )
   end
+
+--------------------------------------------
+---- 寫法三
+
+  -- local tran = check_inp and Translation(t_utf8_comment, inp) or inp
+  -- for cand in tran:iter() do
+  --   yield(cand)
+  -- end
 
 --------------------------------------------
 
