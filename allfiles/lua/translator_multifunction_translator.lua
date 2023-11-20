@@ -191,13 +191,13 @@ local function init(env)
       , { "  j [a-z]+〔快捷開啟〕", "⑳" }
       , { "  kk〔快捷鍵 說明〕", "㉑" }
       , { "  ko〔操作鍵 說明〕", "㉒" }
-      , { "  kj〔日文 羅馬字 說明〕", "㉓" }
-      , { "  kh〔韓文 HNC 說明〕(注音系列)", "㉔" }
-      , { "  ks〔韓文 洋蔥形碼 說明〕(形碼系列)", "㉕" }
-      , { "  ki〔拉丁 IPA國際音標 洋蔥形碼 說明〕", "㉖" }
-      , { "  kp〔拉丁 KK/DJ/IPA音標 洋蔥形碼 說明〕", "㉗" }
-      , { "  kg〔希臘 洋蔥形碼 說明〕", "㉘" }
-      , { "  kc〔西里爾 洋蔥形碼 說明〕", "㉙" }
+      , { "  kj〔日文 羅馬字 編碼〕", "㉓" }
+      , { "  kh〔韓文 HNC 編碼〕(注音系列)", "㉔" }
+      , { "  ks〔韓文 洋蔥形碼 編碼〕(形碼系列)", "㉕" }
+      , { "  ki〔拉丁 IPA國際音標 洋蔥形碼 編碼〕", "㉖" }
+      , { "  kp〔拉丁 KK/DJ/IPA音標 洋蔥形碼 編碼〕", "㉗" }
+      , { "  kg〔希臘 洋蔥形碼 編碼〕", "㉘" }
+      , { "  kc〔西里爾 洋蔥形碼 編碼〕", "㉙" }
       , { "  v〔版本資訊〕", "㉚" }
       , { "  g〔Lua 所佔記憶體〕(Garbage)", "㉛" }
       , { "  gc〔垃圾回收〕(Garbage Collection)", "㉜" }
@@ -343,19 +343,19 @@ local function translate(input, seg, env)
       local keys_table = {
           { "  ~k 〔快捷鍵 說明〕", "⓵" }
         , { "  ~o 〔操作鍵 說明〕", "⓶" }
-        , { "  ~j 〔日文 羅馬字 說明〕", "⓷" }
-        , { "  ~h 〔韓文 HNC 說明〕(注音系列)", "⓸" }
-        , { "  ~s 〔韓文 洋蔥形碼 說明〕(形碼系列)", "⓹" }
-        , { "  ~i 〔拉丁 IPA國際音標 洋蔥形碼 說明〕", "⓺" }
-        , { "  ~p 〔拉丁 KK/DJ/IPA音標 洋蔥形碼 說明〕", "⓻" }
-        , { "  ~g 〔希臘 洋蔥形碼 說明〕", "⓼" }
-        , { "  ~c 〔西里爾 洋蔥形碼 說明〕", "⓽" }
+        , { "  ~j 〔日文 羅馬字 編碼〕", "⓷" }
+        , { "  ~h 〔韓文 HNC 編碼〕(注音系列)", "⓸" }
+        , { "  ~s 〔韓文 洋蔥形碼 編碼〕(形碼系列)", "⓹" }
+        , { "  ~i 〔拉丁 IPA國際音標 洋蔥形碼 編碼〕", "⓺" }
+        , { "  ~p 〔拉丁 KK/DJ/IPA音標 洋蔥形碼 編碼〕", "⓻" }
+        , { "  ~g 〔希臘 洋蔥形碼 編碼〕", "⓼" }
+        , { "  ~c 〔西里爾 洋蔥形碼 編碼〕", "⓽" }
         , { "═══  結束  ═══  ", "⓾" }
         -- , { "===========  結束  ===========    ", "⓼" }
         }
       for k, v in ipairs(keys_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《鍵位編碼說明》▶"
+        cand.preedit = input .. "\t《鍵位和編碼》▶"
         yield(cand)
       end
       return
@@ -400,7 +400,7 @@ local function translate(input, seg, env)
       local keys_table = languagekeys.kh
       for k, v in ipairs(keys_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《韓文 HNC 說明》"
+        cand.preedit = input .. "\t《韓文 HNC 編碼》"
         yield(cand)
       end
       return
@@ -410,7 +410,7 @@ local function translate(input, seg, env)
       local keys_table = languagekeys.ks
       for k, v in ipairs(keys_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《韓文 洋蔥形碼 說明》"
+        cand.preedit = input .. "\t《韓文 洋蔥形碼 編碼》"
         yield(cand)
       end
       return
@@ -420,7 +420,7 @@ local function translate(input, seg, env)
       local keys_table = languagekeys.kj
       for k, v in ipairs(keys_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《日文 羅馬字 說明》"
+        cand.preedit = input .. "\t《日文 羅馬字 編碼》"
         yield(cand)
       end
       return
@@ -430,7 +430,7 @@ local function translate(input, seg, env)
       local keys_table = languagekeys.ki
       for k, v in ipairs(keys_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《拉丁 IPA國際音標 洋蔥形碼 說明》"
+        cand.preedit = input .. "\t《拉丁 IPA國際音標 洋蔥形碼 編碼》"
         yield(cand)
       end
       return
@@ -440,7 +440,7 @@ local function translate(input, seg, env)
       local keys_table = languagekeys.kp
       for k, v in ipairs(keys_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《拉丁 KK/DJ/IPA音標 洋蔥形碼 說明》"
+        cand.preedit = input .. "\t《拉丁 KK/DJ/IPA音標 洋蔥形碼 編碼》"
         yield(cand)
       end
       return
@@ -450,7 +450,7 @@ local function translate(input, seg, env)
       local keys_table = languagekeys.kg
       for k, v in ipairs(keys_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《希臘 洋蔥形碼 說明》"
+        cand.preedit = input .. "\t《希臘 洋蔥形碼 編碼》"
         yield(cand)
       end
       return
@@ -460,7 +460,7 @@ local function translate(input, seg, env)
       local keys_table = languagekeys.kc
       for k, v in ipairs(keys_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《西里爾 洋蔥形碼 說明》"
+        cand.preedit = input .. "\t《西里爾 洋蔥形碼 編碼》"
         yield(cand)
       end
       return
