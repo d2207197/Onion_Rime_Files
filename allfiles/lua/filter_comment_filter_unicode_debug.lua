@@ -85,9 +85,9 @@ local function tags_match(seg,env)
   local check_inp = check_schema(c_input)
   local u_c2 = u_c and not exclude_seg and check_inp
   -- d_c_only = not u_c and d_c
-  u_c_only = u_c2 and not d_c
-  u_c_d_c = u_c2 and d_c
-  return u_c_only or u_c_d_c or d_c
+  u_c2_only = u_c2 and not d_c
+  u_c2_d_c = u_c2 and d_c
+  return u_c2_only or u_c2_d_c or d_c
 end
 
 -- local function comment_filter_unicode_debug(inp,env)
@@ -206,9 +206,9 @@ local function filter(inp, env)
     --       and UniquifiedCandidate(cand, "uniq_unicode_debug", cand_t, debugcomment .. cand.comment) or
     --       cand
     --       )
-    yield(u_c_only and utf8.len(cand_t) == 1 -- 可改用 utf8_comment(cand_t) 內限定
+    yield(u_c2_only and utf8.len(cand_t) == 1 -- 可改用 utf8_comment(cand_t) 內限定
           and UniquifiedCandidate(cand, "uniq_unicode_debug", cand_t, utf8comment .. cand.comment) or
-          u_c_d_c and utf8.len(cand_t) == 1 -- 可改用 utf8_comment(cand_t) 內限定
+          u_c2_d_c and utf8.len(cand_t) == 1 -- 可改用 utf8_comment(cand_t) 內限定
           and UniquifiedCandidate(cand, "uniq_unicode_debug", cand_t, debugcomment .. utf8comment .. cand.comment) or
           d_c
           and UniquifiedCandidate(cand, "uniq_unicode_debug", cand_t, debugcomment .. cand.comment) or
