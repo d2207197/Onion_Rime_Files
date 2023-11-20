@@ -42,6 +42,16 @@ end
 -- function M.fini(env)
 -- end
 
+-- local function check_schema(input)
+--   -- if s_bo then
+--   if s_1 or s_2 then
+--     check_input = not string.match(input, "``?$") or string.match(input, "=``?$")
+--   else
+--     check_input = not string.match(input, "^;;?$")
+--   end
+--   return check_input
+-- end
+
 local function tags_match(seg,env)
   local engine = env.engine
   local context = engine.context
@@ -51,15 +61,21 @@ local function tags_match(seg,env)
   local seg_3 = seg:has_tag("easy_en")
   local seg_4 = seg:has_tag("easy_en_upper")
   local exclude_seg = seg_1 or seg_2 or seg_3 or seg_4
-  return u_c and not exclude_seg
+  local c_input = context.input
+  local check_inp = check_schema(c_input)
+  local u_c2 = u_c and not exclude_seg and check_inp
+  return u_c2
 end
+
+
+
 
 -- local function comment_filter_unicode(inp,env)
 local function filter(inp, env)
-  local engine = env.engine
-  local context = engine.context
-  local c_input = context.input
-  local check_inp = check_schema(c_input)
+  -- local engine = env.engine
+  -- local context = engine.context
+  -- local c_input = context.input
+  -- local check_inp = check_schema(c_input)
   -- local tab={}
 
 --------------------------------------------
@@ -108,10 +124,10 @@ local function filter(inp, env)
 
     local cand_t = cand.text
     local utf8comment = utf8_comment(cand_t)
-    yield(check_inp and utf8.len(cand_t) == 1 -- 可改用 utf8_comment(cand_t) 內限定
+    yield(utf8.len(cand_t) == 1 -- 可改用 utf8_comment(cand_t) 內限定
           and UniquifiedCandidate(cand, "uniq_unicode", cand_t, utf8comment .. cand.comment) or
           cand
-          )
+          )  --check_inp and 
 
     -- local cand_t = cand.text
     -- if check_inp and utf8.len(cand_t) == 1 then -- 可改用 utf8_comment(cand_t) 內限定

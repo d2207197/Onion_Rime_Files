@@ -6,7 +6,7 @@ local function debug_comment(cand)
   local q = cand.quality
   local s = cand.start
   local e = cand._end
-  return "【"..dt..":"..t.."| $ "..string.format("%6.6f", q).." | ‸ "..s.."~"..e.." 】"
+  return "【"..dt..":"..t.."|$"..string.format("%6.6f", q).."|‸"..s.."~"..e.."】"
 end
 
 ----------------------------------------------------------------------------------------

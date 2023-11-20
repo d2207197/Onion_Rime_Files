@@ -152,9 +152,9 @@ comment_filter_plus = require("filter_comment_filter_plus")
 
 --- comment_filter_unicode_debug （注音plus、注音mixin、ocm全系列）
 -- 註釋 Unicode 編碼 和 debug 訊息
-comment_filter_unicode_debug = require("filter_comment_filter_unicode_debug")
--- comment_filter_unicode = require("filter_comment_filter_unicode")
+comment_filter_unicode = require("filter_comment_filter_unicode")
 -- comment_filter_debug = require("filter_comment_filter_debug")
+-- comment_filter_unicode_debug = require("filter_comment_filter_unicode_debug")
 
 
 --- array30_nil_filter （onion-array30）

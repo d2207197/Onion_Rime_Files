@@ -64,8 +64,8 @@ switches:
     reset: 0
     states: [ '🄽', '🅄' ]
     # states: [ 'nil', 'Unicode(URL)' ]
-  - name: debug_comment
-    reset: 0
+  # - name: debug_comment
+  #   reset: 0
     # states: [ 'Ⓝ', 'Ⓓ' ]
     # states: [ 'normal', 'Debug' ]
   - name: en_sort
@@ -94,9 +94,9 @@ engine:
     - reverse_lookup_filter@ovff_reverse_lookup
     - reverse_lookup_filter@phonetic_reverse_lookup
     # - reverse_lookup_filter@e_reverse_lookup
-    # - lua_filter@comment_filter_unicode  # unicode 和 debug 分開，同時開啟無法記憶
+    - lua_filter@comment_filter_unicode  # unicode 和 debug 分開，同時開啟無法記憶
     # - lua_filter@comment_filter_debug  # unicode 和 debug 分開，同時開啟無法記憶
-    - lua_filter@comment_filter_unicode_debug
+    # - lua_filter@comment_filter_unicode_debug
     - uniquifier
   processors:
     - lua_processor@mix_zhs_ltk
