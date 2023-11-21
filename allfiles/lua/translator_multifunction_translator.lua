@@ -200,8 +200,8 @@ local function init(env)
       , { "  kj〔日文 羅馬字 編碼〕", "㉓" }
       , { "  kh〔韓文 HNC 編碼〕(注音系列)", "㉔" }
       , { "  ks〔韓文 洋蔥形碼 編碼〕(形碼系列)", "㉕" }
-      , { "  ki〔拉丁 IPA國際音標 洋蔥形碼 編碼〕", "㉖" }
-      , { "  kp〔拉丁 KK/DJ/IPA音標 洋蔥形碼 編碼〕", "㉗" }
+      , { "  ki〔拉丁 洋蔥形碼 IPA國際音標 編碼〕", "㉖" }
+      , { "  kp〔拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼〕", "㉗" }
       , { "  kg〔希臘 洋蔥形碼 編碼〕", "㉘" }
       , { "  kc〔西里爾 洋蔥形碼 編碼〕", "㉙" }
       , { "  v〔版本資訊〕", "㉚" }
@@ -352,8 +352,8 @@ local function translate(input, seg, env)
         , { "  ~j 〔日文 羅馬字 編碼〕", "⓷" }
         , { "  ~h 〔韓文 HNC 編碼〕(注音系列)", "⓸" }
         , { "  ~s 〔韓文 洋蔥形碼 編碼〕(形碼系列)", "⓹" }
-        , { "  ~i 〔拉丁 IPA國際音標 洋蔥形碼 編碼〕", "⓺" }
-        , { "  ~p 〔拉丁 KK/DJ/IPA音標 洋蔥形碼 編碼〕", "⓻" }
+        , { "  ~i 〔拉丁 洋蔥形碼 IPA國際音標 編碼〕", "⓺" }
+        , { "  ~p 〔拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼〕", "⓻" }
         , { "  ~g 〔希臘 洋蔥形碼 編碼〕", "⓼" }
         , { "  ~c 〔西里爾 洋蔥形碼 編碼〕", "⓽" }
         , { "═══  結束  ═══  ", "⓾" }
@@ -436,7 +436,7 @@ local function translate(input, seg, env)
       local keys_table = ki_table
       for k, v in ipairs(keys_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《拉丁 IPA國際音標 洋蔥形碼 編碼》"
+        cand.preedit = input .. "\t《拉丁 洋蔥形碼 IPA國際音標 編碼》"
         yield(cand)
       end
       return
@@ -446,7 +446,7 @@ local function translate(input, seg, env)
       local keys_table = kp_table
       for k, v in ipairs(keys_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《拉丁 KK/DJ/IPA音標 洋蔥形碼 編碼》"
+        cand.preedit = input .. "\t《拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼》"
         yield(cand)
       end
       return
