@@ -136,8 +136,14 @@ local simple_calculator = require("f_components/f_simple_calculator")
 ----------------------------------------------------------------------------------------
 --- 按鍵說明
 
-local hotkeys = require("f_components/f_hot_keys")
-local languagekeys = require("f_components/f_language_keys")
+local hotkeys = require("f_components/keys_table/hot_keys")
+local kh_table = require("f_components/keys_table/kh_table")
+local ks_table = require("f_components/keys_table/ks_table")
+local kj_table = require("f_components/keys_table/kj_table")
+local ki_table = require("f_components/keys_table/ki_table")
+local kp_table = require("f_components/keys_table/kp_table")
+local kg_table = require("f_components/keys_table/kg_table")
+local kc_table = require("f_components/keys_table/kc_table")
 
 ----------------------------------------------------------------------------------------
 --- 快捷開啟
@@ -397,7 +403,7 @@ local function translate(input, seg, env)
     -- end
 
     if (input == env.prefix .. "kh") then
-      local keys_table = languagekeys.kh
+      local keys_table = kh_table
       for k, v in ipairs(keys_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
         cand.preedit = input .. "\t《韓文 HNC 編碼》"
@@ -407,7 +413,7 @@ local function translate(input, seg, env)
     end
 
     if (input == env.prefix .. "ks") then
-      local keys_table = languagekeys.ks
+      local keys_table = ks_table
       for k, v in ipairs(keys_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
         cand.preedit = input .. "\t《韓文 洋蔥形碼 編碼》"
@@ -417,7 +423,7 @@ local function translate(input, seg, env)
     end
 
     if (input == env.prefix .. "kj") then
-      local keys_table = languagekeys.kj
+      local keys_table = kj_table
       for k, v in ipairs(keys_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
         cand.preedit = input .. "\t《日文 羅馬字 編碼》"
@@ -427,7 +433,7 @@ local function translate(input, seg, env)
     end
 
     if (input == env.prefix .. "ki") then
-      local keys_table = languagekeys.ki
+      local keys_table = ki_table
       for k, v in ipairs(keys_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
         cand.preedit = input .. "\t《拉丁 IPA國際音標 洋蔥形碼 編碼》"
@@ -437,7 +443,7 @@ local function translate(input, seg, env)
     end
 
     if (input == env.prefix .. "kp") then
-      local keys_table = languagekeys.kp
+      local keys_table = kp_table
       for k, v in ipairs(keys_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
         cand.preedit = input .. "\t《拉丁 KK/DJ/IPA音標 洋蔥形碼 編碼》"
@@ -447,7 +453,7 @@ local function translate(input, seg, env)
     end
 
     if (input == env.prefix .. "kg") then
-      local keys_table = languagekeys.kg
+      local keys_table = kg_table
       for k, v in ipairs(keys_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
         cand.preedit = input .. "\t《希臘 洋蔥形碼 編碼》"
@@ -457,7 +463,7 @@ local function translate(input, seg, env)
     end
 
     if (input == env.prefix .. "kc") then
-      local keys_table = languagekeys.kc
+      local keys_table = kc_table
       for k, v in ipairs(keys_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
         cand.preedit = input .. "\t《西里爾 洋蔥形碼 編碼》"
