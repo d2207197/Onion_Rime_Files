@@ -28,7 +28,7 @@ patch:
     mark_text: ""    #高亮標記符號，顯示在選中的候選標籤前 【需設置hilited_mark_color才會作用】
     ascii_tip_follow_cursor: false    #切換ASCII模式時，提示圖標跟隨光標
     enhanced_position: false    #無法定位候選框時，在窗口左上角顯示候選框
-    display_tray_iconr: false    #託盤顯示獨立於語言欄的額外圖標
+    display_tray_icon: false    #託盤顯示獨立於語言欄的額外圖標
     antialias_mode: default ##default；force_dword；cleartype；grayscale；aliased    #次像素反鋸齒設定
 
     layout:
