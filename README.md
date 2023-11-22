@@ -89,7 +89,7 @@
 
 - [功能鍵和快捷鍵](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E5%8A%9F%E8%83%BD%E9%8D%B5%E5%92%8C%E5%BF%AB%E6%8D%B7%E9%8D%B5)
 
-- [簡體與字符範圍和Unicode碼](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E7%B0%A1%E9%AB%94%E8%88%87%E5%AD%97%E7%AC%A6%E7%AF%84%E5%9C%8D%E5%92%8CUnicode%E7%A2%BC)
+- [簡體、字符範圍、字符 Unicode 碼](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E7%B0%A1%E9%AB%94%E3%80%81%E5%AD%97%E7%AC%A6%E7%AF%84%E5%9C%8D%E3%80%81%E5%AD%97%E7%AC%A6-Unicode-%E7%A2%BC)
 
 - [注音文](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E6%B3%A8%E9%9F%B3%E6%96%87)
 
