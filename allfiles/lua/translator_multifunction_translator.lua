@@ -2051,9 +2051,10 @@ local function translate(input, seg, env)
     local urlencode_prefix = env.prefix .. "i"
     local urlencode_input = string.match(input, urlencode_prefix .. "([0-9a-z][0-9a-f]*)$")
     if urlencode_input then
-      local preedit_urlencode = string.gsub(urlencode_input, "(%x%x)", "%%%1")
-      local preedit_urlencode = string.gsub(preedit_urlencode, "(%x%x)(%x)$", "%1%%%2")
-      local preedit_urlencode = string.gsub(preedit_urlencode, "^(%x)$", "%%%1")
+      local preedit_urlencode = string.gsub(urlencode_input, "(..)", "%1 ")
+      local urlencode_code = string.gsub(urlencode_input, "(%x%x)", "%%%1")
+      local urlencode_code = string.gsub(urlencode_code, "(%x%x)(%x)$", "%1%%%2")
+      local urlencode_code = string.gsub(urlencode_code, "^(%x)$", "%%%1")
       local urlencode_cand = url_decode(urlencode_input)
 
       local unfinished = string.match(urlencode_cand, "… $")
@@ -2064,18 +2065,18 @@ local function translate(input, seg, env)
       end
 
       local cand_urlencode_error = Candidate("simp_mf_urlencode", seg.start, seg._end, "", urlencode_cand)  --字符過濾可能會過濾掉""整個選項。
-      cand_urlencode_error.preedit = urlencode_prefix .. " " .. string.upper(urlencode_input)  --string.upper(preedit_urlencode)
+      cand_urlencode_error.preedit = urlencode_prefix .. " " .. string.upper(preedit_urlencode)  --string.upper(urlencode_code)
 
       local cand_urlencode_sentence = Candidate("simp_mf_urlencode", seg.start, seg._end, urlencode_cand, judge_unfinished)
-      cand_urlencode_sentence.preedit = urlencode_prefix .. " " .. string.upper(urlencode_input)  --string.upper(preedit_urlencode)
+      cand_urlencode_sentence.preedit = urlencode_prefix .. " " .. string.upper(preedit_urlencode)  --string.upper(urlencode_code)
 
       local url_first_word = utf8_sub(urlencode_cand,1,1)
       local url_first_word_dec = utf8.codepoint(url_first_word)
       local cand_urlencode_single = Candidate("simp_mf_urlencode", seg.start, seg._end, url_first_word, string.format("  U+".."%X" ,url_first_word_dec) .. judge_unfinished)
-      cand_urlencode_single.preedit = urlencode_prefix .. " " .. string.upper(urlencode_input)  --string.upper(preedit_urlencode)
+      cand_urlencode_single.preedit = urlencode_prefix .. " " .. string.upper(preedit_urlencode)  --string.upper(urlencode_code)
 
-      local cand_urlencode_code = Candidate("simp_mf_urlencode", seg.start, seg._end, string.upper(preedit_urlencode), "〔URL編碼〕")
-      cand_urlencode_code.preedit = urlencode_prefix .. " " .. string.upper(urlencode_input)  --string.upper(preedit_urlencode)
+      local cand_urlencode_code = Candidate("simp_mf_urlencode", seg.start, seg._end, string.upper(urlencode_code), "〔URL編碼〕")
+      cand_urlencode_code.preedit = urlencode_prefix .. " " .. string.upper(preedit_urlencode)  --string.upper(urlencode_code)
 
       local is_error = string.match(urlencode_cand, "^〈輸入錯誤〉")
       if is_error then

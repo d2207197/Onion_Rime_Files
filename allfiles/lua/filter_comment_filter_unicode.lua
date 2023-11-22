@@ -122,17 +122,17 @@ local function filter(inp, env)
 
   for cand in inp:iter() do
 
-    local cand_t = cand.text
-    local utf8comment = utf8_comment(cand_t)
-    yield(utf8.len(cand_t) == 1 -- 可改用 utf8_comment(cand_t) 內限定
-          and UniquifiedCandidate(cand, "uniq_unicode", cand_t, utf8comment .. cand.comment) or
+    local cand_text = cand.text  -- cand.text ~= "" and cand.text or "〖空碼〗"
+    -- local utf8comment = utf8_comment(cand_text)  -- 遮屏後，utf8.len(cand_text) == 1再跑
+    yield(utf8.len(cand_text) == 1 -- 可改用 utf8_comment(cand_text) 內限定
+          and UniquifiedCandidate(cand, "uniq_unicode", cand_text, utf8_comment(cand_text) .. cand.comment) or
           cand
           )  --check_inp and 
 
-    -- local cand_t = cand.text
-    -- if check_inp and utf8.len(cand_t) == 1 then -- 可改用 utf8_comment(cand_t) 內限定
-    --   local utf8comment = utf8_comment(cand_t)
-    --   yield(UniquifiedCandidate(cand, "uniq_unicode", cand_t, utf8comment .. cand.comment))
+    -- local cand_text = cand.text
+    -- if check_inp and utf8.len(cand_text) == 1 then -- 可改用 utf8_comment(cand_text) 內限定
+    --   local utf8comment = utf8_comment(cand_text)
+    --   yield(UniquifiedCandidate(cand, "uniq_unicode", cand_text, utf8comment .. cand.comment))
     -- else
     --   yield(cand)
     -- end

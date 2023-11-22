@@ -56,10 +56,11 @@ local function filter(inp, env)
 ---- 寫法二
 
   for cand in inp:iter() do
-    local debugcomment = debug_comment(cand)
-    yield(UniquifiedCandidate(cand, "uniq_debug", cand.text, debugcomment .. cand.comment))
+    -- local debugcomment = debug_comment(cand)
+    local cand_text = cand.text
+    yield(UniquifiedCandidate(cand, "uniq_debug", cand_text, debug_comment(cand) .. cand.comment))
     --- 用 ShadowCandidate 某些狀況下，無法記憶
-    -- yield(ShadowCandidate(cand, "shadow_debug", cand.text, debugcomment .. cand.comment))
+    -- yield(ShadowCandidate(cand, "shadow_debug", cand_text, debug_comment(cand) .. cand.comment))
   end
 
 --------------------------------------------
