@@ -47,7 +47,8 @@ local url_encode = require("f_components/f_url_encode")
 
 local function utf8_comment(char)
   -- local char = char ~= "" and char or "0空碼"  --如 char 為""空碼，下方會出錯！
-  return char ~= "" and "  U+" .. string.format("%X",utf8.codepoint(char)) .. " (" .. url_encode(char) .. "）" or "  U+0000(空碼)"
+  return "  U+" .. string.format("%X",utf8.codepoint(char)) .. " (" .. url_encode(char) .. "）"
+  -- return char ~= "" and "  U+" .. string.format("%X",utf8.codepoint(char)) .. " (" .. url_encode(char) .. "）" or "  U+0000(空碼)"
 end
 
 ----------------------------------------------------------------------------------------
