@@ -590,7 +590,7 @@ recognizer:
     # lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|'/[-+*^/.,'();0-9a-z]*$" #"'/[';]?[a-z0-9.,/-]*$"
     email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$"
     mf_translator: "'/[-+*^/.,'();0-9a-z]*$"
-    #舊# lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|'/[';/]?[a-z]*$|'/[0-9./-]*$|'/[xcoe][0-9a-z]+$"
+    #舊# lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|'/[';/]?[a-z]*$|'/[0-9./-]*$|'/[xucoi][0-9a-z]+$"
 
 # __patch:
 #   # 使用八股文語言模型

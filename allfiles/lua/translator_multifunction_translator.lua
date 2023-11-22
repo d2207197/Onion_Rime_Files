@@ -189,7 +189,7 @@ local function init(env)
       , { "  / [a-z , . - \' / ]+〔小寫字母〕", "⑫" }
       , { "  ; [a-z , . - \' / ]+〔大寫字母〕", "⑬" }
       , { "  \' [a-z , . - \' / ]+〔開頭大寫字母〕", "⑭" }
-      , { "  e [0-9a-f]+〔Percent/URL encoding〕", "⑮" }
+      , { "  i [0-9a-f]+〔Percent/URL encoding〕", "⑮" }
       , { "  u [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑯" }
       , { "  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑰" }
       , { "  c [0-9]+〔內碼十進制 Dec〕", "⑱" }
@@ -336,7 +336,7 @@ local function translate(input, seg, env)
       return
     end
 
-    if (input == env.prefix .. "e") then
+    if (input == env.prefix .. "i") then
       local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "  ~ [0-9a-f]+〔Percent/URL encoding〕")
       cand2.preedit = input .. "\t《Percent/URL encoding》▶"
       yield(cand2)
@@ -2048,48 +2048,48 @@ local function translate(input, seg, env)
     end
 
 
-    local url_e_prefix = env.prefix .. "e"
-    local url_e_input = string.match(input, url_e_prefix .. "([0-9a-z][0-9a-f]*)$")
-    if url_e_input then
-      local preedit_url_e = string.gsub(url_e_input, "(%x%x)", "%%%1")
-      local preedit_url_e = string.gsub(preedit_url_e, "(%x%x)(%x)$", "%1%%%2")
-      local preedit_url_e = string.gsub(preedit_url_e, "^(%x)$", "%%%1")
-      local url_e_cand = url_decode(url_e_input)
+    local urlencode_prefix = env.prefix .. "i"
+    local urlencode_input = string.match(input, urlencode_prefix .. "([0-9a-z][0-9a-f]*)$")
+    if urlencode_input then
+      local preedit_urlencode = string.gsub(urlencode_input, "(%x%x)", "%%%1")
+      local preedit_urlencode = string.gsub(preedit_urlencode, "(%x%x)(%x)$", "%1%%%2")
+      local preedit_urlencode = string.gsub(preedit_urlencode, "^(%x)$", "%%%1")
+      local urlencode_cand = url_decode(urlencode_input)
 
-      local unfinished = string.match(url_e_cand, "… $")
+      local unfinished = string.match(urlencode_cand, "… $")
       if unfinished then
         judge_unfinished = "〈輸入未完〉"
       else
         judge_unfinished = ""
       end
 
-      local cand_url_e_error = Candidate("simp_mf_urle", seg.start, seg._end, "", url_e_cand)  --字符過濾可能會過濾掉""整個選項。
-      cand_url_e_error.preedit = url_e_prefix .. " " .. string.upper(preedit_url_e)
+      local cand_urlencode_error = Candidate("simp_mf_urlencode", seg.start, seg._end, "", urlencode_cand)  --字符過濾可能會過濾掉""整個選項。
+      cand_urlencode_error.preedit = urlencode_prefix .. " " .. string.upper(urlencode_input)  --string.upper(preedit_urlencode)
 
-      local cand_url_e_sentence = Candidate("simp_mf_urle", seg.start, seg._end, url_e_cand, judge_unfinished)
-      cand_url_e_sentence.preedit = url_e_prefix .. " " .. string.upper(preedit_url_e)
+      local cand_urlencode_sentence = Candidate("simp_mf_urlencode", seg.start, seg._end, urlencode_cand, judge_unfinished)
+      cand_urlencode_sentence.preedit = urlencode_prefix .. " " .. string.upper(urlencode_input)  --string.upper(preedit_urlencode)
 
-      local url_first_word = utf8_sub(url_e_cand,1,1)
+      local url_first_word = utf8_sub(urlencode_cand,1,1)
       local url_first_word_dec = utf8.codepoint(url_first_word)
-      local cand_url_e_single = Candidate("simp_mf_urle", seg.start, seg._end, url_first_word, string.format("  U+".."%X" ,url_first_word_dec) .. judge_unfinished)
-      cand_url_e_single.preedit = url_e_prefix .. " " .. string.upper(preedit_url_e)
+      local cand_urlencode_single = Candidate("simp_mf_urlencode", seg.start, seg._end, url_first_word, string.format("  U+".."%X" ,url_first_word_dec) .. judge_unfinished)
+      cand_urlencode_single.preedit = urlencode_prefix .. " " .. string.upper(urlencode_input)  --string.upper(preedit_urlencode)
 
-      local cand_url_e_code = Candidate("simp_mf_urle", seg.start, seg._end, string.upper(preedit_url_e), "〔URL編碼〕")
-      cand_url_e_code.preedit = url_e_prefix .. " " .. string.upper(preedit_url_e)
+      local cand_urlencode_code = Candidate("simp_mf_urlencode", seg.start, seg._end, string.upper(preedit_urlencode), "〔URL編碼〕")
+      cand_urlencode_code.preedit = urlencode_prefix .. " " .. string.upper(urlencode_input)  --string.upper(preedit_urlencode)
 
-      local is_error = string.match(url_e_cand, "^〈輸入錯誤〉")
+      local is_error = string.match(urlencode_cand, "^〈輸入錯誤〉")
       if is_error then
-      -- if (url_e_cand == "〈輸入錯誤〉") then
-        yield(cand_url_e_error)
-      elseif (url_e_cand == url_first_word) then
-        yield(cand_url_e_single)
-      -- elseif string.match(url_e_cand, "^ …") then
-      --   yield(cand_url_e_sentence)
+      -- if (urlencode_cand == "〈輸入錯誤〉") then
+        yield(cand_urlencode_error)
+      elseif (urlencode_cand == url_first_word) then
+        yield(cand_urlencode_single)
+      -- elseif string.match(urlencode_cand, "^ …") then
+      --   yield(cand_urlencode_sentence)
       else
-        yield(cand_url_e_sentence)
-        -- yield(cand_url_e_single)
+        yield(cand_urlencode_sentence)
+        -- yield(cand_urlencode_single)
       end
-      yield(cand_url_e_code)
+      yield(cand_urlencode_code)
       return
     end
 
@@ -2108,7 +2108,7 @@ local function translate(input, seg, env)
     --   if string.match(url_10, "無此編碼") ~= nil then
     --     yield_c( url_10, "" )
     --   elseif string.match(url_c_input, "^[0-9a-z]$") ~= nil then
-    --     local cand_uci_a = Candidate("simp_mf_urle", seg.start, seg._end, url_10, url_10 )
+    --     local cand_uci_a = Candidate("simp_mf_urlencode", seg.start, seg._end, url_10, url_10 )
     --     cand_uci_a.preedit = env.prefix .. "e " .. uc_i
     --     yield(cand_uci_a)
     --   else
@@ -2122,7 +2122,7 @@ local function translate(input, seg, env)
     --     -- local u_c = string.gsub(u_c, '^(..)(.?.?)(.?.?)(.?.?)(.?.?)(.?.?)$', '%%%1%%%2%%%3%%%4%%%5%%%6')
     --     -- local u_c = string.gsub(u_c, '[%%]+$', '')
     --     -- yield_c( utf8_out(url_10), u_c )
-    --     local cand_uci_s = Candidate("simp_mf_urle", seg.start, seg._end, utf8_out(url_10), url_encode(utf8_out(url_10)) )
+    --     local cand_uci_s = Candidate("simp_mf_urlencode", seg.start, seg._end, utf8_out(url_10), url_encode(utf8_out(url_10)) )
     --     cand_uci_s.preedit = env.prefix .. "e " .. uc_i
     --     yield(cand_uci_s)
     --   end
@@ -2130,7 +2130,7 @@ local function translate(input, seg, env)
     --   --   for i = url_10*10, url_10*10+10-1 do
     --   if tonumber(url_10)+16 < 1048575 then
     --     for i = tonumber(url_10)+1, tonumber(url_10)+16 do
-    --       local cand_uci_m = Candidate("simp_mf_urle", seg.start, seg._end, utf8_out(i), url_encode(utf8_out(i)) )
+    --       local cand_uci_m = Candidate("simp_mf_urlencode", seg.start, seg._end, utf8_out(i), url_encode(utf8_out(i)) )
     --       cand_uci_m.preedit = env.prefix .. "e " .. uc_i
     --       yield(cand_uci_m)
     --     end

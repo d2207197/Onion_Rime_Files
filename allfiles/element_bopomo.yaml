@@ -537,7 +537,7 @@ patterns_mixin_1_2_4:
     all_bpm: "';[-a-z0-9.,/; ]*'?$|^[-a-z0-9.,/; ]+';'$"
 ##### Lua掛載 #####
     # lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|'/[-+*^/.,'();0-9a-z]*$"
-    #舊# lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|'/[';/]?[a-z]*$|'/[0-9./-]*$|'/[xcoe][0-9a-z]+$" #"'/[';]?[a-z0-9./-]*$"
+    #舊# lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|'/[';/]?[a-z]*$|'/[0-9./-]*$|'/[xucoi][0-9a-z]+$" #"'/[';]?[a-z0-9./-]*$"
 ##### Lua分開掛載 #####
     # instruction_grave_bpmf: "[^=]``?$"  #不要開啟，開啟反而耗效能，且可能有bug，需要再調整。
     email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$"
