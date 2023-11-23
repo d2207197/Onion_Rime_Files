@@ -184,9 +184,6 @@ punct_mark:
     - erase/^.*〔.*〕.+$/
     - erase/^.+〔.*〕$/
 
-# preedit_model_charset_filter2_filter:
-#   tags: [ abc ]
-
 en_sort_filter:
   tags: [ easy_en ]
 
@@ -195,6 +192,9 @@ convert_english_filter:
 
 convert_japan_filter:
   tags: [ japan ]
+
+# preedit_model_charset_filter2_filter:
+#   tags: [ abc ]
 
 # mix_cf2_miss_filter:
 #   tags: [ punct, reverse2_lookup ]
