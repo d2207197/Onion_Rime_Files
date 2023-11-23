@@ -76,7 +76,8 @@ engine:
     # - lua_filter@charset_filter2  #去除opencc轉換後留下的「᰼᰼」。
     # - lua_filter@charset_filter  #打開後中文只保留CJK（精簡），但外語不受影響。
     # - lua_filter@missing_mark_filter  #補上標點符號因直上和 opencc 衝突沒附註之選項
-    - lua_filter@preedit_model_filter
+    # - lua_filter@preedit_model_charset_filter2_filter
+    # - lua_filter@preedit_model_filter
     - reverse_lookup_filter@e_reverse_lookup
     - lua_filter@en_sort_filter
     - lua_filter@convert_english_filter
@@ -183,8 +184,8 @@ punct_mark:
     - erase/^.*〔.*〕.+$/
     - erase/^.+〔.*〕$/
 
-preedit_model_filter:
-  tags: [ abc ]
+# preedit_model_charset_filter2_filter:
+#   tags: [ abc ]
 
 en_sort_filter:
   tags: [ easy_en ]
@@ -195,9 +196,9 @@ convert_english_filter:
 convert_japan_filter:
   tags: [ japan ]
 
-mix_cf2_miss_filter:
-  tags: [ punct, reverse2_lookup ]
-  # tags: [ punct, abc, reverse2_lookup ]
+# mix_cf2_miss_filter:
+#   tags: [ punct, reverse2_lookup ]
+#   # tags: [ punct, abc, reverse2_lookup ]
 ################################### 選單 ######################################
 menu:
   __include: element_bopomo:/menu
