@@ -87,10 +87,10 @@ engine:
     - simplifier@back_mark
     - simplifier@punct_mark
     - reverse_lookup_filter@bpm_reverse_lookup
+    - uniquifier
     - lua_filter@comment_filter_unicode  # unicode 和 debug 分開，同時開啟無法記憶
     # - lua_filter@comment_filter_debug  # unicode 和 debug 分開，同時開啟無法記憶
     # - lua_filter@comment_filter_unicode_debug
-    - uniquifier
   processors:
     - lua_processor@mix_apc_s2rm_ltk_3
     # - lua_processor@ascii_punct_change

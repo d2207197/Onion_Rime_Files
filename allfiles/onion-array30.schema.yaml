@@ -33,6 +33,14 @@ switches:
   - name: simplify_comment
     # reset: 1
     states: [ 編碼, 無編 ]
+  # - name: unicode_comment
+  #   reset: 0
+  #   states: [ '🄽', '🅄' ]
+    # states: [ 'nil', 'Unicode(URL)' ]
+  # - name: debug_comment
+  #   reset: 0
+    # states: [ 'Ⓝ', 'Ⓓ' ]
+    # states: [ 'normal', 'Debug' ]
   - name: 1_2_straight_up
     reset: 1
     states: [ 香草, 直上 ]
@@ -56,6 +64,9 @@ engine:
     - reverse_lookup_filter@array30-zy_reverse_lookup
     - reverse_lookup_filter@bpmf_reverse_lookup
     # - uniquifier
+    # - lua_filter@comment_filter_unicode  # unicode 和 debug 分開，同時開啟無法記憶
+    # - lua_filter@comment_filter_debug  # unicode 和 debug 分開，同時開啟無法記憶
+    # - lua_filter@comment_filter_unicode_debug
     # - single_char_filter
   processors:
     - lua_processor@array30up_mix

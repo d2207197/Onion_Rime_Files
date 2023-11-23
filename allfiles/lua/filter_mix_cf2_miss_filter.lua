@@ -105,6 +105,7 @@ local function filter(inp, env)
     end
   else
     for cand in inp:iter() do
+      -- local cand_text = cand.text
       yield(cand.text == "。" and change_comment(cand,"〔句點〕") or
             (cand.text == "〔" or cand.text == "〕") and change_comment(cand,"〔六角括號〕") or
             o_ascii_punct and c_input == "'" and Candidate("simp_apostrophe", 0, 1, "'", "") or

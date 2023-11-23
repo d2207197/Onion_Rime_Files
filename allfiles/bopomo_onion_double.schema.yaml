@@ -55,10 +55,10 @@ engine:
     - lua_filter@charset_cjk_filter_plus
     - simplifier@zh_cn
     - reverse_lookup_filter@bpm_reverse_lookup
+    - uniquifier
     - lua_filter@comment_filter_unicode  # unicode 和 debug 分開，同時開啟無法記憶
     # - lua_filter@comment_filter_debug  # unicode 和 debug 分開，同時開啟無法記憶
     # - lua_filter@comment_filter_unicode_debug
-    - uniquifier
   processors:
     # - lua_processor@lua_tran_kp  #使 lua 之 mf_translator 數字和計算機功能可用小鍵盤輸入。
     - lua_processor@mix_kp_return  #合併 lua_tran_kp 和 return 上屏模式切換。
