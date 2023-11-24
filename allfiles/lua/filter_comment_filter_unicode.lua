@@ -9,7 +9,8 @@
 -- local change_preedit = require("filter_cand/change_preedit")
 -- local url_encode = require("f_components/f_url_encode")
 
-local utf8_comment = require("filter_cand/utf8_comment")
+local tran_utf8_comment = require("filter_cand/tran_utf8_comment")
+-- local utf8_comment = require("filter_cand/utf8_comment")
 -- local utf8_comment = require("filter_cand/utf8_comment").utf8_comment
 -- local t_utf8_comment = require("filter_cand/utf8_comment").t_utf8_comment
 
@@ -120,32 +121,33 @@ local function filter(inp, env)
 --------------------------------------------
 ---- 寫法二
 
-  for cand in inp:iter() do
+  -- for cand in inp:iter() do
 
-    local cand_text = cand.text  -- cand.text ~= "" and cand.text or "〖空碼〗"
-    -- local utf8comment = utf8_comment(cand_text)  -- 遮屏後，utf8.len(cand_text) == 1再跑
-    yield(utf8.len(cand_text) == 1 -- 可改用 utf8_comment(cand_text) 內限定
-          and UniquifiedCandidate(cand, "uniq_unicode", cand_text, utf8_comment(cand_text) .. cand.comment) or
-          cand
-          )  --check_inp and 
+  --   local cand_text = cand.text  -- cand.text ~= "" and cand.text or "〖空碼〗"
+  --   -- local utf8comment = utf8_comment(cand_text)  -- 遮屏後，utf8.len(cand_text) == 1再跑
+  --   yield(utf8.len(cand_text) == 1 -- 可改用 utf8_comment(cand_text) 內限定
+  --         and UniquifiedCandidate(cand, "uniq_unicode", cand_text, utf8_comment(cand_text) .. cand.comment) or
+  --         cand
+  --         )  --check_inp and 
 
-    -- local cand_text = cand.text
-    -- if check_inp and utf8.len(cand_text) == 1 then -- 可改用 utf8_comment(cand_text) 內限定
-    --   local utf8comment = utf8_comment(cand_text)
-    --   yield(UniquifiedCandidate(cand, "uniq_unicode", cand_text, utf8comment .. cand.comment))
-    -- else
-    --   yield(cand)
-    -- end
+  --   -- local cand_text = cand.text
+  --   -- if check_inp and utf8.len(cand_text) == 1 then -- 可改用 utf8_comment(cand_text) 內限定
+  --   --   local utf8comment = utf8_comment(cand_text)
+  --   --   yield(UniquifiedCandidate(cand, "uniq_unicode", cand_text, utf8comment .. cand.comment))
+  --   -- else
+  --   --   yield(cand)
+  --   -- end
 
-  end
+  -- end
 
 --------------------------------------------
 ---- 寫法三
 
   -- local tran = check_inp and Translation(t_utf8_comment, inp) or inp
-  -- for cand in tran:iter() do
-  --   yield(cand)
-  -- end
+  local tran = Translation(tran_utf8_comment, inp) or inp  --check_inp and 
+  for cand in tran:iter() do
+    yield(cand)
+  end
 
 --------------------------------------------
 

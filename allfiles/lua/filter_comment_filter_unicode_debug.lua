@@ -9,8 +9,11 @@
 -- local change_preedit = require("filter_cand/change_preedit")
 -- local url_encode = require("f_components/f_url_encode")
 
-local utf8_comment = require("filter_cand/utf8_comment")
-local debug_comment = require("filter_cand/debug_comment")
+local tran_utf8_comment = require("filter_cand/tran_utf8_comment")
+local tran_debug_comment = require("filter_cand/tran_debug_comment")
+local tran_utf8_debug_comment = require("filter_cand/tran_utf8_debug_comment")
+-- local utf8_comment = require("filter_cand/utf8_comment")
+-- local debug_comment = require("filter_cand/debug_comment")
 -- local comment1 = require("filter_cand/utf8_comment")
 -- local utf8_comment = comment1.utf8_comment
 -- local t_utf8_comment = comment1.t_utf8_comment
@@ -191,34 +194,34 @@ local function filter(inp, env)
 --------------------------------------------
 ---- 寫法三
 
-  for cand in inp:iter() do
+  -- for cand in inp:iter() do
 
-    -- local cand_text = cand.text  -- cand.text ~= "" and cand.text or "〖空碼〗"
-    -- local utf8comment = utf8_comment(cand_text)  -- 遮屏後，utf8.len(cand_text) == 1再跑
-    -- local debugcomment = debug_comment(cand)  -- 遮屏後，utf8.len(cand_text) == 1再跑
-    -- yield(-- not u_c and d_c
-    --       -- and UniquifiedCandidate(cand, "uniq_unicode_debug", cand_text, debugcomment .. cand.comment) or
-    --       u_c and not d_c and not exclude_seg and check_inp and utf8.len(cand_text) == 1 -- 可改用 utf8_comment(cand_text) 內限定
-    --       and UniquifiedCandidate(cand, "uniq_unicode_debug", cand_text, utf8comment .. cand.comment) or
-    --       u_c and d_c and not exclude_seg and check_inp and utf8.len(cand_text) == 1 -- 可改用 utf8_comment(cand_text) 內限定
-    --       and UniquifiedCandidate(cand, "uniq_unicode_debug", cand_text, debugcomment .. utf8comment .. cand.comment) or
-    --       -- u_c and d_c
-    --       d_c
-    --       and UniquifiedCandidate(cand, "uniq_unicode_debug", cand_text, debugcomment .. cand.comment) or
-    --       cand
-    --       )
+  --   -- local cand_text = cand.text  -- cand.text ~= "" and cand.text or "〖空碼〗"
+  --   -- local utf8comment = utf8_comment(cand_text)  -- 遮屏後，utf8.len(cand_text) == 1再跑
+  --   -- local debugcomment = debug_comment(cand)  -- 遮屏後，utf8.len(cand_text) == 1再跑
+  --   -- yield(-- not u_c and d_c
+  --   --       -- and UniquifiedCandidate(cand, "uniq_unicode_debug", cand_text, debugcomment .. cand.comment) or
+  --   --       u_c and not d_c and not exclude_seg and check_inp and utf8.len(cand_text) == 1 -- 可改用 utf8_comment(cand_text) 內限定
+  --   --       and UniquifiedCandidate(cand, "uniq_unicode_debug", cand_text, utf8comment .. cand.comment) or
+  --   --       u_c and d_c and not exclude_seg and check_inp and utf8.len(cand_text) == 1 -- 可改用 utf8_comment(cand_text) 內限定
+  --   --       and UniquifiedCandidate(cand, "uniq_unicode_debug", cand_text, debugcomment .. utf8comment .. cand.comment) or
+  --   --       -- u_c and d_c
+  --   --       d_c
+  --   --       and UniquifiedCandidate(cand, "uniq_unicode_debug", cand_text, debugcomment .. cand.comment) or
+  --   --       cand
+  --   --       )
 
-    local cand_text = cand.text  -- cand.text ~= "" and cand.text or "〖空碼〗"
-    yield(u_c2_only and utf8.len(cand_text) == 1 -- 可改用 utf8_comment(cand_text) 內限定
-          and UniquifiedCandidate(cand, "uniq_unicode_debug", cand_text, utf8_comment(cand_text) .. cand.comment) or
-          u_c2_d_c and utf8.len(cand_text) == 1 -- 可改用 utf8_comment(cand_text) 內限定
-          and UniquifiedCandidate(cand, "uniq_unicode_debug", cand_text, debug_comment(cand) .. utf8_comment(cand_text) .. cand.comment) or
-          d_c
-          and UniquifiedCandidate(cand, "uniq_unicode_debug", cand_text, debug_comment(cand) .. cand.comment) or
-          cand
-          )
+  --   local cand_text = cand.text  -- cand.text ~= "" and cand.text or "〖空碼〗"
+  --   yield(u_c2_only and utf8.len(cand_text) == 1 -- 可改用 utf8_comment(cand_text) 內限定
+  --         and UniquifiedCandidate(cand, "uniq_unicode_debug", cand_text, utf8_comment(cand_text) .. cand.comment) or
+  --         u_c2_d_c and utf8.len(cand_text) == 1 -- 可改用 utf8_comment(cand_text) 內限定
+  --         and UniquifiedCandidate(cand, "uniq_unicode_debug", cand_text, debug_comment(cand) .. utf8_comment(cand_text) .. cand.comment) or
+  --         d_c
+  --         and UniquifiedCandidate(cand, "uniq_unicode_debug", cand_text, debug_comment(cand) .. cand.comment) or
+  --         cand
+  --         )
 
-  end
+  -- end
 
 --------------------------------------------
 ---- 寫法四
@@ -227,9 +230,13 @@ local function filter(inp, env)
   --              u_c and d_c and not exclude_seg and check_inp and Translation(t_utf8_debug_comment, inp) or
   --              d_c and Translation(t_debug_comment, inp) or
   --              inp
-  -- for cand in tran:iter() do
-  --   yield(cand)
-  -- end
+  local tran = u_c2_only and Translation(tran_utf8_comment, inp) or
+               u_c2_d_c and Translation(tran_utf8_debug_comment, inp) or
+               d_c and Translation(tran_debug_comment, inp) or
+               inp
+  for cand in tran:iter() do
+    yield(cand)
+  end
 
 --------------------------------------------
 

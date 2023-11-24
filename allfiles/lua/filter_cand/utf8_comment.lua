@@ -57,9 +57,9 @@ end
 --   for cand in tran:iter() do
 --     local cand_text = cand.text
 --     if utf8.len(cand_text) == 1 then
---       cand = UniquifiedCandidate(cand, "Uniq_Unicode", cand_text, utf8_comment(cand_text) .. cand.comment)
+--       cand = UniquifiedCandidate(cand, "uniq_unicode", cand_text, utf8_comment(cand_text) .. cand.comment)
 --     end
---     -- local cand = UniquifiedCandidate(cand, "Uniq_Unicode", cand_text, utf8_comment(cand_text) .. cand.comment)
+--     -- local cand = UniquifiedCandidate(cand, "uniq_unicode", cand_text, utf8_comment(cand_text) .. cand.comment)
 --     yield(cand)
 --   end
 -- end

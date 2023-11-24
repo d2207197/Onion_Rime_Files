@@ -25,9 +25,9 @@ local function revise_comment_by_os(os_name, cand, comment)
   -- if os_name == 1 then  -- 測試用
     local comment = string.gsub(comment, "\n", "")
     local comment = string.gsub(comment, "﹙.+﹚", "")
-    local comment = string.gsub(comment, "%b[]", "")  -- %b 匹配對稱字符
-    local comment = string.gsub(comment, "%s+", " ")  -- %s 為空白符
-    local comment = truncate_comment(comment)
+    local comment = string.gsub(comment, "%b[]", "")
+    local comment = string.gsub(comment, "%s+", " ")
+    local comment = truncate_comment(comment)  -- %s 為空白符
     cand = change_comment(cand, comment)
   end
 
