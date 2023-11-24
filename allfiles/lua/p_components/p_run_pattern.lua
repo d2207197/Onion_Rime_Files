@@ -25,12 +25,12 @@ local run_pattern = {
 --------------------------------------------------------------------------
 -- Mac：
 --------------------------------------------------------------------------
-  -- ["r"] = { s = 1, name = "Rime 官方 GitHub", open = "-a '/Applications/Firefox.app' https://github.com/rime" },                                                     -- mac 專用：指定程式開啟
-  -- ["rw"] = { s = 2, name = "Rime 詳解", open = "-a '/Applications/Firefox.app' https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md" },  -- mac 專用：指定程式開啟
-  -- ["l"] = { s = 3, name = "librime-lua 官方 GitHub", open = "-a '/Applications/Firefox.app' https://github.com/hchunhui/librime-lua" },                              -- mac 專用：指定程式開啟
-  -- ["lw"] = { s = 4, name = "librime-lua 腳本開發指南", open = "-a '/Applications/Firefox.app' https://github.com/hchunhui/librime-lua/wiki/Scripting" },              -- mac 專用：指定程式開啟
-  -- ["o"] = { s = 5, name = "Onion 洋蔥 GitHub", open = "-a '/Applications/Firefox.app' https://github.com/oniondelta/Onion_Rime_Files" },                             -- mac 專用：指定程式開啟
-  -- ["ow"] = { s = 6, name = "Onion 洋蔥 GitHub Wiki", open = "-a '/Applications/Firefox.app' https://github.com/oniondelta/Onion_Rime_Files/wiki" },                  -- mac 專用：指定程式開啟
+  -- ["r"] = { s = 1, name = "Rime 官方 GitHub Ⓕ", open = "-a '/Applications/Firefox.app' https://github.com/rime" },                                                     -- mac 專用：指定程式開啟
+  -- ["rw"] = { s = 2, name = "Rime 詳解 Ⓕ", open = "-a '/Applications/Firefox.app' https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md" },  -- mac 專用：指定程式開啟
+  -- ["l"] = { s = 3, name = "librime-lua 官方 GitHub Ⓕ", open = "-a '/Applications/Firefox.app' https://github.com/hchunhui/librime-lua" },                              -- mac 專用：指定程式開啟
+  -- ["lw"] = { s = 4, name = "librime-lua 腳本開發指南 Ⓕ", open = "-a '/Applications/Firefox.app' https://github.com/hchunhui/librime-lua/wiki/Scripting" },              -- mac 專用：指定程式開啟
+  -- ["o"] = { s = 5, name = "Onion 洋蔥 GitHub Ⓕ", open = "-a '/Applications/Firefox.app' https://github.com/oniondelta/Onion_Rime_Files" },                             -- mac 專用：指定程式開啟
+  -- ["ow"] = { s = 6, name = "Onion 洋蔥 GitHub Wiki Ⓕ", open = "-a '/Applications/Firefox.app' https://github.com/oniondelta/Onion_Rime_Files/wiki" },                  -- mac 專用：指定程式開啟
 --------------------------------------------------------------------------
   -- ["at"] = { s = 10, name = "文字編輯器", open = "/System/Applications/TextEdit.app" },               -- mac 專用：文字編輯
   -- ["ac"] = { s = 11, name = "計算機", open = "/System/Applications/Calculator.app" },                -- mac 專用：計算機
@@ -45,12 +45,12 @@ local run_pattern = {
 --------------------------------------------------------------------------
 -- Win：
 --------------------------------------------------------------------------
-  -- ["r"] = { s = 1, name = "Rime 官方 GitHub", open = [["C:\Program Files (x86)\Mozilla Firefox\firefox.exe" https://github.com/rime]] },                                                     -- win 專用：指定程式開啟
-  -- ["rw"] = { s = 2, name = "Rime 詳解", open = [["C:\Program Files (x86)\Mozilla Firefox\firefox.exe" https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md]] },  -- win 專用：指定程式開啟
-  -- ["l"] = { s = 3, name = "librime-lua 官方 GitHub", open = [["C:\Program Files (x86)\Mozilla Firefox\firefox.exe" https://github.com/hchunhui/librime-lua]] },                              -- win 專用：指定程式開啟
-  -- ["lw"] = { s = 4, name = "librime-lua 腳本開發指南", open = [["C:\Program Files (x86)\Mozilla Firefox\firefox.exe" https://github.com/hchunhui/librime-lua/wiki/Scripting]] },              -- win 專用：指定程式開啟
-  -- ["o"] = { s = 5, name = "Onion 洋蔥 GitHub", open = [["C:\Program Files (x86)\Mozilla Firefox\firefox.exe" https://github.com/oniondelta/Onion_Rime_Files]] },                             -- win 專用：指定程式開啟
-  -- ["ow"] = { s = 6, name = "Onion 洋蔥 GitHub Wiki", open = [["C:\Program Files (x86)\Mozilla Firefox\firefox.exe" https://github.com/oniondelta/Onion_Rime_Files/wiki]] },                  -- win 專用：指定程式開啟
+  -- ["r"] = { s = 1, name = "Rime 官方 GitHub Ⓕ", open = [["C:\Program Files (x86)\Mozilla Firefox\firefox.exe" https://github.com/rime]] },                                                     -- win 專用：指定程式開啟
+  -- ["rw"] = { s = 2, name = "Rime 詳解 Ⓕ", open = [["C:\Program Files (x86)\Mozilla Firefox\firefox.exe" https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md]] },  -- win 專用：指定程式開啟
+  -- ["l"] = { s = 3, name = "librime-lua 官方 GitHub Ⓕ", open = [["C:\Program Files (x86)\Mozilla Firefox\firefox.exe" https://github.com/hchunhui/librime-lua]] },                              -- win 專用：指定程式開啟
+  -- ["lw"] = { s = 4, name = "librime-lua 腳本開發指南 Ⓕ", open = [["C:\Program Files (x86)\Mozilla Firefox\firefox.exe" https://github.com/hchunhui/librime-lua/wiki/Scripting]] },              -- win 專用：指定程式開啟
+  -- ["o"] = { s = 5, name = "Onion 洋蔥 GitHub Ⓕ", open = [["C:\Program Files (x86)\Mozilla Firefox\firefox.exe" https://github.com/oniondelta/Onion_Rime_Files]] },                             -- win 專用：指定程式開啟
+  -- ["ow"] = { s = 6, name = "Onion 洋蔥 GitHub Wiki Ⓕ", open = [["C:\Program Files (x86)\Mozilla Firefox\firefox.exe" https://github.com/oniondelta/Onion_Rime_Files/wiki]] },                  -- win 專用：指定程式開啟
 --------------------------------------------------------------------------
   -- ["ac"] = { s = 7, name = "計算機", open = [["C:\WINDOWS\system32\calc.exe"]] },                    -- win 專用：計算機
   -- ["ap"] = { s = 8, name = "小畫家", open = [["C:\WINDOWS\system32\mspaint.exe"]] },                 -- win 專用：小畫家
