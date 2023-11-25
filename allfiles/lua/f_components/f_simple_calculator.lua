@@ -20,17 +20,18 @@ local function simple_calculator(input)
 
   -- if not ok_1 then return print("輸入錯誤1") end
   -- if error_1 or error_2 then return print("輸入錯誤2") end
-  if not error_check then return "Error (check)" end
-  if error_2oper then return "Error (2oper)" end
-  if error_dot then return "Error (dot)" end
-  if error_paren then return "Error (paren)" end
+  if not error_check then return {"Error (check)", input} end
+  if error_2oper then return {"Error (2oper)", input} end
+  if error_dot then return {"Error (dot)", input} end
+  if error_paren then return {"Error (paren)", input} end
 
   local input = string.gsub(input, "%.([-+*/^()])", "%1")  -- 允許小數點末尾多加，如：237.+271
   local input = string.gsub(input, "([)%d])[(]", "%1*(")  -- 2(9) 或 (2)(9) 中間轉為乘法
-  local input = string.gsub(input, "[)]([)%d])", ")*%1")  -- (2)9 或 (2)9 中間轉為乘法
+  local input = string.gsub(input, "[)]([%d])", ")*%1")  -- (2)9 中間轉為乘法
   local input = string.gsub(input, "[(]+([-]?[.%d]+)$", "%1")  -- 未完成前，括號後，末尾為數字
   local input = string.gsub(input, "[(]+([^()]*)$", "%1")  -- 未完成前，括號後，末尾為計算符號
   local input = string.gsub(input, "[-+*/^(.]+$", "")  -- 未完成前，末尾為計算符號
+  local input = string.gsub(input, "[(]+([-+*/^%d]+)$", "%1")  -- 未完成前，前端括號先略
   -- print('轉換後：'..input)
 
   local ok, res = pcall(str_to_cal, input)
@@ -38,14 +39,14 @@ local function simple_calculator(input)
     -- print('最終結果：'..str_to_cal(input))
     -- print(ok)
     -- print(res)
-    result = string.gsub(str_to_cal(input), "%.0$","")
+    local result = string.gsub(str_to_cal(input), "%.0$","")
     -- result = string.format("%f",str_to_cal(input))
-    return result
+    return {result, input}
   else
     -- print('輸入錯誤！')
     -- print(ok)
     -- print(res)
-    return "Error！ (by_pcall)"
+    return {"Error！ (by_pcall)", input}
   end
 end
 

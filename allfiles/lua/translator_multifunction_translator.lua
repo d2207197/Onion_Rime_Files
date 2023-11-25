@@ -2307,8 +2307,20 @@ local function translate(input, seg, env)
     end
 
 
+    --- 補以下開頭括號缺漏（另改成如同啟始符）
+    local paren_left_q = string.match(input, env.prefix .. "[q(]$")
+    if paren_left_q then
+      local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "  ~ [-.0-9]+[ + - * / ^ ( ) ]...〔數字/簡易計算機〕")
+      cand2.preedit = input .. "\t《數字/簡易計算機》▶"
+      yield(cand2)
+      -- yield_c( "", "  ~ [-.0-9]+〔數字〕")
+      -- yield_c( "", "  ~ [-.0-9]+[ + - * / ^ ( ) ]...〔簡易計算機〕")
+      -- yield_c( "(", "〔括號〕")
+      return
+    end
+
     --- 補以下開頭負號缺漏
-    local neg_nf = string.match(input, env.prefix .. "[-r]$")
+    local neg_nf = string.match(input, env.prefix .. "[q(]?[-r]$")
     if neg_nf then
       yield_c( "-", "〔一般負號〕")
       yield_c( "－", "〔全形負號〕")
@@ -2322,7 +2334,7 @@ local function translate(input, seg, env)
     end
 
     --- 補以下開頭小數點缺漏
-    local dot = string.match(input, env.prefix .. "%.$")
+    local dot = string.match(input, env.prefix .. "[q(]?%.$")
     if dot then
       yield_c( ".", "〔一般小數點〕")
       -- yield_c( "．", "〔全形小數點〕")
@@ -2334,7 +2346,7 @@ local function translate(input, seg, env)
     end
 
     --- 補以下開頭負號+小數點缺漏
-    local neg_nf_dot = string.match(input, env.prefix .. "[-r][.]$")
+    local neg_nf_dot = string.match(input, env.prefix .. "[q(]?[-r][.]$")
     if neg_nf_dot then
       yield_c( "-0.", "〔一般數字〕")
       yield_c( ",", "〔千分位〕")
@@ -2351,7 +2363,7 @@ local function translate(input, seg, env)
     end
 
     -- local numberout = string.match(input, env.prefix .. "/?(%d+)$")
-    local neg_n, dot0 ,numberout, dot1, afterdot = string.match(input, env.prefix .. "([-rq(]?)([.]?)(%d+)(%.?)(%d*)$")
+    local neg_n, dot0 ,numberout, dot1, afterdot = string.match(input, env.prefix .. "([q(]?[-r]?)([.]?)(%d+)(%.?)(%d*)$")
     if (tonumber(numberout)~=nil) then
       local neg_n = string.gsub(neg_n, "r", "-")  --配合計算機算符
       local neg_n = string.gsub(neg_n, "[q(]", "")  --配合計算機算符
@@ -2486,7 +2498,7 @@ local function translate(input, seg, env)
 
 
     --- 計算機
-    local c_input = string.match(input, env.prefix .. "([-.rq(]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*)$")
+    local c_input = string.match(input, env.prefix .. "([q(]?[-.r]?[%d.]+[-+*/^asrvxqw()][-+*/^asrvxqw().%d]*)$")
     if c_input then
       local c_input = string.gsub(c_input, "a", "+")
       local c_input = string.gsub(c_input, "s", "^")
@@ -2497,17 +2509,21 @@ local function translate(input, seg, env)
       local c_input = string.gsub(c_input, "w", ")")
       local input_exp = string.gsub(c_input, "^0+(%d)", "%1")
       local input_exp = string.gsub(input_exp, "([-+*/^()])0+(%d)", "%1%2")
-      local input_exp = string.gsub(input_exp, "([.]%d*)0+([-+*/^()])", "%1%2")
-      local input_exp = string.gsub(input_exp, "([.]%d*)0+$", "%1")
+      --會出 Bug -- local input_exp = string.gsub(input_exp, "(%d*[.]%d*0)$", function(n) return string.format("%g",n) end)
+      --會出 Bug -- local input_exp = string.gsub(input_exp, "(%d*[.]%d*0)([-+*/^()])", function(n, opr) return string.format("%g",n) .. opr end)
+      local input_exp = string.gsub(input_exp, "(%d*[.]%d*0)$", function(n) return string.gsub(n,"0+$", "") end)
+      local input_exp = string.gsub(input_exp, "(%d*[.]%d*0)([-+*/^()])", function(n, opr) return string.gsub(n,"0+$", "") .. opr end)
       local input_exp = string.gsub(input_exp, "^[.]", "0.")
       local input_exp = string.gsub(input_exp, "[.]$", "")
       local input_exp = string.gsub(input_exp, "[.]([-+*/^()])", "%1")
       local input_exp = string.gsub(input_exp, "([-+*/^()])[.]", "%10.")
-      local c_output = simple_calculator(input_exp)
+      local c_output = simple_calculator(input_exp)[1]
+      local output_exp = simple_calculator(input_exp)[2]
       local c_preedit = string.gsub(c_input, "([-+*/^()])", " %1 ")
 
       local cc_out = Candidate("simp_mf_cal", seg.start, seg._end, c_output, "〔結果〕")
       local cc_error = Candidate("simp_mf_cal", seg.start, seg._end, "", c_output.."〔結果〕")
+      -- local cc_exp = Candidate("simp_mf_cal", seg.start, seg._end, output_exp .. "=" .. c_output, "〔規格化算式〕")
       local cc_exp = Candidate("simp_mf_cal", seg.start, seg._end, input_exp .. "=" .. c_output, "〔規格化算式〕")
       cc_out.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
       cc_error.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
