@@ -2511,8 +2511,8 @@ local function translate(input, seg, env)
       local input_exp = string.gsub(input_exp, "([-+*/^()])0+(%d)", "%1%2")
       --會出 Bug -- local input_exp = string.gsub(input_exp, "(%d*[.]%d*0)$", function(n) return string.format("%g",n) end)
       --會出 Bug -- local input_exp = string.gsub(input_exp, "(%d*[.]%d*0)([-+*/^()])", function(n, opr) return string.format("%g",n) .. opr end)
-      local input_exp = string.gsub(input_exp, "(%d*[.]%d*0)$", function(n) return string.gsub(n,"0+$", "") end)
-      local input_exp = string.gsub(input_exp, "(%d*[.]%d*0)([-+*/^()])", function(n, opr) return string.gsub(n,"0+$", "") .. opr end)
+      local input_exp = string.gsub(input_exp, "(%d*[.]%d*0)$", function(n) return string.gsub(n,"0+$", "") end)  --去除小數點後末尾0
+      local input_exp = string.gsub(input_exp, "(%d*[.]%d*0)([-+*/^()])", function(n, opr) return string.gsub(n,"0+$", "") .. opr end)  --去除小數點後末尾0
       local input_exp = string.gsub(input_exp, "^[.]", "0.")
       local input_exp = string.gsub(input_exp, "[.]$", "")
       local input_exp = string.gsub(input_exp, "[.]([-+*/^()])", "%1")
@@ -2528,8 +2528,9 @@ local function translate(input, seg, env)
       cc_out.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
       cc_error.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
       cc_exp.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
-      yield( c_output:sub(1,1)=="E" and cc_error or cc_out )
+      yield( (c_output:sub(1,1)=="E" or c_output:sub(1,1)=="B") and cc_error or cc_out )
       yield(cc_exp)
+      yield_c( "", "※  會有浮點數誤差和錯誤；括號限兩層；14位數限制")
       return
     end
 
