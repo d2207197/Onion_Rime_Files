@@ -47,7 +47,8 @@ local function simple_calculator(input)
   -- if check_14_digits(input)[4] then return {"Warning (Input over 14 digits)", input, ""} end
   -- if error_digits > 9223372036854775807 then return {"Error (over 2⁶³-1)", input, ""} end
 
-  local input = string.gsub(input, "[-+*/^]+([-+*/^])", "%1")  --重複(誤按)算符，不用回刪
+  local input = string.gsub(input, "[-+*/]+([-+*/^])", "%1")  --重複(誤按)算符，不用回刪(一)
+  local input = string.gsub(input, "[%^]+([+*/^])", "%1")  --重複(誤按)算符，不用回刪(二)，使次方後負號可行，如： 3^-2 等
   local input = string.gsub(input, "%.([-+*/^()])", "%1")  -- 允許小數點末尾多加，如：237.+271
   local input = string.gsub(input, "([)%d])[(]", "%1*(")  -- 2(9) 或 (2)(9) 中間轉為乘法
   local input = string.gsub(input, "[)]([%d])", ")*%1")  -- (2)9 中間轉為乘法
