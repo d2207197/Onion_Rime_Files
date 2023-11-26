@@ -38,12 +38,14 @@ local function simple_calculator(input)
 
   -- if not ok_1 then return print("輸入錯誤1") end
   -- if error_1 or error_2 then return print("輸入錯誤2") end
-  if not error_check then return {"Error (check)", input} end
-  -- if error_2oper then return {"Error (2oper)", input} end
-  if error_dot then return {"Error (dot)", input} end
-  if error_paren then return {"Error (paren)", input} end
-  if check_14_digits(input)[4] then return {"Ban (Input over 14 digits)", input} end
-  -- if error_digits > 9223372036854775807 then return {"Error (over 2⁶³-1)", input} end
+  if not error_check then return {"Error (check)", input, ""} end
+  -- if error_2oper then return {"Error (2oper)", input, ""} end
+  if error_dot then return {"Error (dot)", input, ""} end
+  if error_paren then return {"Error (paren)", input, ""} end
+  -- if check_14_digits(input)[4] then over14d = true end
+  -- if not check_14_digits(input)[4] then over14d = false end
+  -- if check_14_digits(input)[4] then return {"Warning (Input over 14 digits)", input, ""} end
+  -- if error_digits > 9223372036854775807 then return {"Error (over 2⁶³-1)", input, ""} end
 
   local input = string.gsub(input, "[-+*/^]+([-+*/^])", "%1")  --重複(誤按)算符，不用回刪
   local input = string.gsub(input, "%.([-+*/^()])", "%1")  -- 允許小數點末尾多加，如：237.+271
@@ -62,20 +64,25 @@ local function simple_calculator(input)
     -- print('最終結果：'..str_to_cal(input))
     -- print(ok)
     -- print(res)
-      -- result = string.gsub(str_to_cal(input), "%.0$", "")
+    -- result = string.gsub(str_to_cal(input), "%.0$", "")
     -- result = string.format("%f", str_to_cal(input))  -- 小數點位數太短
-
     local result = str_to_cal(input)
+    -- local result_f = string.format("%.19f", result)
+    local over14d = check_14_digits(input)[4]
     local check_14_digits = check_14_digits(result)
     -- local check_number_values = check_number_values(result)
-    -- local result_f = string.format("%.19f", result)
 
     -- if 1.000000e+14 > result and result >= 1.000000e-14 then
     -- if result >= 1.000000e+14 then  --%f下，大於14位數可能出現誤差
     -- if result >= 1.000000e-14 then
-    if check_14_digits[3] then  -- 校正於 0.1+0.2-0.3 會出現e科學記號且不為0
+    if over14d then
+      shadow = string.gsub(result, "%.0$", "")
+      result = "Warning (Input over 14 digits)"
+    elseif check_14_digits[3] then  -- 校正於 0.1+0.2-0.3 會出現e科學記號且不為0
     -- if check_number_values[1] then  -- 校正於 0.1+0.2-0.3 會出現e科學記號且不為0
     -- if result < 1.000000e-14 then  --小數點以下超過14位數可能出現誤差
+      shadow = ""
+      -- shadow = string.gsub(result, "%.0$", "")
       result = string.format("%.14f", result)
       result = string.gsub(result, "([.]%d*0)$", function(n) return string.gsub(n,"0+$", "") end)  --去除小數點後末尾0
       result = string.gsub(result, "[.]$", "")
@@ -85,21 +92,24 @@ local function simple_calculator(input)
     -- elseif not check_14_digits[2] then
     -- elseif not check_number_values[2] then
     -- elseif result < 9223372036854775807 and result >= 1.000000e-14 then
+      shadow = ""
       result = string.gsub(result, "%.0$", "")
       -- result = string.gsub(result, "[.]$", "")
       -- result = string.gsub(result, "^[-]0$", "0")
-    -- result = string.format("%f", result)  -- 小數點位數太短
+      -- result = string.format("%f", result)  -- 小數點位數太短
     else
-      result = "Ban (Output over 14 digits)"
+      shadow = string.gsub(result, "%.0$", "")
+      result = "Warning (Output over 14 digits)"
+      -- result = "Ban (Output over 14 digits)"
       -- result = "Warning (over 2⁶³-1)"
     end
 
-    return {result, input}
+    return {result, input , shadow}
   else
     -- print('輸入錯誤！')
     -- print(ok)
     -- print(res)
-    return {"Error！ (by_pcall)", input}
+    return {"Error！ (by_pcall)", input, ""}
   end
 end
 

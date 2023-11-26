@@ -2517,20 +2517,41 @@ local function translate(input, seg, env)
       local input_exp = string.gsub(input_exp, "[.]$", "")
       local input_exp = string.gsub(input_exp, "[.]([-+*/^()])", "%1")
       local input_exp = string.gsub(input_exp, "([-+*/^()])[.]", "%10.")
-      local c_output = simple_calculator(input_exp)[1]
-      local output_exp = simple_calculator(input_exp)[2]
       local c_preedit = string.gsub(c_input, "([-+*/^()])", " %1 ")
 
+      local c_output = simple_calculator(input_exp)[1]
+      local output_exp = simple_calculator(input_exp)[2]
+      local s_output = simple_calculator(input_exp)[3]
+
       local cc_out = Candidate("simp_mf_cal", seg.start, seg._end, c_output, "〔結果〕")
-      local cc_error = Candidate("simp_mf_cal", seg.start, seg._end, "", c_output.."〔結果〕")
-      local cc_exp = Candidate("simp_mf_cal", seg.start, seg._end, output_exp .. "=" .. c_output, "〔規格化算式〕")
+      local cc_out_error = Candidate("simp_mf_cal", seg.start, seg._end, "", c_output.."〔結果〕")
       -- local cc_exp = Candidate("simp_mf_cal", seg.start, seg._end, input_exp .. "=" .. c_output, "〔規格化算式〕")
+      local cc_exp = Candidate("simp_mf_cal", seg.start, seg._end, output_exp .. "=" .. c_output, "〔規格化算式〕")
+      local cc_exp_error = Candidate("simp_mf_cal", seg.start, seg._end, output_exp .. "=" .. s_output, "〔 Waring 規格化算式〕")
+      local cc_out_shadow = Candidate("simp_mf_cal", seg.start, seg._end, s_output, "〔 Waring 結果〕")
+      local cc_statement = Candidate("simp_mf_cal", seg.start, seg._end, "", "※  會有浮點數誤差和錯誤；括號限兩層；14位數限制")
       cc_out.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
-      cc_error.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
+      cc_out_error.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
       cc_exp.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
-      yield( (c_output:sub(1,1)=="E" or c_output:sub(1,1)=="B") and cc_error or cc_out )
-      yield(cc_exp)
-      yield_c( "", "※  會有浮點數誤差和錯誤；括號限兩層；14位數限制")
+      cc_exp_error.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
+      cc_out_shadow.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
+      cc_statement.preedit = env.prefix .. " " .. c_preedit .. " \t（簡易計算機）"
+      if (c_output:sub(1,1)=="E" or c_output:sub(1,1)=="W") then
+        yield(cc_out_error)
+        yield(cc_out_shadow)
+        yield(cc_exp_error)
+      else
+        yield(cc_out)
+        -- if s_output~="" then
+        --   yield(cc_out_shadow)
+        -- end
+        yield(cc_exp)
+      end
+      -- if s_output~="" then
+      --   yield(cc_out_shadow)
+      -- end
+      yield(cc_statement)
+      -- yield_c( "", "※  會有浮點數誤差和錯誤；括號限兩層；14位數限制")
       return
     end
 
