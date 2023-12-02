@@ -7,7 +7,7 @@ local function str_to_cal(str)
 end
 
 local function check_14_digits(n)  -- 14位數檢查，超過14位或小數點以下14位數。
-  local check_1 = string.match(n, "[.]%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d+") and true
+  local check_1 = string.match(n, "%.%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d+") and true
   local check_2 = string.match(n, "%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d+") and true
   -- local check_3 = string.match(n, "%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d+") and true
   local check_3 = tonumber(string.match(n, "e[-](%d+)") or 0) > 14 and true
@@ -28,8 +28,8 @@ local function simple_calculator(input)
   -- print('原始輸入：'..input)
   local error_check = string.match(input, "^[-.(%d][-+*/^().%d]*$")
   -- local error_2oper = string.match(input, "[-+*/^][-+*/^]")
-  local error_dot = string.match(input, "[.]%d+[.]%d") or
-                    string.match(input, "[.][.]")
+  local error_dot = string.match(input, "%.%d+%.%d") or
+                    string.match(input, "%.%.")
   local error_paren = string.match(input, "^[^(]+[)]") or
                       string.match(input, "[-+*/^(][)]") or
                       string.match(input, "[(][+*/^]")
@@ -85,8 +85,8 @@ local function simple_calculator(input)
       shadow = ""
       -- shadow = string.gsub(result, "%.0$", "")
       result = string.format("%.14f", result)
-      result = string.gsub(result, "([.]%d*0)$", function(n) return string.gsub(n,"0+$", "") end)  --去除小數點後末尾0
-      result = string.gsub(result, "[.]$", "")
+      result = string.gsub(result, "(%.%d*0)$", function(n) return string.gsub(n,"0+$", "") end)  --去除小數點後末尾0
+      result = string.gsub(result, "%.$", "")
       result = string.gsub(result, "^[-]0$", "0")
     elseif not check_14_digits[4] then
     -- elseif not check_14_digits[1] and not check_14_digits[3] then
@@ -95,7 +95,7 @@ local function simple_calculator(input)
     -- elseif result < 9223372036854775807 and result >= 1.000000e-14 then
       shadow = ""
       result = string.gsub(result, "%.0$", "")
-      -- result = string.gsub(result, "[.]$", "")
+      -- result = string.gsub(result, "%.$", "")
       -- result = string.gsub(result, "^[-]0$", "0")
       -- result = string.format("%f", result)  -- 小數點位數太短
     else
