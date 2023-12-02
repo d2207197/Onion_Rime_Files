@@ -2542,7 +2542,7 @@ local function translate(input, seg, env)
       local cc_exp = Candidate("simp_mf_cal", seg.start, seg._end, output_exp .. "=" .. c_output, "〔規格化算式〕")
       local cc_exp_error = Candidate("simp_mf_cal", seg.start, seg._end, output_exp .. "=" .. s_output, "〔 Waring 規格化算式〕")
       local cc_out_shadow = Candidate("simp_mf_cal", seg.start, seg._end, s_output, "〔 Waring 結果〕")
-      local cc_statement = Candidate("simp_mf_cal", seg.start, seg._end, "", "※  會有浮點數誤差和錯誤；括號限兩層；14位數限制")
+      local cc_statement = Candidate("simp_mf_cal", seg.start, seg._end, "", "※  會有浮點數誤差和錯誤；括號限兩層三堆；14位數限制")
       cc_out.preedit = env.prefix .. " " .. c_preedit .. " \t《簡易計算機》"
       cc_out_error.preedit = env.prefix .. " " .. c_preedit .. " \t《簡易計算機》"
       cc_exp.preedit = env.prefix .. " " .. c_preedit .. " \t《簡易計算機》"

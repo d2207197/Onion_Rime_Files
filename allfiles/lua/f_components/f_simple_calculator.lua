@@ -57,7 +57,9 @@ local function simple_calculator(input)
   local input = string.gsub(input, "[-+*/^(.]+$", "")  -- 未完成前，末尾為計算符號，先略
   local input = string.gsub(input, "[(]+([-+*/^.%d]+)$", "(%1)")  -- 未完成前，前端有括號，末尾為數字和計算符號，後端補括號
   local input = string.gsub(input, "[(]+([-+*/^.%d]*%b()[-+*/^.%d]*)$", "(%1)")  -- 未完成前，前端有括號，末尾含有一個括號組，後端補括號
-  -- local input = string.gsub(input, "[(]+([-+*/^.%d]+)$", "(%1)")  -- 未完成前，前端有括號，末尾為數字和計算符號，後端補括號
+  local input = string.gsub(input, "[(]+([-+*/^.%d]*%b()[-+*/^.%d]*%b()[-+*/^.%d]*)$", "(%1)")  -- 未完成前，前端有括號，末尾含有二個括號組，後端補括號
+  local input = string.gsub(input, "[(]+([-+*/^.%d]*%b()[-+*/^.%d]*%b()[-+*/^.%d]*%b()[-+*/^.%d]*)$", "(%1)")  -- 未完成前，前端有括號，末尾含有三個括號組，後端補括號
+  local input = string.gsub(input, "[(](%b())[)]", "%1")  -- 雙重括號，減為單一個
   -- print('轉換後：'..input)
 
   local ok, res = pcall(str_to_cal, input)
