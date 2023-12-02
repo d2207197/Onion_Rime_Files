@@ -142,6 +142,7 @@ local ks_table = require("f_components/keys_table/ks_table")
 local kj_table = require("f_components/keys_table/kj_table")
 local ki_table = require("f_components/keys_table/ki_table")
 local kp_table = require("f_components/keys_table/kp_table")
+local ky_table = require("f_components/keys_table/ky_table")
 local kg_table = require("f_components/keys_table/kg_table")
 local kc_table = require("f_components/keys_table/kc_table")
 
@@ -354,9 +355,10 @@ local function translate(input, seg, env)
         , { "  ~s 〔韓文 洋蔥形碼 編碼〕(形碼系列)", "⓹" }
         , { "  ~i 〔拉丁 洋蔥形碼 IPA國際音標 編碼〕", "⓺" }
         , { "  ~p 〔拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼〕", "⓻" }
-        , { "  ~g 〔希臘 洋蔥形碼 編碼〕", "⓼" }
-        , { "  ~c 〔西里爾 洋蔥形碼 編碼〕", "⓽" }
-        , { "═══  結束  ═══  ", "⓾" }
+        , { "  ~y 〔拉丁 洋蔥形碼 中文拼音 編碼〕", "⓼" }
+        , { "  ~g 〔希臘 洋蔥形碼 編碼〕", "⓽" }
+        , { "  ~c 〔西里爾 洋蔥形碼 編碼〕", "⓾" }
+        , { "　═══  結束  ═══  ", "" }
         -- , { "===========  結束  ===========    ", "⓼" }
         }
       for k, v in ipairs(keys_table) do
@@ -447,6 +449,16 @@ local function translate(input, seg, env)
       for k, v in ipairs(keys_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
         cand.preedit = input .. "\t《拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼》"
+        yield(cand)
+      end
+      return
+    end
+
+    if (input == env.prefix .. "ky") then
+      local keys_table = ky_table
+      for k, v in ipairs(keys_table) do
+        local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
+        cand.preedit = input .. "\t《拉丁 洋蔥形碼 中文拼音 編碼》"
         yield(cand)
       end
       return
