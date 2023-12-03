@@ -12,7 +12,7 @@ local function hotkeys(n)
   local s_6 = string.match( n, "^dif1")
   if s_1 or s_2 then
     k1_table = {
-        { "〖 注音 mixin 和 plus 系列 〗", "🄋" }
+        { "〖注音 mixin 和 plus 系列〗", "🄋" }
       , { "　『 中 / 英 』", "➀" }
       , { "　　［shift］+［space］變換中英（未打字時）", "➁" }
       , { "　　［control］+［shift］+［  2  ］變換中英", "➂" }
@@ -59,7 +59,7 @@ local function hotkeys(n)
       }
 
     k2_table = {
-        { "〖 注音 mixin 和 plus 系列 〗", "🄌" }
+        { "〖注音 mixin 和 plus 系列〗", "🄌" }
       , { "　『 方案選單 』", "➊" }
       , { "　　［control］+［  `  ］開啟方案選單（設置）", "➋" }
       , { "　　［control］+［shift］+［  `  ］開啟方案選單（設置）", "➌" }
@@ -120,7 +120,7 @@ local function hotkeys(n)
 
   elseif s_3 then
     k1_table = {
-        { "〖 注音雙拼 〗", "🄋" }
+        { "〖注音雙拼〗", "🄋" }
       , { "　『 中 / 英 』", "➀" }
       , { "　　［shift］+［space］變換中英（未打字時）", "➁" }
       , { "　　［control］+［shift］+［  2  ］變換中英", "➂" }
@@ -167,7 +167,7 @@ local function hotkeys(n)
       }
 
     k2_table = {
-        { "〖 注音雙拼 〗", "🄌" }
+        { "〖注音雙拼〗", "🄌" }
       , { "　『 方案選單 』", "➊" }
       , { "　　［control］+［  `  ］開啟方案選單（設置）", "➋" }
       , { "　　［control］+［shift］+［  `  ］開啟方案選單（設置）", "➌" }
@@ -204,7 +204,7 @@ local function hotkeys(n)
 
   elseif s_4 then
     k1_table = {
-        { "〖 行列３０ 〗", "🄋" }
+        { "〖行列３０〗", "🄋" }
       , { "　『 中 / 英 』", "➀" }
       , { "　　［shift］+［space］變換中英（未打字時）", "➁" }
       , { "　　［control］+［shift］+［  2  ］變換中英", "➂" }
@@ -235,7 +235,7 @@ local function hotkeys(n)
       }
 
     k2_table = {
-        { "〖 行列３０ 〗", "🄌" }
+        { "〖行列３０〗", "🄌" }
       , { "　『 方案選單 』", "➊" }
       , { "　　［control］+［  `  ］開啟方案選單（設置）", "➋" }
       , { "　　［control］+［shift］+［  `  ］開啟方案選單（設置）", "➌" }
@@ -284,7 +284,7 @@ local function hotkeys(n)
 
   elseif s_5 or s_6 then
     k1_table = {
-        { "〖 形碼方案 〗", "🄋" }
+        { "〖形碼方案〗", "🄋" }
       , { "　『 中 / 英 』", "➀" }
       , { "　　［shift］+［space］變換中英（未打字時）", "➁" }
       , { "　　［control］+［shift］+［  2  ］變換中英", "➂" }
@@ -331,7 +331,7 @@ local function hotkeys(n)
       }
 
     k2_table = {
-        { "〖 形碼方案 〗", "🄌" }
+        { "〖形碼方案〗", "🄌" }
       , { "　『 方案選單 』", "➊" }
       , { "　　［control］+［  `  ］開啟方案選單（設置）", "➋" }
       , { "　　［control］+［shift］+［  `  ］開啟方案選單（設置）", "➌" }
@@ -379,12 +379,12 @@ local function hotkeys(n)
 
   else
     k1_table = {
-        { "〖 不明方案 〗", "🄋" }
+        { "〖不明方案〗", "🄋" }
       -- , { "　待補", "➀" }
       }
 
     k2_table = {
-        { "〖 不明方案 〗", "🄌" }
+        { "〖不明方案〗", "🄌" }
       -- , { "　待補", "➊" }
       }
 
