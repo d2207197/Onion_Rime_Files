@@ -172,50 +172,50 @@ local function init(env)
   env.schema_id = config:get_string("schema/schema_id")
   env.menu_table = {
         -- { "〔半角〕", "`" }
-        { "  f〔年月日〕  ym〔年月〕  md〔月日〕", "⓪" }
-      , { "  y〔年〕  m〔月〕  d〔日〕  w〔週〕", "①" }
-      , { "  n〔時:分〕  t〔時:分:秒〕", "②" }
-      , { "  fw〔年月日週〕  mdw〔月日週〕", "③" }
-      , { "  fn〔年月日 時:分〕  ft〔年月日 時:分:秒〕", "④" }
-      , { "  p〔程式格式〕  z〔時區〕  s〔節氣〕  l〔月相〕", "⑤" }
+        { "『 日期和時間 』", "⓪" }
+      , { "　f〔年月日〕  ym〔年月〕  md〔月日〕", "①" }
+      , { "　y〔年〕  m〔月〕  d〔日〕  w〔週〕", "②" }
+      , { "　n〔時:分〕  t〔時:分:秒〕", "③" }
+      , { "　fw〔年月日週〕  mdw〔月日週〕", "④" }
+      , { "　fn〔年月日 時:分〕  ft〔年月日 時:分:秒〕", "⑤" }
+      , { "　p〔程式格式〕  z〔時區〕  s〔節氣〕  l〔月相〕", "⑥" }
       -- , { "  ○/○/○〔 ○ 年 ○ 月 ○ 日〕  ○/○〔 ○ 月 ○ 日〕", "⑥" }
       -- , { "  ○-○-○〔○年○月○日〕  ○-○〔○月○日〕", "⑦" }
-      , { "  ○ y ○ m ○ d〔○年○月○日〕", "⑥" }
-      , { "  ○ y ○ m〔○年○月〕    ○ m ○ d〔○月○日〕", "⑦" }
-      , { "  ○ y〔○年〕    ○ m〔○月〕    ○ d〔○日〕", "⑧" }
+      , { "　○ y ○ m ○ d〔○年○月○日〕", "⑦" }
+      , { "　○ y ○ m〔○年○月〕    ○ m ○ d〔○月○日〕", "⑧" }
+      , { "　○ y〔○年〕    ○ m〔○月〕    ○ d〔○日〕", "⑨" }
+      , { "『 數字和計算機 』", "⑩" }
       -- , { "  ○○○〔數字〕", "⑨" }
-      , { "  [-.0-9]+〔數字〕", "⑨" }
-      , { "  [-.0-9]+[ + - * / ^ ( ) ]...〔簡易計算機〕", "⑩" }
-      , { "※ 算符： ‹+ a›   ‹- r›   ‹* x›   ‹/ v›   ‹^ s›   ‹ ( q›   ‹ ) w› ", "⑪" }
-      , { "  / [a-z , . - \' / ]+〔小寫字母〕", "⑫" }
-      , { "  ; [a-z , . - \' / ]+〔大寫字母〕", "⑬" }
-      , { "  \' [a-z , . - \' / ]+〔開頭大寫字母〕", "⑭" }
-      , { "  i [0-9a-f]+〔Percent/URL encoding〕", "⑮" }
-      , { "  u [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑯" }
-      , { "  x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑰" }
-      , { "  c [0-9]+〔內碼十進制 Dec〕", "⑱" }
-      , { "  o [0-7]+〔內碼八進制 Oct〕", "⑲" }
-      , { "  j [a-z]+〔快捷開啟〕", "⑳" }
-      , { "  kk〔快捷鍵 說明〕", "㉑" }
-      , { "  ko〔操作鍵 說明〕", "㉒" }
-      , { "  kj〔日文 羅馬字 編碼〕", "㉓" }
-      , { "  kh〔韓文 HNC 編碼〕(注音系列)", "㉔" }
-      , { "  ks〔韓文 洋蔥形碼 編碼〕(形碼系列)", "㉕" }
-      , { "  ki〔拉丁 洋蔥形碼 IPA國際音標 編碼〕", "㉖" }
-      , { "  kp〔拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼〕", "㉗" }
-      , { "  kg〔希臘 洋蔥形碼 編碼〕", "㉘" }
-      , { "  kc〔西里爾 洋蔥形碼 編碼〕", "㉙" }
-      , { "  v〔版本資訊〕", "㉚" }
-      , { "  g〔Lua 所佔記憶體〕(Garbage)", "㉛" }
-      , { "  gc〔垃圾回收〕(Garbage Collection)", "㉜" }
-      , { "═══  結束  ═══  ", "㉝" }
-      , { "", "㉞" }
-      , { "", "㉟" }
-      , { "", "㊱" }
-      , { "", "㊲" }
-      , { "", "㊳" }
-      , { "", "㊴" }
-      , { "", "㊵" }
+      , { "　[-.0-9]+〔數字〕", "⑪" }
+      , { "　[-.0-9]+[ + - * / ^ ( ) ]...〔計算機〕", "⑫" }
+      , { "　※ 算符： ‹+ a›   ‹- r›   ‹* x›   ‹/ v›   ‹^ s›   ‹ ( q›   ‹ ) w›　", "⑬" }
+      , { "『 字母 』", "⑭" }
+      , { "　/ [a-z , . - \' / ]+〔小寫字母〕", "⑮" }
+      , { "　; [a-z , . - \' / ]+〔大寫字母〕", "⑯" }
+      , { "　\' [a-z , . - \' / ]+〔開頭大寫字母〕", "⑰" }
+      , { "『 Unicode 內碼 』", "⑱" }
+      , { "　i [0-9a-f]+〔Percent/URL encoding〕", "⑲" }
+      , { "　u [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "⑳" }
+      , { "　x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "㉑" }
+      , { "　c [0-9]+〔內碼十進制 Dec〕", "㉒" }
+      , { "　o [0-7]+〔內碼八進制 Oct〕", "㉓" }
+      , { "『 快捷開啟 』", "㉔" }
+      , { "　j [a-z]+〔快捷開啟〕", "㉕" }
+      , { "『 鍵位和編碼 』", "㉖" }
+      , { "　kk〔快捷鍵 說明〕", "㉗" }
+      , { "　ko〔操作鍵 說明〕", "㉘" }
+      , { "　kj〔日文 羅馬字 編碼〕", "㉙" }
+      , { "　kh〔韓文 HNC 編碼〕(注音系列)", "㉚" }
+      , { "　ks〔韓文 洋蔥形碼 編碼〕(形碼系列)", "㉛" }
+      , { "　ki〔拉丁 洋蔥形碼 IPA國際音標 編碼〕", "㉜" }
+      , { "　kp〔拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼〕", "㉝" }
+      , { "　kg〔希臘 洋蔥形碼 編碼〕", "㉞" }
+      , { "　kc〔西里爾 洋蔥形碼 編碼〕", "㉟" }
+      , { "『 版本和記憶體 』", "㊱" }
+      , { "　v〔版本資訊〕", "㊲" }
+      , { "　g〔Lua 所佔記憶體〕(Garbage)", "㊳" }
+      , { "　gc〔垃圾回收〕(Garbage Collection)", "㊴" }
+      , { "═══  結束  ═══  ", "㊵" }
       , { "", "㊶" }
       , { "", "㊷" }
       , { "", "㊸" }
@@ -282,7 +282,8 @@ local function translate(input, seg, env)
 
       for k, v in ipairs(env.menu_table) do
         local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-        cand.preedit = input .. "\t《時間日期數字字母》▶"
+        -- cand.preedit = input .. "\t《時間日期數字字母》▶"
+        cand.preedit = input .. "\t《特殊功能集》▶"
         yield(cand)
       end
       return
@@ -2322,11 +2323,11 @@ local function translate(input, seg, env)
     --- 補以下開頭括號缺漏（另改成如同啟始符）
     local paren_left_q = string.match(input, env.prefix .. "[q(][q(]?$")
     if paren_left_q then
-      local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "  ~ [-.0-9]+[ + - * / ^ ( ) ]...〔數字/簡易計算機〕")
-      cand2.preedit = input .. "\t《數字/簡易計算機》▶"
+      local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "  ~ [-.0-9]+[ + - * / ^ ( ) ]...〔數字和計算機〕")
+      cand2.preedit = input .. "\t《數字和計算機》▶"
       yield(cand2)
       -- yield_c( "", "  ~ [-.0-9]+〔數字〕")
-      -- yield_c( "", "  ~ [-.0-9]+[ + - * / ^ ( ) ]...〔簡易計算機〕")
+      -- yield_c( "", "  ~ [-.0-9]+[ + - * / ^ ( ) ]...〔計算機〕")
       -- yield_c( "(", "〔括號〕")
       return
     end
@@ -2543,12 +2544,12 @@ local function translate(input, seg, env)
       local cc_exp_error = Candidate("simp_mf_cal", seg.start, seg._end, output_exp .. "=" .. s_output, "〔 Waring 規格化算式〕")
       local cc_out_shadow = Candidate("simp_mf_cal", seg.start, seg._end, s_output, "〔 Waring 結果〕")
       local cc_statement = Candidate("simp_mf_cal", seg.start, seg._end, "", "※  會有浮點數誤差和錯誤；括號限兩層三堆；14位數限制")
-      cc_out.preedit = env.prefix .. " " .. c_preedit .. " \t《簡易計算機》"
-      cc_out_error.preedit = env.prefix .. " " .. c_preedit .. " \t《簡易計算機》"
-      cc_exp.preedit = env.prefix .. " " .. c_preedit .. " \t《簡易計算機》"
-      cc_exp_error.preedit = env.prefix .. " " .. c_preedit .. " \t《簡易計算機》"
-      cc_out_shadow.preedit = env.prefix .. " " .. c_preedit .. " \t《簡易計算機》"
-      cc_statement.preedit = env.prefix .. " " .. c_preedit .. " \t《簡易計算機》"
+      cc_out.preedit = env.prefix .. " " .. c_preedit .. " \t《計算機》"
+      cc_out_error.preedit = env.prefix .. " " .. c_preedit .. " \t《計算機》"
+      cc_exp.preedit = env.prefix .. " " .. c_preedit .. " \t《計算機》"
+      cc_exp_error.preedit = env.prefix .. " " .. c_preedit .. " \t《計算機》"
+      cc_out_shadow.preedit = env.prefix .. " " .. c_preedit .. " \t《計算機》"
+      cc_statement.preedit = env.prefix .. " " .. c_preedit .. " \t《計算機》"
       if (c_output:sub(1,1)=="E" or c_output:sub(1,1)=="W") then
         yield(cc_out_error)
         yield(cc_out_shadow)
