@@ -839,10 +839,10 @@ local function translate(input, seg, env)
 
     if (input == env.prefix .. "f") then
       yield_c( os.date("%Y%m%d"), "〔年月日〕 ~d")
-      yield_c( os.date("%Y.%m.%d"), "〔年月日〕 ~p")
+      yield_c( os.date("%Y.%m.%d"), "〔年月日〕 ~p ~q")
       yield_c( os.date("%Y/%m/%d"), "〔年月日〕 ~s")
-      yield_c( os.date("%Y-%m-%d"), "〔年月日〕 ~m")
-      yield_c( os.date("%Y_%m_%d"), "〔年月日〕 ~u")
+      yield_c( os.date("%Y-%m-%d"), "〔年月日〕 ~m ~r")
+      yield_c( os.date("%Y_%m_%d"), "〔年月日〕 ~u ~v")
       yield_c( string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1"), "〔年月日〕 ~c")
       yield_c( rqzdx1(), "〔中數〕 ~z")
       yield_c( string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1"), "〔民國〕 ~h")
@@ -934,7 +934,7 @@ local function translate(input, seg, env)
       return
     end
 
-    if (input == env.prefix .. "fm") then
+    if (input == env.prefix .. "fm") or (input == env.prefix .. "fr") then
       yield_c( os.date("%Y-%m-%d"), "〔年月日〕")
       yield_c( fullshape_number(os.date("%Y")).."－"..fullshape_number(os.date("%m")).."－"..fullshape_number(os.date("%d")), "〔年月日〕")
       yield_c( os.date("%d-%m-%Y"), "〔日月年〕")
@@ -951,7 +951,7 @@ local function translate(input, seg, env)
       return
     end
 
-    if (input == env.prefix .. "fu") then
+    if (input == env.prefix .. "fu") or (input == env.prefix .. "fv") then
       yield_c( os.date("%Y_%m_%d"), "〔年月日〕")
       -- yield_c( fullshape_number(os.date("%Y")).."_"..fullshape_number(os.date("%m")).."_"..fullshape_number(os.date("%d")), "〔年月日〕")
       yield_c( fullshape_number(os.date("%Y")).."＿"..fullshape_number(os.date("%m")).."＿"..fullshape_number(os.date("%d")), "〔年月日〕")
@@ -960,7 +960,7 @@ local function translate(input, seg, env)
       return
     end
 
-    if (input == env.prefix .. "fp") then
+    if (input == env.prefix .. "fp") or (input == env.prefix .. "fq") then
       yield_c( os.date("%Y.%m.%d"), "〔年月日〕")
       -- yield_c( fullshape_number(os.date("%Y")).."."..fullshape_number(os.date("%m")).."."..fullshape_number(os.date("%d")), "〔年月日〕")
       yield_c( fullshape_number(os.date("%Y")).."．"..fullshape_number(os.date("%m")).."．"..fullshape_number(os.date("%d")), "〔年月日〕")
@@ -977,12 +977,12 @@ local function translate(input, seg, env)
 
     if (input == env.prefix .. "fn") then
       yield_c( os.date("%Y%m%d %H:%M"), "〔年月日 時:分〕 ~d")
-      yield_c( os.date("%Y.%m.%d %H:%M"), "〔年月日 時:分〕 ~p")
+      yield_c( os.date("%Y.%m.%d %H:%M"), "〔年月日 時:分〕 ~p ~q")
       yield_c( os.date("%Y/%m/%d %H:%M"), "〔年月日 時:分〕 ~s")
-      yield_c( os.date("%Y-%m-%d %H:%M"), "〔年月日 時:分〕 ~m")
-      yield_c( os.date("%Y_%m_%d %H:%M"), "〔年月日 時:分〕 ~u")
+      yield_c( os.date("%Y-%m-%d %H:%M"), "〔年月日 時:分〕 ~m ~r")
+      yield_c( os.date("%Y_%m_%d %H:%M"), "〔年月日 時:分〕 ~u ~v")
       yield_c( os.date("%Y-%m-%d-%H-%M ") .. timezone_out()[1], "〔本地時  時區〕 ~i")
-      yield_c( os.date("%Y-%m-%dT%H:%M") .. timezone_out()[3], "〔本地時  RFC 3339/ISO 8601〕 ~r")
+      yield_c( os.date("%Y-%m-%dT%H:%M") .. timezone_out()[3], "〔本地時  RFC 3339/ISO 8601〕 ~f")
       yield_c( string.gsub(os.date("%Y年%m月%d日 %H點%M分"), "([^%d])0", "%1"), "〔年月日 時:分〕 ~c")
       yield_c( rqzdx1().." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分", "〔中數〕 ~z")
       yield_c( string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分"), "([^%d])0", "%1"), "〔民國〕 ~h")
@@ -1006,7 +1006,7 @@ local function translate(input, seg, env)
       return
     end
 
-    if (input == env.prefix .. "fnr") then
+    if (input == env.prefix .. "fnf") then
       yield_c( os.date("%Y-%m-%dT%H:%M") .. timezone_out()[3], "〔本地時  RFC 3339/ISO 8601〕")
       yield_c( os.date("%Y%m%dT%H%M") .. timezone_out()[4], "〔本地時  RFC 3339/ISO 8601〕")
       yield_c( os.date("!%Y-%m-%dT%H:%MZ"), "〔世界時  RFC 3339/ISO 8601〕")
@@ -1082,7 +1082,7 @@ local function translate(input, seg, env)
       return
     end
 
-    if (input == env.prefix .. "fnm") then
+    if (input == env.prefix .. "fnm") or (input == env.prefix .. "fnr") then
       yield_c( os.date("%Y-%m-%d %H:%M"), "〔年月日 時:分〕")
       yield_c( fullshape_number(os.date("%Y")).."－"..fullshape_number(os.date("%m")).."－"..fullshape_number(os.date("%d")).."　"..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")), "〔年月日 時:分〕")
       yield_c( os.date("%d-%m-%Y %H:%M"), "〔日月年 時:分〕")
@@ -1090,7 +1090,7 @@ local function translate(input, seg, env)
       return
     end
 
-    if (input == env.prefix .. "fnu") then
+    if (input == env.prefix .. "fnu") or (input == env.prefix .. "fnv") then
       yield_c( os.date("%Y_%m_%d %H:%M"), "〔年月日 時:分〕")
       -- yield_c( fullshape_number(os.date("%Y")).."_"..fullshape_number(os.date("%m")).."_"..fullshape_number(os.date("%d")).." "..fullshape_number(os.date("%H"))..":"..fullshape_number(os.date("%M")), "〔年月日 時:分〕")
       yield_c( fullshape_number(os.date("%Y")).."＿"..fullshape_number(os.date("%m")).."＿"..fullshape_number(os.date("%d")).."　"..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")), "〔年月日 時:分〕")
@@ -1099,7 +1099,7 @@ local function translate(input, seg, env)
       return
     end
 
-    if (input == env.prefix .. "fnp") then
+    if (input == env.prefix .. "fnp") or (input == env.prefix .. "fnq") then
       yield_c( os.date("%Y.%m.%d %H:%M"), "〔年月日 時:分〕")
       -- yield_c( fullshape_number(os.date("%Y")).."."..fullshape_number(os.date("%m")).."."..fullshape_number(os.date("%d")).." "..fullshape_number(os.date("%H"))..":"..fullshape_number(os.date("%M")), "〔年月日 時:分〕")
       yield_c( fullshape_number(os.date("%Y")).."．"..fullshape_number(os.date("%m")).."．"..fullshape_number(os.date("%d")).."　"..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")), "〔年月日 時:分〕")
@@ -1116,12 +1116,12 @@ local function translate(input, seg, env)
 
     if (input == env.prefix .. "ft") then
       yield_c( os.date("%Y%m%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~d")
-      yield_c( os.date("%Y.%m.%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~p")
+      yield_c( os.date("%Y.%m.%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~p ~q")
       yield_c( os.date("%Y/%m/%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~s")
-      yield_c( os.date("%Y-%m-%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~m")
-      yield_c( os.date("%Y_%m_%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~u")
+      yield_c( os.date("%Y-%m-%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~m ~r")
+      yield_c( os.date("%Y_%m_%d %H:%M:%S"), "〔年月日 時:分:秒〕 ~u ~v")
       yield_c( os.date("%Y-%m-%d-%H-%M-%S ") .. timezone_out()[1], "〔本地時  時區〕 ~i")
-      yield_c( os.date("%Y-%m-%dT%H:%M:%S") .. timezone_out()[3], "〔本地時  RFC 3339/ISO 8601〕 ~r")
+      yield_c( os.date("%Y-%m-%dT%H:%M:%S") .. timezone_out()[3], "〔本地時  RFC 3339/ISO 8601〕 ~f")
       yield_c( string.gsub(os.date("%Y年%m月%d日 %H點%M分%S秒"), "([^%d])0", "%1"), "〔年月日 時:分:秒〕 ~c")
       yield_c( rqzdx1().." "..ch_h_date(os.date("%H")).."點"..ch_minsec_date(os.date("%M")).."分"..ch_minsec_date(os.date("%S")).."秒", "〔中數〕 ~z")
       yield_c( string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日 "..os.date("%H點%M分%S秒"), "([^%d])0", "%1"), "〔民國〕 ~h")
@@ -1141,7 +1141,7 @@ local function translate(input, seg, env)
       return
     end
 
-    if (input == env.prefix .. "ftr") then
+    if (input == env.prefix .. "ftf") then
       yield_c( os.date("%Y-%m-%dT%H:%M:%S") .. timezone_out()[3], "〔本地時  RFC 3339/ISO 8601〕")
       yield_c( os.date("%Y%m%dT%H%M%S") .. timezone_out()[4], "〔本地時  RFC 3339/ISO 8601〕")
       yield_c( os.date("!%Y-%m-%dT%H:%M:%SZ"), "〔世界時  RFC 3339/ISO 8601〕")
@@ -1206,7 +1206,7 @@ local function translate(input, seg, env)
       return
     end
 
-    if (input == env.prefix .. "ftm") then
+    if (input == env.prefix .. "ftm") or (input == env.prefix .. "ftr") then
       yield_c( os.date("%Y-%m-%d %H:%M:%S"), "〔年月日 時:分:秒〕")
       yield_c( fullshape_number(os.date("%Y")).."－"..fullshape_number(os.date("%m")).."－"..fullshape_number(os.date("%d")).."　"..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔年月日 時:分:秒〕")
       yield_c( os.date("%d-%m-%Y %H:%M:%S"), "〔日月年 時:分:秒〕")
@@ -1214,7 +1214,7 @@ local function translate(input, seg, env)
       return
     end
 
-    if (input == env.prefix .. "ftu") then
+    if (input == env.prefix .. "ftu") or (input == env.prefix .. "ftv") then
       yield_c( os.date("%Y_%m_%d %H:%M:%S"), "〔年月日 時:分:秒〕")
       -- yield_c( fullshape_number(os.date("%Y")).."_"..fullshape_number(os.date("%m")).."_"..fullshape_number(os.date("%d")).." "..fullshape_number(os.date("%H"))..":"..fullshape_number(os.date("%M"))..":"..fullshape_number(os.date("%S")), "〔年月日 時:分:秒〕")
       yield_c( fullshape_number(os.date("%Y")).."＿"..fullshape_number(os.date("%m")).."＿"..fullshape_number(os.date("%d")).."　"..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔年月日 時:分:秒〕")
@@ -1223,7 +1223,7 @@ local function translate(input, seg, env)
       return
     end
 
-    if (input == env.prefix .. "ftp") then
+    if (input == env.prefix .. "ftp") or (input == env.prefix .. "ftq") then
       yield_c( os.date("%Y.%m.%d %H:%M:%S"), "〔年月日 時:分:秒〕")
       -- yield_c( fullshape_number(os.date("%Y")).."."..fullshape_number(os.date("%m")).."."..fullshape_number(os.date("%d")).." "..fullshape_number(os.date("%H"))..":"..fullshape_number(os.date("%M"))..":"..fullshape_number(os.date("%S")), "〔年月日 時:分:秒〕")
       yield_c( fullshape_number(os.date("%Y")).."．"..fullshape_number(os.date("%m")).."．"..fullshape_number(os.date("%d")).."　"..fullshape_number(os.date("%H")).."："..fullshape_number(os.date("%M")).."："..fullshape_number(os.date("%S")), "〔年月日 時:分:秒〕")
@@ -1436,10 +1436,10 @@ local function translate(input, seg, env)
 
     if (input == env.prefix .. "md") then
       yield_c( os.date("%m%d"), "〔月日〕 ~d")
-      yield_c( os.date("%m.%d"), "〔月日〕 ~p")
+      yield_c( os.date("%m.%d"), "〔月日〕 ~p ~q")
       yield_c( os.date("%m/%d"), "〔月日〕 ~s")
-      yield_c( os.date("%m-%d"), "〔月日〕 ~m")
-      yield_c( os.date("%m_%d"), "〔月日〕 ~u")
+      yield_c( os.date("%m-%d"), "〔月日〕 ~m ~r")
+      yield_c( os.date("%m_%d"), "〔月日〕 ~u ~v")
       yield_c( string.gsub(os.date("%m月%d日"), "0([%d])", "%1"), "〔月日〕 ~c")
       yield_c( rqzdx1(23), "〔中數〕 ~z")
       yield_c( jp_m_date(os.date("%m"))..jp_d_date(os.date("%d")), "〔日本格式〕 ~j")
@@ -1508,14 +1508,14 @@ local function translate(input, seg, env)
       return
     end
 
-    if (input == env.prefix .. "mdm") then
+    if (input == env.prefix .. "mdm") or (input == env.prefix .. "mdr") then
       yield_c( os.date("%m-%d"), "〔月日〕")
       yield_c( fullshape_number(os.date("%m")).."－"..fullshape_number(os.date("%d")), "〔月日〕")
       yield_c( os.date("%d-%m"), "〔日月〕")
       return
     end
 
-    if (input == env.prefix .. "mdu") then
+    if (input == env.prefix .. "mdu") or (input == env.prefix .. "mdv") then
       yield_c( os.date("%m_%d"), "〔月日〕")
       -- yield_c( fullshape_number(os.date("%m")).."_"..fullshape_number(os.date("%d")), "〔月日〕")
       yield_c( fullshape_number(os.date("%m")).."＿"..fullshape_number(os.date("%d")), "〔月日〕")
@@ -1523,7 +1523,7 @@ local function translate(input, seg, env)
       return
     end
 
-    if (input == env.prefix .. "mdp") then
+    if (input == env.prefix .. "mdp") or (input == env.prefix .. "mdq") then
       yield_c( os.date("%m.%d"), "〔月日〕")
       -- yield_c( fullshape_number(os.date("%m")).."."..fullshape_number(os.date("%d")), "〔月日〕")
       yield_c( fullshape_number(os.date("%m")).."．"..fullshape_number(os.date("%d")), "〔月日〕")
@@ -1617,10 +1617,10 @@ local function translate(input, seg, env)
 
     if (input == env.prefix .. "ym") then
       yield_c( os.date("%Y%m"), "〔年月〕 ~d")
-      yield_c( os.date("%Y.%m"), "〔年月〕 ~p")
+      yield_c( os.date("%Y.%m"), "〔年月〕 ~p ~q")
       yield_c( os.date("%Y/%m"), "〔年月〕 ~s")
-      yield_c( os.date("%Y-%m"), "〔年月〕 ~m")
-      yield_c( os.date("%Y_%m"), "〔年月〕 ~u")
+      yield_c( os.date("%Y-%m"), "〔年月〕 ~m ~r")
+      yield_c( os.date("%Y_%m"), "〔年月〕 ~u ~v")
       yield_c( string.gsub(os.date("%Y年%m月"), "([^%d])0", "%1"), "〔年月〕 ~c")
       yield_c( rqzdx1(12), "〔中數〕 ~z")
       yield_c( string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月", "([^%d])0", "%1"), "〔民國〕 ~h")
@@ -1714,14 +1714,14 @@ local function translate(input, seg, env)
       return
     end
 
-    if (input == env.prefix .. "ymm") then
+    if (input == env.prefix .. "ymm") or (input == env.prefix .. "ymr") then
       yield_c( os.date("%Y-%m"), "〔年月〕")
       yield_c( fullshape_number(os.date("%Y")).."－"..fullshape_number(os.date("%m")), "〔年月〕")
       yield_c( os.date("%m-%Y"), "〔月年〕")
       return
     end
 
-    if (input == env.prefix .. "ymu") then
+    if (input == env.prefix .. "ymu") or (input == env.prefix .. "ymv") then
       yield_c( os.date("%Y_%m"), "〔年月〕")
       -- yield_c( fullshape_number(os.date("%Y")).."_"..fullshape_number(os.date("%m")), "〔年月〕")
       yield_c( fullshape_number(os.date("%Y")).."＿"..fullshape_number(os.date("%m")), "〔年月〕")
@@ -1729,7 +1729,7 @@ local function translate(input, seg, env)
       return
     end
 
-    if (input == env.prefix .. "ymp") then
+    if (input == env.prefix .. "ymp") or (input == env.prefix .. "ymq") then
       yield_c( os.date("%Y.%m"), "〔年月〕")
       -- yield_c( fullshape_number(os.date("%Y")).."."..fullshape_number(os.date("%m")), "〔年月〕")
       yield_c( fullshape_number(os.date("%Y")).."．"..fullshape_number(os.date("%m")), "〔年月〕")
