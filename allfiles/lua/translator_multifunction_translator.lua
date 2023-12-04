@@ -2337,12 +2337,17 @@ local function translate(input, seg, env)
     local neg_nf = string.match(input, env.prefix .. "[q(]?[q(]?[-r]$")
     if neg_nf then
       yield_c( "-", "〔一般負號〕")
+      yield_c( "−", "〔數學負號〕")
       yield_c( "－", "〔全形負號〕")
-      yield_c( "負", "〔中文負號〕")
-      yield_c( "槓", "〔軍中負號〕")
       yield_c( "⁻", "〔上標負號〕")
       yield_c( "₋", "〔下標負號〕")
-      yield_c( "㊀", "〔帶圈負號〕")
+      yield_c( "負", "〔中文負號〕")
+      yield_c( "槓", "〔軍中負號〕")
+      yield_c( "−⃝", "〔帶圈負號〕")  -- ㊀ -⃝ −︎⃝ ⊝ ⊖
+      yield_c( "⛔︎", "〔反白帶圈負號〕")
+      yield_c( "負⃝", "〔帶圈中文負號〕")  -- 負︎⃝
+      yield_c( "⛔", "〔鍵帽負號〕")  -- ➖ -⃣ −⃣
+      yield_c( "➖", "〔加粗的減號〕")
       yield_c( "⠤", "〔點字(computer/unified)〕")
       return
     end
@@ -2366,9 +2371,13 @@ local function translate(input, seg, env)
       yield_c( ",", "〔千分位〕")
       yield_c( "-0.000000E+00", "〔科學計數〕")
       yield_c( "-0.000000e+00", "〔科學計數〕")
-      yield_c( "- 𝟎.", "〔數學粗體數字〕")
-      yield_c( "- 𝟘.", "〔數學空心數字〕")
+      yield_c( "−𝟎.", "〔數學粗體數字〕")
+      yield_c( "−𝟘.", "〔數學空心數字〕")
       yield_c( "－０.", "〔全形數字〕")
+      yield_c( "⁻⁰⋅", "〔上標數字〕")
+      yield_c( "₋₀.", "〔下標數字〕")
+      yield_c( "負〇點", "〔小寫中文數字〕")
+      yield_c( "負零點", "〔大寫中文數字〕")
       yield_c( "負點", "〔純中文數字〕")
       yield_c( "槓點", "〔軍中數字〕")
       yield_c( "⠤⠨", "〔點字(computer)〕")
@@ -2391,12 +2400,16 @@ local function translate(input, seg, env)
         numberout = "0"
       end
 
+      local neg_n_math = string.gsub(neg_n, "-", "−")
       local neg_n_f = string.gsub(neg_n, "-", "－")
-      local neg_n_ch = string.gsub(neg_n, "-", "負")
-      local neg_n_m = string.gsub(neg_n, "-", "槓")
       local neg_n_l1 = string.gsub(neg_n, "-", "⁻")
       local neg_n_l2 = string.gsub(neg_n, "-", "₋")
-      local neg_n_c = string.gsub(neg_n, "-", "㊀")
+      local neg_n_ch = string.gsub(neg_n, "-", "負")
+      local neg_n_m = string.gsub(neg_n, "-", "槓")
+      local neg_n_c = string.gsub(neg_n, "-", "−⃝")  -- ㊀ -⃝ −︎⃝ ⊝ ⊖
+      local neg_n_e = string.gsub(neg_n, "-", "⛔︎")
+      local neg_n_chq = string.gsub(neg_n, "-", "負⃝")  -- 負︎⃝
+      local neg_n_k = string.gsub(neg_n, "-", "⛔")  -- ➖ -⃣ −⃣
       local neg_n_b = string.gsub(neg_n, "-", "⠤")
 
     -- if numberout~=nil and tonumber(nn)~=nil then
@@ -2422,13 +2435,15 @@ local function translate(input, seg, env)
 
       yield_c( string.format("%E", neg_n .. numberout .. dot1 .. afterdot ), "〔科學計數〕")
       yield_c( string.format("%e", neg_n .. numberout .. dot1 .. afterdot ), "〔科學計數〕")
-      if neg_n == "" then
-        yield_c( math1_number(numberout) .. dot1 .. math1_number(afterdot), "〔數學粗體數字〕")
-        yield_c( math2_number(numberout) .. dot1 .. math2_number(afterdot), "〔數學空心數字〕")
-      elseif neg_n ~="" then
-        yield_c( neg_n .. " " .. math1_number(numberout) .. dot1 .. math1_number(afterdot), "〔數學粗體數字〕")
-        yield_c( neg_n .. " " .. math2_number(numberout) .. dot1 .. math2_number(afterdot), "〔數學空心數字〕")
-      end
+      -- if neg_n == "" then
+      --   yield_c( math1_number(numberout) .. dot1 .. math1_number(afterdot), "〔數學粗體數字〕")
+      --   yield_c( math2_number(numberout) .. dot1 .. math2_number(afterdot), "〔數學空心數字〕")
+      -- elseif neg_n ~="" then
+      --   yield_c( neg_n .. " " .. math1_number(numberout) .. dot1 .. math1_number(afterdot), "〔數學粗體數字〕")
+      --   yield_c( neg_n .. " " .. math2_number(numberout) .. dot1 .. math2_number(afterdot), "〔數學空心數字〕")
+      -- end
+      yield_c( neg_n_math .. math1_number(numberout) .. dot1 .. math1_number(afterdot), "〔數學粗體數字〕")
+      yield_c( neg_n_math .. math2_number(numberout) .. dot1 .. math2_number(afterdot), "〔數學空心數字〕")
       yield_c( neg_n_f .. fullshape_number(numberout) .. dot1 .. fullshape_number(afterdot), "〔全形數字〕")
       yield_c( neg_n_l1 .. little1_number(numberout..dot1..afterdot), "〔上標數字〕")
       yield_c( neg_n_l2 .. little2_number(numberout..dot1..afterdot), "〔下標數字〕")
@@ -2436,6 +2451,9 @@ local function translate(input, seg, env)
       if (string.len(numberout) < 25) then
         yield_c( neg_n_ch .. read_number(confs[1], numberout) .. purech_number(dot1..afterdot), confs[1].comment)
         yield_c( neg_n_ch .. read_number_bank(confs[2], numberout) .. purebigch_number(dot1..afterdot), confs[2].comment)
+      else
+        yield_c( "〇" , "（超過1000垓的計算限制）" .. confs[1].comment)
+        yield_c( "零" , "（超過1000垓的計算限制）" .. confs[2].comment)
       end
 
       if (dot1=="") then
@@ -2463,11 +2481,11 @@ local function translate(input, seg, env)
 
         yield_c( neg_n_c .. circled1_number(numberout), "〔帶圈數字〕")
         yield_c( neg_n_c .. circled2_number(numberout), "〔帶圈無襯線數字〕")
-        yield_c( neg_n_f .. circled3_number(numberout), "〔反白帶圈數字〕")
-        yield_c( neg_n_f .. circled4_number(numberout), "〔反白帶圈無襯線數字〕")
-        yield_c( neg_n_f .. circled5_number(numberout), "〔帶圈中文數字〕")
+        yield_c( neg_n_e .. circled3_number(numberout), "〔反白帶圈數字〕")
+        yield_c( neg_n_e .. circled4_number(numberout), "〔反白帶圈無襯線數字〕")
+        yield_c( neg_n_chq .. circled5_number(numberout), "〔帶圈中文數字〕")
 
-        yield_c( neg_n_f .. keycap_number(numberout), "〔鍵帽數字〕")
+        yield_c( neg_n_k .. keycap_number(numberout), "〔鍵帽數字〕")
         yield_c( neg_n_b .. braille_c_number(numberout), "〔點字(computer)〕")
         -- yield_c( neg_n_b .. "⠼" .. braille_c_number(numberout), "〔點字(一般)〕")
         yield_c( neg_n_b .. "⠼" .. braille_u_number(numberout), "〔點字(unified)〕")
@@ -2505,7 +2523,11 @@ local function translate(input, seg, env)
         yield_c( neg_n_b .. "⠼" .. braille_u_number(dot1..afterdot), "〔點字(unified)〕")
         return
       elseif dot0=="" and dot1~="" then
-        yield_c( neg_n_ch .. purech_number(numberout..dot1..afterdot), "〔純中文數字〕")
+        if (string.len(numberout) < 2) then
+          yield_c( "元整", "〔純中文數字〕")
+        else
+          yield_c( neg_n_ch .. purech_number(numberout..dot1..afterdot), "〔純中文數字〕")
+        end
         yield_c( neg_n_m .. military_number(numberout..dot1..afterdot), "〔軍中數字〕")
         yield_c( neg_n_b .. braille_c_number(numberout..dot1..afterdot), "〔點字(computer)〕")
         -- yield_c( neg_n_b .. "⠼" .. braille_c_number(numberout..dot1..afterdot), "〔點字(一般)〕")
