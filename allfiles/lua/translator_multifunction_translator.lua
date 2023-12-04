@@ -79,6 +79,7 @@ local circled3_number = f_n_s.circled3_number
 local circled4_number = f_n_s.circled4_number
 local circled5_number = f_n_s.circled5_number
 local purech_number = f_n_s.purech_number
+local purebigch_number = f_n_s.purebigch_number
 local military_number = f_n_s.military_number
 local little1_number = f_n_s.little1_number
 local little2_number = f_n_s.little2_number
@@ -2399,7 +2400,7 @@ local function translate(input, seg, env)
       local neg_n_b = string.gsub(neg_n, "-", "⠤")
 
     -- if numberout~=nil and tonumber(nn)~=nil then
-      local nn = string.sub(numberout, 1)
+      -- local nn = string.sub(numberout, 1)
       --[[ 用 yield 產生一個候選項
       候選項的構造函數是 Candidate，它有五個參數：
       - type: 字符串，表示候選項的類型（可隨意取）
@@ -2429,23 +2430,28 @@ local function translate(input, seg, env)
         yield_c( neg_n .. " " .. math2_number(numberout) .. dot1 .. math2_number(afterdot), "〔數學空心數字〕")
       end
       yield_c( neg_n_f .. fullshape_number(numberout) .. dot1 .. fullshape_number(afterdot), "〔全形數字〕")
+      yield_c( neg_n_l1 .. little1_number(numberout..dot1..afterdot), "〔上標數字〕")
+      yield_c( neg_n_l2 .. little2_number(numberout..dot1..afterdot), "〔下標數字〕")
+      --- 超過「1000垓」則不顯示中文數字
+      if (string.len(numberout) < 25) then
+        yield_c( neg_n_ch .. read_number(confs[1], numberout) .. purech_number(dot1..afterdot), confs[1].comment)
+        yield_c( neg_n_ch .. read_number_bank(confs[2], numberout) .. purebigch_number(dot1..afterdot), confs[2].comment)
+      end
 
       if (dot1=="") then
-        yield_c( neg_n_l1 .. little1_number(numberout), "〔上標數字〕")
-        yield_c( neg_n_l2 .. little2_number(numberout), "〔下標數字〕")
 
-        --- 超過「1000垓」則不顯示中文數字
-        if (string.len(numberout) < 25) then
-          -- for _, conf in ipairs(confs) do
-          --   local r = read_number(conf, nn)
-          --   yield_c( r, conf.comment)
-          -- end
-          yield_c( neg_n_ch .. read_number(confs[1], nn), confs[1].comment)
-          yield_c( neg_n_ch .. read_number_bank(confs[2], nn), confs[2].comment)
-        -- else
-        --   yield_c( "超過位數", confs[1].comment)
-        --   yield_c( "超過位數", confs[2].comment)
-        end
+        -- --- 超過「1000垓」則不顯示中文數字
+        -- if (string.len(numberout) < 25) then
+        --   -- for _, conf in ipairs(confs) do
+        --   --   local r = read_number(conf, nn)
+        --   --   yield_c( r, conf.comment)
+        --   -- end
+        --   yield_c( neg_n_ch .. read_number(confs[1], nn), confs[1].comment)
+        --   yield_c( neg_n_ch .. read_number_bank(confs[2], nn), confs[2].comment)
+        -- -- else
+        -- --   yield_c( "超過位數", confs[1].comment)
+        -- --   yield_c( "超過位數", confs[2].comment)
+        -- end
 
         if (string.len(numberout) < 2) then
           yield_c( "元整", "〔純中文數字〕")

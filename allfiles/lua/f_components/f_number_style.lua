@@ -86,6 +86,13 @@ local function purech_number(t)
   return proj:apply(t)
 end
 
+local function purebigch_number(t)
+  if t == "" then return "" end
+  local format1 = "xlit|0123456789.|零壹貳參肆伍陸柒捌玖點|"
+  local proj = convert_format(format1)
+  return proj:apply(t)
+end
+
 local function military_number(t)
   if t == "" then return "" end
   local format1 = "xlit|0123456789.|洞么兩三四五六拐八勾點|"
@@ -95,14 +102,14 @@ end
 
 local function little1_number(t)
   if t == "" then return "" end
-  local format1 = "xlit|0123456789|⁰¹²³⁴⁵⁶⁷⁸⁹|"
+  local format1 = "xlit|0123456789.|⁰¹²³⁴⁵⁶⁷⁸⁹⋅|"
   local proj = convert_format(format1)
   return proj:apply(t)
 end
 
 local function little2_number(t)
   if t == "" then return "" end
-  local format1 = "xlit|0123456789|₀₁₂₃₄₅₆₇₈₉|"
+  local format1 = "xlit|0123456789.|₀₁₂₃₄₅₆₇₈₉.|"
   local proj = convert_format(format1)
   return proj:apply(t)
 end
@@ -335,6 +342,7 @@ return {
         circled4_number = circled4_number,
         circled5_number = circled5_number,
         purech_number = purech_number,
+        purebigch_number = purebigch_number,
         military_number = military_number,
         little1_number = little1_number,
         little2_number = little2_number,
