@@ -2453,8 +2453,8 @@ local function translate(input, seg, env)
         yield_c( neg_n_c .. read_number(confs[1], numberout) .. purech_number(dot1..afterdot), confs[1].comment)
         yield_c( neg_n_c .. read_number_bank(confs[2], numberout) .. purebigch_number(dot1..afterdot), confs[2].comment)
       else
-        yield_c( "〇" , "（超過1000垓的計算限制）" .. confs[1].comment)
-        yield_c( "零" , "（超過1000垓的計算限制）" .. confs[2].comment)
+        yield_c( "〇" , "（超過 1000垓/24位 的計算限制）" .. confs[1].comment)
+        yield_c( "零" , "（超過 1000垓/24位 的計算限制）" .. confs[2].comment)
       end
 
       if (dot1=="") then
@@ -2502,9 +2502,10 @@ local function translate(input, seg, env)
           -- elseif (tonumber(numberout) < 9999999999999999) then
           -- elseif (string.len(numberout) < 16) then
             yield_c( Dec2bin(numberout), "〔二進位〕")
-          -- else
-          --   yield_c( "", "〔二進位〕(數值超過 14位 可能會不正確)")
-          --   -- yield_c( "", "〔二進位〕(數值超過 16位-1 會不正確)")
+          else
+            yield_c( "bin", "（超過 14位 會有誤）〔二進位〕")
+            -- yield_c( "%b", "（數值超過 14位 可能會不正確）〔二進位〕")
+            -- yield_c( "", "（數值超過 16位-1 會不正確）〔二進位〕")
           end
 
           --- 整數庫限制：最大的64位元整數超過64位等同十進制2^63，超過則報錯，極限2^63-1，超過設定不顯示
@@ -2513,6 +2514,10 @@ local function translate(input, seg, env)
             yield_c( string.format("%X",numberout), "〔十六進位〕")
             yield_c( string.format("%x",numberout), "〔十六進位〕")
             yield_c( string.format("%o",numberout), "〔八進位〕")
+          else
+            yield_c( "Hex", "（超過 2^63-1 報錯）〔十六進位〕")
+            yield_c( "hex", "（超過 2^63-1 報錯）〔十六進位〕")
+            yield_c( "oct", "（超過 2^63-1 報錯）〔八進位〕")
           end
         end
 
