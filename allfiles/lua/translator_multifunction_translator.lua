@@ -200,25 +200,25 @@ local function init(env)
       , { "　x [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", "㉑" }
       , { "　c [0-9]+〔內碼十進制 Dec〕", "㉒" }
       , { "　o [0-7]+〔內碼八進制 Oct〕", "㉓" }
-      , { "【快捷開啟】", "㉔" }
+      , { "【快捷功能】", "㉔" }
       , { "　j [a-z]+〔快捷開啟〕", "㉕" }
-      , { "【鍵位和編碼】", "㉖" }
-      , { "　kk〔快捷鍵 說明〕", "㉗" }
-      , { "　ko〔操作鍵 說明〕", "㉘" }
-      , { "　kj〔日文 羅馬字 編碼〕", "㉙" }
-      , { "　kh〔韓文 HNC 編碼〕(注音系列)", "㉚" }
-      , { "　ks〔韓文 洋蔥形碼 編碼〕(形碼系列)", "㉛" }
-      , { "　ki〔拉丁 洋蔥形碼 IPA國際音標 編碼〕", "㉜" }
-      , { "　kp〔拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼〕", "㉝" }
-      , { "　ky〔拉丁 洋蔥形碼 中文拼音 編碼〕", "㉞" }
-      , { "　kg〔希臘 洋蔥形碼 編碼〕", "㉟" }
-      , { "　kc〔西里爾 洋蔥形碼 編碼〕", "㊱" }
-      , { "【版本和記憶體】", "㊲" }
-      , { "　v〔版本資訊〕", "㊳" }
-      , { "　g〔Lua 所佔記憶體〕(Garbage)", "㊴" }
-      , { "　gc〔垃圾回收〕(Garbage Collection)", "㊵" }
-      , { "═══  結束  ═══  ", "㊶" }
-      , { "", "㊷" }
+      , { "　h 〔短語總列表〕", "㉖" }
+      , { "【鍵位和編碼】", "㉗" }
+      , { "　kk〔快捷鍵 說明〕", "㉘" }
+      , { "　ko〔操作鍵 說明〕", "㉙" }
+      , { "　kj〔日文 羅馬字 編碼〕", "㉚" }
+      , { "　kh〔韓文 HNC 編碼〕(注音系列)", "㉛" }
+      , { "　ks〔韓文 洋蔥形碼 編碼〕(形碼系列)", "㉜" }
+      , { "　ki〔拉丁 洋蔥形碼 IPA國際音標 編碼〕", "㉝" }
+      , { "　kp〔拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼〕", "㉞" }
+      , { "　ky〔拉丁 洋蔥形碼 中文拼音 編碼〕", "㉟" }
+      , { "　kg〔希臘 洋蔥形碼 編碼〕", "㊱" }
+      , { "　kc〔西里爾 洋蔥形碼 編碼〕", "㊲" }
+      , { "【版本和記憶體】", "㊳" }
+      , { "　v〔版本資訊〕", "㊴" }
+      , { "　g〔Lua 所佔記憶體〕(Garbage)", "㊵" }
+      , { "　gc〔垃圾回收〕(Garbage Collection)", "㊶" }
+      , { "═══  結束  ═══  ", "㊷" }
       , { "", "㊸" }
       , { "", "㊹" }
       , { "", "㊺" }
@@ -569,6 +569,17 @@ local function translate(input, seg, env)
     --   cand2.preedit = env.prefix .. "j " .. op_check .. "\t【快捷開啟】"
     --   yield(cand2)
     --   return
+    end
+
+
+    -- 短語總列表（提示：無短語功能）
+    -- local bopomo_onion_double = string.match( env.schema_id, "^bopomo_onion_double")
+    -- local onion_array30 = string.match( env.schema_id, "^onion[-]array30")
+    -- if (input == env.prefix .. "h") and (bopomo_onion_double or onion_array30) then
+    if (input == env.prefix .. "h") and env.prefix == "`" then
+      local cand = Candidate("simp_short_list", seg.start, seg._end, "", "〔無短語功能〕")
+      cand.preedit = input .. "\t【短語總列表】▶"
+      yield(cand)
     end
 
 
