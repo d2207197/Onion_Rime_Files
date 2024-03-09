@@ -3,6 +3,6 @@
 #@/db_type	tabledb
 #@/rime_version	1.2.9
 #@/tick	5
-보아	aq	0
+🌏【 ✦ 洋蔥‧韓語（HNC 鍵位） ✦ 】📡	zz	10
 아이유	iu	9
-🌏【 ✦ 洋蔥‧韓語（HNC 鍵位） ✦ 】📡	pp	1
+보아	aq	0

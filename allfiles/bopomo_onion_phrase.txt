@@ -16,8 +16,5 @@
 #中州韻輸入法引擎	rime	3
 #中文標點符號新增與移前起始
 # no comment
-✿《洋蔥純注音版－標記》✿	zz
-https://www.youtube.com/	youtube
-
-
-
+🌏【 ✦ 洋蔥注音 純注音 版 ✦ 】📡	zz	10
+✿《測試條目》（無詞頻）✿	11

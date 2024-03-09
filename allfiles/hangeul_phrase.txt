@@ -3,7 +3,7 @@
 #@/db_type	tabledb
 #@/rime_version	1.2.9
 #@/tick	51
-🌏【 ✦ 洋蔥‧韓語（洋蔥鍵位） ✦ 】📡	zz
+🌏【 ✦ 洋蔥‧韓語（洋蔥鍵位） ✦ 】📡	zz	10
 이지은	quq
 권보아	yaq
 아이유	iu
