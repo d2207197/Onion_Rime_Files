@@ -202,7 +202,7 @@ local function init(env)
       , { "　o [0-7]+〔內碼八進制 Oct〕", "㉓" }
       , { "【快捷功能】", "㉔" }
       , { "　j [a-z]+〔快捷開啟〕", "㉕" }
-      , { "　h 〔短語總列表〕", "㉖" }
+      , { "　a 〔短語總列表〕", "㉖" }
       , { "【鍵位和編碼】", "㉗" }
       , { "　kk〔快捷鍵 說明〕", "㉘" }
       , { "　ko〔操作鍵 說明〕", "㉙" }
@@ -575,8 +575,8 @@ local function translate(input, seg, env)
     -- 短語總列表（提示：無短語功能）
     -- local bopomo_onion_double = string.match( env.schema_id, "^bopomo_onion_double")
     -- local onion_array30 = string.match( env.schema_id, "^onion[-]array30")
-    -- if (input == env.prefix .. "h") and (bopomo_onion_double or onion_array30) then
-    if (input == env.prefix .. "h") and env.prefix == "`" then
+    -- if (input == env.prefix .. "a") and (bopomo_onion_double or onion_array30) then
+    if env.prefix == "`" and input == env.prefix .. "a" then
       local cand = Candidate("simp_short_list", seg.start, seg._end, "", "〔無短語功能〕")
       cand.preedit = input .. "\t【短語總列表】▶"
       yield(cand)

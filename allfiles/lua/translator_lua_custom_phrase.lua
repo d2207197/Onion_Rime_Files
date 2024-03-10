@@ -170,7 +170,7 @@ local function translate(input, seg, env)
   -- --- 以下 env.textdict == "" 狀況提前於 init 處理。
   -- if env.textdict == "" then return end
 
-  if (input == env.prefix .. "h") then
+  if (input == env.prefix .. "a") then
     tab_list=env.tab_list
     for k, v in pairs(tab_list) do
       -- local text = v.text
