@@ -164,10 +164,16 @@ local function processor(key, env)
       end
     end
 
-    local op_code = #c_input == caret_pos and string.match(c_input, "^" .. env.prefix .. "j([a-z]+)$")
-    if op_code and (key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter") then
+    local op_code_check = not string.match(c_input, env.prefix .. "['/;]") and string.match(c_input, env.prefix .. "j[a-z]+$")
+    local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]+)$")
+    if op_code_check and (key:repr() == "space" or key:repr() == "Return" or key:repr() == "KP_Enter") then
       local run_in = run_pattern[ op_code ] -- 此處不能「.open」，如 op_code 不符合會報錯！
-      if op_code == "t" then
+      if not op_code then
+        return 1
+      elseif #c_input ~= caret_pos then
+        -- context:clear()
+        return 1
+      elseif op_code == "t" then
         -- engine:commit_text( "TEST！！！" )  -- 測試用
         generic_open(env.run_pattern)
         context:clear()

@@ -176,9 +176,40 @@ local function processor(key, env)
     -- elseif seg:has_tag("abc") or seg:has_tag("all_bpm") then
     --   return 2
 
+    local op_code_index = #c_input == caret_pos and string.match(c_input, "^" .. env.prefix .. "j$")
     local op_code_check = not string.match(c_input, env.prefix .. "['/;]") and string.match(c_input, env.prefix .. "j[a-z]+$")
     local op_code = string.match(c_input, "^" .. env.prefix .. "j([a-z]+)$")
-    if seg:has_tag("mf_translator") and op_code_check then  -- 開頭
+    if  seg:has_tag("mf_translator") and op_code_index then
+      -- local set_explain = Set { 0, 1, 2, 5}
+      local selected_candidate_index = seg.selected_index or 0
+      local cand = context:get_selected_candidate()
+      local op_code = string.match(cand.comment, "^[ ]+~([a-z]+)")
+      local run_in = run_pattern[ op_code ]
+      -- if set_explain[selected_candidate_index] then
+      --   -- engine:commit_text(selected_candidate_index)  -- 測試用
+      --   context:clear()
+      --   return 1
+      if selected_candidate_index == 3 then
+        generic_open(env.run_pattern)
+        context:clear()
+        return 1
+      elseif run_in ~= nil and selected_candidate_index ~= 4 then
+        -- engine:commit_text(run_in)  -- 測試用
+        generic_open(run_in.open)  -- 要確定 run_in 不為 nil，才能加.open
+        context:clear()
+        return 1
+      elseif env.textdict == "" then
+        return 2
+      elseif selected_candidate_index == 4 then
+        generic_open(env.custom_phrase)
+        context:clear()
+        return 1
+      else  -- 沒有該碼，空白鍵清空
+        -- context:confirm_current_selection()
+        context:clear()
+        return 1
+      end
+    elseif seg:has_tag("mf_translator") and op_code_check then  -- 開頭
       local run_in = run_pattern[ op_code ] -- 此處不能「.open」，如 op_code 不符合會報錯！
       if not op_code then
         return 1
