@@ -244,7 +244,8 @@ local function translate(input, seg, env)
   -- local caret_pos = context.caret_pos or 0
 
   --- 精簡程式碼用
-  local yield_c = function(cand_text, comment, preedit_text)
+  -- local yield_c = function(cand_text, comment, preedit_text)
+  local function yield_c(cand_text, comment, preedit_text)
     comment = comment == nil and "" or comment
     local cand = Candidate("simp_mf", seg.start, seg._end, cand_text, comment)
     -- cand.preedit = preedit_text == nil and cand.preedit or preedit_text == "" and cand.preedit or preedit_text
@@ -295,67 +296,49 @@ local function translate(input, seg, env)
     -- -- yield_c( "┃ ○○○〔數字〕" , "")
 
     for k, v in ipairs(env.menu_table) do
-      local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-      -- cand.preedit = input .. "\t《時間日期數字字母》▶"
-      cand.preedit = input .. "\t《特殊功能集》▶"
-      yield(cand)
+      -- yield_c( v[2], " " .. v[1], input .. "\t《時間日期數字字母》▶")
+      yield_c( v[2], " " .. v[1], input .. "\t《特殊功能集》▶")
     end
     return
   end
 
   if (input == env.prefix .. "/") then
-    local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "  ~ [a-z]+〔小寫字母〕")
-    cand2.preedit = input .. "\t 【小寫字母】▶"
-    yield(cand2)
+    yield_c( "", "  ~ [a-z]+〔小寫字母〕", input .. "\t 【小寫字母】▶")
     return
   end
 
   if (input == env.prefix .. ";") then
-    local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "  ~ [a-z]+〔大寫字母〕")
-    cand2.preedit = input .. "\t 【大寫字母】▶"
-    yield(cand2)
+    yield_c( "", "  ~ [a-z]+〔大寫字母〕", input .. "\t 【大寫字母】▶")
     return
   end
 
   if (input == env.prefix .. "\'") then
-    local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "  ~ [a-z]+〔開頭大寫字母〕")
-    cand2.preedit = input .. "\t 【開頭大寫字母】▶"
-    yield(cand2)
+    yield_c( "", "  ~ [a-z]+〔開頭大寫字母〕", input .. "\t 【開頭大寫字母】▶")
     return
   end
 
   if (input == env.prefix .. "x") then
-    local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "  ~ [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)")
-    cand2.preedit = input .. "\t 【內碼十六進制】▶"
-    yield(cand2)
+    yield_c( "", "  ~ [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", input .. "\t 【內碼十六進制】▶")
     return
   end
 
   if (input == env.prefix .. "u") then
-    local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "  ~ [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)")
-    cand2.preedit = input .. "\t 【內碼十六進制】▶"
-    yield(cand2)
+    yield_c( "", "  ~ [0-9a-f]+〔內碼十六進制 Hex〕(Unicode)", input .. "\t 【內碼十六進制】▶")
     return
   end
 
   if (input == env.prefix .. "c") then
-    local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "  ~ [0-9]+〔內碼十進制 Dec〕")
-    cand2.preedit = input .. "\t 【內碼十進制】▶"
-    yield(cand2)
+    yield_c( "", "  ~ [0-9]+〔內碼十進制 Dec〕", input .. "\t 【內碼十進制】▶")
     return
   end
 
   if (input == env.prefix .. "o") then
-    local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "  ~ [0-7]+〔內碼八進制 Oct〕")
-    cand2.preedit = input .. "\t 【內碼八進制】▶"
-    yield(cand2)
+    yield_c( "", "  ~ [0-7]+〔內碼八進制 Oct〕", input .. "\t 【內碼八進制】▶")
     return
   end
 
   if (input == env.prefix .. "i") then
-    local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "  ~ [0-9a-f]+〔Percent/URL encoding〕")
-    cand2.preedit = input .. "\t 【Percent/URL encoding】▶"
-    yield(cand2)
+    yield_c( "", "  ~ [0-9a-f]+〔Percent/URL encoding〕", input .. "\t 【Percent/URL encoding】▶")
     return
   end
 
@@ -377,9 +360,7 @@ local function translate(input, seg, env)
       -- , { "===========  結束  ===========    ", "⓼" }
       }
     for k, v in ipairs(keys_table) do
-      local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-      cand.preedit = input .. "\t 【鍵位和編碼】▶"
-      yield(cand)
+      yield_c( v[2], " " .. v[1], input .. "\t 【鍵位和編碼】▶")
     end
     return
   end
@@ -388,9 +369,7 @@ local function translate(input, seg, env)
     -- local keys_table = hotkeys(env.schema_id)[1]
     -- for k, v in ipairs(keys_table) do
     for k, v in ipairs(hotkeys(env.schema_id)[1]) do
-      local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-      cand.preedit = env.prefix .. "k o" .. "\t 【操作鍵 說明】"
-      yield(cand)
+      yield_c( v[2], " " .. v[1], env.prefix .. "k o" .. "\t 【操作鍵 說明】")
     end
     return
   end
@@ -399,9 +378,7 @@ local function translate(input, seg, env)
     -- local keys_table = hotkeys(env.schema_id)[2]
     -- for k, v in ipairs(keys_table) do
     for k, v in ipairs(hotkeys(env.schema_id)[2]) do
-      local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-      cand.preedit = env.prefix .. "k k" .. "\t 【快捷鍵 說明】"
-      yield(cand)
+      yield_c( v[2], " " .. v[1], env.prefix .. "k k" .. "\t 【快捷鍵 說明】")
     end
     return
   end
@@ -412,9 +389,7 @@ local function translate(input, seg, env)
   --     , { "  s〔韓文 洋蔥形碼 鍵位〕", "¹" }
   --     }
   --   for k, v in ipairs(keys_table) do
-  --     local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-  --     cand.preedit = input .. "\t 【韓文鍵位】▶"
-  --     yield(cand)
+  --     yield_c( v[2], " " .. v[1], input .. "\t 【韓文鍵位】▶")
   --   end
   --   return
   -- end
@@ -422,9 +397,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "kh") then
     local keys_table = kh_table
     for k, v in ipairs(keys_table) do
-      local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-      cand.preedit = env.prefix .. "k h" .. "\t 【韓文 HNC 編碼】"
-      yield(cand)
+      yield_c( v[2], " " .. v[1], env.prefix .. "k h" .. "\t 【韓文 HNC 編碼】" )
     end
     return
   end
@@ -432,9 +405,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "ks") then
     local keys_table = ks_table
     for k, v in ipairs(keys_table) do
-      local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-      cand.preedit = env.prefix .. "k s" .. "\t 【韓文 洋蔥形碼 編碼】"
-      yield(cand)
+      yield_c( v[2], " " .. v[1], env.prefix .. "k s" .. "\t 【韓文 洋蔥形碼 編碼】")
     end
     return
   end
@@ -442,9 +413,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "kj") then
     local keys_table = kj_table
     for k, v in ipairs(keys_table) do
-      local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-      cand.preedit = env.prefix .. "k j" .. "\t 【日文 羅馬字 編碼】"
-      yield(cand)
+      yield_c( v[2], " " .. v[1], env.prefix .. "k j" .. "\t 【日文 羅馬字 編碼】" )
     end
     return
   end
@@ -452,9 +421,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "ki") then
     local keys_table = ki_table
     for k, v in ipairs(keys_table) do
-      local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-      cand.preedit = env.prefix .. "k i" .. "\t 【拉丁 洋蔥形碼 IPA國際音標 編碼】"
-      yield(cand)
+      yield_c( v[2], " " .. v[1], env.prefix .. "k i" .. "\t 【拉丁 洋蔥形碼 IPA國際音標 編碼】")
     end
     return
   end
@@ -462,9 +429,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "kp") then
     local keys_table = kp_table
     for k, v in ipairs(keys_table) do
-      local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-      cand.preedit = env.prefix .. "k p" .. "\t 【拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼】"
-      yield(cand)
+      yield_c( v[2], " " .. v[1], env.prefix .. "k p" .. "\t 【拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼】")
     end
     return
   end
@@ -472,9 +437,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "ky") then
     local keys_table = ky_table
     for k, v in ipairs(keys_table) do
-      local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-      cand.preedit = env.prefix .. "k y" .. "\t 【拉丁 洋蔥形碼 中文拼音 編碼】"
-      yield(cand)
+      yield_c( v[2], " " .. v[1], env.prefix .. "k y" .. "\t 【拉丁 洋蔥形碼 中文拼音 編碼】")
     end
     return
   end
@@ -482,9 +445,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "kg") then
     local keys_table = kg_table
     for k, v in ipairs(keys_table) do
-      local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-      cand.preedit = env.prefix .. "k g" .. "\t 【希臘 洋蔥形碼 編碼】"
-      yield(cand)
+      yield_c( v[2], " " .. v[1], env.prefix .. "k g" .. "\t 【希臘 洋蔥形碼 編碼】")
     end
     return
   end
@@ -492,9 +453,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "kc") then
     local keys_table = kc_table
     for k, v in ipairs(keys_table) do
-      local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-      cand.preedit = env.prefix .. "k c" .. "\t 【西里爾 洋蔥形碼 編碼】"
-      yield(cand)
+      yield_c( v[2], " " .. v[1], env.prefix .. "k c" .. "\t 【西里爾 洋蔥形碼 編碼】")
     end
     return
   end
@@ -529,9 +488,7 @@ local function translate(input, seg, env)
     -- local keys_table = run_menu(run_pattern)  -- 不用 init 引入，直接引入
     -- for k, v in ipairs(keys_table) do
     for k, v in ipairs(env.run_menu_table) do -- init 引入
-      local cand = Candidate("simp_mf_tips", seg.start, seg._end, v[2], " " .. v[1])
-      cand.preedit = input .. "\t 【快捷開啟】▶"
-      yield(cand)
+      yield_c( v[2], " " .. v[1], input .. "\t 【快捷開啟】▶")
     end
     return
   end
@@ -542,59 +499,42 @@ local function translate(input, seg, env)
   -- local first_check = input~=nil and caret_pos - #input or 1
   -- if op_check and first_check ~= 0 then
   if op_check and seg.start ~= 0 then
-    local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "〔非起始輸入〕")
-    cand2.preedit = env.prefix .. "j " .. op_check .. "\t 【快捷開啟】"
-    yield(cand2)
+      yield_c( "", "〔非起始輸入〕", env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")
     return
   elseif op_check and #context.input ~= seg._end then
-    local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "〔光標非末尾狀態〕")
-    -- cand2.preedit = env.prefix .. "j " .. op_check .. "\t 【快捷開啟】"  --光標非末尾狀態，此條無效，故關閉
-    yield(cand2)
+    yield_c( "", "〔光標非末尾狀態〕")
+    -- yield_c( "", "〔光標非末尾狀態〕", env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")  --光標非末尾狀態，此條無效，故關閉
   elseif op_check == "t" then
-    local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "〘 編輯 快捷開啟 table 〙")  -- or〔錯誤〕
-    cand2.preedit = env.prefix .. "j " .. op_check .. "\t 【快捷開啟】"
-    yield(cand2)
+    yield_c( "", "〘 編輯 快捷開啟 table 〙", env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")  -- or〔錯誤〕
     return
   elseif op_check == "c" and env.prefix == "`" then
-    local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "〔無短語功能〕")  -- or〔錯誤〕
-    cand2.preedit = env.prefix .. "j " .. op_check .. "\t 【快捷開啟】"
-    yield(cand2)
+    yield_c( "", "〔無短語功能〕", env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")  -- or〔錯誤〕
     return
   elseif op_check == "c" then
-    local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "〘 編輯 custom 短語 〙")  -- or〔錯誤〕
-    cand2.preedit = env.prefix .. "j " .. op_check .. "\t 【快捷開啟】"
-    yield(cand2)
+    yield_c( "", "〘 編輯 custom 短語 〙", env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")  -- or〔錯誤〕
     return
   -- elseif op_check and first_check == 0 then
   elseif op_check and seg.start == 0 then
     local run_in = run_pattern[ op_check ]
     if run_in ~= nil then
-      local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "〘 " .. run_in.name .. " 〙")  -- or〔錯誤〕
-      cand2.preedit = env.prefix .. "j " .. op_check .. "\t 【快捷開啟】"
-      yield(cand2)
+      yield_c( "", "〘 " .. run_in.name .. " 〙", env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")  -- or〔錯誤〕
       return
     elseif run_in == nil then
-      --- 以下測試光標插入點等位置數值用
+      yield_c( "", "〔無〕", env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")  -- 〔無此開啟碼〕or〔錯誤〕
+      -- --- 以下測試光標插入點等位置數值用
       -- local caret_pos = context.caret_pos or 0
       -- local cgp = context:get_preedit().text
       -- local cgpstart = context:get_preedit().sel_start
       -- local cgpend = context:get_preedit().sel_end
-      -- local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "#input："..#input.."  seg.start："..seg.start.."  seg._end："..seg._end.."  input："..input.."  caret_pos："..caret_pos.."  get_preedit().text："..cgp.."  get_preedit().sel_start："..cgpstart.."  get_preedit().sel_end："..cgpend.."  #context.input："..#context.input )  -- 〔無此開啟碼〕or〔錯誤〕
-      local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "〔無〕")  -- 〔無此開啟碼〕or〔錯誤〕
-      cand2.preedit = env.prefix .. "j " .. op_check .. "\t 【快捷開啟】"
-      yield(cand2)
+      -- yield_c( "", "#input："..#input.."  seg.start："..seg.start.."  seg._end："..seg._end.."  input："..input.."  caret_pos："..caret_pos.."  get_preedit().text："..cgp.."  get_preedit().sel_start："..cgpstart.."  get_preedit().sel_end："..cgpend.."  #context.input："..#context.input , env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")  -- 〔無此開啟碼〕or〔錯誤〕
       return
     end
   -- elseif op_check == "fc" then
-  --   local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "〔無短語功能〕")  -- or〔錯誤〕
-  --   cand2.preedit = env.prefix .. "j " .. op_check .. "\t 【快捷開啟】"
-  --   yield(cand2)
+  --   yield_c( "", "〔無短語功能〕", env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")  -- or〔錯誤〕
   --   return
   -- elseif op_check and first_check == 0 then
   -- -- if (input == env.prefix .. "opp" ) then
-  --   local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "〔無此開啟碼〕")  -- or〔錯誤〕
-  --   cand2.preedit = env.prefix .. "j " .. op_check .. "\t 【快捷開啟】"
-  --   yield(cand2)
+  --   yield_c( "", "〔無此開啟碼〕", env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")  -- or〔錯誤〕
   --   return
   end
 
@@ -604,9 +544,7 @@ local function translate(input, seg, env)
   -- local onion_array30 = string.match( env.schema_id, "^onion[-]array30")
   -- if (input == env.prefix .. "a") and (bopomo_onion_double or onion_array30) then
   if env.prefix == "`" and input == env.prefix .. "a" then
-    local cand = Candidate("simp_short_list", seg.start, seg._end, "", "〔無短語功能〕")
-    cand.preedit = input .. "\t 【短語總列表】"
-    yield(cand)
+    yield_c( "", "〔無短語功能〕", input .. "\t 【短語總列表】")
     return
   end
 
@@ -2219,9 +2157,7 @@ local function translate(input, seg, env)
     -- local cand_ui_s = Candidate("simp_mf_utf", seg.start, seg._end, utf8_out(c), string.format(fmt, c) .. "  ( " .. url_encode(utf8_out(c)) .. " ）" )
     -- 排除數字太大超出範圍。正常範圍輸出已 string_char，故 0 直接可以限定。
     if (utf8_out(c) == 0) then
-      cand_ui_s = Candidate("simp_mf_utf", seg.start, seg._end, "", "〈超出範圍〉" )  --字符過濾可能會過濾掉""整個選項。
-      cand_ui_s.preedit = preedittext
-      yield(cand_ui_s)
+      yield_c( "", "〈超出範圍〉", preedittext)  --字符過濾可能會過濾掉""整個選項。
       return
     end
     -- 區間查找
@@ -2230,17 +2166,13 @@ local function translate(input, seg, env)
     if (c+16 <= 1048575) then  -- 補後面 16 碼，如：x8d70 為「走」，補 x8d7[0+16] 到 x8d80。
       for i = c, c+16 do
       -- for i = c+1, c+16 do
-        local cand_ui_m = Candidate("simp_mf_utf", seg.start, seg._end, utf8_out(i), string.format(fmt, i) .. "  ( " .. url_encode(utf8_out(i)) .. " ）" )
-        cand_ui_m.preedit = preedittext
-        yield(cand_ui_m)
+        yield_c( utf8_out(i), string.format(fmt, i) .. "  ( " .. url_encode(utf8_out(i)) .. " ）", preedittext)
       end
       return
     -- elseif c <= 1048575 and c+16 > 1048575 then  -- Unicode 編碼末尾。
     elseif (c <= 1048575) then  -- Unicode 編碼末尾。
       for i = c, 1048575 do
-        local cand_ui_m = Candidate("simp_mf_utf", seg.start, seg._end, utf8_out(i), string.format(fmt, i) .. "  ( " .. url_encode(utf8_out(i)) .. " ）" )
-        cand_ui_m.preedit = preedittext
-        yield(cand_ui_m)
+        yield_c( utf8_out(i), string.format(fmt, i) .. "  ( " .. url_encode(utf8_out(i)) .. " ）", preedittext)
       end
       return
     end
@@ -2265,33 +2197,37 @@ local function translate(input, seg, env)
       judge_unfinished = ""
     end
 
-    local cand_urlencode_error = Candidate("simp_mf_urlencode", seg.start, seg._end, "", urlencode_cand)  --字符過濾可能會過濾掉""整個選項。
-    cand_urlencode_error.preedit = preedittext
+    -- local cand_urlencode_error = Candidate("simp_mf_urlencode", seg.start, seg._end, "", urlencode_cand)  --字符過濾可能會過濾掉""整個選項。
+    -- cand_urlencode_error.preedit = preedittext
 
-    local cand_urlencode_sentence = Candidate("simp_mf_urlencode", seg.start, seg._end, urlencode_cand, judge_unfinished)
-    cand_urlencode_sentence.preedit = preedittext
+    -- local cand_urlencode_sentence = Candidate("simp_mf_urlencode", seg.start, seg._end, urlencode_cand, judge_unfinished)
+    -- cand_urlencode_sentence.preedit = preedittext
 
     local url_first_word = utf8_sub(urlencode_cand,1,1)
     local url_first_word_dec = utf8.codepoint(url_first_word)
-    local cand_urlencode_single = Candidate("simp_mf_urlencode", seg.start, seg._end, url_first_word, string.format("  U+".."%X" ,url_first_word_dec) .. judge_unfinished)
-    cand_urlencode_single.preedit = preedittext
+    -- local cand_urlencode_single = Candidate("simp_mf_urlencode", seg.start, seg._end, url_first_word, string.format("  U+".."%X" ,url_first_word_dec) .. judge_unfinished)
+    -- cand_urlencode_single.preedit = preedittext
 
-    local cand_urlencode_code = Candidate("simp_mf_urlencode", seg.start, seg._end, string.upper(urlencode_code), "〔URL編碼〕")
-    cand_urlencode_code.preedit = preedittext
+    -- local cand_urlencode_code = Candidate("simp_mf_urlencode", seg.start, seg._end, string.upper(urlencode_code), "〔URL編碼〕")
+    -- cand_urlencode_code.preedit = preedittext
 
     local is_error = string.match(urlencode_cand, "^〈輸入錯誤〉")
     if is_error then
     -- if (urlencode_cand == "〈輸入錯誤〉") then
-      yield(cand_urlencode_error)
+      -- yield(cand_urlencode_error)
+      yield_c( "", urlencode_cand, preedittext)  --字符過濾可能會過濾掉""整個選項。
     elseif (urlencode_cand == url_first_word) then
-      yield(cand_urlencode_single)
+      -- yield(cand_urlencode_single)
+      yield_c( url_first_word, string.format("  U+".."%X" ,url_first_word_dec) .. judge_unfinished, preedittext)
     -- elseif string.match(urlencode_cand, "^ …") then
     --   yield(cand_urlencode_sentence)
     else
-      yield(cand_urlencode_sentence)
+      -- yield(cand_urlencode_sentence)
+      yield_c( urlencode_cand, judge_unfinished, preedittext)
       -- yield(cand_urlencode_single)
     end
-    yield(cand_urlencode_code)
+    -- yield(cand_urlencode_code)
+    yield_c( string.upper(urlencode_code), "〔URL編碼〕", preedittext)
     return
   end
 
@@ -2515,11 +2451,9 @@ local function translate(input, seg, env)
 
 
   --- 補以下開頭括號缺漏（另改成如同啟始符）
-  local paren_left_q = string.match(input, env.prefix .. "[q(][q(]?$")
+  local paren_left_q = string.match(input, env.prefix .. "([q(][q(]?)$")
   if paren_left_q then
-    local cand2 = Candidate("simp_mf_tips", seg.start, seg._end, "", "  ~ [-.0-9]+[ + - * / ^ ( ) ]...〔數字和計算機〕")
-    cand2.preedit = input .. "\t 【數字和計算機】▶"
-    yield(cand2)
+    yield_c( "", "  ~ [-.0-9]+[ + - * / ^ ( ) ]...〔數字和計算機〕", env.prefix .. " " .. paren_left_q .. "\t 【數字和計算機】▶")
     -- yield_c( "", "  ~ [-.0-9]+〔數字〕")
     -- yield_c( "", "  ~ [-.0-9]+[ + - * / ^ ( ) ]...〔計算機〕")
     -- yield_c( "(", "〔括號〕")
@@ -2769,36 +2703,38 @@ local function translate(input, seg, env)
     local output_exp = simple_calculator(input_exp)[2]
     local s_output = simple_calculator(input_exp)[3]
 
-    local cc_out = Candidate("simp_mf_cal", seg.start, seg._end, c_output, "〔結果〕")
-    local cc_out_error = Candidate("simp_mf_cal", seg.start, seg._end, "", c_output.."〔結果〕")
-    -- local cc_exp = Candidate("simp_mf_cal", seg.start, seg._end, input_exp .. "=" .. c_output, "〔規格化算式〕")
-    local cc_exp = Candidate("simp_mf_cal", seg.start, seg._end, output_exp .. "=" .. c_output, "〔規格化算式〕")
-    local cc_exp_error = Candidate("simp_mf_cal", seg.start, seg._end, output_exp .. "=" .. s_output, "〔 Waring 規格化算式〕")
-    local cc_out_shadow = Candidate("simp_mf_cal", seg.start, seg._end, s_output, "〔 Waring 結果〕")
-    local cc_statement = Candidate("simp_mf_cal", seg.start, seg._end, "", "※  會有浮點數誤差和錯誤；括號限兩層三堆；14位數限制")
+    -- local cc_out = Candidate("simp_mf_cal", seg.start, seg._end, c_output, "〔結果〕")
+    -- local cc_out_error = Candidate("simp_mf_cal", seg.start, seg._end, "", c_output.."〔結果〕")
+    -- -- local cc_exp = Candidate("simp_mf_cal", seg.start, seg._end, input_exp .. "=" .. c_output, "〔規格化算式〕")
+    -- local cc_exp = Candidate("simp_mf_cal", seg.start, seg._end, output_exp .. "=" .. c_output, "〔規格化算式〕")
+    -- local cc_exp_error = Candidate("simp_mf_cal", seg.start, seg._end, output_exp .. "=" .. s_output, "〔 Waring 規格化算式〕")
+    -- local cc_out_shadow = Candidate("simp_mf_cal", seg.start, seg._end, s_output, "〔 Waring 結果〕")
+    -- local cc_statement = Candidate("simp_mf_cal", seg.start, seg._end, "", "※  會有浮點數誤差和錯誤；括號限兩層三堆；14位數限制")
+
     local preedittext = env.prefix .. " " .. c_preedit .. "\t 【計算機】"
-    cc_out.preedit = preedittext
-    cc_out_error.preedit = preedittext
-    cc_exp.preedit = preedittext
-    cc_exp_error.preedit = preedittext
-    cc_out_shadow.preedit = preedittext
-    cc_statement.preedit = preedittext
     if (c_output:sub(1,1)=="E" or c_output:sub(1,1)=="W") then
-      yield(cc_out_error)
-      yield(cc_out_shadow)
-      yield(cc_exp_error)
+      -- yield(cc_out_error)
+      -- yield(cc_out_shadow)
+      -- yield(cc_exp_error)
+      yield_c( "", c_output.."〔結果〕", preedittext)
+      yield_c( s_output, "〔 Waring 結果〕", preedittext)
+      yield_c( output_exp .. "=" .. s_output, "〔 Waring 規格化算式〕", preedittext)
     else
-      yield(cc_out)
+      -- yield(cc_out)
+      yield_c( c_output, "〔結果〕", preedittext)
       -- if s_output~="" then
       --   yield(cc_out_shadow)
       -- end
-      yield(cc_exp)
+      -- yield(cc_exp)
+      yield_c( output_exp .. "=" .. c_output, "〔規格化算式〕", preedittext)
+      -- yield_c( input_exp .. "=" .. c_output, "〔規格化算式〕", preedittext)
     end
     -- if s_output~="" then
     --   yield(cc_out_shadow)
     -- end
-    yield(cc_statement)
-    -- yield_c( "", "※  會有浮點數誤差和錯誤；括號限兩層；14位數限制")
+    -- yield(cc_statement)
+    yield_c( "", "※  會有浮點數誤差和錯誤；括號限兩層三堆；14位數限制", preedittext)
+    -- yield_c( "", "※  會有浮點數誤差和錯誤；括號限兩層；14位數限制", preedittext)
     return
   end
 
