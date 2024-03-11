@@ -181,7 +181,7 @@ local function translate(input, seg, env)
       local cand = Candidate("simp_short_list", seg.start, seg._end, v.text, v.code)
       -- local cand = Candidate("simp_short_list", seg.start, seg._end, v.text, v.code.."  〔"..v.sort.."〕")
       -- local cand = Candidate("simp_short_list", seg.start, seg._end, v[1], v[2].."  〔"..v[3].."〕")
-      cand.preedit = input .. "\t【短語總列表】▶"
+      cand.preedit = input .. "\t 【短語總列表】"
       yield(cand)
     end
     return
