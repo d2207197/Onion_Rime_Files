@@ -369,7 +369,7 @@ local function translate(input, seg, env)
     -- local keys_table = hotkeys(env.schema_id)[1]
     -- for k, v in ipairs(keys_table) do
     for k, v in ipairs(hotkeys(env.schema_id)[1]) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k o" .. "\t 【操作鍵 說明】")
+      yield_c( v[2], " " .. v[1], env.prefix .. "k O" .. "\t 【操作鍵 說明】")
     end
     return
   end
@@ -378,7 +378,7 @@ local function translate(input, seg, env)
     -- local keys_table = hotkeys(env.schema_id)[2]
     -- for k, v in ipairs(keys_table) do
     for k, v in ipairs(hotkeys(env.schema_id)[2]) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k k" .. "\t 【快捷鍵 說明】")
+      yield_c( v[2], " " .. v[1], env.prefix .. "k K" .. "\t 【快捷鍵 說明】")
     end
     return
   end
@@ -397,7 +397,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "kh") then
     local keys_table = kh_table
     for k, v in ipairs(keys_table) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k h" .. "\t 【韓文 HNC 編碼】" )
+      yield_c( v[2], " " .. v[1], env.prefix .. "k H" .. "\t 【韓文 HNC 編碼】" )
     end
     return
   end
@@ -405,7 +405,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "ks") then
     local keys_table = ks_table
     for k, v in ipairs(keys_table) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k s" .. "\t 【韓文 洋蔥形碼 編碼】")
+      yield_c( v[2], " " .. v[1], env.prefix .. "k S" .. "\t 【韓文 洋蔥形碼 編碼】")
     end
     return
   end
@@ -413,7 +413,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "kj") then
     local keys_table = kj_table
     for k, v in ipairs(keys_table) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k j" .. "\t 【日文 羅馬字 編碼】" )
+      yield_c( v[2], " " .. v[1], env.prefix .. "k J" .. "\t 【日文 羅馬字 編碼】" )
     end
     return
   end
@@ -421,7 +421,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "ki") then
     local keys_table = ki_table
     for k, v in ipairs(keys_table) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k i" .. "\t 【拉丁 洋蔥形碼 IPA國際音標 編碼】")
+      yield_c( v[2], " " .. v[1], env.prefix .. "k I" .. "\t 【拉丁 洋蔥形碼 IPA國際音標 編碼】")
     end
     return
   end
@@ -429,7 +429,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "kp") then
     local keys_table = kp_table
     for k, v in ipairs(keys_table) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k p" .. "\t 【拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼】")
+      yield_c( v[2], " " .. v[1], env.prefix .. "k P" .. "\t 【拉丁 洋蔥形碼 KK/DJ/IPA音標 編碼】")
     end
     return
   end
@@ -437,7 +437,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "ky") then
     local keys_table = ky_table
     for k, v in ipairs(keys_table) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k y" .. "\t 【拉丁 洋蔥形碼 中文拼音 編碼】")
+      yield_c( v[2], " " .. v[1], env.prefix .. "k Y" .. "\t 【拉丁 洋蔥形碼 中文拼音 編碼】")
     end
     return
   end
@@ -445,7 +445,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "kg") then
     local keys_table = kg_table
     for k, v in ipairs(keys_table) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k g" .. "\t 【希臘 洋蔥形碼 編碼】")
+      yield_c( v[2], " " .. v[1], env.prefix .. "k G" .. "\t 【希臘 洋蔥形碼 編碼】")
     end
     return
   end
@@ -453,7 +453,7 @@ local function translate(input, seg, env)
   if (input == env.prefix .. "kc") then
     local keys_table = kc_table
     for k, v in ipairs(keys_table) do
-      yield_c( v[2], " " .. v[1], env.prefix .. "k c" .. "\t 【西里爾 洋蔥形碼 編碼】")
+      yield_c( v[2], " " .. v[1], env.prefix .. "k C" .. "\t 【西里爾 洋蔥形碼 編碼】")
     end
     return
   end
@@ -499,28 +499,28 @@ local function translate(input, seg, env)
   -- local first_check = input~=nil and caret_pos - #input or 1
   -- if op_check and first_check ~= 0 then
   if op_check and seg.start ~= 0 then
-      yield_c( "", "〔非起始輸入〕", env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")
+      yield_c( "", "〔非起始輸入〕", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")
     return
   elseif op_check and #context.input ~= seg._end then
     yield_c( "", "〔光標非末尾狀態〕")
-    -- yield_c( "", "〔光標非末尾狀態〕", env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")  --光標非末尾狀態，此條無效，故關閉
+    -- yield_c( "", "〔光標非末尾狀態〕", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  --光標非末尾狀態，此條無效，故關閉
   elseif op_check == "t" then
-    yield_c( "", "〘 編輯 快捷開啟 table 〙", env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")  -- or〔錯誤〕
+    yield_c( "", "〘 編輯 快捷開啟 table 〙", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- or〔錯誤〕
     return
   elseif op_check == "c" and env.prefix == "`" then
-    yield_c( "", "〔無短語功能〕", env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")  -- or〔錯誤〕
+    yield_c( "", "〔無短語功能〕", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- or〔錯誤〕
     return
   elseif op_check == "c" then
-    yield_c( "", "〘 編輯 custom 短語 〙", env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")  -- or〔錯誤〕
+    yield_c( "", "〘 編輯 custom 短語 〙", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- or〔錯誤〕
     return
   -- elseif op_check and first_check == 0 then
   elseif op_check and seg.start == 0 then
     local run_in = run_pattern[ op_check ]
     if run_in ~= nil then
-      yield_c( "", "〘 " .. run_in.name .. " 〙", env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")  -- or〔錯誤〕
+      yield_c( "", "〘 " .. run_in.name .. " 〙", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- or〔錯誤〕
       return
     elseif run_in == nil then
-      yield_c( "", "〔無〕", env.prefix .. "j " .. op_check .. "\t 【快捷開啟】")  -- 〔無此開啟碼〕or〔錯誤〕
+      yield_c( "", "〔無〕", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- 〔無此開啟碼〕or〔錯誤〕
       -- --- 以下測試光標插入點等位置數值用
       -- local caret_pos = context.caret_pos or 0
       -- local cgp = context:get_preedit().text
@@ -2453,6 +2453,7 @@ local function translate(input, seg, env)
   --- 補以下開頭括號缺漏（另改成如同啟始符）
   local paren_left_q = string.match(input, env.prefix .. "([q(][q(]?)$")
   if paren_left_q then
+    local paren_left_q = string.gsub(paren_left_q, "q", "(")
     yield_c( "", "  ~ [-.0-9]+[ + - * / ^ ( ) ]...〔數字和計算機〕", env.prefix .. " " .. paren_left_q .. "\t 【數字和計算機】▶")
     -- yield_c( "", "  ~ [-.0-9]+〔數字〕")
     -- yield_c( "", "  ~ [-.0-9]+[ + - * / ^ ( ) ]...〔計算機〕")
@@ -2460,7 +2461,9 @@ local function translate(input, seg, env)
     return
   end
 
-  local num_preedit = string.match(input, env.prefix .. "(.+)") or ""
+  local num_preedit = string.match(input, env.prefix .. "([-rq(.%d]+)$") or ""
+  local num_preedit = string.gsub(num_preedit,  "r", "-")
+  local num_preedit = string.gsub(num_preedit,  "q", "(")
   local num_preedit = env.prefix .. " " .. num_preedit .. "\t 【數字】"  -- 數字格式開始
 
   --- 補以下開頭負號缺漏
@@ -2513,6 +2516,21 @@ local function translate(input, seg, env)
     yield_c( "槓點", "〔軍中〕", num_preedit)
     yield_c( "⠤⠨", "〔點字(computer)〕", num_preedit)
     yield_c( "⠤⠲", "〔點字(unified)〕", num_preedit)
+    return
+  end
+
+  --- 輸入「數字」格式錯誤之提示（於「數字」模式，「計算機」另行處理）
+  local double_dot_error = string.match(input, env.prefix .. "[-rq(]?[-rq(]?%d*%.%d*%.%d*$")
+  local double_neg_error = string.match(input, env.prefix .. "[q(]?[q(]?[-r][-r]+%d*$")
+  local double_neg_bracket_error = string.match(input, env.prefix .. "[-r][q(]%d*$")
+  if double_dot_error then
+    yield_c( "" , "〔不能兩個小數點〕", num_preedit)  --字符過濾可能會過濾掉""整個選項。
+    return
+  elseif double_neg_error then
+    yield_c( "" , "〔不能兩個負號〕", num_preedit)
+    return
+  elseif double_neg_bracket_error then
+    yield_c( "" , "〔不能負號接括號〕", num_preedit)
     return
   end
 
@@ -2703,37 +2721,23 @@ local function translate(input, seg, env)
     local output_exp = simple_calculator(input_exp)[2]
     local s_output = simple_calculator(input_exp)[3]
 
-    -- local cc_out = Candidate("simp_mf_cal", seg.start, seg._end, c_output, "〔結果〕")
-    -- local cc_out_error = Candidate("simp_mf_cal", seg.start, seg._end, "", c_output.."〔結果〕")
-    -- -- local cc_exp = Candidate("simp_mf_cal", seg.start, seg._end, input_exp .. "=" .. c_output, "〔規格化算式〕")
-    -- local cc_exp = Candidate("simp_mf_cal", seg.start, seg._end, output_exp .. "=" .. c_output, "〔規格化算式〕")
-    -- local cc_exp_error = Candidate("simp_mf_cal", seg.start, seg._end, output_exp .. "=" .. s_output, "〔 Waring 規格化算式〕")
-    -- local cc_out_shadow = Candidate("simp_mf_cal", seg.start, seg._end, s_output, "〔 Waring 結果〕")
-    -- local cc_statement = Candidate("simp_mf_cal", seg.start, seg._end, "", "※  會有浮點數誤差和錯誤；括號限兩層三堆；14位數限制")
-
     local preedittext = env.prefix .. " " .. c_preedit .. "\t 【計算機】"
     if (c_output:sub(1,1)=="E" or c_output:sub(1,1)=="W") then
-      -- yield(cc_out_error)
-      -- yield(cc_out_shadow)
-      -- yield(cc_exp_error)
-      yield_c( "", c_output.."〔結果〕", preedittext)
-      yield_c( s_output, "〔 Waring 結果〕", preedittext)
-      yield_c( output_exp .. "=" .. s_output, "〔 Waring 規格化算式〕", preedittext)
+      yield_c( "", c_output.."〔結果〕", preedittext)  -- yield(cc_out_error)
+      yield_c( s_output, "〔 Waring 結果〕", preedittext)  -- yield(cc_out_shadow)
+      yield_c( output_exp .. "=" .. s_output, "〔 Waring 規格化算式〕", preedittext)  -- yield(cc_exp_error)
     else
-      -- yield(cc_out)
-      yield_c( c_output, "〔結果〕", preedittext)
+      yield_c( c_output, "〔結果〕", preedittext)  -- yield(cc_out)
       -- if s_output~="" then
-      --   yield(cc_out_shadow)
+      --   yield_c( s_output, "〔 Waring 結果〕", preedittext)  -- yield(cc_out_shadow)
       -- end
-      -- yield(cc_exp)
-      yield_c( output_exp .. "=" .. c_output, "〔規格化算式〕", preedittext)
-      -- yield_c( input_exp .. "=" .. c_output, "〔規格化算式〕", preedittext)
+      yield_c( output_exp .. "=" .. c_output, "〔規格化算式〕", preedittext)  -- yield(cc_exp)
+      -- yield_c( input_exp .. "=" .. c_output, "〔規格化算式〕", preedittext)  -- yield(cc_exp)
     end
     -- if s_output~="" then
-    --   yield(cc_out_shadow)
+    --   yield_c( s_output, "〔 Waring 結果〕", preedittext)  -- yield(cc_out_shadow)
     -- end
-    -- yield(cc_statement)
-    yield_c( "", "※  會有浮點數誤差和錯誤；括號限兩層三堆；14位數限制", preedittext)
+    yield_c( "", "※  會有浮點數誤差和錯誤；括號限兩層三堆；14位數限制", preedittext)  -- yield(cc_statement)
     -- yield_c( "", "※  會有浮點數誤差和錯誤；括號限兩層；14位數限制", preedittext)
     return
   end
