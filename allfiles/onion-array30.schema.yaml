@@ -4,7 +4,7 @@
 schema:
   schema_id: onion-array30
   name: "▦ 行列３０（洋蔥版）"
-  version: "202311"
+  version: "202403"
   author:
     - 洋蔥 <deltazonetw@gmail.com>
   description: |
@@ -487,7 +487,7 @@ recognizer:
     reverse3_lookup: "^==[a-z,./; ]*'?$"
     # lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|`[a-z]*$|`[;/'][a-z.,/'-]*$|`[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|`[xucoi][0-9a-f]+$"
     email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$"
-    mf_translator: "`[a-z]*$|`[;/'][a-z.,/'-]*$|`[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|`[xucoi][0-9a-f]+$"
+    mf_translator: "`[a-z,]*$|`[;/'][a-z.,/'-]*$|`[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|`[xucoi][0-9a-f]+$"
     # lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|`[';/]?[a-z]*$|`[0-9./-]*$|`[xucoi][0-9a-z]+$"
     # lua: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|`[';a-z0-9./-]*$"
     # email: "^[a-z][-_.0-9a-z]*@.*$"

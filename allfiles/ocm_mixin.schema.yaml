@@ -9,7 +9,7 @@ schema:
 
   name: "❖超級混合蝦米(mix-in)❖"
   schema_id: ocm_mixin
-  version: "202311"
+  version: "202403"
   dependencies:
     - punct_ovff
     - symbols_ocm
@@ -785,4 +785,4 @@ recognizer:
     # lua: "^;;$|^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$|^'/[a-z]*$|^'/[;/'][a-z.,/'-]*$|^'/[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|^'/[xucoi][0-9a-f]+$"
     instruction_ocm: "^;;?$"  #不開起，「;;」會顯示不了。
     email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(www[.]|https?:|ftp:|mailto:|file:).*$"
-    mf_translator: "^'/[a-z]*$|^'/[;/'][a-z.,/'-]*$|^'/[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|^'/[xucoi][0-9a-f]+$"
+    mf_translator: "^'/[a-z,]*$|^'/[;/'][a-z.,/'-]*$|^'/[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|^'/[xucoi][0-9a-f]+$"

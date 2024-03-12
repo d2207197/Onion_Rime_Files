@@ -171,7 +171,7 @@ local function translate(input, seg, env)
   -- if env.textdict == "" then return end
 
   local tag_mf = seg:has_tag("mf_translator")
-  if tag_mf and (input == env.prefix .. "a") then
+  if tag_mf and (input == env.prefix .. "a" or input == env.prefix .. ",") then
   -- if seg:has_tag("mf_translator") and (input == env.prefix .. "a") then
     tab_list=env.tab_list
     for k, v in pairs(tab_list) do

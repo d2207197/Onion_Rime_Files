@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion_double
   name: "☆注音(洋蔥雙拼版)☆"
-  version: "202311"
+  version: "202403"
   author:
     - 『洋蔥』
   description: |
@@ -570,7 +570,7 @@ recognizer:
     reverse2_lookup: "=[a-z]*$"
     # lua: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$|(?<![=`])`[a-z]*$|(?<![=`])`[;/'][a-z.,/'-]*$|(?<![=`])`[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|(?<![=`])`[xucoi][0-9a-f]+$"
     email_url_translator: "^[a-z][-_.0-9a-z]*@.*$|^(https?:|ftp:|mailto:|file:).*$"
-    mf_translator: "(?<![=`])`[a-z]*$|(?<![=`])`[;/'][a-z.,/'-]*$|(?<![=`])`[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|(?<![=`])`[xucoi][0-9a-f]+$"
+    mf_translator: "(?<![=`])`[a-z,]*$|(?<![=`])`[;/'][a-z.,/'-]*$|(?<![=`])`[rq0-9.-][asrvxqwymd0-9.,/()^*+-]*$|(?<![=`])`[xucoi][0-9a-f]+$"
 
 # __patch:
 #   # 使用八股文語言模型

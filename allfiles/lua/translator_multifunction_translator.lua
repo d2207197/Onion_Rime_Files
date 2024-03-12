@@ -202,7 +202,7 @@ local function init(env)
       , { "　o [0-7]+〔內碼八進制 Oct〕", "㉓" }
       , { "〖快捷功能〗", "㉔" }
       , { "　j [a-z]+〔快捷開啟〕", "㉕" }
-      , { "　a 〔短語總列表〕", "㉖" }
+      , { "　a 或 , 〔短語總列表〕", "㉖" }
       , { "〖鍵位和編碼〗", "㉗" }
       , { "　k k〔快捷鍵 說明〕", "㉘" }
       , { "　k o〔操作鍵 說明〕", "㉙" }
@@ -543,7 +543,7 @@ local function translate(input, seg, env)
   -- local bopomo_onion_double = string.match( env.schema_id, "^bopomo_onion_double")
   -- local onion_array30 = string.match( env.schema_id, "^onion[-]array30")
   -- if (input == env.prefix .. "a") and (bopomo_onion_double or onion_array30) then
-  if env.prefix == "`" and input == env.prefix .. "a" then
+  if env.prefix == "`" and (input == env.prefix .. "a" or input == env.prefix .. ",") then
     yield_c( "", "〔無短語功能〕", input .. "\t 【短語總列表】")
     return
   end
