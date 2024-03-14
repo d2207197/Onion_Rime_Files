@@ -95,7 +95,7 @@ local function load_text_dict(text_dict)
       else
         tab_list1[v_text]["code"][#tab_list1[v_text]["code"]+1] = v_code
 
-        local t_sort=tab_list1[v_text]["sort"]
+        local t_sort = tab_list1[v_text]["sort"]
          if t_sort < v_sort then
            tab_list1[v_text]["sort"] = v_sort
          end
@@ -105,14 +105,14 @@ local function load_text_dict(text_dict)
       end
 
       --- 下方 table 格式為：{{ text = {"測試條目1"}, code = {"ds"}, sort = 0 }, { text = {"測試條目2"}, code = {"dds"}, sort = 3 }}
-      tab_list2={}
+      tab_list2 = {}
       for k, v in pairs(tab_list1) do
         vcode = v.code
         vsort = v.sort
         -- vsort = tonumber(vsort)  -- 改到前面數字化
         allcode = ""
         for _, v in pairs(vcode) do
-          allcode = allcode .. "  " ..v
+          allcode = allcode .. "  " .. v
         end
         tab_list2[#tab_list2+1]={text=k, code=allcode, sort=vsort}
         -- tab_list2[#tab_list2+1]={k, allcode, vsort}
