@@ -2075,10 +2075,10 @@ local function translate(input, seg, env)
     -- yield_c( english_8(englishout1), "〔黑圈字母〕", preedittext)
     -- yield_c( english_9(englishout1), "〔黑框字母〕", preedittext)
     if english_braille_c_l(englishout1) ~= english_braille_u_l(englishout1) then
-      yield_c( english_braille_c_l(englishout1), "〔點字(computer)〕", preedittext)
-      yield_c( english_braille_u_l(englishout1), "〔點字(unified)〕", preedittext)
+      yield_c( english_braille_c_l(englishout1), "〔點字〕(computer)", preedittext)
+      yield_c( english_braille_u_l(englishout1), "〔點字〕(unified)", preedittext)
     else
-      yield_c( english_braille_c_l(englishout1), "〔點字(computer/unified)〕", preedittext)
+      yield_c( english_braille_c_l(englishout1), "〔點字〕(computer/unified)", preedittext)
     end
     return
   end
@@ -2093,10 +2093,10 @@ local function translate(input, seg, env)
     yield_c( english_3_4(englishout2), "〔帶圈〕", preedittext)
     yield_c( english_5_6(englishout2), "〔括號〕", preedittext)
     if english_braille_c_ul(englishout2) ~= english_braille_u_ul(englishout2) then
-      yield_c( english_braille_c_ul(englishout2), "〔點字(computer)〕", preedittext)
-      yield_c( english_braille_u_ul(englishout2), "〔點字(unified)〕", preedittext)
+      yield_c( english_braille_c_ul(englishout2), "〔點字〕(computer)", preedittext)
+      yield_c( english_braille_u_ul(englishout2), "〔點字〕(unified)", preedittext)
     else
-      yield_c( english_braille_c_ul(englishout2), "〔點字(computer/unified)〕", preedittext)
+      yield_c( english_braille_c_ul(englishout2), "〔點字〕(computer/unified)", preedittext)
     end
     return
   end
@@ -2115,10 +2115,10 @@ local function translate(input, seg, env)
     yield_c( english_9(englishout3), "〔黑框〕", preedittext)
     yield_c( english_s_u(englishout3), "〔小型〕", preedittext)
     if english_braille_c_u(englishout3) ~= english_braille_u_u(englishout3) then
-      yield_c( english_braille_c_u(englishout3), "〔點字(computer)〕", preedittext)
-      yield_c( english_braille_u_u(englishout3), "〔點字(unified)〕", preedittext)
+      yield_c( english_braille_c_u(englishout3), "〔點字〕(computer)", preedittext)
+      yield_c( english_braille_u_u(englishout3), "〔點字〕(unified)", preedittext)
     else
-      yield_c( english_braille_c_u(englishout3), "〔點字(computer/unified)〕", preedittext)
+      yield_c( english_braille_c_u(englishout3), "〔點字〕(computer/unified)", preedittext)
     end
     return
   end
@@ -2481,7 +2481,7 @@ local function translate(input, seg, env)
     yield_c( "負⃝", "〔帶圈中文負號〕", num_preedit)  -- 負︎⃝
     yield_c( "⛔", "〔鍵帽負號〕", num_preedit)  -- ➖ -⃣ −⃣
     yield_c( "➖", "〔加粗的減號〕", num_preedit)
-    yield_c( "⠤", "〔點字(computer/unified)〕", num_preedit)
+    yield_c( "⠤", "〔點字〕(computer/unified)", num_preedit)
     return
   end
 
@@ -2493,8 +2493,8 @@ local function translate(input, seg, env)
     yield_c( "⋅", "〔上標小數點〕", num_preedit)
     yield_c( "點", "〔中文小數點〕", num_preedit)
     -- yield_c( "點", "〔軍中小數點〕", num_preedit)
-    yield_c( "⠨", "〔點字(computer)〕", num_preedit)
-    yield_c( "⠲", "〔點字(unified)〕", num_preedit)
+    yield_c( "⠨", "〔點字〕(computer)", num_preedit)
+    yield_c( "⠲", "〔點字〕(unified)", num_preedit)
     return
   end
 
@@ -2514,8 +2514,8 @@ local function translate(input, seg, env)
     yield_c( "負零點", "〔大寫中文〕", num_preedit)
     yield_c( "負點", "〔純中文〕", num_preedit)
     yield_c( "槓點", "〔軍中〕", num_preedit)
-    yield_c( "⠤⠨", "〔點字(computer)〕", num_preedit)
-    yield_c( "⠤⠲", "〔點字(unified)〕", num_preedit)
+    yield_c( "⠤⠨", "〔點字〕(computer)", num_preedit)
+    yield_c( "⠤⠲", "〔點字〕(unified)", num_preedit)
     return
   end
 
@@ -2635,9 +2635,9 @@ local function translate(input, seg, env)
       yield_c( neg_n_z .. circled5_number(numberout), "〔帶圈中文〕", num_preedit)
 
       yield_c( neg_n_k .. keycap_number(numberout), "〔鍵帽〕", num_preedit)
-      yield_c( neg_n_b .. braille_c_number(numberout), "〔點字(computer)〕", num_preedit)
+      yield_c( neg_n_b .. braille_c_number(numberout), "〔點字〕(computer)", num_preedit)
       -- yield_c( neg_n_b .. "⠼" .. braille_c_number(numberout), "〔點字(一般)〕", num_preedit)
-      yield_c( neg_n_b .. "⠼" .. braille_u_number(numberout), "〔點字(unified)〕", num_preedit)
+      yield_c( neg_n_b .. "⠼" .. braille_u_number(numberout), "〔點字〕(unified)", num_preedit)
 
       if (neg_n=="") then
         if tonumber(numberout)==1 or tonumber(numberout)==0 then
@@ -2672,9 +2672,9 @@ local function translate(input, seg, env)
     elseif (dot0~="") then
       yield_c( neg_n_c .. purech_number(dot1..afterdot), "〔純中文〕", num_preedit)
       yield_c( neg_n_s .. military_number(dot1..afterdot), "〔軍中〕", num_preedit)
-      yield_c( neg_n_b .. braille_c_number(dot1..afterdot), "〔點字(computer)〕", num_preedit)
+      yield_c( neg_n_b .. braille_c_number(dot1..afterdot), "〔點字〕(computer)", num_preedit)
       -- yield_c( neg_n_b .. "⠼" .. braille_c_number(dot1..afterdot), "〔點字(一般)〕", num_preedit)
-      yield_c( neg_n_b .. "⠼" .. braille_u_number(dot1..afterdot), "〔點字(unified)〕", num_preedit)
+      yield_c( neg_n_b .. "⠼" .. braille_u_number(dot1..afterdot), "〔點字〕(unified)", num_preedit)
       return
     elseif dot0=="" and dot1~="" then
       if (string.len(numberout) < 2) then
@@ -2683,9 +2683,9 @@ local function translate(input, seg, env)
         yield_c( neg_n_c .. purech_number(numberout..dot1..afterdot), "〔純中文〕", num_preedit)
       end
       yield_c( neg_n_s .. military_number(numberout..dot1..afterdot), "〔軍中〕", num_preedit)
-      yield_c( neg_n_b .. braille_c_number(numberout..dot1..afterdot), "〔點字(computer)〕", num_preedit)
+      yield_c( neg_n_b .. braille_c_number(numberout..dot1..afterdot), "〔點字〕(computer)", num_preedit)
       -- yield_c( neg_n_b .. "⠼" .. braille_c_number(numberout..dot1..afterdot), "〔點字(一般)〕", num_preedit)
-      yield_c( neg_n_b .. "⠼" .. braille_u_number(numberout..dot1..afterdot), "〔點字(unified)〕", num_preedit)
+      yield_c( neg_n_b .. "⠼" .. braille_u_number(numberout..dot1..afterdot), "〔點字〕(unified)", num_preedit)
       return
     end
 
