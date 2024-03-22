@@ -1922,7 +1922,7 @@ local function translate(input, seg, env)
   end
 
   if (input == env.prefix .. "fwj") then
-    local preedittext = input .. "\t 【現時：週】"
+    local preedittext = input .. "\t 【現時：年月日週】"
     local jpymd, jp_y = jp_ymd(os.date("%Y"),os.date("%m"),os.date("%d"))
     yield_c( string.gsub(jpymd, "([^%d])0", "%1")..weekstyle()[3], "〔日本元号〕", preedittext)
     yield_c( string.gsub(jpymd, "([^%d])0", "%1").." "..weekstyle()[5].."曜日 ", "〔日本元号〕", preedittext)
@@ -1952,7 +1952,7 @@ local function translate(input, seg, env)
   -- end
 
   if (input == env.prefix .. "fwh") then
-    local preedittext = input .. "\t 【現時：週】"
+    local preedittext = input .. "\t 【現時：年月日週】"
     yield_c( string.gsub("民國"..min_guo(os.date("%Y")).."年"..os.date("%m").."月"..os.date("%d").."日", "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔民國〕", preedittext)
     yield_c( string.gsub("民國 "..min_guo(os.date("%Y")).." 年 "..os.date("%m").." 月 "..os.date("%d").." 日", "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔民國*〕", preedittext)
     yield_c( "民國"..fullshape_number(min_guo(os.date("%Y"))).."年"..fullshape_number(string.gsub(os.date("%m月%d日"), "0([%d])", "%1")).." ".."星期"..weekstyle()[1].." ", "〔民國〕", preedittext)
@@ -1963,7 +1963,7 @@ local function translate(input, seg, env)
   end
 
   if (input == env.prefix .. "fwg") then
-    local preedittext = input .. "\t 【現時：週】"
+    local preedittext = input .. "\t 【現時：年月日週】"
     yield_c( "民國"..purech_number(min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstyle()[1].." ", "〔民國中數〕", preedittext)
     yield_c( "民國"..read_number(confs[1], min_guo(os.date("%Y"))).."年"..rqzdx1(23).." ".."星期"..weekstyle()[1].." ", "〔民國中數〕", preedittext)
     yield_c( "民國"..read_number(confs[2], min_guo(os.date("%Y"))).."年"..rqzdx2(23).." ".."星期"..weekstyle()[2].." ", "〔民國中數〕", preedittext)
@@ -1971,7 +1971,7 @@ local function translate(input, seg, env)
   end
 
   if (input == env.prefix .. "fwl") then
-    local preedittext = input .. "\t 【現時：週】"
+    local preedittext = input .. "\t 【現時：年月日週】"
     -- local chinese_date = to_chinese_cal_local(os.time())
     local ll_1, ll_2 = Date2LunarDate(os.date("%Y%m%d"))
     yield_c( ll_1.." "..weekstyle()[5].." ", "〔農曆〕", preedittext)
@@ -1982,7 +1982,7 @@ local function translate(input, seg, env)
   end
 
   if (input == env.prefix .. "fwa") then
-    local preedittext = input .. "\t 【現時：週】"  --〔週月日年〕
+    local preedittext = input .. "\t 【現時：年月日週】"  --〔週月日年〕
     yield_c( weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng2_d_date(os.date("%d"))..", "..os.date("%Y"), "〔英文美式〕", preedittext)
     yield_c( weekstyle()[6]..", "..eng1_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d"))..", "..os.date("%Y"), "〔英文美式〕", preedittext)
     yield_c( weekstyle()[7]..", "..eng2_m_date(os.date("%m")).." "..eng3_d_date(os.date("%d"))..", "..os.date("%Y"), "〔英文美式〕", preedittext)
@@ -1992,7 +1992,7 @@ local function translate(input, seg, env)
   end
 
   if (input == env.prefix .. "fwe") then
-    local preedittext = input .. "\t 【現時：週】"  --〔週日月年〕
+    local preedittext = input .. "\t 【現時：年月日週】"  --〔週日月年〕
     yield_c( weekstyle()[6]..", "..eng2_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔英文英式〕", preedittext)
     yield_c( weekstyle()[6]..", "..eng3_d_date(os.date("%d")).." "..eng1_m_date(os.date("%m")).." "..os.date("%Y"), "〔英文英式〕", preedittext)
     yield_c( weekstyle()[7]..", "..eng2_d_date(os.date("%d")).." "..eng2_m_date(os.date("%m")).." "..os.date("%Y"), "〔英文英式〕", preedittext)
@@ -2002,7 +2002,7 @@ local function translate(input, seg, env)
   end
 
   if (input == env.prefix .. "fwc") then
-    local preedittext = input .. "\t 【現時：週】"  --〔年月日週〕〔*年月日週*〕
+    local preedittext = input .. "\t 【現時：年月日週】"  --〔年月日週〕〔*年月日週*〕
     yield_c( string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔日期〕", preedittext)
     yield_c( string.gsub(os.date(" %Y 年 %m 月 %d 日"), "([^%d])0", "%1").." ".."星期"..weekstyle()[1].." ", "〔*日期*〕", preedittext)
     yield_c( fullshape_number(string.gsub(os.date("%Y年%m月%d日"), "([^%d])0", "%1")).." 星期"..weekstyle()[1].." ", "〔日期〕", preedittext)
@@ -2013,7 +2013,7 @@ local function translate(input, seg, env)
   end
 
   if (input == env.prefix .. "fwz") then
-    local preedittext = input .. "\t 【現時：週】"
+    local preedittext = input .. "\t 【現時：年月日週】"
     yield_c( rqzdx1().." ".."星期"..weekstyle()[1].." ", "〔中數〕", preedittext)
     yield_c( rqzdx2().." ".."星期"..weekstyle()[2].." ", "〔中數〕", preedittext)
     return
@@ -2063,14 +2063,14 @@ local function translate(input, seg, env)
   local englishout1 = string.match(input, env.prefix .. "/([%l.,/'-]+)$")
   if englishout1 then
     local preedittext = env.prefix .. "/ " .. englishout1 .. "\t 【小寫字母】"
-    yield_c( english_s(englishout1), "〔一般字母〕", preedittext)
-    yield_c( english_f_l(englishout1), "〔全形字母〕", preedittext)
+    yield_c( english_s(englishout1), "〔一般〕", preedittext)
+    yield_c( english_f_l(englishout1), "〔全形〕", preedittext)
     -- yield_c( english_1(englishout1), "〔數學字母大寫〕", preedittext)
-    yield_c( english_2(englishout1), "〔數學字母〕", preedittext)
+    yield_c( english_2(englishout1), "〔數學〕", preedittext)
     -- yield_c( english_3(englishout1), "〔帶圈字母大寫〕", preedittext)
-    yield_c( english_4(englishout1), "〔帶圈字母〕", preedittext)
+    yield_c( english_4(englishout1), "〔帶圈〕", preedittext)
     -- yield_c( english_5(englishout1), "〔括號字母大寫〕", preedittext)
-    yield_c( english_6(englishout1), "〔括號字母〕", preedittext)
+    yield_c( english_6(englishout1), "〔括號〕", preedittext)
     -- yield_c( english_7(englishout1), "〔方框字母〕", preedittext)
     -- yield_c( english_8(englishout1), "〔黑圈字母〕", preedittext)
     -- yield_c( english_9(englishout1), "〔黑框字母〕", preedittext)
@@ -2087,11 +2087,11 @@ local function translate(input, seg, env)
   if englishout2 then
     local preedittext = env.prefix .. "\' " .. englishout2 .. "\t 【開頭大寫字母】"
     -- yield_c( string.upper(string.sub(englishout2,1,1)) .. string.sub(englishout2,2,-1) , "〔一般字母開頭大寫〕", preedittext)
-    yield_c( english_s2u(englishout2), "〔一般字母〕", preedittext)
-    yield_c( english_f_ul(englishout2), "〔全形字母〕", preedittext)
-    yield_c( english_1_2(englishout2), "〔數學字母〕", preedittext)
-    yield_c( english_3_4(englishout2), "〔帶圈字母〕", preedittext)
-    yield_c( english_5_6(englishout2), "〔括號字母〕", preedittext)
+    yield_c( english_s2u(englishout2), "〔一般〕", preedittext)
+    yield_c( english_f_ul(englishout2), "〔全形〕", preedittext)
+    yield_c( english_1_2(englishout2), "〔數學〕", preedittext)
+    yield_c( english_3_4(englishout2), "〔帶圈〕", preedittext)
+    yield_c( english_5_6(englishout2), "〔括號〕", preedittext)
     if english_braille_c_ul(englishout2) ~= english_braille_u_ul(englishout2) then
       yield_c( english_braille_c_ul(englishout2), "〔點字(computer)〕", preedittext)
       yield_c( english_braille_u_ul(englishout2), "〔點字(unified)〕", preedittext)
@@ -2105,15 +2105,15 @@ local function translate(input, seg, env)
   if englishout3 then
     local preedittext = env.prefix .. "; " .. englishout3 .. "\t 【大寫字母】"
     local englishout3 = string.upper(englishout3)
-    yield_c( english_s(englishout3), "〔一般字母〕", preedittext)
-    yield_c( english_f_u(englishout3), "〔全形字母〕", preedittext)
-    yield_c( english_1(englishout3), "〔數學字母〕", preedittext)
-    yield_c( english_3(englishout3), "〔帶圈字母〕", preedittext)
-    yield_c( english_5(englishout3), "〔括號字母〕", preedittext)
-    yield_c( english_7(englishout3), "〔方框字母〕", preedittext)
-    yield_c( english_8(englishout3), "〔黑圈字母〕", preedittext)
-    yield_c( english_9(englishout3), "〔黑框字母〕", preedittext)
-    yield_c( english_s_u(englishout3), "〔小型字母〕", preedittext)
+    yield_c( english_s(englishout3), "〔一般〕", preedittext)
+    yield_c( english_f_u(englishout3), "〔全形〕", preedittext)
+    yield_c( english_1(englishout3), "〔數學〕", preedittext)
+    yield_c( english_3(englishout3), "〔帶圈〕", preedittext)
+    yield_c( english_5(englishout3), "〔括號〕", preedittext)
+    yield_c( english_7(englishout3), "〔方框〕", preedittext)
+    yield_c( english_8(englishout3), "〔黑圈〕", preedittext)
+    yield_c( english_9(englishout3), "〔黑框〕", preedittext)
+    yield_c( english_s_u(englishout3), "〔小型〕", preedittext)
     if english_braille_c_u(englishout3) ~= english_braille_u_u(englishout3) then
       yield_c( english_braille_c_u(englishout3), "〔點字(computer)〕", preedittext)
       yield_c( english_braille_u_u(englishout3), "〔點字(unified)〕", preedittext)
