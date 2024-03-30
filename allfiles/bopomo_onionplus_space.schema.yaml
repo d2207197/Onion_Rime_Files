@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onionplus_space
   name: "☆注音(洋蔥plus版 space )☆〔空白不直出〕"
-  version: "202311"
+  version: "202403"
   author:
     - 『洋蔥』
   description: |
@@ -583,9 +583,12 @@ key_binder:
   import_preset: default
   bindings:
     __include: element_bopomo:/key_binder
-    __append:
-      - {accept: Shift+D, send: Return, when: has_menu}
-      - {accept: Shift+L, send: Return, when: has_menu}
+    __patch:
+      /@35/send: Return
+      /@36/send: Return
+    # __append:
+    #   - {accept: Shift+D, send: Return, when: has_menu}
+    #   - {accept: Shift+L, send: Return, when: has_menu}
 
 editor:
   bindings:
