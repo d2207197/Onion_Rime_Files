@@ -1,0 +1,25 @@
+# Win_新0.15.0.0版小狼毫主程式_Actions
+
+### Source File
+
+- https://github.com/rime/weasel/actions
+
+### Version Info
+
+- Github Actions：[Commit CI #357](https://github.com/rime/weasel/actions/runs/8598045790)
+
+- Weasel 0.15.0
+
+- librime 1.11.0
+
+- librime-lua #215
+
+### plugins
+
+- librime-lua
+
+- librime-octagram
+
+- rime/librime-predict
+
+- librime 封裝其 version-info.txt 顯示未加入 librime-charcode，但該功能未失效！猜測新版用非 plugins 方式加入？！
