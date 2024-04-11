@@ -6,7 +6,7 @@
 
 ### Version Info
 
-- Github Actions：[Commit CI #357](https://github.com/rime/weasel/actions/runs/8598045790)
+- Github Actions：[Commit CI #359](https://github.com/rime/weasel/actions/runs/8644623049)
 
 - Weasel 0.15.0
 
