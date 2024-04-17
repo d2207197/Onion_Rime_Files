@@ -1,0 +1,4 @@
+# .custom.yaml
+patch:
+  translator/preedit_format:
+    __include: element_bopomo:/preedit_p_3

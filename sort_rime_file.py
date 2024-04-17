@@ -143,10 +143,12 @@ shutil.copyfile("./allfiles/opencc/ocm_moedict_big5e_hkscs_jis.txt", "./sort_rim
 shutil.copyfile("./allfiles/opencc/punct_mark.json", "./sort_rime/注音洋蔥mixin版/opencc/punct_mark.json")
 shutil.copyfile("./allfiles/opencc/punct_mark.txt", "./sort_rime/注音洋蔥mixin版/opencc/punct_mark.txt")
 
-# shutil.copytree('./allfiles/mixin注音_同顯1修改檔(Mac)(fcitx5-rime)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Mac)(fcitx5-rime)/')
-# shutil.copytree('./allfiles/mixin注音_同顯2修改檔(Mac)(fcitx5-rime)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Mac)(fcitx5-rime)/')
-# shutil.copytree('./allfiles/mixin注音_同顯1修改檔(Win)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Win)/')
-# shutil.copytree('./allfiles/mixin注音_同顯2修改檔(Win)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Win)/')
+shutil.copytree('./allfiles/注音mixin版_Mac同顯修改檔/', './sort_rime/注音洋蔥mixin版/注音mixin版_Mac同顯修改檔/')
+
+# shutil.copytree('./allfiles/注音mixin版_同顯舊版修改檔/mixin注音_同顯1修改檔(Mac)(fcitx5-rime)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Mac)(fcitx5-rime)/')
+# shutil.copytree('./allfiles/注音mixin版_同顯舊版修改檔/mixin注音_同顯2修改檔(Mac)(fcitx5-rime)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Mac)(fcitx5-rime)/')
+# shutil.copytree('./allfiles/注音mixin版_同顯舊版修改檔/mixin注音_同顯1修改檔(Win)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Win)/')
+# shutil.copytree('./allfiles/注音mixin版_同顯舊版修改檔/mixin注音_同顯2修改檔(Win)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Win)/')
 
 # shutil.copyfile("./allfiles/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Win)/easy_en_super.custom.yaml")
 # shutil.copyfile("./allfiles/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Win)/easy_en_super.custom.yaml")
