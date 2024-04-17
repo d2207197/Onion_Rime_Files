@@ -4,6 +4,6 @@
 
 - 使用方法：將 .custom.yaml 檔案拉到上一層（與 .schema.yaml 同層），「重新部署」。
 
-- 圖示範例：
+- 【圖示範例】：
 
   ![image](https://user-images.githubusercontent.com/54584047/209621048-17fd42d5-86a1-4bfc-925d-f9302b909ba9.png))
