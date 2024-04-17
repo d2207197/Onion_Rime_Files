@@ -254,8 +254,8 @@ shutil.copyfile("./allfiles/opencc/punct_mark.txt", "./sort_rime/注音洋蔥plu
 # shutil.copytree('./allfiles/舊版防崩潰custom/plus注音_防崩潰：Win必加，Mac勿加/', './sort_rime/注音洋蔥plus版/plus注音_防崩潰：Win必加，Mac勿加/')
 # shutil.copyfile("./allfiles/舊版防崩潰custom/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/注音洋蔥plus版/plus注音_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml")
 # shutil.copyfile("./allfiles/舊版防崩潰custom/easy_en_lower_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml", "./sort_rime/注音洋蔥plus版/plus注音_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml")
-shutil.copytree('./allfiles/jpnin1只出假名custom/', './sort_rime/注音洋蔥plus版/jpnin1只出假名custom/')
-shutil.copytree('./allfiles/jpnin1精簡轉寫custom/', './sort_rime/注音洋蔥plus版/jpnin1精簡轉寫custom/')
+shutil.copytree('./allfiles/日語jpnin1精簡custom/jpnin1只出假名custom/', './sort_rime/注音洋蔥plus版/jpnin1只出假名custom/')
+shutil.copytree('./allfiles/日語jpnin1精簡custom/jpnin1精簡轉寫custom/', './sort_rime/注音洋蔥plus版/jpnin1精簡轉寫custom/')
 
 
 #複製檔案(地球拼音洋蔥mix-in版)
