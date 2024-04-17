@@ -143,17 +143,17 @@ shutil.copyfile("./allfiles/opencc/ocm_moedict_big5e_hkscs_jis.txt", "./sort_rim
 shutil.copyfile("./allfiles/opencc/punct_mark.json", "./sort_rime/注音洋蔥mixin版/opencc/punct_mark.json")
 shutil.copyfile("./allfiles/opencc/punct_mark.txt", "./sort_rime/注音洋蔥mixin版/opencc/punct_mark.txt")
 
-shutil.copytree('./allfiles/注音mixin版_Mac同顯修改檔/', './sort_rime/注音洋蔥mixin版/注音mixin版_Mac同顯修改檔/')
+shutil.copytree('./allfiles/注音mixin版_Mac同顯custom/', './sort_rime/注音洋蔥mixin版/注音mixin版_Mac同顯custom/')
 
-# shutil.copytree('./allfiles/注音mixin版_同顯舊版修改檔/mixin注音_同顯1修改檔(Mac)(fcitx5-rime)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Mac)(fcitx5-rime)/')
-# shutil.copytree('./allfiles/注音mixin版_同顯舊版修改檔/mixin注音_同顯2修改檔(Mac)(fcitx5-rime)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Mac)(fcitx5-rime)/')
-# shutil.copytree('./allfiles/注音mixin版_同顯舊版修改檔/mixin注音_同顯1修改檔(Win)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Win)/')
-# shutil.copytree('./allfiles/注音mixin版_同顯舊版修改檔/mixin注音_同顯2修改檔(Win)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Win)/')
+# shutil.copytree('./allfiles/注音mixin版_舊版同顯custom/mixin注音_同顯1修改檔(Mac)(fcitx5-rime)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Mac)(fcitx5-rime)/')
+# shutil.copytree('./allfiles/注音mixin版_舊版同顯custom/mixin注音_同顯2修改檔(Mac)(fcitx5-rime)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Mac)(fcitx5-rime)/')
+# shutil.copytree('./allfiles/注音mixin版_舊版同顯custom/mixin注音_同顯1修改檔(Win)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Win)/')
+# shutil.copytree('./allfiles/注音mixin版_舊版同顯custom/mixin注音_同顯2修改檔(Win)/', './sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Win)/')
 
-# shutil.copyfile("./allfiles/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Win)/easy_en_super.custom.yaml")
-# shutil.copyfile("./allfiles/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Win)/easy_en_super.custom.yaml")
-# shutil.copyfile("./allfiles/easy_en_lower_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Win)/easy_en_lower.custom.yaml")
-# shutil.copyfile("./allfiles/easy_en_lower_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Win)/easy_en_lower.custom.yaml")
+# shutil.copyfile("./allfiles/舊版防崩潰custom/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Win)/easy_en_super.custom.yaml")
+# shutil.copyfile("./allfiles/舊版防崩潰custom/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Win)/easy_en_super.custom.yaml")
+# shutil.copyfile("./allfiles/舊版防崩潰custom/easy_en_lower_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯1修改檔(Win)/easy_en_lower.custom.yaml")
+# shutil.copyfile("./allfiles/舊版防崩潰custom/easy_en_lower_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml", "./sort_rime/注音洋蔥mixin版/mixin注音_同顯2修改檔(Win)/easy_en_lower.custom.yaml")
 
 
 #複製檔案(注音洋蔥plus版)
@@ -251,9 +251,9 @@ shutil.copyfile("./allfiles/opencc/ocm_moedict_big5e_hkscs_jis.txt", "./sort_rim
 shutil.copyfile("./allfiles/opencc/punct_mark.json", "./sort_rime/注音洋蔥plus版/opencc/punct_mark.json")
 shutil.copyfile("./allfiles/opencc/punct_mark.txt", "./sort_rime/注音洋蔥plus版/opencc/punct_mark.txt")
 
-# shutil.copytree('./allfiles/plus注音_防崩潰：Win必加，Mac勿加/', './sort_rime/注音洋蔥plus版/plus注音_防崩潰：Win必加，Mac勿加/')
-# shutil.copyfile("./allfiles/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/注音洋蔥plus版/plus注音_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml")
-# shutil.copyfile("./allfiles/easy_en_lower_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml", "./sort_rime/注音洋蔥plus版/plus注音_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml")
+# shutil.copytree('./allfiles/舊版防崩潰custom/plus注音_防崩潰：Win必加，Mac勿加/', './sort_rime/注音洋蔥plus版/plus注音_防崩潰：Win必加，Mac勿加/')
+# shutil.copyfile("./allfiles/舊版防崩潰custom/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/注音洋蔥plus版/plus注音_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml")
+# shutil.copyfile("./allfiles/舊版防崩潰custom/easy_en_lower_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml", "./sort_rime/注音洋蔥plus版/plus注音_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml")
 shutil.copytree('./allfiles/jpnin1只出假名custom/', './sort_rime/注音洋蔥plus版/jpnin1只出假名custom/')
 shutil.copytree('./allfiles/jpnin1精簡轉寫custom/', './sort_rime/注音洋蔥plus版/jpnin1精簡轉寫custom/')
 
@@ -543,9 +543,9 @@ shutil.copyfile("./allfiles/各方案default.custom/洋蔥行列30_custom/defaul
 shutil.copytree('./allfiles/其他/', './sort_rime/其他/')
 
 shutil.copytree('./allfiles/其他/OpenCC_ocd_64位元/', './sort_rime/ocm/OpenCC_ocd_64位元/')
-# shutil.copytree('./allfiles/ocm_防崩潰：Win必加，Mac勿加/', './sort_rime/ocm/ocm_防崩潰：Win必加，Mac勿加/')
-# shutil.copyfile("./allfiles/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/ocm/ocm_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml")
-# shutil.copyfile("./allfiles/easy_en_lower_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml", "./sort_rime/ocm/ocm_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml")
+# shutil.copytree('./allfiles/舊版防崩潰custom/ocm_防崩潰：Win必加，Mac勿加/', './sort_rime/ocm/ocm_防崩潰：Win必加，Mac勿加/')
+# shutil.copyfile("./allfiles/舊版防崩潰custom/easy_en_super_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml", "./sort_rime/ocm/ocm_防崩潰：Win必加，Mac勿加/easy_en_super.custom.yaml")
+# shutil.copyfile("./allfiles/舊版防崩潰custom/easy_en_lower_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml", "./sort_rime/ocm/ocm_防崩潰：Win必加，Mac勿加/easy_en_lower.custom.yaml")
 
 
 #主程式
