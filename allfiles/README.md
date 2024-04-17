@@ -43,8 +43,7 @@
 ├─ bopomo_onionplus_phrase.txt                〈注音 plus 方案〉「用戶短語」
 ├─ bopomo_onionplus_space.schema.yaml         〈注音 plus space 方案〉「設定檔」  （空白不直出，按空白鍵打出空白，但沒上屏）
 ├─ cangjie5.dict.yaml                         〈掛載用 倉頡 方案〉「主字典」  （反查用，Rime 官方製作版）
-├─ cangjie5.schema.yaml                       〈掛載用 倉頡 方案〉「設定檔」  （反查用，Rime 官方製作版）
-├─ ccc.zip                                    
+├─ cangjie5.schema.yaml                       〈掛載用 倉頡 方案〉「設定檔」  （反查用，Rime 官方製作版）                                   
 ├─ cyrillic.dict.yaml                         〈掛載用 西里爾（俄文）方案〉「字典」  （注音方案掛載）
 ├─ cyrillic.extended.dict.yaml                〈掛載用 西里爾（俄文）方案〉「主字詞典」  （注音方案掛載）
 ├─ cyrillic.schema.yaml                       〈掛載用 西里爾（俄文）方案〉「設定檔」  （注音方案掛載）
