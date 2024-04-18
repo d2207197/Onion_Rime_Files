@@ -1,4 +1,4 @@
-# 注音mixin版_Mac同顯custom
+# custom檔_注音mixin版Mac同顯
 
 - 分段（兩行）同顯，只適用於 Mac 鼠鬚管，其他作業系統不適用！
 

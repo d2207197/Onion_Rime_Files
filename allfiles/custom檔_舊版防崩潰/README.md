@@ -1,4 +1,4 @@
-# 舊版防崩潰custom
+# custom檔_舊版防崩潰
 
 - 注釋分段（多行）目前適用於 Mac 和 fcitx5-rime，Win上會發生崩潰等問題！
 
