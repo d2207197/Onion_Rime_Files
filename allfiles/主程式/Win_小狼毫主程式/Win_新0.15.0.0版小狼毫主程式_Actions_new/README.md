@@ -22,4 +22,4 @@
 
 - rime/librime-predict
 
-- librime 封裝其 version-info.txt 顯示未加入 librime-charcode，但該功能未失效！猜測新版用非 plugins 方式加入？！
+- librime 封裝其 version-info.txt 顯示未加入 librime-charcode！
