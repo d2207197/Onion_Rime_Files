@@ -109,6 +109,7 @@ patch:
     - 'xform/([gkhwva]):ㄧㄢ\|ㄨㄞ/$1:ㄨㄞ/'
 #######
     - "xform|([（ ][abcdfghjklmnopqrstvwxz])([;/,'.])|$1⁎$2|"  #只有聲母加聲調時，其可能省略韻母之提示。
+    - "xform|([（ ][yui])([;/,'.])|$1₊$2|"  #只有ㄧㄨㄩ加聲調時，其可能省略韻母之提示。
     #之前聲調# - "xlit|bpmfdtnlgkhjqxrzcsiuywvao;/.,'|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄖㄗㄘㄙㄧㄨㄩㄓㄔㄕ◌ˉˊˇˋ˙|"
     - "xlit|bpmfdtnlgkhjqxrzcsiuywvao;/,'.|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄖㄗㄘㄙㄧㄨㄩㄓㄔㄕ◌ˉˊˇˋ˙|"
 #######
