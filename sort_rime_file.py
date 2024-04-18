@@ -30,7 +30,7 @@ shutil.copyfile("./allfiles/mixin_bpmf.dict.yaml", "./sort_rime/注音洋蔥純�
 shutil.copyfile("./allfiles/各方案default.custom/注音洋蔥純注音版_custom/default.custom.yaml", "./sort_rime/注音洋蔥純注音版/default.custom.yaml")
 
 
-#複製檔案(注音洋蔥雙拼版版)
+#複製檔案(注音洋蔥雙拼版)
 shutil.copyfile("./allfiles/essay-zh-hant-mc.txt", "./sort_rime/注音洋蔥雙拼版/essay-zh-hant-mc.txt")
 shutil.copyfile("./allfiles/bopomo_onion_double.extended.dict.yaml", "./sort_rime/注音洋蔥雙拼版/bopomo_onion_double.extended.dict.yaml")
 shutil.copyfile("./allfiles/bopomo_onion_double.schema.yaml", "./sort_rime/注音洋蔥雙拼版/bopomo_onion_double.schema.yaml")
@@ -40,6 +40,7 @@ shutil.copyfile("./allfiles/rime.lua", "./sort_rime/注音洋蔥雙拼版/rime.l
 shutil.copytree("./allfiles/lua/", "./sort_rime/注音洋蔥雙拼版/lua/")
 shutil.copyfile("./allfiles/terra_pinyin_onion_add.dict.yaml", "./sort_rime/注音洋蔥雙拼版/terra_pinyin_onion_add.dict.yaml")
 shutil.copyfile("./allfiles/terra_pinyin_onion.dict.yaml", "./sort_rime/注音洋蔥雙拼版/terra_pinyin_onion.dict.yaml")
+shutil.copyfile("./allfiles/phrases.chtp.dict.yaml", "./sort_rime/注音洋蔥雙拼版/phrases.chtp.dict.yaml")
 shutil.copyfile("./allfiles/symbols_bpmf.dict.yaml", "./sort_rime/注音洋蔥雙拼版/symbols_bpmf.dict.yaml")
 shutil.copyfile("./allfiles/symbols_double_bpmf.schema.yaml", "./sort_rime/注音洋蔥雙拼版/symbols_double_bpmf.schema.yaml")
 shutil.copyfile("./allfiles/element_double_bopomo.yaml", "./sort_rime/注音洋蔥雙拼版/element_double_bopomo.yaml")

@@ -14,5 +14,6 @@ vocabulary: essay-zh-hant-mc
 import_tables:
   - terra_pinyin_onion
   - terra_pinyin_onion_add
+  - phrases.chtp
 ...
 ##### 以下可自行添加詞句 #####
