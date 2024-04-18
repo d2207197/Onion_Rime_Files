@@ -1,13 +1,11 @@
 # 注音mixin版_舊版同顯custom
 
-- 注釋分段（多行）目前適用於 Mac 和 fcitx5-rime，Win上會有問題！
+- 分段（兩行）同顯，只適用於 Mac 鼠鬚管，其他作業系統不適用！
 
-- 新版改用 lua 自動偵測系統並修正，故此資料夾內已不適用！備份用。
+- 使用方法：將 .custom.yaml 檔案拉到上一層（與 .schema.yaml 同層），「重新部署」。
 
-- Mac 分段（多行）圖示範例：
+- 新版改用匯入方式，見「注音mixin版_Mac同顯custom」資料夾，此處檔案已不適用，備份用。
 
-  ![image](https://user-images.githubusercontent.com/54584047/209652981-1a5c7708-a728-4db0-a69d-b0609a1c3e1c.png))
+- 圖示範例：
 
-- Win 精簡圖示範例：
-
-  ![image](https://user-images.githubusercontent.com/54584047/210974447-b4d367fe-42de-4256-bd1f-5f805f79208f.png))
+  ![image](https://user-images.githubusercontent.com/54584047/209621048-17fd42d5-86a1-4bfc-925d-f9302b909ba9.png))
