@@ -38,7 +38,7 @@ local function filter(input, env)
 -- function M.func(input, env)
   local engine = env.engine
   local context = engine.context
-  local composition = context.composition
+  -- local composition = context.composition
   -- local seg = composition:back()
   -- seg.prompt = "《特殊功能集》▶"  -- 全部的 prompt 都會改寫
   for cand in input:iter() do
