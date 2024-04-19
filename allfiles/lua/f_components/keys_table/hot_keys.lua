@@ -179,27 +179,30 @@ local function hotkeys(n)
       , { "　　［control］+［shift］+［  4  ］變換標點全半形", "➒" }
       , { "　［control］+［shift］+［  5  ］變換繁簡體", "➊🄌" }
       , { "　［control］+［shift］+［  6  ］變換中文字符範圍（CJK）", "➊➊" }
-      , { "　［control］+［shift］+［  7  ］變換 Unicode 編碼注釋有無", "➊➋" }
-      , { "　［control］+［shift］+［  8  ］變換 Enter 上屏中文或原始輸入", "➊➌" }
-      , { "『 快捷鍵（下排/指定）』（初始設定 +［shift］）", "➊➍" }
-      , { " • 切換設定", "➊➎" }
-      , { "　［control］+［  ,  ］切換英文", "➊➏" }
-      , { "　［control］+［  .  ］切換全形（全角）", "➊➐" }
-      , { "　［control］+［  /  ］切換標點半形", "➊➑" }
-      , { "　［control］+［  ;  ］切換簡體轉換", "➊➒" }
-      , { "　［control］+［  '  ］切換中文字符範圍為完整，不精簡", "➋🄌" }
-      , { "　［control］+［  -  ］切換 Unicode 編碼注釋為有", "➋➊" }
-      , { "　［control］+［  =  ］切換 Enter 上屏原始輸入", "➋➋" }
-      , { " • 初始設定", "➋➌" }
-      , { "　［control］+［shift］+［  ,  ］切換中文", "➋➍" }
-      , { "　［control］+［shift］+［  .  ］切換半形（半角）", "➋➎" }
-      , { "　［control］+［shift］+［  /  ］切換標點全形", "➋➏" }
-      , { "　［control］+［shift］+［  ;  ］切換不轉換簡體", "➋➐" }
-      , { "　［control］+［shift］+［  '  ］切換中文其字符範圍為精簡（CJK）", "➋➑" }
-      , { "　［control］+［shift］+［  -  ］切換 Unicode 編碼注釋為無", "➋➒" }
-      , { "　［control］+［shift］+［  =  ］切換 Enter 上屏中文", "➌🄌" }
-      , { "　────────────  ", "➌➊" }
-      , { "　※ 以上某些鍵位須用內附的 default.custom.yaml 檔", "➌➋" }
+      , { "　［control］+［shift］+［  7  ］變換附加 Emoji 有無", "➊➋" }
+      , { "　［control］+［shift］+［  8  ］變換 Unicode 編碼注釋有無", "➊➌" }
+      , { "　［control］+［shift］+［  9  ］變換 Enter 上屏中文或原始輸入", "➊➍" }
+      , { "『 快捷鍵（下排/指定）』（初始設定 +［shift］）", "➊➎" }
+      , { " • 切換設定", "➊➏" }
+      , { "　［control］+［  ,  ］切換英文", "➊➐" }
+      , { "　［control］+［  .  ］切換全形（全角）", "➊➑" }
+      , { "　［control］+［  /  ］切換標點半形", "➊➒" }
+      , { "　［control］+［  ;  ］切換簡體轉換", "➋🄌" }
+      , { "　［control］+［  '  ］切換中文字符範圍為完整，不精簡", "➋➊" }
+      , { "　［control］+［  [  ］切換附加 Emoji 為無", "➋➋" }
+      , { "　［control］+［  -  ］切換 Unicode 編碼注釋為有", "➋➌" }
+      , { "　［control］+［  =  ］切換 Enter 上屏原始輸入", "➋➍" }
+      , { " • 初始設定", "➋➎" }
+      , { "　［control］+［shift］+［  ,  ］切換中文", "➋➏" }
+      , { "　［control］+［shift］+［  .  ］切換半形（半角）", "➋➐" }
+      , { "　［control］+［shift］+［  /  ］切換標點全形", "➋➑" }
+      , { "　［control］+［shift］+［  ;  ］切換不轉換簡體", "➋➒" }
+      , { "　［control］+［shift］+［  '  ］切換中文其字符範圍為精簡（CJK）", "➌🄌" }
+      , { "　［control］+［shift］+［  [  ］切換附加 Emoji為有", "➌➊" }
+      , { "　［control］+［shift］+［  -  ］切換 Unicode 編碼注釋為無", "➌➋" }
+      , { "　［control］+［shift］+［  =  ］切換 Enter 上屏中文", "➌➌" }
+      , { "　────────────  ", "➌➍" }
+      , { "　※ 以上某些鍵位須用內附的 default.custom.yaml 檔", "➌➎" }
       }
 
   elseif s_4 then
