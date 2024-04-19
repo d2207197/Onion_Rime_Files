@@ -4,7 +4,7 @@
 schema:
   schema_id: onion-array30
   name: "▦ 行列３０（洋蔥版）"
-  version: "202403"
+  version: "202404"
   author:
     - 洋蔥 <deltazonetw@gmail.com>
   description: |
@@ -56,6 +56,7 @@ engine:
   filters:
     - simplifier@zh_cn
     - reverse_lookup_filter@array30_reverse_lookup
+    - lua_filter@punct_preedit_revise_filter
     - lua_filter@mix30_nil_comment_up_filter
     # - lua_filter@mix30_nil_comment_filter
     # - lua_filter@array30_spaceup_filter
@@ -110,6 +111,9 @@ zh_cn:
   opencc_config: tw2s.json
   tips: all
   tags: [ abc ]
+
+punct_preedit_revise_filter:
+  tags: [ punct ]
 
 mix30_nil_comment_up_filter:
   tags: [ abc ]

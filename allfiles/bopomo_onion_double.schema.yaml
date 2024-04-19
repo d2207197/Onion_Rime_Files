@@ -50,9 +50,9 @@ switches:
 
 engine:
   filters:
+    - lua_filter@punct_preedit_revise_filter
 #    - charset_filter@big5
 #    - charset_filter@gbk
-    - lua_filter@bd_preedit_revise_filter
     - lua_filter@charset_cjk_filter_plus
     - simplifier@zh_cn
     - reverse_lookup_filter@bpm_reverse_lookup
@@ -105,6 +105,9 @@ zh_cn:
 
 charset_cjk_filter_plus:
   tags: [ abc, reverse2_lookup ]
+
+punct_preedit_revise_filter:
+  tags: [ punct ]
 
 # only_cjk_filter:
 #   tags: [ abc ]
