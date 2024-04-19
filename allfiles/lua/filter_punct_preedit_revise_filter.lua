@@ -2,6 +2,7 @@
 --[[
 （ bopomo_onion_double 和 onion-array30 ）
 punct 下，附加 preedit 後面 prompt 缺漏之標示。
+另修正 ascii_punct 下，分號(;)和冒號(:)無法變半形問題。
 --]]
 
 ----------------------------------------------------------------------------------------
@@ -26,14 +27,17 @@ local change_preedit = require("filter_cand/change_preedit")
 --   local context = engine.context
 --   local c_input = context.input
 --   local caret_pos = context.caret_pos
+--   local o_ascii_punct = context:get_option("ascii_punct")
 --   local seg_punct = seg:has_tag("punct")  -- 可改在 schema 限定
 --   -- local seg_punct = seg.has_tag(seg,"punct")  -- 另一種寫法
---   -- local seg_punct = not seg:has_tag("abc")  -- 可通用
+--   -- local seg_punct = not seg:has_tag("abc")  -- 可使用
 --   -- local seg_punct = seg:has_tag("punct") and not seg:has_tag("mf_translator")  -- 無法
---   check_input_1 = string.match(c_input, "^`$" ) or string.match(c_input, "[^=]`$" )
---   check_input_2 = caret_pos == 2 and string.match(c_input, "^e([a-z,./;'])$" )
---   return seg_punct and (check_input_1 or check_input_2)
---   -- return check_input_1 or check_input_2
+--   check_1 = string.match(c_input, "^`$" ) or string.match(c_input, "[^=]`$" )
+--   check_2 = caret_pos == #c_input and string.match(c_input, "^e([a-z,./;'][a-z]?[,./;']?)$" )
+--   check_3 = o_ascii_punct and (string.match(c_input, "^;$" ) or string.match(c_input, "[^=];$" ))
+--   check_4 = o_ascii_punct and (string.match(c_input, "^;;$" ) or string.match(c_input, "[^=];;$" ))
+--   return seg_punct and (check_1 or check_2 or check_3 or check_4)
+--   -- return check_1 or check_2 or check_3 or check_4
 -- end
 
 local function filter(inp, env)
@@ -42,29 +46,41 @@ local function filter(inp, env)
   local context = engine.context
   local c_input = context.input
   local caret_pos = context.caret_pos
+  -- local start = context:get_preedit().sel_start
+  -- local _end = context:get_preedit().sel_end
+  local o_ascii_punct = context:get_option("ascii_punct")
   -- local c_preedit = context:get_preedit()
   -- local c_preedit_text = string.gsub(c_preedit.text, "‸", "") or "xxxxxxx"  -- 末尾"‸"佔4個字元：string.sub(c_preedit_text, 1, -4)
   -- local composition = context.composition
   -- local seg = composition:back()
   -- local promp = composition:get_prompt()  -- 都為""空碼？
 
-  local check_input_1 = string.match(c_input, "^`$" ) or string.match(c_input, "[^=]`$" )
-  local check_input_2 = caret_pos == #c_input and string.match(c_input, "^e([a-z,./;'][a-z]?[,./;']?)$" )
-  -- local check_input_2 = string.match(c_input, "^e[a-z,./;'][a-z]?$" )
+  local check_1 = string.match(c_input, "^`$" ) or string.match(c_input, "[^=]`$" )
+  local check_2 = caret_pos == #c_input and string.match(c_input, "^e([a-z,./;'][a-z]?[,./;']?)$" )
+  -- local check_2 = string.match(c_input, "^e[a-z,./;'][a-z]?[,./;']?$" )
+  local check_3 = o_ascii_punct and (string.match(c_input, "^;$" ) or string.match(c_input, "[^=];$" ))
+  local check_4 = o_ascii_punct and (string.match(c_input, "^;;$" ) or string.match(c_input, "[^=];;$" ))
 
   -- seg.prompt = "《特殊功能集》▶"  -- 全部的 prompt 都會改寫
-  -- if check_input_2 then
+  -- if check_2 then
   --   seg.prompt = "《查詢鍵位注音》"  -- 全部的 prompt 都會改寫
   -- end
 
+  -- local cand_semicolon = Candidate("simp_semicolon", start, _end, ";", "〔半角〕")
+  local cand_semicolon = Candidate("simp_semicolon", 0, 1, ";", "〔半角〕")
+  local cand_colon = Candidate("simp_colon", 0, 2, ":", "〔半角〕")
+
   for cand in inp:iter() do
-    yield(check_input_1 and cand.text == "`" and change_preedit(cand, cand.preedit .."\t《特殊功能集》▶") or
-          check_input_2 and change_preedit(cand, "《查詢鍵位注音》" .. string.upper(check_input_2) ) or
-          -- check_input_2 and change_preedit(cand, "《查詢鍵位注音》" .. c_preedit_text ) or
-          -- check_input_2 and change_preedit(cand, "e " .. string.upper(check_input_2) .. "\t《查詢鍵位注音》") or
+    local cand_text = cand.text
+    yield(check_1 and cand_text == "`" and change_preedit(cand, cand.preedit .."\t《特殊功能集》▶") or
+          check_2 and change_preedit(cand, "《查詢鍵位注音》" .. string.upper(check_2) ) or
+          -- check_2 and change_preedit(cand, "《查詢鍵位注音》" .. c_preedit_text ) or
+          -- check_2 and change_preedit(cand, "e " .. string.upper(check_2) .. "\t《查詢鍵位注音》") or
+          check_3 and cand_text == "；" and cand_semicolon or
+          check_4 and cand_text == "：" and cand_colon or
           cand
          )
-    -- yield(check_input_1 and cand.text == "`" and change_preedit(cand, cand.preedit .."\t《特殊功能集》▶") or
+    -- yield(check_1 and cand.text == "`" and change_preedit(cand, cand.preedit .."\t《特殊功能集》▶") or
     --       cand
     --      )
   end

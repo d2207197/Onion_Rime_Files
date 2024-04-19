@@ -50,7 +50,7 @@
 --      - lua_filter@halfwidth_katakana_filter       --（關）（jpnin1）片假名後附加半形片假名。選單顯示太雜亂，故不用。
 --      - lua_filter@lua_custom_phrase_filter        --（關）取代原先 table_translator@custom_phrase。接續掛接方案後，有 bug，上不了屏，改用 translator 實現。
 --      - lua_filter@preedit_model_filter            --（關）（bo_mixin 全系列）切換 preedit 樣式。
---      - lua_filter@punct_preedit_revise_filter     --（引lua資料夾）（bopomo_onion_double 和 onion-array30）punct 下，附加 preedit 後面 prompt 缺漏之標示。
+--      - lua_filter@punct_preedit_revise_filter     --（引lua資料夾）（bopomo_onion_double 和 onion-array30）punct 下，附加 preedit 後面 prompt 缺漏之標示。另修正 ascii_punct 下，分號(;)和冒號(:)無法變半形問題。
 --      - lua_filter@comment_filter_unicode          --（關）註釋 Unicode 編碼。
 --      - lua_filter@comment_filter_debug            --（關）註釋 debug 訊息。
 --
@@ -182,6 +182,7 @@ mix30_nil_comment_up_filter = require("filter_mix30_nil_comment_up_filter")
 
 --- punct_preedit_revise_filter （bopomo_onion_double 和 onion-array30）
 -- punct 下，附加 preedit 後面 prompt 缺漏之標示。
+-- 另修正 ascii_punct 下，分號(;)和冒號(:)無法變半形問題。
 punct_preedit_revise_filter = require("filter_punct_preedit_revise_filter")
 
 
