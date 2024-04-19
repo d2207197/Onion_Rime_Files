@@ -42,18 +42,31 @@ local function filter(inp, env)
   local context = engine.context
   local c_input = context.input
   local caret_pos = context.caret_pos
+  -- local c_preedit = context:get_preedit()
+  -- local c_preedit_text = string.gsub(c_preedit.text, "‸", "") or "xxxxxxx"  -- 末尾"‸"佔4個字元：string.sub(c_preedit_text, 1, -4)
   -- local composition = context.composition
   -- local seg = composition:back()
+  -- local promp = composition:get_prompt()  -- 都為""空碼？
 
   local check_input_1 = string.match(c_input, "^`$" ) or string.match(c_input, "[^=]`$" )
-  local check_input_2 = caret_pos == 2 and string.match(c_input, "^e([a-z,./;'])$" )
+  local check_input_2 = caret_pos == #c_input and string.match(c_input, "^e([a-z,./;'][a-z]?[,./;']?)$" )
+  -- local check_input_2 = string.match(c_input, "^e[a-z,./;'][a-z]?$" )
+
   -- seg.prompt = "《特殊功能集》▶"  -- 全部的 prompt 都會改寫
+  -- if check_input_2 then
+  --   seg.prompt = "《查詢鍵位注音》"  -- 全部的 prompt 都會改寫
+  -- end
 
   for cand in inp:iter() do
     yield(check_input_1 and cand.text == "`" and change_preedit(cand, cand.preedit .."\t《特殊功能集》▶") or
-          check_input_2 and change_preedit(cand, "e " .. string.upper(check_input_2) .. "\t《查詢鍵位注音》") or
+          check_input_2 and change_preedit(cand, "《查詢鍵位注音》" .. string.upper(check_input_2) ) or
+          -- check_input_2 and change_preedit(cand, "《查詢鍵位注音》" .. c_preedit_text ) or
+          -- check_input_2 and change_preedit(cand, "e " .. string.upper(check_input_2) .. "\t《查詢鍵位注音》") or
           cand
          )
+    -- yield(check_input_1 and cand.text == "`" and change_preedit(cand, cand.preedit .."\t《特殊功能集》▶") or
+    --       cand
+    --      )
   end
 
 end

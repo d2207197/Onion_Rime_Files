@@ -70,7 +70,7 @@
 ├─ easy_en_upper.dict.yaml                    〈掛載用 英漢字典 方案〉「主字詞典」（大寫或大小寫混合）
 ├─ easy_en_upper.schema.yaml                  〈掛載用 英漢字典 方案〉「設定檔」（大寫或大小寫混合）
 ├─ element_bopomo.yaml                        〈注音 mixin 和 plus 方案〉程式碼「引入檔」
-├─ element_double_bopomo.yaml                 〈雙拼注音 方案〉程式碼「引入檔」
+├─ element_bopomo_double.yaml                 〈雙拼注音 方案〉程式碼「引入檔」
 ├─ element_ocm.yaml                           
 ├─ essay-jp-onion.txt                         〈八股文檔〉日文  （只針對假名，因日文一個漢字都對應太多發音，故不包括含有漢字詞彙，漢字詞頻直接在字詞典附註）
 ├─ essay-kr-hanja.txt                         〈八股文檔〉韓文  （只針韓文漢字）
@@ -101,6 +101,7 @@
 ├─ latinin1.dict.yaml                         〈掛載用 拉丁 方案〉「字典」  （含英文字母、音標、帶調字母等）
 ├─ latinin1.extended.dict.yaml                〈掛載用 拉丁 方案〉「主字詞典」
 ├─ latinin1.schema.yaml                       〈掛載用 拉丁 方案〉「設定檔」
+├─ lua_custom_phrase.txt                      〈注音 mixin4 方案〉「用戶短語」
 ├─ mixin_bpmf.dict.yaml                       〈內嵌用 注音文〉「字詞典」
 ├─ ocm_mixin.extended.dict.yaml               
 ├─ ocm_mixin.schema.yaml                      
@@ -113,6 +114,7 @@
 ├─ ocm_mixin_la.dict.yaml                     
 ├─ ocm_mixin_phrase.txt                       
 ├─ ocm_tc_mc.dict.yaml                        
+├─ ocm_tc.dict.yaml                           
 ├─ onion-array30-generally.dict.yaml          〈行列 30 方案〉「字典」
 ├─ onion-array30-phrases.dict.yaml            〈行列 30 方案〉多字詞句「詞典」
 ├─ onion-array30-shortcode.dict.yaml          〈行列 30 方案〉簡碼「字典」
@@ -143,6 +145,7 @@
 ├─ phrases.la_py_w.dict.yaml                  中文拼音「詞典」
 ├─ phrases.ocmtc_essay_mc.dict.yaml           
 ├─ punct_bopomo.yaml                          〈注音相關方案〉標點符號「引入檔」
+├─ punct_bopomo_double.yaml                   〈雙拼注音相關方案〉標點符號「引入檔」
 ├─ punct_ocm.yaml                             
 ├─ punct_ovff.dict.yaml                       
 ├─ punct_ovff.schema.yaml                     
@@ -153,7 +156,7 @@
 ├─ symbols-mark.schema.yaml                   （未引用）
 ├─ symbols_bpmf.dict.yaml                     〈掛載用 系列符號（注音） 方案〉「主字詞典」  （注音方案掛載）
 ├─ symbols_bpmf.schema.yaml                   〈掛載用 系列符號（注音） 方案〉「設定檔」  （注音方案掛載）
-├─ symbols_double_bpmf.schema.yaml            〈掛載用 系列符號（雙拼注音） 方案〉「設定檔」  （雙拼注音方案掛載）
+├─ symbols_bpmf_double.schema.yaml            〈掛載用 系列符號（雙拼注音） 方案〉「設定檔」  （雙拼注音方案掛載）
 ├─ symbols_ocm.dict.yaml                      
 ├─ symbols_ocm.schema.yaml                    
 ├─ terra_pinyin_onion.dict.yaml               中文拼音「字詞典」  （以兩岸字典有的發音為標準）（注音相關方案和拼音等眾多方案皆有引用）（原官方 terra_pinyin.dict.yaml 改寫，但已修改眾多，單個中文字發音補足兩岸詞典皆有發音，詞句用字以台灣標準為主）

@@ -2,9 +2,9 @@
 # encoding: utf-8
 # 《符號分類集（by雙拼注音）設定頁》
 schema:
-  schema_id: symbols_double_bpmf
+  schema_id: symbols_bpmf_double
   name: 系列符號(雙拼注音)
-  version: "202203"
+  version: "202404"
   description: |
     由Unicode中「Emoticons」部份和「Miscellaneous Symbols and Pictographs」部份合成。
     可在Mac中輸入iOS設備通用的Emoji表情，其他系統可能需安装專門字體。
@@ -44,17 +44,17 @@ speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;-1234567890"
   delimiter: "|"
   algebra:
-    __include: element_double_bopomo:/algebra
+    __include: element_bopomo_double:/algebra
 
 translator:
   dictionary: symbols_bpmf
-  prism: symbols_double_bpmf
+  prism: symbols_bpmf_double
   enable_sentence: false
   enable_completion: false
   enable_encoder: false
   enable_user_dict: false
   preedit_format:
-    __include: element_double_bopomo:/preedit_format
+    __include: element_bopomo_double:/preedit_format
 
 key_binder:
   import_preset: default
