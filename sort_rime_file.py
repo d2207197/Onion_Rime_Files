@@ -5,7 +5,7 @@ import time
 
 #※新增資料夾(多層目錄, 如前一層data資料夾不存在, 將自動新增)※
 os.makedirs('./sort_rime/注音洋蔥純注音版/', exist_ok=True)
-os.makedirs('./sort_rime/注音洋蔥雙拼版/', exist_ok=True)
+os.makedirs('./sort_rime/注音洋蔥雙拼版/opencc/', exist_ok=True)
 os.makedirs('./sort_rime/注音洋蔥mixin版/opencc/', exist_ok=True)
 os.makedirs('./sort_rime/注音洋蔥plus版/opencc/', exist_ok=True)
 os.makedirs('./sort_rime/地球拼音洋蔥mix-in版/opencc/', exist_ok=True)
@@ -47,6 +47,13 @@ shutil.copyfile("./allfiles/symbols_bpmf_double.schema.yaml", "./sort_rime/注�
 shutil.copyfile("./allfiles/element_bopomo_double.yaml", "./sort_rime/注音洋蔥雙拼版/element_bopomo_double.yaml")
 shutil.copyfile("./allfiles/punct_bopomo_double.yaml", "./sort_rime/注音洋蔥雙拼版/punct_bopomo_double.yaml")
 shutil.copyfile("./allfiles/lua_custom_phrase.txt", "./sort_rime/注音洋蔥雙拼版/lua_custom_phrase.txt")
+
+shutil.copyfile("./allfiles/opencc/back_mark.json", "./sort_rime/注音洋蔥雙拼版/opencc/back_mark.json")
+shutil.copyfile("./allfiles/opencc/back_mark.txt", "./sort_rime/注音洋蔥雙拼版/opencc/back_mark.txt")
+shutil.copyfile("./allfiles/opencc/punct_mark.json", "./sort_rime/注音洋蔥雙拼版/opencc/punct_mark.json")
+shutil.copyfile("./allfiles/opencc/punct_mark.txt", "./sort_rime/注音洋蔥雙拼版/opencc/punct_mark.txt")
+shutil.copyfile("./allfiles/opencc/emoji_t.json", "./sort_rime/注音洋蔥雙拼版/opencc/emoji_t.json")
+shutil.copyfile("./allfiles/opencc/emoji_t.txt", "./sort_rime/注音洋蔥雙拼版/opencc/emoji_t.txt")
 
 shutil.copyfile("./allfiles/各方案default.custom/注音洋蔥雙拼版_custom/default.custom.yaml", "./sort_rime/注音洋蔥雙拼版/default.custom.yaml")
 

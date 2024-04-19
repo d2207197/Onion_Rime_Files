@@ -36,6 +36,15 @@ switches:
 #       - UTF-8
 #       - BIG5
 #       - GBK
+  - name: emoji_segestion
+    reset: 1
+    states: [ 🈚️, 🈶️ ]
+  - name: back_mark
+    reset: 1
+    # states: [ 無註, 註釋 ]
+  - name: punct_mark
+    reset: 1
+#    states: [ 無, 註 ]
   - name: unicode_comment
     reset: 0
     states: [ '🄽', '🅄' ]
@@ -54,7 +63,10 @@ engine:
 #    - charset_filter@big5
 #    - charset_filter@gbk
     - lua_filter@charset_cjk_filter_plus
+    - simplifier@emoji_switch
     - simplifier@zh_cn
+    - simplifier@back_mark
+    - simplifier@punct_mark
     - reverse_lookup_filter@bpm_reverse_lookup
     - uniquifier
     - lua_filter@comment_filter_unicode  # unicode 和 debug 分開，同時開啟無法記憶
@@ -105,6 +117,34 @@ zh_cn:
 
 charset_cjk_filter_plus:
   tags: [ abc, reverse2_lookup ]
+
+emoji_switch:
+  opencc_config: emoji_t.json
+  option_name: emoji_segestion
+  tags: [ abc ]
+#  tips: all #在emoji後面加註文字
+
+back_mark:
+  opencc_config: back_mark.json
+  option_name: back_mark
+  # allow_erase_comment: true
+  show_in_comment: true
+  # excluded_types: [ reverse_lookup ]
+  tags: [ emoji_series ]
+  tips: char #all #none
+  comment_format:
+    - xform/^/  /
+    - xform/@/ /
+
+punct_mark:
+  opencc_config: punct_mark.json
+  option_name: punct_mark
+  show_in_comment: true
+  tags: [ punct ]
+  tips: all
+  comment_format:
+    - erase/^.*〔.*〕.+$/
+    - erase/^.+〔.*〕$/
 
 punct_preedit_revise_filter:
   tags: [ punct ]
@@ -376,22 +416,27 @@ key_binder:
     # - {accept: Control+apostrophe, toggle: only_cjk_filter, when: always}
 ## 上排切換(Mac)
     - {accept: Control+Shift+6, toggle: only_cjk_filter, when: always}
-    - {accept: Control+Shift+7, toggle: unicode_comment, when: always}
-    - {accept: Control+Shift+8, toggle: return_mode, when: always}
+    - {accept: Control+Shift+7, toggle: emoji_segestion, when: always}
+    - {accept: Control+Shift+8, toggle: unicode_comment, when: always}
+    - {accept: Control+Shift+9, toggle: return_mode, when: always}
 ## 上排切換(Win)
     - {accept: Control+Shift+asciicircum, toggle: only_cjk_filter, when: always}
-    - {accept: Control+Shift+ampersand, toggle: unicode_comment, when: always}
-    - {accept: Control+Shift+asterisk, toggle: return_mode, when: always}
+    - {accept: Control+Shift+ampersand, toggle: emoji_segestion, when: always}
+    - {accept: Control+Shift+asterisk, toggle: unicode_comment, when: always}
+    - {accept: Control+Shift+parenleft, toggle: return_mode, when: always}
 ## 切換樣態
     - {accept: Control+apostrophe, unset_option: only_cjk_filter, when: always}
+    - {accept: Control+bracketleft, unset_option: emoji_segestion, when: always}
     - {accept: Control+minus, set_option: unicode_comment, when: always}
     - {accept: Control+equal, set_option: return_mode, when: always}
 ## 初始樣態(Mac)
     - {accept: Control+Shift+apostrophe, set_option: only_cjk_filter, when: always}
+    - {accept: Control+Shift+bracketleft, set_option: emoji_segestion, when: always}
     - {accept: Control+Shift+minus, unset_option: unicode_comment, when: always}
     - {accept: Control+Shift+equal, unset_option: return_mode, when: always}
 ## 初始樣態(Win)
     - {accept: Control+Shift+quotedbl, set_option: only_cjk_filter, when: always}
+    - {accept: Control+Shift+braceleft, set_option: emoji_segestion, when: always}
     - {accept: Control+Shift+underscore, unset_option: unicode_comment, when: always}
     - {accept: Control+Shift+plus, unset_option: return_mode, when: always}
 ### Return/Enter鍵上屏(取代 editor/bindings 使可空碼清屏) ###
