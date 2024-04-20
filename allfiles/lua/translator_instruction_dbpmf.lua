@@ -143,7 +143,8 @@ local function translate(input, seg, env)
   if input == "e" and caret_pos == 1 then
     for k, v in ipairs(env.table_sd_3) do
       local cand = Candidate("simp_help", seg.start, seg._end, v[2], " " .. v[1])
-      cand.preedit = input .. "\t《查詢鍵位注音》▶"
+      -- cand.preedit = input .. "\t《查詢鍵位注音》▶"
+      cand.preedit = input .. "\t《雙拼注音鍵位說明》"
       yield(cand)
     end
   end

@@ -20,23 +20,25 @@ local change_preedit = require("filter_cand/change_preedit")
 -- function M.fini(env)
 -- end
 
--- --- 「tags_match」和 shcema 中的「tags:」只能擇其一使用。兩者同存時只有「tags_match」作用。
+--- 「tags_match」和 shcema 中的「tags:」建議擇其一使用。
 -- local function tags_match(seg,env)
 -- -- function M.tags_match(seg, env)
 --   local engine = env.engine
 --   local context = engine.context
 --   local c_input = context.input
---   local caret_pos = context.caret_pos
+--   -- local caret_pos = context.caret_pos
 --   local o_ascii_punct = context:get_option("ascii_punct")
 --   local seg_punct = seg:has_tag("punct")  -- 可改在 schema 限定
 --   -- local seg_punct = seg.has_tag(seg,"punct")  -- 另一種寫法
 --   -- local seg_punct = not seg:has_tag("abc")  -- 可使用
 --   -- local seg_punct = seg:has_tag("punct") and not seg:has_tag("mf_translator")  -- 無法
 --   check_1 = string.match(c_input, "^`$" ) or string.match(c_input, "[^=]`$" )
---   check_2 = caret_pos == #c_input and string.match(c_input, "^e([a-z,./;'][a-z]?[,./;']?)$" )
+--   -- check_2 = caret_pos == #c_input and string.match(c_input, "^e([a-z,./;'][a-z]?[,./;']?)$" )
 --   check_3 = o_ascii_punct and (string.match(c_input, "^;$" ) or string.match(c_input, "[^=];$" ))
 --   check_4 = o_ascii_punct and (string.match(c_input, "^;;$" ) or string.match(c_input, "[^=];;$" ))
---   return seg_punct and (check_1 or check_2 or check_3 or check_4)
+--   return seg_punct and (check_1 or check_3 or check_4)
+--   -- return check_1 or check_3 or check_4
+--   -- return seg_punct and (check_1 or check_2 or check_3 or check_4)
 --   -- return check_1 or check_2 or check_3 or check_4
 -- end
 
@@ -45,7 +47,7 @@ local function filter(inp, env)
   local engine = env.engine
   local context = engine.context
   local c_input = context.input
-  local caret_pos = context.caret_pos
+  -- local caret_pos = context.caret_pos
   -- local start = context:get_preedit().sel_start
   -- local _end = context:get_preedit().sel_end
   local o_ascii_punct = context:get_option("ascii_punct")
@@ -56,8 +58,8 @@ local function filter(inp, env)
   -- local promp = composition:get_prompt()  -- 都為""空碼？
 
   local check_1 = string.match(c_input, "^`$" ) or string.match(c_input, "[^=]`$" )
-  local check_2 = caret_pos == #c_input and string.match(c_input, "^e([a-z,./;'][a-z]?[,./;']?)$" )
-  -- local check_2 = string.match(c_input, "^e[a-z,./;'][a-z]?[,./;']?$" )
+  -- local check_2 = caret_pos == #c_input and string.match(c_input, "^e([a-z,./;'][a-z]?[,./;']?)$" )
+  -- -- local check_2 = string.match(c_input, "^e[a-z,./;'][a-z]?[,./;']?$" )
   local check_3 = o_ascii_punct and (string.match(c_input, "^;$" ) or string.match(c_input, "[^=];$" ))
   local check_4 = o_ascii_punct and (string.match(c_input, "^;;$" ) or string.match(c_input, "[^=];;$" ))
 
@@ -73,9 +75,9 @@ local function filter(inp, env)
   for cand in inp:iter() do
     local cand_text = cand.text
     yield(check_1 and cand_text == "`" and change_preedit(cand, cand.preedit .."\t《特殊功能集》▶") or
-          check_2 and change_preedit(cand, "《查詢鍵位注音》" .. string.upper(check_2) ) or
-          -- check_2 and change_preedit(cand, "《查詢鍵位注音》" .. c_preedit_text ) or
-          -- check_2 and change_preedit(cand, "e " .. string.upper(check_2) .. "\t《查詢鍵位注音》") or
+          -- check_2 and change_preedit(cand, "《查詢鍵位注音》" .. string.upper(check_2) ) or
+          -- -- check_2 and change_preedit(cand, "《查詢鍵位注音》" .. c_preedit_text ) or
+          -- -- check_2 and change_preedit(cand, "e " .. string.upper(check_2) .. "\t《查詢鍵位注音》") or
           check_3 and cand_text == "；" and cand_semicolon or
           check_4 and cand_text == "：" and cand_colon or
           cand
