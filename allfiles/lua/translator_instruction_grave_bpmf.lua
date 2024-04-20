@@ -95,12 +95,22 @@ end
 
 -- local function instruction_grave_bpmf(input, seg)
 local function translate(input, seg, env)
+  local engine = env.engine
+  local context = engine.context
+  local c_input = context.input  -- c_input 為全部輸入碼，上方 input 不含前面已確定但未上屏之選項編碼。
+
+  -- local tag_mf = seg:has_tag("instruction_grave_bpmf")  --有bug！
+  -- if not tag_mf then return end
+
   -- local check_grave = string.match(input, "^`$")
   -- local check_grave2 = string.match(input, "^``$")
 
+  -- local no_check_grave = string.match(c_input, "=``?$")  -- 會先執行該符號？故不用？
+  local no_check_grave = string.match(c_input, "```$")
+
   -- if input:find("^`$") then
   -- if check_grave then
-  if input == "`" then
+  if input == "`" and not no_check_grave then
     -- for cand in input:iter() do
     --   yield(cand)
     -- end
@@ -113,7 +123,7 @@ local function translate(input, seg, env)
 
   -- if input:find("^``$") then
   -- if check_grave2 then
-  if input == "``" then
+  if input == "``" and not no_check_grave then
     for k, v in ipairs(env.table_gb_2) do
       local cand = Candidate("simp_help", seg.start, seg._end, v[2], " " .. v[1])
       -- cand.preedit = input .. "\t※ 輸入【項目】每字第一個注音，調出相關符號。"
