@@ -18,15 +18,23 @@ local function init(env)
   local schema = engine.schema
   local config = schema.config
   local schema_id = config:get_string("schema/schema_id")
-  bd = string.match(schema_id, "^bo")  --^bopomo_onion_double
-  ar = string.match(schema_id, "^on")  --^onion%-array30
+  local bd = string.match(schema_id, "^bo")  --^bopomo_onion_double
+  -- local ar = string.match(schema_id, "^on")  --^onion%-array30
+  -- env.bd = string.match(schema_id, "^bo")  --^bopomo_onion_double
+  -- env.ar = string.match(schema_id, "^on")  --^onion%-array30
+  if bd then
+    env.check1 = function(n) c = (string.match(n, "^`$" ) or string.match(n, "[^=`]`$" )) return c end
+  -- elseif ar then
+  else
+    env.check1 = function(n) c = string.match(n, "`$" ) return c end
+  end
 end
 
 -- local function fini(env)
 -- function M.fini(env)
 -- end
 
---- 「tags_match」和 shcema 中的「tags:」建議擇其一使用。
+-- --- 「tags_match」和 shcema 中的「tags:」建議擇其一使用。
 -- local function tags_match(seg,env)
 -- -- function M.tags_match(seg, env)
 --   local engine = env.engine
@@ -38,8 +46,9 @@ end
 --   -- local seg_punct = seg.has_tag(seg,"punct")  -- 另一種寫法
 --   -- local seg_punct = not seg:has_tag("abc")  -- 可使用
 --   -- local seg_punct = seg:has_tag("punct") and not seg:has_tag("mf_translator")  -- 無法
---   check_1 = bd and (string.match(c_input, "^`$" ) or string.match(c_input, "[^=`]`$" )) or  -- 雙拼
---             ar and string.match(c_input, "`$" )  -- 行列30
+--   check_1 = env.check1(c_input)
+--   -- check_1 = env.bd and (string.match(c_input, "^`$" ) or string.match(c_input, "[^=`]`$" )) or  -- 雙拼
+--   --           env.ar and string.match(c_input, "`$" )  -- 行列30
 --   -- check_2 = caret_pos == #c_input and string.match(c_input, "^e([a-z,./;'][a-z]?[,./;']?)$" )
 --   check_3 = o_ascii_punct and (string.match(c_input, "^;$" ) or string.match(c_input, "[^=];$" ))
 --   check_4 = o_ascii_punct and (string.match(c_input, "^;;$" ) or string.match(c_input, "[^=];;$" ))
@@ -64,8 +73,9 @@ local function filter(inp, env)
   -- local seg = composition:back()
   -- local promp = composition:get_prompt()  -- 都為""空碼？
 
-  local check_1 = bd and (string.match(c_input, "^`$" ) or string.match(c_input, "[^=`]`$" )) or  -- 雙拼
-                  ar and string.match(c_input, "`$" )  -- 行列30
+  local check_1 = env.check1(c_input)
+  -- local check_1 = env.bd and (string.match(c_input, "^`$" ) or string.match(c_input, "[^=`]`$" )) or  -- 雙拼
+  --                 env.ar and string.match(c_input, "`$" )  -- 行列30
   -- local check_2 = caret_pos == #c_input and string.match(c_input, "^e([a-z,./;'][a-z]?[,./;']?)$" )
   -- -- local check_2 = string.match(c_input, "^e[a-z,./;'][a-z]?[,./;']?$" )
   local check_3 = o_ascii_punct and (string.match(c_input, "^;$" ) or string.match(c_input, "[^=];$" ))
