@@ -34,6 +34,7 @@ shutil.copyfile("./allfiles/各方案default.custom/注音洋蔥純注音版_cus
 shutil.copyfile("./allfiles/essay-zh-hant-mc.txt", "./sort_rime/注音洋蔥雙拼版/essay-zh-hant-mc.txt")
 shutil.copyfile("./allfiles/bopomo_onion_double.extended.dict.yaml", "./sort_rime/注音洋蔥雙拼版/bopomo_onion_double.extended.dict.yaml")
 shutil.copyfile("./allfiles/bopomo_onion_double.schema.yaml", "./sort_rime/注音洋蔥雙拼版/bopomo_onion_double.schema.yaml")
+shutil.copyfile("./allfiles/bopomo_onion_double_phrase.txt", "./sort_rime/注音洋蔥雙拼版/bopomo_onion_double_phrase.txt")
 shutil.copyfile("./allfiles/cangjie5.dict.yaml", "./sort_rime/注音洋蔥雙拼版/cangjie5.dict.yaml")
 shutil.copyfile("./allfiles/cangjie5.schema.yaml", "./sort_rime/注音洋蔥雙拼版/cangjie5.schema.yaml")
 shutil.copyfile("./allfiles/rime.lua", "./sort_rime/注音洋蔥雙拼版/rime.lua")

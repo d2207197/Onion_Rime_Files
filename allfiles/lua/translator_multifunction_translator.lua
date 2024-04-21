@@ -507,7 +507,8 @@ local function translate(input, seg, env)
   elseif op_check == "t" then
     yield_c( "", "〘 編輯 快捷開啟 table 〙", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- or〔錯誤〕
     return
-  elseif op_check == "c" and env.prefix == "`" then
+  -- elseif op_check == "c" and env.prefix == "`" then
+  elseif op_check == "c" and env.schema_id == "onion-array30" then
     yield_c( "", "〔無短語功能〕", env.prefix .. "j " .. string.upper(op_check) .. "\t 【快捷開啟】")  -- or〔錯誤〕
     return
   elseif op_check == "c" then

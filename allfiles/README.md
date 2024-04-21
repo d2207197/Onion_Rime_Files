@@ -35,6 +35,7 @@
 ├─ bopomo_onion.extended.dict.yaml            〈純注音 方案〉「主字詞典」
 ├─ bopomo_onion.schema.yaml                   〈純注音 方案〉「設定檔」
 ├─ bopomo_onion_double.extended.dict.yaml     〈雙拼注音 方案〉「主字詞典」
+├─ bopomo_onion_double_phrase.txt             〈雙拼注音 方案〉「用戶短語」
 ├─ bopomo_onion_double.schema.yaml            〈雙拼注音 方案〉「設定檔」
 ├─ bopomo_onion_phrase.txt                    〈純注音 方案〉「用戶短語」
 ├─ bopomo_onion_symbols.yaml                  〈純注音 方案〉標點符號「引入檔」

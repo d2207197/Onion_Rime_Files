@@ -17,11 +17,11 @@ local function init(env)
   local schema = engine.schema
   local config = schema.config
   local namespace1 = "mf_translator"
-  -- local namespace2 = "lua_custom_phrase"
+  local namespace2 = "lua_custom_phrase"
   local path = rime_api.get_user_data_dir()
   env.prefix = config:get_string(namespace1 .. "/prefix") or ""
-  -- env.textdict = config:get_string(namespace2 .. "/user_dict") or ""
-  -- env.custom_phrase = path .. "/" .. env.textdict .. ".txt" or ""
+  env.textdict = config:get_string(namespace2 .. "/user_dict") or ""
+  env.custom_phrase = path .. "/" .. env.textdict .. ".txt" or ""
   env.run_pattern = path .. "/lua/p_components/p_run_pattern.lua" or ""
   -- env.op_pattern = path .. "/lua/p_components/p_op_pattern.lua" or ""
   -- log.info("lua_custom_phrase: \'" .. env.textdict .. ".txt\' Initilized!")  -- 日誌中提示已經載入 txt 短語
@@ -176,13 +176,13 @@ local function processor(key, env)
         generic_open(run_in.open)  -- 要確定 run_in 不為 nil，才能加.open
         context:clear()
         return 1
-      -- elseif env.textdict == "" then
-      --   return 2
-      -- elseif op_code == "c" then
-      --   -- io.popen("env.custom_phrase")  -- 無效！
-      --   generic_open(env.custom_phrase)
-      --   context:clear()
-      --   return 1
+      elseif env.textdict == "" then
+        return 2
+      elseif op_code == "c" then
+        -- io.popen("env.custom_phrase")  -- 無效！
+        generic_open(env.custom_phrase)
+        context:clear()
+        return 1
       else  -- 沒有該碼，空白鍵清空
         -- context:confirm_current_selection()
         context:clear()

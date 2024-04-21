@@ -94,7 +94,7 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    # - lua_translator@lua_custom_phrase
+    - lua_translator@lua_custom_phrase
     - table_translator@emoji_series
     - script_translator@reverse2_lookup
     - script_translator
@@ -106,9 +106,9 @@ engine:
 mf_translator:
   prefix: "`"
 
-# lua_custom_phrase:
-#   user_dict: "bopomo_onion_phrase"
-#   # user_dict: "lua_custom_phrase"
+lua_custom_phrase:
+  user_dict: "bopomo_onion_double_phrase"
+  # user_dict: "lua_custom_phrase"
 ################################### 濾鏡 ######################################
 zh_cn:
   opencc_config: tw2s.json
