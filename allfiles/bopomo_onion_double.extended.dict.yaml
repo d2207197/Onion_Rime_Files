@@ -14,10 +14,10 @@ vocabulary: essay-zh-hant-mc
 import_tables:
   - terra_pinyin_onion
   - terra_pinyin_onion_add
-  - phrases.chtp
   - mixin_bpmf  #內嵌注音文，混打。
+  - phrases.chtp
 ...
-##### 內嵌單注音起始（以下編碼使用全形避轉換） #####
+##### 雙拼注音_內嵌單注音起始（以下編碼使用全形避轉換） #####
  	ｅ
 ˉ	ｅ１
 ˊ	ｅ２

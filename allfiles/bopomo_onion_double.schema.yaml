@@ -274,7 +274,9 @@ translator:
     - 'xform/([pdnljqx]):ㄧㄚ\|ㄨㄚ/$1:ㄧㄚ/'
     - 'xform/([gkhavw]):ㄧㄚ\|ㄨㄚ/$1:ㄨㄚ/'
     - 'xform/([dnljqx]):ㄧㄤ\|ㄨㄤ/$1:ㄧㄤ/'
-    - 'xform/([gkhavw]):ㄧㄤ\|ㄨㄤ/$1:ㄨㄤ/' #[ghavw]ㄎㄧㄤ
+    - 'xform/([ghavw]):ㄧㄤ\|ㄨㄤ/$1:ㄨㄤ/' #[gkhavw]ㄎㄧㄤ
+    - 'xform/([k]):ㄧㄤ\|ㄨㄤ/$1:ㄨㄤ\|ㄧㄤ/' #校正：ㄎㄧㄤ少用，ㄎㄨㄤ較常用
+    - xform ([k]):ㄨㄤ\|ㄧㄤ([',./]) $1:ㄨㄤ$2
     - 'xform/([dtnlgkhwvarzcs]):ㄨㄣ\|ㄩㄣ/$1:ㄨㄣ/'
     - 'xform/([jqx]):ㄨㄣ\|ㄩㄣ/$1:ㄩㄣ/'
     - 'xform/([dtnlgkhwvarzcs]):ㄨㄥ\|ㄩㄥ/$1:ㄨㄥ/'
