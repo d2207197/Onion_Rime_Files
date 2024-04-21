@@ -544,7 +544,8 @@ local function translate(input, seg, env)
   -- local bopomo_onion_double = string.match( env.schema_id, "^bopomo_onion_double")
   -- local onion_array30 = string.match( env.schema_id, "^onion[-]array30")
   -- if (input == env.prefix .. "a") and (bopomo_onion_double or onion_array30) then
-  if env.prefix == "`" and (input == env.prefix .. "a" or input == env.prefix .. ",") then
+  if env.schema_id == "onion-array30" and (input == env.prefix .. "a" or input == env.prefix .. ",") then
+  -- if env.prefix == "`" and (input == env.prefix .. "a" or input == env.prefix .. ",") then
     yield_c( "", "〔無短語功能〕", input .. "\t 【短語總列表】")
     return
   end
