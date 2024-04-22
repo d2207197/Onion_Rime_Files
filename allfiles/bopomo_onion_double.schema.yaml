@@ -54,7 +54,7 @@ switches:
     # states: [ 'Ⓝ', 'Ⓓ' ]
     # states: [ 'normal', 'Debug' ]
   - name: return_mode
-    reset: 0
+    # reset: 0
     states: [ "Return & Space", "Space" ]
 
 engine:

@@ -45,10 +45,10 @@ switches:
     reset: 1
     states: [ 香草, 直上 ]
   - name: array30_space_wp
-    reset: 0
+    # reset: 0
     states: [ "Confirm", "Paging" ]
   - name: array30_return_abc
-    reset: 1
+    # reset: 1
     states: [ "Return & Space", "Space" ]
 
 
