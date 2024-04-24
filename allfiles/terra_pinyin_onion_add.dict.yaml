@@ -18,7 +18,7 @@
 # ===============================
 ---
 name: terra_pinyin_onion_add
-version: "202403"
+version: "202404"
 sort: by_weight
 use_preset_vocabulary: true
 max_phrase_length: 7
@@ -212,6 +212,7 @@ min_phrase_weight: 100
 砧	(zhan1)	50%
 碪	(zhan1)	10%
 揩	(ka1)	1%
+揩	(ka3)	1%
 叻	(la1)	50%
 汀	(ding1)	10%
 蔘	(sen1)
@@ -243,6 +244,8 @@ min_phrase_weight: 100
 氛	(fen4)
 髓	(sui2)	1%
 髄	(sui2)	1%
+摀	(wu1)	1%
+揶	(ye1)	1%
 ### @補充為《一聲》，通俗慣用或方便輸入，『非正確發音』！！！ ###
 腓	(fei1)	1%
 琲	(fei1)	1%
@@ -1096,6 +1099,7 @@ min_phrase_weight: 100
 嗞	(zi5)	0%
 哫	(zu5)	0%
 嘁	(zu5)	0%
+啐	(zu5)	0%
 嘬	(zuo5)	0%
 唨	(zuo5)	0%
 唑	(zuo5)	0%
@@ -1335,6 +1339,7 @@ min_phrase_weight: 100
 呕	(ou5)	1%
 吪	(e5)	0%
 咹	(e5)	0%
+啐	(e5)	0%
 唵	(an5)	1%
 咹	(an5)	0%
 啽	(an5)	0%
