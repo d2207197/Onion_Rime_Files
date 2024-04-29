@@ -169,6 +169,7 @@ ovff_reverse_lookup:
 reverse3_lookup:
   __include: /translator
   tag: reverse3_lookup
+  enable_charset_filter: false
   prefix: ";'"
   suffix: "'"
   tips: "《查注音》▶"
@@ -185,6 +186,7 @@ reverse3_lookup:
 reverse3_lookup_extra:
   __include: /translator
   tag: reverse3_lookup_extra
+  enable_charset_filter: false
   enable_user_dict: true
   initial_quality: 1
   preedit_format:
