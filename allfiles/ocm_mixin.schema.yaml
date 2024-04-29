@@ -699,7 +699,7 @@ reverse3_lookup_extra:
   # enable_sentence: false
   enable_completion: false
   enable_user_dict: true
-  initial_quality: 1
+  # initial_quality: 1
   preedit_format:
     - xform/^/《查注音》/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
