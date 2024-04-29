@@ -3,7 +3,7 @@
 schema:
   schema_id: symbols-mark
   name: "提示碼_符號音標等標註用"
-  version: "202108"
+  version: "202404"
   author:
     - 洋蔥
   description: |
@@ -46,11 +46,12 @@ speller:
 translator:
   dictionary: symbols-mark
   # prism: symbols-mark
-  enable_user_dict: false
-  enable_sentence: false
   enable_encoder: false
-  encode_commit_history: false
+  # encode_commit_history: false
+  enable_sentence: false
   enable_completion: false
+  # sentence_over_completion: false
+  enable_user_dict: false
   # db_class: tabledb #userdb
 
 punctuator:

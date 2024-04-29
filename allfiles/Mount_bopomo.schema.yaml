@@ -4,7 +4,7 @@
 schema:
   schema_id: Mount_bopomo
   name: "☆注音(反查專用)☆"
-  version: "202302"
+  version: "202404"
   author:
     - Onion
   description: |
@@ -105,13 +105,13 @@ speller:
 translator:
   dictionary: Mount_bopomo.extended
 #  prism: Mount_bopomo #開啟反查須用 prism 標註調用此棱鏡文件名
+  enable_charset_filter: true #是否開啓字符集過濾
+  # enable_encoder: false #是否開啓自動造詞
+  # encode_commit_history: false #是否對 已上屛詞 自動成詞
+  # enable_sentence: false #是否開啓自動造句
+  enable_completion: false #新版有長詞補全，用此關閉
   enable_user_dict: true
-  enable_completion: false
-  enable_sentence: false #是否開啓自動造句
-  enable_encoder: false #是否開啓自動造詞
-  encode_commit_history: false #是否對 已上屛詞 自動成詞
 #  spelling_hints: 5 #～字以內候選標註完整帶調拼音
-#  enable_charset_filter: true #是否開啓字符集過濾
   preedit_format:
     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
   comment_format:

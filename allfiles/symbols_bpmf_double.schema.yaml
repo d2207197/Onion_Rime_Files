@@ -49,9 +49,12 @@ speller:
 translator:
   dictionary: symbols_bpmf
   prism: symbols_bpmf_double
+  enable_charset_filter: false
+  enable_encoder: false
+  # encode_commit_history: false
   enable_sentence: false
   enable_completion: false
-  enable_encoder: false
+  # sentence_over_completion: false
   enable_user_dict: false
   preedit_format:
     __include: element_bopomo_double:/preedit_format

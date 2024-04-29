@@ -5,7 +5,7 @@
 schema:
   schema_id: dif1_fs
   name: ✹新全形_dif1✹
-  version: "202109"
+  version: "202404"
   author:
     - 『洋蔥』
   description: |
@@ -54,9 +54,9 @@ speller:
 translator:
   dictionary: fullshape.extended
   prism: dif1_fs
-  enable_user_dict: true
-  enable_sentence: false
+  enable_charset_filter: false
   enable_completion: false
+  enable_user_dict: true
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
   comment_format:

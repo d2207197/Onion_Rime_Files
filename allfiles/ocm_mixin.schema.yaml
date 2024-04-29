@@ -9,7 +9,7 @@ schema:
 
   name: "❖超級混合蝦米(mix-in)❖"
   schema_id: ocm_mixin
-  version: "202403"
+  version: "202404"
   dependencies:
     - punct_ovff
     - symbols_ocm
@@ -312,8 +312,12 @@ speller:
 pt:
   tag: pt
   dictionary: punct_ovff
-  enable_completion: false
+  enable_charset_filter: false
+  enable_encoder: false
+  # encode_commit_history: false
   enable_sentence: false
+  enable_completion: false
+  # sentence_over_completion: false
   enable_user_dict: false
   preedit_format:
     - xform/^/〔蝦符〕/
@@ -334,17 +338,22 @@ translator:
   dictionary: ocm_mixin.extended
   prism: ocm_mixin
   enable_charset_filter: false
-  enable_user_dict: true
-  enable_encoder: false
-  enable_sentence: false
-  encode_commit_history: false
+  # enable_encoder: false
+  # encode_commit_history: false
+  # enable_sentence: false
   enable_completion: false
+  # sentence_over_completion: false
+  enable_user_dict: true
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
     - xform/\|/  /
 ####################### 新單字固頂功能 #######################
 top_fixed:
   __include: /translator
+  enable_encoder: false
+  # encode_commit_history: false
+  enable_sentence: false
+  # sentence_over_completion: false
   enable_user_dict: false
   initial_quality: 1000
 ####################### 後方顯示字碼 #######################
@@ -436,10 +445,10 @@ easy_en:
   tag: easy_en
   dictionary: easy_en_lower #easy_en_super
   enable_encoder: false
-  encode_commit_history: false
-  enable_completion: true
-  sentence_over_completion: false
+  # encode_commit_history: false
   enable_sentence: false
+  enable_completion: true
+  # sentence_over_completion: false
   enable_user_dict: false
   # strict_spelling: false
   # spelling_hints: 2
@@ -480,10 +489,10 @@ easy_en_upper:
   tag: easy_en_upper
   dictionary: easy_en_upper
   enable_encoder: false
-  encode_commit_history: false
-  enable_completion: false
-  sentence_over_completion: false
+  # encode_commit_history: false
   enable_sentence: false
+  enable_completion: false
+  # sentence_over_completion: false
   enable_user_dict: false
   preedit_format:
     - xform/^/《Easy》/
@@ -502,8 +511,8 @@ e_reverse_lookup:
 japan:
   tag: japan
   dictionary: jpnin1.extended
+  enable_charset_filter: false
   enable_completion: false
-  enable_sentence: false
   enable_user_dict: true
   prefix: "',"
   suffix: "'"
@@ -519,8 +528,8 @@ gr:
   tag: gr
   dictionary: greek.extended
   prism: ocm_mixin_greek
+  enable_charset_filter: false
   enable_completion: false
-  enable_sentence: false
   enable_user_dict: true
   prefix: "'["
   tips: "《希》▶"
@@ -535,8 +544,8 @@ cyr:
   tag: cyr
   dictionary: cyrillic.extended
   prism: ocm_mixin_cyrillic
+  enable_charset_filter: false
   enable_completion: false
-  enable_sentence: false
   enable_user_dict: true
   prefix: "']"
   tips: "《俄》▶"
@@ -556,8 +565,8 @@ fs:
   tag: fs
   dictionary: fullshape.extended
   prism: ocm_mixin_fullshape
+  enable_charset_filter: false
   enable_completion: false
-  enable_sentence: false
   enable_user_dict: true
   prefix: "'="
   tips: "《全》▶"
@@ -635,8 +644,8 @@ fs_reverse_lookup: #該反查濾鏡名
 reverse2_lookup:
   tag: reverse2_lookup
   dictionary: "Mount_bopomo.extended"
+  enable_charset_filter: false
   enable_completion: false
-  enable_sentence: false
   enable_user_dict: true
   prefix: "';"
   suffix: "'"
@@ -661,10 +670,12 @@ reverse3_lookup:
   # __include: /top_fixed
   tag: reverse3_lookup
   dictionary: Mount_ocm.extended
-  enable_sentence: false
+  enable_charset_filter: false
   enable_encoder: false
-  encode_commit_history: false
+  # encode_commit_history: false
+  enable_sentence: false
   enable_completion: false
+  # sentence_over_completion: false
   enable_user_dict: false
   prefix: ";'"
   suffix: "'"
@@ -682,9 +693,10 @@ reverse3_lookup_extra:
   # __include: /top_fixed
   tag: reverse3_lookup_extra
   dictionary: Mount_ocm.extended
-  enable_sentence: false
-  enable_encoder: false
-  encode_commit_history: false
+  enable_charset_filter: false
+  # enable_encoder: false
+  # encode_commit_history: false
+  # enable_sentence: false
   enable_completion: false
   enable_user_dict: true
   initial_quality: 1
@@ -728,8 +740,8 @@ phonetic_reverse_lookup:
 all_bpm:
   tag: all_bpm
   dictionary: allbpm
+  enable_charset_filter: false
   enable_completion: false
-  enable_sentence: false
   enable_user_dict: false
   prefix: "';'"
   suffix: "'"
@@ -743,8 +755,12 @@ all_bpm:
 emoji_series:
   tag: emoji_series
   dictionary: symbols_ocm
-  enable_completion: false
+  enable_charset_filter: false
+  enable_encoder: false
+  # encode_commit_history: false
   enable_sentence: false
+  enable_completion: false
+  # sentence_over_completion: false
   enable_user_dict: true
   prefix: ";"
   suffix: "'" #注意開啟會干擾「;'」開頭之掛載，需特別設定

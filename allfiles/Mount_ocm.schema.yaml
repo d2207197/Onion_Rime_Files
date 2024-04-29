@@ -6,7 +6,7 @@
 schema:
   schema_id: Mount_ocm
   name: "❖蝦米(單出-反查專用)❖"
-  version: "202305"
+  version: "202404"
   author:
     - 洋蔥
   description: |
@@ -99,10 +99,11 @@ speller:
 translator:
   dictionary: Mount_ocm.extended
   enable_charset_filter: true
-  enable_sentence: false
   enable_encoder: false
-  encode_commit_history: false
+  # encode_commit_history: false
+  enable_sentence: false
   enable_completion: false
+  # sentence_over_completion: false
   enable_user_dict: false
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
@@ -121,8 +122,12 @@ tr_reverse_lookup:
 pt:
   tag: pt
   dictionary: punct_ovff
-  enable_completion: false
+  enable_charset_filter: false
+  enable_encoder: false
+  # encode_commit_history: false
   enable_sentence: false
+  enable_completion: false
+  # sentence_over_completion: false
   enable_user_dict: false
   preedit_format:
     - xform/^/〔蝦符〕/
@@ -139,8 +144,8 @@ tr2_reverse_lookup:
 reverse2_lookup:
   tag: reverse2_lookup
   dictionary: "Mount_bopomo.extended"
+  enable_charset_filter: false
   enable_completion: false
-  enable_sentence: false
   enable_user_dict: true
   prefix: "';"
   suffix: "'"
@@ -223,8 +228,12 @@ phonetic_reverse_lookup:
 emoji_series:
   tag: emoji_series
   dictionary: symbols_ocm
-  enable_completion: false
+  enable_charset_filter: false
+  enable_encoder: false
+  # encode_commit_history: false
   enable_sentence: false
+  enable_completion: false
+  # sentence_over_completion: false
   enable_user_dict: true
   prefix: ";"
   suffix: "'" #注意開啟會干擾「;'」開頭之掛載，需特別設定

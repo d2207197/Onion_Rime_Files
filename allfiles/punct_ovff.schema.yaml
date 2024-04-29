@@ -5,7 +5,7 @@
 schema:
   schema_id: punct_ovff # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
   name: 單符號_蝦米 # 將在〔輸入法選單〕中顯示
-  version: "201706" # 版本說明，這是文字類型而非整數或小數，如 "1.2.3"
+  version: "202404" # 版本說明，這是文字類型而非整數或小數，如 "1.2.3"
   author:
     - 製作人
   description: |
@@ -50,12 +50,13 @@ speller:
 
 translator:
   dictionary: punct_ovff
-  enable_user_dict: false #是否開啓用戶詞典〔用戶詞典記錄動態字詞頻、用戶詞〕是true否false(開啟後候選字的順序會變動)
+  enable_charset_filter: false #〔僅table_translator有效〕是否開啓字符集過濾，是true否false
+  enable_encoder: false #〔僅table_translator有效?〕是否開啓自動造詞，是true否false
+  # encode_commit_history: false #〔僅table_translator有效〕是否對已上屛詞自動成詞，是true否false
   enable_sentence: false #是否開啓自動造句，是true否false (關閉碼表輸入法連打)(自動造詞時有太極圖)〔?僅table_translator有效?〕
-#  enable_encoder: false #〔僅table_translator有效?〕是否開啓自動造詞，是true否false
-#  enable_charset_filter: false #〔僅table_translator有效〕是否開啓字符集過濾，是true否false
-#  encode_commit_history: false #〔僅table_translator有效〕是否對已上屛詞自動成詞，是true否false
   enable_completion: false #〔僅table_translator有效〕默認開啓逐鍵提示。若要只出精確匹配輸入碼的候選字，可關閉這一選項。關閉用戶詞典和字頻調整。提前顯示尚未輸入完整碼的字
+  # sentence_over_completion: false #在無全碼對應字而僅有逐鍵提示時也開啓智能組句〔僅table_translator有效〕
+  enable_user_dict: false #是否開啓用戶詞典〔用戶詞典記錄動態字詞頻、用戶詞〕是true否false(開啟後候選字的順序會變動)
 #  max_phrase_length: 4 #3 #〔僅table_translator有效〕最大 自動 成詞 詞長
 ##  preedit_format: #menu 輸入 字碼 顯示
 ##    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"

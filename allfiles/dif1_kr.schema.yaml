@@ -5,7 +5,7 @@
 schema:
   schema_id: dif1_kr
   name: ✹新韓語_dif1✹
-  version: "202109"
+  version: "202404"
   author:
     - 『洋蔥』
   description: |
@@ -52,9 +52,9 @@ speller:
 translator:
   dictionary: dif1_kr.extended
   prism: dif1_kr
-  enable_user_dict: true
-  enable_sentence: false
+  enable_charset_filter: false
   enable_completion: false
+  enable_user_dict: true
 #  preedit_format:
 #    - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
 #  comment_format:

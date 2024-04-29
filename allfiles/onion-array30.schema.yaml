@@ -181,13 +181,14 @@ translator:
   dictionary: onion-array30.extended
   prism: onion-array30
   enable_charset_filter: true
-  enable_user_dict: false #true
-  enable_sentence: false #true ##此為自動造句，為打詞時，使用全拼。
   enable_encoder: false #true ##打詞時，可使用簡略打法，簡略打法的規則在字典中設定。
-  encode_commit_history: false #true
+  # encode_commit_history: false #true
+  enable_sentence: false #true ##此為自動造句，為打詞時，使用全拼。
+  enable_completion: false #逐碼提示
+  # sentence_over_completion: false
+  enable_user_dict: false #true
   # strict_spelling: true #false #配合speller中的fuzz規則，僅以畧拼碼組詞〔僅table_translator有效？〕實際好像script_translator才有效？
   # max_phrase_length: 7 #4
-  enable_completion: false #逐碼提示
   # initial_quality: 1000
   # db_class: tabledb #userdb
   preedit_format:
@@ -274,8 +275,12 @@ array30_reverse_lookup:
 wsymbols:
   tag: wsymbols
   dictionary: onion-array30-wsymbols
-  enable_completion: false
+  enable_charset_filter: false
+  enable_encoder: false
+  # encode_commit_history: false
   enable_sentence: false
+  enable_completion: false
+  # sentence_over_completion: false
   enable_user_dict: false
   preedit_format:
     - xform/^/〔符〕/
@@ -287,8 +292,8 @@ reverse2_lookup:
   tag: reverse2_lookup
   dictionary: "Mount_bopomo.extended"
   # prism: "Mount_bopomo.extended"
+  enable_charset_filter: false #true
   enable_completion: false
-  enable_sentence: false
   enable_user_dict: true
   prefix: "="
   suffix: "'"
