@@ -422,7 +422,7 @@ translator:
   enable_charset_filter: false
   enable_completion: false #新版有長詞補全，用此關閉
   enable_user_dict: true
-  initial_quality: 1
+  # initial_quality: 1
   preedit_format:
     __include: element_bopomo:/preedit_b_1_2_4
 ################################### 調出 Easy 英語 ######################################
