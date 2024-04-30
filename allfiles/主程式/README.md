@@ -21,7 +21,7 @@
 
 ### fxliang 版小狼毫(Win)
 
-- https://github.com/fxliang/weasel/
+- https://github.com/fxliang/weasel/releases
 
 - https://github.com/fxliang/weasel/actions
 
