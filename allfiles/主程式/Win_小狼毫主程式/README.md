@@ -20,6 +20,6 @@
 
 - 原先「fxliang版」比「0.14.3.0版」多了新介面和功能，後來被官方整合進「0.15.0.0版」。
 
-- 看討論，官方 releases 中的「0.15.0.0版」可能被誤報為有病毒，且後續官方有 bug 的修正，故直接提供 GitHub 中後續修正之 Actions 封裝和 Nightly Build 版。
+- 看討論，官方 releases 中的「0.15.0.0版」可能被誤報為有病毒，且後續官方有 bug 的修正，故直接提供 GitHub 中後續修正之 Actions 和 Nightly Build 版。
 
 
