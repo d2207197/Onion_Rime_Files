@@ -58,7 +58,7 @@ local ki_table = {
   , { "『 超音段成分 』", "⁵¹" }
   , { "　ˈ(pw)　ˌ(dpw/yw/dyw)　ː(dfkdf/dkd/dfdf/dfhdf)　ˑ(dfk/dk/df)", "⁵²" }
   , { "　◌̆(u'') ˘(uw/ufh)　|(iw)　‖(iwiw)", "⁵³" }
-  , { "　.(daw) ·(aw)　‿(duw) ◌͜(du/dufh'')", "⁵⁴" }
+  , { "　.(daw) ·(aw)　‿(duw) ◌͜(du''/dufh'')", "⁵⁴" }
   , { "────────────  ", "⁵⁵" }
   , { "『 音階和音調 』", "⁵⁶" }
   , { "　◌̋(pp'') ˝(pwpw)　◌́(p'') ˊ(pw)　◌̄(e'') ˉ(ew)", "⁵⁷" }
