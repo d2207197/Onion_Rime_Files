@@ -5,7 +5,7 @@
 schema:
   schema_id: dif1_la
   name: ✹新拉丁_dif1✹
-  version: "202404"
+  version: "202405"
   author:
     - 『洋蔥』
   description: |
@@ -53,7 +53,7 @@ speller:
 translator:
   dictionary: dif1_la.extended
   prism: dif1_la
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
 #  preedit_format:

@@ -4,7 +4,7 @@
 schema:
   schema_id: easy_en_upper
   name: Easy English（英漢字典）-Upper
-  version: "202301"
+  version: "202405"
   author:
     - 洋蔥
   description:
@@ -60,7 +60,7 @@ speller:
 
 translator:
   dictionary: easy_en_upper
-  enable_encoder: false
+  # enable_encoder: false
   # encode_commit_history: false
   enable_sentence: false
   enable_completion: false

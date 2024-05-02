@@ -4,7 +4,7 @@
 schema:
   schema_id: ocm_mixin_fullshape
   name: ✹全形字母_新_蝦米✹
-  version: "202404"
+  version: "202405"
   author:
     - 『洋蔥』
   description: |
@@ -53,7 +53,7 @@ speller:
 translator:
   dictionary: fullshape.extended
   prism: ocm_mixin_fullshape
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   preedit_format:

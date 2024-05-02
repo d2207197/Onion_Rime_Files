@@ -4,7 +4,7 @@
 schema:
   schema_id: allbpm
   name: ❃注音文❃
-  version: "202404"
+  version: "202405"
   author:
     - 『洋蔥』
   description: |
@@ -56,7 +56,7 @@ speller:
 
 translator:
   dictionary: allbpm
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false #新版有長詞補全，用此關閉
   enable_user_dict: false #true
   preedit_format:

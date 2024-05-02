@@ -4,7 +4,7 @@
 schema:
   schema_id: ocm_mixin_cyrillic
   name: ✹西里爾字母_新_蝦米✹
-  version: "202404"
+  version: "202405"
   author:
     - 『洋蔥』
   description: |
@@ -54,7 +54,7 @@ speller:
 translator:
   dictionary: cyrillic.extended
   prism: ocm_mixin_cyrillic
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   preedit_format:

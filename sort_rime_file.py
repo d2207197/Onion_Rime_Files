@@ -507,6 +507,8 @@ shutil.copyfile("./allfiles/Mount_bopomo.schema.yaml", "./sort_rime/ocm/ocm_moun
 
 shutil.copyfile("./allfiles/Mount_ocm.extended.dict.yaml", "./sort_rime/ocm/ocm_mount/Mount_ocm.extended.dict.yaml")
 shutil.copyfile("./allfiles/Mount_ocm.schema.yaml", "./sort_rime/ocm/ocm_mount/Mount_ocm.schema.yaml")
+shutil.copyfile("./allfiles/Mount_ocm_encoder.extended.dict.yaml", "./sort_rime/ocm/ocm_mount/Mount_ocm_encoder.extended.dict.yaml")
+shutil.copyfile("./allfiles/Mount_ocm_encoder.schema.yaml", "./sort_rime/ocm/ocm_mount/Mount_ocm_encoder.schema.yaml")
 shutil.copyfile("./allfiles/element_ocm.yaml", "./sort_rime/ocm/ocm_mount/element_ocm.yaml")
 
 shutil.copyfile("./allfiles/punct_ovff.dict.yaml", "./sort_rime/ocm/ocm_mount/punct_ovff.dict.yaml")
@@ -519,6 +521,7 @@ shutil.copyfile("./allfiles/terra_pinyin_onion.dict.yaml", "./sort_rime/ocm/ocm_
 shutil.copyfile("./allfiles/ocm_tc_mc.dict.yaml", "./sort_rime/ocm/ocm_mount/ocm_tc_mc.dict.yaml")
 shutil.copyfile("./allfiles/uniabcdword.dict.yaml", "./sort_rime/ocm/ocm_mount/uniabcdword.dict.yaml")
 shutil.copyfile("./allfiles/kanaword.dict.yaml", "./sort_rime/ocm/ocm_mount/kanaword.dict.yaml")
+shutil.copyfile("./allfiles/phrases.ocmtc_essay_mc.dict.yaml", "./sort_rime/ocm/ocm_mount/phrases.ocmtc_essay_mc.dict.yaml")
 
 shutil.copyfile("./allfiles/rime.lua", "./sort_rime/ocm/ocm_mount/rime.lua")
 shutil.copytree("./allfiles/lua", "./sort_rime/ocm/ocm_mount/lua")

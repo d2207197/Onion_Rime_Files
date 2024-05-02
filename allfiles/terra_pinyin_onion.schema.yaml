@@ -4,7 +4,7 @@
 schema:
   schema_id: terra_pinyin_onion
   name: "★地球拼音(洋蔥mix-in版)★"
-  version: "202404"
+  version: "202405"
   author:
     - 佛振 <chen.sst@gmail.com>
     - 『洋蔥』
@@ -173,7 +173,7 @@ speller:
 
 translator:
   dictionary: terra_pinyin_onion.extended
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false #新版有長詞補全，用此關閉
   enable_user_dict: true
   prism: terra_pinyin_onion
@@ -319,7 +319,7 @@ top_reverse_lookup:
 
 reverse_lookup:
   dictionary: cangjie5
-  enable_charset_filter: false
+  # enable_charset_filter: false
   # enable_encoder: false
   # encode_commit_history: false
   # enable_sentence: false

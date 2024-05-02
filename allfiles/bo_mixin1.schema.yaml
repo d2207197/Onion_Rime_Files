@@ -4,7 +4,7 @@
 schema:
   schema_id: bo_mixin1
   name: "☆注音(洋蔥mix-in版 1 )☆〔拉日 ˇ  ˋ 韓〕"
-  version: "202404"
+  version: "202405"
   author:
     - 『洋蔥』
   description: |
@@ -110,7 +110,7 @@ engine:
     - abc_segmentor
     - affix_segmentor@emoji_series
     - affix_segmentor@easy_en
-    - affix_segmentor@easy_en_upper
+    # - affix_segmentor@easy_en_upper
     # - affix_segmentor@easy_en_script
     - affix_segmentor@japan
     - affix_segmentor@cyr2
@@ -411,7 +411,7 @@ speller:
 translator:
   dictionary: bo_mixin.extended
   prism: bo_mixin1
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false #新版有長詞補全，用此關閉
   enable_user_dict: true
   # initial_quality: 1
@@ -421,7 +421,7 @@ translator:
 easy_en:
   tag: easy_en
   dictionary: easy_en_lower #easy_en_super
-  enable_encoder: false
+  # enable_encoder: false
   # encode_commit_history: false
   enable_sentence: false
   enable_completion: true
@@ -466,7 +466,7 @@ easy_en:
 easy_en_upper:
   tag: easy_en_upper
   dictionary: easy_en_upper
-  enable_encoder: false
+  # enable_encoder: false
   # encode_commit_history: false
   enable_sentence: false
   enable_completion: false
@@ -489,7 +489,7 @@ e_reverse_lookup:
 japan:
   tag: japan
   dictionary: jpnin1.extended
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "4"
@@ -521,7 +521,7 @@ japan:
 cyr2:
   tag: cyr2
   dictionary: cyrillic.extended
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "6"
@@ -543,7 +543,7 @@ cyr2:
 gr2:
   tag: gr2
   dictionary: greek.extended
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "7"
@@ -560,7 +560,7 @@ fs2:
   tag: fs2
   dictionary: fullshape.extended
   prism: fullshape
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "]["
@@ -576,7 +576,7 @@ fs2:
 all_bpm:
   tag: all_bpm
   dictionary: allbpm
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: false
   prefix: "';"
@@ -602,7 +602,7 @@ all_bpm:
 reverse2_lookup:
   tag: reverse2_lookup
   dictionary: cangjie5
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "="
@@ -651,8 +651,8 @@ bpm_reverse_lookup:
 emoji_series:
   tag: emoji_series
   dictionary: symbols_bpmf
-  enable_charset_filter: false
-  enable_encoder: false
+  # enable_charset_filter: false
+  # enable_encoder: false
   # encode_commit_history: false
   enable_sentence: false
   enable_completion: false

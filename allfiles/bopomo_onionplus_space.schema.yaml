@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onionplus_space
   name: "☆注音(洋蔥plus版 space )☆〔空白不直出〕"
-  version: "202404"
+  version: "202405"
   author:
     - 『洋蔥』
   description: |
@@ -100,7 +100,7 @@ engine:
     - affix_segmentor@emoji_series
     - affix_segmentor@reverse2_lookup
     - affix_segmentor@easy_en
-    - affix_segmentor@easy_en_upper
+    # - affix_segmentor@easy_en_upper
     # - affix_segmentor@easy_en_script
     - affix_segmentor@european
     - affix_segmentor@japan
@@ -254,7 +254,7 @@ speller:
 translator:
   dictionary: bopomo_onionplus.extended
   prism: bopomo_onionplus_space
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false #新版有長詞補全，用此關閉
   enable_user_dict: true
   # initial_quality: 0
@@ -278,7 +278,7 @@ translator:
 reverse2_lookup:
   tag: reverse2_lookup
   dictionary: cangjie5
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "="
@@ -326,7 +326,7 @@ bpm_reverse_lookup:
 easy_en:
   tag: easy_en
   dictionary: easy_en_lower #easy_en_super
-  enable_encoder: false
+  # enable_encoder: false
   # encode_commit_history: false
   enable_sentence: false
   enable_completion: true
@@ -374,7 +374,7 @@ easy_en:
 easy_en_upper:
   tag: easy_en_upper
   dictionary: easy_en_upper
-  enable_encoder: false
+  # enable_encoder: false
   # encode_commit_history: false
   enable_sentence: false
   enable_completion: false
@@ -400,7 +400,7 @@ e_reverse_lookup:
 european:
   tag: european
   dictionary: latinin1.extended
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "4"
@@ -418,7 +418,7 @@ european:
 korea:
   tag: korea
   dictionary: hangeul_hnc.extended
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "7"
@@ -461,7 +461,7 @@ korea:
 japan:
   tag: japan
   dictionary: jpnin1.extended
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "6"
@@ -491,7 +491,7 @@ japan:
 gr2:
   tag: gr2
   dictionary: greek.extended
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "77"
@@ -508,7 +508,7 @@ gr2:
 cyr2:
   tag: cyr2
   dictionary: cyrillic.extended
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "66"
@@ -532,7 +532,7 @@ fs2:
   tag: fs2
   dictionary: fullshape.extended
   prism: fullshape
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "]["
@@ -549,7 +549,7 @@ fs2:
 all_bpm:
   tag: all_bpm
   dictionary: allbpm
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: false
   prefix: "';"
@@ -568,8 +568,8 @@ all_bpm:
 emoji_series:
   tag: emoji_series
   dictionary: symbols_bpmf
-  enable_charset_filter: false
-  enable_encoder: false
+  # enable_charset_filter: false
+  # enable_encoder: false
   # encode_commit_history: false
   enable_sentence: false
   enable_completion: false

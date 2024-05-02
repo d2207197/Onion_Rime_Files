@@ -9,7 +9,7 @@ schema:
 
   name: "❖超級混合蝦米(mix-in)❖"
   schema_id: ocm_mixin
-  version: "202404"
+  version: "202405"
   dependencies:
     - punct_ovff
     - symbols_ocm
@@ -124,12 +124,12 @@ engine:
     - affix_segmentor@pt
     - affix_segmentor@emoji_series
     - affix_segmentor@easy_en
-    - affix_segmentor@easy_en_upper
+    # - affix_segmentor@easy_en_upper
     # - affix_segmentor@easy_en_script
     - affix_segmentor@japan
     - affix_segmentor@reverse2_lookup
     - affix_segmentor@reverse3_lookup
-    - affix_segmentor@reverse3_lookup_extra
+    # - affix_segmentor@reverse3_lookup_extra
     - affix_segmentor@all_bpm
     - affix_segmentor@gr
     - affix_segmentor@cyr
@@ -312,8 +312,8 @@ speller:
 pt:
   tag: pt
   dictionary: punct_ovff
-  enable_charset_filter: false
-  enable_encoder: false
+  # enable_charset_filter: false
+  # enable_encoder: false
   # encode_commit_history: false
   enable_sentence: false
   enable_completion: false
@@ -337,7 +337,7 @@ pt_reverse_lookup:
 translator:
   dictionary: ocm_mixin.extended
   prism: ocm_mixin
-  enable_charset_filter: false
+  # enable_charset_filter: false
   # enable_encoder: false
   # encode_commit_history: false
   # enable_sentence: false
@@ -350,7 +350,7 @@ translator:
 ####################### 新單字固頂功能 #######################
 top_fixed:
   __include: /translator
-  enable_encoder: false
+  # enable_encoder: false
   # encode_commit_history: false
   enable_sentence: false
   # sentence_over_completion: false
@@ -444,7 +444,7 @@ top_reverse_lookup:
 easy_en:
   tag: easy_en
   dictionary: easy_en_lower #easy_en_super
-  enable_encoder: false
+  # enable_encoder: false
   # encode_commit_history: false
   enable_sentence: false
   enable_completion: true
@@ -488,7 +488,7 @@ easy_en:
 easy_en_upper:
   tag: easy_en_upper
   dictionary: easy_en_upper
-  enable_encoder: false
+  # enable_encoder: false
   # encode_commit_history: false
   enable_sentence: false
   enable_completion: false
@@ -511,7 +511,7 @@ e_reverse_lookup:
 japan:
   tag: japan
   dictionary: jpnin1.extended
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "',"
@@ -528,7 +528,7 @@ gr:
   tag: gr
   dictionary: greek.extended
   prism: ocm_mixin_greek
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "'["
@@ -544,7 +544,7 @@ cyr:
   tag: cyr
   dictionary: cyrillic.extended
   prism: ocm_mixin_cyrillic
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "']"
@@ -565,7 +565,7 @@ fs:
   tag: fs
   dictionary: fullshape.extended
   prism: ocm_mixin_fullshape
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "'="
@@ -644,7 +644,7 @@ fs_reverse_lookup: #該反查濾鏡名
 reverse2_lookup:
   tag: reverse2_lookup
   dictionary: "Mount_bopomo.extended"
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "';"
@@ -667,11 +667,11 @@ ovff_reverse_lookup:
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 ################################### 使用嘸蝦米反查注音碼 ######################################
 reverse3_lookup:
-  # __include: /top_fixed
+  # __include: /top_fixed  # user_dict 詞彙會混到 abc 中，有可能不顯示，也可能顯示影響。
   tag: reverse3_lookup
   dictionary: Mount_ocm.extended
-  enable_charset_filter: false
-  enable_encoder: false
+  # enable_charset_filter: false
+  # enable_encoder: false
   # encode_commit_history: false
   enable_sentence: false
   enable_completion: false
@@ -690,16 +690,18 @@ reverse3_lookup:
     - xform/\|/  /
 
 reverse3_lookup_extra:
-  # __include: /top_fixed
-  tag: reverse3_lookup_extra
-  dictionary: Mount_ocm.extended
-  enable_charset_filter: false
+  # __include: /top_fixed  # user_dict 詞彙會混到 abc 中，有可能不顯示，也可能顯示影響。
+  __include: /reverse3_lookup  # 使用此條目，選字時才不會出現 bug！不然會 reverse3_lookup 和 reverse3_lookup_extra 會被認定分開狀態。
+  # tag: reverse3_lookup_extra
+  # dictionary: Mount_ocm.extended
+  # enable_charset_filter: false
   # enable_encoder: false
   # encode_commit_history: false
   # enable_sentence: false
-  enable_completion: false
+  # enable_completion: false
   enable_user_dict: true
-  # initial_quality: 1
+  # strict_spelling: false #true
+  initial_quality: 1
   preedit_format:
     - xform/^/《查注音》/
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
@@ -740,7 +742,7 @@ phonetic_reverse_lookup:
 all_bpm:
   tag: all_bpm
   dictionary: allbpm
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: false
   prefix: "';'"
@@ -755,8 +757,8 @@ all_bpm:
 emoji_series:
   tag: emoji_series
   dictionary: symbols_ocm
-  enable_charset_filter: false
-  enable_encoder: false
+  # enable_charset_filter: false
+  # enable_encoder: false
   # encode_commit_history: false
   enable_sentence: false
   enable_completion: false

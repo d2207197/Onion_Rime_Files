@@ -4,7 +4,7 @@
 schema:
   schema_id: bopomo_onion_double
   name: "☆注音(洋蔥雙拼版)☆"
-  version: "202404"
+  version: "202405"
   author:
     - 『洋蔥』
   description: |
@@ -233,7 +233,7 @@ speller:
 translator:
   dictionary: bopomo_onion_double.extended
   prism: bopomo_onion_double
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false #新版有長詞補全，用此關閉
   enable_user_dict: true
   # initial_quality: 0
@@ -311,8 +311,8 @@ emoji_series:
   tag: emoji_series
   dictionary: symbols_bpmf
   prism: symbols_bpmf_double
-  enable_charset_filter: false
-  enable_encoder: false
+  # enable_charset_filter: false
+  # enable_encoder: false
   # encode_commit_history: false
   enable_sentence: false
   enable_completion: false
@@ -328,7 +328,7 @@ emoji_series:
 reverse2_lookup:
   tag: reverse2_lookup
   dictionary: cangjie5
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "="

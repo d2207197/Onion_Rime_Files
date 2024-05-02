@@ -5,7 +5,7 @@
 schema:
   schema_id: punct_ovff # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
   name: 單符號_蝦米 # 將在〔輸入法選單〕中顯示
-  version: "202404" # 版本說明，這是文字類型而非整數或小數，如 "1.2.3"
+  version: "202405" # 版本說明，這是文字類型而非整數或小數，如 "1.2.3"
   author:
     - 製作人
   description: |
@@ -15,9 +15,9 @@ switches: #選單f4
   - name: ascii_mode #中英文轉換開關。預設1爲英文，0爲中文，快速鍵  shift
     reset: 0
     states: [ 中文, 英文 ]
-  - name: full_shape #- name:full_shape是全角符號／半角符號開關。0爲半角，1爲全角, 快速鍵  shift+空格
-    reset: 0
-    states: [ 半形, 全形 ]
+  # - name: full_shape #- name:full_shape是全角符號／半角符號開關。0爲半角，1爲全角, 快速鍵  shift+空格
+  #   reset: 0
+  #   states: [ 半形, 全形 ]
 
 engine:
   processors:
@@ -50,8 +50,8 @@ speller:
 
 translator:
   dictionary: punct_ovff
-  enable_charset_filter: false #〔僅table_translator有效〕是否開啓字符集過濾，是true否false
-  enable_encoder: false #〔僅table_translator有效?〕是否開啓自動造詞，是true否false
+  # enable_charset_filter: false #〔僅table_translator有效〕是否開啓字符集過濾，是true否false
+  # enable_encoder: false #〔僅table_translator有效?〕是否開啓自動造詞，是true否false
   # encode_commit_history: false #〔僅table_translator有效〕是否對已上屛詞自動成詞，是true否false
   enable_sentence: false #是否開啓自動造句，是true否false (關閉碼表輸入法連打)(自動造詞時有太極圖)〔?僅table_translator有效?〕
   enable_completion: false #〔僅table_translator有效〕默認開啓逐鍵提示。若要只出精確匹配輸入碼的候選字，可關閉這一選項。關閉用戶詞典和字頻調整。提前顯示尚未輸入完整碼的字

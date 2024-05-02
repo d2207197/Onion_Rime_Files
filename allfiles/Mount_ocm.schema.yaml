@@ -1,4 +1,3 @@
-#錯誤查看%TEMP%\rime.weasel
 # Rime schema settings
 # encoding: utf-8
 # 《設定頁》
@@ -6,7 +5,7 @@
 schema:
   schema_id: Mount_ocm
   name: "❖蝦米(單出-反查專用)❖"
-  version: "202404"
+  version: "202405"
   author:
     - 洋蔥
   description: |
@@ -63,7 +62,7 @@ engine:
     - affix_segmentor@emoji_series
     - affix_segmentor@reverse2_lookup
     - affix_segmentor@reverse3_lookup
-    - affix_segmentor@reverse3_lookup_extra
+    # - affix_segmentor@reverse3_lookup_extra
     - punct_segmentor
     - fallback_segmentor
   translators:
@@ -99,7 +98,7 @@ speller:
 translator:
   dictionary: Mount_ocm.extended
   enable_charset_filter: true
-  enable_encoder: false
+  # enable_encoder: false
   # encode_commit_history: false
   enable_sentence: false
   enable_completion: false
@@ -122,8 +121,8 @@ tr_reverse_lookup:
 pt:
   tag: pt
   dictionary: punct_ovff
-  enable_charset_filter: false
-  enable_encoder: false
+  # enable_charset_filter: false
+  # enable_encoder: false
   # encode_commit_history: false
   enable_sentence: false
   enable_completion: false
@@ -144,7 +143,7 @@ tr2_reverse_lookup:
 reverse2_lookup:
   tag: reverse2_lookup
   dictionary: "Mount_bopomo.extended"
-  enable_charset_filter: false
+  # enable_charset_filter: false
   enable_completion: false
   enable_user_dict: true
   prefix: "';"
@@ -167,9 +166,16 @@ ovff_reverse_lookup:
     - "xlit|abcdefghijklmnopqrstuvwxyz|ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ|"
 
 reverse3_lookup:
-  __include: /translator
+  # __include: /translator  # user_dict 詞彙會混到 abc 中，有可能不顯示，也可能顯示影響。
   tag: reverse3_lookup
-  enable_charset_filter: false
+  dictionary: Mount_ocm.extended
+  # enable_charset_filter: false #true
+  # enable_encoder: false
+  # encode_commit_history: false
+  enable_sentence: false
+  enable_completion: false
+  # sentence_over_completion: false
+  enable_user_dict: false
   prefix: ";'"
   suffix: "'"
   tips: "《查注音》▶"
@@ -184,10 +190,17 @@ reverse3_lookup:
     - xform/`/  /
 
 reverse3_lookup_extra:
-  __include: /translator
-  tag: reverse3_lookup_extra
-  enable_charset_filter: false
+  # __include: /translator  # user_dict 詞彙會混到 abc 中，有可能不顯示，也可能顯示影響。
+  __include: /reverse3_lookup  # 使用此條目，選字時才不會出現 bug！不然會 reverse3_lookup 和 reverse3_lookup_extra 會被認定分開狀態。
+  # tag: reverse3_lookup_extra
+  # dictionary: Mount_ocm.extended
+  # enable_charset_filter: false #true
+  # enable_encoder: false
+  # encode_commit_history: false
+  # enable_sentence: false
+  # enable_completion: false
   enable_user_dict: true
+  # strict_spelling: false #true
   initial_quality: 1
   preedit_format:
     - xform/^/《查注音》/
@@ -230,8 +243,8 @@ phonetic_reverse_lookup:
 emoji_series:
   tag: emoji_series
   dictionary: symbols_ocm
-  enable_charset_filter: false
-  enable_encoder: false
+  # enable_charset_filter: false
+  # enable_encoder: false
   # encode_commit_history: false
   enable_sentence: false
   enable_completion: false
@@ -257,18 +270,26 @@ key_binder:
     - {accept: minus, send: minus, when: paging}
     - {accept: equal, send: equal, when: has_menu}
     - {accept: equal, send: equal, when: paging}
+### 翻頁時，回復到 composing 狀態 ###
+    # - {accept: Tab, send: Shift+Left, when: paging}
+### 切分移位 ###
+    - {accept: Up, send: Left, when: composing} #左移一整個字
+    - {accept: Up, send: Up, when: paging} #修正上條目出現的bug
+    - {accept: Left, send: KP_Left, when: composing} #左移一個注音
 #######################################
     - {accept: Left, send: Page_Up, when: paging}
     - {accept: Right, send: Page_Down, when: paging}
     # - {accept: Up, send: Page_Up, when: paging} #橫式選單用
     # - {accept: Down, send: Page_Down, when: paging} #橫式選單用
-    # - {accept: Left, send: Left, when: has_menu} #橫式選單用
-    # - {accept: Right, send: Right, when: has_menu} #橫式選單用
-    - {accept: Shift+Up, send: Page_Up, when: has_menu}
-    - {accept: Shift+Down, send: Page_Down, when: has_menu}
-    - {accept: Shift+Tab, send: Page_Up, when: has_menu}
-    - {accept: Shift+space, send: Page_Down, when: has_menu}
-    - {accept: Tab, send: Page_Down, when: has_menu}
+    # - {accept: Left, send: Left, when: has_menu} #橫式選單用 #send: Shift+Up
+    # - {accept: Right, send: Right, when: has_menu} #橫式選單用 #send: Shift+Down #send: Right
+    - {accept: Shift+Up, send: Page_Up, when: paging} #選字時「Shift」+「上」翻頁。
+    # - {accept: Shift+Up, send: Page_Up, when: has_menu} #選字時「Shift」+「上」翻頁。
+    - {accept: Shift+Down, send: Page_Down, when: has_menu} #選字時「Shift」+「下」翻頁。
+    # - {accept: Shift+C, send: Page_Up, when: paging}
+    - {accept: Shift+Tab, send: Page_Up, when: has_menu} #選字時可用「Shift」+「tab」翻頁。
+    - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時可用「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
+    - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
 #######################################
     # - {accept: Return, send: space, when: has_menu} #return直出
     # - {accept: KP_Enter, send: space, when: has_menu} #KP_Enter直出
