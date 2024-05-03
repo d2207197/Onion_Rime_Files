@@ -74,9 +74,9 @@ zh_cn:
 #   tags: [ abc ]
 ################################### 選單 ######################################
 menu:
-  alternative_select_keys: "QAZWSXEDCRFV3467"  #刻意讓「3467」置後，使聲調後按「3467」不上屏選字。
+  # alternative_select_keys: "QAZWSXEDCRFV3467"  #刻意讓「3467」置後，使聲調後按「3467」不上屏選字。
   # alternative_select_keys: "QAZWSXEDCRFV"
-  # alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
+  alternative_select_labels: [ QY, AH, ZN, WU, SJ, XM ]
   page_size: 6
 ################################### 拼寫 ######################################
 speller:
