@@ -3,7 +3,17 @@
 執行時記憶體會暴增
 --]]
 local function Version(env)
-  if type(env) == "table" and env.engine then
+
+  -- if KeyEvent(0x41,0):repr() == "A" then  -- 如果非該版，會報錯！
+  if KeyEvent("A",1):repr() == "Shift+A" then
+    return 321
+  elseif Component and Component.TableTranslator then
+    return 287
+  elseif UserDb and TableDb then
+    return 240
+  elseif UserDb then
+    return 220
+  elseif type(env) == "table" and env.engine then
     if env.engine.context.composition:toSegmentation().get_segments then
       return 215
     end
