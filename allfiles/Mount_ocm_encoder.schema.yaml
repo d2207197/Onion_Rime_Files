@@ -7,7 +7,7 @@ __include: Mount_ocm.schema:/
 
 schema:
   schema_id: Mount_ocm_encoder
-  name: "❖蝦米_造詞(單出：中文/蝦米樂園/假名)❖"
+  name: "❖蝦米(單出-造詞)❖"
   version: "202405"
 
 # switches/+:

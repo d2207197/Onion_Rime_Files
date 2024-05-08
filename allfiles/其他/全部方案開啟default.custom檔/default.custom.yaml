@@ -23,6 +23,7 @@ patch:
     - schema: cangjie5
     - schema: Mount_bopomo
     # - schema: Mount_ocm
+    # - schema: Mount_ocm_encoder
 ###########################
     - schema: hangeul
     - schema: hangeul_hnc
