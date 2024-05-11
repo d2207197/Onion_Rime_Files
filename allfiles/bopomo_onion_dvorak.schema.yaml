@@ -139,7 +139,7 @@ speller:
     - derive/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])([aoeEAIOUMNKG])/$3$1$2/ #[R]
     - derive/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])([aoeEAIOUMNKG])/$2$3$1/ #[R]
     - derive/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])([aoeEAIOUMNKG])/$1$3$2/ #[R]
-    - 'xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR12345|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|'
+    - "xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR12345|1'a;2,oq.ejpuk5yixfdbghm8ctw9rnv0lsz[ 6347|"
 ################################### 主翻譯器 ###################################
 translator:
   dictionary: bopomo_onion.extended
@@ -295,10 +295,10 @@ key_binder:
     - {accept: Shift+Down, send: Page_Down, when: has_menu} #選字時「Shift」+「下」翻頁。
 #關#    - {accept: Shift+Tab, send: Page_Up, when: paging} #選字時「Shift」+「tab」翻頁。
 #關#    - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
-    - {accept: Shift+C, send: Page_Up, when: has_menu}
+    - {accept: Shift+J, send: Page_Up, when: has_menu}
     - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
-    - {accept: Shift+I, send: Page_Up, when: has_menu}
-    - {accept: Shift+K, send: Page_Down, when: has_menu}
+    - {accept: Shift+R, send: Page_Up, when: has_menu}
+    - {accept: Shift+N, send: Page_Down, when: has_menu}
 #左邊選字
     - {accept: Shift+G, send: Control+1, when: has_menu}
     - {accept: Shift+H, send: Control+2, when: has_menu}
@@ -325,10 +325,10 @@ key_binder:
 #關#    - {accept: space, send: Escape, when: composing} #空碼時，按空格清除
 #關#    - {accept: space, send: space, when: has_menu} #非空碼時，空白還是空白
 ### 補一聲和上屏 raw_input （ paging 時，空白鍵無法輸出一聲 ） ###
-    - {accept: Shift+D, send: space, when: has_menu}
-    - {accept: Shift+L, send: space, when: has_menu}
-    - {accept: Shift+E, send: Shift+Return, when: composing}
-    - {accept: Shift+O, send: Shift+Return, when: composing}
+#    - {accept: Shift+E, send: space, when: has_menu}
+    - {accept: Shift+S, send: space, when: has_menu}
+#    - {accept: Shift+E, send: Shift+Return, when: composing}
+#    - {accept: Shift+L, send: Shift+Return, when: composing}
 ### 上屏 preedit（注音文）編碼 ###
     - {accept: Shift+F, send: Control+Return, when: has_menu}
 ### 刪除鍵 ###
@@ -338,13 +338,13 @@ key_binder:
     # - {accept: backslash, send: Shift+BackSpace, when: has_menu} #「\」鍵位刪除整組拼音字符（一個字）。
 #關#    - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
 ### 另設快捷刪除鍵 ###
-    - {accept: Shift+R, send: BackSpace, when: composing}
-    - {accept: Shift+P, send: BackSpace, when: composing}
-    - {accept: Shift+T, send: Delete, when: composing}
-    - {accept: Shift+G, send: Escape, when: composing}
+#    - {accept: Shift+R, send: BackSpace, when: composing}
+    - {accept: Shift+V, send: BackSpace, when: composing}
+    - {accept: Shift+Z, send: Delete, when: composing}
+#    - {accept: Shift+G, send: Escape, when: composing}
 ### 另設快捷鍵 ###
-    - {accept: Shift+V, send: Home, when: composing}
-    - {accept: Shift+B, send: End, when: composing}
+#    - {accept: Shift+V, send: Home, when: composing}
+#    - {accept: Shift+B, send: End, when: composing}
 ### 功能快捷鍵 ###
     # - {accept: Return, send: space, when: has_menu}
 ### 避聲調重複按 ###
