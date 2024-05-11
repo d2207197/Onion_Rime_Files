@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: ocm_mixin_jp
-version: "202009"
+version: "202308"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -270,6 +270,33 @@ use_preset_vocabulary: false
 #ー	@ee#更動排序
 #ー	@ee#更動排序
 ### 『符號遮屏』（保留參考）結束 ###
+### 濁点和半濁点開始 ###
+゜	handakuten,
+゛	dakuten,
+゜	ten,
+゛	ten,
+゜	ov,
+゛	bv,
+゜	handakuten.
+゛	dakuten.
+゜	ten.
+゛	ten.
+# ゜	ov. #正則有轉寫
+# ゛	bv. #正則有轉寫
+### 組合字符
+゚	handakuten,,
+゙	dakuten,,
+゚	ten,,
+゙	ten,,
+゚	ov,,
+゙	bv,,
+゚	handakuten..
+゙	dakuten..
+゚	ten..
+゙	ten..
+゚	ov..
+゙	bv..
+### 濁点和半濁点結束 ###
 ##### 『符號』結束 #####
 ##### 『基本平假名』開始 #####
 あ	a,
@@ -385,7 +412,7 @@ use_preset_vocabulary: false
 ぽ	po,
 ##
 ゔ	vu,
-ゔ	va,
+# ゔ	va, #MAC日語輸入法沒有，精簡！
 ゑ	we,
 ゑ	e,
 ゑ	wye,
@@ -543,8 +570,10 @@ use_preset_vocabulary: false
 ヷ	va.
 ヰ	wi.
 ヰ	i.
+ヰ	wyi.
 ヱ	we.
 ヱ	e.
+ヱ	wye.
 ##
 ヸ	vi.
 ヹ	ve.
@@ -913,7 +942,7 @@ use_preset_vocabulary: false
 き゚ゃ	ngya,
 き゚ゅ	ngyu,
 き゚ょ	ngyo,
-##
+### 特殊讀音拼法 ###
 ぎぃ	gyi,
 ぎぇ	gye,
 しぃ	syi,
@@ -943,7 +972,7 @@ use_preset_vocabulary: false
 うぃ	wi,
 うぇ	we,
 ## 202002補充
-ちぃ	thi,
+# ちぃ	thi, #MAC日語輸入法沒有，精簡！
 ぢぃ	dyi,
 ぢぇ	dye,
 つぁ	tsa,
@@ -978,6 +1007,87 @@ use_preset_vocabulary: false
 びゎ	bwa,
 すぁ	swa,
 ずゎ	zwa,
+## 202202補充
+# うぉ	wo, #MAC日語輸入法沒有，精簡！
+ゔぁ	va,
+ゔぃ	vi,
+ゔぇ	ve,
+ゔぉ	vo,
+# すぃ	si, #MAC日語輸入法沒有，精簡！
+# ずぃ	zi, #MAC日語輸入法沒有，精簡！
+ずぃ	zwi,
+しぇ	she,
+じぇ	je,
+# てぃ	ti, #MAC日語輸入法沒有，精簡！
+# とぅ	tu, #MAC日語輸入法沒有，精簡！
+# でぃ	di, #MAC日語輸入法沒有，精簡！
+# どぅ	du, #MAC日語輸入法沒有，精簡！
+すゅ	syu,
+ずゅ	zyu,
+てゅ	tyu,
+# てゅ	tu, #MAC日語輸入法沒有，精簡！
+でゅ	dvyu,
+#でゅ	dyu, #用正則轉寫
+ふゅ	fyu,
+# ふゅ	fu, #MAC日語輸入法沒有，精簡！
+ふょ	fyo,
+くゎ	kwa,
+くぃ	kwi,
+くぇ	kwe,
+くぉ	kwo,
+ぐゎ	gwa,
+ぐぃ	gwi,
+ぐぇ	gwe,
+ぐぉ	gwo,
+いぃ	yi,
+# うぁ	wa, #MAC日語輸入法沒有，精簡！
+# うぅ	wu, #MAC日語輸入法沒有，精簡！
+うゅ	wyu,
+ゔゃ	vya,
+ゔゅ	vyu,
+ゔぃぇ	vye,
+ゔょ	vyo,
+きぇ	kye,
+くぁ	kwa,
+ぐぁ	gwa,
+つゅ	tsyu,
+びぇ	bye,
+ふゃ	fya,
+ふぃぇ	fye,
+# ほぅ	hu, #MAC日語輸入法沒有，精簡！
+ほぅ	hwu,
+うぁ	wha,
+うぃ	whi,
+うぅ	whu,
+うぇ	whe,
+うぉ	who,
+くゃ	qya,
+くぃ	qyi,
+くゅ	qyu,
+くぇ	qye,
+くょ	qyo,
+くぁ	qwa,
+くぃ	qwi,
+くぅ	qwu,
+くぅ	kwu,
+くぇ	qwe,
+くぉ	qwo,
+ぐぅ	gwu,
+すぃ	swi,
+すぅ	swu,
+すぇ	swe,
+すぉ	swo,
+ふぃ	fyi,
+ふぇ	fye,
+ふぁ	fwa,
+ふぃ	fwi,
+ふぅ	fwu,
+ふぇ	fwe,
+ふぉ	fwo,
+ゔぃ	vyi,
+ゔぇ	vye,
+きぃ	kyi,
+びぃ	byi,
 ##### 日語『補充平假名』結束 #####
 ####### 日語『補充片假名』開始 #######
 ### 日文拗音片假名 ###
@@ -1314,21 +1424,21 @@ use_preset_vocabulary: false
 イェ	ye.
 ウィ	wi.
 ウェ	we.
-ウォ	wo.
+# ウォ	wo. #MAC日語輸入法沒有，精簡！
 #ヴァ(可怱略)#va
 ヴィ	vi.
-#ヴ	vu.
 ヴェ	ve.
 ヴォ	vo.
-スィ	si.
-ズィ	zi.
+# スィ	si. #MAC日語輸入法沒有，精簡！
+# ズィ	zi. #MAC日語輸入法沒有，精簡！
+ズィ	zwi.
 シェ	she.
 ジェ	je.
 チェ	che.
-ティ	ti.
-トゥ	tu.
-ディ	di.
-ドゥ	du.
+# ティ	ti. #MAC日語輸入法沒有，精簡！
+# トゥ	tu. #MAC日語輸入法沒有，精簡！
+# ディ	di. #MAC日語輸入法沒有，精簡！
+# ドゥ	du. #MAC日語輸入法沒有，精簡！
 ツァ	tsa.
 ツィ	tsi.
 ファ	fa.
@@ -1341,12 +1451,12 @@ use_preset_vocabulary: false
 ズュ	zyu.
 テュ	tyu.
 ## 下一個20160930新加
-テュ	tu.
+# テュ	tu. #MAC日語輸入法沒有，精簡！
 デュ	dvyu.
 # デュ	dyu. #用正則轉寫
 フュ	fyu.
 ## 下一個20160930新加
-フュ	fu.
+# フュ	fu. #MAC日語輸入法沒有，精簡！
 フョ	fyo.
 クヮ	kwa.
 クィ	kwi.
@@ -1358,8 +1468,8 @@ use_preset_vocabulary: false
 グォ	gwo.
 ### 日文拗音外國讀音片假名(二) ###
 イィ	yi.
-ウァ	wa.
-ウゥ	wu.
+# ウァ	wa. #MAC日語輸入法沒有，精簡！
+# ウゥ	wu. #MAC日語輸入法沒有，精簡！
 ウュ	wyu.
 ヴァ	va.
 ヴャ	vya.
@@ -1377,7 +1487,8 @@ use_preset_vocabulary: false
 ピェ	pye.
 フャ	fya.
 フィェ	fye.
-ホゥ	hu.
+# ホゥ	hu. #MAC日語輸入法沒有，精簡！
+ホゥ	hwu.
 ミェ	mye.
 リェ	rye.
 ## 以要下一個新補充
@@ -1453,5 +1564,12 @@ use_preset_vocabulary: false
 リィ	lyi.
 ヴィ	vyi.
 ヴェ	vye.
+## 202202補充
+# チィ	thi. #MAC日語輸入法沒有，精簡！
+プヮ	pwa.
+ビヮ	bwa.
+ズヮ	zwa.
+キィ	kyi.
+ビィ	byi.
 ##### 日語『補充片假名』結束 #####
 ####### 日語假名『總』結束 #######

@@ -2,9 +2,9 @@
 # encoding: utf-8
 # 《拉丁+音標字母（洋蔥形碼鍵位）設定頁》
 schema:
-  schema_id: latinin1 # 注意此ID與文件名裏 .schema.yaml 之前的部分相同
+  schema_id: latinin1
   name: ❃拉丁 in 1❃
-  version: "202104"
+  version: "202405"
   author:
     - 『洋蔥』
   description: |
@@ -14,8 +14,9 @@ schema:
 switches:
   - name: ascii_mode
     reset: 0
-    states: [ "西文", "英文" ] 
+    states: [ "西文", "英文" ]
   - name: full_shape
+    reset: 0
     states: [ "半形", "全形" ]
   - name: back_mark
     reset: 1
@@ -44,9 +45,6 @@ engine:
     - punct_translator
     - script_translator
 
-menu:
-  alternative_select_keys: "1234567890"
-
 back_mark:
   opencc_config: back_mark.json
   option_name: back_mark
@@ -57,63 +55,73 @@ back_mark:
     - xform/^/  /
     - xform/@/ /
 
+menu:
+  alternative_select_keys: "1234567890"
+
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz,.-;/"
   delimiter: " "
   algebra:
     - derive|^([a-z]+)[;/]$|$1| #精簡尾綴「;」「/」
+    - derive/^\|$/ /
 
 translator:
   dictionary: latinin1.extended
-  enable_user_dict: true
-  enable_sentence: false
+  # enable_charset_filter: false
   enable_completion: false
+  enable_user_dict: true
   disable_user_dict_for_patterns:
-    - ^[a-z]{1}$
+    - ^[a-z]$
   preedit_format:
     - 'xform/\|/ /'
 
 punctuator:
   full_shape:
     " " : { commit: "　" }
-    "<" : { commit: "，" }
-    ">" : { commit: "。" }
-    "?" : [ ？, ／, ÷ ]
-    ":" : [ ：, ； ]
-    "'" : { pair: [ "‘", "’" ] }
-    "\"" : { pair: [ "“", "”" ] }
-    "\\" : [ 、, ＼ ]
-    "|" : [ ·, ｜, "§", "¦" ]
-    "`" : ｀
-    "~" : ～
-    "!" : { commit: ！ }
-    "@" : [ ＠, ☯ ]
-    "#" : [ ＃, ⌘ ]
-    "%" : [ ％, "°", "℃" ]
-    "$" : [ ￥, "$", "€", "£", "¥", "¢", "¤" ]
-    "^" : { commit: …… }
-    "&" : ＆
-    "*" : [ ＊, ·, ・, ×, ※, ❂ ]
-    "(" : （
-    ")" : ）
-    "_" : [ ——, － ]
-    "+" : ＋
-    "=" : ＝
-    "[" : [ 「, 【, 《, 〔, ［ ]
-    "]" : [ 」, 】, 》, 〕, ］ ]
-    "{" : [ 『, 〖, 〈, ｛ ]
-    "}" : [ 』, 〗, 〉, ｝ ]
+    # ',' : { commit: "，" }
+    # '.' : { commit: "．" }
+    '<' : { commit: "＜" }
+    '>' : { commit: "＞" }
+    '?' : { commit: "？" }
+    '/' : [ '／' ]  #{ commit: "／" }
+    ':' : { commit: "：" }
+    ';' : [ ';' ]  #{ commit: "；" }
+    "'" : { commit: "＇" } #[ "＇" ]
+    '"' : { commit: '＂' }
+    '\\' : { commit: "＼" }
+    '|' : { commit: "｜" }
+    '`' : { commit: "｀" }
+    '~' : { commit: '～' }
+    '!' : { commit: '！' }
+    '@' : { commit: '＠' }
+    '#' : { commit: '＃' }
+    '%' : { commit: '％' }
+    '$' : { commit: '＄' }
+    '^' : { commit: '＾' }
+    '&' : { commit: '＆' }
+    '*' : { commit: '＊' }
+    '(' : { commit: '（' }
+    ')' : { commit: '）' }
+    '_' : { commit: '＿' }
+    # '-' : { commit: '－' }
+    '+' : { commit: '＋' }
+    '=' : { commit: '＝' }
+    '[' : { commit: '［' }
+    ']' : { commit: '］' }
+    '{' : { commit: '｛' }
+    '}' : { commit: '｝' }
   half_shape:
-#    ',' : { commit: "," }
-#    '.' : { commit: "." }
+    # ' ' : { commit: ' ' }
+    # ',' : { commit: "," }
+    # '.' : { commit: "." }
     '<' : { commit: "<" }
     '>' : { commit: ">" }
     '?' : { commit: "?" }
-    '/' : [ '/' ]
+    '/' : [ '/' ]  #{ commit: "/" }
     ':' : { commit: ":" }
-    ';' : [ ';' ]
-    "'" : { commit: "'" }
-    '"' : { commit: "\"" }
+    ';' : [ ';' ]  #{ commit: ";" }
+    "'" : { commit: "'" }  #[ "'" ]
+    '"' : { commit: '"' }
     '\\' : { commit: "\\" }
     '|' : { commit: "|" }
     '`' : { commit: "`" }
@@ -128,7 +136,8 @@ punctuator:
     '*' : { commit: '*' }
     '(' : { commit: '(' }
     ')' : { commit: ')' }
-    '-' : { commit: '-' }
+    '_' : { commit: '_' }
+    # '-' : { commit: '-' }
     '+' : { commit: '+' }
     '=' : { commit: '=' }
     '[' : { commit: '[' }
@@ -158,6 +167,7 @@ key_binder:
     - {accept: Tab, send: Shift+Left, when: paging}
 ######################
     - {accept: Return, send: space, when: has_menu} #return,enter直出
+    - {accept: KP_Enter, send: space, when: has_menu}
 #    - {accept: space, send: space, when: has_menu} # 非空碼時，空白還是空白
 #    - {accept: space, send: Escape, when: composing} # 空碼時，按空格清除
 

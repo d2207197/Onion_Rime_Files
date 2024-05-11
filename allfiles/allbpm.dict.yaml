@@ -5,7 +5,7 @@
 # 「空格」當編碼，要用轉寫
 ---
 name: allbpm
-version: "202001"
+version: "202302"
 sort: original
 use_preset_vocabulary: false
 ...
@@ -53,10 +53,7 @@ use_preset_vocabulary: false
 ˋ	4
 ˙	7
 ˉ	77
-ˉ	''
-ˉ	A'
  	A
- 	'
 ##### 延伸ㄅㄆㄇ #####
 ㄪ	z
 ㄫ	/

@@ -1,70 +1,158 @@
-# Onion_Rime_Files（電腦 Rime 注音、雙拼、拼音、行列30 洋蔥 方案）
+# 電腦 Rime 洋蔥方案（注音、雙拼、拼音、形碼、行列30）
 
 ####  ※ 請勿使用於商業營利相關行為
 ####  ※ Commercial use is prohibited
 
-### 內容說明：
-- allfiles 中包含八個主方案（三個注音、一個注音雙拼、一個拼音、兩個形碼、一個行列30）和一眾掛接方案
+## 內容說明
 
-- 兩個形碼方案無法使用，因已刪除碼表內容！
+- allfiles 包含九個主方案和一眾掛接方案。
 
-- allfiles 中的檔案不以一個資料夾一個方案，為了較好更新（不用同一個檔案更新數次）
+- 主方案：三個注音、一個注音雙拼、一個拼音、三個形碼、一個行列30。
 
-- 提供 Python (sort_rime_file.py) 文件，把 Rime 文件分門別類到各個方案資料夾，使其易安裝部署
+- 掛接方案：拉丁字母（含音標）、希臘字母、西里爾（俄）字母、全形數字字母、Easy 英文（英漢字典）、日文（含漢字）、兩個韓文（HNC和形碼，含單音和漢字）、 注音文、Emoji 顏文字符號系列集等。
 
-### sort_rime_file.py 使用方法：
-- 於本倉庫 Onion_Rime_Files 中按右上綠色 〔↓Code〕 ⇨ Download ZIP ⇨ 解壓縮 ZIP ⇨ 進入解壓縮後的資料夾，確認 allfiles 資料夾 和 sort_rime_file.py 是在同一層 ⇨ 執行 sort_rime_file.py ⇨ 產生一個『電腦RIME方案_{當天日期}』資料夾
+- 為易更新，不用同一檔案更新數次，allfiles 裡文件不以方案區分。
 
-- 產生的『電腦RIME方案_{當天日期}』該資料夾內，會把各方案所須使用的文件，分別安放在該『方案名稱』資料夾，安裝部署時，把內含文件通通放入『 Rime 』安裝資料夾中（預設已有 opencc 資料夾，移動方案 opencc 裡面檔案到電腦 rime/opencc ），按「重新部署」即可使用。
+- 提供 sort_rime_file.py，把所需 Rime 文件放到各個方案資料夾。
 
-  > 《 Windows 用戶注意！！！》，注音洋蔥 plus 版和注音洋蔥 mix‧in 版掛接《Easy》，使用提示碼做英漢字典，但 Windows 輸入時，整頁提示碼太多會使程式崩潰！故以正則簡化提示碼！不過 Windows 可行程式碼在 Mac 會使《Easy》無法正常出字！提供 custom 檔給 Windows 用戶，防止程式崩潰（ Mac 用戶勿使用該 custom 檔）。分別在「plus注音_防崩潰：Win必加，Mac勿加」和「mixin注音_同顯2修改檔(Win)」資料夾內，Windows 用戶把資料夾內 custom.yaml 檔拖到上一層（和方案中其他文件同一層），按「重新部署」即可。
+- 本倉庫 Releases 中，有分類好之檔案。（不一定更到最新）
 
-  > 後面附註的日期為執行 sort_rime_file.py 當天日期！非版本號碼！
+- 本倉庫 Actions 中，其 sort_rime_output 裡 artifact 有已跑好 sort_rime_file.py 分類之檔案！（不一定更到最新，需登錄 GitHub 帳號）
 
-  > 如果缺少檔案，會立即出錯無法執行！
+## sort_rime_file.py 使用方法
+
+- 本倉庫 Onion_Rime_Files 按右上綠色 〔↓Code〕 ⇨ Download ZIP ⇨ 解壓縮 ZIP 進入資料夾 ⇨ Python 執行 sort_rime_file.py ⇨ 產生『電腦RIME方案_{當天日期}』資料夾
+
+- 『電腦RIME方案_{當天日期}』，各個方案所需文件，分別放置於下層『方案名稱』資料夾。
+
+- 選取欲使用方案，內含文件通通放入『 Rime 』用戶設定資料夾，如已有 opencc 資料夾，移動 opencc 裡面檔案到 opencc 資料夾內，沒有則整個 opencc 移過去，「重新部署」方可。
+
+- 方案放置路徑：
+
+  > 別放錯資料夾，反饋有人放錯放到程式預設方案資料夾！有些方案會因 lua 無法執行產生 Bug。
+
+  > ```
+  > %APPDATA%\Rime  ( Windows 小狼毫 )
+  > ~/Library/Rime  ( Mac OS 鼠鬚管 )
+  > ~/.config/ibus/rime  ( Linux 中州韻 )
+  > ~/.config/fcitx/rime  ( Linux )
+  > ~/.local/share/fcitx5/rime ( Linux )
+  > ```
+
+- Linux、Win、Mac 皆需注意核心 librime 版本問題：
+
+  > Linux 反饋問題很多，其 Rime 核心 librime 過舊，librime-lua 掛件缺失！不可能回退使功能打折去符合舊版核心寫法！
+
+  > 20231110後，Mac 和 Win 用官方發布（release）的主程式即可！以下為之前各版本，其組件版本不一造成不相容時之說明。
+
+  > 原先方案以 Mac 鼠鬚管官方最新編譯版本為實作基礎，後來放飛使用新版 librime 核心和 librime-lua 掛件的新功能、新函數。如不符合，則需更換或編譯含最新版 librime-lua 的 librime 核心才能確保完整運行所有功能。[核心更換方法](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E6%8E%A8%E8%96%A6-Rime-%E4%B8%BB%E7%A8%8B%E5%BC%8F%E5%AE%89%E8%A3%9D%E4%B9%8B%E7%89%88%E6%9C%AC%E5%92%8C%E6%96%B9%E6%B3%95)。20230130 官方推出[鼠鬚管 0.16.1 新版](https://github.com/rime/squirrel/releases)，可相容。
   
-  > 用 Visual Studio Code 等非 Python 原生程式執行 sort_rime_file.py 會出錯（需另設定），使用 Python 原生程式執行即可。
-
-### 各方案說明：
-
-- [電腦 RIME 輸入法『注音 洋蔥純注音版』](https://deltazone.pixnet.net/blog/post/264319309)
-
-- [電腦 RIME 輸入法『注音 洋蔥plus版 』](https://deltazone.pixnet.net/blog/post/343650692)
-
-- [電腦 RIME 輸入法『注音 洋蔥mix‧in版 』](https://deltazone.pixnet.net/blog/post/347368709)
-
-- [電腦 RIME 輸入法『注音 洋蔥雙拼版 』](https://deltazone.pixnet.net/blog/post/359775341)
-
-- [電腦 RIME 輸入法〖 地球拼音 洋蔥mix‧in多國語言-擴充版 〗](https://deltazone.pixnet.net/blog/post/353697089)
-
-- [電腦 RIME 設定檔〖 洋蔥版 行列30 〗](https://deltazone.pixnet.net/blog/post/361766142)
-
-
-### Demo：
-
-- 注音 洋蔥 mix-in 版
+  > 承上，有二個非注音方案確定使用最新 librime-lua 函數去達成功能，其他方案也不追求相容舊版，只確保這邊 Windows 和 Mac 兩者皆可正常運行出功能。
   
-  > 集大成，多國語言和注音混打輸入 😃！
+  > 先前 Windows 小狼毫官方多年未更新，核心和 librime-lua 版本陳舊，推薦使用網友修改封裝版：[fxliang](https://github.com/fxliang/weasel)；近期官方 [小狼毫](https://github.com/rime/weasel) 更新，也可使用。
   
-  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_mixin.gif)
+  > 總結：20230130 目前方案編輯使用的版本：librime 1.8.3、librime-lua 200。由於 Rime 官方、librime-lua 官方、本方案皆不斷更新，需注意版本，才好相容。
+
+## Rime 入門需知
+
+- [Wiki 說明連結](https://github.com/oniondelta/Onion_Rime_Files/wiki/Rime-%E5%85%A5%E9%96%80%E9%9C%80%E7%9F%A5)
+
+## 推薦 Rime 主程式安裝之版本和方法
+
+- [Wiki 說明連結](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E6%8E%A8%E8%96%A6-Rime-%E4%B8%BB%E7%A8%8B%E5%BC%8F%E5%AE%89%E8%A3%9D%E4%B9%8B%E7%89%88%E6%9C%AC%E5%92%8C%E6%96%B9%E6%B3%95)
+
+## Rime 方案安裝與修改
+
+- [Wiki 說明連結](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E6%B4%8B%E8%94%A5%E7%89%88%E9%9B%BB%E8%85%A6-Rime-%E6%96%B9%E6%A1%88%E5%AE%89%E8%A3%9D%E8%88%87%E4%BF%AE%E6%94%B9)
+
+## 各方案說明
+
+- [電腦 RIME 輸入法『注音（洋蔥 純注音 版）』](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B3%A8%E9%9F%B3-%E6%B4%8B%E8%94%A5-%E7%B4%94%E6%B3%A8%E9%9F%B3-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
+
+- [電腦 RIME 輸入法『注音（洋蔥 plus 版）』](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B3%A8%E9%9F%B3-%E6%B4%8B%E8%94%A5-plus-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
+
+- [電腦 RIME 輸入法『注音（洋蔥 mix‧in 版）』](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B3%A8%E9%9F%B3-%E6%B4%8B%E8%94%A5-mixin-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
+
+- [電腦 RIME 輸入法『注音（洋蔥 雙拼 版）』](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B3%A8%E9%9F%B3-%E6%B4%8B%E8%94%A5-%E9%9B%99%E6%8B%BC-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
+
+- [電腦 RIME 輸入法〖 地球拼音（洋蔥 mix‧in 版）〗](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E5%9C%B0%E7%90%83%E6%8B%BC%E9%9F%B3-%E6%B4%8B%E8%94%A5-mixin-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
+
+- [電腦 RIME 設定檔〖 行列 30（洋蔥版）〗](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B4%8B%E8%94%A5%E7%89%88-%E8%A1%8C%E5%88%9730-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
+
+- [電腦 RIME 設定檔〖 形碼（洋蔥 plus 版）〗](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B4%8B%E8%94%A5%E7%89%88-%E5%BD%A2%E7%A2%BC-plus-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
+
+- [電腦 RIME 設定檔〖 形碼（洋蔥 mix‧in 版）〗](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%8E-%E6%B4%8B%E8%94%A5%E7%89%88-%E5%BD%A2%E7%A2%BC-mixin-%E7%89%88-%E3%80%8F%E6%96%B9%E6%A1%88%E8%AA%AA%E6%98%8E)
+
+## 注音系列功能說明
+
+- [標點符號](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E6%A8%99%E9%BB%9E%E7%AC%A6%E8%99%9F)
+
+- [功能鍵和快捷鍵](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E5%8A%9F%E8%83%BD%E9%8D%B5%E5%92%8C%E5%BF%AB%E6%8D%B7%E9%8D%B5)
+
+- [簡體與字符範圍和編碼](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E7%B0%A1%E9%AB%94%E8%88%87%E5%AD%97%E7%AC%A6%E7%AF%84%E5%9C%8D%E5%92%8C%E7%B7%A8%E7%A2%BC)
+
+- [注音文](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E6%B3%A8%E9%9F%B3%E6%96%87)
+
+- [系列符號與 Emoji](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E7%B3%BB%E5%88%97%E7%AC%A6%E8%99%9F%E8%88%87-Emoji)
+
+- [Lua 特殊功能集](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9ALua-%E7%89%B9%E6%AE%8A%E5%8A%9F%E8%83%BD%E9%9B%86)
+
+- [短語](https://github.com/oniondelta/Onion_Rime_Files/wiki/%E3%80%94%E6%B4%8B%E8%94%A5%E6%B3%A8%E9%9F%B3%E7%B3%BB%E5%88%97%E3%80%95%EF%BC%9A%E7%9F%AD%E8%AA%9E)
+
+## Demo
+
+- 注音（洋蔥 mix-in 版）
   
-- 注音 洋蔥 plus 版
+  > 集大成，多國語言和注音一次性混打輸入 😃！
+  
+    ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/demo_bpmf_mixin.gif)
+  
+- 注音（洋蔥 plus 版）
 
   > 功能多，除外語還有一堆功能和細節增加，輸入手感和純注音版一樣，即使沒用外語，也推薦使用！
   
-  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_plus.gif)
+    ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/demo_bpmf_plus.gif)
   
-- 注音 洋蔥 純注音 版
+- 注音（洋蔥 純注音 版）
   
-  > 功能少，給新手使用，較不推薦！
+  > 精簡功能，給新手或測試使用
   
-  #### ![image](https://github.com/oniondelta/Onion_Rime_Files/blob/master/demo_pure.gif)
-  
-### 贊助 Donate：
+    ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/demo_bpmf_pure.gif)
+ 
+## Keys
+ 
+- 注音（洋蔥 雙拼 版）鍵位
+  > 無加 custom 可簡拼，有 custom 為一般雙拼每字須鍵兩碼（聲調可省略）
 
-  > 從第一個方案上傳已持續更新四年！方案從頭到尾大改、新創、新增非常多功能！且做了許多圖文說明！花了族繁不及備載的心力！
+  #### <img src="https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/allfiles/%E9%9B%99%E6%8B%BC%E6%B3%A8%E9%9F%B3%E9%8D%B5%E4%BD%8D%E8%AA%AA%E6%98%8E%E5%9C%96%E7%A4%BA/%E6%B3%A8%E9%9F%B3%E6%B4%8B%E8%94%A5%E9%9B%99%E6%8B%BC%E8%AA%AA%E6%98%8E.png" width = "595" alt="image" /><br>
 
-  > 懇請贊助 (Donate) 支持，讓 Rime 洋蔥的一系列方案更新更有動力！
+- 注音（洋蔥 plus 版）鍵位
+
+  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_plus_keyboard.png)
+
+- 注音（洋蔥 mixin 版）鍵位
+
+  > 四個衍伸方案：「1」標準版、「2」只有後綴易懂、「3」語言分野最明減少撞碼、「4」集中下排手順最好
+
+  > 本人多使用「4」，因較喜歡鍵盤下排之手順，也推薦「3」
+
+  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_mixin_1_keyboard.png)
+  
+  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_mixin_2_keyboard.png)
+  
+  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_mixin_3_keyboard.png)
+  
+  #### ![image](https://raw.githubusercontent.com/oniondelta/Onion_Rime_Files/main/img/bpmf_mixin_4_keyboard.png)
+  
+- 注音洋蔥版選字鍵位
+
+  #### <img src="https://user-images.githubusercontent.com/54584047/236190921-a2c86863-ed81-4a28-ae37-07566aa9c3a9.png" width = "595" alt="image" /><br>
+
+## 贊助 Donate
+
+方案已持續更新五年以上！大改、新創、新增非常多功能！做了許多圖文說明！花了族繁不及備載的心力！
+
+贊助 (Donate) 支持，讓 Rime 洋蔥一系列方案更新更有動力！
 
 - [按此以〈綠界〉贊助 Donate：](https://p.ecpay.com.tw/D555162)
 

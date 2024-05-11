@@ -5,7 +5,7 @@
 schema:
   schema_id: dif1_gr
   name: ✹新希臘_dif1✹
-  version: "202102"
+  version: "202405"
   author:
     - 『洋蔥』
   description: |
@@ -46,18 +46,16 @@ speller:
 #  finals: ";'"
   delimiter: "\""
   algebra:
-    - "xlit|[|A|"
-    - xform/^([a-z]+)A$/$1AA/
-    - xform/^([a-z]+)$/$1A/
-    - derive/^([-a-z]+)[A][A]?$/$1/
-    - "xlit|A|[|"
+    - xform/^([a-z]+)[[]$/$1[[/
+    - xform/^([a-z]+)$/$1[/
+    - derive/^([-a-z]+)[[][[]?$/$1/
 
 translator:
   dictionary: greek.extended
   prism: dif1_gr
-  enable_user_dict: true
-  enable_sentence: false
+  # enable_charset_filter: false
   enable_completion: false
+  enable_user_dict: true
   preedit_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz|ABCDEFGHIJKLMNOPQRSTUVWXYZ|"
   comment_format:

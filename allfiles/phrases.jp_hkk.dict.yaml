@@ -6,7 +6,7 @@
 # 本詞庫刪除純「假名」之詞彙。純「假名」詞庫為「phrases.jp_hk」。
 ---
 name: phrases.jp_hkk
-version: "202003"
+version: "202212"
 sort: by_weight #original
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -15,7 +15,6 @@ columns:
   - weight
 ...
 ##### 日語詞庫(含漢字)起始 #####
-### 與「jpnin1.dict」一樣的 ###
 ##以下井字為〔中日韓相容表意文字CJK Compatibility Ideographs〕，注音無相符編碼之字。
 # 殺す
 # 類い
@@ -56,7 +55,20 @@ columns:
 # 憎らしい
 # 嘆かわしい
 # 懲らしめる
+### 補充 ###
+雄彦
+鶏排
 菜々子
+姫路市
+長渕剛
+井上雄彦
+福原美穂
+中山美穂
+宮沢和史
+上松秀実
+小松未歩
+吉岡亜衣加
+### 詞庫一 （與舊的「jpnin1.dict」一樣的） ###
 一つ
 七つ
 三つ
@@ -1618,7 +1630,7 @@ columns:
 捕らわれる
 汚らわしい
 紛らわしい
-### 詞庫 ###
+### 詞庫二 ###
 〆切
 あ段
 あ然

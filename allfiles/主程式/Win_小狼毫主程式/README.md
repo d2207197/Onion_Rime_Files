@@ -1,15 +1,25 @@
 # Win_小狼毫主程式
 
-### 說明：
+### Source Files
 
-- 本安裝檔和官網 https://rime.im/ 相同。但官方後來又釋出相同版本號之檔案 https://github.com/rime/weasel/releases ，可能更新了 librime 引擎？未測試！
+- 「Win_新0.15.0.0版小狼毫主程式_Nightly Build」：https://github.com/rime/weasel/releases
 
-### 安裝後建議修改：
-    
-- 置換新版 librime 引擎：
-    - 官網 https://rime.im/ 下載 0.14.3 版，其中 librime 在使用 lua 某些功能會產生記憶體泄漏問題，強烈建議更換。
-    - rime-with-plugins-1.7.3-win32.zip ⇨ dist ⇨ lib ⇨ 提取 rime.dll ⇨ 取代 C:\Program Files (x86)\Rime\weasel-0.14.3\rime.dll ⇨《重開機》！
-    - 如 Windows 出現執行中無法取代等訊息，於工作列點右鍵 ⇨《工作管理員》⇨點選《小狼毫算法服務》並結束工作，即可取代！
-    
-### 可到官網 https://rime.im/ 下載安裝檔。
+- 「Win_舊0.15.0.0版小狼毫主程式_Actions」：https://github.com/rime/weasel/actions
+
+- 「Win_fxliang版小狼毫主程式_Actions」：https://github.com/fxliang/weasel/actions
+
+- 「Win_舊0.14.3.0版小狼毫主程式」：https://github.com/rime/weasel/releases
+
+### 版本說明
+
+- 推薦安裝「Win_新0.15.0.0版小狼毫主程式_Nightly Build」。
+
+- 「Win_新0.15.0.0版小狼毫主程式_Nightly Build」可為 64 位元，因安裝檔為 32 位元關係，還是安裝在 Program Files(x86) 底下。如 CPU 不支援 64 位元則安裝 32 位元。
+
+- 其他三個版本只能為 32 位元，32 位元會對字詞庫大小有限制，方案詞庫太大會部屬不了。
+
+- 原先「fxliang版」比「0.14.3.0版」多了新介面和功能，後來被官方整合進「0.15.0.0版」。
+
+- 看討論，官方 releases 中的「0.15.0.0版」可能被誤報為有病毒，且後續官方有 bug 的修正，故直接提供 GitHub 中後續修正之 Actions 和 Nightly Build 版。
+
 

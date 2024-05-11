@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: bo_mixin_kr
-version: "202104"
+version: "202301"
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -113,15 +113,15 @@ use_preset_vocabulary: false
 갃	!ykv
 갅	!ykk
 갆	!ykg
-갉	!ykj	5000
-갊	!ykn	5000
+갉	!ykj
+갊	!ykn
 갋	!ykr
 갌	!ykp
 갍	!ykt
 갎	!yki
 갏	!ywk
-값	!ykh	5000
-갔	!ykm	5000
+값	!ykh
+갔	!ykm
 갞	!yhf
 갟	!yhv
 갡	!yhk
@@ -134,7 +134,7 @@ use_preset_vocabulary: false
 갪	!yhi
 갫	!ywh
 갮	!yhh
-갰	!yhm	5000
+갰	!yhm
 갺	!yff
 갻	!yfv
 갽	!yfk
@@ -148,15 +148,15 @@ use_preset_vocabulary: false
 걇	!ywf
 걊	!yfh
 걌	!yfm
-걔	!yo	5000
+걔	!yo
 걕	!yoy
 걖	!yof
 걗	!yov
-걘	!yol	5000
+걘	!yol
 걙	!yok
 걚	!yog
 걛	!yoc
-걜	!yos	5000
+걜	!yos
 걝	!yoj
 걞	!yon
 걟	!yor
@@ -181,14 +181,14 @@ use_preset_vocabulary: false
 걵	!yjk
 걶	!yjg
 걹	!yjj
-걺	!yjn	5000
+걺	!yjn
 걻	!yjr
 걼	!yjp
 걽	!yjt
 걾	!yji
 걿	!ywj
 겂	!yjh
-겄	!yjm	5000
+겄	!yjm
 겎	!ypf
 겏	!ypv
 겑	!ypk
@@ -201,8 +201,8 @@ use_preset_vocabulary: false
 겚	!ypi
 겛	!ywp
 겞	!yph
-겠	!ypm	5000
-겪	!ygf	5000
+겠	!ypm
+겪	!ygf
 겫	!ygv
 겭	!ygk
 겮	!ygg
@@ -214,16 +214,16 @@ use_preset_vocabulary: false
 겶	!ygi
 겷	!ywg
 겺	!ygh
-겼	!ygm	5000
-계	!yq	5000
+겼	!ygm
+계	!yq
 곅	!yqy
 곆	!yqf
 곇	!yqv
-곈	!yql	5000
+곈	!yql
 곉	!yqk
 곊	!yqg
 곋	!yqc
-곌	!yqs	5000
+곌	!yqs
 곍	!yqj
 곎	!yqn
 곏	!yqr
@@ -232,9 +232,9 @@ use_preset_vocabulary: false
 곒	!yqi
 곓	!ywq
 곔	!yqo
-곕	!yqa	5000
+곕	!yqa
 곖	!yqh
-곗	!yqb	5000
+곗	!yqb
 곘	!yqm
 곙	!yqq
 곚	!yqu
@@ -248,51 +248,51 @@ use_preset_vocabulary: false
 곥	!ynk
 곦	!yng
 곩	!ynj
-곪	!ynn	5000
+곪	!ynn
 곫	!ynr
-곬	!ynp	5000
+곬	!ynp
 곭	!ynt
 곮	!yni
-곯	!ywn	5000
+곯	!ywn
 곲	!ynh
 곴	!ynm
-과	!ye	5000
-곽	!yey	5000
+과	!ye
+곽	!yey
 곾	!yef
 곿	!yev
-관	!yel	5000
+관	!yel
 괁	!yek
 괂	!yeg
 괃	!yec
-괄	!yes	5000
+괄	!yes
 괅	!yej
-괆	!yen	5000
+괆	!yen
 괇	!yer
 괈	!yep
 괉	!yet
 괊	!yei
 괋	!ywe
-괌	!yeo	5000
-괍	!yea	5000
+괌	!yeo
+괍	!yea
 괎	!yeh
-괏	!yeb	5000
+괏	!yeb
 괐	!yem
-광	!yeq	5000
+광	!yeq
 괒	!yeu
 괓	!yed
 괔	!yez
 괕	!yee
 괖	!yex
 괗	!yew
-괘	!ys	5000
+괘	!ys
 괙	!ysy
 괚	!ysf
 괛	!ysv
-괜	!ysl	5000
+괜	!ysl
 괝	!ysk
 괞	!ysg
 괟	!ysc
-괠	!yss	5000
+괠	!yss
 괡	!ysj
 괢	!ysn
 괣	!ysr
@@ -301,26 +301,26 @@ use_preset_vocabulary: false
 괦	!ysi
 괧	!yws
 괨	!yso
-괩	!ysa	5000
+괩	!ysa
 괪	!ysh
 괫	!ysb
-괬	!ysm	5000
-괭	!ysq	5000
+괬	!ysm
+괭	!ysq
 괮	!ysu
 괯	!ysd
 괰	!ysz
 괱	!yse
 괲	!ysx
 괳	!ysw
-괴	!yx	5000
-괵	!yxy	5000
+괴	!yx
+괵	!yxy
 괶	!yxf
 괷	!yxv
-괸	!yxl	5000
+괸	!yxl
 괹	!yxk
 괺	!yxg
 괻	!yxc
-괼	!yxs	5000
+괼	!yxs
 괽	!yxj
 괾	!yxn
 괿	!yxr
@@ -328,12 +328,12 @@ use_preset_vocabulary: false
 굁	!yxt
 굂	!yxi
 굃	!ywx
-굄	!yxo	5000
-굅	!yxa	5000
+굄	!yxo
+굅	!yxa
 굆	!yxh
-굇	!yxb	5000
+굇	!yxb
 굈	!yxm
-굉	!yxq	5000
+굉	!yxq
 굊	!yxu
 굋	!yxd
 굌	!yxz
@@ -357,24 +357,24 @@ use_preset_vocabulary: false
 굯	!ytv
 굱	!ytk
 굲	!ytg
-굵	!ytj	5000
-굶	!ytn	5000
+굵	!ytj
+굶	!ytn
 굷	!ytr
 굸	!ytp
 굹	!ytt
 굺	!yti
-굻	!ywt	5000
+굻	!ywt
 굾	!yth
 궀	!ytm
-궈	!ya	5000
-궉	!yay	5000
+궈	!ya
+궉	!yay
 궊	!yaf
 궋	!yav
-권	!yal	5000
+권	!yal
 궍	!yak
 궎	!yag
 궏	!yac
-궐	!yas	5000
+궐	!yas
 궑	!yaj
 궒	!yan
 궓	!yar
@@ -386,15 +386,15 @@ use_preset_vocabulary: false
 궙	!yaa
 궚	!yah
 궛	!yab
-궜	!yam	5000
-궝	!yaq	5000
+궜	!yam
+궝	!yaq
 궞	!yau
 궟	!yad
 궠	!yaz
 궡	!yae
 궢	!yax
 궣	!yaw
-궤	!yz	5000
+궤	!yz
 궥	!yzy
 궦	!yzf
 궧	!yzv
@@ -413,7 +413,7 @@ use_preset_vocabulary: false
 궴	!yzo
 궵	!yza
 궶	!yzh
-궷	!yzb	5000
+궷	!yzb
 궸	!yzm
 궹	!yzq
 궺	!yzu
@@ -422,15 +422,15 @@ use_preset_vocabulary: false
 궽	!yze
 궾	!yzx
 궿	!yzw
-귀	!yd	5000
-귁	!ydy	5000
+귀	!yd
+귁	!ydy
 귂	!ydf
 귃	!ydv
-귄	!ydl	5000
+귄	!ydl
 귅	!ydk
 귆	!ydg
 귇	!ydc
-귈	!yds	5000
+귈	!yds
 귉	!ydj
 귊	!ydn
 귋	!ydr
@@ -438,10 +438,10 @@ use_preset_vocabulary: false
 귍	!ydt
 귎	!ydi
 귏	!ywd
-귐	!ydo	5000
-귑	!yda	5000
+귐	!ydo
+귑	!yda
 귒	!ydh
-귓	!ydb	5000
+귓	!ydb
 귔	!ydm
 귕	!ydq
 귖	!ydu
@@ -467,7 +467,7 @@ use_preset_vocabulary: false
 귻	!yvv
 귽	!yvk
 귾	!yvg
-긁	!yvj	5000
+긁	!yvj
 긂	!yvn
 긃	!yvr
 긄	!yvp
@@ -476,7 +476,7 @@ use_preset_vocabulary: false
 긇	!ywv
 긊	!yvh
 긌	!yvm
-긔	!yl	5000
+긔	!yl
 긕	!yly
 긖	!ylf
 긗	!ylv
@@ -509,7 +509,7 @@ use_preset_vocabulary: false
 긵	!yik
 긶	!yig
 긹	!yij
-긺	!yin	5000
+긺	!yin
 긻	!yir
 긼	!yip
 긽	!yit
@@ -518,43 +518,43 @@ use_preset_vocabulary: false
 깂	!yih
 깄	!yim
 #s2
-까	!fk	5000
-깍	!fky	5000
-깎	!fkf	5000
+까	!fk
+깍	!fky
+깎	!fkf
 깏	!fkv
-깐	!fkl	5000
+깐	!fkl
 깑	!fkk
 깒	!fkg
 깓	!fkc
-깔	!fks	5000
+깔	!fks
 깕	!fkj
-깖	!fkn	5000
+깖	!fkn
 깗	!fkr
 깘	!fkp
 깙	!fkt
 깚	!fki
 깛	!fwk
-깜	!fko	5000
-깝	!fka	5000
+깜	!fko
+깝	!fka
 깞	!fkh
-깟	!fkb	5000
-깠	!fkm	5000
-깡	!fkq	5000
+깟	!fkb
+깠	!fkm
+깡	!fkq
 깢	!fku
 깣	!fkd
 깤	!fkz
-깥	!fke	5000
+깥	!fke
 깦	!fkx
 깧	!fkw
-깨	!fh	5000
-깩	!fhy	5000
+깨	!fh
+깩	!fhy
 깪	!fhf
 깫	!fhv
-깬	!fhl	5000
+깬	!fhl
 깭	!fhk
 깮	!fhg
 깯	!fhc
-깰	!fhs	5000
+깰	!fhs
 깱	!fhj
 깲	!fhn
 깳	!fhr
@@ -562,27 +562,27 @@ use_preset_vocabulary: false
 깵	!fht
 깶	!fhi
 깷	!fwh
-깸	!fho	5000
-깹	!fha	5000
+깸	!fho
+깹	!fha
 깺	!fhh
-깻	!fhb	5000
-깼	!fhm	5000
-깽	!fhq	5000
+깻	!fhb
+깼	!fhm
+깽	!fhq
 깾	!fhu
 깿	!fhd
 꺀	!fhz
 꺁	!fhe
 꺂	!fhx
 꺃	!fhw
-꺄	!ff	5000
-꺅	!ffy	5000
+꺄	!ff
+꺅	!ffy
 꺆	!fff
 꺇	!ffv
 꺈	!ffl
 꺉	!ffk
 꺊	!ffg
 꺋	!ffc
-꺌	!ffs	5000
+꺌	!ffs
 꺍	!ffj
 꺎	!ffn
 꺏	!ffr
@@ -630,15 +630,15 @@ use_preset_vocabulary: false
 꺹	!foe
 꺺	!fox
 꺻	!fow
-꺼	!fj	5000
-꺽	!fjy	5000
-꺾	!fjf	5000
+꺼	!fj
+꺽	!fjy
+꺾	!fjf
 꺿	!fjv
-껀	!fjl	5000
+껀	!fjl
 껁	!fjk
 껂	!fjg
 껃	!fjc
-껄	!fjs	5000
+껄	!fjs
 껅	!fjj
 껆	!fjn
 껇	!fjr
@@ -646,23 +646,23 @@ use_preset_vocabulary: false
 껉	!fjt
 껊	!fji
 껋	!fwj
-껌	!fjo	5000
-껍	!fja	5000
+껌	!fjo
+껍	!fja
 껎	!fjh
-껏	!fjb	5000
-껐	!fjm	5000
-껑	!fjq	5000
+껏	!fjb
+껐	!fjm
+껑	!fjq
 껒	!fju
 껓	!fjd
 껔	!fjz
 껕	!fje
 껖	!fjx
 껗	!fjw
-께	!fp	5000
-껙	!fpy	5000
+께	!fp
+껙	!fpy
 껚	!fpf
 껛	!fpv
-껜	!fpl	5000
+껜	!fpl
 껝	!fpk
 껞	!fpg
 껟	!fpc
@@ -674,27 +674,27 @@ use_preset_vocabulary: false
 껥	!fpt
 껦	!fpi
 껧	!fwp
-껨	!fpo	5000
+껨	!fpo
 껩	!fpa
 껪	!fph
-껫	!fpb	5000
+껫	!fpb
 껬	!fpm
-껭	!fpq	5000
+껭	!fpq
 껮	!fpu
 껯	!fpd
 껰	!fpz
 껱	!fpe
 껲	!fpx
 껳	!fpw
-껴	!fg	5000
+껴	!fg
 껵	!fgy
 껶	!fgf
 껷	!fgv
-껸	!fgl	5000
+껸	!fgl
 껹	!fgk
 껺	!fgg
 껻	!fgc
-껼	!fgs	5000
+껼	!fgs
 껽	!fgj
 껾	!fgn
 껿	!fgr
@@ -705,16 +705,16 @@ use_preset_vocabulary: false
 꼄	!fgo
 꼅	!fga
 꼆	!fgh
-꼇	!fgb	5000
-꼈	!fgm	5000
+꼇	!fgb
+꼈	!fgm
 꼉	!fgq
 꼊	!fgu
 꼋	!fgd
 꼌	!fgz
-꼍	!fge	5000
+꼍	!fge
 꼎	!fgx
 꼏	!fgw
-꼐	!fq	5000
+꼐	!fq
 꼑	!fqy
 꼒	!fqf
 꼓	!fqv
@@ -742,15 +742,15 @@ use_preset_vocabulary: false
 꼩	!fqe
 꼪	!fqx
 꼫	!fqw
-꼬	!fn	5000
-꼭	!fny	5000
+꼬	!fn
+꼭	!fny
 꼮	!fnf
 꼯	!fnv
-꼰	!fnl	5000
+꼰	!fnl
 꼱	!fnk
-꼲	!fng	5000
+꼲	!fng
 꼳	!fnc
-꼴	!fns	5000
+꼴	!fns
 꼵	!fnj
 꼶	!fnn
 꼷	!fnr
@@ -758,27 +758,27 @@ use_preset_vocabulary: false
 꼹	!fnt
 꼺	!fni
 꼻	!fwn
-꼼	!fno	5000
-꼽	!fna	5000
+꼼	!fno
+꼽	!fna
 꼾	!fnh
-꼿	!fnb	5000
+꼿	!fnb
 꽀	!fnm
-꽁	!fnq	5000
-꽂	!fnu	5000
-꽃	!fnd	5000
+꽁	!fnq
+꽂	!fnu
+꽃	!fnd
 꽄	!fnz
 꽅	!fne
 꽆	!fnx
 꽇	!fnw
-꽈	!fe	5000
-꽉	!fey	5000
+꽈	!fe
+꽉	!fey
 꽊	!fef
 꽋	!fev
 꽌	!fel
 꽍	!fek
 꽎	!feg
 꽏	!fec
-꽐	!fes	5000
+꽐	!fes
 꽑	!fej
 꽒	!fen
 꽓	!fer
@@ -790,16 +790,16 @@ use_preset_vocabulary: false
 꽙	!fea
 꽚	!feh
 꽛	!feb
-꽜	!fem	5000
-꽝	!feq	5000
+꽜	!fem
+꽝	!feq
 꽞	!feu
 꽟	!fed
 꽠	!fez
 꽡	!fee
 꽢	!fex
 꽣	!few
-꽤	!fs	5000
-꽥	!fsy	5000
+꽤	!fs
+꽥	!fsy
 꽦	!fsf
 꽧	!fsv
 꽨	!fsl
@@ -819,22 +819,22 @@ use_preset_vocabulary: false
 꽶	!fsh
 꽷	!fsb
 꽸	!fsm
-꽹	!fsq	5000
+꽹	!fsq
 꽺	!fsu
 꽻	!fsd
 꽼	!fsz
 꽽	!fse
 꽾	!fsx
 꽿	!fsw
-꾀	!fx	5000
+꾀	!fx
 꾁	!fxy
 꾂	!fxf
 꾃	!fxv
-꾄	!fxl	5000
+꾄	!fxl
 꾅	!fxk
 꾆	!fxg
 꾇	!fxc
-꾈	!fxs	5000
+꾈	!fxs
 꾉	!fxj
 꾊	!fxn
 꾋	!fxr
@@ -842,19 +842,19 @@ use_preset_vocabulary: false
 꾍	!fxt
 꾎	!fxi
 꾏	!fwx
-꾐	!fxo	5000
-꾑	!fxa	5000
+꾐	!fxo
+꾑	!fxa
 꾒	!fxh
 꾓	!fxb
 꾔	!fxm
-꾕	!fxq	5000
+꾕	!fxq
 꾖	!fxu
 꾗	!fxd
 꾘	!fxz
 꾙	!fxe
 꾚	!fxx
 꾛	!fxw
-꾜	!fm	5000
+꾜	!fm
 꾝	!fmy
 꾞	!fmf
 꾟	!fmv
@@ -882,35 +882,35 @@ use_preset_vocabulary: false
 꾵	!fme
 꾶	!fmx
 꾷	!fmw
-꾸	!ft	5000
-꾹	!fty	5000
+꾸	!ft
+꾹	!fty
 꾺	!ftf
 꾻	!ftv
-꾼	!ftl	5000
+꾼	!ftl
 꾽	!ftk
 꾾	!ftg
 꾿	!ftc
-꿀	!fts	5000
+꿀	!fts
 꿁	!ftj
 꿂	!ftn
 꿃	!ftr
 꿄	!ftp
 꿅	!ftt
 꿆	!fti
-꿇	!fwt	5000
-꿈	!fto	5000
-꿉	!fta	5000
+꿇	!fwt
+꿈	!fto
+꿉	!fta
 꿊	!fth
-꿋	!ftb	5000
+꿋	!ftb
 꿌	!ftm
-꿍	!ftq	5000
-꿎	!ftu	5000
+꿍	!ftq
+꿎	!ftu
 꿏	!ftd
 꿐	!ftz
 꿑	!fte
 꿒	!ftx
 꿓	!ftw
-꿔	!fa	5000
+꿔	!fa
 꿕	!fay
 꿖	!faf
 꿗	!fav
@@ -918,7 +918,7 @@ use_preset_vocabulary: false
 꿙	!fak
 꿚	!fag
 꿛	!fac
-꿜	!fas	5000
+꿜	!fas
 꿝	!faj
 꿞	!fan
 꿟	!far
@@ -930,23 +930,23 @@ use_preset_vocabulary: false
 꿥	!faa
 꿦	!fah
 꿧	!fab
-꿨	!fam	5000
-꿩	!faq	5000
+꿨	!fam
+꿩	!faq
 꿪	!fau
 꿫	!fad
 꿬	!faz
 꿭	!fae
 꿮	!fax
 꿯	!faw
-꿰	!fz	5000
-꿱	!fzy	5000
+꿰	!fz
+꿱	!fzy
 꿲	!fzf
 꿳	!fzv
-꿴	!fzl	5000
+꿴	!fzl
 꿵	!fzk
 꿶	!fzg
 꿷	!fzc
-꿸	!fzs	5000
+꿸	!fzs
 꿹	!fzj
 꿺	!fzn
 꿻	!fzr
@@ -954,11 +954,11 @@ use_preset_vocabulary: false
 꿽	!fzt
 꿾	!fzi
 꿿	!fwz
-뀀	!fzo	5000
-뀁	!fza	5000
+뀀	!fzo
+뀁	!fza
 뀂	!fzh
 뀃	!fzb
-뀄	!fzm	5000
+뀄	!fzm
 뀅	!fzq
 뀆	!fzu
 뀇	!fzd
@@ -966,15 +966,15 @@ use_preset_vocabulary: false
 뀉	!fze
 뀊	!fzx
 뀋	!fzw
-뀌	!fd	5000
+뀌	!fd
 뀍	!fdy
 뀎	!fdf
 뀏	!fdv
-뀐	!fdl	5000
+뀐	!fdl
 뀑	!fdk
 뀒	!fdg
 뀓	!fdc
-뀔	!fds	5000
+뀔	!fds
 뀕	!fdj
 뀖	!fdn
 뀗	!fdr
@@ -982,8 +982,8 @@ use_preset_vocabulary: false
 뀙	!fdt
 뀚	!fdi
 뀛	!fwd
-뀜	!fdo	5000
-뀝	!fda	5000
+뀜	!fdo
+뀝	!fda
 뀞	!fdh
 뀟	!fdb
 뀠	!fdm
@@ -994,7 +994,7 @@ use_preset_vocabulary: false
 뀥	!fde
 뀦	!fdx
 뀧	!fdw
-뀨	!fr	5000
+뀨	!fr
 뀩	!fry
 뀪	!frf
 뀫	!frv
@@ -1022,32 +1022,32 @@ use_preset_vocabulary: false
 끁	!fre
 끂	!frx
 끃	!frw
-끄	!fv	5000
-끅	!fvy	5000
+끄	!fv
+끅	!fvy
 끆	!fvf
 끇	!fvv
-끈	!fvl	5000
+끈	!fvl
 끉	!fvk
-끊	!fvg	5000
+끊	!fvg
 끋	!fvc
-끌	!fvs	5000
+끌	!fvs
 끍	!fvj
-끎	!fvn	5000
+끎	!fvn
 끏	!fvr
 끐	!fvp
 끑	!fvt
 끒	!fvi
-끓	!fwv	5000
-끔	!fvo	5000
-끕	!fva	5000
+끓	!fwv
+끔	!fvo
+끕	!fva
 끖	!fvh
-끗	!fvb	5000
+끗	!fvb
 끘	!fvm
-끙	!fvq	5000
+끙	!fvq
 끚	!fvu
 끛	!fvd
 끜	!fvz
-끝	!fve	5000
+끝	!fve
 끞	!fvx
 끟	!fvw
 끠	!fl
@@ -1078,15 +1078,15 @@ use_preset_vocabulary: false
 끹	!fle
 끺	!flx
 끻	!flw
-끼	!fi	5000
-끽	!fiy	5000
+끼	!fi
+끽	!fiy
 끾	!fif
 끿	!fiv
-낀	!fil	5000
+낀	!fil
 낁	!fik
 낂	!fig
 낃	!fic
-낄	!fis	5000
+낄	!fis
 낅	!fij
 낆	!fin
 낇	!fir
@@ -1094,12 +1094,12 @@ use_preset_vocabulary: false
 낉	!fit
 낊	!fii
 낋	!fwi
-낌	!fio	5000
-낍	!fia	5000
+낌	!fio
+낍	!fia
 낎	!fih
-낏	!fib	5000
+낏	!fib
 낐	!fim
-낑	!fiq	5000
+낑	!fiq
 낒	!fiu
 낓	!fid
 낔	!fiz
@@ -1107,19 +1107,19 @@ use_preset_vocabulary: false
 낖	!fix
 낗	!fiw
 #s3
-낚	!lkf	5000
+낚	!lkf
 낛	!lkv
 낝	!lkk
 낞	!lkg
-낡	!lkj	5000
-낢	!lkn	5000
+낡	!lkj
+낢	!lkn
 낣	!lkr
 낤	!lkp
 낥	!lkt
 낦	!lki
 낧	!lwk
 낪	!lkh
-났	!lkm	5000
+났	!lkm
 낶	!lhf
 낷	!lhv
 낹	!lhk
@@ -1132,7 +1132,7 @@ use_preset_vocabulary: false
 냂	!lhi
 냃	!lwh
 냆	!lhh
-냈	!lhm	5000
+냈	!lhm
 냒	!lff
 냓	!lfv
 냕	!lfk
@@ -1175,18 +1175,18 @@ use_preset_vocabulary: false
 넆	!lox
 넇	!low
 넊	!ljf
-넋	!ljv	5000
+넋	!ljv
 넍	!ljk
 넎	!ljg
 넑	!ljj
-넒	!ljn	5000
-넓	!ljr	5000
+넒	!ljn
+넓	!ljr
 넔	!ljp
 넕	!ljt
 넖	!lji
 넗	!lwj
 넚	!ljh
-넜	!ljm	5000
+넜	!ljm
 넦	!lpf
 넧	!lpv
 넩	!lpk
@@ -1199,7 +1199,7 @@ use_preset_vocabulary: false
 넲	!lpi
 넳	!lwp
 넶	!lph
-넸	!lpm	5000
+넸	!lpm
 녂	!lgf
 녃	!lgv
 녅	!lgk
@@ -1212,12 +1212,12 @@ use_preset_vocabulary: false
 녎	!lgi
 녏	!lwg
 녒	!lgh
-녔	!lgm	5000
-녜	!lq	5000
+녔	!lgm
+녜	!lq
 녝	!lqy
 녞	!lqf
 녟	!lqv
-녠	!lql	5000
+녠	!lql
 녡	!lqk
 녢	!lqg
 녣	!lqc
@@ -1246,7 +1246,7 @@ use_preset_vocabulary: false
 녽	!lnk
 녾	!lng
 놁	!lnj
-놂	!lnn	5000
+놂	!lnn
 놃	!lnr
 놄	!lnp
 놅	!lnt
@@ -1254,15 +1254,15 @@ use_preset_vocabulary: false
 놇	!lwn
 놊	!lnh
 놌	!lnm
-놔	!le	5000
+놔	!le
 놕	!ley
 놖	!lef
 놗	!lev
-놘	!lel	5000
+놘	!lel
 놙	!lek
 놚	!leg
 놛	!lec
-놜	!les	5000
+놜	!les
 놝	!lej
 놞	!len
 놟	!ler
@@ -1274,7 +1274,7 @@ use_preset_vocabulary: false
 놥	!lea
 놦	!leh
 놧	!leb
-놨	!lem	5000
+놨	!lem
 놩	!leq
 놪	!leu
 놫	!led
@@ -1310,15 +1310,15 @@ use_preset_vocabulary: false
 뇉	!lse
 뇊	!lsx
 뇋	!lsw
-뇌	!lx	5000
+뇌	!lx
 뇍	!lxy
 뇎	!lxf
 뇏	!lxv
-뇐	!lxl	5000
+뇐	!lxl
 뇑	!lxk
 뇒	!lxg
 뇓	!lxc
-뇔	!lxs	5000
+뇔	!lxs
 뇕	!lxj
 뇖	!lxn
 뇗	!lxr
@@ -1326,10 +1326,10 @@ use_preset_vocabulary: false
 뇙	!lxt
 뇚	!lxi
 뇛	!lwx
-뇜	!lxo	5000
-뇝	!lxa	5000
+뇜	!lxo
+뇝	!lxa
 뇞	!lxh
-뇟	!lxb	5000
+뇟	!lxb
 뇠	!lxm
 뇡	!lxq
 뇢	!lxu
@@ -1364,7 +1364,7 @@ use_preset_vocabulary: false
 눓	!lwt
 눖	!lth
 눘	!ltm
-눠	!la	5000
+눠	!la
 눡	!lay
 눢	!laf
 눣	!lav
@@ -1384,7 +1384,7 @@ use_preset_vocabulary: false
 눱	!laa
 눲	!lah
 눳	!lab
-눴	!lam	5000
+눴	!lam
 눵	!laq
 눶	!lau
 눷	!lad
@@ -1392,7 +1392,7 @@ use_preset_vocabulary: false
 눹	!lae
 눺	!lax
 눻	!law
-눼	!lz	5000
+눼	!lz
 눽	!lzy
 눾	!lzf
 눿	!lzv
@@ -1420,15 +1420,15 @@ use_preset_vocabulary: false
 뉕	!lze
 뉖	!lzx
 뉗	!lzw
-뉘	!ld	5000
+뉘	!ld
 뉙	!ldy
 뉚	!ldf
 뉛	!ldv
-뉜	!ldl	5000
+뉜	!ldl
 뉝	!ldk
 뉞	!ldg
 뉟	!ldc
-뉠	!lds	5000
+뉠	!lds
 뉡	!ldj
 뉢	!ldn
 뉣	!ldr
@@ -1436,8 +1436,8 @@ use_preset_vocabulary: false
 뉥	!ldt
 뉦	!ldi
 뉧	!lwd
-뉨	!ldo	5000
-뉩	!lda	5000
+뉨	!ldo
+뉩	!lda
 뉪	!ldh
 뉫	!ldb
 뉬	!ldm
@@ -1465,8 +1465,8 @@ use_preset_vocabulary: false
 늓	!lvv
 늕	!lvk
 늖	!lvg
-늙	!lvj	5000
-늚	!lvn	5000
+늙	!lvj
+늚	!lvn
 늛	!lvr
 늜	!lvp
 늝	!lvt
@@ -1474,15 +1474,15 @@ use_preset_vocabulary: false
 늟	!lwv
 늢	!lvh
 늤	!lvm
-늬	!ll	5000
+늬	!ll
 늭	!lly
 늮	!llf
 늯	!llv
-늰	!lll	5000
+늰	!lll
 늱	!llk
 늲	!llg
 늳	!llc
-늴	!lls	5000
+늴	!lls
 늵	!llj
 늶	!lln
 늷	!llr
@@ -1507,7 +1507,7 @@ use_preset_vocabulary: false
 닍	!lik
 닎	!lig
 닑	!lij
-닒	!lin	5000
+닒	!lin
 닓	!lir
 닔	!lip
 닕	!lit
@@ -1516,19 +1516,19 @@ use_preset_vocabulary: false
 닚	!lih
 닜	!lim
 #s4
-닦	!ckf	5000
+닦	!ckf
 닧	!ckv
 닩	!ckk
 닪	!ckg
-닭	!ckj	5000
-닮	!ckn	5000
-닯	!ckr	5000
+닭	!ckj
+닮	!ckn
+닯	!ckr
 닰	!ckp
 닱	!ckt
 닲	!cki
-닳	!cwk	5000
+닳	!cwk
 닶	!ckh
-닸	!ckm	5000
+닸	!ckm
 댂	!chf
 댃	!chv
 댅	!chk
@@ -1541,7 +1541,7 @@ use_preset_vocabulary: false
 댎	!chi
 댏	!cwh
 댒	!chh
-댔	!chm	5000
+댔	!chm
 댞	!cff
 댟	!cfv
 댡	!cfk
@@ -1583,13 +1583,13 @@ use_preset_vocabulary: false
 덑	!coe
 덒	!cox
 덓	!cow
-덖	!cjf	5000
+덖	!cjf
 덗	!cjv
 덙	!cjk
 덚	!cjg
 덝	!cjj
-덞	!cjn	5000
-덟	!cjr	5000
+덞	!cjn
+덟	!cjr
 덠	!cjp
 덡	!cjt
 덢	!cji
@@ -1608,7 +1608,7 @@ use_preset_vocabulary: false
 덾	!cpi
 덿	!cwp
 뎂	!cph
-뎄	!cpm	5000
+뎄	!cpm
 뎎	!cgf
 뎏	!cgv
 뎑	!cgk
@@ -1621,12 +1621,12 @@ use_preset_vocabulary: false
 뎚	!cgi
 뎛	!cwg
 뎞	!cgh
-뎠	!cgm	5000
-뎨	!cq	5000
+뎠	!cgm
+뎨	!cq
 뎩	!cqy
 뎪	!cqf
 뎫	!cqv
-뎬	!cql	5000
+뎬	!cql
 뎭	!cqk
 뎮	!cqg
 뎯	!cqc
@@ -1655,23 +1655,23 @@ use_preset_vocabulary: false
 돉	!cnk
 돊	!cng
 돍	!cnj
-돎	!cnn	5000
+돎	!cnn
 돏	!cnr
-돐	!cnp	5000
+돐	!cnp
 돑	!cnt
 돒	!cni
 돓	!cwn
 돖	!cnh
 돘	!cnm
-돠	!ce	5000
+돠	!ce
 돡	!cey
 돢	!cef
 돣	!cev
-돤	!cel	5000
+돤	!cel
 돥	!cek
 돦	!ceg
 돧	!cec
-돨	!ces	5000
+돨	!ces
 돩	!cej
 돪	!cen
 돫	!cer
@@ -1691,7 +1691,7 @@ use_preset_vocabulary: false
 돹	!cee
 돺	!cex
 돻	!cew
-돼	!cs	5000
+돼	!cs
 돽	!csy
 돾	!csf
 돿	!csv
@@ -1711,7 +1711,7 @@ use_preset_vocabulary: false
 됍	!csa
 됎	!csh
 됏	!csb
-됐	!csm	5000
+됐	!csm
 됑	!csq
 됒	!csu
 됓	!csd
@@ -1719,15 +1719,15 @@ use_preset_vocabulary: false
 됕	!cse
 됖	!csx
 됗	!csw
-되	!cx	5000
+되	!cx
 됙	!cxy
 됚	!cxf
 됛	!cxv
-된	!cxl	5000
+된	!cxl
 됝	!cxk
 됞	!cxg
 됟	!cxc
-될	!cxs	5000
+될	!cxs
 됡	!cxj
 됢	!cxn
 됣	!cxr
@@ -1735,10 +1735,10 @@ use_preset_vocabulary: false
 됥	!cxt
 됦	!cxi
 됧	!cwx
-됨	!cxo	5000
-됩	!cxa	5000
+됨	!cxo
+됩	!cxa
 됪	!cxh
-됫	!cxb	5000
+됫	!cxb
 됬	!cxm
 됭	!cxq
 됮	!cxu
@@ -1773,7 +1773,7 @@ use_preset_vocabulary: false
 둟	!cwt
 둢	!cth
 둤	!ctm
-둬	!ca	5000
+둬	!ca
 둭	!cay
 둮	!caf
 둯	!cav
@@ -1793,7 +1793,7 @@ use_preset_vocabulary: false
 둽	!caa
 둾	!cah
 둿	!cab
-뒀	!cam	5000
+뒀	!cam
 뒁	!caq
 뒂	!cau
 뒃	!cad
@@ -1801,7 +1801,7 @@ use_preset_vocabulary: false
 뒅	!cae
 뒆	!cax
 뒇	!caw
-뒈	!cz	5000
+뒈	!cz
 뒉	!czy
 뒊	!czf
 뒋	!czv
@@ -1822,22 +1822,22 @@ use_preset_vocabulary: false
 뒚	!czh
 뒛	!czb
 뒜	!czm
-뒝	!czq	5000
+뒝	!czq
 뒞	!czu
 뒟	!czd
 뒠	!czz
 뒡	!cze
 뒢	!czx
 뒣	!czw
-뒤	!cd	5000
+뒤	!cd
 뒥	!cdy
 뒦	!cdf
 뒧	!cdv
-뒨	!cdl	5000
+뒨	!cdl
 뒩	!cdk
 뒪	!cdg
 뒫	!cdc
-뒬	!cds	5000
+뒬	!cds
 뒭	!cdj
 뒮	!cdn
 뒯	!cdr
@@ -1846,11 +1846,11 @@ use_preset_vocabulary: false
 뒲	!cdi
 뒳	!cwd
 뒴	!cdo
-뒵	!cda	5000
+뒵	!cda
 뒶	!cdh
-뒷	!cdb	5000
+뒷	!cdb
 뒸	!cdm
-뒹	!cdq	5000
+뒹	!cdq
 뒺	!cdu
 뒻	!cdd
 뒼	!cdz
@@ -1875,7 +1875,7 @@ use_preset_vocabulary: false
 듡	!cvk
 듢	!cvg
 듥	!cvj
-듦	!cvn	5000
+듦	!cvn
 듧	!cvr
 듨	!cvp
 듩	!cvt
@@ -1883,7 +1883,7 @@ use_preset_vocabulary: false
 듫	!cwv
 듮	!cvh
 듰	!cvm
-듸	!cl	5000
+듸	!cl
 듹	!cly
 듺	!clf
 듻	!clv
@@ -1923,17 +1923,17 @@ use_preset_vocabulary: false
 딢	!cii
 딣	!cwi
 딦	!cih
-딨	!cim	5000
+딨	!cim
 #s5
-따	!gk	5000
-딱	!gky	5000
+따	!gk
+딱	!gky
 딲	!gkf
 딳	!gkv
-딴	!gkl	5000
+딴	!gkl
 딵	!gkk
 딶	!gkg
 딷	!gkc
-딸	!gks	5000
+딸	!gks
 딹	!gkj
 딺	!gkn
 딻	!gkr
@@ -1941,27 +1941,27 @@ use_preset_vocabulary: false
 딽	!gkt
 딾	!gki
 딿	!gwk
-땀	!gko	5000
-땁	!gka	5000
+땀	!gko
+땁	!gka
 땂	!gkh
-땃	!gkb	5000
-땄	!gkm	5000
-땅	!gkq	5000
+땃	!gkb
+땄	!gkm
+땅	!gkq
 땆	!gku
 땇	!gkd
 땈	!gkz
 땉	!gke
 땊	!gkx
-땋	!gkw	5000
-때	!gh	5000
-땍	!ghy	5000
+땋	!gkw
+때	!gh
+땍	!ghy
 땎	!ghf
 땏	!ghv
-땐	!ghl	5000
+땐	!ghl
 땑	!ghk
 땒	!ghg
 땓	!ghc
-땔	!ghs	5000
+땔	!ghs
 땕	!ghj
 땖	!ghn
 땗	!ghr
@@ -1969,12 +1969,12 @@ use_preset_vocabulary: false
 땙	!ght
 땚	!ghi
 땛	!gwh
-땜	!gho	5000
-땝	!gha	5000
+땜	!gho
+땝	!gha
 땞	!ghh
-땟	!ghb	5000
-땠	!ghm	5000
-땡	!ghq	5000
+땟	!ghb
+땠	!ghm
+땡	!ghq
 땢	!ghu
 땣	!ghd
 땤	!ghz
@@ -2037,43 +2037,43 @@ use_preset_vocabulary: false
 떝	!goe
 떞	!gox
 떟	!gow
-떠	!gj	5000
-떡	!gjy	5000
+떠	!gj
+떡	!gjy
 떢	!gjf
 떣	!gjv
-떤	!gjl	5000
+떤	!gjl
 떥	!gjk
 떦	!gjg
 떧	!gjc
-떨	!gjs	5000
+떨	!gjs
 떩	!gjj
-떪	!gjn	5000
-떫	!gjr	5000
+떪	!gjn
+떫	!gjr
 떬	!gjp
 떭	!gjt
 떮	!gji
 떯	!gwj
-떰	!gjo	5000
-떱	!gja	5000
+떰	!gjo
+떱	!gja
 떲	!gjh
-떳	!gjb	5000
-떴	!gjm	5000
-떵	!gjq	5000
+떳	!gjb
+떴	!gjm
+떵	!gjq
 떶	!gju
 떷	!gjd
 떸	!gjz
 떹	!gje
 떺	!gjx
-떻	!gjw	5000
-떼	!gp	5000
-떽	!gpy	5000
+떻	!gjw
+떼	!gp
+떽	!gpy
 떾	!gpf
 떿	!gpv
-뗀	!gpl	5000
+뗀	!gpl
 뗁	!gpk
 뗂	!gpg
 뗃	!gpc
-뗄	!gps	5000
+뗄	!gps
 뗅	!gpj
 뗆	!gpn
 뗇	!gpr
@@ -2081,19 +2081,19 @@ use_preset_vocabulary: false
 뗉	!gpt
 뗊	!gpi
 뗋	!gwp
-뗌	!gpo	5000
-뗍	!gpa	5000
+뗌	!gpo
+뗍	!gpa
 뗎	!gph
-뗏	!gpb	5000
-뗐	!gpm	5000
-뗑	!gpq	5000
+뗏	!gpb
+뗐	!gpm
+뗑	!gpq
 뗒	!gpu
 뗓	!gpd
 뗔	!gpz
 뗕	!gpe
 뗖	!gpx
 뗗	!gpw
-뗘	!gg	5000
+뗘	!gg
 뗙	!ggy
 뗚	!ggf
 뗛	!ggv
@@ -2113,7 +2113,7 @@ use_preset_vocabulary: false
 뗩	!gga
 뗪	!ggh
 뗫	!ggb
-뗬	!ggm	5000
+뗬	!ggm
 뗭	!ggq
 뗮	!ggu
 뗯	!ggd
@@ -2149,15 +2149,15 @@ use_preset_vocabulary: false
 똍	!gqe
 똎	!gqx
 똏	!gqw
-또	!gn	5000
-똑	!gny	5000
+또	!gn
+똑	!gny
 똒	!gnf
 똓	!gnv
-똔	!gnl	5000
+똔	!gnl
 똕	!gnk
 똖	!gng
 똗	!gnc
-똘	!gns	5000
+똘	!gns
 똙	!gnj
 똚	!gnn
 똛	!gnr
@@ -2170,14 +2170,14 @@ use_preset_vocabulary: false
 똢	!gnh
 똣	!gnb
 똤	!gnm
-똥	!gnq	5000
+똥	!gnq
 똦	!gnu
 똧	!gnd
 똨	!gnz
 똩	!gne
 똪	!gnx
 똫	!gnw
-똬	!ge	5000
+똬	!ge
 똭	!gey
 똮	!gef
 똯	!gev
@@ -2185,7 +2185,7 @@ use_preset_vocabulary: false
 똱	!gek
 똲	!geg
 똳	!gec
-똴	!ges	5000
+똴	!ges
 똵	!gej
 똶	!gen
 똷	!ger
@@ -2205,7 +2205,7 @@ use_preset_vocabulary: false
 뙅	!gee
 뙆	!gex
 뙇	!gew
-뙈	!gs	5000
+뙈	!gs
 뙉	!gsy
 뙊	!gsf
 뙋	!gsv
@@ -2233,11 +2233,11 @@ use_preset_vocabulary: false
 뙡	!gse
 뙢	!gsx
 뙣	!gsw
-뙤	!gx	5000
+뙤	!gx
 뙥	!gxy
 뙦	!gxf
 뙧	!gxv
-뙨	!gxl	5000
+뙨	!gxl
 뙩	!gxk
 뙪	!gxg
 뙫	!gxc
@@ -2289,28 +2289,28 @@ use_preset_vocabulary: false
 뚙	!gme
 뚚	!gmx
 뚛	!gmw
-뚜	!gt	5000
-뚝	!gty	5000
+뚜	!gt
+뚝	!gty
 뚞	!gtf
 뚟	!gtv
-뚠	!gtl	5000
+뚠	!gtl
 뚡	!gtk
 뚢	!gtg
 뚣	!gtc
-뚤	!gts	5000
+뚤	!gts
 뚥	!gtj
 뚦	!gtn
 뚧	!gtr
 뚨	!gtp
 뚩	!gtt
 뚪	!gti
-뚫	!gwt	5000
-뚬	!gto	5000
+뚫	!gwt
+뚬	!gto
 뚭	!gta
 뚮	!gth
 뚯	!gtb
 뚰	!gtm
-뚱	!gtq	5000
+뚱	!gtq
 뚲	!gtu
 뚳	!gtd
 뚴	!gtz
@@ -2345,7 +2345,7 @@ use_preset_vocabulary: false
 뛑	!gae
 뛒	!gax
 뛓	!gaw
-뛔	!gz	5000
+뛔	!gz
 뛕	!gzy
 뛖	!gzf
 뛗	!gzv
@@ -2373,15 +2373,15 @@ use_preset_vocabulary: false
 뛭	!gze
 뛮	!gzx
 뛯	!gzw
-뛰	!gd	5000
+뛰	!gd
 뛱	!gdy
 뛲	!gdf
 뛳	!gdv
-뛴	!gdl	5000
+뛴	!gdl
 뛵	!gdk
 뛶	!gdg
 뛷	!gdc
-뛸	!gds	5000
+뛸	!gds
 뛹	!gdj
 뛺	!gdn
 뛻	!gdr
@@ -2389,12 +2389,12 @@ use_preset_vocabulary: false
 뛽	!gdt
 뛾	!gdi
 뛿	!gwd
-뜀	!gdo	5000
-뜁	!gda	5000
+뜀	!gdo
+뜁	!gda
 뜂	!gdh
 뜃	!gdb
 뜄	!gdm
-뜅	!gdq	5000
+뜅	!gdq
 뜆	!gdu
 뜇	!gdd
 뜈	!gdz
@@ -2429,15 +2429,15 @@ use_preset_vocabulary: false
 뜥	!gre
 뜦	!grx
 뜧	!grw
-뜨	!gv	5000
-뜩	!gvy	5000
+뜨	!gv
+뜩	!gvy
 뜪	!gvf
 뜫	!gvv
-뜬	!gvl	5000
+뜬	!gvl
 뜭	!gvk
 뜮	!gvg
-뜯	!gvc	5000
-뜰	!gvs	5000
+뜯	!gvc
+뜰	!gvs
 뜱	!gvj
 뜲	!gvn
 뜳	!gvr
@@ -2445,10 +2445,10 @@ use_preset_vocabulary: false
 뜵	!gvt
 뜶	!gvi
 뜷	!gwv
-뜸	!gvo	5000
-뜹	!gva	5000
+뜸	!gvo
+뜹	!gva
 뜺	!gvh
-뜻	!gvb	5000
+뜻	!gvb
 뜼	!gvm
 뜽	!gvq
 뜾	!gvu
@@ -2457,15 +2457,15 @@ use_preset_vocabulary: false
 띁	!gve
 띂	!gvx
 띃	!gvw
-띄	!gl	5000
+띄	!gl
 띅	!gly
 띆	!glf
 띇	!glv
-띈	!gll	5000
+띈	!gll
 띉	!glk
 띊	!glg
 띋	!glc
-띌	!gls	5000
+띌	!gls
 띍	!glj
 띎	!gln
 띏	!glr
@@ -2473,8 +2473,8 @@ use_preset_vocabulary: false
 띑	!glt
 띒	!gli
 띓	!gwl
-띔	!glo	5000
-띕	!gla	5000
+띔	!glo
+띕	!gla
 띖	!glh
 띗	!glb
 띘	!glm
@@ -2485,15 +2485,15 @@ use_preset_vocabulary: false
 띝	!gle
 띞	!glx
 띟	!glw
-띠	!gi	5000
+띠	!gi
 띡	!giy
 띢	!gif
 띣	!giv
-띤	!gil	5000
+띤	!gil
 띥	!gik
 띦	!gig
 띧	!gic
-띨	!gis	5000
+띨	!gis
 띩	!gij
 띪	!gin
 띫	!gir
@@ -2501,12 +2501,12 @@ use_preset_vocabulary: false
 띭	!git
 띮	!gii
 띯	!gwi
-띰	!gio	5000
-띱	!gia	5000
+띰	!gio
+띱	!gia
 띲	!gih
-띳	!gib	5000
+띳	!gib
 띴	!gim
-띵	!giq	5000
+띵	!giq
 띶	!giu
 띷	!gid
 띸	!giz
@@ -2526,7 +2526,7 @@ use_preset_vocabulary: false
 랊	!ski
 랋	!swk
 랎	!skh
-랐	!skm	5000
+랐	!skm
 랚	!shf
 랛	!shv
 랝	!shk
@@ -2539,7 +2539,7 @@ use_preset_vocabulary: false
 랦	!shi
 랧	!swh
 랪	!shh
-랬	!shm	5000
+랬	!shm
 랶	!sff
 랷	!sfv
 랹	!sfk
@@ -2593,7 +2593,7 @@ use_preset_vocabulary: false
 럺	!sji
 럻	!swj
 럾	!sjh
-렀	!sjm	5000
+렀	!sjm
 렊	!spf
 렋	!spv
 렍	!spk
@@ -2619,12 +2619,12 @@ use_preset_vocabulary: false
 렲	!sgi
 렳	!swg
 렶	!sgh
-렸	!sgm	5000
-례	!sq	5000
+렸	!sgm
+례	!sq
 롁	!sqy
 롂	!sqf
 롃	!sqv
-롄	!sql	5000
+롄	!sql
 롅	!sqk
 롆	!sqg
 롇	!sqc
@@ -2637,9 +2637,9 @@ use_preset_vocabulary: false
 롎	!sqi
 롏	!swq
 롐	!sqo
-롑	!sqa	5000
+롑	!sqa
 롒	!sqh
-롓	!sqb	5000
+롓	!sqb
 롔	!sqm
 롕	!sqq
 롖	!squ
@@ -2661,11 +2661,11 @@ use_preset_vocabulary: false
 롫	!swn
 롮	!snh
 롰	!snm
-롸	!se	5000
+롸	!se
 롹	!sey
 롺	!sef
 롻	!sev
-롼	!sel	5000
+롼	!sel
 롽	!sek
 롾	!seg
 롿	!sec
@@ -2682,7 +2682,7 @@ use_preset_vocabulary: false
 뢊	!seh
 뢋	!seb
 뢌	!sem
-뢍	!seq	5000
+뢍	!seq
 뢎	!seu
 뢏	!sed
 뢐	!sez
@@ -2709,7 +2709,7 @@ use_preset_vocabulary: false
 뢥	!ssa
 뢦	!ssh
 뢧	!ssb
-뢨	!ssm	5000
+뢨	!ssm
 뢩	!ssq
 뢪	!ssu
 뢫	!ssd
@@ -2717,15 +2717,15 @@ use_preset_vocabulary: false
 뢭	!sse
 뢮	!ssx
 뢯	!ssw
-뢰	!sx	5000
+뢰	!sx
 뢱	!sxy
 뢲	!sxf
 뢳	!sxv
-뢴	!sxl	5000
+뢴	!sxl
 뢵	!sxk
 뢶	!sxg
 뢷	!sxc
-뢸	!sxs	5000
+뢸	!sxs
 뢹	!sxj
 뢺	!sxn
 뢻	!sxr
@@ -2733,12 +2733,12 @@ use_preset_vocabulary: false
 뢽	!sxt
 뢾	!sxi
 뢿	!swx
-룀	!sxo	5000
-룁	!sxa	5000
+룀	!sxo
+룁	!sxa
 룂	!sxh
-룃	!sxb	5000
+룃	!sxb
 룄	!sxm
-룅	!sxq	5000
+룅	!sxq
 룆	!sxu
 룇	!sxd
 룈	!sxz
@@ -2771,7 +2771,7 @@ use_preset_vocabulary: false
 룷	!swt
 룺	!sth
 룼	!stm
-뤄	!sa	5000
+뤄	!sa
 뤅	!say
 뤆	!saf
 뤇	!sav
@@ -2791,7 +2791,7 @@ use_preset_vocabulary: false
 뤕	!saa
 뤖	!sah
 뤗	!sab
-뤘	!sam	5000
+뤘	!sam
 뤙	!saq
 뤚	!sau
 뤛	!sad
@@ -2799,7 +2799,7 @@ use_preset_vocabulary: false
 뤝	!sae
 뤞	!sax
 뤟	!saw
-뤠	!sz	5000
+뤠	!sz
 뤡	!szy
 뤢	!szf
 뤣	!szv
@@ -2827,15 +2827,15 @@ use_preset_vocabulary: false
 뤹	!sze
 뤺	!szx
 뤻	!szw
-뤼	!sd	5000
-뤽	!sdy	5000
+뤼	!sd
+뤽	!sdy
 뤾	!sdf
 뤿	!sdv
-륀	!sdl	5000
+륀	!sdl
 륁	!sdk
 륂	!sdg
 륃	!sdc
-륄	!sds	5000
+륄	!sds
 륅	!sdj
 륆	!sdn
 륇	!sdr
@@ -2843,12 +2843,12 @@ use_preset_vocabulary: false
 륉	!sdt
 륊	!sdi
 륋	!swd
-륌	!sdo	5000
+륌	!sdo
 륍	!sda
 륎	!sdh
-륏	!sdb	5000
+륏	!sdb
 륐	!sdm
-륑	!sdq	5000
+륑	!sdq
 륒	!sdu
 륓	!sdd
 륔	!sdz
@@ -2926,9 +2926,9 @@ use_preset_vocabulary: false
 맊	!okf
 맋	!okv
 맍	!okk
-많	!okg	5000
-맑	!okj	5000
-맒	!okn	5000
+많	!okg
+맑	!okj
+맒	!okn
 맓	!okr
 맔	!okp
 맕	!okt
@@ -2948,7 +2948,7 @@ use_preset_vocabulary: false
 맲	!ohi
 맳	!owh
 맶	!ohh
-맸	!ohm	5000
+맸	!ohm
 먂	!off
 먃	!ofv
 먅	!ofk
@@ -2995,7 +2995,7 @@ use_preset_vocabulary: false
 먽	!ojk
 먾	!ojg
 멁	!ojj
-멂	!ojn	5000
+멂	!ojn
 멃	!ojr
 멄	!ojp
 멅	!ojt
@@ -3015,7 +3015,7 @@ use_preset_vocabulary: false
 멢	!opi
 멣	!owp
 멦	!oph
-멨	!opm	5000
+멨	!opm
 멲	!ogf
 멳	!ogv
 멵	!ogk
@@ -3028,8 +3028,8 @@ use_preset_vocabulary: false
 멾	!ogi
 멿	!owg
 몂	!ogh
-몄	!ogm	5000
-몌	!oq	5000
+몄	!ogm
+몌	!oq
 몍	!oqy
 몎	!oqf
 몏	!oqv
@@ -3058,11 +3058,11 @@ use_preset_vocabulary: false
 몦	!oqx
 몧	!oqw
 몪	!onf
-몫	!onv	5000
+몫	!onv
 몭	!onk
 몮	!ong
 몱	!onj
-몲	!onn	5000
+몲	!onn
 몳	!onr
 몴	!onp
 몵	!ont
@@ -3070,11 +3070,11 @@ use_preset_vocabulary: false
 몷	!own
 몺	!onh
 몼	!onm
-뫄	!oe	5000
+뫄	!oe
 뫅	!oey
 뫆	!oef
 뫇	!oev
-뫈	!oel	5000
+뫈	!oel
 뫉	!oek
 뫊	!oeg
 뫋	!oec
@@ -3090,8 +3090,8 @@ use_preset_vocabulary: false
 뫕	!oea
 뫖	!oeh
 뫗	!oeb
-뫘	!oem	5000
-뫙	!oeq	5000
+뫘	!oem
+뫙	!oeq
 뫚	!oeu
 뫛	!oed
 뫜	!oez
@@ -3126,15 +3126,15 @@ use_preset_vocabulary: false
 뫹	!ose
 뫺	!osx
 뫻	!osw
-뫼	!ox	5000
+뫼	!ox
 뫽	!oxy
 뫾	!oxf
 뫿	!oxv
-묀	!oxl	5000
+묀	!oxl
 묁	!oxk
 묂	!oxg
 묃	!oxc
-묄	!oxs	5000
+묄	!oxs
 묅	!oxj
 묆	!oxn
 묇	!oxr
@@ -3143,11 +3143,11 @@ use_preset_vocabulary: false
 묊	!oxi
 묋	!owx
 묌	!oxo
-묍	!oxa	5000
+묍	!oxa
 묎	!oxh
-묏	!oxb	5000
+묏	!oxb
 묐	!oxm
-묑	!oxq	5000
+묑	!oxq
 묒	!oxu
 묓	!oxd
 묔	!oxz
@@ -3167,12 +3167,12 @@ use_preset_vocabulary: false
 묧	!owm
 묪	!omh
 묬	!omm
-묶	!otf	5000
+묶	!otf
 묷	!otv
 묹	!otk
 묺	!otg
-묽	!otj	5000
-묾	!otn	5000
+묽	!otj
+묾	!otn
 묿	!otr
 뭀	!otp
 뭁	!ott
@@ -3180,15 +3180,15 @@ use_preset_vocabulary: false
 뭃	!owt
 뭆	!oth
 뭈	!otm
-뭐	!oa	5000
+뭐	!oa
 뭑	!oay
 뭒	!oaf
 뭓	!oav
-뭔	!oal	5000
+뭔	!oal
 뭕	!oak
 뭖	!oag
 뭗	!oac
-뭘	!oas	5000
+뭘	!oas
 뭙	!oaj
 뭚	!oan
 뭛	!oar
@@ -3197,9 +3197,9 @@ use_preset_vocabulary: false
 뭞	!oai
 뭟	!owa
 뭠	!oao
-뭡	!oaa	5000
+뭡	!oaa
 뭢	!oah
-뭣	!oab	5000
+뭣	!oab
 뭤	!oam
 뭥	!oaq
 뭦	!oau
@@ -3208,7 +3208,7 @@ use_preset_vocabulary: false
 뭩	!oae
 뭪	!oax
 뭫	!oaw
-뭬	!oz	5000
+뭬	!oz
 뭭	!ozy
 뭮	!ozf
 뭯	!ozv
@@ -3236,15 +3236,15 @@ use_preset_vocabulary: false
 뮅	!oze
 뮆	!ozx
 뮇	!ozw
-뮈	!od	5000
+뮈	!od
 뮉	!ody
 뮊	!odf
 뮋	!odv
-뮌	!odl	5000
+뮌	!odl
 뮍	!odk
 뮎	!odg
 뮏	!odc
-뮐	!ods	5000
+뮐	!ods
 뮑	!odj
 뮒	!odn
 뮓	!odr
@@ -3323,22 +3323,22 @@ use_preset_vocabulary: false
 믽	!oik
 믾	!oig
 밁	!oij
-밂	!oin	5000
+밂	!oin
 밃	!oir
 밄	!oip
 밅	!oit
 밆	!oii
 밇	!owi
 밊	!oih
-밌	!oim	5000
+밌	!oim
 #s8
-밖	!akf	5000
-밗	!akv	5000
+밖	!akf
+밗	!akv
 밙	!akk
 밚	!akg
-밝	!akj	5000
-밞	!akn	5000
-밟	!akr	5000
+밝	!akj
+밞	!akn
+밟	!akr
 밠	!akp
 밡	!akt
 밢	!aki
@@ -3357,7 +3357,7 @@ use_preset_vocabulary: false
 밾	!ahi
 밿	!awh
 뱂	!ahh
-뱄	!ahm	5000
+뱄	!ahm
 뱎	!aff
 뱏	!afv
 뱑	!afk
@@ -3404,7 +3404,7 @@ use_preset_vocabulary: false
 벉	!ajk
 벊	!ajg
 벍	!ajj
-벎	!ajn	5000
+벎	!ajn
 벏	!ajr
 벐	!ajp
 벑	!ajt
@@ -3424,7 +3424,7 @@ use_preset_vocabulary: false
 벮	!api
 벯	!awp
 벲	!aph
-벴	!apm	5000
+벴	!apm
 벾	!agf
 벿	!agv
 볁	!agk
@@ -3437,12 +3437,12 @@ use_preset_vocabulary: false
 볊	!agi
 볋	!awg
 볎	!agh
-볐	!agm	5000
-볘	!aq	5000
+볐	!agm
+볘	!aq
 볙	!aqy
 볚	!aqf
 볛	!aqv
-볜	!aql	5000
+볜	!aql
 볝	!aqk
 볞	!aqg
 볟	!aqc
@@ -3466,7 +3466,7 @@ use_preset_vocabulary: false
 볱	!aqe
 볲	!aqx
 볳	!aqw
-볶	!anf	5000
+볶	!anf
 볷	!anv
 볹	!ank
 볺	!ang
@@ -3479,11 +3479,11 @@ use_preset_vocabulary: false
 봃	!awn
 봆	!anh
 봈	!anm
-봐	!ae	5000
+봐	!ae
 봑	!aey
 봒	!aef
 봓	!aev
-봔	!ael	5000
+봔	!ael
 봕	!aek
 봖	!aeg
 봗	!aec
@@ -3499,7 +3499,7 @@ use_preset_vocabulary: false
 봡	!aea
 봢	!aeh
 봣	!aeb
-봤	!aem	5000
+봤	!aem
 봥	!aeq
 봦	!aeu
 봧	!aed
@@ -3507,7 +3507,7 @@ use_preset_vocabulary: false
 봩	!aee
 봪	!aex
 봫	!aew
-봬	!as	5000
+봬	!as
 봭	!asy
 봮	!asf
 봯	!asv
@@ -3527,7 +3527,7 @@ use_preset_vocabulary: false
 봽	!asa
 봾	!ash
 봿	!asb
-뵀	!asm	5000
+뵀	!asm
 뵁	!asq
 뵂	!asu
 뵃	!asd
@@ -3535,15 +3535,15 @@ use_preset_vocabulary: false
 뵅	!ase
 뵆	!asx
 뵇	!asw
-뵈	!ax	5000
-뵉	!axy	5000
+뵈	!ax
+뵉	!axy
 뵊	!axf
 뵋	!axv
-뵌	!axl	5000
+뵌	!axl
 뵍	!axk
 뵎	!axg
 뵏	!axc
-뵐	!axs	5000
+뵐	!axs
 뵑	!axj
 뵒	!axn
 뵓	!axr
@@ -3551,8 +3551,8 @@ use_preset_vocabulary: false
 뵕	!axt
 뵖	!axi
 뵗	!awx
-뵘	!axo	5000
-뵙	!axa	5000
+뵘	!axo
+뵙	!axa
 뵚	!axh
 뵛	!axb
 뵜	!axm
@@ -3580,8 +3580,8 @@ use_preset_vocabulary: false
 붃	!atv
 붅	!atk
 붆	!atg
-붉	!atj	5000
-붊	!atn	5000
+붉	!atj
+붊	!atn
 붋	!atr
 붌	!atp
 붍	!att
@@ -3589,7 +3589,7 @@ use_preset_vocabulary: false
 붏	!awt
 붒	!ath
 붔	!atm
-붜	!aa	5000
+붜	!aa
 붝	!aay
 붞	!aaf
 붟	!aav
@@ -3597,7 +3597,7 @@ use_preset_vocabulary: false
 붡	!aak
 붢	!aag
 붣	!aac
-붤	!aas	5000
+붤	!aas
 붥	!aaj
 붦	!aan
 붧	!aar
@@ -3609,7 +3609,7 @@ use_preset_vocabulary: false
 붭	!aaa
 붮	!aah
 붯	!aab
-붰	!aam	5000
+붰	!aam
 붱	!aaq
 붲	!aau
 붳	!aad
@@ -3617,7 +3617,7 @@ use_preset_vocabulary: false
 붵	!aae
 붶	!aax
 붷	!aaw
-붸	!az	5000
+붸	!az
 붹	!azy
 붺	!azf
 붻	!azv
@@ -3645,15 +3645,15 @@ use_preset_vocabulary: false
 뷑	!aze
 뷒	!azx
 뷓	!azw
-뷔	!ad	5000
-뷕	!ady	5000
+뷔	!ad
+뷕	!ady
 뷖	!adf
 뷗	!adv
-뷘	!adl	5000
+뷘	!adl
 뷙	!adk
 뷚	!adg
 뷛	!adc
-뷜	!ads	5000
+뷜	!ads
 뷝	!adj
 뷞	!adn
 뷟	!adr
@@ -3666,7 +3666,7 @@ use_preset_vocabulary: false
 뷦	!adh
 뷧	!adb
 뷨	!adm
-뷩	!adq	5000
+뷩	!adq
 뷪	!adu
 뷫	!add
 뷬	!adz
@@ -3732,7 +3732,7 @@ use_preset_vocabulary: false
 빉	!aik
 빊	!aig
 빍	!aij
-빎	!ain	5000
+빎	!ain
 빏	!air
 빐	!aip
 빑	!ait
@@ -3741,43 +3741,43 @@ use_preset_vocabulary: false
 빖	!aih
 빘	!aim
 #s9
-빠	!rk	5000
-빡	!rky	5000
+빠	!rk
+빡	!rky
 빢	!rkf
 빣	!rkv
-빤	!rkl	5000
+빤	!rkl
 빥	!rkk
 빦	!rkg
 빧	!rkc
-빨	!rks	5000
+빨	!rks
 빩	!rkj
-빪	!rkn	5000
+빪	!rkn
 빫	!rkr
 빬	!rkp
 빭	!rkt
 빮	!rki
 빯	!rwk
-빰	!rko	5000
-빱	!rka	5000
+빰	!rko
+빱	!rka
 빲	!rkh
-빳	!rkb	5000
-빴	!rkm	5000
-빵	!rkq	5000
+빳	!rkb
+빴	!rkm
+빵	!rkq
 빶	!rku
 빷	!rkd
 빸	!rkz
 빹	!rke
 빺	!rkx
-빻	!rkw	5000
-빼	!rh	5000
-빽	!rhy	5000
+빻	!rkw
+빼	!rh
+빽	!rhy
 빾	!rhf
 빿	!rhv
-뺀	!rhl	5000
+뺀	!rhl
 뺁	!rhk
 뺂	!rhg
 뺃	!rhc
-뺄	!rhs	5000
+뺄	!rhs
 뺅	!rhj
 뺆	!rhn
 뺇	!rhr
@@ -3785,20 +3785,20 @@ use_preset_vocabulary: false
 뺉	!rht
 뺊	!rhi
 뺋	!rwh
-뺌	!rho	5000
-뺍	!rha	5000
+뺌	!rho
+뺍	!rha
 뺎	!rhh
-뺏	!rhb	5000
-뺐	!rhm	5000
-뺑	!rhq	5000
+뺏	!rhb
+뺐	!rhm
+뺑	!rhq
 뺒	!rhu
 뺓	!rhd
 뺔	!rhz
 뺕	!rhe
 뺖	!rhx
 뺗	!rhw
-뺘	!rf	5000
-뺙	!rfy	5000
+뺘	!rf
+뺙	!rfy
 뺚	!rff
 뺛	!rfv
 뺜	!rfl
@@ -3813,7 +3813,7 @@ use_preset_vocabulary: false
 뺥	!rft
 뺦	!rfi
 뺧	!rwf
-뺨	!rfo	5000
+뺨	!rfo
 뺩	!rfa
 뺪	!rfh
 뺫	!rfb
@@ -3853,15 +3853,15 @@ use_preset_vocabulary: false
 뻍	!roe
 뻎	!rox
 뻏	!row
-뻐	!rj	5000
-뻑	!rjy	5000
+뻐	!rj
+뻑	!rjy
 뻒	!rjf
 뻓	!rjv
-뻔	!rjl	5000
+뻔	!rjl
 뻕	!rjk
 뻖	!rjg
-뻗	!rjc	5000
-뻘	!rjs	5000
+뻗	!rjc
+뻘	!rjs
 뻙	!rjj
 뻚	!rjn
 뻛	!rjr
@@ -3869,19 +3869,19 @@ use_preset_vocabulary: false
 뻝	!rjt
 뻞	!rji
 뻟	!rwj
-뻠	!rjo	5000
+뻠	!rjo
 뻡	!rja
 뻢	!rjh
-뻣	!rjb	5000
-뻤	!rjm	5000
-뻥	!rjq	5000
+뻣	!rjb
+뻤	!rjm
+뻥	!rjq
 뻦	!rju
 뻧	!rjd
 뻨	!rjz
 뻩	!rje
 뻪	!rjx
 뻫	!rjw
-뻬	!rp	5000
+뻬	!rp
 뻭	!rpy
 뻮	!rpf
 뻯	!rpv
@@ -3902,15 +3902,15 @@ use_preset_vocabulary: false
 뻾	!rph
 뻿	!rpb
 뼀	!rpm
-뼁	!rpq	5000
+뼁	!rpq
 뼂	!rpu
 뼃	!rpd
 뼄	!rpz
 뼅	!rpe
 뼆	!rpx
 뼇	!rpw
-뼈	!rg	5000
-뼉	!rgy	5000
+뼈	!rg
+뼉	!rgy
 뼊	!rgf
 뼋	!rgv
 뼌	!rgl
@@ -3925,12 +3925,12 @@ use_preset_vocabulary: false
 뼕	!rgt
 뼖	!rgi
 뼗	!rwg
-뼘	!rgo	5000
-뼙	!rga	5000
+뼘	!rgo
+뼙	!rga
 뼚	!rgh
-뼛	!rgb	5000
-뼜	!rgm	5000
-뼝	!rgq	5000
+뼛	!rgb
+뼜	!rgm
+뼝	!rgq
 뼞	!rgu
 뼟	!rgd
 뼠	!rgz
@@ -3965,15 +3965,15 @@ use_preset_vocabulary: false
 뼽	!rqe
 뼾	!rqx
 뼿	!rqw
-뽀	!rn	5000
-뽁	!rny	5000
+뽀	!rn
+뽁	!rny
 뽂	!rnf
 뽃	!rnv
-뽄	!rnl	5000
+뽄	!rnl
 뽅	!rnk
 뽆	!rng
 뽇	!rnc
-뽈	!rns	5000
+뽈	!rns
 뽉	!rnj
 뽊	!rnn
 뽋	!rnr
@@ -3981,12 +3981,12 @@ use_preset_vocabulary: false
 뽍	!rnt
 뽎	!rni
 뽏	!rwn
-뽐	!rno	5000
-뽑	!rna	5000
+뽐	!rno
+뽑	!rna
 뽒	!rnh
 뽓	!rnb
 뽔	!rnm
-뽕	!rnq	5000
+뽕	!rnq
 뽖	!rnu
 뽗	!rnd
 뽘	!rnz
@@ -4049,7 +4049,7 @@ use_preset_vocabulary: false
 뾑	!rse
 뾒	!rsx
 뾓	!rsw
-뾔	!rx	5000
+뾔	!rx
 뾕	!rxy
 뾖	!rxf
 뾗	!rxv
@@ -4077,7 +4077,7 @@ use_preset_vocabulary: false
 뾭	!rxe
 뾮	!rxx
 뾯	!rxw
-뾰	!rm	5000
+뾰	!rm
 뾱	!rmy
 뾲	!rmf
 뾳	!rmv
@@ -4098,22 +4098,22 @@ use_preset_vocabulary: false
 뿂	!rmh
 뿃	!rmb
 뿄	!rmm
-뿅	!rmq	5000
+뿅	!rmq
 뿆	!rmu
 뿇	!rmd
 뿈	!rmz
 뿉	!rme
 뿊	!rmx
 뿋	!rmw
-뿌	!rt	5000
-뿍	!rty	5000
+뿌	!rt
+뿍	!rty
 뿎	!rtf
 뿏	!rtv
-뿐	!rtl	5000
+뿐	!rtl
 뿑	!rtk
 뿒	!rtg
 뿓	!rtc
-뿔	!rts	5000
+뿔	!rts
 뿕	!rtj
 뿖	!rtn
 뿗	!rtr
@@ -4121,12 +4121,12 @@ use_preset_vocabulary: false
 뿙	!rtt
 뿚	!rti
 뿛	!rwt
-뿜	!rto	5000
+뿜	!rto
 뿝	!rta
 뿞	!rth
-뿟	!rtb	5000
+뿟	!rtb
 뿠	!rtm
-뿡	!rtq	5000
+뿡	!rtq
 뿢	!rtu
 뿣	!rtd
 뿤	!rtz
@@ -4217,7 +4217,7 @@ use_preset_vocabulary: false
 쀹	!rde
 쀺	!rdx
 쀻	!rdw
-쀼	!rr	5000
+쀼	!rr
 쀽	!rry
 쀾	!rrf
 쀿	!rrv
@@ -4238,22 +4238,22 @@ use_preset_vocabulary: false
 쁎	!rrh
 쁏	!rrb
 쁐	!rrm
-쁑	!rrq	5000
+쁑	!rrq
 쁒	!rru
 쁓	!rrd
 쁔	!rrz
 쁕	!rre
 쁖	!rrx
 쁗	!rrw
-쁘	!rv	5000
+쁘	!rv
 쁙	!rvy
 쁚	!rvf
 쁛	!rvv
-쁜	!rvl	5000
+쁜	!rvl
 쁝	!rvk
 쁞	!rvg
 쁟	!rvc
-쁠	!rvs	5000
+쁠	!rvs
 쁡	!rvj
 쁢	!rvn
 쁣	!rvr
@@ -4261,8 +4261,8 @@ use_preset_vocabulary: false
 쁥	!rvt
 쁦	!rvi
 쁧	!rwv
-쁨	!rvo	5000
-쁩	!rva	5000
+쁨	!rvo
+쁩	!rva
 쁪	!rvh
 쁫	!rvb
 쁬	!rvm
@@ -4301,15 +4301,15 @@ use_preset_vocabulary: false
 삍	!rle
 삎	!rlx
 삏	!rlw
-삐	!ri	5000
-삑	!riy	5000
+삐	!ri
+삑	!riy
 삒	!rif
 삓	!riv
-삔	!ril	5000
+삔	!ril
 삕	!rik
 삖	!rig
 삗	!ric
-삘	!ris	5000
+삘	!ris
 삙	!rij
 삚	!rin
 삛	!rir
@@ -4317,12 +4317,12 @@ use_preset_vocabulary: false
 삝	!rit
 삞	!rii
 삟	!rwi
-삠	!rio	5000
-삡	!ria	5000
+삠	!rio
+삡	!ria
 삢	!rih
-삣	!rib	5000
+삣	!rib
 삤	!rim
-삥	!riq	5000
+삥	!riq
 삦	!riu
 삧	!rid
 삨	!riz
@@ -4331,18 +4331,18 @@ use_preset_vocabulary: false
 삫	!riw
 #s10
 삮	!bkf
-삯	!bkv	5000
+삯	!bkv
 삱	!bkk
 삲	!bkg
-삵	!bkj	5000
-삶	!bkn	5000
+삵	!bkj
+삶	!bkn
 삷	!bkr
 삸	!bkp
 삹	!bkt
 삺	!bki
 삻	!bwk
 삾	!bkh
-샀	!bkm	5000
+샀	!bkm
 샊	!bhf
 샋	!bhv
 샍	!bhk
@@ -4355,7 +4355,7 @@ use_preset_vocabulary: false
 샖	!bhi
 샗	!bwh
 샚	!bhh
-샜	!bhm	5000
+샜	!bhm
 샦	!bff
 샧	!bfv
 샩	!bfk
@@ -4369,15 +4369,15 @@ use_preset_vocabulary: false
 샳	!bwf
 샶	!bfh
 샸	!bfm
-섀	!bo	5000
+섀	!bo
 섁	!boy
 섂	!bof
 섃	!bov
-섄	!bol	5000
+섄	!bol
 섅	!bok
 섆	!bog
 섇	!boc
-섈	!bos	5000
+섈	!bos
 섉	!boj
 섊	!bon
 섋	!bor
@@ -4385,31 +4385,31 @@ use_preset_vocabulary: false
 섍	!bot
 섎	!boi
 섏	!bwo
-섐	!boo	5000
+섐	!boo
 섑	!boa
 섒	!boh
 섓	!bob
 섔	!bom
-섕	!boq	5000
+섕	!boq
 섖	!bou
 섗	!bod
 섘	!boz
 섙	!boe
 섚	!box
 섛	!bow
-섞	!bjf	5000
-섟	!bjv	5000
+섞	!bjf
+섟	!bjv
 섡	!bjk
 섢	!bjg
 섥	!bjj
-섦	!bjn	5000
-섧	!bjr	5000
+섦	!bjn
+섧	!bjr
 섨	!bjp
 섩	!bjt
 섪	!bji
 섫	!bwj
 섮	!bjh
-섰	!bjm	5000
+섰	!bjm
 섺	!bpf
 섻	!bpv
 섽	!bpk
@@ -4422,7 +4422,7 @@ use_preset_vocabulary: false
 셆	!bpi
 셇	!bwp
 셊	!bph
-셌	!bpm	5000
+셌	!bpm
 셖	!bgf
 셗	!bgv
 셙	!bgk
@@ -4435,16 +4435,16 @@ use_preset_vocabulary: false
 셢	!bgi
 셣	!bwg
 셦	!bgh
-셨	!bgm	5000
-셰	!bq	5000
+셨	!bgm
+셰	!bq
 셱	!bqy
 셲	!bqf
 셳	!bqv
-셴	!bql	5000
+셴	!bql
 셵	!bqk
 셶	!bqg
 셷	!bqc
-셸	!bqs	5000
+셸	!bqs
 셹	!bqj
 셺	!bqn
 셻	!bqr
@@ -4457,19 +4457,19 @@ use_preset_vocabulary: false
 솂	!bqh
 솃	!bqb
 솄	!bqm
-솅	!bqq	5000
+솅	!bqq
 솆	!bqu
 솇	!bqd
 솈	!bqz
 솉	!bqe
 솊	!bqx
 솋	!bqw
-솎	!bnf	5000
+솎	!bnf
 솏	!bnv
 솑	!bnk
 솒	!bng
 솕	!bnj
-솖	!bnn	5000
+솖	!bnn
 솗	!bnr
 솘	!bnp
 솙	!bnt
@@ -4477,15 +4477,15 @@ use_preset_vocabulary: false
 솛	!bwn
 솞	!bnh
 솠	!bnm
-솨	!be	5000
-솩	!bey	5000
+솨	!be
+솩	!bey
 솪	!bef
 솫	!bev
-솬	!bel	5000
+솬	!bel
 솭	!bek
 솮	!beg
 솯	!bec
-솰	!bes	5000
+솰	!bes
 솱	!bej
 솲	!ben
 솳	!ber
@@ -4498,22 +4498,22 @@ use_preset_vocabulary: false
 솺	!beh
 솻	!beb
 솼	!bem
-솽	!beq	5000
+솽	!beq
 솾	!beu
 솿	!bed
 쇀	!bez
 쇁	!bee
 쇂	!bex
 쇃	!bew
-쇄	!bs	5000
+쇄	!bs
 쇅	!bsy
 쇆	!bsf
 쇇	!bsv
-쇈	!bsl	5000
+쇈	!bsl
 쇉	!bsk
 쇊	!bsg
 쇋	!bsc
-쇌	!bss	5000
+쇌	!bss
 쇍	!bsj
 쇎	!bsn
 쇏	!bsr
@@ -4521,11 +4521,11 @@ use_preset_vocabulary: false
 쇑	!bst
 쇒	!bsi
 쇓	!bws
-쇔	!bso	5000
+쇔	!bso
 쇕	!bsa
 쇖	!bsh
-쇗	!bsb	5000
-쇘	!bsm	5000
+쇗	!bsb
+쇘	!bsm
 쇙	!bsq
 쇚	!bsu
 쇛	!bsd
@@ -4533,15 +4533,15 @@ use_preset_vocabulary: false
 쇝	!bse
 쇞	!bsx
 쇟	!bsw
-쇠	!bx	5000
+쇠	!bx
 쇡	!bxy
 쇢	!bxf
 쇣	!bxv
-쇤	!bxl	5000
+쇤	!bxl
 쇥	!bxk
 쇦	!bxg
 쇧	!bxc
-쇨	!bxs	5000
+쇨	!bxs
 쇩	!bxj
 쇪	!bxn
 쇫	!bxr
@@ -4549,10 +4549,10 @@ use_preset_vocabulary: false
 쇭	!bxt
 쇮	!bxi
 쇯	!bwx
-쇰	!bxo	5000
-쇱	!bxa	5000
+쇰	!bxo
+쇱	!bxa
 쇲	!bxh
-쇳	!bxb	5000
+쇳	!bxb
 쇴	!bxm
 쇵	!bxq
 쇶	!bxu
@@ -4587,7 +4587,7 @@ use_preset_vocabulary: false
 숧	!bwt
 숪	!bth
 숬	!btm
-숴	!ba	5000
+숴	!ba
 숵	!bay
 숶	!baf
 숷	!bav
@@ -4607,7 +4607,7 @@ use_preset_vocabulary: false
 쉅	!baa
 쉆	!bah
 쉇	!bab
-쉈	!bam	5000
+쉈	!bam
 쉉	!baq
 쉊	!bau
 쉋	!bad
@@ -4615,15 +4615,15 @@ use_preset_vocabulary: false
 쉍	!bae
 쉎	!bax
 쉏	!baw
-쉐	!bz	5000
-쉑	!bzy	5000
+쉐	!bz
+쉑	!bzy
 쉒	!bzf
 쉓	!bzv
-쉔	!bzl	5000
+쉔	!bzl
 쉕	!bzk
 쉖	!bzg
 쉗	!bzc
-쉘	!bzs	5000
+쉘	!bzs
 쉙	!bzj
 쉚	!bzn
 쉛	!bzr
@@ -4631,27 +4631,27 @@ use_preset_vocabulary: false
 쉝	!bzt
 쉞	!bzi
 쉟	!bwz
-쉠	!bzo	5000
+쉠	!bzo
 쉡	!bza
 쉢	!bzh
 쉣	!bzb
 쉤	!bzm
-쉥	!bzq	5000
+쉥	!bzq
 쉦	!bzu
 쉧	!bzd
 쉨	!bzz
 쉩	!bze
 쉪	!bzx
 쉫	!bzw
-쉬	!bd	5000
-쉭	!bdy	5000
+쉬	!bd
+쉭	!bdy
 쉮	!bdf
 쉯	!bdv
-쉰	!bdl	5000
+쉰	!bdl
 쉱	!bdk
 쉲	!bdg
 쉳	!bdc
-쉴	!bds	5000
+쉴	!bds
 쉵	!bdj
 쉶	!bdn
 쉷	!bdr
@@ -4659,12 +4659,12 @@ use_preset_vocabulary: false
 쉹	!bdt
 쉺	!bdi
 쉻	!bwd
-쉼	!bdo	5000
-쉽	!bda	5000
+쉼	!bdo
+쉽	!bda
 쉾	!bdh
-쉿	!bdb	5000
+쉿	!bdb
 슀	!bdm
-슁	!bdq	5000
+슁	!bdq
 슂	!bdu
 슃	!bdd
 슄	!bdz
@@ -4688,7 +4688,7 @@ use_preset_vocabulary: false
 슧	!bvv
 슩	!bvk
 슪	!bvg
-슭	!bvj	5000
+슭	!bvj
 슮	!bvn
 슯	!bvr
 슰	!bvp
@@ -4735,19 +4735,19 @@ use_preset_vocabulary: false
 싨	!bip
 싩	!bit
 싪	!bii
-싫	!bwi	5000
+싫	!bwi
 싮	!bih
 싰	!bim
 #s11
-싸	!mk	5000
-싹	!mky	5000
+싸	!mk
+싹	!mky
 싺	!mkf
-싻	!mkv	5000
-싼	!mkl	5000
+싻	!mkv
+싼	!mkl
 싽	!mkk
 싾	!mkg
 싿	!mkc
-쌀	!mks	5000
+쌀	!mks
 쌁	!mkj
 쌂	!mkn
 쌃	!mkr
@@ -4755,27 +4755,27 @@ use_preset_vocabulary: false
 쌅	!mkt
 쌆	!mki
 쌇	!mwk
-쌈	!mko	5000
-쌉	!mka	5000
+쌈	!mko
+쌉	!mka
 쌊	!mkh
 쌋	!mkb
-쌌	!mkm	5000
-쌍	!mkq	5000
+쌌	!mkm
+쌍	!mkq
 쌎	!mku
 쌏	!mkd
 쌐	!mkz
 쌑	!mke
 쌒	!mkx
-쌓	!mkw	5000
-쌔	!mh	5000
-쌕	!mhy	5000
+쌓	!mkw
+쌔	!mh
+쌕	!mhy
 쌖	!mhf
 쌗	!mhv
-쌘	!mhl	5000
+쌘	!mhl
 쌙	!mhk
 쌚	!mhg
 쌛	!mhc
-쌜	!mhs	5000
+쌜	!mhs
 쌝	!mhj
 쌞	!mhn
 쌟	!mhr
@@ -4783,12 +4783,12 @@ use_preset_vocabulary: false
 쌡	!mht
 쌢	!mhi
 쌣	!mwh
-쌤	!mho	5000
-쌥	!mha	5000
+쌤	!mho
+쌥	!mha
 쌦	!mhh
 쌧	!mhb
-쌨	!mhm	5000
-쌩	!mhq	5000
+쌨	!mhm
+쌩	!mhq
 쌪	!mhu
 쌫	!mhd
 쌬	!mhz
@@ -4816,7 +4816,7 @@ use_preset_vocabulary: false
 썂	!mfh
 썃	!mfb
 썄	!mfm
-썅	!mfq	5000
+썅	!mfq
 썆	!mfu
 썇	!mfd
 썈	!mfz
@@ -4851,43 +4851,43 @@ use_preset_vocabulary: false
 썥	!moe
 썦	!mox
 썧	!mow
-써	!mj	5000
-썩	!mjy	5000
+써	!mj
+썩	!mjy
 썪	!mjf
 썫	!mjv
-썬	!mjl	5000
+썬	!mjl
 썭	!mjk
 썮	!mjg
 썯	!mjc
-썰	!mjs	5000
+썰	!mjs
 썱	!mjj
-썲	!mjn	5000
+썲	!mjn
 썳	!mjr
 썴	!mjp
 썵	!mjt
 썶	!mji
 썷	!mwj
-썸	!mjo	5000
-썹	!mja	5000
+썸	!mjo
+썹	!mja
 썺	!mjh
 썻	!mjb
-썼	!mjm	5000
-썽	!mjq	5000
+썼	!mjm
+썽	!mjq
 썾	!mju
 썿	!mjd
 쎀	!mjz
 쎁	!mje
 쎂	!mjx
 쎃	!mjw
-쎄	!mp	5000
+쎄	!mp
 쎅	!mpy
 쎆	!mpf
 쎇	!mpv
-쎈	!mpl	5000
+쎈	!mpl
 쎉	!mpk
 쎊	!mpg
 쎋	!mpc
-쎌	!mps	5000
+쎌	!mps
 쎍	!mpj
 쎎	!mpn
 쎏	!mpr
@@ -4939,7 +4939,7 @@ use_preset_vocabulary: false
 쎽	!mqy
 쎾	!mqf
 쎿	!mqv
-쏀	!mql	5000
+쏀	!mql
 쏁	!mqk
 쏂	!mqg
 쏃	!mqc
@@ -4963,39 +4963,39 @@ use_preset_vocabulary: false
 쏕	!mqe
 쏖	!mqx
 쏗	!mqw
-쏘	!mn	5000
-쏙	!mny	5000
+쏘	!mn
+쏙	!mny
 쏚	!mnf
 쏛	!mnv
-쏜	!mnl	5000
+쏜	!mnl
 쏝	!mnk
 쏞	!mng
-쏟	!mnc	5000
-쏠	!mns	5000
+쏟	!mnc
+쏠	!mns
 쏡	!mnj
-쏢	!mnn	5000
+쏢	!mnn
 쏣	!mnr
 쏤	!mnp
 쏥	!mnt
 쏦	!mni
 쏧	!mwn
-쏨	!mno	5000
-쏩	!mna	5000
+쏨	!mno
+쏩	!mna
 쏪	!mnh
 쏫	!mnb
 쏬	!mnm
-쏭	!mnq	5000
+쏭	!mnq
 쏮	!mnu
 쏯	!mnd
 쏰	!mnz
 쏱	!mne
 쏲	!mnx
 쏳	!mnw
-쏴	!me	5000
-쏵	!mey	5000
+쏴	!me
+쏵	!mey
 쏶	!mef
 쏷	!mev
-쏸	!mel	5000
+쏸	!mel
 쏹	!mek
 쏺	!meg
 쏻	!mec
@@ -5011,7 +5011,7 @@ use_preset_vocabulary: false
 쐅	!mea
 쐆	!meh
 쐇	!meb
-쐈	!mem	5000
+쐈	!mem
 쐉	!meq
 쐊	!meu
 쐋	!med
@@ -5019,7 +5019,7 @@ use_preset_vocabulary: false
 쐍	!mee
 쐎	!mex
 쐏	!mew
-쐐	!ms	5000
+쐐	!ms
 쐑	!msy
 쐒	!msf
 쐓	!msv
@@ -5039,7 +5039,7 @@ use_preset_vocabulary: false
 쐡	!msa
 쐢	!msh
 쐣	!msb
-쐤	!msm	5000
+쐤	!msm
 쐥	!msq
 쐦	!msu
 쐧	!msd
@@ -5047,15 +5047,15 @@ use_preset_vocabulary: false
 쐩	!mse
 쐪	!msx
 쐫	!msw
-쐬	!mx	5000
+쐬	!mx
 쐭	!mxy
 쐮	!mxf
 쐯	!mxv
-쐰	!mxl	5000
+쐰	!mxl
 쐱	!mxk
 쐲	!mxg
 쐳	!mxc
-쐴	!mxs	5000
+쐴	!mxs
 쐵	!mxj
 쐶	!mxn
 쐷	!mxr
@@ -5063,8 +5063,8 @@ use_preset_vocabulary: false
 쐹	!mxt
 쐺	!mxi
 쐻	!mwx
-쐼	!mxo	5000
-쐽	!mxa	5000
+쐼	!mxo
+쐽	!mxa
 쐾	!mxh
 쐿	!mxb
 쑀	!mxm
@@ -5075,7 +5075,7 @@ use_preset_vocabulary: false
 쑅	!mxe
 쑆	!mxx
 쑇	!mxw
-쑈	!mm	5000
+쑈	!mm
 쑉	!mmy
 쑊	!mmf
 쑋	!mmv
@@ -5103,15 +5103,15 @@ use_preset_vocabulary: false
 쑡	!mme
 쑢	!mmx
 쑣	!mmw
-쑤	!mt	5000
-쑥	!mty	5000
+쑤	!mt
+쑥	!mty
 쑦	!mtf
 쑧	!mtv
-쑨	!mtl	5000
+쑨	!mtl
 쑩	!mtk
 쑪	!mtg
 쑫	!mtc
-쑬	!mts	5000
+쑬	!mts
 쑭	!mtj
 쑮	!mtn
 쑯	!mtr
@@ -5119,19 +5119,19 @@ use_preset_vocabulary: false
 쑱	!mtt
 쑲	!mti
 쑳	!mwt
-쑴	!mto	5000
-쑵	!mta	5000
+쑴	!mto
+쑵	!mta
 쑶	!mth
 쑷	!mtb
 쑸	!mtm
-쑹	!mtq	5000
+쑹	!mtq
 쑺	!mtu
 쑻	!mtd
 쑼	!mtz
 쑽	!mte
 쑾	!mtx
 쑿	!mtw
-쒀	!ma	5000
+쒀	!ma
 쒁	!may
 쒂	!maf
 쒃	!mav
@@ -5151,7 +5151,7 @@ use_preset_vocabulary: false
 쒑	!maa
 쒒	!mah
 쒓	!mab
-쒔	!mam	5000
+쒔	!mam
 쒕	!maq
 쒖	!mau
 쒗	!mad
@@ -5159,7 +5159,7 @@ use_preset_vocabulary: false
 쒙	!mae
 쒚	!max
 쒛	!maw
-쒜	!mz	5000
+쒜	!mz
 쒝	!mzy
 쒞	!mzf
 쒟	!mzv
@@ -5187,11 +5187,11 @@ use_preset_vocabulary: false
 쒵	!mze
 쒶	!mzx
 쒷	!mzw
-쒸	!md	5000
+쒸	!md
 쒹	!mdy
 쒺	!mdf
 쒻	!mdv
-쒼	!mdl	5000
+쒼	!mdl
 쒽	!mdk
 쒾	!mdg
 쒿	!mdc
@@ -5236,31 +5236,31 @@ use_preset_vocabulary: false
 쓦	!mrh
 쓧	!mrb
 쓨	!mrm
-쓩	!mrq	5000
+쓩	!mrq
 쓪	!mru
 쓫	!mrd
 쓬	!mrz
 쓭	!mre
 쓮	!mrx
 쓯	!mrw
-쓰	!mv	5000
-쓱	!mvy	5000
+쓰	!mv
+쓱	!mvy
 쓲	!mvf
 쓳	!mvv
-쓴	!mvl	5000
+쓴	!mvl
 쓵	!mvk
 쓶	!mvg
 쓷	!mvc
-쓸	!mvs	5000
+쓸	!mvs
 쓹	!mvj
-쓺	!mvn	5000
+쓺	!mvn
 쓻	!mvr
 쓼	!mvp
 쓽	!mvt
 쓾	!mvi
-쓿	!mwv	5000
-씀	!mvo	5000
-씁	!mva	5000
+쓿	!mwv
+씀	!mvo
+씁	!mva
 씂	!mvh
 씃	!mvb
 씄	!mvm
@@ -5271,15 +5271,15 @@ use_preset_vocabulary: false
 씉	!mve
 씊	!mvx
 씋	!mvw
-씌	!ml	5000
+씌	!ml
 씍	!mly
 씎	!mlf
 씏	!mlv
-씐	!mll	5000
+씐	!mll
 씑	!mlk
 씒	!mlg
 씓	!mlc
-씔	!mls	5000
+씔	!mls
 씕	!mlj
 씖	!mln
 씗	!mlr
@@ -5287,7 +5287,7 @@ use_preset_vocabulary: false
 씙	!mlt
 씚	!mli
 씛	!mwl
-씜	!mlo	5000
+씜	!mlo
 씝	!mla
 씞	!mlh
 씟	!mlb
@@ -5299,15 +5299,15 @@ use_preset_vocabulary: false
 씥	!mle
 씦	!mlx
 씧	!mlw
-씨	!mi	5000
-씩	!miy	5000
+씨	!mi
+씩	!miy
 씪	!mif
 씫	!miv
-씬	!mil	5000
+씬	!mil
 씭	!mik
 씮	!mig
 씯	!mic
-씰	!mis	5000
+씰	!mis
 씱	!mij
 씲	!min
 씳	!mir
@@ -5315,12 +5315,12 @@ use_preset_vocabulary: false
 씵	!mit
 씶	!mii
 씷	!mwi
-씸	!mio	5000
-씹	!mia	5000
+씸	!mio
+씹	!mia
 씺	!mih
-씻	!mib	5000
+씻	!mib
 씼	!mim
-씽	!miq	5000
+씽	!miq
 씾	!miu
 씿	!mid
 앀	!miz
@@ -5330,17 +5330,17 @@ use_preset_vocabulary: false
 #s12
 앆	!qkf
 앇	!qkv
-앉	!qkk	5000
-않	!qkg	5000
-앍	!qkj	5000
-앎	!qkn	5000
+앉	!qkk
+않	!qkg
+앍	!qkj
+앎	!qkn
 앏	!qkr
 앐	!qkp
 앑	!qkt
 앒	!qki
-앓	!qwk	5000
+앓	!qwk
 앖	!qkh
-았	!qkm	5000
+았	!qkm
 앢	!qhf
 앣	!qhv
 앥	!qhk
@@ -5353,29 +5353,29 @@ use_preset_vocabulary: false
 앮	!qhi
 앯	!qwh
 앲	!qhh
-앴	!qhm	5000
+앴	!qhm
 앾	!qff
 앿	!qfv
 얁	!qfk
 얂	!qfg
 얅	!qfj
 얆	!qfn
-얇	!qfr	5000
+얇	!qfr
 얈	!qfp
 얉	!qft
 얊	!qfi
 얋	!qwf
 얎	!qfh
 얐	!qfm
-얘	!qo	5000
+얘	!qo
 얙	!qoy
 얚	!qof
 얛	!qov
-얜	!qol	5000
+얜	!qol
 얝	!qok
 얞	!qog
 얟	!qoc
-얠	!qos	5000
+얠	!qos
 얡	!qoj
 얢	!qon
 얣	!qor
@@ -5384,7 +5384,7 @@ use_preset_vocabulary: false
 얦	!qoi
 얧	!qwo
 얨	!qoo
-얩	!qoa	5000
+얩	!qoa
 얪	!qoh
 얫	!qob
 얬	!qom
@@ -5397,17 +5397,17 @@ use_preset_vocabulary: false
 얳	!qow
 얶	!qjf
 얷	!qjv
-얹	!qjk	5000
+얹	!qjk
 얺	!qjg
-얽	!qjj	5000
-얾	!qjn	5000
+얽	!qjj
+얾	!qjn
 얿	!qjr
 엀	!qjp
 엁	!qjt
 엂	!qji
 엃	!qwj
-없	!qjh	5000
-었	!qjm	5000
+없	!qjh
+었	!qjm
 엒	!qpf
 엓	!qpv
 엕	!qpk
@@ -5421,28 +5421,28 @@ use_preset_vocabulary: false
 엟	!qwp
 엢	!qph
 엤	!qpm
-엮	!qgf	5000
+엮	!qgf
 엯	!qgv
 엱	!qgk
 엲	!qgg
 엵	!qgj
-엶	!qgn	5000
-엷	!qgr	5000
+엶	!qgn
+엷	!qgr
 엸	!qgp
 엹	!qgt
 엺	!qgi
 엻	!qwg
-엾	!qgh	5000
-였	!qgm	5000
-예	!qq	5000
+엾	!qgh
+였	!qgm
+예	!qq
 옉	!qqy
 옊	!qqf
 옋	!qqv
-옌	!qql	5000
+옌	!qql
 옍	!qqk
 옎	!qqg
 옏	!qqc
-옐	!qqs	5000
+옐	!qqs
 옑	!qqj
 옒	!qqn
 옓	!qqr
@@ -5450,11 +5450,11 @@ use_preset_vocabulary: false
 옕	!qqt
 옖	!qqi
 옗	!qwq
-옘	!qqo	5000
-옙	!qqa	5000
+옘	!qqo
+옙	!qqa
 옚	!qqh
-옛	!qqb	5000
-옜	!qqm	5000
+옛	!qqb
+옜	!qqm
 옝	!qqq
 옞	!qqu
 옟	!qqd
@@ -5466,24 +5466,24 @@ use_preset_vocabulary: false
 옧	!qnv
 옩	!qnk
 옪	!qng
-옭	!qnj	5000
-옮	!qnn	5000
+옭	!qnj
+옮	!qnn
 옯	!qnr
-옰	!qnp	5000
+옰	!qnp
 옱	!qnt
 옲	!qni
-옳	!qwn	5000
+옳	!qwn
 옶	!qnh
 옸	!qnm
-와	!qe	5000
-왁	!qey	5000
+와	!qe
+왁	!qey
 왂	!qef
 왃	!qev
-완	!qel	5000
+완	!qel
 왅	!qek
 왆	!qeg
 왇	!qec
-왈	!qes	5000
+왈	!qes
 왉	!qej
 왊	!qen
 왋	!qer
@@ -5491,23 +5491,23 @@ use_preset_vocabulary: false
 왍	!qet
 왎	!qei
 왏	!qwe
-왐	!qeo	5000
-왑	!qea	5000
+왐	!qeo
+왑	!qea
 왒	!qeh
-왓	!qeb	5000
-왔	!qem	5000
-왕	!qeq	5000
+왓	!qeb
+왔	!qem
+왕	!qeq
 왖	!qeu
 왗	!qed
 왘	!qez
 왙	!qee
 왚	!qex
 왛	!qew
-왜	!qs	5000
-왝	!qsy	5000
+왜	!qs
+왝	!qsy
 왞	!qsf
 왟	!qsv
-왠	!qsl	5000
+왠	!qsl
 왡	!qsk
 왢	!qsg
 왣	!qsc
@@ -5519,27 +5519,27 @@ use_preset_vocabulary: false
 왩	!qst
 왪	!qsi
 왫	!qws
-왬	!qso	5000
+왬	!qso
 왭	!qsa
 왮	!qsh
-왯	!qsb	5000
+왯	!qsb
 왰	!qsm
-왱	!qsq	5000
+왱	!qsq
 왲	!qsu
 왳	!qsd
 왴	!qsz
 왵	!qse
 왶	!qsx
 왷	!qsw
-외	!qx	5000
-왹	!qxy	5000
+외	!qx
+왹	!qxy
 왺	!qxf
 왻	!qxv
-왼	!qxl	5000
+왼	!qxl
 왽	!qxk
 왾	!qxg
 왿	!qxc
-욀	!qxs	5000
+욀	!qxs
 욁	!qxj
 욂	!qxn
 욃	!qxr
@@ -5547,12 +5547,12 @@ use_preset_vocabulary: false
 욅	!qxt
 욆	!qxi
 욇	!qwx
-욈	!qxo	5000
-욉	!qxa	5000
+욈	!qxo
+욉	!qxa
 욊	!qxh
-욋	!qxb	5000
+욋	!qxb
 욌	!qxm
-욍	!qxq	5000
+욍	!qxq
 욎	!qxu
 욏	!qxd
 욐	!qxz
@@ -5576,8 +5576,8 @@ use_preset_vocabulary: false
 욳	!qtv
 욵	!qtk
 욶	!qtg
-욹	!qtj	5000
-욺	!qtn	5000
+욹	!qtj
+욺	!qtn
 욻	!qtr
 욼	!qtp
 욽	!qtt
@@ -5585,15 +5585,15 @@ use_preset_vocabulary: false
 욿	!qwt
 웂	!qth
 웄	!qtm
-워	!qa	5000
-웍	!qay	5000
+워	!qa
+웍	!qay
 웎	!qaf
 웏	!qav
-원	!qal	5000
+원	!qal
 웑	!qak
 웒	!qag
 웓	!qac
-월	!qas	5000
+월	!qas
 웕	!qaj
 웖	!qan
 웗	!qar
@@ -5601,27 +5601,27 @@ use_preset_vocabulary: false
 웙	!qat
 웚	!qai
 웛	!qwa
-웜	!qao	5000
-웝	!qaa	5000
+웜	!qao
+웝	!qaa
 웞	!qah
 웟	!qab
-웠	!qam	5000
-웡	!qaq	5000
+웠	!qam
+웡	!qaq
 웢	!qau
 웣	!qad
 웤	!qaz
 웥	!qae
 웦	!qax
 웧	!qaw
-웨	!qz	5000
-웩	!qzy	5000
+웨	!qz
+웩	!qzy
 웪	!qzf
 웫	!qzv
-웬	!qzl	5000
+웬	!qzl
 웭	!qzk
 웮	!qzg
 웯	!qzc
-웰	!qzs	5000
+웰	!qzs
 웱	!qzj
 웲	!qzn
 웳	!qzr
@@ -5629,27 +5629,27 @@ use_preset_vocabulary: false
 웵	!qzt
 웶	!qzi
 웷	!qwz
-웸	!qzo	5000
-웹	!qza	5000
+웸	!qzo
+웹	!qza
 웺	!qzh
 웻	!qzb
 웼	!qzm
-웽	!qzq	5000
+웽	!qzq
 웾	!qzu
 웿	!qzd
 윀	!qzz
 윁	!qze
 윂	!qzx
 윃	!qzw
-위	!qd	5000
-윅	!qdy	5000
+위	!qd
+윅	!qdy
 윆	!qdf
 윇	!qdv
-윈	!qdl	5000
+윈	!qdl
 윉	!qdk
 윊	!qdg
 윋	!qdc
-윌	!qds	5000
+윌	!qds
 윍	!qdj
 윎	!qdn
 윏	!qdr
@@ -5657,12 +5657,12 @@ use_preset_vocabulary: false
 윑	!qdt
 윒	!qdi
 윓	!qwd
-윔	!qdo	5000
-윕	!qda	5000
+윔	!qdo
+윕	!qda
 윖	!qdh
-윗	!qdb	5000
+윗	!qdb
 윘	!qdm
-윙	!qdq	5000
+윙	!qdq
 윚	!qdu
 윛	!qdd
 윜	!qdz
@@ -5691,19 +5691,19 @@ use_preset_vocabulary: false
 읇	!qvr
 읈	!qvp
 읉	!qvt
-읊	!qvi	5000
+읊	!qvi
 읋	!qwv
 읎	!qvh
 읐	!qvm
-의	!ql	5000
+의	!ql
 읙	!qly
 읚	!qlf
 읛	!qlv
-읜	!qll	5000
+읜	!qll
 읝	!qlk
 읞	!qlg
 읟	!qlc
-읠	!qls	5000
+읠	!qls
 읡	!qlj
 읢	!qln
 읣	!qlr
@@ -5711,10 +5711,10 @@ use_preset_vocabulary: false
 읥	!qlt
 읦	!qli
 읧	!qwl
-읨	!qlo	5000
+읨	!qlo
 읩	!qla
 읪	!qlh
-읫	!qlb	5000
+읫	!qlb
 읬	!qlm
 읭	!qlq
 읮	!qlu
@@ -5727,29 +5727,29 @@ use_preset_vocabulary: false
 읷	!qiv
 읹	!qik
 읺	!qig
-읽	!qij	5000
-읾	!qin	5000
+읽	!qij
+읾	!qin
 읿	!qir
 잀	!qip
 잁	!qit
 잂	!qii
-잃	!qwi	5000
+잃	!qwi
 잆	!qih
-있	!qim	5000
+있	!qim
 #s13
 잒	!ukf
 잓	!ukv
 잕	!ukk
-잖	!ukg	5000
+잖	!ukg
 잙	!ukj
-잚	!ukn	5000
+잚	!ukn
 잛	!ukr
 잜	!ukp
 잝	!ukt
 잞	!uki
 잟	!uwk
 잢	!ukh
-잤	!ukm	5000
+잤	!ukm
 잮	!uhf
 잯	!uhv
 잱	!uhk
@@ -5762,11 +5762,11 @@ use_preset_vocabulary: false
 잺	!uhi
 잻	!uwh
 잾	!uhh
-쟀	!uhm	5000
+쟀	!uhm
 쟊	!uff
 쟋	!ufv
 쟍	!ufk
-쟎	!ufg	5000
+쟎	!ufg
 쟑	!ufj
 쟒	!ufn
 쟓	!ufr
@@ -5776,15 +5776,15 @@ use_preset_vocabulary: false
 쟗	!uwf
 쟚	!ufh
 쟜	!ufm
-쟤	!uo	5000
+쟤	!uo
 쟥	!uoy
 쟦	!uof
 쟧	!uov
-쟨	!uol	5000
+쟨	!uol
 쟩	!uok
 쟪	!uog
 쟫	!uoc
-쟬	!uos	5000
+쟬	!uos
 쟭	!uoj
 쟮	!uon
 쟯	!uor
@@ -5809,7 +5809,7 @@ use_preset_vocabulary: false
 젅	!ujk
 젆	!ujg
 젉	!ujj
-젊	!ujn	5000
+젊	!ujn
 젋	!ujr
 젌	!ujp
 젍	!ujt
@@ -5842,8 +5842,8 @@ use_preset_vocabulary: false
 졆	!ugi
 졇	!uwg
 졊	!ugh
-졌	!ugm	5000
-졔	!uq	5000
+졌	!ugm
+졔	!uq
 졕	!uqy
 졖	!uqf
 졗	!uqv
@@ -5876,7 +5876,7 @@ use_preset_vocabulary: false
 졵	!unk
 졶	!ung
 졹	!unj
-졺	!unn	5000
+졺	!unn
 졻	!unr
 졼	!unp
 졽	!unt
@@ -5884,15 +5884,15 @@ use_preset_vocabulary: false
 졿	!uwn
 좂	!unh
 좄	!unm
-좌	!ue	5000
-좍	!uey	5000
+좌	!ue
+좍	!uey
 좎	!uef
 좏	!uev
 좐	!uel
 좑	!uek
 좒	!ueg
 좓	!uec
-좔	!ues	5000
+좔	!ues
 좕	!uej
 좖	!uen
 좗	!uer
@@ -5901,18 +5901,18 @@ use_preset_vocabulary: false
 좚	!uei
 좛	!uwe
 좜	!ueo
-좝	!uea	5000
+좝	!uea
 좞	!ueh
-좟	!ueb	5000
+좟	!ueb
 좠	!uem
-좡	!ueq	5000
+좡	!ueq
 좢	!ueu
 좣	!ued
 좤	!uez
 좥	!uee
 좦	!uex
 좧	!uew
-좨	!us	5000
+좨	!us
 좩	!usy
 좪	!usf
 좫	!usv
@@ -5932,23 +5932,23 @@ use_preset_vocabulary: false
 좹	!usa
 좺	!ush
 좻	!usb
-좼	!usm	5000
-좽	!usq	5000
+좼	!usm
+좽	!usq
 좾	!usu
 좿	!usd
 죀	!usz
 죁	!use
 죂	!usx
 죃	!usw
-죄	!ux	5000
+죄	!ux
 죅	!uxy
 죆	!uxf
 죇	!uxv
-죈	!uxl	5000
+죈	!uxl
 죉	!uxk
 죊	!uxg
 죋	!uxc
-죌	!uxs	5000
+죌	!uxs
 죍	!uxj
 죎	!uxn
 죏	!uxr
@@ -5956,12 +5956,12 @@ use_preset_vocabulary: false
 죑	!uxt
 죒	!uxi
 죓	!uwx
-죔	!uxo	5000
-죕	!uxa	5000
+죔	!uxo
+죕	!uxa
 죖	!uxh
-죗	!uxb	5000
+죗	!uxb
 죘	!uxm
-죙	!uxq	5000
+죙	!uxq
 죚	!uxu
 죛	!uxd
 죜	!uxz
@@ -5985,8 +5985,8 @@ use_preset_vocabulary: false
 죿	!utv
 줁	!utk
 줂	!utg
-줅	!utj	5000
-줆	!utn	5000
+줅	!utj
+줆	!utn
 줇	!utr
 줈	!utp
 줉	!utt
@@ -5994,7 +5994,7 @@ use_preset_vocabulary: false
 줋	!uwt
 줎	!uth
 줐	!utm
-줘	!ua	5000
+줘	!ua
 줙	!uay
 줚	!uaf
 줛	!uav
@@ -6014,7 +6014,7 @@ use_preset_vocabulary: false
 줩	!uaa
 줪	!uah
 줫	!uab
-줬	!uam	5000
+줬	!uam
 줭	!uaq
 줮	!uau
 줯	!uad
@@ -6022,7 +6022,7 @@ use_preset_vocabulary: false
 줱	!uae
 줲	!uax
 줳	!uaw
-줴	!uz	5000
+줴	!uz
 줵	!uzy
 줶	!uzf
 줷	!uzv
@@ -6050,15 +6050,15 @@ use_preset_vocabulary: false
 쥍	!uze
 쥎	!uzx
 쥏	!uzw
-쥐	!ud	5000
-쥑	!udy	5000
+쥐	!ud
+쥑	!udy
 쥒	!udf
 쥓	!udv
-쥔	!udl	5000
+쥔	!udl
 쥕	!udk
 쥖	!udg
 쥗	!udc
-쥘	!uds	5000
+쥘	!uds
 쥙	!udj
 쥚	!udn
 쥛	!udr
@@ -6066,10 +6066,10 @@ use_preset_vocabulary: false
 쥝	!udt
 쥞	!udi
 쥟	!uwd
-쥠	!udo	5000
-쥡	!uda	5000
+쥠	!udo
+쥡	!uda
 쥢	!udh
-쥣	!udb	5000
+쥣	!udb
 쥤	!udm
 쥥	!udq
 쥦	!udu
@@ -6137,7 +6137,7 @@ use_preset_vocabulary: false
 짅	!uik
 짆	!uig
 짉	!uij
-짊	!uin	5000
+짊	!uin
 짋	!uir
 짌	!uip
 짍	!uit
@@ -6146,43 +6146,43 @@ use_preset_vocabulary: false
 짒	!uih
 짔	!uim
 #s14
-짜	!kk	5000
-짝	!kky	5000
+짜	!kk
+짝	!kky
 짞	!kkf
 짟	!kkv
-짠	!kkl	5000
+짠	!kkl
 짡	!kkk
-짢	!kkg	5000
+짢	!kkg
 짣	!kkc
-짤	!kks	5000
+짤	!kks
 짥	!kkj
 짦	!kkn
-짧	!kkr	5000
+짧	!kkr
 짨	!kkp
 짩	!kkt
 짪	!kki
 짫	!kwk
-짬	!kko	5000
-짭	!kka	5000
+짬	!kko
+짭	!kka
 짮	!kkh
-짯	!kkb	5000
-짰	!kkm	5000
-짱	!kkq	5000
+짯	!kkb
+짰	!kkm
+짱	!kkq
 짲	!kku
 짳	!kkd
 짴	!kkz
 짵	!kke
 짶	!kkx
 짷	!kkw
-째	!kh	5000
-짹	!khy	5000
+째	!kh
+짹	!khy
 짺	!khf
 짻	!khv
-짼	!khl	5000
+짼	!khl
 짽	!khk
 짾	!khg
 짿	!khc
-쨀	!khs	5000
+쨀	!khs
 쨁	!khj
 쨂	!khn
 쨃	!khr
@@ -6190,23 +6190,23 @@ use_preset_vocabulary: false
 쨅	!kht
 쨆	!khi
 쨇	!kwh
-쨈	!kho	5000
-쨉	!kha	5000
+쨈	!kho
+쨉	!kha
 쨊	!khh
-쨋	!khb	5000
-쨌	!khm	5000
-쨍	!khq	5000
+쨋	!khb
+쨌	!khm
+쨍	!khq
 쨎	!khu
 쨏	!khd
 쨐	!khz
 쨑	!khe
 쨒	!khx
 쨓	!khw
-쨔	!kf	5000
+쨔	!kf
 쨕	!kfy
 쨖	!kff
 쨗	!kfv
-쨘	!kfl	5000
+쨘	!kfl
 쨙	!kfk
 쨚	!kfg
 쨛	!kfc
@@ -6223,7 +6223,7 @@ use_preset_vocabulary: false
 쨦	!kfh
 쨧	!kfb
 쨨	!kfm
-쨩	!kfq	5000
+쨩	!kfq
 쨪	!kfu
 쨫	!kfd
 쨬	!kfz
@@ -6258,15 +6258,15 @@ use_preset_vocabulary: false
 쩉	!koe
 쩊	!kox
 쩋	!kow
-쩌	!kj	5000
-쩍	!kjy	5000
+쩌	!kj
+쩍	!kjy
 쩎	!kjf
 쩏	!kjv
-쩐	!kjl	5000
+쩐	!kjl
 쩑	!kjk
 쩒	!kjg
 쩓	!kjc
-쩔	!kjs	5000
+쩔	!kjs
 쩕	!kjj
 쩖	!kjn
 쩗	!kjr
@@ -6274,19 +6274,19 @@ use_preset_vocabulary: false
 쩙	!kjt
 쩚	!kji
 쩛	!kwj
-쩜	!kjo	5000
-쩝	!kja	5000
+쩜	!kjo
+쩝	!kja
 쩞	!kjh
-쩟	!kjb	5000
-쩠	!kjm	5000
-쩡	!kjq	5000
+쩟	!kjb
+쩠	!kjm
+쩡	!kjq
 쩢	!kju
 쩣	!kjd
 쩤	!kjz
 쩥	!kje
 쩦	!kjx
 쩧	!kjw
-쩨	!kp	5000
+쩨	!kp
 쩩	!kpy
 쩪	!kpf
 쩫	!kpv
@@ -6307,14 +6307,14 @@ use_preset_vocabulary: false
 쩺	!kph
 쩻	!kpb
 쩼	!kpm
-쩽	!kpq	5000
+쩽	!kpq
 쩾	!kpu
 쩿	!kpd
 쪀	!kpz
 쪁	!kpe
 쪂	!kpx
 쪃	!kpw
-쪄	!kg	5000
+쪄	!kg
 쪅	!kgy
 쪆	!kgf
 쪇	!kgv
@@ -6334,7 +6334,7 @@ use_preset_vocabulary: false
 쪕	!kga
 쪖	!kgh
 쪗	!kgb
-쪘	!kgm	5000
+쪘	!kgm
 쪙	!kgq
 쪚	!kgu
 쪛	!kgd
@@ -6370,15 +6370,15 @@ use_preset_vocabulary: false
 쪹	!kqe
 쪺	!kqx
 쪻	!kqw
-쪼	!kn	5000
-쪽	!kny	5000
+쪼	!kn
+쪽	!kny
 쪾	!knf
 쪿	!knv
-쫀	!knl	5000
+쫀	!knl
 쫁	!knk
 쫂	!kng
 쫃	!knc
-쫄	!kns	5000
+쫄	!kns
 쫅	!knj
 쫆	!knn
 쫇	!knr
@@ -6386,27 +6386,27 @@ use_preset_vocabulary: false
 쫉	!knt
 쫊	!kni
 쫋	!kwn
-쫌	!kno	5000
-쫍	!kna	5000
+쫌	!kno
+쫍	!kna
 쫎	!knh
-쫏	!knb	5000
+쫏	!knb
 쫐	!knm
-쫑	!knq	5000
+쫑	!knq
 쫒	!knu
-쫓	!knd	5000
+쫓	!knd
 쫔	!knz
 쫕	!kne
 쫖	!knx
 쫗	!knw
-쫘	!ke	5000
-쫙	!key	5000
+쫘	!ke
+쫙	!key
 쫚	!kef
 쫛	!kev
 쫜	!kel
 쫝	!kek
 쫞	!keg
 쫟	!kec
-쫠	!kes	5000
+쫠	!kes
 쫡	!kej
 쫢	!ken
 쫣	!ker
@@ -6418,7 +6418,7 @@ use_preset_vocabulary: false
 쫩	!kea
 쫪	!keh
 쫫	!keb
-쫬	!kem	5000
+쫬	!kem
 쫭	!keq
 쫮	!keu
 쫯	!ked
@@ -6426,7 +6426,7 @@ use_preset_vocabulary: false
 쫱	!kee
 쫲	!kex
 쫳	!kew
-쫴	!ks	5000
+쫴	!ks
 쫵	!ksy
 쫶	!ksf
 쫷	!ksv
@@ -6446,7 +6446,7 @@ use_preset_vocabulary: false
 쬅	!ksa
 쬆	!ksh
 쬇	!ksb
-쬈	!ksm	5000
+쬈	!ksm
 쬉	!ksq
 쬊	!ksu
 쬋	!ksd
@@ -6454,15 +6454,15 @@ use_preset_vocabulary: false
 쬍	!kse
 쬎	!ksx
 쬏	!ksw
-쬐	!kx	5000
+쬐	!kx
 쬑	!kxy
 쬒	!kxf
 쬓	!kxv
-쬔	!kxl	5000
+쬔	!kxl
 쬕	!kxk
 쬖	!kxg
 쬗	!kxc
-쬘	!kxs	5000
+쬘	!kxs
 쬙	!kxj
 쬚	!kxn
 쬛	!kxr
@@ -6470,8 +6470,8 @@ use_preset_vocabulary: false
 쬝	!kxt
 쬞	!kxi
 쬟	!kwx
-쬠	!kxo	5000
-쬡	!kxa	5000
+쬠	!kxo
+쬡	!kxa
 쬢	!kxh
 쬣	!kxb
 쬤	!kxm
@@ -6503,22 +6503,22 @@ use_preset_vocabulary: false
 쬾	!kmh
 쬿	!kmb
 쭀	!kmm
-쭁	!kmq	5000
+쭁	!kmq
 쭂	!kmu
 쭃	!kmd
 쭄	!kmz
 쭅	!kme
 쭆	!kmx
 쭇	!kmw
-쭈	!kt	5000
-쭉	!kty	5000
+쭈	!kt
+쭉	!kty
 쭊	!ktf
 쭋	!ktv
-쭌	!ktl	5000
+쭌	!ktl
 쭍	!ktk
 쭎	!ktg
 쭏	!ktc
-쭐	!kts	5000
+쭐	!kts
 쭑	!ktj
 쭒	!ktn
 쭓	!ktr
@@ -6526,19 +6526,19 @@ use_preset_vocabulary: false
 쭕	!ktt
 쭖	!kti
 쭗	!kwt
-쭘	!kto	5000
-쭙	!kta	5000
+쭘	!kto
+쭙	!kta
 쭚	!kth
 쭛	!ktb
 쭜	!ktm
-쭝	!ktq	5000
+쭝	!ktq
 쭞	!ktu
 쭟	!ktd
 쭠	!ktz
 쭡	!kte
 쭢	!ktx
 쭣	!ktw
-쭤	!ka	5000
+쭤	!ka
 쭥	!kay
 쭦	!kaf
 쭧	!kav
@@ -6558,8 +6558,8 @@ use_preset_vocabulary: false
 쭵	!kaa
 쭶	!kah
 쭷	!kab
-쭸	!kam	5000
-쭹	!kaq	5000
+쭸	!kam
+쭹	!kaq
 쭺	!kau
 쭻	!kad
 쭼	!kaz
@@ -6594,7 +6594,7 @@ use_preset_vocabulary: false
 쮙	!kze
 쮚	!kzx
 쮛	!kzw
-쮜	!kd	5000
+쮜	!kd
 쮝	!kdy
 쮞	!kdf
 쮟	!kdv
@@ -6622,7 +6622,7 @@ use_preset_vocabulary: false
 쮵	!kde
 쮶	!kdx
 쮷	!kdw
-쮸	!kr	5000
+쮸	!kr
 쮹	!kry
 쮺	!krf
 쮻	!krv
@@ -6650,7 +6650,7 @@ use_preset_vocabulary: false
 쯑	!kre
 쯒	!krx
 쯓	!krw
-쯔	!kv	5000
+쯔	!kv
 쯕	!kvy
 쯖	!kvf
 쯗	!kvv
@@ -6666,12 +6666,12 @@ use_preset_vocabulary: false
 쯡	!kvt
 쯢	!kvi
 쯣	!kwv
-쯤	!kvo	5000
+쯤	!kvo
 쯥	!kva
 쯦	!kvh
-쯧	!kvb	5000
+쯧	!kvb
 쯨	!kvm
-쯩	!kvq	5000
+쯩	!kvq
 쯪	!kvu
 쯫	!kvd
 쯬	!kvz
@@ -6706,15 +6706,15 @@ use_preset_vocabulary: false
 찉	!kle
 찊	!klx
 찋	!klw
-찌	!ki	5000
-찍	!kiy	5000
+찌	!ki
+찍	!kiy
 찎	!kif
 찏	!kiv
-찐	!kil	5000
+찐	!kil
 찑	!kik
 찒	!kig
 찓	!kic
-찔	!kis	5000
+찔	!kis
 찕	!kij
 찖	!kin
 찗	!kir
@@ -6722,23 +6722,23 @@ use_preset_vocabulary: false
 찙	!kit
 찚	!kii
 찛	!kwi
-찜	!kio	5000
-찝	!kia	5000
+찜	!kio
+찝	!kia
 찞	!kih
 찟	!kib
 찠	!kim
-찡	!kiq	5000
-찢	!kiu	5000
+찡	!kiq
+찢	!kiu
 찣	!kid
 찤	!kiz
 찥	!kie
 찦	!kix
-찧	!kiw	5000
+찧	!kiw
 #s15
 찪	!dkf
 찫	!dkv
 찭	!dkk
-찮	!dkg	5000
+찮	!dkg
 찱	!dkj
 찲	!dkn
 찳	!dkr
@@ -6747,7 +6747,7 @@ use_preset_vocabulary: false
 찶	!dki
 찷	!dwk
 찺	!dkh
-찼	!dkm	5000
+찼	!dkm
 챆	!dhf
 챇	!dhv
 챉	!dhk
@@ -6760,11 +6760,11 @@ use_preset_vocabulary: false
 챒	!dhi
 챓	!dwh
 챖	!dhh
-챘	!dhm	5000
+챘	!dhm
 챢	!dff
 챣	!dfv
 챥	!dfk
-챦	!dfg	5000
+챦	!dfg
 챩	!dfj
 챪	!dfn
 챫	!dfr
@@ -6814,7 +6814,7 @@ use_preset_vocabulary: false
 첦	!dji
 첧	!dwj
 첪	!djh
-첬	!djm	5000
+첬	!djm
 첶	!dpf
 첷	!dpv
 첹	!dpk
@@ -6840,12 +6840,12 @@ use_preset_vocabulary: false
 쳞	!dgi
 쳟	!dwg
 쳢	!dgh
-쳤	!dgm	5000
-쳬	!dq	5000
+쳤	!dgm
+쳬	!dq
 쳭	!dqy
 쳮	!dqf
 쳯	!dqv
-쳰	!dql	5000
+쳰	!dql
 쳱	!dqk
 쳲	!dqg
 쳳	!dqc
@@ -6862,7 +6862,7 @@ use_preset_vocabulary: false
 쳾	!dqh
 쳿	!dqb
 촀	!dqm
-촁	!dqq	5000
+촁	!dqq
 촂	!dqu
 촃	!dqd
 촄	!dqz
@@ -6882,15 +6882,15 @@ use_preset_vocabulary: false
 촗	!dwn
 촚	!dnh
 촜	!dnm
-촤	!de	5000
+촤	!de
 촥	!dey
 촦	!def
 촧	!dev
-촨	!del	5000
+촨	!del
 촩	!dek
 촪	!deg
 촫	!dec
-촬	!des	5000
+촬	!des
 촭	!dej
 촮	!den
 촯	!der
@@ -6903,7 +6903,7 @@ use_preset_vocabulary: false
 촶	!deh
 촷	!deb
 촸	!dem
-촹	!deq	5000
+촹	!deq
 촺	!deu
 촻	!ded
 촼	!dez
@@ -6938,15 +6938,15 @@ use_preset_vocabulary: false
 쵙	!dse
 쵚	!dsx
 쵛	!dsw
-최	!dx	5000
+최	!dx
 쵝	!dxy
 쵞	!dxf
 쵟	!dxv
-쵠	!dxl	5000
+쵠	!dxl
 쵡	!dxk
 쵢	!dxg
 쵣	!dxc
-쵤	!dxs	5000
+쵤	!dxs
 쵥	!dxj
 쵦	!dxn
 쵧	!dxr
@@ -6954,12 +6954,12 @@ use_preset_vocabulary: false
 쵩	!dxt
 쵪	!dxi
 쵫	!dwx
-쵬	!dxo	5000
-쵭	!dxa	5000
+쵬	!dxo
+쵭	!dxa
 쵮	!dxh
-쵯	!dxb	5000
+쵯	!dxb
 쵰	!dxm
-쵱	!dxq	5000
+쵱	!dxq
 쵲	!dxu
 쵳	!dxd
 쵴	!dxz
@@ -6992,7 +6992,7 @@ use_preset_vocabulary: false
 춣	!dwt
 춦	!dth
 춨	!dtm
-춰	!da	5000
+춰	!da
 춱	!day
 춲	!daf
 춳	!dav
@@ -7012,7 +7012,7 @@ use_preset_vocabulary: false
 췁	!daa
 췂	!dah
 췃	!dab
-췄	!dam	5000
+췄	!dam
 췅	!daq
 췆	!dau
 췇	!dad
@@ -7020,11 +7020,11 @@ use_preset_vocabulary: false
 췉	!dae
 췊	!dax
 췋	!daw
-췌	!dz	5000
+췌	!dz
 췍	!dzy
 췎	!dzf
 췏	!dzv
-췐	!dzl	5000
+췐	!dzl
 췑	!dzk
 췒	!dzg
 췓	!dzc
@@ -7048,15 +7048,15 @@ use_preset_vocabulary: false
 췥	!dze
 췦	!dzx
 췧	!dzw
-취	!dd	5000
+취	!dd
 췩	!ddy
 췪	!ddf
 췫	!ddv
-췬	!ddl	5000
+췬	!ddl
 췭	!ddk
 췮	!ddg
 췯	!ddc
-췰	!dds	5000
+췰	!dds
 췱	!ddj
 췲	!ddn
 췳	!ddr
@@ -7064,12 +7064,12 @@ use_preset_vocabulary: false
 췵	!ddt
 췶	!ddi
 췷	!dwd
-췸	!ddo	5000
-췹	!dda	5000
+췸	!ddo
+췹	!dda
 췺	!ddh
-췻	!ddb	5000
+췻	!ddb
 췼	!ddm
-췽	!ddq	5000
+췽	!ddq
 췾	!ddu
 췿	!ddd
 츀	!ddz
@@ -7134,7 +7134,7 @@ use_preset_vocabulary: false
 칛	!div
 칝	!dik
 칞	!dig
-칡	!dij	5000
+칡	!dij
 칢	!din
 칣	!dir
 칤	!dip
@@ -7169,7 +7169,7 @@ use_preset_vocabulary: false
 캞	!zhi
 캟	!zwh
 캢	!zhh
-캤	!zhm	5000
+캤	!zhm
 캮	!zff
 캯	!zfv
 캱	!zfk
@@ -7223,7 +7223,7 @@ use_preset_vocabulary: false
 컲	!zji
 컳	!zwj
 컶	!zjh
-컸	!zjm	5000
+컸	!zjm
 켂	!zpf
 켃	!zpv
 켅	!zpk
@@ -7249,8 +7249,8 @@ use_preset_vocabulary: false
 켪	!zgi
 켫	!zwg
 켮	!zgh
-켰	!zgm	5000
-켸	!zq	5000
+켰	!zgm
+켸	!zq
 켹	!zqy
 켺	!zqf
 켻	!zqv
@@ -7291,15 +7291,15 @@ use_preset_vocabulary: false
 콣	!zwn
 콦	!znh
 콨	!znm
-콰	!ze	5000
-콱	!zey	5000
+콰	!ze
+콱	!zey
 콲	!zef
 콳	!zev
-콴	!zel	5000
+콴	!zel
 콵	!zek
 콶	!zeg
 콷	!zec
-콸	!zes	5000
+콸	!zes
 콹	!zej
 콺	!zen
 콻	!zer
@@ -7307,19 +7307,19 @@ use_preset_vocabulary: false
 콽	!zet
 콾	!zei
 콿	!zwe
-쾀	!zeo	5000
+쾀	!zeo
 쾁	!zea
 쾂	!zeh
 쾃	!zeb
 쾄	!zem
-쾅	!zeq	5000
+쾅	!zeq
 쾆	!zeu
 쾇	!zed
 쾈	!zez
 쾉	!zee
 쾊	!zex
 쾋	!zew
-쾌	!zs	5000
+쾌	!zs
 쾍	!zsy
 쾎	!zsf
 쾏	!zsv
@@ -7340,14 +7340,14 @@ use_preset_vocabulary: false
 쾞	!zsh
 쾟	!zsb
 쾠	!zsm
-쾡	!zsq	5000
+쾡	!zsq
 쾢	!zsu
 쾣	!zsd
 쾤	!zsz
 쾥	!zse
 쾦	!zsx
 쾧	!zsw
-쾨	!zx	5000
+쾨	!zx
 쾩	!zxy
 쾪	!zxf
 쾫	!zxv
@@ -7355,7 +7355,7 @@ use_preset_vocabulary: false
 쾭	!zxk
 쾮	!zxg
 쾯	!zxc
-쾰	!zxs	5000
+쾰	!zxs
 쾱	!zxj
 쾲	!zxn
 쾳	!zxr
@@ -7401,15 +7401,15 @@ use_preset_vocabulary: false
 쿯	!zwt
 쿲	!zth
 쿴	!ztm
-쿼	!za	5000
+쿼	!za
 쿽	!zay
 쿾	!zaf
 쿿	!zav
-퀀	!zal	5000
+퀀	!zal
 퀁	!zak
 퀂	!zag
 퀃	!zac
-퀄	!zas	5000
+퀄	!zas
 퀅	!zaj
 퀆	!zan
 퀇	!zar
@@ -7422,14 +7422,14 @@ use_preset_vocabulary: false
 퀎	!zah
 퀏	!zab
 퀐	!zam
-퀑	!zaq	5000
+퀑	!zaq
 퀒	!zau
 퀓	!zad
 퀔	!zaz
 퀕	!zae
 퀖	!zax
 퀗	!zaw
-퀘	!zz	5000
+퀘	!zz
 퀙	!zzy
 퀚	!zzf
 퀛	!zzv
@@ -7450,22 +7450,22 @@ use_preset_vocabulary: false
 퀪	!zzh
 퀫	!zzb
 퀬	!zzm
-퀭	!zzq	5000
+퀭	!zzq
 퀮	!zzu
 퀯	!zzd
 퀰	!zzz
 퀱	!zze
 퀲	!zzx
 퀳	!zzw
-퀴	!zd	5000
-퀵	!zdy	5000
+퀴	!zd
+퀵	!zdy
 퀶	!zdf
 퀷	!zdv
-퀸	!zdl	5000
+퀸	!zdl
 퀹	!zdk
 퀺	!zdg
 퀻	!zdc
-퀼	!zds	5000
+퀼	!zds
 퀽	!zdj
 퀾	!zdn
 퀿	!zdr
@@ -7473,12 +7473,12 @@ use_preset_vocabulary: false
 큁	!zdt
 큂	!zdi
 큃	!zwd
-큄	!zdo	5000
-큅	!zda	5000
+큄	!zdo
+큅	!zda
 큆	!zdh
-큇	!zdb	5000
+큇	!zdb
 큈	!zdm
-큉	!zdq	5000
+큉	!zdq
 큊	!zdu
 큋	!zdd
 큌	!zdz
@@ -7557,7 +7557,7 @@ use_preset_vocabulary: false
 탃	!ekv
 탅	!ekk
 탆	!ekg
-탉	!ekj	5000
+탉	!ekj
 탊	!ekn
 탋	!ekr
 탌	!ekp
@@ -7565,7 +7565,7 @@ use_preset_vocabulary: false
 탎	!eki
 탏	!ewk
 탒	!ekh
-탔	!ekm	5000
+탔	!ekm
 탞	!ehf
 탟	!ehv
 탡	!ehk
@@ -7578,7 +7578,7 @@ use_preset_vocabulary: false
 탪	!ehi
 탫	!ewh
 탮	!ehh
-탰	!ehm	5000
+탰	!ehm
 탺	!eff
 탻	!efv
 탽	!efk
@@ -7625,14 +7625,14 @@ use_preset_vocabulary: false
 턵	!ejk
 턶	!ejg
 턹	!ejj
-턺	!ejn	5000
+턺	!ejn
 턻	!ejr
 턼	!ejp
 턽	!ejt
 턾	!eji
 턿	!ewj
 텂	!ejh
-텄	!ejm	5000
+텄	!ejm
 텎	!epf
 텏	!epv
 텑	!epk
@@ -7658,12 +7658,12 @@ use_preset_vocabulary: false
 텶	!egi
 텷	!ewg
 텺	!egh
-텼	!egm	5000
-톄	!eq	5000
+텼	!egm
+톄	!eq
 톅	!eqy
 톆	!eqf
 톇	!eqv
-톈	!eql	5000
+톈	!eql
 톉	!eqk
 톊	!eqg
 톋	!eqc
@@ -7700,11 +7700,11 @@ use_preset_vocabulary: false
 톯	!ewn
 톲	!enh
 톴	!enm
-톼	!ee	5000
+톼	!ee
 톽	!eey
 톾	!eef
 톿	!eev
-퇀	!eel	5000
+퇀	!eel
 퇁	!eek
 퇂	!eeg
 퇃	!eec
@@ -7728,7 +7728,7 @@ use_preset_vocabulary: false
 퇕	!eee
 퇖	!eex
 퇗	!eew
-퇘	!es	5000
+퇘	!es
 퇙	!esy
 퇚	!esf
 퇛	!esv
@@ -7756,11 +7756,11 @@ use_preset_vocabulary: false
 퇱	!ese
 퇲	!esx
 퇳	!esw
-퇴	!ex	5000
+퇴	!ex
 퇵	!exy
 퇶	!exf
 퇷	!exv
-퇸	!exl	5000
+퇸	!exl
 퇹	!exk
 퇺	!exg
 퇻	!exc
@@ -7775,9 +7775,9 @@ use_preset_vocabulary: false
 툄	!exo
 툅	!exa
 툆	!exh
-툇	!exb	5000
+툇	!exb
 툈	!exm
-툉	!exq	5000
+툉	!exq
 툊	!exu
 툋	!exd
 툌	!exz
@@ -7810,7 +7810,7 @@ use_preset_vocabulary: false
 툻	!ewt
 툾	!eth
 퉀	!etm
-퉈	!ea	5000
+퉈	!ea
 퉉	!eay
 퉊	!eaf
 퉋	!eav
@@ -7830,7 +7830,7 @@ use_preset_vocabulary: false
 퉙	!eaa
 퉚	!eah
 퉛	!eab
-퉜	!eam	5000
+퉜	!eam
 퉝	!eaq
 퉞	!eau
 퉟	!ead
@@ -7838,7 +7838,7 @@ use_preset_vocabulary: false
 퉡	!eae
 퉢	!eax
 퉣	!eaw
-퉤	!ez	5000
+퉤	!ez
 퉥	!ezy
 퉦	!ezf
 퉧	!ezv
@@ -7866,15 +7866,15 @@ use_preset_vocabulary: false
 퉽	!eze
 퉾	!ezx
 퉿	!ezw
-튀	!ed	5000
-튁	!edy	5000
+튀	!ed
+튁	!edy
 튂	!edf
 튃	!edv
-튄	!edl	5000
+튄	!edl
 튅	!edk
 튆	!edg
 튇	!edc
-튈	!eds	5000
+튈	!eds
 튉	!edj
 튊	!edn
 튋	!edr
@@ -7882,12 +7882,12 @@ use_preset_vocabulary: false
 튍	!edt
 튎	!edi
 튏	!ewd
-튐	!edo	5000
-튑	!eda	5000
+튐	!edo
+튑	!eda
 튒	!edh
 튓	!edb
 튔	!edm
-튕	!edq	5000
+튕	!edq
 튖	!edu
 튗	!edd
 튘	!edz
@@ -7912,7 +7912,7 @@ use_preset_vocabulary: false
 튽	!evk
 튾	!evg
 틁	!evj
-틂	!evn	5000
+틂	!evn
 틃	!evr
 틄	!evp
 틅	!evt
@@ -7920,15 +7920,15 @@ use_preset_vocabulary: false
 틇	!ewv
 틊	!evh
 틌	!evm
-틔	!el	5000
+틔	!el
 틕	!ely
 틖	!elf
 틗	!elv
-틘	!ell	5000
+틘	!ell
 틙	!elk
 틚	!elg
 틛	!elc
-틜	!els	5000
+틜	!els
 틝	!elj
 틞	!eln
 틟	!elr
@@ -7936,8 +7936,8 @@ use_preset_vocabulary: false
 틡	!elt
 틢	!eli
 틣	!ewl
-틤	!elo	5000
-틥	!ela	5000
+틤	!elo
+틥	!ela
 틦	!elh
 틧	!elb
 틨	!elm
@@ -7962,19 +7962,19 @@ use_preset_vocabulary: false
 팂	!eih
 팄	!eim
 #s18
-팎	!xkf	5000
+팎	!xkf
 팏	!xkv
 팑	!xkk
 팒	!xkg
 팕	!xkj
-팖	!xkn	5000
+팖	!xkn
 팗	!xkr
 팘	!xkp
 팙	!xkt
 팚	!xki
 팛	!xwk
 팞	!xkh
-팠	!xkm	5000
+팠	!xkm
 팪	!xhf
 팫	!xhv
 팭	!xhk
@@ -7987,7 +7987,7 @@ use_preset_vocabulary: false
 팶	!xhi
 팷	!xwh
 팺	!xhh
-팼	!xhm	5000
+팼	!xhm
 퍆	!xff
 퍇	!xfv
 퍉	!xfk
@@ -8041,7 +8041,7 @@ use_preset_vocabulary: false
 펊	!xji
 펋	!xwj
 펎	!xjh
-펐	!xjm	5000
+펐	!xjm
 펚	!xpf
 펛	!xpv
 펝	!xpk
@@ -8067,8 +8067,8 @@ use_preset_vocabulary: false
 폂	!xgi
 폃	!xwg
 폆	!xgh
-폈	!xgm	5000
-폐	!xq	5000
+폈	!xgm
+폐	!xq
 폑	!xqy
 폒	!xqf
 폓	!xqv
@@ -8076,7 +8076,7 @@ use_preset_vocabulary: false
 폕	!xqk
 폖	!xqg
 폗	!xqc
-폘	!xqs	5000
+폘	!xqs
 폙	!xqj
 폚	!xqn
 폛	!xqr
@@ -8085,9 +8085,9 @@ use_preset_vocabulary: false
 폞	!xqi
 폟	!xwq
 폠	!xqo
-폡	!xqa	5000
+폡	!xqa
 폢	!xqh
-폣	!xqb	5000
+폣	!xqb
 폤	!xqm
 폥	!xqq
 폦	!xqu
@@ -8109,7 +8109,7 @@ use_preset_vocabulary: false
 폻	!xwn
 폾	!xnh
 퐀	!xnm
-퐈	!xe	5000
+퐈	!xe
 퐉	!xey
 퐊	!xef
 퐋	!xev
@@ -8130,7 +8130,7 @@ use_preset_vocabulary: false
 퐚	!xeh
 퐛	!xeb
 퐜	!xem
-퐝	!xeq	5000
+퐝	!xeq
 퐞	!xeu
 퐟	!xed
 퐠	!xez
@@ -8165,11 +8165,11 @@ use_preset_vocabulary: false
 퐽	!xse
 퐾	!xsx
 퐿	!xsw
-푀	!xx	5000
+푀	!xx
 푁	!xxy
 푂	!xxf
 푃	!xxv
-푄	!xxl	5000
+푄	!xxl
 푅	!xxk
 푆	!xxg
 푇	!xxc
@@ -8211,7 +8211,7 @@ use_preset_vocabulary: false
 푽	!xtk
 푾	!xtg
 풁	!xtj
-풂	!xtn	5000
+풂	!xtn
 풃	!xtr
 풄	!xtp
 풅	!xtt
@@ -8219,7 +8219,7 @@ use_preset_vocabulary: false
 풇	!xwt
 풊	!xth
 풌	!xtm
-풔	!xa	5000
+풔	!xa
 풕	!xay
 풖	!xaf
 풗	!xav
@@ -8240,7 +8240,7 @@ use_preset_vocabulary: false
 풦	!xah
 풧	!xab
 풨	!xam
-풩	!xaq	5000
+풩	!xaq
 풪	!xau
 풫	!xad
 풬	!xaz
@@ -8275,15 +8275,15 @@ use_preset_vocabulary: false
 퓉	!xze
 퓊	!xzx
 퓋	!xzw
-퓌	!xd	5000
+퓌	!xd
 퓍	!xdy
 퓎	!xdf
 퓏	!xdv
-퓐	!xdl	5000
+퓐	!xdl
 퓑	!xdk
 퓒	!xdg
 퓓	!xdc
-퓔	!xds	5000
+퓔	!xds
 퓕	!xdj
 퓖	!xdn
 퓗	!xdr
@@ -8291,10 +8291,10 @@ use_preset_vocabulary: false
 퓙	!xdt
 퓚	!xdi
 퓛	!xwd
-퓜	!xdo	5000
+퓜	!xdo
 퓝	!xda
 퓞	!xdh
-퓟	!xdb	5000
+퓟	!xdb
 퓠	!xdm
 퓡	!xdq
 퓢	!xdu
@@ -8379,7 +8379,7 @@ use_preset_vocabulary: false
 핢	!wkn
 핣	!wkr
 핤	!wkp
-핥	!wkt	5000
+핥	!wkt
 핦	!wki
 핧	!wwk
 핪	!wkh
@@ -8396,7 +8396,7 @@ use_preset_vocabulary: false
 햂	!whi
 햃	!wwh
 햆	!whh
-했	!whm	5000
+했	!whm
 햒	!wff
 햓	!wfv
 햕	!wfk
@@ -8443,7 +8443,7 @@ use_preset_vocabulary: false
 헍	!wjk
 헎	!wjg
 헑	!wjj
-헒	!wjn	5000
+헒	!wjn
 헓	!wjr
 헔	!wjp
 헕	!wjt
@@ -8476,16 +8476,16 @@ use_preset_vocabulary: false
 혎	!wgi
 혏	!wwg
 혒	!wgh
-혔	!wgm	5000
-혜	!wq	5000
+혔	!wgm
+혜	!wq
 혝	!wqy
 혞	!wqf
 혟	!wqv
-혠	!wql	5000
+혠	!wql
 혡	!wqk
 혢	!wqg
 혣	!wqc
-혤	!wqs	5000
+혤	!wqs
 혥	!wqj
 혦	!wqn
 혧	!wqr
@@ -8494,7 +8494,7 @@ use_preset_vocabulary: false
 혪	!wqi
 혫	!wwq
 혬	!wqo
-혭	!wqa	5000
+혭	!wqa
 혮	!wqh
 혯	!wqb
 혰	!wqm
@@ -8513,20 +8513,20 @@ use_preset_vocabulary: false
 홂	!wnn
 홃	!wnr
 홄	!wnp
-홅	!wnt	5000
+홅	!wnt
 홆	!wni
 홇	!wwn
 홊	!wnh
 홌	!wnm
-화	!we	5000
-확	!wey	5000
+화	!we
+확	!wey
 홖	!wef
 홗	!wev
-환	!wel	5000
+환	!wel
 홙	!wek
 홚	!weg
 홛	!wec
-활	!wes	5000
+활	!wes
 홝	!wej
 홞	!wen
 홟	!wer
@@ -8537,20 +8537,20 @@ use_preset_vocabulary: false
 홤	!weo
 홥	!wea
 홦	!weh
-홧	!web	5000
+홧	!web
 홨	!wem
-황	!weq	5000
+황	!weq
 홪	!weu
 홫	!wed
 홬	!wez
 홭	!wee
 홮	!wex
 홯	!wew
-홰	!ws	5000
-홱	!wsy	5000
+홰	!ws
+홱	!wsy
 홲	!wsf
 홳	!wsv
-홴	!wsl	5000
+홴	!wsl
 홵	!wsk
 홶	!wsg
 홷	!wsc
@@ -8565,24 +8565,24 @@ use_preset_vocabulary: false
 횀	!wso
 횁	!wsa
 횂	!wsh
-횃	!wsb	5000
+횃	!wsb
 횄	!wsm
-횅	!wsq	5000
+횅	!wsq
 횆	!wsu
 횇	!wsd
 횈	!wsz
 횉	!wse
 횊	!wsx
 횋	!wsw
-회	!wx	5000
-획	!wxy	5000
+회	!wx
+획	!wxy
 횎	!wxf
 횏	!wxv
-횐	!wxl	5000
+횐	!wxl
 횑	!wxk
 횒	!wxg
 횓	!wxc
-횔	!wxs	5000
+횔	!wxs
 횕	!wxj
 횖	!wxn
 횗	!wxr
@@ -8591,11 +8591,11 @@ use_preset_vocabulary: false
 횚	!wxi
 횛	!wwx
 횜	!wxo
-횝	!wxa	5000
+횝	!wxa
 횞	!wxh
-횟	!wxb	5000
+횟	!wxb
 횠	!wxm
-횡	!wxq	5000
+횡	!wxq
 횢	!wxu
 횣	!wxd
 횤	!wxz
@@ -8623,20 +8623,20 @@ use_preset_vocabulary: false
 훎	!wtn
 훏	!wtr
 훐	!wtp
-훑	!wtt	5000
+훑	!wtt
 훒	!wti
 훓	!wwt
 훖	!wth
 훘	!wtm
-훠	!wa	5000
+훠	!wa
 훡	!way
 훢	!waf
 훣	!wav
-훤	!wal	5000
+훤	!wal
 훥	!wak
 훦	!wag
 훧	!wac
-훨	!was	5000
+훨	!was
 훩	!waj
 훪	!wan
 훫	!war
@@ -8644,27 +8644,27 @@ use_preset_vocabulary: false
 훭	!wat
 훮	!wai
 훯	!wwa
-훰	!wao	5000
+훰	!wao
 훱	!waa
 훲	!wah
 훳	!wab
 훴	!wam
-훵	!waq	5000
+훵	!waq
 훶	!wau
 훷	!wad
 훸	!waz
 훹	!wae
 훺	!wax
 훻	!waw
-훼	!wz	5000
-훽	!wzy	5000
+훼	!wz
+훽	!wzy
 훾	!wzf
 훿	!wzv
-휀	!wzl	5000
+휀	!wzl
 휁	!wzk
 휂	!wzg
 휃	!wzc
-휄	!wzs	5000
+휄	!wzs
 휅	!wzj
 휆	!wzn
 휇	!wzr
@@ -8677,22 +8677,22 @@ use_preset_vocabulary: false
 휎	!wzh
 휏	!wzb
 휐	!wzm
-휑	!wzq	5000
+휑	!wzq
 휒	!wzu
 휓	!wzd
 휔	!wzz
 휕	!wze
 휖	!wzx
 휗	!wzw
-휘	!wd	5000
-휙	!wdy	5000
+휘	!wd
+휙	!wdy
 휚	!wdf
 휛	!wdv
-휜	!wdl	5000
+휜	!wdl
 휝	!wdk
 휞	!wdg
 휟	!wdc
-휠	!wds	5000
+휠	!wds
 휡	!wdj
 휢	!wdn
 휣	!wdr
@@ -8700,12 +8700,12 @@ use_preset_vocabulary: false
 휥	!wdt
 휦	!wdi
 휧	!wwd
-휨	!wdo	5000
-휩	!wda	5000
+휨	!wdo
+휩	!wda
 휪	!wdh
-휫	!wdb	5000
+휫	!wdb
 휬	!wdm
-휭	!wdq	5000
+휭	!wdq
 휮	!wdu
 휯	!wdd
 휰	!wdz
@@ -8728,8 +8728,8 @@ use_preset_vocabulary: false
 흒	!wvf
 흓	!wvv
 흕	!wvk
-흖	!wvg	5000
-흙	!wvj	5000
+흖	!wvg
+흙	!wvj
 흚	!wvn
 흛	!wvr
 흜	!wvp
@@ -8738,15 +8738,15 @@ use_preset_vocabulary: false
 흟	!wwv
 흢	!wvh
 흤	!wvm
-희	!wl	5000
+희	!wl
 흭	!wly
 흮	!wlf
 흯	!wlv
-흰	!wll	5000
+흰	!wll
 흱	!wlk
 흲	!wlg
 흳	!wlc
-흴	!wls	5000
+흴	!wls
 흵	!wlj
 흶	!wln
 흷	!wlr
@@ -8754,12 +8754,12 @@ use_preset_vocabulary: false
 흹	!wlt
 흺	!wli
 흻	!wwl
-흼	!wlo	5000
-흽	!wla	5000
+흼	!wlo
+흽	!wla
 흾	!wlh
 흿	!wlb
 힀	!wlm
-힁	!wlq	5000
+힁	!wlq
 힂	!wlu
 힃	!wld
 힄	!wlz
@@ -8782,43 +8782,43 @@ use_preset_vocabulary: false
 ### 諺文使用簡根結束 ###
 ### 諺文正碼啟始 ###
 #2
-가	!yk	4000
-각	!yky	4000
+가	!yk	70%
+각	!yky	70%
 갂	!ykyy
 갃	!ykyb
-간	!ykl	4000
+간	!ykl	70%
 갅	!yklu
 갆	!yklw
-갇	!ykc	4000
-갈	!yks	4000
-갉	!yksy	4000
-갊	!ykso	4000
+갇	!ykc	70%
+갈	!yks	70%
+갉	!yksy	70%
+갊	!ykso	70%
 갋	!yksa
 갌	!yksb
 갍	!ykse
 갎	!yksx
 갏	!yksw
-감	!yko	4000
-갑	!yka	4000
-값	!ykab	4000
-갓	!ykb	4000
-갔	!ykbb	4000
-강	!ykq	4000
-갖	!yku	4000
-갗	!ykd	4000
+감	!yko	70%
+갑	!yka	70%
+값	!ykab	70%
+갓	!ykb	70%
+갔	!ykbb	70%
+강	!ykq	70%
+갖	!yku	70%
+갗	!ykd	70%
 갘	!ykz
-같	!yke	4000
-갚	!ykx	4000
-갛	!ykw	4000
-개	!yh	4000
-객	!yhy	4000
+같	!yke	70%
+갚	!ykx	70%
+갛	!ykw	70%
+개	!yh	70%
+객	!yhy	70%
 갞	!yhyy
 갟	!yhyb
-갠	!yhl	4000
+갠	!yhl	70%
 갡	!yhlu
 갢	!yhlw
 갣	!yhc
-갤	!yhs	4000
+갤	!yhs	70%
 갥	!yhsy
 갦	!yhso
 갧	!yhsa
@@ -8826,27 +8826,27 @@ use_preset_vocabulary: false
 갩	!yhse
 갪	!yhsx
 갫	!yhsw
-갬	!yho	4000
-갭	!yha	4000
+갬	!yho	70%
+갭	!yha	70%
 갮	!yhab
-갯	!yhb	4000
-갰	!yhbb	4000
-갱	!yhq	4000
+갯	!yhb	70%
+갰	!yhbb	70%
+갱	!yhq	70%
 갲	!yhu
 갳	!yhd
 갴	!yhz
 갵	!yhe
 갶	!yhx
 갷	!yhw
-갸	!yf	4000
-갹	!yfy	4000
+갸	!yf	70%
+갹	!yfy	70%
 갺	!yfyy
 갻	!yfyb
-갼	!yfl	4000
+갼	!yfl	70%
 갽	!yflu
 갾	!yflw
 갿	!yfc
-걀	!yfs	4000
+걀	!yfs	70%
 걁	!yfsy
 걂	!yfso
 걃	!yfsa
@@ -8857,24 +8857,24 @@ use_preset_vocabulary: false
 걈	!yfo
 걉	!yfa
 걊	!yfab
-걋	!yfb	4000
+걋	!yfb	70%
 걌	!yfbb
-걍	!yfq	4000
+걍	!yfq	70%
 걎	!yfu
 걏	!yfd
 걐	!yfz
 걑	!yfe
 걒	!yfx
 걓	!yfw
-걔	!yhh	4000
+걔	!yhh	70%
 걕	!yhhy
 걖	!yhhyy
 걗	!yhhyb
-걘	!yhhl	4000
+걘	!yhhl	70%
 걙	!yhhlu
 걚	!yhhlw
 걛	!yhhc
-걜	!yhhs	4000
+걜	!yhhs	70%
 걝	!yhhsy
 걞	!yhhso
 걟	!yhhsa
@@ -8894,43 +8894,43 @@ use_preset_vocabulary: false
 걭	!yhhe
 걮	!yhhx
 걯	!yhhw
-거	!yj	4000
-걱	!yjy	4000
+거	!yj	70%
+걱	!yjy	70%
 걲	!yjyy
 걳	!yjyb
-건	!yjl	4000
+건	!yjl	70%
 걵	!yjlu
 걶	!yjlw
-걷	!yjc	4000
-걸	!yjs	4000
+걷	!yjc	70%
+걸	!yjs	70%
 걹	!yjsy
-걺	!yjso	4000
+걺	!yjso	70%
 걻	!yjsa
 걼	!yjsb
 걽	!yjse
 걾	!yjsx
 걿	!yjsw
-검	!yjo	4000
-겁	!yja	4000
+검	!yjo	70%
+겁	!yja	70%
 겂	!yjab
-것	!yjb	4000
-겄	!yjbb	4000
-겅	!yjq	4000
-겆	!yju	4000
+것	!yjb	70%
+겄	!yjbb	70%
+겅	!yjq	70%
+겆	!yju	70%
 겇	!yjd
 겈	!yjz
-겉	!yje	4000
-겊	!yjx	4000
-겋	!yjw	4000
-게	!yp	4000
+겉	!yje	70%
+겊	!yjx	70%
+겋	!yjw	70%
+게	!yp	70%
 겍	!ypy
 겎	!ypyy
 겏	!ypyb
-겐	!ypl	4000
+겐	!ypl	70%
 겑	!yplu
 겒	!yplw
 겓	!ypc
-겔	!yps	4000
+겔	!yps	70%
 겕	!ypsy
 겖	!ypso
 겗	!ypsa
@@ -8938,27 +8938,27 @@ use_preset_vocabulary: false
 겙	!ypse
 겚	!ypsx
 겛	!ypsw
-겜	!ypo	4000
-겝	!ypa	4000
+겜	!ypo	70%
+겝	!ypa	70%
 겞	!ypab
-겟	!ypb	4000
-겠	!ypbb	4000
-겡	!ypq	4000
+겟	!ypb	70%
+겠	!ypbb	70%
+겡	!ypq	70%
 겢	!ypu
 겣	!ypd
 겤	!ypz
 겥	!ype
 겦	!ypx
 겧	!ypw
-겨	!yg	4000
-격	!ygy	4000
-겪	!ygyy	4000
+겨	!yg	70%
+격	!ygy	70%
+겪	!ygyy	70%
 겫	!ygyb
-견	!ygl	4000
+견	!ygl	70%
 겭	!yglu
 겮	!yglw
-겯	!ygc	4000
-결	!ygs	4000
+겯	!ygc	70%
+결	!ygs	70%
 겱	!ygsy
 겲	!ygso
 겳	!ygsa
@@ -8966,27 +8966,27 @@ use_preset_vocabulary: false
 겵	!ygse
 겶	!ygsx
 겷	!ygsw
-겸	!ygo	4000
-겹	!yga	4000
+겸	!ygo	70%
+겹	!yga	70%
 겺	!ygab
-겻	!ygb	4000
-겼	!ygbb	4000
-경	!ygq	4000
+겻	!ygb	70%
+겼	!ygbb	70%
+경	!ygq	70%
 겾	!ygu
 겿	!ygd
 곀	!ygz
-곁	!yge	4000
+곁	!yge	70%
 곂	!ygx
 곃	!ygw
-계	!ypp	4000
+계	!ypp	70%
 곅	!yppy
 곆	!yppyy
 곇	!yppyb
-곈	!yppl	4000
+곈	!yppl	70%
 곉	!ypplu
 곊	!ypplw
 곋	!yppc
-곌	!ypps	4000
+곌	!ypps	70%
 곍	!yppsy
 곎	!yppso
 곏	!yppsa
@@ -8995,9 +8995,9 @@ use_preset_vocabulary: false
 곒	!yppsx
 곓	!yppsw
 곔	!yppo
-곕	!yppa	4000
+곕	!yppa	70%
 곖	!yppab
-곗	!yppb	4000
+곗	!yppb	70%
 곘	!yppbb
 곙	!yppq
 곚	!yppu
@@ -9006,72 +9006,72 @@ use_preset_vocabulary: false
 곝	!yppe
 곞	!yppx
 곟	!yppw
-고	!yn	4000
-곡	!yny	4000
+고	!yn	70%
+곡	!yny	70%
 곢	!ynyy
 곣	!ynyb
-곤	!ynl	4000
+곤	!ynl	70%
 곥	!ynlu
 곦	!ynlw
-곧	!ync	4000
-골	!yns	4000
+곧	!ync	70%
+골	!yns	70%
 곩	!ynsy
-곪	!ynso	4000
+곪	!ynso	70%
 곫	!ynsa
-곬	!ynsb	4000
+곬	!ynsb	70%
 곭	!ynse
 곮	!ynsx
-곯	!ynsw	4000
-곰	!yno	4000
-곱	!yna	4000
+곯	!ynsw	70%
+곰	!yno	70%
+곱	!yna	70%
 곲	!ynab
-곳	!ynb	4000
+곳	!ynb	70%
 곴	!ynbb
-공	!ynq	4000
-곶	!ynu	4000
+공	!ynq	70%
+곶	!ynu	70%
 곷	!ynd
 곸	!ynz
 곹	!yne
 곺	!ynx
 곻	!ynw
-과	!ynk	4000
-곽	!ynky	4000
+과	!ynk	70%
+곽	!ynky	70%
 곾	!ynkyy
 곿	!ynkyb
 #3
-관	!ynkl	4000
+관	!ynkl	70%
 괁	!ynklu
 괂	!ynklw
 괃	!ynkc
-괄	!ynks	4000
+괄	!ynks	70%
 괅	!ynksy
-괆	!ynkso	4000
+괆	!ynkso	70%
 괇	!ynksa
 괈	!ynksb
 괉	!ynkse
 괊	!ynksx
 괋	!ynksw
-괌	!ynko	4000
-괍	!ynka	4000
+괌	!ynko	70%
+괍	!ynka	70%
 괎	!ynkab
-괏	!ynkb	4000
+괏	!ynkb	70%
 괐	!ynkbb
-광	!ynkq	4000
+광	!ynkq	70%
 괒	!ynku
 괓	!ynkd
 괔	!ynkz
 괕	!ynke
 괖	!ynkx
 괗	!ynkw
-괘	!ynh	4000
+괘	!ynh	70%
 괙	!ynhy
 괚	!ynhyy
 괛	!ynhyb
-괜	!ynhl	4000
+괜	!ynhl	70%
 괝	!ynhlu
 괞	!ynhlw
 괟	!ynhc
-괠	!ynhs	4000
+괠	!ynhs	70%
 괡	!ynhsy
 괢	!ynhso
 괣	!ynhsa
@@ -9080,26 +9080,26 @@ use_preset_vocabulary: false
 괦	!ynhsx
 괧	!ynhsw
 괨	!ynho
-괩	!ynha	4000
+괩	!ynha	70%
 괪	!ynhab
 괫	!ynhb
-괬	!ynhbb	4000
-괭	!ynhq	4000
+괬	!ynhbb	70%
+괭	!ynhq	70%
 괮	!ynhu
 괯	!ynhd
 괰	!ynhz
 괱	!ynhe
 괲	!ynhx
 괳	!ynhw
-괴	!yni	4000
-괵	!yniy	4000
+괴	!yni	70%
+괵	!yniy	70%
 괶	!yniyy
 괷	!yniyb
-괸	!ynil	4000
+괸	!ynil	70%
 괹	!ynilu
 괺	!ynilw
 괻	!ynic
-괼	!ynis	4000
+괼	!ynis	70%
 괽	!ynisy
 괾	!yniso
 괿	!ynisa
@@ -9107,27 +9107,27 @@ use_preset_vocabulary: false
 굁	!ynise
 굂	!ynisx
 굃	!ynisw
-굄	!ynio	4000
-굅	!ynia	4000
+굄	!ynio	70%
+굅	!ynia	70%
 굆	!yniab
-굇	!ynib	4000
+굇	!ynib	70%
 굈	!ynibb
-굉	!yniq	4000
+굉	!yniq	70%
 굊	!yniu
 굋	!ynid
 굌	!yniz
 굍	!ynie
 굎	!ynix
 굏	!yniw
-교	!ym	4000
+교	!ym	70%
 굑	!ymy
 굒	!ymyy
 굓	!ymyb
-굔	!yml	4000
+굔	!yml	70%
 굕	!ymlu
 굖	!ymlw
 굗	!ymc
-굘	!yms	4000
+굘	!yms	70%
 굙	!ymsy
 굚	!ymso
 굛	!ymsa
@@ -9136,9 +9136,9 @@ use_preset_vocabulary: false
 굞	!ymsx
 굟	!ymsw
 굠	!ymo
-굡	!yma	4000
+굡	!yma	70%
 굢	!ymab
-굣	!ymb	4000
+굣	!ymb	70%
 굤	!ymbb
 굥	!ymq
 굦	!ymu
@@ -9147,43 +9147,43 @@ use_preset_vocabulary: false
 굩	!yme
 굪	!ymx
 굫	!ymw
-구	!yt	4000
-국	!yty	4000
+구	!yt	70%
+국	!yty	70%
 굮	!ytyy
 굯	!ytyb
-군	!ytl	4000
+군	!ytl	70%
 굱	!ytlu
 굲	!ytlw
-굳	!ytc	4000
-굴	!yts	4000
-굵	!ytsy	4000
-굶	!ytso	4000
+굳	!ytc	70%
+굴	!yts	70%
+굵	!ytsy	70%
+굶	!ytso	70%
 굷	!ytsa
 굸	!ytsb
 굹	!ytse
 굺	!ytsx
-굻	!ytsw	4000
-굼	!yto	4000
-굽	!yta	4000
+굻	!ytsw	70%
+굼	!yto	70%
+굽	!yta	70%
 굾	!ytab
-굿	!ytb	4000
+굿	!ytb	70%
 궀	!ytbb
-궁	!ytq	4000
-궂	!ytu	4000
+궁	!ytq	70%
+궂	!ytu	70%
 궃	!ytd
 궄	!ytz
 궅	!yte
 궆	!ytx
 궇	!ytw
-궈	!ytj	4000
-궉	!ytjy	4000
+궈	!ytj	70%
+궉	!ytjy	70%
 궊	!ytjyy
 궋	!ytjyb
-권	!ytjl	4000
+권	!ytjl	70%
 궍	!ytjlu
 궎	!ytjlw
 궏	!ytjc
-궐	!ytjs	4000
+궐	!ytjs	70%
 궑	!ytjsy
 궒	!ytjso
 궓	!ytjsa
@@ -9195,15 +9195,15 @@ use_preset_vocabulary: false
 궙	!ytja
 궚	!ytjab
 궛	!ytjb
-궜	!ytjbb	4000
-궝	!ytjq	4000
+궜	!ytjbb	70%
+궝	!ytjq	70%
 궞	!ytju
 궟	!ytjd
 궠	!ytjz
 궡	!ytje
 궢	!ytjx
 궣	!ytjw
-궤	!ytp	4000
+궤	!ytp	70%
 궥	!ytpy
 궦	!ytpyy
 궧	!ytpyb
@@ -9222,7 +9222,7 @@ use_preset_vocabulary: false
 궴	!ytpo
 궵	!ytpa
 궶	!ytpab
-궷	!ytpb	4000
+궷	!ytpb	70%
 궸	!ytpbb
 궹	!ytpq
 궺	!ytpu
@@ -9231,15 +9231,15 @@ use_preset_vocabulary: false
 궽	!ytpe
 궾	!ytpx
 궿	!ytpw
-귀	!yti	4000
-귁	!ytiy	4000
+귀	!yti	70%
+귁	!ytiy	70%
 귂	!ytiyy
 귃	!ytiyb
-귄	!ytil	4000
+귄	!ytil	70%
 귅	!ytilu
 귆	!ytilw
 귇	!ytic
-귈	!ytis	4000
+귈	!ytis	70%
 귉	!ytisy
 귊	!ytiso
 귋	!ytisa
@@ -9247,10 +9247,10 @@ use_preset_vocabulary: false
 귍	!ytise
 귎	!ytisx
 귏	!ytisw
-귐	!ytio	4000
-귑	!ytia	4000
+귐	!ytio	70%
+귑	!ytia	70%
 귒	!ytiab
-귓	!ytib	4000
+귓	!ytib	70%
 귔	!ytibb
 귕	!ytiq
 귖	!ytiu
@@ -9259,15 +9259,15 @@ use_preset_vocabulary: false
 귙	!ytie
 귚	!ytix
 귛	!ytiw
-규	!yr	4000
+규	!yr	70%
 귝	!yry
 귞	!yryy
 귟	!yryb
-균	!yrl	4000
+균	!yrl	70%
 귡	!yrlu
 귢	!yrlw
 귣	!yrc
-귤	!yrs	4000
+귤	!yrs	70%
 귥	!yrsy
 귦	!yrso
 귧	!yrsa
@@ -9287,36 +9287,36 @@ use_preset_vocabulary: false
 귵	!yre
 귶	!yrx
 귷	!yrw
-그	!yv	4000
-극	!yvy	4000
+그	!yv	70%
+극	!yvy	70%
 귺	!yvyy
 귻	!yvyb
-근	!yvl	4000
+근	!yvl	70%
 귽	!yvlu
 귾	!yvlw
-귿	!yvc	4000
+귿	!yvc	70%
 #4
-글	!yvs	4000
-긁	!yvsy	4000
+글	!yvs	70%
+긁	!yvsy	70%
 긂	!yvso
 긃	!yvsa
 긄	!yvsb
 긅	!yvse
 긆	!yvsx
 긇	!yvsw
-금	!yvo	4000
-급	!yva	4000
+금	!yvo	70%
+급	!yva	70%
 긊	!yvab
-긋	!yvb	4000
+긋	!yvb	70%
 긌	!yvbb
-긍	!yvq	4000
+긍	!yvq	70%
 긎	!yvu
 긏	!yvd
 긐	!yvz
 긑	!yve
 긒	!yvx
 긓	!yvw
-긔	!yvi	4000
+긔	!yvi	70%
 긕	!yviy
 긖	!yviyy
 긗	!yviyb
@@ -9344,71 +9344,71 @@ use_preset_vocabulary: false
 긭	!yvie
 긮	!yvix
 긯	!yviw
-기	!yi	4000
-긱	!yiy	4000
+기	!yi	70%
+긱	!yiy	70%
 긲	!yiyy
 긳	!yiyb
-긴	!yil	4000
+긴	!yil	70%
 긵	!yilu
 긶	!yilw
-긷	!yic	4000
-길	!yis	4000
+긷	!yic	70%
+길	!yis	70%
 긹	!yisy
-긺	!yiso	4000
+긺	!yiso	70%
 긻	!yisa
 긼	!yisb
 긽	!yise
 긾	!yisx
 긿	!yisw
-김	!yio	4000
-깁	!yia	4000
+김	!yio	70%
+깁	!yia	70%
 깂	!yiab
-깃	!yib	4000
+깃	!yib	70%
 깄	!yibb
-깅	!yiq	4000
-깆	!yiu	4000
+깅	!yiq	70%
+깆	!yiu	70%
 깇	!yid
 깈	!yiz
 깉	!yie
-깊	!yix	4000
+깊	!yix	70%
 깋	!yiw
-까	!yyk	4000
-깍	!yyky	4000
-깎	!yykyy	4000
+까	!yyk	70%
+깍	!yyky	70%
+깎	!yykyy	70%
 깏	!yykyb
-깐	!yykl	4000
+깐	!yykl	70%
 깑	!yyklu
 깒	!yyklw
 깓	!yykc
-깔	!yyks	4000
+깔	!yyks	70%
 깕	!yyksy
-깖	!yykso	4000
+깖	!yykso	70%
 깗	!yyksa
 깘	!yyksb
 깙	!yykse
 깚	!yyksx
 깛	!yyksw
-깜	!yyko	4000
-깝	!yyka	4000
+깜	!yyko	70%
+깝	!yyka	70%
 깞	!yykab
-깟	!yykb	4000
-깠	!yykbb	4000
-깡	!yykq	4000
+깟	!yykb	70%
+깠	!yykbb	70%
+깡	!yykq	70%
 깢	!yyku
 깣	!yykd
 깤	!yykz
-깥	!yyke	4000
+깥	!yyke	70%
 깦	!yykx
 깧	!yykw
-깨	!yyh	4000
-깩	!yyhy	4000
+깨	!yyh	70%
+깩	!yyhy	70%
 깪	!yyhyy
 깫	!yyhyb
-깬	!yyhl	4000
+깬	!yyhl	70%
 깭	!yyhlu
 깮	!yyhlw
 깯	!yyhc
-깰	!yyhs	4000
+깰	!yyhs	70%
 깱	!yyhsy
 깲	!yyhso
 깳	!yyhsa
@@ -9416,27 +9416,27 @@ use_preset_vocabulary: false
 깵	!yyhse
 깶	!yyhsx
 깷	!yyhsw
-깸	!yyho	4000
-깹	!yyha	4000
+깸	!yyho	70%
+깹	!yyha	70%
 깺	!yyhab
-깻	!yyhb	4000
-깼	!yyhbb	4000
-깽	!yyhq	4000
+깻	!yyhb	70%
+깼	!yyhbb	70%
+깽	!yyhq	70%
 깾	!yyhu
 깿	!yyhd
 꺀	!yyhz
 꺁	!yyhe
 꺂	!yyhx
 꺃	!yyhw
-꺄	!yyf	4000
-꺅	!yyfy	4000
+꺄	!yyf	70%
+꺅	!yyfy	70%
 꺆	!yyfyy
 꺇	!yyfyb
 꺈	!yyfl
 꺉	!yyflu
 꺊	!yyflw
 꺋	!yyfc
-꺌	!yyfs	4000
+꺌	!yyfs	70%
 꺍	!yyfsy
 꺎	!yyfso
 꺏	!yyfsa
@@ -9484,15 +9484,15 @@ use_preset_vocabulary: false
 꺹	!vyhe
 꺺	!vyhx
 꺻	!vyhw
-꺼	!yyj	4000
-꺽	!yyjy	4000
-꺾	!yyjyy	4000
+꺼	!yyj	70%
+꺽	!yyjy	70%
+꺾	!yyjyy	70%
 꺿	!yyjyb
-껀	!yyjl	4000
+껀	!yyjl	70%
 껁	!yyjlu
 껂	!yyjlw
 껃	!yyjc
-껄	!yyjs	4000
+껄	!yyjs	70%
 껅	!yyjsy
 껆	!yyjso
 껇	!yyjsa
@@ -9500,23 +9500,23 @@ use_preset_vocabulary: false
 껉	!yyjse
 껊	!yyjsx
 껋	!yyjsw
-껌	!yyjo	4000
-껍	!yyja	4000
+껌	!yyjo	70%
+껍	!yyja	70%
 껎	!yyjab
-껏	!yyjb	4000
-껐	!yyjbb	4000
-껑	!yyjq	4000
+껏	!yyjb	70%
+껐	!yyjbb	70%
+껑	!yyjq	70%
 껒	!yyju
 껓	!yyjd
 껔	!yyjz
 껕	!yyje
 껖	!yyjx
 껗	!yyjw
-께	!yyp	4000
-껙	!yypy	4000
+께	!yyp	70%
+껙	!yypy	70%
 껚	!yypyy
 껛	!yypyb
-껜	!yypl	4000
+껜	!yypl	70%
 껝	!yyplu
 껞	!yyplw
 껟	!yypc
@@ -9528,27 +9528,27 @@ use_preset_vocabulary: false
 껥	!yypse
 껦	!yypsx
 껧	!yypsw
-껨	!yypo	4000
+껨	!yypo	70%
 껩	!yypa
 껪	!yypab
-껫	!yypb	4000
+껫	!yypb	70%
 껬	!yypbb
-껭	!yypq	4000
+껭	!yypq	70%
 껮	!yypu
 껯	!yypd
 껰	!yypz
 껱	!yype
 껲	!yypx
 껳	!yypw
-껴	!yyg	4000
+껴	!yyg	70%
 껵	!yygy
 껶	!yygyy
 껷	!yygyb
-껸	!yygl	4000
+껸	!yygl	70%
 껹	!yyglu
 껺	!yyglw
 껻	!yygc
-껼	!yygs	4000
+껼	!yygs	70%
 껽	!yygsy
 껾	!yygso
 껿	!yygsa
@@ -9560,16 +9560,16 @@ use_preset_vocabulary: false
 꼄	!yygo
 꼅	!yyga
 꼆	!yygab
-꼇	!yygb	4000
-꼈	!yygbb	4000
+꼇	!yygb	70%
+꼈	!yygbb	70%
 꼉	!yygq
 꼊	!yygu
 꼋	!yygd
 꼌	!yygz
-꼍	!yyge	4000
+꼍	!yyge	70%
 꼎	!yygx
 꼏	!yygw
-꼐	!vyp	4000
+꼐	!vyp	70%
 꼑	!vypy
 꼒	!vypyy
 꼓	!vypyb
@@ -9597,15 +9597,15 @@ use_preset_vocabulary: false
 꼩	!vype
 꼪	!vypx
 꼫	!vypw
-꼬	!yyn	4000
-꼭	!yyny	4000
+꼬	!yyn	70%
+꼭	!yyny	70%
 꼮	!yynyy
 꼯	!yynyb
-꼰	!yynl	4000
+꼰	!yynl	70%
 꼱	!yynlu
-꼲	!yynlw	4000
+꼲	!yynlw	70%
 꼳	!yync
-꼴	!yyns	4000
+꼴	!yyns	70%
 꼵	!yynsy
 꼶	!yynso
 꼷	!yynsa
@@ -9613,27 +9613,27 @@ use_preset_vocabulary: false
 꼹	!yynse
 꼺	!yynsx
 꼻	!yynsw
-꼼	!yyno	4000
-꼽	!yyna	4000
+꼼	!yyno	70%
+꼽	!yyna	70%
 꼾	!yynab
-꼿	!yynb	4000
+꼿	!yynb	70%
 꽀	!yynbb
-꽁	!yynq	4000
-꽂	!yynu	4000
-꽃	!yynd	4000
+꽁	!yynq	70%
+꽂	!yynu	70%
+꽃	!yynd	70%
 꽄	!yynz
 꽅	!yyne
 꽆	!yynx
 꽇	!yynw
-꽈	!yynk	4000
-꽉	!yynky	4000
+꽈	!yynk	70%
+꽉	!yynky	70%
 꽊	!yynkyy
 꽋	!yynkyb
 꽌	!yynkl
 꽍	!yynklu
 꽎	!yynklw
 꽏	!yynkc
-꽐	!yynks	4000
+꽐	!yynks	70%
 꽑	!yynksy
 꽒	!yynkso
 꽓	!yynksa
@@ -9645,16 +9645,16 @@ use_preset_vocabulary: false
 꽙	!yynka
 꽚	!yynkab
 꽛	!yynkb
-꽜	!yynkbb	4000
-꽝	!yynkq	4000
+꽜	!yynkbb	70%
+꽝	!yynkq	70%
 꽞	!yynku
 꽟	!yynkd
 꽠	!yynkz
 꽡	!yynke
 꽢	!yynkx
 꽣	!yynkw
-꽤	!yynh	4000
-꽥	!yynhy	4000
+꽤	!yynh	70%
+꽥	!yynhy	70%
 꽦	!yynhyy
 꽧	!yynhyb
 꽨	!yynhl
@@ -9674,22 +9674,22 @@ use_preset_vocabulary: false
 꽶	!yynhab
 꽷	!yynhb
 꽸	!yynhbb
-꽹	!yynhq	4000
+꽹	!yynhq	70%
 꽺	!yynhu
 꽻	!yynhd
 꽼	!yynhz
 꽽	!yynhe
 꽾	!yynhx
 꽿	!yynhw
-꾀	!yyni	4000
+꾀	!yyni	70%
 꾁	!yyniy
 꾂	!yyniyy
 꾃	!yyniyb
-꾄	!yynil	4000
+꾄	!yynil	70%
 꾅	!yynilu
 꾆	!yynilw
 꾇	!yynic
-꾈	!yynis	4000
+꾈	!yynis	70%
 꾉	!yynisy
 꾊	!yyniso
 꾋	!yynisa
@@ -9697,19 +9697,19 @@ use_preset_vocabulary: false
 꾍	!yynise
 꾎	!yynisx
 꾏	!yynisw
-꾐	!yynio	4000
-꾑	!yynia	4000
+꾐	!yynio	70%
+꾑	!yynia	70%
 꾒	!yyniab
 꾓	!yynib
 꾔	!yynibb
-꾕	!yyniq	4000
+꾕	!yyniq	70%
 꾖	!yyniu
 꾗	!yynid
 꾘	!yyniz
 꾙	!yynie
 꾚	!yynix
 꾛	!yyniw
-꾜	!yym	4000
+꾜	!yym	70%
 꾝	!yymy
 꾞	!yymyy
 꾟	!yymyb
@@ -9737,35 +9737,35 @@ use_preset_vocabulary: false
 꾵	!yyme
 꾶	!yymx
 꾷	!yymw
-꾸	!yyt	4000
-꾹	!yyty	4000
+꾸	!yyt	70%
+꾹	!yyty	70%
 꾺	!yytyy
 꾻	!yytyb
-꾼	!yytl	4000
+꾼	!yytl	70%
 꾽	!yytlu
 꾾	!yytlw
 꾿	!yytc
-꿀	!yyts	4000
+꿀	!yyts	70%
 꿁	!yytsy
 꿂	!yytso
 꿃	!yytsa
 꿄	!yytsb
 꿅	!yytse
 꿆	!yytsx
-꿇	!yytsw	4000
-꿈	!yyto	4000
-꿉	!yyta	4000
+꿇	!yytsw	70%
+꿈	!yyto	70%
+꿉	!yyta	70%
 꿊	!yytab
-꿋	!yytb	4000
+꿋	!yytb	70%
 꿌	!yytbb
-꿍	!yytq	4000
-꿎	!yytu	4000
+꿍	!yytq	70%
+꿎	!yytu	70%
 꿏	!yytd
 꿐	!yytz
 꿑	!yyte
 꿒	!yytx
 꿓	!yytw
-꿔	!yytj	4000
+꿔	!yytj	70%
 꿕	!yytjy
 꿖	!yytjyy
 꿗	!yytjyb
@@ -9773,7 +9773,7 @@ use_preset_vocabulary: false
 꿙	!yytjlu
 꿚	!yytjlw
 꿛	!yytjc
-꿜	!yytjs	4000
+꿜	!yytjs	70%
 꿝	!yytjsy
 꿞	!yytjso
 꿟	!yytjsa
@@ -9785,23 +9785,23 @@ use_preset_vocabulary: false
 꿥	!yytja
 꿦	!yytjab
 꿧	!yytjb
-꿨	!yytjbb	4000
-꿩	!yytjq	4000
+꿨	!yytjbb	70%
+꿩	!yytjq	70%
 꿪	!yytju
 꿫	!yytjd
 꿬	!yytjz
 꿭	!yytje
 꿮	!yytjx
 꿯	!yytjw
-꿰	!yytp	4000
-꿱	!yytpy	4000
+꿰	!yytp	70%
+꿱	!yytpy	70%
 꿲	!yytpyy
 꿳	!yytpyb
-꿴	!yytpl	4000
+꿴	!yytpl	70%
 꿵	!yytplu
 꿶	!yytplw
 꿷	!yytpc
-꿸	!yytps	4000
+꿸	!yytps	70%
 꿹	!yytpsy
 꿺	!yytpso
 꿻	!yytpsa
@@ -9810,11 +9810,11 @@ use_preset_vocabulary: false
 꿾	!yytpsx
 꿿	!yytpsw
 #6
-뀀	!yytpo	4000
-뀁	!yytpa	4000
+뀀	!yytpo	70%
+뀁	!yytpa	70%
 뀂	!yytpab
 뀃	!yytpb
-뀄	!yytpbb	4000
+뀄	!yytpbb	70%
 뀅	!yytpq
 뀆	!yytpu
 뀇	!yytpd
@@ -9822,15 +9822,15 @@ use_preset_vocabulary: false
 뀉	!yytpe
 뀊	!yytpx
 뀋	!yytpw
-뀌	!yyti	4000
+뀌	!yyti	70%
 뀍	!yytiy
 뀎	!yytiyy
 뀏	!yytiyb
-뀐	!yytil	4000
+뀐	!yytil	70%
 뀑	!yytilu
 뀒	!yytilw
 뀓	!yytic
-뀔	!yytis	4000
+뀔	!yytis	70%
 뀕	!yytisy
 뀖	!yytiso
 뀗	!yytisa
@@ -9838,8 +9838,8 @@ use_preset_vocabulary: false
 뀙	!yytise
 뀚	!yytisx
 뀛	!yytisw
-뀜	!yytio	4000
-뀝	!yytia	4000
+뀜	!yytio	70%
+뀝	!yytia	70%
 뀞	!yytiab
 뀟	!yytib
 뀠	!yytibb
@@ -9850,7 +9850,7 @@ use_preset_vocabulary: false
 뀥	!yytie
 뀦	!yytix
 뀧	!yytiw
-뀨	!yyr	4000
+뀨	!yyr	70%
 뀩	!yyry
 뀪	!yyryy
 뀫	!yyryb
@@ -9878,32 +9878,32 @@ use_preset_vocabulary: false
 끁	!yyre
 끂	!yyrx
 끃	!yyrw
-끄	!yyv	4000
-끅	!yyvy	4000
+끄	!yyv	70%
+끅	!yyvy	70%
 끆	!yyvyy
 끇	!yyvyb
-끈	!yyvl	4000
+끈	!yyvl	70%
 끉	!yyvlu
-끊	!yyvlw	4000
+끊	!yyvlw	70%
 끋	!yyvc
-끌	!yyvs	4000
+끌	!yyvs	70%
 끍	!yyvsy
-끎	!yyvso	4000
+끎	!yyvso	70%
 끏	!yyvsa
 끐	!yyvsb
 끑	!yyvse
 끒	!yyvsx
-끓	!yyvsw	4000
-끔	!yyvo	4000
-끕	!yyva	4000
+끓	!yyvsw	70%
+끔	!yyvo	70%
+끕	!yyva	70%
 끖	!yyvab
-끗	!yyvb	4000
+끗	!yyvb	70%
 끘	!yyvbb
-끙	!yyvq	4000
+끙	!yyvq	70%
 끚	!yyvu
 끛	!yyvd
 끜	!yyvz
-끝	!yyve	4000
+끝	!yyve	70%
 끞	!yyvx
 끟	!yyvw
 끠	!yyvi
@@ -9934,15 +9934,15 @@ use_preset_vocabulary: false
 끹	!yyvie
 끺	!yyvix
 끻	!yyviw
-끼	!yyi	4000
-끽	!yyiy	4000
+끼	!yyi	70%
+끽	!yyiy	70%
 끾	!yyiyy
 끿	!yyiyb
-낀	!yyil	4000
+낀	!yyil	70%
 낁	!yyilu
 낂	!yyilw
 낃	!yyic
-낄	!yyis	4000
+낄	!yyis	70%
 낅	!yyisy
 낆	!yyiso
 낇	!yyisa
@@ -9950,55 +9950,55 @@ use_preset_vocabulary: false
 낉	!yyise
 낊	!yyisx
 낋	!yyisw
-낌	!yyio	4000
-낍	!yyia	4000
+낌	!yyio	70%
+낍	!yyia	70%
 낎	!yyiab
-낏	!yyib	4000
+낏	!yyib	70%
 낐	!yyibb
-낑	!yyiq	4000
+낑	!yyiq	70%
 낒	!yyiu
 낓	!yyid
 낔	!yyiz
 낕	!yyie
 낖	!yyix
 낗	!yyiw
-나	!lk	4000
-낙	!lky	4000
-낚	!lkyy	4000
+나	!lk	70%
+낙	!lky	70%
+낚	!lkyy	70%
 낛	!lkyb
-난	!lkl	4000
+난	!lkl	70%
 낝	!lklu
 낞	!lklw
-낟	!lkc	4000
-날	!lks	4000
-낡	!lksy	4000
-낢	!lkso	4000
+낟	!lkc	70%
+날	!lks	70%
+낡	!lksy	70%
+낢	!lkso	70%
 낣	!lksa
 낤	!lksb
 낥	!lkse
 낦	!lksx
 낧	!lksw
-남	!lko	4000
-납	!lka	4000
+남	!lko	70%
+납	!lka	70%
 낪	!lkab
-낫	!lkb	4000
-났	!lkbb	4000
-낭	!lkq	4000
-낮	!lku	4000
-낯	!lkd	4000
+낫	!lkb	70%
+났	!lkbb	70%
+낭	!lkq	70%
+낮	!lku	70%
+낯	!lkd	70%
 낰	!lkz
-낱	!lke	4000
+낱	!lke	70%
 낲	!lkx
-낳	!lkw	4000
-내	!lh	4000
-낵	!lhy	4000
+낳	!lkw	70%
+내	!lh	70%
+낵	!lhy	70%
 낶	!lhyy
 낷	!lhyb
-낸	!lhl	4000
+낸	!lhl	70%
 낹	!lhlu
 낺	!lhlw
 낻	!lhc
-낼	!lhs	4000
+낼	!lhs	70%
 낽	!lhsy
 낾	!lhso
 낿	!lhsa
@@ -10006,27 +10006,27 @@ use_preset_vocabulary: false
 냁	!lhse
 냂	!lhsx
 냃	!lhsw
-냄	!lho	4000
-냅	!lha	4000
+냄	!lho	70%
+냅	!lha	70%
 냆	!lhab
-냇	!lhb	4000
-냈	!lhbb	4000
-냉	!lhq	4000
+냇	!lhb	70%
+냈	!lhbb	70%
+냉	!lhq	70%
 냊	!lhu
 냋	!lhd
 냌	!lhz
 냍	!lhe
 냎	!lhx
 냏	!lhw
-냐	!lf	4000
-냑	!lfy	4000
+냐	!lf	70%
+냑	!lfy	70%
 냒	!lfyy
 냓	!lfyb
-냔	!lfl	4000
+냔	!lfl	70%
 냕	!lflu
 냖	!lflw
 냗	!lfc
-냘	!lfs	4000
+냘	!lfs	70%
 냙	!lfsy
 냚	!lfso
 냛	!lfsa
@@ -10034,12 +10034,12 @@ use_preset_vocabulary: false
 냝	!lfse
 냞	!lfsx
 냟	!lfsw
-냠	!lfo	4000
+냠	!lfo	70%
 냡	!lfa
 냢	!lfab
 냣	!lfb
 냤	!lfbb
-냥	!lfq	4000
+냥	!lfq	70%
 냦	!lfu
 냧	!lfd
 냨	!lfz
@@ -10075,43 +10075,43 @@ use_preset_vocabulary: false
 넅	!lhhe
 넆	!lhhx
 넇	!lhhw
-너	!lj	4000
-넉	!ljy	4000
+너	!lj	70%
+넉	!ljy	70%
 넊	!ljyy
-넋	!ljyb	4000
-넌	!ljl	4000
+넋	!ljyb	70%
+넌	!ljl	70%
 넍	!ljlu
 넎	!ljlw
 넏	!ljc
-널	!ljs	4000
+널	!ljs	70%
 넑	!ljsy
-넒	!ljso	4000
-넓	!ljsa	4000
+넒	!ljso	70%
+넓	!ljsa	70%
 넔	!ljsb
 넕	!ljse
 넖	!ljsx
 넗	!ljsw
-넘	!ljo	4000
-넙	!lja	4000
+넘	!ljo	70%
+넙	!lja	70%
 넚	!ljab
-넛	!ljb	4000
-넜	!ljbb	4000
-넝	!ljq	4000
+넛	!ljb	70%
+넜	!ljbb	70%
+넝	!ljq	70%
 넞	!lju
 넟	!ljd
 넠	!ljz
 넡	!lje
 넢	!ljx
-넣	!ljw	4000
-네	!lp	4000
-넥	!lpy	4000
+넣	!ljw	70%
+네	!lp	70%
+넥	!lpy	70%
 넦	!lpyy
 넧	!lpyb
-넨	!lpl	4000
+넨	!lpl	70%
 넩	!lplu
 넪	!lplw
 넫	!lpc
-넬	!lps	4000
+넬	!lps	70%
 넭	!lpsy
 넮	!lpso
 넯	!lpsa
@@ -10119,27 +10119,27 @@ use_preset_vocabulary: false
 넱	!lpse
 넲	!lpsx
 넳	!lpsw
-넴	!lpo	4000
-넵	!lpa	4000
+넴	!lpo	70%
+넵	!lpa	70%
 넶	!lpab
-넷	!lpb	4000
-넸	!lpbb	4000
-넹	!lpq	4000
+넷	!lpb	70%
+넸	!lpbb	70%
+넹	!lpq	70%
 넺	!lpu
 넻	!lpd
 넼	!lpz
 넽	!lpe
 넾	!lpx
 넿	!lpw
-녀	!lg	4000
-녁	!lgy	4000
+녀	!lg	70%
+녁	!lgy	70%
 녂	!lgyy
 녃	!lgyb
-년	!lgl	4000
+년	!lgl	70%
 녅	!lglu
 녆	!lglw
 녇	!lgc
-녈	!lgs	4000
+녈	!lgs	70%
 녉	!lgsy
 녊	!lgso
 녋	!lgsa
@@ -10147,23 +10147,23 @@ use_preset_vocabulary: false
 녍	!lgse
 녎	!lgsx
 녏	!lgsw
-념	!lgo	4000
-녑	!lga	4000
+념	!lgo	70%
+녑	!lga	70%
 녒	!lgab
 녓	!lgb
-녔	!lgbb	4000
-녕	!lgq	4000
+녔	!lgbb	70%
+녕	!lgq	70%
 녖	!lgu
 녗	!lgd
-녘	!lgz	4000
+녘	!lgz	70%
 녙	!lge
 녚	!lgx
 녛	!lgw
-녜	!lpp	4000
+녜	!lpp	70%
 녝	!lppy
 녞	!lppyy
 녟	!lppyb
-녠	!lppl	4000
+녠	!lppl	70%
 녡	!lpplu
 녢	!lpplw
 녣	!lppc
@@ -10187,43 +10187,43 @@ use_preset_vocabulary: false
 녵	!lppe
 녶	!lppx
 녷	!lppw
-노	!ln	4000
-녹	!lny	4000
+노	!ln	70%
+녹	!lny	70%
 녺	!lnyy
 녻	!lnyb
-논	!lnl	4000
+논	!lnl	70%
 녽	!lnlu
 녾	!lnlw
 녿	!lnc
-놀	!lns	4000
+놀	!lns	70%
 놁	!lnsy
-놂	!lnso	4000
+놂	!lnso	70%
 놃	!lnsa
 놄	!lnsb
 놅	!lnse
 놆	!lnsx
 놇	!lnsw
-놈	!lno	4000
-놉	!lna	4000
+놈	!lno	70%
+놉	!lna	70%
 놊	!lnab
-놋	!lnb	4000
+놋	!lnb	70%
 놌	!lnbb
-농	!lnq	4000
+농	!lnq	70%
 놎	!lnu
 놏	!lnd
 놐	!lnz
 놑	!lne
-높	!lnx	4000
-놓	!lnw	4000
-놔	!lnk	4000
+높	!lnx	70%
+놓	!lnw	70%
+놔	!lnk	70%
 놕	!lnky
 놖	!lnkyy
 놗	!lnkyb
-놘	!lnkl	4000
+놘	!lnkl	70%
 놙	!lnklu
 놚	!lnklw
 놛	!lnkc
-놜	!lnks	4000
+놜	!lnks	70%
 놝	!lnksy
 놞	!lnkso
 놟	!lnksa
@@ -10235,7 +10235,7 @@ use_preset_vocabulary: false
 놥	!lnka
 놦	!lnkab
 놧	!lnkb
-놨	!lnkbb	4000
+놨	!lnkbb	70%
 놩	!lnkq
 놪	!lnku
 놫	!lnkd
@@ -10271,15 +10271,15 @@ use_preset_vocabulary: false
 뇉	!lnhe
 뇊	!lnhx
 뇋	!lnhw
-뇌	!lni	4000
+뇌	!lni	70%
 뇍	!lniy
 뇎	!lniyy
 뇏	!lniyb
-뇐	!lnil	4000
+뇐	!lnil	70%
 뇑	!lnilu
 뇒	!lnilw
 뇓	!lnic
-뇔	!lnis	4000
+뇔	!lnis	70%
 뇕	!lnisy
 뇖	!lniso
 뇗	!lnisa
@@ -10287,10 +10287,10 @@ use_preset_vocabulary: false
 뇙	!lnise
 뇚	!lnisx
 뇛	!lnisw
-뇜	!lnio	4000
-뇝	!lnia	4000
+뇜	!lnio	70%
+뇝	!lnia	70%
 뇞	!lniab
-뇟	!lnib	4000
+뇟	!lnib	70%
 뇠	!lnibb
 뇡	!lniq
 뇢	!lniu
@@ -10299,15 +10299,15 @@ use_preset_vocabulary: false
 뇥	!lnie
 뇦	!lnix
 뇧	!lniw
-뇨	!lm	4000
-뇩	!lmy	4000
+뇨	!lm	70%
+뇩	!lmy	70%
 뇪	!lmyy
 뇫	!lmyb
-뇬	!lml	4000
+뇬	!lml	70%
 뇭	!lmlu
 뇮	!lmlw
 뇯	!lmc
-뇰	!lms	4000
+뇰	!lms	70%
 뇱	!lmsy
 뇲	!lmso
 뇳	!lmsa
@@ -10316,11 +10316,11 @@ use_preset_vocabulary: false
 뇶	!lmsx
 뇷	!lmsw
 뇸	!lmo
-뇹	!lma	4000
+뇹	!lma	70%
 뇺	!lmab
-뇻	!lmb	4000
+뇻	!lmb	70%
 뇼	!lmbb
-뇽	!lmq	4000
+뇽	!lmq	70%
 뇾	!lmu
 뇿	!lmd
 #8
@@ -10328,15 +10328,15 @@ use_preset_vocabulary: false
 눁	!lme
 눂	!lmx
 눃	!lmw
-누	!lt	4000
-눅	!lty	4000
+누	!lt	70%
+눅	!lty	70%
 눆	!ltyy
 눇	!ltyb
-눈	!ltl	4000
+눈	!ltl	70%
 눉	!ltlu
 눊	!ltlw
-눋	!ltc	4000
-눌	!lts	4000
+눋	!ltc	70%
+눌	!lts	70%
 눍	!ltsy
 눎	!ltso
 눏	!ltsa
@@ -10344,19 +10344,19 @@ use_preset_vocabulary: false
 눑	!ltse
 눒	!ltsx
 눓	!ltsw
-눔	!lto	4000
-눕	!lta	4000
+눔	!lto	70%
+눕	!lta	70%
 눖	!ltab
-눗	!ltb	4000
+눗	!ltb	70%
 눘	!ltbb
-눙	!ltq	4000
+눙	!ltq	70%
 눚	!ltu
 눛	!ltd
 눜	!ltz
 눝	!lte
 눞	!ltx
 눟	!ltw
-눠	!ltj	4000
+눠	!ltj	70%
 눡	!ltjy
 눢	!ltjyy
 눣	!ltjyb
@@ -10376,7 +10376,7 @@ use_preset_vocabulary: false
 눱	!ltja
 눲	!ltjab
 눳	!ltjb
-눴	!ltjbb	4000
+눴	!ltjbb	70%
 눵	!ltjq
 눶	!ltju
 눷	!ltjd
@@ -10384,7 +10384,7 @@ use_preset_vocabulary: false
 눹	!ltje
 눺	!ltjx
 눻	!ltjw
-눼	!ltp	4000
+눼	!ltp	70%
 눽	!ltpy
 눾	!ltpyy
 눿	!ltpyb
@@ -10412,15 +10412,15 @@ use_preset_vocabulary: false
 뉕	!ltpe
 뉖	!ltpx
 뉗	!ltpw
-뉘	!lti	4000
+뉘	!lti	70%
 뉙	!ltiy
 뉚	!ltiyy
 뉛	!ltiyb
-뉜	!ltil	4000
+뉜	!ltil	70%
 뉝	!ltilu
 뉞	!ltilw
 뉟	!ltic
-뉠	!ltis	4000
+뉠	!ltis	70%
 뉡	!ltisy
 뉢	!ltiso
 뉣	!ltisa
@@ -10428,8 +10428,8 @@ use_preset_vocabulary: false
 뉥	!ltise
 뉦	!ltisx
 뉧	!ltisw
-뉨	!ltio	4000
-뉩	!ltia	4000
+뉨	!ltio	70%
+뉩	!ltia	70%
 뉪	!ltiab
 뉫	!ltib
 뉬	!ltibb
@@ -10440,15 +10440,15 @@ use_preset_vocabulary: false
 뉱	!ltie
 뉲	!ltix
 뉳	!ltiw
-뉴	!lr	4000
-뉵	!lry	4000
+뉴	!lr	70%
+뉵	!lry	70%
 뉶	!lryy
 뉷	!lryb
 뉸	!lrl
 뉹	!lrlu
 뉺	!lrlw
 뉻	!lrc
-뉼	!lrs	4000
+뉼	!lrs	70%
 뉽	!lrsy
 뉾	!lrso
 뉿	!lrsa
@@ -10456,55 +10456,55 @@ use_preset_vocabulary: false
 늁	!lrse
 늂	!lrsx
 늃	!lrsw
-늄	!lro	4000
-늅	!lra	4000
+늄	!lro	70%
+늅	!lra	70%
 늆	!lrab
 늇	!lrb
 늈	!lrbb
-늉	!lrq	4000
+늉	!lrq	70%
 늊	!lru
 늋	!lrd
 늌	!lrz
 늍	!lre
 늎	!lrx
 늏	!lrw
-느	!lv	4000
-늑	!lvy	4000
+느	!lv	70%
+늑	!lvy	70%
 늒	!lvyy
 늓	!lvyb
-는	!lvl	4000
+는	!lvl	70%
 늕	!lvlu
 늖	!lvlw
 늗	!lvc
-늘	!lvs	4000
-늙	!lvsy	4000
-늚	!lvso	4000
+늘	!lvs	70%
+늙	!lvsy	70%
+늚	!lvso	70%
 늛	!lvsa
 늜	!lvsb
 늝	!lvse
 늞	!lvsx
 늟	!lvsw
-늠	!lvo	4000
-늡	!lva	4000
+늠	!lvo	70%
+늡	!lva	70%
 늢	!lvab
-늣	!lvb	4000
+늣	!lvb	70%
 늤	!lvbb
-능	!lvq	4000
-늦	!lvu	4000
+능	!lvq	70%
+늦	!lvu	70%
 늧	!lvd
 늨	!lvz
 늩	!lve
-늪	!lvx	4000
+늪	!lvx	70%
 늫	!lvw
-늬	!lvi	4000
+늬	!lvi	70%
 늭	!lviy
 늮	!lviyy
 늯	!lviyb
-늰	!lvil	4000
+늰	!lvil	70%
 늱	!lvilu
 늲	!lvilw
 늳	!lvic
-늴	!lvis	4000
+늴	!lvis	70%
 늵	!lvisy
 늶	!lviso
 늷	!lvisa
@@ -10524,72 +10524,72 @@ use_preset_vocabulary: false
 닅	!lvie
 닆	!lvix
 닇	!lviw
-니	!li	4000
-닉	!liy	4000
+니	!li	70%
+닉	!liy	70%
 닊	!liyy
 닋	!liyb
-닌	!lil	4000
+닌	!lil	70%
 닍	!lilu
 닎	!lilw
 닏	!lic
-닐	!lis	4000
+닐	!lis	70%
 닑	!lisy
-닒	!liso	4000
+닒	!liso	70%
 닓	!lisa
 닔	!lisb
 닕	!lise
 닖	!lisx
 닗	!lisw
-님	!lio	4000
-닙	!lia	4000
+님	!lio	70%
+닙	!lia	70%
 닚	!liab
-닛	!lib	4000
+닛	!lib	70%
 닜	!libb
-닝	!liq	4000
+닝	!liq	70%
 닞	!liu
 닟	!lid
 닠	!liz
 닡	!lie
-닢	!lix	4000
+닢	!lix	70%
 닣	!liw
-다	!ck	4000
-닥	!cky	4000
-닦	!ckyy	4000
+다	!ck	70%
+닥	!cky	70%
+닦	!ckyy	70%
 닧	!ckyb
-단	!ckl	4000
+단	!ckl	70%
 닩	!cklu
 닪	!cklw
-닫	!ckc	4000
-달	!cks	4000
-닭	!cksy	4000
-닮	!ckso	4000
-닯	!cksa	4000
+닫	!ckc	70%
+달	!cks	70%
+닭	!cksy	70%
+닮	!ckso	70%
+닯	!cksa	70%
 닰	!cksb
 닱	!ckse
 닲	!cksx
-닳	!cksw	4000
-담	!cko	4000
-답	!cka	4000
+닳	!cksw	70%
+담	!cko	70%
+답	!cka	70%
 닶	!ckab
-닷	!ckb	4000
-닸	!ckbb	4000
-당	!ckq	4000
-닺	!cku	4000
-닻	!ckd	4000
+닷	!ckb	70%
+닸	!ckbb	70%
+당	!ckq	70%
+닺	!cku	70%
+닻	!ckd	70%
 닼	!ckz
 닽	!cke
 닾	!ckx
-닿	!ckw	4000
+닿	!ckw	70%
 #9
-대	!ch	4000
-댁	!chy	4000
+대	!ch	70%
+댁	!chy	70%
 댂	!chyy
 댃	!chyb
-댄	!chl	4000
+댄	!chl	70%
 댅	!chlu
 댆	!chlw
 댇	!chc
-댈	!chs	4000
+댈	!chs	70%
 댉	!chsy
 댊	!chso
 댋	!chsa
@@ -10597,19 +10597,19 @@ use_preset_vocabulary: false
 댍	!chse
 댎	!chsx
 댏	!chsw
-댐	!cho	4000
-댑	!cha	4000
+댐	!cho	70%
+댑	!cha	70%
 댒	!chab
-댓	!chb	4000
-댔	!chbb	4000
-댕	!chq	4000
+댓	!chb	70%
+댔	!chbb	70%
+댕	!chq	70%
 댖	!chu
 댗	!chd
 댘	!chz
 댙	!che
 댚	!chx
 댛	!chw
-댜	!cf	4000
+댜	!cf	70%
 댝	!cfy
 댞	!cfyy
 댟	!cfyb
@@ -10665,43 +10665,43 @@ use_preset_vocabulary: false
 덑	!chhe
 덒	!chhx
 덓	!chhw
-더	!cj	4000
-덕	!cjy	4000
-덖	!cjyy	4000
+더	!cj	70%
+덕	!cjy	70%
+덖	!cjyy	70%
 덗	!cjyb
-던	!cjl	4000
+던	!cjl	70%
 덙	!cjlu
 덚	!cjlw
-덛	!cjc	4000
-덜	!cjs	4000
+덛	!cjc	70%
+덜	!cjs	70%
 덝	!cjsy
-덞	!cjso	4000
-덟	!cjsa	4000
+덞	!cjso	70%
+덟	!cjsa	70%
 덠	!cjsb
 덡	!cjse
 덢	!cjsx
 덣	!cjsw
-덤	!cjo	4000
-덥	!cja	4000
+덤	!cjo	70%
+덥	!cja	70%
 덦	!cjab
-덧	!cjb	4000
+덧	!cjb	70%
 덨	!cjbb
-덩	!cjq	4000
+덩	!cjq	70%
 덪	!cju
-덫	!cjd	4000
+덫	!cjd	70%
 덬	!cjz
 덭	!cje
-덮	!cjx	4000
+덮	!cjx	70%
 덯	!cjw
-데	!cp	4000
-덱	!cpy	4000
+데	!cp	70%
+덱	!cpy	70%
 덲	!cpyy
 덳	!cpyb
-덴	!cpl	4000
+덴	!cpl	70%
 덵	!cplu
 덶	!cplw
 덷	!cpc
-델	!cps	4000
+델	!cps	70%
 덹	!cpsy
 덺	!cpso
 덻	!cpsa
@@ -10709,27 +10709,27 @@ use_preset_vocabulary: false
 덽	!cpse
 덾	!cpsx
 덿	!cpsw
-뎀	!cpo	4000
-뎁	!cpa	4000
+뎀	!cpo	70%
+뎁	!cpa	70%
 뎂	!cpab
-뎃	!cpb	4000
-뎄	!cpbb	4000
-뎅	!cpq	4000
+뎃	!cpb	70%
+뎄	!cpbb	70%
+뎅	!cpq	70%
 뎆	!cpu
 뎇	!cpd
 뎈	!cpz
 뎉	!cpe
 뎊	!cpx
 뎋	!cpw
-뎌	!cg	4000
+뎌	!cg	70%
 뎍	!cgy
 뎎	!cgyy
 뎏	!cgyb
-뎐	!cgl	4000
+뎐	!cgl	70%
 뎑	!cglu
 뎒	!cglw
 뎓	!cgc
-뎔	!cgs	4000
+뎔	!cgs	70%
 뎕	!cgsy
 뎖	!cgso
 뎗	!cgsa
@@ -10741,19 +10741,19 @@ use_preset_vocabulary: false
 뎝	!cga
 뎞	!cgab
 뎟	!cgb
-뎠	!cgbb	4000
-뎡	!cgq	4000
+뎠	!cgbb	70%
+뎡	!cgq	70%
 뎢	!cgu
 뎣	!cgd
 뎤	!cgz
 뎥	!cge
 뎦	!cgx
 뎧	!cgw
-뎨	!cpp	4000
+뎨	!cpp	70%
 뎩	!cppy
 뎪	!cppyy
 뎫	!cppyb
-뎬	!cppl	4000
+뎬	!cppl	70%
 뎭	!cpplu
 뎮	!cpplw
 뎯	!cppc
@@ -10777,43 +10777,43 @@ use_preset_vocabulary: false
 돁	!cppe
 돂	!cppx
 돃	!cppw
-도	!cn	4000
-독	!cny	4000
+도	!cn	70%
+독	!cny	70%
 돆	!cnyy
 돇	!cnyb
-돈	!cnl	4000
+돈	!cnl	70%
 돉	!cnlu
 돊	!cnlw
-돋	!cnc	4000
-돌	!cns	4000
+돋	!cnc	70%
+돌	!cns	70%
 돍	!cnsy
-돎	!cnso	4000
+돎	!cnso	70%
 돏	!cnsa
-돐	!cnsb	4000
+돐	!cnsb	70%
 돑	!cnse
 돒	!cnsx
 돓	!cnsw
-돔	!cno	4000
-돕	!cna	4000
+돔	!cno	70%
+돕	!cna	70%
 돖	!cnab
-돗	!cnb	4000
+돗	!cnb	70%
 돘	!cnbb
-동	!cnq	4000
+동	!cnq	70%
 돚	!cnu
-돛	!cnd	4000
+돛	!cnd	70%
 돜	!cnz
-돝	!cne	4000
+돝	!cne	70%
 돞	!cnx
 돟	!cnw
-돠	!cnk	4000
+돠	!cnk	70%
 돡	!cnky
 돢	!cnkyy
 돣	!cnkyb
-돤	!cnkl	4000
+돤	!cnkl	70%
 돥	!cnklu
 돦	!cnklw
 돧	!cnkc
-돨	!cnks	4000
+돨	!cnks	70%
 돩	!cnksy
 돪	!cnkso
 돫	!cnksa
@@ -10833,7 +10833,7 @@ use_preset_vocabulary: false
 돹	!cnke
 돺	!cnkx
 돻	!cnkw
-돼	!cnh	4000
+돼	!cnh	70%
 돽	!cnhy
 돾	!cnhyy
 돿	!cnhyb
@@ -10854,7 +10854,7 @@ use_preset_vocabulary: false
 됍	!cnha
 됎	!cnhab
 됏	!cnhb
-됐	!cnhbb	4000
+됐	!cnhbb	70%
 됑	!cnhq
 됒	!cnhu
 됓	!cnhd
@@ -10862,15 +10862,15 @@ use_preset_vocabulary: false
 됕	!cnhe
 됖	!cnhx
 됗	!cnhw
-되	!cni	4000
+되	!cni	70%
 됙	!cniy
 됚	!cniyy
 됛	!cniyb
-된	!cnil	4000
+된	!cnil	70%
 됝	!cnilu
 됞	!cnilw
 됟	!cnic
-될	!cnis	4000
+될	!cnis	70%
 됡	!cnisy
 됢	!cniso
 됣	!cnisa
@@ -10878,10 +10878,10 @@ use_preset_vocabulary: false
 됥	!cnise
 됦	!cnisx
 됧	!cnisw
-됨	!cnio	4000
-됩	!cnia	4000
+됨	!cnio	70%
+됩	!cnia	70%
 됪	!cniab
-됫	!cnib	4000
+됫	!cnib	70%
 됬	!cnibb
 됭	!cniq
 됮	!cniu
@@ -10890,7 +10890,7 @@ use_preset_vocabulary: false
 됱	!cnie
 됲	!cnix
 됳	!cniw
-됴	!cm	4000
+됴	!cm	70%
 됵	!cmy
 됶	!cmyy
 됷	!cmyb
@@ -10918,15 +10918,15 @@ use_preset_vocabulary: false
 둍	!cme
 둎	!cmx
 둏	!cmw
-두	!ct	4000
-둑	!cty	4000
+두	!ct	70%
+둑	!cty	70%
 둒	!ctyy
 둓	!ctyb
-둔	!ctl	4000
+둔	!ctl	70%
 둕	!ctlu
 둖	!ctlw
 둗	!ctc
-둘	!cts	4000
+둘	!cts	70%
 둙	!ctsy
 둚	!ctso
 둛	!ctsa
@@ -10934,19 +10934,19 @@ use_preset_vocabulary: false
 둝	!ctse
 둞	!ctsx
 둟	!ctsw
-둠	!cto	4000
-둡	!cta	4000
+둠	!cto	70%
+둡	!cta	70%
 둢	!ctab
-둣	!ctb	4000
+둣	!ctb	70%
 둤	!ctbb
-둥	!ctq	4000
+둥	!ctq	70%
 둦	!ctu
 둧	!ctd
 둨	!ctz
 둩	!cte
 둪	!ctx
 둫	!ctw
-둬	!ctj	4000
+둬	!ctj	70%
 둭	!ctjy
 둮	!ctjyy
 둯	!ctjyb
@@ -10966,7 +10966,7 @@ use_preset_vocabulary: false
 둽	!ctja
 둾	!ctjab
 둿	!ctjb
-뒀	!ctjbb	4000
+뒀	!ctjbb	70%
 뒁	!ctjq
 뒂	!ctju
 뒃	!ctjd
@@ -10974,7 +10974,7 @@ use_preset_vocabulary: false
 뒅	!ctje
 뒆	!ctjx
 뒇	!ctjw
-뒈	!ctp	4000
+뒈	!ctp	70%
 뒉	!ctpy
 뒊	!ctpyy
 뒋	!ctpyb
@@ -10995,22 +10995,22 @@ use_preset_vocabulary: false
 뒚	!ctpab
 뒛	!ctpb
 뒜	!ctpbb
-뒝	!ctpq	4000
+뒝	!ctpq	70%
 뒞	!ctpu
 뒟	!ctpd
 뒠	!ctpz
 뒡	!ctpe
 뒢	!ctpx
 뒣	!ctpw
-뒤	!cti	4000
+뒤	!cti	70%
 뒥	!ctiy
 뒦	!ctiyy
 뒧	!ctiyb
-뒨	!ctil	4000
+뒨	!ctil	70%
 뒩	!ctilu
 뒪	!ctilw
 뒫	!ctic
-뒬	!ctis	4000
+뒬	!ctis	70%
 뒭	!ctisy
 뒮	!ctiso
 뒯	!ctisa
@@ -11019,26 +11019,26 @@ use_preset_vocabulary: false
 뒲	!ctisx
 뒳	!ctisw
 뒴	!ctio
-뒵	!ctia	4000
+뒵	!ctia	70%
 뒶	!ctiab
-뒷	!ctib	4000
+뒷	!ctib	70%
 뒸	!ctibb
-뒹	!ctiq	4000
+뒹	!ctiq	70%
 뒺	!ctiu
 뒻	!ctid
 뒼	!ctiz
 뒽	!ctie
 뒾	!ctix
 뒿	!ctiw
-듀	!cr	4000
+듀	!cr	70%
 듁	!cry
 듂	!cryy
 듃	!cryb
-듄	!crl	4000
+듄	!crl	70%
 듅	!crlu
 듆	!crlw
 듇	!crc
-듈	!crs	4000
+듈	!crs	70%
 듉	!crsy
 듊	!crso
 듋	!crsa
@@ -11046,47 +11046,47 @@ use_preset_vocabulary: false
 듍	!crse
 듎	!crsx
 듏	!crsw
-듐	!cro	4000
+듐	!cro	70%
 듑	!cra
 듒	!crab
 듓	!crb
 듔	!crbb
-듕	!crq	4000
+듕	!crq	70%
 듖	!cru
 듗	!crd
 듘	!crz
 듙	!cre
 듚	!crx
 듛	!crw
-드	!cv	4000
-득	!cvy	4000
+드	!cv	70%
+득	!cvy	70%
 듞	!cvyy
 듟	!cvyb
-든	!cvl	4000
+든	!cvl	70%
 듡	!cvlu
 듢	!cvlw
-듣	!cvc	4000
-들	!cvs	4000
+듣	!cvc	70%
+들	!cvs	70%
 듥	!cvsy
-듦	!cvso	4000
+듦	!cvso	70%
 듧	!cvsa
 듨	!cvsb
 듩	!cvse
 듪	!cvsx
 듫	!cvsw
-듬	!cvo	4000
-듭	!cva	4000
+듬	!cvo	70%
+듭	!cva	70%
 듮	!cvab
-듯	!cvb	4000
+듯	!cvb	70%
 듰	!cvbb
-등	!cvq	4000
+등	!cvq	70%
 듲	!cvu
 듳	!cvd
 듴	!cvz
 듵	!cve
 듶	!cvx
 듷	!cvw
-듸	!cvi	4000
+듸	!cvi	70%
 듹	!cviy
 듺	!cviyy
 듻	!cviyb
@@ -11115,15 +11115,15 @@ use_preset_vocabulary: false
 딑	!cvie
 딒	!cvix
 딓	!cviw
-디	!ci	4000
-딕	!ciy	4000
+디	!ci	70%
+딕	!ciy	70%
 딖	!ciyy
 딗	!ciyb
-딘	!cil	4000
+딘	!cil	70%
 딙	!cilu
 딚	!cilw
-딛	!cic	4000
-딜	!cis	4000
+딛	!cic	70%
+딜	!cis	70%
 딝	!cisy
 딞	!ciso
 딟	!cisa
@@ -11131,27 +11131,27 @@ use_preset_vocabulary: false
 딡	!cise
 딢	!cisx
 딣	!cisw
-딤	!cio	4000
-딥	!cia	4000
+딤	!cio	70%
+딥	!cia	70%
 딦	!ciab
-딧	!cib	4000
-딨	!cibb	4000
-딩	!ciq	4000
-딪	!ciu	4000
+딧	!cib	70%
+딨	!cibb	70%
+딩	!ciq	70%
+딪	!ciu	70%
 딫	!cid
 딬	!ciz
 딭	!cie
 딮	!cix
 딯	!ciw
-따	!cck	4000
-딱	!ccky	4000
+따	!cck	70%
+딱	!ccky	70%
 딲	!cckyy
 딳	!cckyb
-딴	!cckl	4000
+딴	!cckl	70%
 딵	!ccklu
 딶	!ccklw
 딷	!cckc
-딸	!ccks	4000
+딸	!ccks	70%
 딹	!ccksy
 딺	!cckso
 딻	!ccksa
@@ -11159,27 +11159,27 @@ use_preset_vocabulary: false
 딽	!cckse
 딾	!ccksx
 딿	!ccksw
-땀	!ccko	4000
-땁	!ccka	4000
+땀	!ccko	70%
+땁	!ccka	70%
 땂	!cckab
-땃	!cckb	4000
-땄	!cckbb	4000
-땅	!cckq	4000
+땃	!cckb	70%
+땄	!cckbb	70%
+땅	!cckq	70%
 땆	!ccku
 땇	!cckd
 땈	!cckz
 땉	!ccke
 땊	!cckx
-땋	!cckw	4000
-때	!cch	4000
-땍	!cchy	4000
+땋	!cckw	70%
+때	!cch	70%
+땍	!cchy	70%
 땎	!cchyy
 땏	!cchyb
-땐	!cchl	4000
+땐	!cchl	70%
 땑	!cchlu
 땒	!cchlw
 땓	!cchc
-땔	!cchs	4000
+땔	!cchs	70%
 땕	!cchsy
 땖	!cchso
 땗	!cchsa
@@ -11187,12 +11187,12 @@ use_preset_vocabulary: false
 땙	!cchse
 땚	!cchsx
 땛	!cchsw
-땜	!ccho	4000
-땝	!ccha	4000
+땜	!ccho	70%
+땝	!ccha	70%
 땞	!cchab
-땟	!cchb	4000
-땠	!cchbb	4000
-땡	!cchq	4000
+땟	!cchb	70%
+땠	!cchbb	70%
+땡	!cchq	70%
 땢	!cchu
 땣	!cchd
 땤	!cchz
@@ -11255,43 +11255,43 @@ use_preset_vocabulary: false
 떝	!vche
 떞	!vchx
 떟	!vchw
-떠	!ccj	4000
-떡	!ccjy	4000
+떠	!ccj	70%
+떡	!ccjy	70%
 떢	!ccjyy
 떣	!ccjyb
-떤	!ccjl	4000
+떤	!ccjl	70%
 떥	!ccjlu
 떦	!ccjlw
 떧	!ccjc
-떨	!ccjs	4000
+떨	!ccjs	70%
 떩	!ccjsy
-떪	!ccjso	4000
-떫	!ccjsa	4000
+떪	!ccjso	70%
+떫	!ccjsa	70%
 떬	!ccjsb
 떭	!ccjse
 떮	!ccjsx
 떯	!ccjsw
-떰	!ccjo	4000
-떱	!ccja	4000
+떰	!ccjo	70%
+떱	!ccja	70%
 떲	!ccjab
-떳	!ccjb	4000
-떴	!ccjbb	4000
-떵	!ccjq	4000
+떳	!ccjb	70%
+떴	!ccjbb	70%
+떵	!ccjq	70%
 떶	!ccju
 떷	!ccjd
 떸	!ccjz
 떹	!ccje
 떺	!ccjx
-떻	!ccjw	4000
-떼	!ccp	4000
-떽	!ccpy	4000
+떻	!ccjw	70%
+떼	!ccp	70%
+떽	!ccpy	70%
 떾	!ccpyy
 떿	!ccpyb
-뗀	!ccpl	4000
+뗀	!ccpl	70%
 뗁	!ccplu
 뗂	!ccplw
 뗃	!ccpc
-뗄	!ccps	4000
+뗄	!ccps	70%
 뗅	!ccpsy
 뗆	!ccpso
 뗇	!ccpsa
@@ -11299,19 +11299,19 @@ use_preset_vocabulary: false
 뗉	!ccpse
 뗊	!ccpsx
 뗋	!ccpsw
-뗌	!ccpo	4000
-뗍	!ccpa	4000
+뗌	!ccpo	70%
+뗍	!ccpa	70%
 뗎	!ccpab
-뗏	!ccpb	4000
-뗐	!ccpbb	4000
-뗑	!ccpq	4000
+뗏	!ccpb	70%
+뗐	!ccpbb	70%
+뗑	!ccpq	70%
 뗒	!ccpu
 뗓	!ccpd
 뗔	!ccpz
 뗕	!ccpe
 뗖	!ccpx
 뗗	!ccpw
-뗘	!ccg	4000
+뗘	!ccg	70%
 뗙	!ccgy
 뗚	!ccgyy
 뗛	!ccgyb
@@ -11331,7 +11331,7 @@ use_preset_vocabulary: false
 뗩	!ccga
 뗪	!ccgab
 뗫	!ccgb
-뗬	!ccgbb	4000
+뗬	!ccgbb	70%
 뗭	!ccgq
 뗮	!ccgu
 뗯	!ccgd
@@ -11368,15 +11368,15 @@ use_preset_vocabulary: false
 똍	!vcpe
 똎	!vcpx
 똏	!vcpw
-또	!ccn	4000
-똑	!ccny	4000
+또	!ccn	70%
+똑	!ccny	70%
 똒	!ccnyy
 똓	!ccnyb
-똔	!ccnl	4000
+똔	!ccnl	70%
 똕	!ccnlu
 똖	!ccnlw
 똗	!ccnc
-똘	!ccns	4000
+똘	!ccns	70%
 똙	!ccnsy
 똚	!ccnso
 똛	!ccnsa
@@ -11389,14 +11389,14 @@ use_preset_vocabulary: false
 똢	!ccnab
 똣	!ccnb
 똤	!ccnbb
-똥	!ccnq	4000
+똥	!ccnq	70%
 똦	!ccnu
 똧	!ccnd
 똨	!ccnz
 똩	!ccne
 똪	!ccnx
 똫	!ccnw
-똬	!ccnk	4000
+똬	!ccnk	70%
 똭	!ccnky
 똮	!ccnkyy
 똯	!ccnkyb
@@ -11404,7 +11404,7 @@ use_preset_vocabulary: false
 똱	!ccnklu
 똲	!ccnklw
 똳	!ccnkc
-똴	!ccnks	4000
+똴	!ccnks	70%
 똵	!ccnksy
 똶	!ccnkso
 똷	!ccnksa
@@ -11424,7 +11424,7 @@ use_preset_vocabulary: false
 뙅	!ccnke
 뙆	!ccnkx
 뙇	!ccnkw
-뙈	!ccnh	4000
+뙈	!ccnh	70%
 뙉	!ccnhy
 뙊	!ccnhyy
 뙋	!ccnhyb
@@ -11452,11 +11452,11 @@ use_preset_vocabulary: false
 뙡	!ccnhe
 뙢	!ccnhx
 뙣	!ccnhw
-뙤	!ccni	4000
+뙤	!ccni	70%
 뙥	!ccniy
 뙦	!ccniyy
 뙧	!ccniyn
-뙨	!ccnil	4000
+뙨	!ccnil	70%
 뙩	!ccnilu
 뙪	!ccnilw
 뙫	!ccnic
@@ -11508,28 +11508,28 @@ use_preset_vocabulary: false
 뚙	!ccme
 뚚	!ccmx
 뚛	!ccmw
-뚜	!cct	4000
-뚝	!ccty	4000
+뚜	!cct	70%
+뚝	!ccty	70%
 뚞	!cctyy
 뚟	!cctyb
-뚠	!cctl	4000
+뚠	!cctl	70%
 뚡	!cctlu
 뚢	!cctlw
 뚣	!cctc
-뚤	!ccts	4000
+뚤	!ccts	70%
 뚥	!cctsy
 뚦	!cctso
 뚧	!cctsa
 뚨	!cctsb
 뚩	!cctse
 뚪	!cctsx
-뚫	!cctsw	4000
-뚬	!ccto	4000
+뚫	!cctsw	70%
+뚬	!ccto	70%
 뚭	!ccta
 뚮	!cctab
 뚯	!cctb
 뚰	!cctbb
-뚱	!cctq	4000
+뚱	!cctq	70%
 뚲	!cctu
 뚳	!cctd
 뚴	!cctz
@@ -11564,7 +11564,7 @@ use_preset_vocabulary: false
 뛑	!cctje
 뛒	!cctjx
 뛓	!cctjw
-뛔	!cctp	4000
+뛔	!cctp	70%
 뛕	!cctpy
 뛖	!cctpyy
 뛗	!cctpyb
@@ -11592,15 +11592,15 @@ use_preset_vocabulary: false
 뛭	!cctpe
 뛮	!cctpx
 뛯	!cctpw
-뛰	!ccti	4000
+뛰	!ccti	70%
 뛱	!cctiy
 뛲	!cctiyy
 뛳	!cctiyb
-뛴	!cctil	4000
+뛴	!cctil	70%
 뛵	!cctilu
 뛶	!cctilw
 뛷	!cctic
-뛸	!cctis	4000
+뛸	!cctis	70%
 뛹	!cctisy
 뛺	!cctiso
 뛻	!cctisa
@@ -11609,12 +11609,12 @@ use_preset_vocabulary: false
 뛾	!cctisx
 뛿	!cctisw
 #13
-뜀	!cctio	4000
-뜁	!cctia	4000
+뜀	!cctio	70%
+뜁	!cctia	70%
 뜂	!cctiab
 뜃	!cctib
 뜄	!cctibb
-뜅	!cctiq	4000
+뜅	!cctiq	70%
 뜆	!cctiu
 뜇	!cctid
 뜈	!cctiz
@@ -11649,15 +11649,15 @@ use_preset_vocabulary: false
 뜥	!ccre
 뜦	!ccrx
 뜧	!ccrw
-뜨	!ccv	4000
-뜩	!ccvy	4000
+뜨	!ccv	70%
+뜩	!ccvy	70%
 뜪	!ccvyy
 뜫	!ccvyb
-뜬	!ccvl	4000
+뜬	!ccvl	70%
 뜭	!ccvlu
 뜮	!ccvlw
-뜯	!ccvc	4000
-뜰	!ccvs	4000
+뜯	!ccvc	70%
+뜰	!ccvs	70%
 뜱	!ccvsy
 뜲	!ccvso
 뜳	!ccvsa
@@ -11665,10 +11665,10 @@ use_preset_vocabulary: false
 뜵	!ccvse
 뜶	!ccvsx
 뜷	!ccvsw
-뜸	!ccvo	4000
-뜹	!ccva	4000
+뜸	!ccvo	70%
+뜹	!ccva	70%
 뜺	!ccvab
-뜻	!ccvb	4000
+뜻	!ccvb	70%
 뜼	!ccvbb
 뜽	!ccvq
 뜾	!ccvu
@@ -11677,15 +11677,15 @@ use_preset_vocabulary: false
 띁	!ccve
 띂	!ccvx
 띃	!ccvw
-띄	!ccvi	4000
+띄	!ccvi	70%
 띅	!ccviy
 띆	!ccviyy
 띇	!ccviyb
-띈	!ccvil	4000
+띈	!ccvil	70%
 띉	!ccvilu
 띊	!ccvilw
 띋	!ccvic
-띌	!ccvis	4000
+띌	!ccvis	70%
 띍	!ccvisy
 띎	!ccviso
 띏	!ccvisa
@@ -11693,8 +11693,8 @@ use_preset_vocabulary: false
 띑	!ccvise
 띒	!ccvisx
 띓	!ccvisw
-띔	!ccvio	4000
-띕	!ccvia	4000
+띔	!ccvio	70%
+띕	!ccvia	70%
 띖	!ccviab
 띗	!ccvib
 띘	!ccvibb
@@ -11705,15 +11705,15 @@ use_preset_vocabulary: false
 띝	!ccvie
 띞	!ccvix
 띟	!ccviw
-띠	!cci	4000
+띠	!cci	70%
 띡	!cciy
 띢	!cciyy
 띣	!cciyb
-띤	!ccil	4000
+띤	!ccil	70%
 띥	!ccilu
 띦	!ccilw
 띧	!ccic
-띨	!ccis	4000
+띨	!ccis	70%
 띩	!ccisy
 띪	!cciso
 띫	!ccisa
@@ -11721,27 +11721,27 @@ use_preset_vocabulary: false
 띭	!ccise
 띮	!ccisx
 띯	!ccisw
-띰	!ccio	4000
-띱	!ccia	4000
+띰	!ccio	70%
+띱	!ccia	70%
 띲	!cciab
-띳	!ccib	4000
+띳	!ccib	70%
 띴	!ccibb
-띵	!cciq	4000
+띵	!cciq	70%
 띶	!cciu
 띷	!ccid
 띸	!cciz
 띹	!ccie
 띺	!ccix
 띻	!cciw
-라	!sk	4000
-락	!sky	4000
+라	!sk	70%
+락	!sky	70%
 띾	!skyy
 띿	!skyb
-란	!skl	4000
+란	!skl	70%
 랁	!sklu
 랂	!sklw
 랃	!skc
-랄	!sks	4000
+랄	!sks	70%
 랅	!sksy
 랆	!skso
 랇	!sksa
@@ -11749,27 +11749,27 @@ use_preset_vocabulary: false
 랉	!skse
 랊	!sksx
 랋	!sksw
-람	!sko	4000
-랍	!ska	4000
+람	!sko	70%
+랍	!ska	70%
 랎	!skab
-랏	!skb	4000
-랐	!skbb	4000
-랑	!skq	4000
-랒	!sku	4000
+랏	!skb	70%
+랐	!skbb	70%
+랑	!skq	70%
+랒	!sku	70%
 랓	!skd
 랔	!skz
 랕	!ske
-랖	!skx	4000
-랗	!skw	4000
-래	!sh	4000
-랙	!shy	4000
+랖	!skx	70%
+랗	!skw	70%
+래	!sh	70%
+랙	!shy	70%
 랚	!shyy
 랛	!shyb
-랜	!shl	4000
+랜	!shl	70%
 랝	!shlu
 랞	!shlw
 랟	!shc
-랠	!shs	4000
+랠	!shs	70%
 랡	!shsy
 랢	!shso
 랣	!shsa
@@ -11777,23 +11777,23 @@ use_preset_vocabulary: false
 랥	!shse
 랦	!shsx
 랧	!shsw
-램	!sho	4000
-랩	!sha	4000
+램	!sho	70%
+랩	!sha	70%
 랪	!shab
-랫	!shb	4000
-랬	!shbb	4000
-랭	!shq	4000
+랫	!shb	70%
+랬	!shbb	70%
+랭	!shq	70%
 랮	!shu
 랯	!shd
 랰	!shz
 랱	!she
 랲	!shx
 랳	!shw
-랴	!sf	4000
-략	!sfy	4000
+랴	!sf	70%
+략	!sfy	70%
 랶	!sfyy
 랷	!sfyb
-랸	!sfl	4000
+랸	!sfl	70%
 랹	!sflu
 랺	!sflw
 랻	!sfc
@@ -11808,9 +11808,9 @@ use_preset_vocabulary: false
 럄	!sfo
 럅	!sfa
 럆	!sfab
-럇	!sfb	4000
+럇	!sfb	70%
 럈	!sfbb
-량	!sfq	4000
+량	!sfq	70%
 럊	!sfu
 럋	!sfd
 럌	!sfz
@@ -11845,15 +11845,15 @@ use_preset_vocabulary: false
 럩	!shhe
 럪	!shhx
 럫	!shhw
-러	!sj	4000
-럭	!sjy	4000
+러	!sj	70%
+럭	!sjy	70%
 럮	!sjyy
 럯	!sjyb
-런	!sjl	4000
+런	!sjl	70%
 럱	!sjlu
 럲	!sjlw
 럳	!sjc
-럴	!sjs	4000
+럴	!sjs	70%
 럵	!sjsy
 럶	!sjso
 럷	!sjsa
@@ -11861,28 +11861,28 @@ use_preset_vocabulary: false
 럹	!sjse
 럺	!sjsx
 럻	!sjsw
-럼	!sjo	4000
-럽	!sja	4000
+럼	!sjo	70%
+럽	!sja	70%
 럾	!sjab
-럿	!sjb	4000
+럿	!sjb	70%
 #14
-렀	!sjbb	4000
-렁	!sjq	4000
+렀	!sjbb	70%
+렁	!sjq	70%
 렂	!sju
 렃	!sjd
 렄	!sjz
 렅	!sje
 렆	!sjx
-렇	!sjw	4000
-레	!sp	4000
-렉	!spy	4000
+렇	!sjw	70%
+레	!sp	70%
+렉	!spy	70%
 렊	!spyy
 렋	!spyb
-렌	!spl	4000
+렌	!spl	70%
 렍	!splu
 렎	!splw
 렏	!spc
-렐	!sps	4000
+렐	!sps	70%
 렑	!spsy
 렒	!spso
 렓	!spsa
@@ -11890,27 +11890,27 @@ use_preset_vocabulary: false
 렕	!spse
 렖	!spsx
 렗	!spsw
-렘	!spo	4000
-렙	!spa	4000
+렘	!spo	70%
+렙	!spa	70%
 렚	!spab
-렛	!spb	4000
+렛	!spb	70%
 렜	!spbb
-렝	!spq	4000
+렝	!spq	70%
 렞	!spu
 렟	!spd
 렠	!spz
 렡	!spe
 렢	!spx
 렣	!spw
-려	!sg	4000
-력	!sgy	4000
+려	!sg	70%
+력	!sgy	70%
 렦	!sgyy
 렧	!sgyb
-련	!sgl	4000
+련	!sgl	70%
 렩	!sglu
 렪	!sglw
 렫	!sgc
-렬	!sgs	4000
+렬	!sgs	70%
 렭	!sgsy
 렮	!sgso
 렯	!sgsa
@@ -11918,23 +11918,23 @@ use_preset_vocabulary: false
 렱	!sgse
 렲	!sgsx
 렳	!sgsw
-렴	!sgo	4000
-렵	!sga	4000
+렴	!sgo	70%
+렵	!sga	70%
 렶	!sgab
-렷	!sgb	4000
-렸	!sgbb	4000
-령	!sgq	4000
+렷	!sgb	70%
+렸	!sgbb	70%
+령	!sgq	70%
 렺	!sgu
 렻	!sgd
 렼	!sgz
 렽	!sge
 렾	!sgx
 렿	!sgw
-례	!spp	4000
+례	!spp	70%
 롁	!sppy
 롂	!sppyy
 롃	!sppyb
-롄	!sppl	4000
+롄	!sppl	70%
 롅	!spplu
 롆	!spplw
 롇	!sppc
@@ -11947,9 +11947,9 @@ use_preset_vocabulary: false
 롎	!sppsx
 롏	!sppsw
 롐	!sppo
-롑	!sppa	4000
+롑	!sppa	70%
 롒	!sppab
-롓	!sppb	4000
+롓	!sppb	70%
 롔	!sppbb
 롕	!sppq
 롖	!sppu
@@ -11958,15 +11958,15 @@ use_preset_vocabulary: false
 롙	!sppe
 롚	!sppx
 롛	!sppw
-로	!sn	4000
-록	!sny	4000
+로	!sn	70%
+록	!sny	70%
 롞	!snyy
 롟	!snyb
-론	!snl	4000
+론	!snl	70%
 롡	!snlu
 롢	!snlw
 롣	!snc
-롤	!sns	4000
+롤	!sns	70%
 롥	!snsy
 롦	!snso
 롧	!snsa
@@ -11974,23 +11974,23 @@ use_preset_vocabulary: false
 롩	!snse
 롪	!snsx
 롫	!snsw
-롬	!sno	4000
-롭	!sna	4000
+롬	!sno	70%
+롭	!sna	70%
 롮	!snab
-롯	!snb	4000
+롯	!snb	70%
 롰	!snbb
-롱	!snq	4000
+롱	!snq	70%
 롲	!snu
 롳	!snd
 롴	!snz
 롵	!sne
 롶	!snx
 롷	!snw
-롸	!snk	4000
+롸	!snk	70%
 롹	!snky
 롺	!snkyy
 롻	!snkyb
-롼	!snkl	4000
+롼	!snkl	70%
 롽	!snklu
 롾	!snklw
 롿	!snkc
@@ -12007,7 +12007,7 @@ use_preset_vocabulary: false
 뢊	!snkab
 뢋	!snkb
 뢌	!snkbb
-뢍	!snkq	4000
+뢍	!snkq	70%
 뢎	!snku
 뢏	!snkd
 뢐	!snkz
@@ -12034,7 +12034,7 @@ use_preset_vocabulary: false
 뢥	!snha
 뢦	!snhab
 뢧	!snhb
-뢨	!snhbb	4000
+뢨	!snhbb	70%
 뢩	!snhq
 뢪	!snhu
 뢫	!snhd
@@ -12042,15 +12042,15 @@ use_preset_vocabulary: false
 뢭	!snhe
 뢮	!snhx
 뢯	!snhw
-뢰	!sni	4000
+뢰	!sni	70%
 뢱	!sniy
 뢲	!sniyy
 뢳	!sniyb
-뢴	!snil	4000
+뢴	!snil	70%
 뢵	!snilu
 뢶	!snilw
 뢷	!snic
-뢸	!snis	4000
+뢸	!snis	70%
 뢹	!snisy
 뢺	!sniso
 뢻	!snisa
@@ -12058,27 +12058,27 @@ use_preset_vocabulary: false
 뢽	!snise
 뢾	!snisx
 뢿	!snisw
-룀	!snio	4000
-룁	!snia	4000
+룀	!snio	70%
+룁	!snia	70%
 룂	!sniab
-룃	!snib	4000
+룃	!snib	70%
 룄	!snibb
-룅	!sniq	4000
+룅	!sniq	70%
 룆	!sniu
 룇	!snid
 룈	!sniz
 룉	!snie
 룊	!snix
 룋	!sniw
-료	!sm	4000
+료	!sm	70%
 룍	!smy
 룎	!smyy
 룏	!smyb
-룐	!sml	4000
+룐	!sml	70%
 룑	!smlu
 룒	!smlw
 룓	!smc
-룔	!sms	4000
+룔	!sms	70%
 룕	!smsy
 룖	!smso
 룗	!smsa
@@ -12087,26 +12087,26 @@ use_preset_vocabulary: false
 룚	!smsx
 룛	!smsw
 룜	!smo
-룝	!sma	4000
+룝	!sma	70%
 룞	!smab
-룟	!smb	4000
+룟	!smb	70%
 룠	!smbb
-룡	!smq	4000
+룡	!smq	70%
 룢	!smu
 룣	!smd
 룤	!smz
 룥	!sme
 룦	!smx
 룧	!smw
-루	!st	4000
-룩	!sty	4000
+루	!st	70%
+룩	!sty	70%
 룪	!styy
 룫	!styb
-룬	!stl	4000
+룬	!stl	70%
 룭	!stlu
 룮	!stlw
 룯	!stc
-룰	!sts	4000
+룰	!sts	70%
 룱	!stsy
 룲	!stso
 룳	!stsa
@@ -12114,12 +12114,12 @@ use_preset_vocabulary: false
 룵	!stse
 룶	!stsx
 룷	!stsw
-룸	!sto	4000
-룹	!sta	4000
+룸	!sto	70%
+룹	!sta	70%
 룺	!stab
-룻	!stb	4000
+룻	!stb	70%
 룼	!stbb
-룽	!stq	4000
+룽	!stq	70%
 룾	!stu
 룿	!std
 #15
@@ -12127,7 +12127,7 @@ use_preset_vocabulary: false
 뤁	!ste
 뤂	!stx
 뤃	!stw
-뤄	!stj	4000
+뤄	!stj	70%
 뤅	!stjy
 뤆	!stjyy
 뤇	!stjyb
@@ -12147,7 +12147,7 @@ use_preset_vocabulary: false
 뤕	!stja
 뤖	!stjab
 뤗	!stjb
-뤘	!stjbb	4000
+뤘	!stjbb	70%
 뤙	!stjq
 뤚	!stju
 뤛	!stjd
@@ -12155,7 +12155,7 @@ use_preset_vocabulary: false
 뤝	!stje
 뤞	!stjx
 뤟	!stjw
-뤠	!stp	4000
+뤠	!stp	70%
 뤡	!stpy
 뤢	!stpyy
 뤣	!stpyb
@@ -12183,15 +12183,15 @@ use_preset_vocabulary: false
 뤹	!stpe
 뤺	!stpx
 뤻	!stpw
-뤼	!sti	4000
-뤽	!stiy	4000
+뤼	!sti	70%
+뤽	!stiy	70%
 뤾	!stiyy
 뤿	!stiyb
-륀	!stil	4000
+륀	!stil	70%
 륁	!stilu
 륂	!stilw
 륃	!stic
-륄	!stis	4000
+륄	!stis	70%
 륅	!stisy
 륆	!stiso
 륇	!stisa
@@ -12199,27 +12199,27 @@ use_preset_vocabulary: false
 륉	!stise
 륊	!stisx
 륋	!stisw
-륌	!stio	4000
+륌	!stio	70%
 륍	!stia
 륎	!stiab
-륏	!stib	4000
+륏	!stib	70%
 륐	!stibb
-륑	!stiq	4000
+륑	!stiq	70%
 륒	!stiu
 륓	!stid
 륔	!stiz
 륕	!stie
 륖	!stix
 륗	!stiw
-류	!sr	4000
-륙	!sry	4000
+류	!sr	70%
+륙	!sry	70%
 륚	!sryy
 륛	!sryb
-륜	!srl	4000
+륜	!srl	70%
 륝	!srlu
 륞	!srlw
 륟	!src
-률	!srs	4000
+률	!srs	70%
 륡	!srsy
 륢	!srso
 륣	!srsa
@@ -12227,27 +12227,27 @@ use_preset_vocabulary: false
 륥	!srse
 륦	!srsx
 륧	!srsw
-륨	!sro	4000
-륩	!sra	4000
+륨	!sro	70%
+륩	!sra	70%
 륪	!srab
-륫	!srb	4000
+륫	!srb	70%
 륬	!srbb
-륭	!srq	4000
+륭	!srq	70%
 륮	!sru
 륯	!srd
 륰	!srz
 륱	!sre
 륲	!srx
 륳	!srw
-르	!sv	4000
-륵	!svy	4000
+르	!sv	70%
+륵	!svy	70%
 륶	!svyy
 륷	!svyb
-른	!svl	4000
+른	!svl	70%
 륹	!svlu
 륺	!svlw
 륻	!svc
-를	!svs	4000
+를	!svs	70%
 륽	!svsy
 륾	!svso
 륿	!svsa
@@ -12255,17 +12255,17 @@ use_preset_vocabulary: false
 릁	!svse
 릂	!svsx
 릃	!svsw
-름	!svo	4000
-릅	!sva	4000
+름	!svo	70%
+릅	!sva	70%
 릆	!svab
-릇	!svb	4000
+릇	!svb	70%
 릈	!svbb
-릉	!svq	4000
-릊	!svu	4000
+릉	!svq	70%
+릊	!svu	70%
 릋	!svd
 릌	!svz
-릍	!sve	4000
-릎	!svx	4000
+릍	!sve	70%
+릎	!svx	70%
 릏	!svw
 릐	!svi
 릑	!sviy
@@ -12295,15 +12295,15 @@ use_preset_vocabulary: false
 릩	!svie
 릪	!svix
 릫	!sviw
-리	!si	4000
-릭	!siy	4000
+리	!si	70%
+릭	!siy	70%
 릮	!siyy
 릯	!siyb
-린	!sil	4000
+린	!sil	70%
 릱	!silu
 릲	!silw
 릳	!sic
-릴	!sis	4000
+릴	!sis	70%
 릵	!sisy
 릶	!siso
 릷	!sisa
@@ -12311,55 +12311,55 @@ use_preset_vocabulary: false
 릹	!sise
 릺	!sisx
 릻	!sisw
-림	!sio	4000
-립	!sia	4000
+림	!sio	70%
+립	!sia	70%
 릾	!siab
-릿	!sib	4000
+릿	!sib	70%
 맀	!sibb
-링	!siq	4000
+링	!siq	70%
 맂	!siu
 맃	!sid
 맄	!siz
 맅	!sie
 맆	!six
 맇	!siw
-마	!ok	4000
-막	!oky	4000
+마	!ok	70%
+막	!oky	70%
 맊	!okyy
 맋	!okyb
-만	!okl	4000
+만	!okl	70%
 맍	!oklu
-많	!oklw	4000
-맏	!okc	4000
-말	!oks	4000
-맑	!oksy	4000
-맒	!okso	4000
+많	!oklw	70%
+맏	!okc	70%
+말	!oks	70%
+맑	!oksy	70%
+맒	!okso	70%
 맓	!oksa
 맔	!oksb
 맕	!okse
 맖	!oksx
 맗	!oksw
-맘	!oko	4000
-맙	!oka	4000
+맘	!oko	70%
+맙	!oka	70%
 맚	!okab
-맛	!okb	4000
+맛	!okb	70%
 맜	!okbb
-망	!okq	4000
-맞	!oku	4000
+망	!okq	70%
+맞	!oku	70%
 맟	!okd
 맠	!okz
-맡	!oke	4000
+맡	!oke	70%
 맢	!okx
-맣	!okw	4000
-매	!oh	4000
-맥	!ohy	4000
+맣	!okw	70%
+매	!oh	70%
+맥	!ohy	70%
 맦	!ohyy
 맧	!ohyb
-맨	!ohl	4000
+맨	!ohl	70%
 맩	!ohlu
 맪	!ohlw
 맫	!ohc
-맬	!ohs	4000
+맬	!ohs	70%
 맭	!ohsy
 맮	!ohso
 맯	!ohka
@@ -12367,28 +12367,28 @@ use_preset_vocabulary: false
 맱	!ohse
 맲	!ohsx
 맳	!ohsw
-맴	!oho	4000
-맵	!oha	4000
+맴	!oho	70%
+맵	!oha	70%
 맶	!ohab
-맷	!ohb	4000
-맸	!ohbb	4000
-맹	!ohq	4000
-맺	!ohu	4000
+맷	!ohb	70%
+맸	!ohbb	70%
+맹	!ohq	70%
+맺	!ohu	70%
 맻	!ohd
 맼	!ohz
 맽	!ohe
 맾	!ohx
 맿	!ohw
 #16
-먀	!of	4000
-먁	!ofy	4000
+먀	!of	70%
+먁	!ofy	70%
 먂	!ofyy
 먃	!ofyb
 먄	!ofl
 먅	!oflu
 먆	!oflw
 먇	!ofc
-먈	!ofs	4000
+먈	!ofs	70%
 먉	!ofsy
 먊	!ofso
 먋	!ofsa
@@ -12401,7 +12401,7 @@ use_preset_vocabulary: false
 먒	!ofab
 먓	!ofb
 먔	!ofbb
-먕	!ofq	4000
+먕	!ofq	70%
 먖	!ofu
 먗	!ofd
 먘	!ofz
@@ -12436,43 +12436,43 @@ use_preset_vocabulary: false
 먵	!ohhe
 먶	!ohhx
 먷	!ohhw
-머	!oj	4000
-먹	!ojy	4000
+머	!oj	70%
+먹	!ojy	70%
 먺	!ojyy
 먻	!ojyb
-먼	!ojl	4000
+먼	!ojl	70%
 먽	!ojlu
 먾	!ojlw
 먿	!ojc
-멀	!ojs	4000
+멀	!ojs	70%
 멁	!ojsy
-멂	!ojso	4000
+멂	!ojso	70%
 멃	!ojsa
 멄	!ojsb
 멅	!ojse
 멆	!ojsx
 멇	!ojsw
-멈	!ojo	4000
-멉	!oja	4000
+멈	!ojo	70%
+멉	!oja	70%
 멊	!ojab
-멋	!ojb	4000
+멋	!ojb	70%
 멌	!ojbb
-멍	!ojq	4000
-멎	!oju	4000
+멍	!ojq	70%
+멎	!oju	70%
 멏	!ojd
 멐	!ojz
 멑	!oje
 멒	!ojx
-멓	!ojw	4000
-메	!op	4000
-멕	!opy	4000
+멓	!ojw	70%
+메	!op	70%
+멕	!opy	70%
 멖	!opyy
 멗	!opyb
-멘	!opl	4000
+멘	!opl	70%
 멙	!oplu
 멚	!oplw
 멛	!opc
-멜	!ops	4000
+멜	!ops	70%
 멝	!opsy
 멞	!opso
 멟	!opsa
@@ -12480,27 +12480,27 @@ use_preset_vocabulary: false
 멡	!opse
 멢	!opsx
 멣	!opsw
-멤	!opo	4000
-멥	!opa	4000
+멤	!opo	70%
+멥	!opa	70%
 멦	!opab
-멧	!opb	4000
-멨	!opbb	4000
-멩	!opq	4000
+멧	!opb	70%
+멨	!opbb	70%
+멩	!opq	70%
 멪	!opu
 멫	!opd
 멬	!opz
 멭	!ope
 멮	!opx
 멯	!opw
-며	!og	4000
-멱	!ogy	4000
+며	!og	70%
+멱	!ogy	70%
 멲	!ogyy
 멳	!ogyb
-면	!ogl	4000
+면	!ogl	70%
 멵	!oglu
 멶	!oglw
 멷	!ogc
-멸	!ogs	4000
+멸	!ogs	70%
 멹	!ogsy
 멺	!ogso
 멻	!ogsa
@@ -12511,16 +12511,16 @@ use_preset_vocabulary: false
 몀	!ogo
 몁	!oga
 몂	!ogab
-몃	!ogb	4000
-몄	!ogbb	4000
-명	!ogq	4000
+몃	!ogb	70%
+몄	!ogbb	70%
+명	!ogq	70%
 몆	!ogu
-몇	!ogd	4000
+몇	!ogd	70%
 몈	!ogz
 몉	!oge
 몊	!ogx
 몋	!ogw
-몌	!opp	4000
+몌	!opp	70%
 몍	!oppy
 몎	!oppyy
 몏	!oppyb
@@ -12548,39 +12548,39 @@ use_preset_vocabulary: false
 몥	!oppe
 몦	!oppx
 몧	!oppw
-모	!on	4000
-목	!ony	4000
+모	!on	70%
+목	!ony	70%
 몪	!onyy
-몫	!onyb	4000
-몬	!onl	4000
+몫	!onyb	70%
+몬	!onl	70%
 몭	!onlu
 몮	!onlw
 몯	!onc
-몰	!ons	4000
+몰	!ons	70%
 몱	!onsy
-몲	!onso	4000
+몲	!onso	70%
 몳	!onsa
 몴	!onsb
 몵	!onse
 몶	!onsx
 몷	!onsw
-몸	!ono	4000
-몹	!ona	4000
+몸	!ono	70%
+몹	!ona	70%
 몺	!onab
-못	!onb	4000
+못	!onb	70%
 몼	!onbb
-몽	!onq	4000
+몽	!onq	70%
 몾	!onu
 몿	!ond
 뫀	!onz
 뫁	!one
 뫂	!onx
 뫃	!onw
-뫄	!onk	4000
+뫄	!onk	70%
 뫅	!onky
 뫆	!onkyy
 뫇	!onkyb
-뫈	!onkl	4000
+뫈	!onkl	70%
 뫉	!onklu
 뫊	!onklw
 뫋	!onkc
@@ -12596,8 +12596,8 @@ use_preset_vocabulary: false
 뫕	!onka
 뫖	!onkab
 뫗	!onkb
-뫘	!onkbb	4000
-뫙	!onkq	4000
+뫘	!onkbb	70%
+뫙	!onkq	70%
 뫚	!onku
 뫛	!onkd
 뫜	!onkz
@@ -12632,16 +12632,16 @@ use_preset_vocabulary: false
 뫹	!onhe
 뫺	!onhx
 뫻	!onhw
-뫼	!oni	4000
+뫼	!oni	70%
 뫽	!oniy
 뫾	!oniyy
 뫿	!oniyb
 #17
-묀	!onil	4000
+묀	!onil	70%
 묁	!onilu
 묂	!onilw
 묃	!onic
-묄	!onis	4000
+묄	!onis	70%
 묅	!onisy
 묆	!oniso
 묇	!onisa
@@ -12650,26 +12650,26 @@ use_preset_vocabulary: false
 묊	!onisx
 묋	!onisw
 묌	!onio
-묍	!onia	4000
+묍	!onia	70%
 묎	!oniab
-묏	!onib	4000
+묏	!onib	70%
 묐	!onibb
-묑	!oniq	4000
+묑	!oniq	70%
 묒	!oniu
 묓	!onid
 묔	!oniz
 묕	!onie
 묖	!onix
 묗	!oniw
-묘	!om	4000
+묘	!om	70%
 묙	!omy
 묚	!omyy
 묛	!omyb
-묜	!oml	4000
+묜	!oml	70%
 묝	!omlu
 묞	!omlw
 묟	!omc
-묠	!oms	4000
+묠	!oms	70%
 묡	!omsy
 묢	!omso
 묣	!omsa
@@ -12678,9 +12678,9 @@ use_preset_vocabulary: false
 묦	!omsx
 묧	!omsw
 묨	!omo
-묩	!oma	4000
+묩	!oma	70%
 묪	!omab
-묫	!omb	4000
+묫	!omb	70%
 묬	!ombb
 묭	!omq
 묮	!omu
@@ -12689,43 +12689,43 @@ use_preset_vocabulary: false
 묱	!ome
 묲	!omx
 묳	!omw
-무	!ot	4000
-묵	!oty	4000
-묶	!otyy	4000
+무	!ot	70%
+묵	!oty	70%
+묶	!otyy	70%
 묷	!otyb
-문	!otl	4000
+문	!otl	70%
 묹	!otlu
 묺	!otlw
-묻	!otc	4000
-물	!ots	4000
-묽	!otsy	4000
-묾	!otso	4000
+묻	!otc	70%
+물	!ots	70%
+묽	!otsy	70%
+묾	!otso	70%
 묿	!otsa
 뭀	!otsb
 뭁	!otse
 뭂	!otsx
 뭃	!otsw
-뭄	!oto	4000
-뭅	!ota	4000
+뭄	!oto	70%
+뭅	!ota	70%
 뭆	!otab
-뭇	!otb	4000
+뭇	!otb	70%
 뭈	!otbb
-뭉	!otq	4000
+뭉	!otq	70%
 뭊	!otu
 뭋	!otd
 뭌	!otz
-뭍	!ote	4000
+뭍	!ote	70%
 뭎	!otx
-뭏	!otw	4000
-뭐	!otj	4000
+뭏	!otw	70%
+뭐	!otj	70%
 뭑	!otjy
 뭒	!otjyy
 뭓	!otjyb
-뭔	!otjl	4000
+뭔	!otjl	70%
 뭕	!otjlu
 뭖	!otjlw
 뭗	!otjc
-뭘	!otjs	4000
+뭘	!otjs	70%
 뭙	!otjsy
 뭚	!otjso
 뭛	!otjsa
@@ -12734,9 +12734,9 @@ use_preset_vocabulary: false
 뭞	!otjsx
 뭟	!otjsw
 뭠	!otjo
-뭡	!otja	4000
+뭡	!otja	70%
 뭢	!otjab
-뭣	!otjb	4000
+뭣	!otjb	70%
 뭤	!otjbb
 뭥	!otjq
 뭦	!otju
@@ -12745,7 +12745,7 @@ use_preset_vocabulary: false
 뭩	!otje
 뭪	!otjx
 뭫	!otjw
-뭬	!otp	4000
+뭬	!otp	70%
 뭭	!otpy
 뭮	!otpyy
 뭯	!otpyb
@@ -12773,15 +12773,15 @@ use_preset_vocabulary: false
 뮅	!otpe
 뮆	!otpx
 뮇	!otpw
-뮈	!oti	4000
+뮈	!oti	70%
 뮉	!otiy
 뮊	!otiyy
 뮋	!otiyb
-뮌	!otil	4000
+뮌	!otil	70%
 뮍	!otilu
 뮎	!otilw
 뮏	!otic
-뮐	!otis	4000
+뮐	!otis	70%
 뮑	!otisy
 뮒	!otiso
 뮓	!otisa
@@ -12801,15 +12801,15 @@ use_preset_vocabulary: false
 뮡	!otie
 뮢	!otix
 뮣	!otiw
-뮤	!or	4000
+뮤	!or	70%
 뮥	!ory
 뮦	!oryy
 뮧	!oryb
-뮨	!orl	4000
+뮨	!orl	70%
 뮩	!orlu
 뮪	!orlw
 뮫	!orc
-뮬	!ors	4000
+뮬	!ors	70%
 뮭	!orsy
 뮮	!orso
 뮯	!orsa
@@ -12817,10 +12817,10 @@ use_preset_vocabulary: false
 뮱	!orse
 뮲	!orsx
 뮳	!orsw
-뮴	!oro	4000
+뮴	!oro	70%
 뮵	!ora
 뮶	!orab
-뮷	!orb	4000
+뮷	!orb	70%
 뮸	!orbb
 뮹	!orq
 뮺	!oru
@@ -12829,15 +12829,15 @@ use_preset_vocabulary: false
 뮽	!ore
 뮾	!orx
 뮿	!orw
-므	!ov	4000
+므	!ov	70%
 믁	!ovy
 믂	!ovyy
 믃	!ovyb
-믄	!ovl	4000
+믄	!ovl	70%
 믅	!ovlu
 믆	!ovlw
 믇	!ovc
-믈	!ovs	4000
+믈	!ovs	70%
 믉	!ovsy
 믊	!ovso
 믋	!ovsa
@@ -12845,10 +12845,10 @@ use_preset_vocabulary: false
 믍	!ovse
 믎	!ovsx
 믏	!ovsw
-믐	!ovo	4000
+믐	!ovo	70%
 믑	!ova
 믒	!ovab
-믓	!ovb	4000
+믓	!ovb	70%
 믔	!ovbb
 믕	!ovq
 믖	!ovu
@@ -12885,72 +12885,72 @@ use_preset_vocabulary: false
 믵	!ovie
 믶	!ovix
 믷	!oviw
-미	!oi	4000
-믹	!oiy	4000
+미	!oi	70%
+믹	!oiy	70%
 믺	!oiyy
 믻	!oiyb
-민	!oil	4000
+민	!oil	70%
 믽	!oilu
 믾	!oilw
-믿	!oic	4000
+믿	!oic	70%
 #18
-밀	!ois	4000
+밀	!ois	70%
 밁	!oisy
-밂	!oiso	4000
+밂	!oiso	70%
 밃	!oisa
 밄	!oisb
 밅	!oise
 밆	!oisx
 밇	!oisw
-밈	!oio	4000
-밉	!oia	4000
+밈	!oio	70%
+밉	!oia	70%
 밊	!oiab
-밋	!oib	4000
-밌	!oibb	4000
-밍	!oiq	4000
+밋	!oib	70%
+밌	!oibb	70%
+밍	!oiq	70%
 밎	!oiu
-및	!oid	4000
+및	!oid	70%
 밐	!oiz
-밑	!oie	4000
+밑	!oie	70%
 밒	!oix
 밓	!oiw
-바	!ak	4000
-박	!aky	4000
-밖	!akyy	4000
-밗	!akyz	4000
-반	!akl	4000
+바	!ak	70%
+박	!aky	70%
+밖	!akyy	70%
+밗	!akyz	70%
+반	!akl	70%
 밙	!aklu
 밚	!aklw
-받	!akc	4000
-발	!aks	4000
-밝	!aksy	4000
-밞	!akso	4000
-밟	!aksa	4000
+받	!akc	70%
+발	!aks	70%
+밝	!aksy	70%
+밞	!akso	70%
+밟	!aksa	70%
 밠	!aksb
 밡	!akse
 밢	!aksx
 밣	!aksw
-밤	!ako	4000
-밥	!aka	4000
+밤	!ako	70%
+밥	!aka	70%
 밦	!akab
-밧	!akb	4000
+밧	!akb	70%
 밨	!akbb
-방	!akq	4000
+방	!akq	70%
 밪	!aku
 밫	!akd
 밬	!akz
-밭	!ake	4000
+밭	!ake	70%
 밮	!akx
 밯	!akw
-배	!ah	4000
-백	!ahy	4000
+배	!ah	70%
+백	!ahy	70%
 밲	!ahyy
 밳	!ahyb
-밴	!ahl	4000
+밴	!ahl	70%
 밵	!ahlu
 밶	!ahlw
 밷	!ahc
-밸	!ahs	4000
+밸	!ahs	70%
 밹	!ahsy
 밺	!ahso
 밻	!ahsa
@@ -12958,23 +12958,23 @@ use_preset_vocabulary: false
 밽	!ahse
 밾	!ahsx
 밿	!ahsw
-뱀	!aho	4000
-뱁	!aha	4000
+뱀	!aho	70%
+뱁	!aha	70%
 뱂	!ahab
-뱃	!ahb	4000
-뱄	!ahbb	4000
-뱅	!ahq	4000
+뱃	!ahb	70%
+뱄	!ahbb	70%
+뱅	!ahq	70%
 뱆	!ahu
 뱇	!ahd
 뱈	!ahz
-뱉	!ahe	4000
+뱉	!ahe	70%
 뱊	!ahx
 뱋	!ahw
-뱌	!af	4000
-뱍	!afy	4000
+뱌	!af	70%
+뱍	!afy	70%
 뱎	!afyy
 뱏	!afyb
-뱐	!afl	4000
+뱐	!afl	70%
 뱑	!aflu
 뱒	!aflw
 뱓	!afc
@@ -12987,7 +12987,7 @@ use_preset_vocabulary: false
 뱚	!afsx
 뱛	!afsw
 뱜	!afo
-뱝	!afa	4000
+뱝	!afa	70%
 뱞	!afab
 뱟	!afb
 뱠	!afbb
@@ -13026,43 +13026,43 @@ use_preset_vocabulary: false
 벁	!ahhe
 벂	!ahhx
 벃	!ahhw
-버	!aj	4000
-벅	!ajy	4000
+버	!aj	70%
+벅	!ajy	70%
 벆	!ajyy
 벇	!ajyb
-번	!ajl	4000
+번	!ajl	70%
 벉	!ajlu
 벊	!ajlw
-벋	!ajc	4000
-벌	!ajs	4000
+벋	!ajc	70%
+벌	!ajs	70%
 벍	!ajsy
-벎	!ajso	4000
+벎	!ajso	70%
 벏	!ajsa
 벐	!ajsb
 벑	!ajse
 벒	!ajsx
 벓	!ajsw
-범	!ajo	4000
-법	!aja	4000
+범	!ajo	70%
+법	!aja	70%
 벖	!ajab
-벗	!ajb	4000
+벗	!ajb	70%
 벘	!ajbb
-벙	!ajq	4000
-벚	!aju	4000
+벙	!ajq	70%
+벚	!aju	70%
 벛	!ajd
 벜	!ajz
 벝	!aje
 벞	!ajx
 벟	!ajw
-베	!ap	4000
-벡	!apy	4000
+베	!ap	70%
+벡	!apy	70%
 벢	!apyy
 벣	!apyb
-벤	!apl	4000
+벤	!apl	70%
 벥	!aplu
 벦	!aplw
-벧	!apc	4000
-벨	!aps	4000
+벧	!apc	70%
+벨	!aps	70%
 벩	!apsy
 벪	!apso
 벫	!apsa
@@ -13070,27 +13070,27 @@ use_preset_vocabulary: false
 벭	!apse
 벮	!apsx
 벯	!apsw
-벰	!apo	4000
-벱	!apa	4000
+벰	!apo	70%
+벱	!apa	70%
 벲	!apab
-벳	!apb	4000
-벴	!apbb	4000
-벵	!apq	4000
+벳	!apb	70%
+벴	!apbb	70%
+벵	!apq	70%
 벶	!apu
 벷	!apd
 벸	!apz
 벹	!ape
 벺	!apx
 벻	!apw
-벼	!ag	4000
-벽	!agy	4000
+벼	!ag	70%
+벽	!agy	70%
 벾	!agyy
 벿	!agyb
-변	!agl	4000
+변	!agl	70%
 볁	!aglu
 볂	!aglw
 볃	!agc
-별	!ags	4000
+별	!ags	70%
 볅	!agsy
 볆	!agso
 볇	!agsa
@@ -13099,22 +13099,22 @@ use_preset_vocabulary: false
 볊	!agsx
 볋	!agsw
 볌	!ago
-볍	!aga	4000
+볍	!aga	70%
 볎	!agab
-볏	!agb	4000
-볐	!agbb	4000
-병	!agq	4000
+볏	!agb	70%
+볐	!agbb	70%
+병	!agq	70%
 볒	!agu
 볓	!agd
 볔	!agz
-볕	!age	4000
+볕	!age	70%
 볖	!agx
 볗	!agw
-볘	!app	4000
+볘	!app	70%
 볙	!appy
 볚	!appyy
 볛	!appyb
-볜	!appl	4000
+볜	!appl	70%
 볝	!applu
 볞	!applw
 볟	!appc
@@ -13138,15 +13138,15 @@ use_preset_vocabulary: false
 볱	!appe
 볲	!appx
 볳	!appw
-보	!an	4000
-복	!any	4000
-볶	!anyy	4000
+보	!an	70%
+복	!any	70%
+볶	!anyy	70%
 볷	!anyb
-본	!anl	4000
+본	!anl	70%
 볹	!anlu
 볺	!anlw
 볻	!anc
-볼	!ans	4000
+볼	!ans	70%
 볽	!ansy
 볾	!anso
 볿	!ansa
@@ -13155,23 +13155,23 @@ use_preset_vocabulary: false
 봁	!anse
 봂	!ansx
 봃	!answ
-봄	!ano	4000
-봅	!ana	4000
+봄	!ano	70%
+봅	!ana	70%
 봆	!anab
-봇	!anb	4000
+봇	!anb	70%
 봈	!anbb
-봉	!anq	4000
+봉	!anq	70%
 봊	!anu
 봋	!and
 봌	!anz
 봍	!ane
 봎	!anx
 봏	!anw
-봐	!ank	4000
+봐	!ank	70%
 봑	!anky
 봒	!ankyy
 봓	!ankyb
-봔	!ankl	4000
+봔	!ankl	70%
 봕	!anklu
 봖	!anklw
 봗	!ankc
@@ -13187,7 +13187,7 @@ use_preset_vocabulary: false
 봡	!anka
 봢	!ankab
 봣	!ankb
-봤	!ankbb	4000
+봤	!ankbb	70%
 봥	!ankq
 봦	!anku
 봧	!ankd
@@ -13195,7 +13195,7 @@ use_preset_vocabulary: false
 봩	!anke
 봪	!ankx
 봫	!ankw
-봬	!anh	4000
+봬	!anh	70%
 봭	!anhy
 봮	!anhyy
 봯	!anhyb
@@ -13215,7 +13215,7 @@ use_preset_vocabulary: false
 봽	!anha
 봾	!anhab
 봿	!anhb
-뵀	!anhbb	4000
+뵀	!anhbb	70%
 뵁	!anhq
 뵂	!anhu
 뵃	!anhd
@@ -13223,15 +13223,15 @@ use_preset_vocabulary: false
 뵅	!anhe
 뵆	!anhx
 뵇	!anhw
-뵈	!ani	4000
-뵉	!aniy	4000
+뵈	!ani	70%
+뵉	!aniy	70%
 뵊	!aniyy
 뵋	!aniyb
-뵌	!anil	4000
+뵌	!anil	70%
 뵍	!anilu
 뵎	!anilw
 뵏	!anic
-뵐	!anis	4000
+뵐	!anis	70%
 뵑	!anisy
 뵒	!aniso
 뵓	!anisa
@@ -13239,8 +13239,8 @@ use_preset_vocabulary: false
 뵕	!anise
 뵖	!anisx
 뵗	!anisw
-뵘	!anio	4000
-뵙	!ania	4000
+뵘	!anio	70%
+뵙	!ania	70%
 뵚	!aniab
 뵛	!anib
 뵜	!anibb
@@ -13251,11 +13251,11 @@ use_preset_vocabulary: false
 뵡	!anie
 뵢	!anix
 뵣	!aniw
-뵤	!am	4000
+뵤	!am	70%
 뵥	!amy
 뵦	!amyy
 뵧	!amyb
-뵨	!aml	4000
+뵨	!aml	70%
 뵩	!amlu
 뵪	!amlw
 뵫	!amc
@@ -13279,35 +13279,35 @@ use_preset_vocabulary: false
 뵽	!ame
 뵾	!amx
 뵿	!amw
-부	!at	4000
-북	!aty	4000
+부	!at	70%
+북	!aty	70%
 붂	!atyy
 붃	!atyb
-분	!atl	4000
+분	!atl	70%
 붅	!atlu
 붆	!atlw
-붇	!atc	4000
-불	!ats	4000
-붉	!atsy	4000
-붊	!atso	4000
+붇	!atc	70%
+불	!ats	70%
+붉	!atsy	70%
+붊	!atso	70%
 붋	!atsa
 붌	!atsb
 붍	!atse
 붎	!atsx
 붏	!atsw
-붐	!ato	4000
-붑	!ata	4000
+붐	!ato	70%
+붑	!ata	70%
 붒	!atab
-붓	!atb	4000
+붓	!atb	70%
 붔	!atbb
-붕	!atq	4000
+붕	!atq	70%
 붖	!atu
 붗	!atd
 붘	!atz
-붙	!ate	4000
-붚	!atx	4000
+붙	!ate	70%
+붚	!atx	70%
 붛	!atw
-붜	!atj	4000
+붜	!atj	70%
 붝	!atjy
 붞	!atjyy
 붟	!atjyb
@@ -13315,7 +13315,7 @@ use_preset_vocabulary: false
 붡	!atjld
 붢	!atjlw
 붣	!atjc
-붤	!atjs	4000
+붤	!atjs	70%
 붥	!atjsy
 붦	!atjso
 붧	!atjsa
@@ -13327,7 +13327,7 @@ use_preset_vocabulary: false
 붭	!atja
 붮	!atjab
 붯	!atjb
-붰	!atjbb	4000
+붰	!atjbb	70%
 붱	!atjq
 붲	!atju
 붳	!atjd
@@ -13335,7 +13335,7 @@ use_preset_vocabulary: false
 붵	!atje
 붶	!atjx
 붷	!atjw
-붸	!atp	4000
+붸	!atp	70%
 붹	!atpy
 붺	!atpyy
 붻	!atpyb
@@ -13363,15 +13363,15 @@ use_preset_vocabulary: false
 뷑	!atpe
 뷒	!atpx
 뷓	!atpw
-뷔	!ati	4000
-뷕	!atiy	4000
+뷔	!ati	70%
+뷕	!atiy	70%
 뷖	!atiyy
 뷗	!atiyb
-뷘	!atil	4000
+뷘	!atil	70%
 뷙	!atilu
 뷚	!atilw
 뷛	!atic
-뷜	!atis	4000
+뷜	!atis	70%
 뷝	!atisy
 뷞	!atiso
 뷟	!atisa
@@ -13384,22 +13384,22 @@ use_preset_vocabulary: false
 뷦	!atiab
 뷧	!atib
 뷨	!atibb
-뷩	!atiq	4000
+뷩	!atiq	70%
 뷪	!atiu
 뷫	!atid
 뷬	!atiz
 뷭	!atie
 뷮	!atix
 뷯	!atiw
-뷰	!ar	4000
+뷰	!ar	70%
 뷱	!ary
 뷲	!aryy
 뷳	!aryb
-뷴	!arl	4000
+뷴	!arl	70%
 뷵	!arlu
 뷶	!arlw
 뷷	!arc
-뷸	!ars	4000
+뷸	!ars	70%
 뷹	!arsy
 뷺	!arso
 뷻	!arsa
@@ -13408,27 +13408,27 @@ use_preset_vocabulary: false
 뷾	!arsx
 뷿	!arsw
 #20
-븀	!aro	4000
+븀	!aro	70%
 븁	!ara
 븂	!arab
-븃	!arb	4000
+븃	!arb	70%
 븄	!arbb
-븅	!arq	4000
+븅	!arq	70%
 븆	!aru
 븇	!ard
 븈	!arz
 븉	!are
 븊	!arx
 븋	!arw
-브	!av	4000
-븍	!avy	4000
+브	!av	70%
+븍	!avy	70%
 븎	!avyy
 븏	!avyb
-븐	!avl	4000
+븐	!avl	70%
 븑	!avlu
 븒	!avlw
 븓	!avc
-블	!avs	4000
+블	!avs	70%
 븕	!avsy
 븖	!avso
 븗	!avsa
@@ -13436,10 +13436,10 @@ use_preset_vocabulary: false
 븙	!avse
 븚	!avsx
 븛	!avsw
-븜	!avo	4000
-븝	!ava	4000
+븜	!avo	70%
+븝	!ava	70%
 븞	!avab
-븟	!avb	4000
+븟	!avb	70%
 븠	!avbb
 븡	!avq
 븢	!avu
@@ -13476,71 +13476,71 @@ use_preset_vocabulary: false
 빁	!avie
 빂	!avix
 빃	!aviw
-비	!ai	4000
-빅	!aiy	4000
+비	!ai	70%
+빅	!aiy	70%
 빆	!aiyy
 빇	!aiyb
-빈	!ail	4000
+빈	!ail	70%
 빉	!ailu
 빊	!ailw
 빋	!aic
-빌	!ais	4000
+빌	!ais	70%
 빍	!aisy
-빎	!aiso	4000
+빎	!aiso	70%
 빏	!aisa
 빐	!aisb
 빑	!aise
 빒	!aisx
 빓	!aisw
-빔	!aio	4000
-빕	!aia	4000
+빔	!aio	70%
+빕	!aia	70%
 빖	!aiab
-빗	!aib	4000
+빗	!aib	70%
 빘	!aibb
-빙	!aiq	4000
-빚	!aiu	4000
-빛	!aid	4000
+빙	!aiq	70%
+빚	!aiu	70%
+빛	!aid	70%
 빜	!aiz
 빝	!aie
 빞	!aix
 빟	!aiw
-빠	!aak	4000
-빡	!aaky	4000
+빠	!aak	70%
+빡	!aaky	70%
 빢	!aakyy
 빣	!aakyb
-빤	!aakl	4000
+빤	!aakl	70%
 빥	!aaklu
 빦	!aaklw
 빧	!aakc
-빨	!aaks	4000
+빨	!aaks	70%
 빩	!aaksy
-빪	!aakso	4000
+빪	!aakso	70%
 빫	!aaksa
 빬	!aaksb
 빭	!aakse
 빮	!aaksx
 빯	!aaksw
-빰	!aako	4000
-빱	!aaka	4000
+빰	!aako	70%
+빱	!aaka	70%
 빲	!aakab
-빳	!aakb	4000
-빴	!aakbb	4000
-빵	!aakq	4000
+빳	!aakb	70%
+빴	!aakbb	70%
+빵	!aakq	70%
 빶	!aaku
 빷	!aakd
 빸	!aakz
 빹	!aake
 빺	!aakx
-빻	!aakw	4000
-빼	!aah	4000
-빽	!aahy	4000
+빻	!aakw	70%
+빼	!aah	70%
+빽	!aahy	70%
 빾	!aahyy
 빿	!aahyb
-뺀	!aahl	4000
+뺀	!aahl	70%
 뺁	!aahlu
 뺂	!aahlw
 뺃	!aahc
-뺄	!aahs	4000
+뺄	!aahs	70%
 뺅	!aahsy
 뺆	!aahso
 뺇	!aahsa
@@ -13548,20 +13548,20 @@ use_preset_vocabulary: false
 뺉	!aahse
 뺊	!aahsx
 뺋	!aahsw
-뺌	!aaho	4000
-뺍	!aaha	4000
+뺌	!aaho	70%
+뺍	!aaha	70%
 뺎	!aahab
-뺏	!aahb	4000
-뺐	!aahbb	4000
-뺑	!aahq	4000
+뺏	!aahb	70%
+뺐	!aahbb	70%
+뺑	!aahq	70%
 뺒	!aahu
 뺓	!aahd
 뺔	!aahz
 뺕	!aahe
 뺖	!aahx
 뺗	!aahw
-뺘	!aaf	4000
-뺙	!aafy	4000
+뺘	!aaf	70%
+뺙	!aafy	70%
 뺚	!aafyy
 뺛	!aafyb
 뺜	!aafl
@@ -13576,7 +13576,7 @@ use_preset_vocabulary: false
 뺥	!aafse
 뺦	!aafsx
 뺧	!aafsw
-뺨	!aafo	4000
+뺨	!aafo	70%
 뺩	!aafa
 뺪	!aafab
 뺫	!aafb
@@ -13616,15 +13616,15 @@ use_preset_vocabulary: false
 뻍	!vahe
 뻎	!vahx
 뻏	!vahw
-뻐	!aaj	4000
-뻑	!aajy	4000
+뻐	!aaj	70%
+뻑	!aajy	70%
 뻒	!aajyy
 뻓	!aajyb
-뻔	!aajl	4000
+뻔	!aajl	70%
 뻕	!aajlu
 뻖	!aajlw
-뻗	!aajc	4000
-뻘	!aajs	4000
+뻗	!aajc	70%
+뻘	!aajs	70%
 뻙	!aajsy
 뻚	!aajso
 뻛	!aajsa
@@ -13632,19 +13632,19 @@ use_preset_vocabulary: false
 뻝	!aajse
 뻞	!aajsx
 뻟	!aajsw
-뻠	!aajo	4000
+뻠	!aajo	70%
 뻡	!aaja
 뻢	!aajab
-뻣	!aajb	4000
-뻤	!aajbb	4000
-뻥	!aajq	4000
+뻣	!aajb	70%
+뻤	!aajbb	70%
+뻥	!aajq	70%
 뻦	!aaju
 뻧	!aajd
 뻨	!aajz
 뻩	!aaje
 뻪	!aajx
 뻫	!aajw
-뻬	!aap	4000
+뻬	!aap	70%
 뻭	!aapy
 뻮	!aapyy
 뻯	!aapyb
@@ -13666,15 +13666,15 @@ use_preset_vocabulary: false
 뻿	!aapb
 #21
 뼀	!aapbb
-뼁	!aapq	4000
+뼁	!aapq	70%
 뼂	!aapu
 뼃	!aapd
 뼄	!aapz
 뼅	!aape
 뼆	!aapx
 뼇	!aapw
-뼈	!aag	4000
-뼉	!aagy	4000
+뼈	!aag	70%
+뼉	!aagy	70%
 뼊	!aagyy
 뼋	!aagyb
 뼌	!aagl
@@ -13689,12 +13689,12 @@ use_preset_vocabulary: false
 뼕	!aagse
 뼖	!aagsx
 뼗	!aagsw
-뼘	!aago	4000
-뼙	!aaga	4000
+뼘	!aago	70%
+뼙	!aaga	70%
 뼚	!aagab
-뼛	!aagb	4000
-뼜	!aagbb	4000
-뼝	!aagq	4000
+뼛	!aagb	70%
+뼜	!aagbb	70%
+뼝	!aagq	70%
 뼞	!aagu
 뼟	!aagd
 뼠	!aagz
@@ -13729,15 +13729,15 @@ use_preset_vocabulary: false
 뼽	!vape
 뼾	!vapx
 뼿	!vapw
-뽀	!aan	4000
-뽁	!aany	4000
+뽀	!aan	70%
+뽁	!aany	70%
 뽂	!aanyy
 뽃	!aanyb
-뽄	!aanl	4000
+뽄	!aanl	70%
 뽅	!aanlu
 뽆	!aanlw
 뽇	!aanc
-뽈	!aans	4000
+뽈	!aans	70%
 뽉	!aansy
 뽊	!aanso
 뽋	!aansa
@@ -13745,12 +13745,12 @@ use_preset_vocabulary: false
 뽍	!aanse
 뽎	!aansx
 뽏	!aansw
-뽐	!aano	4000
-뽑	!aana	4000
+뽐	!aano	70%
+뽑	!aana	70%
 뽒	!aanab
 뽓	!aanb
 뽔	!aanbb
-뽕	!aanq	4000
+뽕	!aanq	70%
 뽖	!aanu
 뽗	!aand
 뽘	!aanz
@@ -13813,7 +13813,7 @@ use_preset_vocabulary: false
 뾑	!aanhe
 뾒	!aanhx
 뾓	!aanhw
-뾔	!aani	4000
+뾔	!aani	70%
 뾕	!aaniy
 뾖	!aaniyy
 뾗	!aaniyb
@@ -13841,7 +13841,7 @@ use_preset_vocabulary: false
 뾭	!aanie
 뾮	!aanix
 뾯	!aaniw
-뾰	!aam	4000
+뾰	!aam	70%
 뾱	!aamy
 뾲	!aamyy
 뾳	!aamyb
@@ -13862,22 +13862,22 @@ use_preset_vocabulary: false
 뿂	!aamab
 뿃	!aamb
 뿄	!aambb
-뿅	!aamq	4000
+뿅	!aamq	70%
 뿆	!aamu
 뿇	!aamd
 뿈	!aamz
 뿉	!aame
 뿊	!aamx
 뿋	!aamw
-뿌	!aat	4000
-뿍	!aaty	4000
+뿌	!aat	70%
+뿍	!aaty	70%
 뿎	!aatyy
 뿏	!aatyb
-뿐	!aatl	4000
+뿐	!aatl	70%
 뿑	!aatlu
 뿒	!aatlw
 뿓	!aatc
-뿔	!aats	4000
+뿔	!aats	70%
 뿕	!aatsy
 뿖	!aatso
 뿗	!aatsa
@@ -13885,12 +13885,12 @@ use_preset_vocabulary: false
 뿙	!aatse
 뿚	!aatsx
 뿛	!aatsw
-뿜	!aato	4000
+뿜	!aato	70%
 뿝	!aata
 뿞	!aatab
-뿟	!aatb	4000
+뿟	!aatb	70%
 뿠	!aatbb
-뿡	!aatq	4000
+뿡	!aatq	70%
 뿢	!aatu
 뿣	!aatd
 뿤	!aatz
@@ -13982,7 +13982,7 @@ use_preset_vocabulary: false
 쀹	!aatie
 쀺	!aatix
 쀻	!aatiw
-쀼	!aar	4000
+쀼	!aar	70%
 쀽	!aary
 쀾	!aaryy
 쀿	!aaryb
@@ -14003,22 +14003,22 @@ use_preset_vocabulary: false
 쁎	!aarab
 쁏	!aarb
 쁐	!aarbb
-쁑	!aarq	4000
+쁑	!aarq	70%
 쁒	!aaru
 쁓	!aard
 쁔	!aarz
 쁕	!aare
 쁖	!aarx
 쁗	!aarw
-쁘	!aav	4000
+쁘	!aav	70%
 쁙	!aavy
 쁚	!aavyy
 쁛	!aavyb
-쁜	!aavl	4000
+쁜	!aavl	70%
 쁝	!aavlu
 쁞	!aavlw
 쁟	!aavc
-쁠	!aavs	4000
+쁠	!aavs	70%
 쁡	!aavsy
 쁢	!aavso
 쁣	!aavsa
@@ -14026,8 +14026,8 @@ use_preset_vocabulary: false
 쁥	!aavse
 쁦	!aavsx
 쁧	!aavsw
-쁨	!aavo	4000
-쁩	!aava	4000
+쁨	!aavo	70%
+쁩	!aava	70%
 쁪	!aavab
 쁫	!aavb
 쁬	!aavbb
@@ -14066,15 +14066,15 @@ use_preset_vocabulary: false
 삍	!aavie
 삎	!aavix
 삏	!aaviw
-삐	!aai	4000
-삑	!aaiy	4000
+삐	!aai	70%
+삑	!aaiy	70%
 삒	!aaiyy
 삓	!aaiyb
-삔	!aail	4000
+삔	!aail	70%
 삕	!aailu
 삖	!aailw
 삗	!aaic
-삘	!aais	4000
+삘	!aais	70%
 삙	!aaisy
 삚	!aaiso
 삛	!aaisa
@@ -14082,55 +14082,55 @@ use_preset_vocabulary: false
 삝	!aaise
 삞	!aaisx
 삟	!aaisw
-삠	!aaio	4000
-삡	!aaia	4000
+삠	!aaio	70%
+삡	!aaia	70%
 삢	!aaiab
-삣	!aaib	4000
+삣	!aaib	70%
 삤	!aaibb
-삥	!aaiq	4000
+삥	!aaiq	70%
 삦	!aaiu
 삧	!aaid
 삨	!aaiz
 삩	!aaie
 삪	!aaix
 삫	!aaiw
-사	!bk	4000
-삭	!bky	4000
+사	!bk	70%
+삭	!bky	70%
 삮	!bkyy
-삯	!bkyb	4000
-산	!bkl	4000
+삯	!bkyb	70%
+산	!bkl	70%
 삱	!bklu
 삲	!bklw
-삳	!bkc	4000
-살	!bks	4000
-삵	!bksy	4000
-삶	!bkso	4000
+삳	!bkc	70%
+살	!bks	70%
+삵	!bksy	70%
+삶	!bkso	70%
 삷	!bksa
 삸	!bksb
 삹	!bkse
 삺	!bksx
 삻	!bksw
-삼	!bko	4000
-삽	!bka	4000
+삼	!bko	70%
+삽	!bka	70%
 삾	!bkab
-삿	!bkb	4000
-샀	!bkbb	4000
-상	!bkq	4000
+삿	!bkb	70%
+샀	!bkbb	70%
+상	!bkq	70%
 샂	!bku
 샃	!bkd
 샄	!bkz
-샅	!bke	4000
+샅	!bke	70%
 샆	!bkx
 샇	!bkw
-새	!bh	4000
-색	!bhy	4000
+새	!bh	70%
+색	!bhy	70%
 샊	!bhyy
 샋	!bhyb
-샌	!bhl	4000
+샌	!bhl	70%
 샍	!bhlu
 샎	!bhlw
 샏	!bhc
-샐	!bhs	4000
+샐	!bhs	70%
 샑	!bhsy
 샒	!bhso
 샓	!bhsa
@@ -14138,27 +14138,27 @@ use_preset_vocabulary: false
 샕	!bhse
 샖	!bhsx
 샗	!bhsw
-샘	!bho	4000
-샙	!bha	4000
+샘	!bho	70%
+샙	!bha	70%
 샚	!bhab
-샛	!bhb	4000
-샜	!bhbb	4000
-생	!bhq	4000
+샛	!bhb	70%
+샜	!bhbb	70%
+생	!bhq	70%
 샞	!bhu
 샟	!bhd
 샠	!bhz
 샡	!bhe
 샢	!bhx
 샣	!bhw
-샤	!bf	4000
-샥	!bfy	4000
+샤	!bf	70%
+샥	!bfy	70%
 샦	!bfyy
 샧	!bfyb
-샨	!bfl	4000
+샨	!bfl	70%
 샩	!bflu
 샪	!bflw
 샫	!bfc
-샬	!bfs	4000
+샬	!bfs	70%
 샭	!bfsy
 샮	!bfso
 샯	!bfsa
@@ -14166,12 +14166,12 @@ use_preset_vocabulary: false
 샱	!bfse
 샲	!bfsx
 샳	!bfsw
-샴	!bfo	4000
-샵	!bfa	4000
+샴	!bfo	70%
+샵	!bfa	70%
 샶	!bfab
-샷	!bfb	4000
+샷	!bfb	70%
 샸	!bfbb
-샹	!bfq	4000
+샹	!bfq	70%
 샺	!bfu
 샻	!bfd
 샼	!bfz
@@ -14179,15 +14179,15 @@ use_preset_vocabulary: false
 샾	!bfx
 샿	!bfw
 #23
-섀	!bhh	4000
+섀	!bhh	70%
 섁	!bhhy
 섂	!bhhyy
 섃	!bhhyb
-섄	!bhhl	4000
+섄	!bhhl	70%
 섅	!bhhlu
 섆	!bhhlw
 섇	!bhhc
-섈	!bhhs	4000
+섈	!bhhs	70%
 섉	!bhhsy
 섊	!bhhso
 섋	!bhhsa
@@ -14195,55 +14195,55 @@ use_preset_vocabulary: false
 섍	!bhhse
 섎	!bhhsx
 섏	!bhhsw
-섐	!bhho	4000
+섐	!bhho	70%
 섑	!bhha
 섒	!bhhab
 섓	!bhhb
 섔	!bhhbb
-섕	!bhhq	4000
+섕	!bhhq	70%
 섖	!bhhu
 섗	!bhhd
 섘	!bhhz
 섙	!bhhe
 섚	!bhhx
 섛	!bhhw
-서	!bj	4000
-석	!bjy	4000
-섞	!bjyy	4000
-섟	!bjyb	4000
-선	!bjl	4000
+서	!bj	70%
+석	!bjy	70%
+섞	!bjyy	70%
+섟	!bjyb	70%
+선	!bjl	70%
 섡	!bjlu
 섢	!bjlw
-섣	!bjc	4000
-설	!bjs	4000
+섣	!bjc	70%
+설	!bjs	70%
 섥	!bjsy
-섦	!bjso	4000
-섧	!bjsa	4000
+섦	!bjso	70%
+섧	!bjsa	70%
 섨	!bjsb
 섩	!bjse
 섪	!bjsx
 섫	!bjsw
-섬	!bjo	4000
-섭	!bja	4000
+섬	!bjo	70%
+섭	!bja	70%
 섮	!bjab
-섯	!bjb	4000
-섰	!bjbb	4000
-성	!bjq	4000
+섯	!bjb	70%
+섰	!bjbb	70%
+성	!bjq	70%
 섲	!bju
 섳	!bjd
 섴	!bjz
 섵	!bje
-섶	!bjx	4000
+섶	!bjx	70%
 섷	!bjw
-세	!bp	4000
-섹	!bpy	4000
+세	!bp	70%
+섹	!bpy	70%
 섺	!bpyy
 섻	!bpyb
-센	!bpl	4000
+센	!bpl	70%
 섽	!bplu
 섾	!bplw
 섿	!bpc
-셀	!bps	4000
+셀	!bps	70%
 셁	!bpsy
 셂	!bpso
 셃	!bpsa
@@ -14251,27 +14251,27 @@ use_preset_vocabulary: false
 셅	!bpse
 셆	!bpsx
 셇	!bpsw
-셈	!bpo	4000
-셉	!bpa	4000
+셈	!bpo	70%
+셉	!bpa	70%
 셊	!bpab
-셋	!bpb	4000
-셌	!bpbb	4000
-셍	!bpq	4000
+셋	!bpb	70%
+셌	!bpbb	70%
+셍	!bpq	70%
 셎	!bpu
 셏	!bpd
 셐	!bpz
 셑	!bpe
 셒	!bpx
 셓	!bpw
-셔	!bg	4000
-셕	!bgy	4000
+셔	!bg	70%
+셕	!bgy	70%
 셖	!bgyy
 셗	!bgyb
-션	!bgl	4000
+션	!bgl	70%
 셙	!bglu
 셚	!bglw
 셛	!bgc
-셜	!bgs	4000
+셜	!bgs	70%
 셝	!bgsy
 셞	!bgso
 셟	!bgsa
@@ -14279,27 +14279,27 @@ use_preset_vocabulary: false
 셡	!bgse
 셢	!bgsx
 셣	!bgsw
-셤	!bgo	4000
-셥	!bga	4000
+셤	!bgo	70%
+셥	!bga	70%
 셦	!bgab
-셧	!bgb	4000
-셨	!bgbb	4000
-셩	!bgq	4000
+셧	!bgb	70%
+셨	!bgbb	70%
+셩	!bgq	70%
 셪	!bgu
 셫	!bgd
 셬	!bgz
 셭	!bge
 셮	!bgx
 셯	!bgw
-셰	!bpp	4000
+셰	!bpp	70%
 셱	!bppy
 셲	!bppyy
 셳	!bppyb
-셴	!bppl	4000
+셴	!bppl	70%
 셵	!bpplu
 셶	!bpplw
 셷	!bppc
-셸	!bpps	4000
+셸	!bpps	70%
 셹	!bppsy
 셺	!bppso
 셻	!bppsa
@@ -14312,50 +14312,50 @@ use_preset_vocabulary: false
 솂	!bppab
 솃	!bppb
 솄	!bppbb
-솅	!bppq	4000
+솅	!bppq	70%
 솆	!bppu
 솇	!bppd
 솈	!bppz
 솉	!bppe
 솊	!bppx
 솋	!bppw
-소	!bn	4000
-속	!bny	4000
-솎	!bnyy	4000
+소	!bn	70%
+속	!bny	70%
+솎	!bnyy	70%
 솏	!bnyb
-손	!bnl	4000
+손	!bnl	70%
 솑	!bnlu
 솒	!bnlw
 솓	!bnc
-솔	!bns	4000
+솔	!bns	70%
 솕	!bnsy
-솖	!bnso	4000
+솖	!bnso	70%
 솗	!bnsa
 솘	!bnsb
 솙	!bnse
 솚	!bnsx
 솛	!bnsw
-솜	!bno	4000
-솝	!bna	4000
+솜	!bno	70%
+솝	!bna	70%
 솞	!bnab
-솟	!bnb	4000
+솟	!bnb	70%
 솠	!bnbb
-송	!bnq	4000
+송	!bnq	70%
 솢	!bnu
 솣	!bnd
 솤	!bnz
-솥	!bne	4000
+솥	!bne	70%
 솦	!bnx
 솧	!bnw
-솨	!bnk	4000
-솩	!bnky	4000
+솨	!bnk	70%
+솩	!bnky	70%
 솪	!bnkyy
 솫	!bnkyb
-솬	!bnkl	4000
+솬	!bnkl	70%
 솭	!bnklu
 솮	!bnklw
 솯	!bnkc
-솰	!bnks	4000
+솰	!bnks	70%
 솱	!bnksy
 솲	!bnkso
 솳	!bnksa
@@ -14368,22 +14368,22 @@ use_preset_vocabulary: false
 솺	!bnkab
 솻	!bnkb
 솼	!bnkbb
-솽	!bnkq	4000
+솽	!bnkq	70%
 솾	!bnku
 솿	!bnkd
 쇀	!bnkz
 쇁	!bnke
 쇂	!bnkx
 쇃	!bnkw
-쇄	!bnh	4000
+쇄	!bnh	70%
 쇅	!bnhy
 쇆	!bnhyy
 쇇	!bnhyb
-쇈	!bnhl	4000
+쇈	!bnhl	70%
 쇉	!bnhlu
 쇊	!bnhlw
 쇋	!bnhc
-쇌	!bnhs	4000
+쇌	!bnhs	70%
 쇍	!bnhsy
 쇎	!bnhso
 쇏	!bnhsa
@@ -14391,11 +14391,11 @@ use_preset_vocabulary: false
 쇑	!bnhse
 쇒	!bnhsx
 쇓	!bnhsw
-쇔	!bnho	4000
+쇔	!bnho	70%
 쇕	!bnha
 쇖	!bnhab
-쇗	!bnhb	4000
-쇘	!bnhbb	4000
+쇗	!bnhb	70%
+쇘	!bnhbb	70%
 쇙	!bnhq
 쇚	!bnhu
 쇛	!bnhd
@@ -14403,15 +14403,15 @@ use_preset_vocabulary: false
 쇝	!bnhe
 쇞	!bnhx
 쇟	!bnhw
-쇠	!bni	4000
+쇠	!bni	70%
 쇡	!bniy
 쇢	!bniyy
 쇣	!bniyb
-쇤	!bnil	4000
+쇤	!bnil	70%
 쇥	!bnilu
 쇦	!bnilw
 쇧	!bnic
-쇨	!bnis	4000
+쇨	!bnis	70%
 쇩	!bnisy
 쇪	!bniso
 쇫	!bnisa
@@ -14419,10 +14419,10 @@ use_preset_vocabulary: false
 쇭	!bnise
 쇮	!bnisx
 쇯	!bnisw
-쇰	!bnio	4000
-쇱	!bnia	4000
+쇰	!bnio	70%
+쇱	!bnia	70%
 쇲	!bniab
-쇳	!bnib	4000
+쇳	!bnib	70%
 쇴	!bnibb
 쇵	!bniq
 쇶	!bniu
@@ -14431,16 +14431,16 @@ use_preset_vocabulary: false
 쇹	!bnie
 쇺	!bnix
 쇻	!bniw
-쇼	!bm	4000
-쇽	!bmy	4000
+쇼	!bm	70%
+쇽	!bmy	70%
 쇾	!bmyy
 쇿	!bmyb
 #24
-숀	!bml	4000
+숀	!bml	70%
 숁	!bmlu
 숂	!bmlw
 숃	!bmc
-숄	!bms	4000
+숄	!bms	70%
 숅	!bmsy
 숆	!bmso
 숇	!bmsa
@@ -14448,27 +14448,27 @@ use_preset_vocabulary: false
 숉	!bmse
 숊	!bmsx
 숋	!bmsw
-숌	!bmo	4000
-숍	!bma	4000
+숌	!bmo	70%
+숍	!bma	70%
 숎	!bmab
-숏	!bmb	4000
+숏	!bmb	70%
 숐	!bmbb
-숑	!bmq	4000
+숑	!bmq	70%
 숒	!bmu
 숓	!bmd
 숔	!bmz
 숕	!bme
 숖	!bmx
 숗	!bmw
-수	!bt	4000
-숙	!bty	4000
+수	!bt	70%
+숙	!bty	70%
 숚	!btyy
 숛	!btyb
-순	!btl	4000
+순	!btl	70%
 숝	!btlu
 숞	!btlw
-숟	!btc	4000
-술	!bts	4000
+숟	!btc	70%
+술	!bts	70%
 숡	!btsy
 숢	!btso
 숣	!btsa
@@ -14476,19 +14476,19 @@ use_preset_vocabulary: false
 숥	!btse
 숦	!btsx
 숧	!btsw
-숨	!bto	4000
-숩	!bta	4000
+숨	!bto	70%
+숩	!bta	70%
 숪	!btab
-숫	!btb	4000
+숫	!btb	70%
 숬	!btbb
-숭	!btq	4000
+숭	!btq	70%
 숮	!btu
-숯	!btd	4000
+숯	!btd	70%
 숰	!btz
-숱	!bte	4000
-숲	!btx	4000
+숱	!bte	70%
+숲	!btx	70%
 숳	!btw
-숴	!btj	4000
+숴	!btj	70%
 숵	!btjy
 숶	!btjyy
 숷	!btjyb
@@ -14508,7 +14508,7 @@ use_preset_vocabulary: false
 쉅	!btja
 쉆	!btjab
 쉇	!btjb
-쉈	!btjbb	4000
+쉈	!btjbb	70%
 쉉	!btjq
 쉊	!btju
 쉋	!btjd
@@ -14516,15 +14516,15 @@ use_preset_vocabulary: false
 쉍	!btje
 쉎	!btjx
 쉏	!btjw
-쉐	!btp	4000
-쉑	!btpy	4000
+쉐	!btp	70%
+쉑	!btpy	70%
 쉒	!btpyy
 쉓	!btpyb
-쉔	!btpl	4000
+쉔	!btpl	70%
 쉕	!btplu
 쉖	!btplw
 쉗	!btpc
-쉘	!btps	4000
+쉘	!btps	70%
 쉙	!btpsy
 쉚	!btpso
 쉛	!btpsa
@@ -14532,27 +14532,27 @@ use_preset_vocabulary: false
 쉝	!btpse
 쉞	!btpsx
 쉟	!btpsw
-쉠	!btpo	4000
+쉠	!btpo	70%
 쉡	!btpa
 쉢	!btpab
 쉣	!btpb
 쉤	!btpbb
-쉥	!btpq	4000
+쉥	!btpq	70%
 쉦	!btpu
 쉧	!btpd
 쉨	!btpz
 쉩	!btpe
 쉪	!btpx
 쉫	!btpw
-쉬	!bti	4000
-쉭	!btiy	4000
+쉬	!bti	70%
+쉭	!btiy	70%
 쉮	!btiyy
 쉯	!btiyb
-쉰	!btil	4000
+쉰	!btil	70%
 쉱	!btilu
 쉲	!btilw
 쉳	!btic
-쉴	!btis	4000
+쉴	!btis	70%
 쉵	!btisy
 쉶	!btiso
 쉷	!btisa
@@ -14560,27 +14560,27 @@ use_preset_vocabulary: false
 쉹	!btise
 쉺	!btisx
 쉻	!btisw
-쉼	!btio	4000
-쉽	!btia	4000
+쉼	!btio	70%
+쉽	!btia	70%
 쉾	!btiab
-쉿	!btib	4000
+쉿	!btib	70%
 슀	!btibb
-슁	!btiq	4000
+슁	!btiq	70%
 슂	!btiu
 슃	!btid
 슄	!btiz
 슅	!btie
 슆	!btix
 슇	!btiw
-슈	!br	4000
-슉	!bry	4000
+슈	!br	70%
+슉	!bry	70%
 슊	!bryy
 슋	!bryb
 슌	!brl
 슍	!brlu
 슎	!brlw
 슏	!brc
-슐	!brs	4000
+슐	!brs	70%
 슑	!brsy
 슒	!brso
 슓	!brsa
@@ -14588,40 +14588,40 @@ use_preset_vocabulary: false
 슕	!brse
 슖	!brsx
 슗	!brsw
-슘	!bro	4000
+슘	!bro	70%
 슙	!bra
 슚	!brab
-슛	!brb	4000
+슛	!brb	70%
 슜	!brbb
-슝	!brq	4000
+슝	!brq	70%
 슞	!bru
 슟	!brd
 슠	!brz
 슡	!bre
 슢	!brx
 슣	!brw
-스	!bv	4000
-슥	!bvy	4000
+스	!bv	70%
+슥	!bvy	70%
 슦	!bvyy
 슧	!bvyb
-슨	!bvl	4000
+슨	!bvl	70%
 슩	!bvlu
 슪	!bvlw
 슫	!bvc
-슬	!bvs	4000
-슭	!bvsy	4000
+슬	!bvs	70%
+슭	!bvsy	70%
 슮	!bvso
 슯	!bvsa
 슰	!bvsb
 슱	!bvse
 슲	!bvsx
 슳	!bvsw
-슴	!bvo	4000
-습	!bva	4000
+슴	!bvo	70%
+습	!bva	70%
 슶	!bvab
-슷	!bvb	4000
+슷	!bvb	70%
 슸	!bvbb
-승	!bvq	4000
+승	!bvq	70%
 슺	!bvu
 슻	!bvd
 슼	!bvz
@@ -14656,44 +14656,44 @@ use_preset_vocabulary: false
 싙	!bvie
 싚	!bvix
 싛	!bviw
-시	!bi	4000
-식	!biy	4000
+시	!bi	70%
+식	!biy	70%
 싞	!biyy
 싟	!biyb
-신	!bil	4000
+신	!bil	70%
 싡	!bilu
 싢	!bilw
-싣	!bic	4000
-실	!bis	4000
+싣	!bic	70%
+실	!bis	70%
 싥	!bisy
 싦	!biso
 싧	!bisa
 싨	!bisb
 싩	!bise
 싪	!bisx
-싫	!bisw	4000
-심	!bio	4000
-십	!bia	4000
+싫	!bisw	70%
+심	!bio	70%
+십	!bia	70%
 싮	!biab
-싯	!bib	4000
+싯	!bib	70%
 싰	!bibb
-싱	!biq	4000
+싱	!biq	70%
 싲	!biu
 싳	!bid
 싴	!biz
 싵	!bie
-싶	!bix	4000
+싶	!bix	70%
 싷	!biw
-싸	!bbk	4000
-싹	!bbky	4000
+싸	!bbk	70%
+싹	!bbky	70%
 싺	!bbkyy
-싻	!bbkyb	4000
-싼	!bbkl	4000
+싻	!bbkyb	70%
+싼	!bbkl	70%
 싽	!bbklu
 싾	!bbklw
 싿	!bbkc
 #25
-쌀	!bbks	4000
+쌀	!bbks	70%
 쌁	!bbksy
 쌂	!bbkso
 쌃	!bbksa
@@ -14701,27 +14701,27 @@ use_preset_vocabulary: false
 쌅	!bbkse
 쌆	!bbksx
 쌇	!bbksw
-쌈	!bbko	4000
-쌉	!bbka	4000
+쌈	!bbko	70%
+쌉	!bbka	70%
 쌊	!bbkab
 쌋	!bbkb
-쌌	!bbkbb	4000
-쌍	!bbkq	4000
+쌌	!bbkbb	70%
+쌍	!bbkq	70%
 쌎	!bbku
 쌏	!bbkd
 쌐	!bbkz
 쌑	!bbke
 쌒	!bbkx
-쌓	!bbkw	4000
-쌔	!bbh	4000
-쌕	!bbhy	4000
+쌓	!bbkw	70%
+쌔	!bbh	70%
+쌕	!bbhy	70%
 쌖	!bbhyy
 쌗	!bbhyb
-쌘	!bbhl	4000
+쌘	!bbhl	70%
 쌙	!bbhlu
 쌚	!bbhlw
 쌛	!bbhc
-쌜	!bbhs	4000
+쌜	!bbhs	70%
 쌝	!bbhsy
 쌞	!bbhso
 쌟	!bbhsa
@@ -14729,12 +14729,12 @@ use_preset_vocabulary: false
 쌡	!bbhse
 쌢	!bbhsx
 쌣	!bbhsw
-쌤	!bbho	4000
-쌥	!bbha	4000
+쌤	!bbho	70%
+쌥	!bbha	70%
 쌦	!bbhab
 쌧	!bbhb
-쌨	!bbhbb	4000
-쌩	!bbhq	4000
+쌨	!bbhbb	70%
+쌩	!bbhq	70%
 쌪	!bbhu
 쌫	!bbhd
 쌬	!bbhz
@@ -14762,7 +14762,7 @@ use_preset_vocabulary: false
 썂	!bbfab
 썃	!bbfb
 썄	!bbfbb
-썅	!bbfq	4000
+썅	!bbfq	70%
 썆	!bbfu
 썇	!bbfd
 썈	!bbfz
@@ -14797,43 +14797,43 @@ use_preset_vocabulary: false
 썥	!vbhe
 썦	!vbhx
 썧	!vbhw
-써	!bbj	4000
-썩	!bbjy	4000
+써	!bbj	70%
+썩	!bbjy	70%
 썪	!bbjyy
 썫	!bbjyb
-썬	!bbjl	4000
+썬	!bbjl	70%
 썭	!bbjlu
 썮	!bbjlw
 썯	!bbjc
-썰	!bbjs	4000
+썰	!bbjs	70%
 썱	!bbjsy
-썲	!bbjso	4000
+썲	!bbjso	70%
 썳	!bbjsa
 썴	!bbjsb
 썵	!bbjse
 썶	!bbjsx
 썷	!bbjsw
-썸	!bbjo	4000
-썹	!bbja	4000
+썸	!bbjo	70%
+썹	!bbja	70%
 썺	!bbjab
 썻	!bbjb
-썼	!bbjbb	4000
-썽	!bbjq	4000
+썼	!bbjbb	70%
+썽	!bbjq	70%
 썾	!bbju
 썿	!bbjd
 쎀	!bbjz
 쎁	!bbje
 쎂	!bbjx
 쎃	!bbjw
-쎄	!bbp	4000
+쎄	!bbp	70%
 쎅	!bbpy
 쎆	!bbpyy
 쎇	!bbpyb
-쎈	!bbpl	4000
+쎈	!bbpl	70%
 쎉	!bbplu
 쎊	!bbplw
 쎋	!bbpc
-쎌	!bbps	4000
+쎌	!bbps	70%
 쎍	!bbpsy
 쎎	!bbpso
 쎏	!bbpsa
@@ -14885,7 +14885,7 @@ use_preset_vocabulary: false
 쎽	!vbpy
 쎾	!vbpyy
 쎿	!vbpyb
-쏀	!vbpl	4000
+쏀	!vbpl	70%
 쏁	!vbplu
 쏂	!vbplw
 쏃	!vbpc
@@ -14909,39 +14909,39 @@ use_preset_vocabulary: false
 쏕	!vbpe
 쏖	!vbpx
 쏗	!vbpw
-쏘	!bbn	4000
-쏙	!bbny	4000
+쏘	!bbn	70%
+쏙	!bbny	70%
 쏚	!bbnyy
 쏛	!bbnyb
-쏜	!bbnl	4000
+쏜	!bbnl	70%
 쏝	!bbnlu
 쏞	!bbnlw
-쏟	!bbnc	4000
-쏠	!bbns	4000
+쏟	!bbnc	70%
+쏠	!bbns	70%
 쏡	!bbnsy
-쏢	!bbnso	4000
+쏢	!bbnso	70%
 쏣	!bbnsa
 쏤	!bbnsb
 쏥	!bbnse
 쏦	!bbnsx
 쏧	!bbnsw
-쏨	!bbno	4000
-쏩	!bbna	4000
+쏨	!bbno	70%
+쏩	!bbna	70%
 쏪	!bbnab
 쏫	!bbnb
 쏬	!bbnbb
-쏭	!bbnq	4000
+쏭	!bbnq	70%
 쏮	!bbnu
 쏯	!bbnd
 쏰	!bbnz
 쏱	!bbne
 쏲	!bbnx
 쏳	!bbnw
-쏴	!bbnk	4000
-쏵	!bbnky	4000
+쏴	!bbnk	70%
+쏵	!bbnky	70%
 쏶	!bbnkyy
 쏷	!bbnkyb
-쏸	!bbnkl	4000
+쏸	!bbnkl	70%
 쏹	!bbnklu
 쏺	!bbnklw
 쏻	!bbnkc
@@ -14958,7 +14958,7 @@ use_preset_vocabulary: false
 쐅	!bbnka
 쐆	!bbnkab
 쐇	!bbnkb
-쐈	!bbnkbb	4000
+쐈	!bbnkbb	70%
 쐉	!bbnkq
 쐊	!bbnku
 쐋	!bbnkd
@@ -14966,7 +14966,7 @@ use_preset_vocabulary: false
 쐍	!bbnke
 쐎	!bbnkx
 쐏	!bbnkw
-쐐	!bbnh	4000
+쐐	!bbnh	70%
 쐑	!bbnhy
 쐒	!bbnhyy
 쐓	!bbnhyb
@@ -14986,7 +14986,7 @@ use_preset_vocabulary: false
 쐡	!bbnha
 쐢	!bbnhab
 쐣	!bbnhb
-쐤	!bbnhbb	4000
+쐤	!bbnhbb	70%
 쐥	!bbnhq
 쐦	!bbnhu
 쐧	!bbnhd
@@ -14994,15 +14994,15 @@ use_preset_vocabulary: false
 쐩	!bbnhe
 쐪	!bbnhx
 쐫	!bbnhw
-쐬	!bbni	4000
+쐬	!bbni	70%
 쐭	!bbniy
 쐮	!bbniyy
 쐯	!bbniyb
-쐰	!bbnil	4000
+쐰	!bbnil	70%
 쐱	!bbnilu
 쐲	!bbnilw
 쐳	!bbnic
-쐴	!bbnis	4000
+쐴	!bbnis	70%
 쐵	!bbnisy
 쐶	!bbniso
 쐷	!bbnisa
@@ -15010,8 +15010,8 @@ use_preset_vocabulary: false
 쐹	!bbnise
 쐺	!bbnisx
 쐻	!bbnisw
-쐼	!bbnio	4000
-쐽	!bbnia	4000
+쐼	!bbnio	70%
+쐽	!bbnia	70%
 쐾	!bbniab
 쐿	!bbnib
 쑀	!bbnibb
@@ -15022,7 +15022,7 @@ use_preset_vocabulary: false
 쑅	!bbnie
 쑆	!bbnix
 쑇	!bbniw
-쑈	!bbm	4000
+쑈	!bbm	70%
 쑉	!bbmy
 쑊	!bbmyy
 쑋	!bbmyb
@@ -15050,15 +15050,15 @@ use_preset_vocabulary: false
 쑡	!bbme
 쑢	!bbmx
 쑣	!bbmw
-쑤	!bbt	4000
-쑥	!bbty	4000
+쑤	!bbt	70%
+쑥	!bbty	70%
 쑦	!bbtyy
 쑧	!bbtyb
-쑨	!bbtl	4000
+쑨	!bbtl	70%
 쑩	!bbtlu
 쑪	!bbtlw
 쑫	!bbtc
-쑬	!bbts	4000
+쑬	!bbts	70%
 쑭	!bbtsy
 쑮	!bbtso
 쑯	!bbtsa
@@ -15066,19 +15066,19 @@ use_preset_vocabulary: false
 쑱	!bbtse
 쑲	!bbtsx
 쑳	!bbtsw
-쑴	!bbto	4000
-쑵	!bbta	4000
+쑴	!bbto	70%
+쑵	!bbta	70%
 쑶	!bbtab
 쑷	!bbtb
 쑸	!bbtbb
-쑹	!bbtq	4000
+쑹	!bbtq	70%
 쑺	!bbtu
 쑻	!bbtd
 쑼	!bbtz
 쑽	!bbte
 쑾	!bbtx
 쑿	!bbtw
-쒀	!bbtj	4000
+쒀	!bbtj	70%
 쒁	!bbtjy
 쒂	!bbtjyy
 쒃	!bbtjyb
@@ -15098,7 +15098,7 @@ use_preset_vocabulary: false
 쒑	!bbtja
 쒒	!bbtjab
 쒓	!bbtjb
-쒔	!bbtjbb	4000
+쒔	!bbtjbb	70%
 쒕	!bbtjq
 쒖	!bbtju
 쒗	!bbtjd
@@ -15106,7 +15106,7 @@ use_preset_vocabulary: false
 쒙	!bbtje
 쒚	!bbtjx
 쒛	!bbtjw
-쒜	!bbtp	4000
+쒜	!bbtp	70%
 쒝	!bbtpy
 쒞	!bbtpyy
 쒟	!bbtpyb
@@ -15134,11 +15134,11 @@ use_preset_vocabulary: false
 쒵	!bbtpe
 쒶	!bbtpx
 쒷	!bbtpw
-쒸	!bbti	4000
+쒸	!bbti	70%
 쒹	!bbtiy
 쒺	!bbtiyy
 쒻	!bbtiyb
-쒼	!bbtil	4000
+쒼	!bbtil	70%
 쒽	!bbtilu
 쒾	!bbtilw
 쒿	!bbtic
@@ -15183,32 +15183,32 @@ use_preset_vocabulary: false
 쓦	!bbrab
 쓧	!bbrb
 쓨	!bbrbb
-쓩	!bbrq	4000
+쓩	!bbrq	70%
 쓪	!bbru
 쓫	!bbrd
 쓬	!bbrz
 쓭	!bbre
 쓮	!bbrx
 쓯	!bbrw
-쓰	!bbv	4000
-쓱	!bbvy	4000
+쓰	!bbv	70%
+쓱	!bbvy	70%
 쓲	!bbvyy
 쓳	!bbvyb
-쓴	!bbvl	4000
+쓴	!bbvl	70%
 쓵	!bbvlu
 쓶	!bbvlw
 쓷	!bbvc
-쓸	!bbvs	4000
+쓸	!bbvs	70%
 쓹	!bbvsy
-쓺	!bbvso	4000
+쓺	!bbvso	70%
 쓻	!bbvsa
 쓼	!bbvsb
 쓽	!bbvse
 쓾	!bbvsx
-쓿	!bbvsw	4000
+쓿	!bbvsw	70%
 #27
-씀	!bbvo	4000
-씁	!bbva	4000
+씀	!bbvo	70%
+씁	!bbva	70%
 씂	!bbvab
 씃	!bbvb
 씄	!bbvbb
@@ -15219,15 +15219,15 @@ use_preset_vocabulary: false
 씉	!bbve
 씊	!bbvx
 씋	!bbvw
-씌	!bbvi	4000
+씌	!bbvi	70%
 씍	!bbviy
 씎	!bbviyy
 씏	!bbviyb
-씐	!bbvil	4000
+씐	!bbvil	70%
 씑	!bbvilu
 씒	!bbvilw
 씓	!bbvic
-씔	!bbvis	4000
+씔	!bbvis	70%
 씕	!bbvisy
 씖	!bbviso
 씗	!bbvisa
@@ -15235,7 +15235,7 @@ use_preset_vocabulary: false
 씙	!bbvise
 씚	!bbvisx
 씛	!bbvisw
-씜	!bbvio	4000
+씜	!bbvio	70%
 씝	!bbvia
 씞	!bbviab
 씟	!bbvib
@@ -15247,15 +15247,15 @@ use_preset_vocabulary: false
 씥	!bbvie
 씦	!bbvix
 씧	!bbviw
-씨	!bbi	4000
-씩	!bbiy	4000
+씨	!bbi	70%
+씩	!bbiy	70%
 씪	!bbiyy
 씫	!bbiyb
-씬	!bbil	4000
+씬	!bbil	70%
 씭	!bbilu
 씮	!bbilw
 씯	!bbic
-씰	!bbis	4000
+씰	!bbis	70%
 씱	!bbisy
 씲	!bbiso
 씳	!bbisa
@@ -15263,55 +15263,55 @@ use_preset_vocabulary: false
 씵	!bbise
 씶	!bbisx
 씷	!bbisw
-씸	!bbio	4000
-씹	!bbia	4000
+씸	!bbio	70%
+씹	!bbia	70%
 씺	!bbiab
-씻	!bbib	4000
+씻	!bbib	70%
 씼	!bbibb
-씽	!bbiq	4000
+씽	!bbiq	70%
 씾	!bbiu
 씿	!bbid
 앀	!bbiz
 앁	!bbie
 앂	!bbix
 앃	!bbiw
-아	!qk	4000
-악	!qky	4000
+아	!qk	70%
+악	!qky	70%
 앆	!qkyy
 앇	!qkyb
-안	!qkl	4000
-앉	!qklu	4000
-않	!qklw	4000
+안	!qkl	70%
+앉	!qklu	70%
+않	!qklw	70%
 앋	!qkc
-알	!qks	4000
-앍	!qksy	4000
-앎	!qkso	4000
+알	!qks	70%
+앍	!qksy	70%
+앎	!qkso	70%
 앏	!qksa
 앐	!qksb
 앑	!qkse
 앒	!qksx
-앓	!qksw	4000
-암	!qko	4000
-압	!qka	4000
+앓	!qksw	70%
+암	!qko	70%
+압	!qka	70%
 앖	!qkab
-앗	!qkb	4000
-았	!qkbb	4000
-앙	!qkq	4000
+앗	!qkb	70%
+았	!qkbb	70%
+앙	!qkq	70%
 앚	!qku
 앛	!qkd
 앜	!qkz
-앝	!qke	4000
-앞	!qkx	4000
+앝	!qke	70%
+앞	!qkx	70%
 앟	!qkw
-애	!qh	4000
-액	!qhy	4000
+애	!qh	70%
+액	!qhy	70%
 앢	!qhyy
 앣	!qhyb
-앤	!qhl	4000
+앤	!qhl	70%
 앥	!qhlu
 앦	!qhlw
 앧	!qhc
-앨	!qhs	4000
+앨	!qhs	70%
 앩	!qhsy
 앪	!qhso
 앫	!qhsa
@@ -15319,55 +15319,55 @@ use_preset_vocabulary: false
 앭	!qhse
 앮	!qhsx
 앯	!qhsw
-앰	!qho	4000
-앱	!qha	4000
+앰	!qho	70%
+앱	!qha	70%
 앲	!qhab
-앳	!qhb	4000
-앴	!qhbb	4000
-앵	!qhq	4000
+앳	!qhb	70%
+앴	!qhbb	70%
+앵	!qhq	70%
 앶	!qhu
 앷	!qhd
 앸	!qhz
 앹	!qhe
 앺	!qhx
 앻	!qhw
-야	!qf	4000
-약	!qfy	4000
+야	!qf	70%
+약	!qfy	70%
 앾	!qfyy
 앿	!qfyb
-얀	!qfl	4000
+얀	!qfl	70%
 얁	!qflu
 얂	!qflw
 얃	!qfc
-얄	!qfs	4000
+얄	!qfs	70%
 얅	!qfsy
 얆	!qfso
-얇	!qfsa	4000
+얇	!qfsa	70%
 얈	!qfsb
 얉	!qfse
 얊	!qfsx
 얋	!qfsw
-얌	!qfo	4000
-얍	!qfa	4000
+얌	!qfo	70%
+얍	!qfa	70%
 얎	!qfab
-얏	!qfb	4000
+얏	!qfb	70%
 얐	!qfbb
-양	!qfq	4000
+양	!qfq	70%
 얒	!qfu
 얓	!qfd
 얔	!qfz
-얕	!qfe	4000
+얕	!qfe	70%
 얖	!qfx
-얗	!qfw	4000
-얘	!qhh	4000
+얗	!qfw	70%
+얘	!qhh	70%
 얙	!qhhy
 얚	!qhhyy
 얛	!qhhyb
-얜	!qhhl	4000
+얜	!qhhl	70%
 얝	!qhhlu
 얞	!qhhlw
 얟	!qhhc
-얠	!qhhs	4000
+얠	!qhhs	70%
 얡	!qhhsy
 얢	!qhhso
 얣	!qhhsa
@@ -15376,7 +15376,7 @@ use_preset_vocabulary: false
 얦	!qhhsx
 얧	!qhhsw
 얨	!qhho
-얩	!qhha	4000
+얩	!qhha	70%
 얪	!qhhab
 얫	!qhhb
 얬	!qhhbb
@@ -15387,43 +15387,43 @@ use_preset_vocabulary: false
 얱	!qhhe
 얲	!qhhx
 얳	!qhhw
-어	!qj	4000
-억	!qjy	4000
+어	!qj	70%
+억	!qjy	70%
 얶	!qjyy
 얷	!qjyb
-언	!qjl	4000
-얹	!qjlu	4000
+언	!qjl	70%
+얹	!qjlu	70%
 얺	!qjlw
-얻	!qjc	4000
-얼	!qjs	4000
-얽	!qjsy	4000
-얾	!qjso	4000
+얻	!qjc	70%
+얼	!qjs	70%
+얽	!qjsy	70%
+얾	!qjso	70%
 얿	!qjsa
 엀	!qjsb
 엁	!qjse
 엂	!qjsx
 엃	!qjsw
-엄	!qjo	4000
-업	!qja	4000
-없	!qjab	4000
-엇	!qjb	4000
-었	!qjbb	4000
-엉	!qjq	4000
-엊	!qju	4000
+엄	!qjo	70%
+업	!qja	70%
+없	!qjab	70%
+엇	!qjb	70%
+었	!qjbb	70%
+엉	!qjq	70%
+엊	!qju	70%
 엋	!qjd
-엌	!qjz	4000
+엌	!qjz	70%
 엍	!qje
-엎	!qjx	4000
+엎	!qjx	70%
 엏	!qjw
-에	!qp	4000
-엑	!qpy	4000
+에	!qp	70%
+엑	!qpy	70%
 엒	!qpyy
 엓	!qpyb
-엔	!qpl	4000
+엔	!qpl	70%
 엕	!qplu
 엖	!qplw
 엗	!qpc
-엘	!qps	4000
+엘	!qps	70%
 엙	!qpsy
 엚	!qpso
 엛	!qpsa
@@ -15431,56 +15431,56 @@ use_preset_vocabulary: false
 엝	!qpse
 엞	!qpsx
 엟	!qpsw
-엠	!qpo	4000
-엡	!qpa	4000
+엠	!qpo	70%
+엡	!qpa	70%
 엢	!qpab
-엣	!qpb	4000
+엣	!qpb	70%
 엤	!qpbb
-엥	!qpq	4000
+엥	!qpq	70%
 엦	!qpu
 엧	!qpd
 엨	!qpz
 엩	!qpe
 엪	!qpx
 엫	!qpw
-여	!qg	4000
-역	!qgy	4000
-엮	!qgyy	4000
+여	!qg	70%
+역	!qgy	70%
+엮	!qgyy	70%
 엯	!qgyb
-연	!qgl	4000
+연	!qgl	70%
 엱	!qglu
 엲	!qglw
 엳	!qgc
-열	!qgs	4000
+열	!qgs	70%
 엵	!qgsy
-엶	!qgso	4000
-엷	!qgsa	4000
+엶	!qgso	70%
+엷	!qgsa	70%
 엸	!qgsb
 엹	!qgse
 엺	!qgsx
 엻	!qgsw
-염	!qgo	4000
-엽	!qga	4000
-엾	!qgab	4000
-엿	!qgb	4000
+염	!qgo	70%
+엽	!qga	70%
+엾	!qgab	70%
+엿	!qgb	70%
 #28
-였	!qgbb	4000
-영	!qgq	4000
+였	!qgbb	70%
+영	!qgq	70%
 옂	!qgu
 옃	!qgd
 옄	!qgz
-옅	!qge	4000
-옆	!qgx	4000
-옇	!qgw	4000
-예	!qpp	4000
+옅	!qge	70%
+옆	!qgx	70%
+옇	!qgw	70%
+예	!qpp	70%
 옉	!qppy
 옊	!qppyy
 옋	!qppyb
-옌	!qppl	4000
+옌	!qppl	70%
 옍	!qpplu
 옎	!qpplw
 옏	!qppc
-옐	!qpps	4000
+옐	!qpps	70%
 옑	!qppsy
 옒	!qppso
 옓	!qppsa
@@ -15488,11 +15488,11 @@ use_preset_vocabulary: false
 옕	!qppse
 옖	!qppsx
 옗	!qppsw
-옘	!qppo	4000
-옙	!qppa	4000
+옘	!qppo	70%
+옙	!qppa	70%
 옚	!qppab
-옛	!qppb	4000
-옜	!qppbb	4000
+옛	!qppb	70%
+옜	!qppbb	70%
 옝	!qppq
 옞	!qppu
 옟	!qppd
@@ -15500,43 +15500,43 @@ use_preset_vocabulary: false
 옡	!qppe
 옢	!qppx
 옣	!qppw
-오	!qn	4000
-옥	!qny	4000
+오	!qn	70%
+옥	!qny	70%
 옦	!qnyy
 옧	!qnyb
-온	!qnl	4000
+온	!qnl	70%
 옩	!qnlu
 옪	!qnlw
 옫	!qnc
-올	!qns	4000
-옭	!qnsy	4000
-옮	!qnso	4000
+올	!qns	70%
+옭	!qnsy	70%
+옮	!qnso	70%
 옯	!qnsa
-옰	!qnsb	4000
+옰	!qnsb	70%
 옱	!qnse
 옲	!qnsx
-옳	!qnsw	4000
-옴	!qno	4000
-옵	!qna	4000
+옳	!qnsw	70%
+옴	!qno	70%
+옵	!qna	70%
 옶	!qnab
-옷	!qnb	4000
+옷	!qnb	70%
 옸	!qnbb
-옹	!qnq	4000
+옹	!qnq	70%
 옺	!qnu
-옻	!qnd	4000
+옻	!qnd	70%
 옼	!qnz
 옽	!qne
 옾	!qnx
 옿	!qnw
-와	!qnk	4000
-왁	!qnky	4000
+와	!qnk	70%
+왁	!qnky	70%
 왂	!qnkyy
 왃	!qnkyb
-완	!qnkl	4000
+완	!qnkl	70%
 왅	!qnklu
 왆	!qnklw
 왇	!qnkc
-왈	!qnks	4000
+왈	!qnks	70%
 왉	!qnksy
 왊	!qnkso
 왋	!qnksa
@@ -15544,23 +15544,23 @@ use_preset_vocabulary: false
 왍	!qnkse
 왎	!qnksx
 왏	!qnksw
-왐	!qnko	4000
-왑	!qnka	4000
+왐	!qnko	70%
+왑	!qnka	70%
 왒	!qnkab
-왓	!qnkb	4000
-왔	!qnkbb	4000
-왕	!qnkq	4000
+왓	!qnkb	70%
+왔	!qnkbb	70%
+왕	!qnkq	70%
 왖	!qnku
 왗	!qnkd
 왘	!qnkz
 왙	!qnke
 왚	!qnkx
 왛	!qnkw
-왜	!qnh	4000
-왝	!qnhy	4000
+왜	!qnh	70%
+왝	!qnhy	70%
 왞	!qnhyy
 왟	!qnhyb
-왠	!qnhl	4000
+왠	!qnhl	70%
 왡	!qnhlu
 왢	!qnhlw
 왣	!qnhc
@@ -15572,27 +15572,27 @@ use_preset_vocabulary: false
 왩	!qnhse
 왪	!qnhsx
 왫	!qnhsw
-왬	!qnho	4000
+왬	!qnho	70%
 왭	!qnha
 왮	!qnhab
-왯	!qnhb	4000
+왯	!qnhb	70%
 왰	!qnhbb
-왱	!qnhq	4000
+왱	!qnhq	70%
 왲	!qnhu
 왳	!qnhd
 왴	!qnhz
 왵	!qnhe
 왶	!qnhx
 왷	!qnhw
-외	!qni	4000
-왹	!qniy	4000
+외	!qni	70%
+왹	!qniy	70%
 왺	!qniyy
 왻	!qniyb
-왼	!qnil	4000
+왼	!qnil	70%
 왽	!qnilu
 왾	!qnilw
 왿	!qnic
-욀	!qnis	4000
+욀	!qnis	70%
 욁	!qnisy
 욂	!qniso
 욃	!qnisa
@@ -15600,27 +15600,27 @@ use_preset_vocabulary: false
 욅	!qnise
 욆	!qnisx
 욇	!qnisw
-욈	!qnio	4000
-욉	!qnia	4000
+욈	!qnio	70%
+욉	!qnia	70%
 욊	!qniab
-욋	!qnib	4000
+욋	!qnib	70%
 욌	!qnibb
-욍	!qniq	4000
+욍	!qniq	70%
 욎	!qniu
 욏	!qnid
 욐	!qniz
 욑	!qnie
 욒	!qnix
 욓	!qniw
-요	!qm	4000
-욕	!qmy	4000
+요	!qm	70%
+욕	!qmy	70%
 욖	!qmyy
 욗	!qmyb
-욘	!qml	4000
+욘	!qml	70%
 욙	!qmlu
 욚	!qmlw
 욛	!qmc
-욜	!qms	4000
+욜	!qms	70%
 욝	!qmsy
 욞	!qmso
 욟	!qmsa
@@ -15628,55 +15628,55 @@ use_preset_vocabulary: false
 욡	!qmse
 욢	!qmsx
 욣	!qmsw
-욤	!qmo	4000
-욥	!qma	4000
+욤	!qmo	70%
+욥	!qma	70%
 욦	!qmab
-욧	!qmb	4000
+욧	!qmb	70%
 욨	!qmbb
-용	!qmq	4000
+용	!qmq	70%
 욪	!qmu
 욫	!qmd
 욬	!qmz
 욭	!qme
 욮	!qmx
 욯	!qmw
-우	!qt	4000
-욱	!qty	4000
+우	!qt	70%
+욱	!qty	70%
 욲	!qtyy
 욳	!qtyb
-운	!qtl	4000
+운	!qtl	70%
 욵	!qtlu
 욶	!qtlw
 욷	!qtc
-울	!qts	4000
-욹	!qtsy	4000
-욺	!qtso	4000
+울	!qts	70%
+욹	!qtsy	70%
+욺	!qtso	70%
 욻	!qtsa
 욼	!qtsb
 욽	!qtse
 욾	!qtsx
 욿	!qtsw
-움	!qto	4000
-웁	!qta	4000
+움	!qto	70%
+웁	!qta	70%
 웂	!qtab
-웃	!qtb	4000
+웃	!qtb	70%
 웄	!qtbb
-웅	!qtq	4000
+웅	!qtq	70%
 웆	!qtu
 웇	!qtd
 웈	!qtz
 웉	!qte
 웊	!qtx
 웋	!qtw
-워	!qtj	4000
-웍	!qtjy	4000
+워	!qtj	70%
+웍	!qtjy	70%
 웎	!qtjyy
 웏	!qtjyb
-원	!qtjl	4000
+원	!qtjl	70%
 웑	!qtjlu
 웒	!qtjlw
 웓	!qtjc
-월	!qtjs	4000
+월	!qtjs	70%
 웕	!qtjsy
 웖	!qtjso
 웗	!qtjsa
@@ -15684,27 +15684,27 @@ use_preset_vocabulary: false
 웙	!qtjse
 웚	!qtjsx
 웛	!qtjsw
-웜	!qtjo	4000
-웝	!qtja	4000
+웜	!qtjo	70%
+웝	!qtja	70%
 웞	!qtjab
 웟	!qtjb
-웠	!qtjbb	4000
-웡	!qtjq	4000
+웠	!qtjbb	70%
+웡	!qtjq	70%
 웢	!qtju
 웣	!qtjd
 웤	!qtjz
 웥	!qtje
 웦	!qtjx
 웧	!qtjw
-웨	!qtp	4000
-웩	!qtpy	4000
+웨	!qtp	70%
+웩	!qtpy	70%
 웪	!qtpyy
 웫	!qtpyb
-웬	!qtpl	4000
+웬	!qtpl	70%
 웭	!qtplu
 웮	!qtplw
 웯	!qtpc
-웰	!qtps	4000
+웰	!qtps	70%
 웱	!qtpsy
 웲	!qtpso
 웳	!qtpsa
@@ -15712,12 +15712,12 @@ use_preset_vocabulary: false
 웵	!qtpse
 웶	!qtpsx
 웷	!qtpsw
-웸	!qtpo	4000
-웹	!qtpa	4000
+웸	!qtpo	70%
+웹	!qtpa	70%
 웺	!qtpab
 웻	!qtpb
 웼	!qtpbb
-웽	!qtpq	4000
+웽	!qtpq	70%
 웾	!qtpu
 웿	!qtpd
 #29
@@ -15725,15 +15725,15 @@ use_preset_vocabulary: false
 윁	!qtpe
 윂	!qtpx
 윃	!qtpw
-위	!qti	4000
-윅	!qtiy	4000
+위	!qti	70%
+윅	!qtiy	70%
 윆	!qtiyy
 윇	!qtiyb
-윈	!qtil	4000
+윈	!qtil	70%
 윉	!qtilu
 윊	!qtilw
 윋	!qtic
-윌	!qtis	4000
+윌	!qtis	70%
 윍	!qtisy
 윎	!qtiso
 윏	!qtisa
@@ -15741,27 +15741,27 @@ use_preset_vocabulary: false
 윑	!qtise
 윒	!qtisx
 윓	!qtisw
-윔	!qtio	4000
-윕	!qtia	4000
+윔	!qtio	70%
+윕	!qtia	70%
 윖	!qtiab
-윗	!qtib	4000
+윗	!qtib	70%
 윘	!qtibb
-윙	!qtiq	4000
+윙	!qtiq	70%
 윚	!qtiu
 윛	!qtid
 윜	!qtiz
 윝	!qtie
 윞	!qtix
 윟	!qtiw
-유	!qr	4000
-육	!qry	4000
+유	!qr	70%
+육	!qry	70%
 윢	!qryy
 윣	!qryb
-윤	!qrl	4000
+윤	!qrl	70%
 윥	!qrlu
 윦	!qrlw
 윧	!qrc
-율	!qrs	4000
+율	!qrs	70%
 윩	!qrsy
 윪	!qrso
 윫	!qrsa
@@ -15769,55 +15769,55 @@ use_preset_vocabulary: false
 윭	!qrse
 윮	!qrsx
 윯	!qrsw
-윰	!qro	4000
-윱	!qra	4000
+윰	!qro	70%
+윱	!qra	70%
 윲	!qrab
-윳	!qrb	4000
+윳	!qrb	70%
 윴	!qrbb
-융	!qrq	4000
+융	!qrq	70%
 윶	!qru
-윷	!qrd	4000
+윷	!qrd	70%
 윸	!qrz
 윹	!qre
 윺	!qrx
 윻	!qrw
-으	!qv	4000
-윽	!qvy	4000
+으	!qv	70%
+윽	!qvy	70%
 윾	!qvyy
 윿	!qvyb
-은	!qvl	4000
+은	!qvl	70%
 읁	!qvlu
 읂	!qvlw
 읃	!qvc
-을	!qvs	4000
+을	!qvs	70%
 읅	!qvsy
 읆	!qvso
 읇	!qvsa
 읈	!qvsb
 읉	!qvse
-읊	!qvsx	4000
+읊	!qvsx	70%
 읋	!qvsw
-음	!qvo	4000
-읍	!qva	4000
+음	!qvo	70%
+읍	!qva	70%
 읎	!qvab
-읏	!qvb	4000
+읏	!qvb	70%
 읐	!qvbb
-응	!qvq	4000
-읒	!qvu	4000
-읓	!qvd	4000
-읔	!qvz	4000
-읕	!qve	4000
-읖	!qvx	4000
-읗	!qvw	4000
-의	!qvi	4000
+응	!qvq	70%
+읒	!qvu	70%
+읓	!qvd	70%
+읔	!qvz	70%
+읕	!qve	70%
+읖	!qvx	70%
+읗	!qvw	70%
+의	!qvi	70%
 읙	!qviy
 읚	!qviyy
 읛	!qviyb
-읜	!qvil	4000
+읜	!qvil	70%
 읝	!qvilu
 읞	!qvilw
 읟	!qvic
-읠	!qvis	4000
+읠	!qvis	70%
 읡	!qvisy
 읢	!qviso
 읣	!qvisa
@@ -15825,10 +15825,10 @@ use_preset_vocabulary: false
 읥	!qvise
 읦	!qvisx
 읧	!qvisw
-읨	!qvio	4000
+읨	!qvio	70%
 읩	!qvia
 읪	!qviab
-읫	!qvib	4000
+읫	!qvib	70%
 읬	!qvibb
 읭	!qviq
 읮	!qviu
@@ -15837,71 +15837,71 @@ use_preset_vocabulary: false
 읱	!qvie
 읲	!qvix
 읳	!qviw
-이	!qi	4000
-익	!qiy	4000
+이	!qi	70%
+익	!qiy	70%
 읶	!qiyy
 읷	!qiyb
-인	!qil	4000
+인	!qil	70%
 읹	!qilu
 읺	!qilw
 읻	!qic
-일	!qis	4000
-읽	!qisy	4000
-읾	!qiso	4000
+일	!qis	70%
+읽	!qisy	70%
+읾	!qiso	70%
 읿	!qisa
 잀	!qisb
 잁	!qise
 잂	!qisx
-잃	!qisw	4000
-임	!qio	4000
-입	!qia	4000
+잃	!qisw	70%
+임	!qio	70%
+입	!qia	70%
 잆	!qiab
-잇	!qib	4000
-있	!qibb	4000
-잉	!qiq	4000
-잊	!qiu	4000
+잇	!qib	70%
+있	!qibb	70%
+잉	!qiq	70%
+잊	!qiu	70%
 잋	!qid
 잌	!qiz
 잍	!qie
-잎	!qix	4000
+잎	!qix	70%
 잏	!qiw
-자	!uk	4000
-작	!uky	4000
+자	!uk	70%
+작	!uky	70%
 잒	!ukyy
 잓	!ukyb
-잔	!ukl	4000
+잔	!ukl	70%
 잕	!uklu
-잖	!uklw	4000
-잗	!ukc	4000
-잘	!uks	4000
+잖	!uklw	70%
+잗	!ukc	70%
+잘	!uks	70%
 잙	!uksy
-잚	!ukso	4000
+잚	!ukso	70%
 잛	!uksa
 잜	!uksb
 잝	!ukse
 잞	!uksx
 잟	!uksw
-잠	!uko	4000
-잡	!uka	4000
+잠	!uko	70%
+잡	!uka	70%
 잢	!ukab
-잣	!ukb	4000
-잤	!ukbb	4000
-장	!ukq	4000
-잦	!uku	4000
+잣	!ukb	70%
+잤	!ukbb	70%
+장	!ukq	70%
+잦	!uku	70%
 잧	!ukd
 잨	!ukz
 잩	!uke
 잪	!ukx
 잫	!ukw
-재	!uh	4000
-잭	!uhy	4000
+재	!uh	70%
+잭	!uhy	70%
 잮	!uhyy
 잯	!uhyb
-잰	!uhl	4000
+잰	!uhl	70%
 잱	!uhlu
 잲	!uhlw
 잳	!uhc
-잴	!uhs	4000
+잴	!uhs	70%
 잵	!uhsy
 잶	!uhso
 잷	!uhsa
@@ -15909,27 +15909,27 @@ use_preset_vocabulary: false
 잹	!uhse
 잺	!uhsx
 잻	!uhsw
-잼	!uho	4000
-잽	!uha	4000
+잼	!uho	70%
+잽	!uha	70%
 잾	!uhab
-잿	!uhb	4000
-쟀	!uhbb	4000
-쟁	!uhq	4000
+잿	!uhb	70%
+쟀	!uhbb	70%
+쟁	!uhq	70%
 쟂	!uhu
 쟃	!uhd
 쟄	!uhz
 쟅	!uhe
 쟆	!uhx
 쟇	!uhw
-쟈	!uf	4000
-쟉	!ufy	4000
+쟈	!uf	70%
+쟉	!ufy	70%
 쟊	!ufyy
 쟋	!ufyb
-쟌	!ufl	4000
+쟌	!ufl	70%
 쟍	!uflu
-쟎	!uflw	4000
+쟎	!uflw	70%
 쟏	!ufc
-쟐	!ufs	4000
+쟐	!ufs	70%
 쟑	!ufsy
 쟒	!ufso
 쟓	!ufsa
@@ -15937,27 +15937,27 @@ use_preset_vocabulary: false
 쟕	!ufse
 쟖	!ufsx
 쟗	!ufsw
-쟘	!ufo	4000
+쟘	!ufo	70%
 쟙	!ufa
 쟚	!ufab
 쟛	!ufb
 쟜	!ufbb
-쟝	!ufq	4000
+쟝	!ufq	70%
 쟞	!ufu
 쟟	!ufd
 쟠	!ufz
 쟡	!ufe
 쟢	!ufx
 쟣	!ufw
-쟤	!uhh	4000
+쟤	!uhh	70%
 쟥	!uhhy
 쟦	!uhhyy
 쟧	!uhhyb
-쟨	!uhhl	4000
+쟨	!uhhl	70%
 쟩	!uhhlu
 쟪	!uhhlw
 쟫	!uhhc
-쟬	!uhhs	4000
+쟬	!uhhs	70%
 쟭	!uhhsy
 쟮	!uhhso
 쟯	!uhhsa
@@ -15978,43 +15978,43 @@ use_preset_vocabulary: false
 쟾	!uhhx
 쟿	!uhhw
 #30
-저	!uj	4000
-적	!ujy	4000
+저	!uj	70%
+적	!ujy	70%
 젂	!ujyy
 젃	!ujyb
-전	!ujl	4000
+전	!ujl	70%
 젅	!ujlu
 젆	!ujlw
 젇	!ujc
-절	!ujs	4000
+절	!ujs	70%
 젉	!ujsy
-젊	!ujso	4000
+젊	!ujso	70%
 젋	!ujsa
 젌	!ujsb
 젍	!ujse
 젎	!ujsx
 젏	!ujsw
-점	!ujo	4000
-접	!uja	4000
+점	!ujo	70%
+접	!uja	70%
 젒	!ujab
-젓	!ujb	4000
+젓	!ujb	70%
 젔	!ujbb
-정	!ujq	4000
-젖	!uju	4000
+정	!ujq	70%
+젖	!uju	70%
 젗	!ujd
 젘	!ujz
 젙	!uje
 젚	!ujx
 젛	!ujw
-제	!up	4000
-젝	!upy	4000
+제	!up	70%
+젝	!upy	70%
 젞	!upyy
 젟	!upyb
-젠	!upl	4000
+젠	!upl	70%
 젡	!uplu
 젢	!uplw
 젣	!upc
-젤	!ups	4000
+젤	!ups	70%
 젥	!upsy
 젦	!upso
 젧	!upsa
@@ -16022,27 +16022,27 @@ use_preset_vocabulary: false
 젩	!upse
 젪	!upsx
 젫	!upsw
-젬	!upo	4000
-젭	!upa	4000
+젬	!upo	70%
+젭	!upa	70%
 젮	!upab
-젯	!upb	4000
+젯	!upb	70%
 젰	!upbb
-젱	!upq	4000
+젱	!upq	70%
 젲	!upu
 젳	!upd
 젴	!upz
 젵	!upe
 젶	!upx
 젷	!upw
-져	!ug	4000
+져	!ug	70%
 젹	!ugy
 젺	!ugyy
 젻	!ugyb
-젼	!ugl	4000
+젼	!ugl	70%
 젽	!uglu
 젾	!uglw
 젿	!ugc
-졀	!ugs	4000
+졀	!ugs	70%
 졁	!ugsy
 졂	!ugso
 졃	!ugsa
@@ -16050,19 +16050,19 @@ use_preset_vocabulary: false
 졅	!ugse
 졆	!ugsx
 졇	!ugsw
-졈	!ugo	4000
-졉	!uga	4000
+졈	!ugo	70%
+졉	!uga	70%
 졊	!ugab
 졋	!ugb
-졌	!ugbb	4000
-졍	!ugq	4000
+졌	!ugbb	70%
+졍	!ugq	70%
 졎	!ugu
 졏	!ugd
 졐	!ugz
 졑	!uge
 졒	!ugx
 졓	!ugw
-졔	!upp	4000
+졔	!upp	70%
 졕	!uppy
 졖	!uppyy
 졗	!uppyb
@@ -16090,43 +16090,43 @@ use_preset_vocabulary: false
 졭	!uppe
 졮	!uppx
 졯	!uppw
-조	!un	4000
-족	!uny	4000
+조	!un	70%
+족	!uny	70%
 졲	!unyy
 졳	!unyb
-존	!unl	4000
+존	!unl	70%
 졵	!unlu
 졶	!unlw
 졷	!unc
-졸	!uns	4000
+졸	!uns	70%
 졹	!unsy
-졺	!unso	4000
+졺	!unso	70%
 졻	!unsa
 졼	!unsb
 졽	!unse
 졾	!unsx
 졿	!unsw
-좀	!uno	4000
-좁	!una	4000
+좀	!uno	70%
+좁	!una	70%
 좂	!unab
-좃	!unb	4000
+좃	!unb	70%
 좄	!unbb
-종	!unq	4000
-좆	!unu	4000
-좇	!und	4000
+종	!unq	70%
+좆	!unu	70%
+좇	!und	70%
 좈	!unz
 좉	!une
 좊	!unx
-좋	!unw	4000
-좌	!unk	4000
-좍	!unky	4000
+좋	!unw	70%
+좌	!unk	70%
+좍	!unky	70%
 좎	!unkyy
 좏	!unkyb
 좐	!unkl
 좑	!unklu
 좒	!unklw
 좓	!unkc
-좔	!unks	4000
+좔	!unks	70%
 좕	!unksy
 좖	!unkso
 좗	!unksa
@@ -16135,18 +16135,18 @@ use_preset_vocabulary: false
 좚	!unksx
 좛	!unksw
 좜	!unko
-좝	!unka	4000
+좝	!unka	70%
 좞	!unkab
-좟	!unkb	4000
+좟	!unkb	70%
 좠	!unkbb
-좡	!unkq	4000
+좡	!unkq	70%
 좢	!unku
 좣	!unkd
 좤	!unkz
 좥	!unke
 좦	!unkx
 좧	!unkw
-좨	!unh	4000
+좨	!unh	70%
 좩	!unhy
 좪	!unhyy
 좫	!unhyb
@@ -16166,23 +16166,23 @@ use_preset_vocabulary: false
 좹	!unha
 좺	!unhab
 좻	!unhb
-좼	!unhbb	4000
-좽	!unhq	4000
+좼	!unhbb	70%
+좽	!unhq	70%
 좾	!unhu
 좿	!unhd
 죀	!unhz
 죁	!unhe
 죂	!unhx
 죃	!unhw
-죄	!uni	4000
+죄	!uni	70%
 죅	!uniy
 죆	!uniyy
 죇	!uniyb
-죈	!unil	4000
+죈	!unil	70%
 죉	!unilu
 죊	!unilw
 죋	!unic
-죌	!unis	4000
+죌	!unis	70%
 죍	!unisy
 죎	!uniso
 죏	!unisa
@@ -16190,23 +16190,23 @@ use_preset_vocabulary: false
 죑	!unise
 죒	!unisx
 죓	!unisw
-죔	!unio	4000
-죕	!unia	4000
+죔	!unio	70%
+죕	!unia	70%
 죖	!uniab
-죗	!unib	4000
+죗	!unib	70%
 죘	!unibb
-죙	!uniq	4000
+죙	!uniq	70%
 죚	!uniu
 죛	!unid
 죜	!uniz
 죝	!unie
 죞	!unix
 죟	!uniw
-죠	!um	4000
-죡	!umy	4000
+죠	!um	70%
+죡	!umy	70%
 죢	!umyy
 죣	!umyb
-죤	!uml	4000
+죤	!uml	70%
 죥	!umlu
 죦	!umlw
 죧	!umc
@@ -16223,7 +16223,7 @@ use_preset_vocabulary: false
 죲	!umab
 죳	!umb
 죴	!umbb
-죵	!umq	4000
+죵	!umq	70%
 죶	!umu
 죷	!umd
 죸	!umz
@@ -16231,35 +16231,35 @@ use_preset_vocabulary: false
 죺	!umx
 죻	!umw
 주	!ut
-죽	!uty	4000
+죽	!uty	70%
 죾	!utyy
 죿	!utyb
 #31
-준	!utl	4000
+준	!utl	70%
 줁	!utlu
 줂	!utlw
 줃	!utc
-줄	!uts	4000
-줅	!utsy	4000
-줆	!utso	4000
+줄	!uts	70%
+줅	!utsy	70%
+줆	!utso	70%
 줇	!utsa
 줈	!utsb
 줉	!utse
 줊	!utsx
 줋	!utsw
-줌	!uto	4000
-줍	!uta	4000
+줌	!uto	70%
+줍	!uta	70%
 줎	!utab
-줏	!utb	4000
+줏	!utb	70%
 줐	!utbb
-중	!utq	4000
+중	!utq	70%
 줒	!utu
 줓	!utd
 줔	!utz
 줕	!ute
 줖	!utx
 줗	!utw
-줘	!utj	4000
+줘	!utj	70%
 줙	!utjy
 줚	!utjyy
 줛	!utjyb
@@ -16279,7 +16279,7 @@ use_preset_vocabulary: false
 줩	!utja
 줪	!utjab
 줫	!utjb
-줬	!utjbb	4000
+줬	!utjbb	70%
 줭	!utjq
 줮	!utju
 줯	!utjd
@@ -16287,7 +16287,7 @@ use_preset_vocabulary: false
 줱	!utje
 줲	!utjx
 줳	!utjw
-줴	!utp	4000
+줴	!utp	70%
 줵	!utpy
 줶	!utpyy
 줷	!utpyb
@@ -16315,15 +16315,15 @@ use_preset_vocabulary: false
 쥍	!utpe
 쥎	!utpx
 쥏	!utpw
-쥐	!uti	4000
-쥑	!utiy	4000
+쥐	!uti	70%
+쥑	!utiy	70%
 쥒	!utiyy
 쥓	!utiyb
-쥔	!util	4000
+쥔	!util	70%
 쥕	!utilu
 쥖	!utilw
 쥗	!utic
-쥘	!utis	4000
+쥘	!utis	70%
 쥙	!utisy
 쥚	!utiso
 쥛	!utisa
@@ -16331,10 +16331,10 @@ use_preset_vocabulary: false
 쥝	!utise
 쥞	!utisx
 쥟	!utisw
-쥠	!utio	4000
-쥡	!utia	4000
+쥠	!utio	70%
+쥡	!utia	70%
 쥢	!utiab
-쥣	!utib	4000
+쥣	!utib	70%
 쥤	!utibb
 쥥	!utiq
 쥦	!utiu
@@ -16343,15 +16343,15 @@ use_preset_vocabulary: false
 쥩	!utie
 쥪	!utix
 쥫	!utiw
-쥬	!ur	4000
+쥬	!ur	70%
 쥭	!ury
 쥮	!uryy
 쥯	!uryb
-쥰	!url	4000
+쥰	!url	70%
 쥱	!urlu
 쥲	!urlw
 쥳	!urc
-쥴	!urs	4000
+쥴	!urs	70%
 쥵	!ursy
 쥶	!urso
 쥷	!ursa
@@ -16359,7 +16359,7 @@ use_preset_vocabulary: false
 쥹	!urse
 쥺	!ursx
 쥻	!ursw
-쥼	!uro	4000
+쥼	!uro	70%
 쥽	!ura
 쥾	!urab
 쥿	!urb
@@ -16371,15 +16371,15 @@ use_preset_vocabulary: false
 즅	!ure
 즆	!urx
 즇	!urw
-즈	!uv	4000
-즉	!uvy	4000
+즈	!uv	70%
+즉	!uvy	70%
 즊	!uvyy
 즋	!uvyb
-즌	!uvl	4000
+즌	!uvl	70%
 즍	!uvlu
 즎	!uvlw
 즏	!uvc
-즐	!uvs	4000
+즐	!uvs	70%
 즑	!uvsy
 즒	!uvso
 즓	!uvsa
@@ -16387,12 +16387,12 @@ use_preset_vocabulary: false
 즕	!uvse
 즖	!uvsx
 즗	!uvsw
-즘	!uvo	4000
-즙	!uva	4000
+즘	!uvo	70%
+즙	!uva	70%
 즚	!uvab
-즛	!uvb	4000
+즛	!uvb	70%
 즜	!uvbb
-증	!uvq	4000
+증	!uvq	70%
 즞	!uvu
 즟	!uvd
 즠	!uvz
@@ -16427,72 +16427,72 @@ use_preset_vocabulary: false
 즽	!uvie
 즾	!uvix
 즿	!uviw
-지	!ui	4000
-직	!uiy	4000
+지	!ui	70%
+직	!uiy	70%
 짂	!uiyy
 짃	!uiyb
-진	!uil	4000
+진	!uil	70%
 짅	!uilu
 짆	!uilw
-짇	!uic	4000
-질	!uis	4000
+짇	!uic	70%
+질	!uis	70%
 짉	!uisy
-짊	!uiso	4000
+짊	!uiso	70%
 짋	!uisa
 짌	!uisb
 짍	!uise
 짎	!uisx
 짏	!uisw
-짐	!uio	4000
-집	!uia	4000
+짐	!uio	70%
+집	!uia	70%
 짒	!uiab
-짓	!uib	4000
+짓	!uib	70%
 짔	!uibb
-징	!uiq	4000
-짖	!uiu	4000
+징	!uiq	70%
+짖	!uiu	70%
 짗	!uid
 짘	!uiz
-짙	!uie	4000
-짚	!uix	4000
+짙	!uie	70%
+짚	!uix	70%
 짛	!uiw
-짜	!uuk	4000
-짝	!uuky	4000
+짜	!uuk	70%
+짝	!uuky	70%
 짞	!uukyy
 짟	!uukyb
-짠	!uukl	4000
+짠	!uukl	70%
 짡	!uuklu
-짢	!uuklw	4000
+짢	!uuklw	70%
 짣	!uukc
-짤	!uuks	4000
+짤	!uuks	70%
 짥	!uuksy
 짦	!uukso
-짧	!uuksa	4000
+짧	!uuksa	70%
 짨	!uuksb
 짩	!uukse
 짪	!uuksx
 짫	!uuksw
-짬	!uuko	4000
-짭	!uuka	4000
+짬	!uuko	70%
+짭	!uuka	70%
 짮	!uukab
-짯	!uukb	4000
-짰	!uukbb	4000
-짱	!uukq	4000
+짯	!uukb	70%
+짰	!uukbb	70%
+짱	!uukq	70%
 짲	!uuku
 짳	!uukd
 짴	!uukz
 짵	!uuke
 짶	!uukx
 짷	!uukw
-째	!uuh	4000
-짹	!uuhy	4000
+째	!uuh	70%
+짹	!uuhy	70%
 짺	!uuhyy
 짻	!uuhyb
-짼	!uuhl	4000
+짼	!uuhl	70%
 짽	!uuhlu
 짾	!uuhlw
 짿	!uuhc
 #32
-쨀	!uuhs	4000
+쨀	!uuhs	70%
 쨁	!uuhsy
 쨂	!uuhso
 쨃	!uuhsa
@@ -16500,23 +16500,23 @@ use_preset_vocabulary: false
 쨅	!uuhse
 쨆	!uuhsx
 쨇	!uuhsw
-쨈	!uuho	4000
-쨉	!uuha	4000
+쨈	!uuho	70%
+쨉	!uuha	70%
 쨊	!uuhab
-쨋	!uuhb	4000
-쨌	!uuhbb	4000
-쨍	!uuhq	4000
+쨋	!uuhb	70%
+쨌	!uuhbb	70%
+쨍	!uuhq	70%
 쨎	!uuhu
 쨏	!uuhd
 쨐	!uuhz
 쨑	!uuhe
 쨒	!uuhx
 쨓	!uuhw
-쨔	!uuf	4000
+쨔	!uuf	70%
 쨕	!uufy
 쨖	!uufyy
 쨗	!uufyb
-쨘	!uufl	4000
+쨘	!uufl	70%
 쨙	!uuflu
 쨚	!uuflw
 쨛	!uufc
@@ -16533,7 +16533,7 @@ use_preset_vocabulary: false
 쨦	!uufab
 쨧	!uufb
 쨨	!uufbb
-쨩	!uufq	4000
+쨩	!uufq	70%
 쨪	!uufu
 쨫	!uufd
 쨬	!uufz
@@ -16568,15 +16568,15 @@ use_preset_vocabulary: false
 쩉	!vuhe
 쩊	!vuhx
 쩋	!vuhw
-쩌	!uuj	4000
-쩍	!uujy	4000
+쩌	!uuj	70%
+쩍	!uujy	70%
 쩎	!uujyy
 쩏	!uujyb
-쩐	!uujl	4000
+쩐	!uujl	70%
 쩑	!uujlu
 쩒	!uujlw
 쩓	!uujc
-쩔	!uujs	4000
+쩔	!uujs	70%
 쩕	!uujsy
 쩖	!uujso
 쩗	!uujsa
@@ -16584,19 +16584,19 @@ use_preset_vocabulary: false
 쩙	!uujse
 쩚	!uujsx
 쩛	!uujsw
-쩜	!uujo	4000
-쩝	!uuja	4000
+쩜	!uujo	70%
+쩝	!uuja	70%
 쩞	!uujab
-쩟	!uujb	4000
-쩠	!uujbb	4000
-쩡	!uujq	4000
+쩟	!uujb	70%
+쩠	!uujbb	70%
+쩡	!uujq	70%
 쩢	!uuju
 쩣	!uujd
 쩤	!uujz
 쩥	!uuje
 쩦	!uujx
 쩧	!uujw
-쩨	!uup	4000
+쩨	!uup	70%
 쩩	!uupy
 쩪	!uupyy
 쩫	!uupyb
@@ -16617,14 +16617,14 @@ use_preset_vocabulary: false
 쩺	!uupab
 쩻	!uupb
 쩼	!uupbb
-쩽	!uupq	4000
+쩽	!uupq	70%
 쩾	!uupu
 쩿	!uupd
 쪀	!uupz
 쪁	!uupe
 쪂	!uupx
 쪃	!uupw
-쪄	!uug	4000
+쪄	!uug	70%
 쪅	!uugy
 쪆	!uugyy
 쪇	!uugyb
@@ -16644,7 +16644,7 @@ use_preset_vocabulary: false
 쪕	!uuga
 쪖	!uugab
 쪗	!uugb
-쪘	!uugbb	4000
+쪘	!uugbb	70%
 쪙	!uugq
 쪚	!uugu
 쪛	!uugd
@@ -16680,15 +16680,15 @@ use_preset_vocabulary: false
 쪹	!vupe
 쪺	!vupx
 쪻	!vupw
-쪼	!uun	4000
-쪽	!uuny	4000
+쪼	!uun	70%
+쪽	!uuny	70%
 쪾	!uunyy
 쪿	!uunyb
-쫀	!uunl	4000
+쫀	!uunl	70%
 쫁	!uunlu
 쫂	!uunlw
 쫃	!uunc
-쫄	!uuns	4000
+쫄	!uuns	70%
 쫅	!uunsy
 쫆	!uunso
 쫇	!uunsa
@@ -16696,27 +16696,27 @@ use_preset_vocabulary: false
 쫉	!uunse
 쫊	!uunsx
 쫋	!uunsw
-쫌	!uuno	4000
-쫍	!uuna	4000
+쫌	!uuno	70%
+쫍	!uuna	70%
 쫎	!uunab
-쫏	!uunb	4000
+쫏	!uunb	70%
 쫐	!uunbb
-쫑	!uunq	4000
+쫑	!uunq	70%
 쫒	!uunu
-쫓	!uund	4000
+쫓	!uund	70%
 쫔	!uunz
 쫕	!uune
 쫖	!uunx
 쫗	!uunw
-쫘	!uunk	4000
-쫙	!uunky	4000
+쫘	!uunk	70%
+쫙	!uunky	70%
 쫚	!uunkyy
 쫛	!uunkyb
 쫜	!uunkl
 쫝	!uunklu
 쫞	!uunklw
 쫟	!uunkc
-쫠	!uunks	4000
+쫠	!uunks	70%
 쫡	!uunksy
 쫢	!uunkso
 쫣	!uunksa
@@ -16728,7 +16728,7 @@ use_preset_vocabulary: false
 쫩	!uunka
 쫪	!uunkab
 쫫	!uunkb
-쫬	!uunkbb	4000
+쫬	!uunkbb	70%
 쫭	!uunkq
 쫮	!uunku
 쫯	!uunkd
@@ -16736,7 +16736,7 @@ use_preset_vocabulary: false
 쫱	!uunke
 쫲	!uunkx
 쫳	!uunkw
-쫴	!uunh	4000
+쫴	!uunh	70%
 쫵	!uunhy
 쫶	!uunhyy
 쫷	!uunhyb
@@ -16757,7 +16757,7 @@ use_preset_vocabulary: false
 쬅	!uunha
 쬆	!uunhab
 쬇	!uunhb
-쬈	!uunhbb	4000
+쬈	!uunhbb	70%
 쬉	!uunhq
 쬊	!uunhu
 쬋	!uunhd
@@ -16765,15 +16765,15 @@ use_preset_vocabulary: false
 쬍	!uunhe
 쬎	!uunhx
 쬏	!uunhw
-쬐	!uuni	4000
+쬐	!uuni	70%
 쬑	!uuniy
 쬒	!uuniyy
 쬓	!uuniyb
-쬔	!uunil	4000
+쬔	!uunil	70%
 쬕	!uunilu
 쬖	!uunilw
 쬗	!uunic
-쬘	!uunis	4000
+쬘	!uunis	70%
 쬙	!uunisy
 쬚	!uuniso
 쬛	!uunisa
@@ -16781,8 +16781,8 @@ use_preset_vocabulary: false
 쬝	!uunise
 쬞	!uunisx
 쬟	!uunisw
-쬠	!uunio	4000
-쬡	!uunia	4000
+쬠	!uunio	70%
+쬡	!uunia	70%
 쬢	!uuniab
 쬣	!uunib
 쬤	!uunibb
@@ -16814,22 +16814,22 @@ use_preset_vocabulary: false
 쬾	!uumab
 쬿	!uumb
 쭀	!uumbb
-쭁	!uumq	4000
+쭁	!uumq	70%
 쭂	!uumu
 쭃	!uumd
 쭄	!uumz
 쭅	!uume
 쭆	!uumx
 쭇	!uumw
-쭈	!uut	4000
-쭉	!uuty	4000
+쭈	!uut	70%
+쭉	!uuty	70%
 쭊	!uutyy
 쭋	!uutyb
-쭌	!uutl	4000
+쭌	!uutl	70%
 쭍	!uutlu
 쭎	!uutlw
 쭏	!uutc
-쭐	!uuts	4000
+쭐	!uuts	70%
 쭑	!uutsy
 쭒	!uutso
 쭓	!uutsa
@@ -16837,19 +16837,19 @@ use_preset_vocabulary: false
 쭕	!uutse
 쭖	!uutsx
 쭗	!uutsw
-쭘	!uuto	4000
-쭙	!uuta	4000
+쭘	!uuto	70%
+쭙	!uuta	70%
 쭚	!uutab
 쭛	!uutb
 쭜	!uutbb
-쭝	!uutq	4000
+쭝	!uutq	70%
 쭞	!uutu
 쭟	!uutd
 쭠	!uutz
 쭡	!uute
 쭢	!uutx
 쭣	!uutw
-쭤	!uutj	4000
+쭤	!uutj	70%
 쭥	!uutjy
 쭦	!uutjyy
 쭧	!uutjyb
@@ -16869,8 +16869,8 @@ use_preset_vocabulary: false
 쭵	!uutja
 쭶	!uutjab
 쭷	!uutjb
-쭸	!uutjbb	4000
-쭹	!uutjq	4000
+쭸	!uutjbb	70%
+쭹	!uutjq	70%
 쭺	!uutju
 쭻	!uutjd
 쭼	!uutjz
@@ -16905,7 +16905,7 @@ use_preset_vocabulary: false
 쮙	!uutpe
 쮚	!uutpx
 쮛	!uutpw
-쮜	!uuti	4000
+쮜	!uuti	70%
 쮝	!uutiy
 쮞	!uutiyy
 쮟	!uutiyb
@@ -16933,7 +16933,7 @@ use_preset_vocabulary: false
 쮵	!uutie
 쮶	!uutix
 쮷	!uutiw
-쮸	!uur	4000
+쮸	!uur	70%
 쮹	!uury
 쮺	!uuryy
 쮻	!uuryb
@@ -16961,7 +16961,7 @@ use_preset_vocabulary: false
 쯑	!uure
 쯒	!uurx
 쯓	!uurw
-쯔	!uuv	4000
+쯔	!uuv	70%
 쯕	!uuvy
 쯖	!uuvyy
 쯗	!uuvyb
@@ -16977,12 +16977,12 @@ use_preset_vocabulary: false
 쯡	!uuvse
 쯢	!uuvsx
 쯣	!uuvsw
-쯤	!uuvo	4000
+쯤	!uuvo	70%
 쯥	!uuva
 쯦	!uuvab
-쯧	!uuvb	4000
+쯧	!uuvb	70%
 쯨	!uuvbb
-쯩	!uuvq	4000
+쯩	!uuvq	70%
 쯪	!uuvu
 쯫	!uuvd
 쯬	!uuvz
@@ -17018,15 +17018,15 @@ use_preset_vocabulary: false
 찉	!uuvie
 찊	!uuvix
 찋	!uuviw
-찌	!uui	4000
-찍	!uuiy	4000
+찌	!uui	70%
+찍	!uuiy	70%
 찎	!uuiyy
 찏	!uuiyb
-찐	!uuil	4000
+찐	!uuil	70%
 찑	!uuilu
 찒	!uuilw
 찓	!uuic
-찔	!uuis	4000
+찔	!uuis	70%
 찕	!uuisy
 찖	!uuiso
 찗	!uuisa
@@ -17034,27 +17034,27 @@ use_preset_vocabulary: false
 찙	!uuise
 찚	!uuisx
 찛	!uuisw
-찜	!uuio	4000
-찝	!uuia	4000
+찜	!uuio	70%
+찝	!uuia	70%
 찞	!uuiab
 찟	!uuib
 찠	!uuibb
-찡	!uuiq	4000
-찢	!uuiu	4000
+찡	!uuiq	70%
+찢	!uuiu	70%
 찣	!uuid
 찤	!uuiz
 찥	!uuie
 찦	!uuix
-찧	!uuiw	4000
-차	!dk	4000
-착	!dky	4000
+찧	!uuiw	70%
+차	!dk	70%
+착	!dky	70%
 찪	!dkyy
 찫	!dkyb
-찬	!dkl	4000
+찬	!dkl	70%
 찭	!dklu
-찮	!dklw	4000
+찮	!dklw	70%
 찯	!dkc
-찰	!dks	4000
+찰	!dks	70%
 찱	!dksy
 찲	!dkso
 찳	!dksa
@@ -17062,27 +17062,27 @@ use_preset_vocabulary: false
 찵	!dkse
 찶	!dksx
 찷	!dksw
-참	!dko	4000
-찹	!dka	4000
+참	!dko	70%
+찹	!dka	70%
 찺	!dkab
-찻	!dkb	4000
-찼	!dkbb	4000
-창	!dkq	4000
-찾	!dku	4000
+찻	!dkb	70%
+찼	!dkbb	70%
+창	!dkq	70%
+찾	!dku	70%
 찿	!dkd
 챀	!dkz
 챁	!dke
 챂	!dkx
 챃	!dkw
-채	!dh	4000
-책	!dhy	4000
+채	!dh	70%
+책	!dhy	70%
 챆	!dhyy
 챇	!dhyb
-챈	!dhl	4000
+챈	!dhl	70%
 챉	!dhlu
 챊	!dhlw
 챋	!dhc
-챌	!dhs	4000
+챌	!dhs	70%
 챍	!dhsy
 챎	!dhso
 챏	!dhsa
@@ -17090,27 +17090,27 @@ use_preset_vocabulary: false
 챑	!dhse
 챒	!dhsx
 챓	!dhsw
-챔	!dho	4000
-챕	!dha	4000
+챔	!dho	70%
+챕	!dha	70%
 챖	!dhab
-챗	!dhb	4000
-챘	!dhbb	4000
-챙	!dhq	4000
+챗	!dhb	70%
+챘	!dhbb	70%
+챙	!dhq	70%
 챚	!dhu
 챛	!dhd
 챜	!dhz
 챝	!dhe
 챞	!dhx
 챟	!dhw
-챠	!df	4000
+챠	!df	70%
 챡	!dfy
 챢	!dfyy
 챣	!dfyb
-챤	!dfl	4000
+챤	!dfl	70%
 챥	!dflu
-챦	!dflw	4000
+챦	!dflw	70%
 챧	!dfc
-챨	!dfs	4000
+챨	!dfs	70%
 챩	!dfsy
 챪	!dfso
 챫	!dfsa
@@ -17118,12 +17118,12 @@ use_preset_vocabulary: false
 챭	!dfse
 챮	!dfsx
 챯	!dfsw
-챰	!dfo	4000
+챰	!dfo	70%
 챱	!dfa
 챲	!dfab
 챳	!dfb
 챴	!dfbb
-챵	!dfq	4000
+챵	!dfq	70%
 챶	!dfu
 챷	!dfd
 챸	!dfz
@@ -17158,15 +17158,15 @@ use_preset_vocabulary: false
 첕	!dhhe
 첖	!dhhx
 첗	!dhhw
-처	!dj	4000
-척	!djy	4000
+처	!dj	70%
+척	!djy	70%
 첚	!djyy
 첛	!djyb
-천	!djl	4000
+천	!djl	70%
 첝	!djlu
 첞	!djlw
 첟	!djc
-철	!djs	4000
+철	!djs	70%
 첡	!djsy
 첢	!djso
 첣	!djsa
@@ -17174,27 +17174,27 @@ use_preset_vocabulary: false
 첥	!djse
 첦	!djsx
 첧	!djsw
-첨	!djo	4000
-첩	!dja	4000
+첨	!djo	70%
+첩	!dja	70%
 첪	!djab
-첫	!djb	4000
-첬	!djbb	4000
-청	!djq	4000
+첫	!djb	70%
+첬	!djbb	70%
+청	!djq	70%
 첮	!dju
 첯	!djd
 첰	!djz
 첱	!dje
 첲	!djx
 첳	!djw
-체	!dp	4000
-첵	!dpy	4000
+체	!dp	70%
+첵	!dpy	70%
 첶	!dpyy
 첷	!dpyb
-첸	!dpl	4000
+첸	!dpl	70%
 첹	!dplu
 첺	!dplw
 첻	!dpc
-첼	!dps	4000
+첼	!dps	70%
 첽	!dpsy
 첾	!dpso
 첿	!dpsa
@@ -17202,23 +17202,23 @@ use_preset_vocabulary: false
 쳁	!dpse
 쳂	!dpsx
 쳃	!dpsw
-쳄	!dpo	4000
-쳅	!dpa	4000
+쳄	!dpo	70%
+쳅	!dpa	70%
 쳆	!dpab
-쳇	!dpb	4000
+쳇	!dpb	70%
 쳈	!dpbb
-쳉	!dpq	4000
+쳉	!dpq	70%
 쳊	!dpu
 쳋	!dpd
 쳌	!dpz
 쳍	!dpe
 쳎	!dpx
 쳏	!dpw
-쳐	!dg	4000
+쳐	!dg	70%
 쳑	!dgy
 쳒	!dgyy
 쳓	!dgyb
-쳔	!dgl	4000
+쳔	!dgl	70%
 쳕	!dglu
 쳖	!dglw
 쳗	!dgc
@@ -17234,7 +17234,7 @@ use_preset_vocabulary: false
 쳡	!dga
 쳢	!dgab
 쳣	!dgb
-쳤	!dgbb	4000
+쳤	!dgbb	70%
 쳥	!dgq
 쳦	!dgu
 쳧	!dgd
@@ -17242,11 +17242,11 @@ use_preset_vocabulary: false
 쳩	!dge
 쳪	!dgx
 쳫	!dgw
-쳬	!dpp	4000
+쳬	!dpp	70%
 쳭	!dppy
 쳮	!dppyy
 쳯	!dppyb
-쳰	!dppl	4000
+쳰	!dppl	70%
 쳱	!dpplu
 쳲	!dpplw
 쳳	!dppc
@@ -17264,22 +17264,22 @@ use_preset_vocabulary: false
 쳿	!dppb
 #35
 촀	!dppbb
-촁	!dppq	4000
+촁	!dppq	70%
 촂	!dppu
 촃	!dppd
 촄	!dppz
 촅	!dppe
 촆	!dppx
 촇	!dppw
-초	!dn	4000
-촉	!dny	4000
+초	!dn	70%
+촉	!dny	70%
 촊	!dnyy
 촋	!dnyb
-촌	!dnl	4000
+촌	!dnl	70%
 촍	!dnlu
 촎	!dnlw
 촏	!dnc
-촐	!dns	4000
+촐	!dns	70%
 촑	!dnsy
 촒	!dnso
 촓	!dnsa
@@ -17287,27 +17287,27 @@ use_preset_vocabulary: false
 촕	!dnse
 촖	!dnsx
 촗	!dnsw
-촘	!dno	4000
-촙	!dna	4000
+촘	!dno	70%
+촙	!dna	70%
 촚	!dnab
-촛	!dnb	4000
+촛	!dnb	70%
 촜	!dnbb
-총	!dnq	4000
+총	!dnq	70%
 촞	!dnu
 촟	!dnd
 촠	!dnz
 촡	!dne
 촢	!dnx
 촣	!dnw
-촤	!dnk	4000
+촤	!dnk	70%
 촥	!dnky
 촦	!dnkyy
 촧	!dnkyb
-촨	!dnkl	4000
+촨	!dnkl	70%
 촩	!dnklu
 촪	!dnklw
 촫	!dnkc
-촬	!dnks	4000
+촬	!dnks	70%
 촭	!dnksy
 촮	!dnkso
 촯	!dnksa
@@ -17320,7 +17320,7 @@ use_preset_vocabulary: false
 촶	!dnkab
 촷	!dnkb
 촸	!dnkbb
-촹	!dnkq	4000
+촹	!dnkq	70%
 촺	!dnku
 촻	!dnkd
 촼	!dnkz
@@ -17355,15 +17355,15 @@ use_preset_vocabulary: false
 쵙	!dnhe
 쵚	!dnhx
 쵛	!dnhw
-최	!dni	4000
+최	!dni	70%
 쵝	!dniy
 쵞	!dniyy
 쵟	!dniyb
-쵠	!dnil	4000
+쵠	!dnil	70%
 쵡	!dnilu
 쵢	!dnilw
 쵣	!dnic
-쵤	!dnis	4000
+쵤	!dnis	70%
 쵥	!dnisy
 쵦	!dniso
 쵧	!dnisa
@@ -17371,19 +17371,19 @@ use_preset_vocabulary: false
 쵩	!dnise
 쵪	!dnisx
 쵫	!dnisw
-쵬	!dnio	4000
-쵭	!dnia	4000
+쵬	!dnio	70%
+쵭	!dnia	70%
 쵮	!dniab
-쵯	!dnib	4000
+쵯	!dnib	70%
 쵰	!dnibb
-쵱	!dniq	4000
+쵱	!dniq	70%
 쵲	!dniu
 쵳	!dnid
 쵴	!dniz
 쵵	!dnie
 쵶	!dnix
 쵷	!dniw
-쵸	!dm	4000
+쵸	!dm	70%
 쵹	!dmy
 쵺	!dmyy
 쵻	!dmyb
@@ -17399,7 +17399,7 @@ use_preset_vocabulary: false
 춅	!dmse
 춆	!dmsx
 춇	!dmsw
-춈	!dmo	4000
+춈	!dmo	70%
 춉	!dma
 춊	!dmab
 춋	!dmb
@@ -17411,15 +17411,15 @@ use_preset_vocabulary: false
 춑	!dme
 춒	!dmx
 춓	!dmw
-추	!dt	4000
-축	!dty	4000
+추	!dt	70%
+축	!dty	70%
 춖	!dtyy
 춗	!dtyb
-춘	!dtl	4000
+춘	!dtl	70%
 춙	!dtlu
 춚	!dtlw
 춛	!dtc
-출	!dts	4000
+출	!dts	70%
 춝	!dtsy
 춞	!dtso
 춟	!dtsa
@@ -17427,19 +17427,19 @@ use_preset_vocabulary: false
 춡	!dtse
 춢	!dtsx
 춣	!dtsw
-춤	!dto	4000
-춥	!dta	4000
+춤	!dto	70%
+춥	!dta	70%
 춦	!dtab
-춧	!dtb	4000
+춧	!dtb	70%
 춨	!dtbb
-충	!dtq	4000
+충	!dtq	70%
 춪	!dtu
 춫	!dtd
 춬	!dtz
 춭	!dte
 춮	!dtx
 춯	!dtw
-춰	!dtj	4000
+춰	!dtj	70%
 춱	!dtjy
 춲	!dtjyy
 춳	!dtjyb
@@ -17459,7 +17459,7 @@ use_preset_vocabulary: false
 췁	!dtja
 췂	!dtjab
 췃	!dtjb
-췄	!dtjbb	4000
+췄	!dtjbb	70%
 췅	!dtjq
 췆	!dtju
 췇	!dtjd
@@ -17467,11 +17467,11 @@ use_preset_vocabulary: false
 췉	!dtje
 췊	!dtjx
 췋	!dtjw
-췌	!dtp	4000
+췌	!dtp	70%
 췍	!dtpy
 췎	!dtpyy
 췏	!dtpyb
-췐	!dtpl	4000
+췐	!dtpl	70%
 췑	!dtplu
 췒	!dtplw
 췓	!dtpc
@@ -17495,15 +17495,15 @@ use_preset_vocabulary: false
 췥	!dtpe
 췦	!dtpx
 췧	!dtpw
-취	!dti	4000
+취	!dti	70%
 췩	!dtiy
 췪	!dtiyy
 췫	!dtiyb
-췬	!dtil	4000
+췬	!dtil	70%
 췭	!dtilu
 췮	!dtilw
 췯	!dtic
-췰	!dtis	4000
+췰	!dtis	70%
 췱	!dtisy
 췲	!dtiso
 췳	!dtisa
@@ -17511,12 +17511,12 @@ use_preset_vocabulary: false
 췵	!dtise
 췶	!dtisx
 췷	!dtisw
-췸	!dtio	4000
-췹	!dtia	4000
+췸	!dtio	70%
+췹	!dtia	70%
 췺	!dtiab
-췻	!dtib	4000
+췻	!dtib	70%
 췼	!dtibb
-췽	!dtiq	4000
+췽	!dtiq	70%
 췾	!dtiu
 췿	!dtid
 #36
@@ -17524,15 +17524,15 @@ use_preset_vocabulary: false
 츁	!dtie
 츂	!dtix
 츃	!dtiw
-츄	!dr	4000
+츄	!dr	70%
 츅	!dry
 츆	!dryy
 츇	!dryb
-츈	!drl	4000
+츈	!drl	70%
 츉	!drlu
 츊	!drlw
 츋	!drc
-츌	!drs	4000
+츌	!drs	70%
 츍	!drsy
 츎	!drso
 츏	!drsa
@@ -17540,27 +17540,27 @@ use_preset_vocabulary: false
 츑	!drse
 츒	!drsx
 츓	!drsw
-츔	!dro	4000
+츔	!dro	70%
 츕	!dra
 츖	!drab
 츗	!drb
 츘	!drbb
-츙	!drq	4000
+츙	!drq	70%
 츚	!dru
 츛	!drd
 츜	!drz
 츝	!dre
 츞	!drx
 츟	!drw
-츠	!dv	4000
-측	!dvy	4000
+츠	!dv	70%
+측	!dvy	70%
 츢	!dvyy
 츣	!dvyb
-츤	!dvl	4000
+츤	!dvl	70%
 츥	!dvlu
 츦	!dvlw
 츧	!dvc
-츨	!dvs	4000
+츨	!dvs	70%
 츩	!dvsy
 츪	!dvso
 츫	!dvsa
@@ -17568,12 +17568,12 @@ use_preset_vocabulary: false
 츭	!dvse
 츮	!dvsx
 츯	!dvsw
-츰	!dvo	4000
-츱	!dva	4000
+츰	!dvo	70%
+츱	!dva	70%
 츲	!dvab
-츳	!dvb	4000
+츳	!dvb	70%
 츴	!dvbb
-층	!dvq	4000
+층	!dvq	70%
 츶	!dvu
 츷	!dvd
 츸	!dvz
@@ -17608,43 +17608,43 @@ use_preset_vocabulary: false
 칕	!dvie
 칖	!dvix
 칗	!dviw
-치	!di	4000
-칙	!diy	4000
+치	!di	70%
+칙	!diy	70%
 칚	!diyy
 칛	!diyb
-친	!dil	4000
+친	!dil	70%
 칝	!dilu
 칞	!dilw
-칟	!dic	4000
-칠	!dis	4000
-칡	!disy	4000
+칟	!dic	70%
+칠	!dis	70%
+칡	!disy	70%
 칢	!diso
 칣	!disa
 칤	!disb
 칥	!dise
 칦	!disx
 칧	!disw
-침	!dio	4000
-칩	!dia	4000
+침	!dio	70%
+칩	!dia	70%
 칪	!diab
-칫	!dib	4000
+칫	!dib	70%
 칬	!dibb
-칭	!diq	4000
+칭	!diq	70%
 칮	!diu
 칯	!did
 칰	!diz
 칱	!die
 칲	!dix
 칳	!diw
-카	!zk	4000
-칵	!zky	4000
+카	!zk	70%
+칵	!zky	70%
 칶	!zkyy
 칷	!zkyb
-칸	!zkl	4000
+칸	!zkl	70%
 칹	!zklu
 칺	!zklw
 칻	!zkc
-칼	!zks	4000
+칼	!zks	70%
 칽	!zksy
 칾	!zkso
 칿	!zksa
@@ -17652,27 +17652,27 @@ use_preset_vocabulary: false
 캁	!zkse
 캂	!zksx
 캃	!zksw
-캄	!zko	4000
-캅	!zka	4000
+캄	!zko	70%
+캅	!zka	70%
 캆	!zkab
-캇	!zkb	4000
+캇	!zkb	70%
 캈	!zkbb
-캉	!zkq	4000
+캉	!zkq	70%
 캊	!zku
 캋	!zkd
 캌	!zkz
 캍	!zke
 캎	!zkx
 캏	!zkw
-캐	!zh	4000
-캑	!zhy	4000
+캐	!zh	70%
+캑	!zhy	70%
 캒	!zhyy
 캓	!zhyb
-캔	!zhl	4000
+캔	!zhl	70%
 캕	!zhlu
 캖	!zhlw
 캗	!zhc
-캘	!zhs	4000
+캘	!zhs	70%
 캙	!zhsy
 캚	!zhso
 캛	!zhsa
@@ -17680,20 +17680,20 @@ use_preset_vocabulary: false
 캝	!zhse
 캞	!zhsx
 캟	!zhsw
-캠	!zho	4000
-캡	!zha	4000
+캠	!zho	70%
+캡	!zha	70%
 캢	!zhab
-캣	!zhb	4000
-캤	!zhbb	4000
-캥	!zhq	4000
+캣	!zhb	70%
+캤	!zhbb	70%
+캥	!zhq	70%
 캦	!zhu
 캧	!zhd
 캨	!zhz
 캩	!zhe
 캪	!zhx
 캫	!zhw
-캬	!zf	4000
-캭	!zfy	4000
+캬	!zf	70%
+캭	!zfy	70%
 캮	!zfyy
 캯	!zfyb
 캰	!zfl
@@ -17713,7 +17713,7 @@ use_preset_vocabulary: false
 캾	!zfab
 캿	!zfb
 컀	!zfbb
-컁	!zfq	4000
+컁	!zfq	70%
 컂	!zfu
 컃	!zfd
 컄	!zfz
@@ -17748,15 +17748,15 @@ use_preset_vocabulary: false
 컡	!zhhe
 컢	!zhhx
 컣	!zhhw
-커	!zj	4000
-컥	!zjy	4000
+커	!zj	70%
+컥	!zjy	70%
 컦	!zjyy
 컧	!zjyb
-컨	!zjl	4000
+컨	!zjl	70%
 컩	!zjlu
 컪	!zjlw
-컫	!zjc	4000
-컬	!zjs	4000
+컫	!zjc	70%
+컬	!zjs	70%
 컭	!zjsy
 컮	!zjso
 컯	!zjsa
@@ -17764,12 +17764,12 @@ use_preset_vocabulary: false
 컱	!zjse
 컲	!zjsx
 컳	!zjsw
-컴	!zjo	4000
-컵	!zja	4000
+컴	!zjo	70%
+컵	!zja	70%
 컶	!zjab
-컷	!zjb	4000
-컸	!zjbb	4000
-컹	!zjq	4000
+컷	!zjb	70%
+컸	!zjbb	70%
+컹	!zjq	70%
 컺	!zju
 컻	!zjd
 컼	!zjz
@@ -17777,15 +17777,15 @@ use_preset_vocabulary: false
 컾	!zjx
 컿	!zjw
 #37
-케	!zp	4000
-켁	!zpy	4000
+케	!zp	70%
+켁	!zpy	70%
 켂	!zpyy
 켃	!zpyb
-켄	!zpl	4000
+켄	!zpl	70%
 켅	!zplu
 켆	!zplw
 켇	!zpc
-켈	!zps	4000
+켈	!zps	70%
 켉	!zpsy
 켊	!zpso
 켋	!zpsa
@@ -17793,27 +17793,27 @@ use_preset_vocabulary: false
 켍	!zpse
 켎	!zpsx
 켏	!zpsw
-켐	!zpo	4000
-켑	!zpa	4000
+켐	!zpo	70%
+켑	!zpa	70%
 켒	!zpab
-켓	!zpb	4000
+켓	!zpb	70%
 켔	!zpbb
-켕	!zpq	4000
+켕	!zpq	70%
 켖	!zpu
 켗	!zpd
 켘	!zpz
 켙	!zpe
 켚	!zpx
 켛	!zpw
-켜	!zg	4000
+켜	!zg	70%
 켝	!zgy
 켞	!zgyy
 켟	!zgyb
-켠	!zgl	4000
+켠	!zgl	70%
 켡	!zglu
 켢	!zglw
 켣	!zgc
-켤	!zgs	4000
+켤	!zgs	70%
 켥	!zgsy
 켦	!zgso
 켧	!zgsa
@@ -17821,19 +17821,19 @@ use_preset_vocabulary: false
 켩	!zgse
 켪	!zgsx
 켫	!zgsw
-켬	!zgo	4000
-켭	!zga	4000
+켬	!zgo	70%
+켭	!zga	70%
 켮	!zgab
-켯	!zgb	4000
-켰	!zgbb	4000
-켱	!zgq	4000
+켯	!zgb	70%
+켰	!zgbb	70%
+켱	!zgq	70%
 켲	!zgu
 켳	!zgd
 켴	!zgz
 켵	!zge
 켶	!zgx
 켷	!zgw
-켸	!zpp	4000
+켸	!zpp	70%
 켹	!zppy
 켺	!zppyy
 켻	!zppyb
@@ -17861,15 +17861,15 @@ use_preset_vocabulary: false
 콑	!zppe
 콒	!zppx
 콓	!zppw
-코	!zn	4000
-콕	!zny	4000
+코	!zn	70%
+콕	!zny	70%
 콖	!znyy
 콗	!znyb
-콘	!znl	4000
+콘	!znl	70%
 콙	!znlu
 콚	!znlw
 콛	!znc
-콜	!zns	4000
+콜	!zns	70%
 콝	!znsy
 콞	!znso
 콟	!znsa
@@ -17877,27 +17877,27 @@ use_preset_vocabulary: false
 콡	!znse
 콢	!znsx
 콣	!znsw
-콤	!zno	4000
-콥	!zna	4000
+콤	!zno	70%
+콥	!zna	70%
 콦	!znab
-콧	!znb	4000
+콧	!znb	70%
 콨	!znbb
-콩	!znq	4000
+콩	!znq	70%
 콪	!znu
 콫	!znd
 콬	!znz
 콭	!zne
 콮	!znx
 콯	!znw
-콰	!znk	4000
-콱	!znky	4000
+콰	!znk	70%
+콱	!znky	70%
 콲	!znkyy
 콳	!znkyb
-콴	!znkl	4000
+콴	!znkl	70%
 콵	!znklu
 콶	!znklw
 콷	!znkc
-콸	!znks	4000
+콸	!znks	70%
 콹	!znksy
 콺	!znkso
 콻	!znksa
@@ -17905,19 +17905,19 @@ use_preset_vocabulary: false
 콽	!znkse
 콾	!znksx
 콿	!znksw
-쾀	!znko	4000
+쾀	!znko	70%
 쾁	!znka
 쾂	!znkab
 쾃	!znkb
 쾄	!znkbb
-쾅	!znkq	4000
+쾅	!znkq	70%
 쾆	!znku
 쾇	!znkd
 쾈	!znkz
 쾉	!znke
 쾊	!znkx
 쾋	!znkw
-쾌	!znh	4000
+쾌	!znh	70%
 쾍	!znhy
 쾎	!znhyy
 쾏	!znhyb
@@ -17938,14 +17938,14 @@ use_preset_vocabulary: false
 쾞	!znhab
 쾟	!znhb
 쾠	!znhbb
-쾡	!znhq	4000
+쾡	!znhq	70%
 쾢	!znhu
 쾣	!znhd
 쾤	!znhz
 쾥	!znhe
 쾦	!znhx
 쾧	!znhw
-쾨	!zni	4000
+쾨	!zni	70%
 쾩	!zniy
 쾪	!zniyy
 쾫	!zniyb
@@ -17953,7 +17953,7 @@ use_preset_vocabulary: false
 쾭	!znilu
 쾮	!znilw
 쾯	!znic
-쾰	!znis	4000
+쾰	!znis	70%
 쾱	!znisy
 쾲	!zniso
 쾳	!znisa
@@ -17973,7 +17973,7 @@ use_preset_vocabulary: false
 쿁	!znie
 쿂	!znix
 쿃	!zniw
-쿄	!zm	4000
+쿄	!zm	70%
 쿅	!zmy
 쿆	!zmyy
 쿇	!zmyb
@@ -18001,15 +18001,15 @@ use_preset_vocabulary: false
 쿝	!zme
 쿞	!zmx
 쿟	!zmw
-쿠	!zt	4000
-쿡	!zty	4000
+쿠	!zt	70%
+쿡	!zty	70%
 쿢	!ztyy
 쿣	!ztyb
-쿤	!ztl	4000
+쿤	!ztl	70%
 쿥	!ztlu
 쿦	!ztlw
 쿧	!ztc
-쿨	!zts	4000
+쿨	!zts	70%
 쿩	!ztsy
 쿪	!ztso
 쿫	!ztsa
@@ -18017,28 +18017,28 @@ use_preset_vocabulary: false
 쿭	!ztse
 쿮	!ztsx
 쿯	!ztsw
-쿰	!zto	4000
-쿱	!zta	4000
+쿰	!zto	70%
+쿱	!zta	70%
 쿲	!ztab
-쿳	!ztb	4000
+쿳	!ztb	70%
 쿴	!ztbb
-쿵	!ztq	4000
+쿵	!ztq	70%
 쿶	!ztu
 쿷	!ztd
 쿸	!ztz
 쿹	!zte
 쿺	!ztx
 쿻	!ztw
-쿼	!ztj	4000
+쿼	!ztj	70%
 쿽	!ztjy
 쿾	!ztjyy
 쿿	!ztjyb
 #38
-퀀	!ztjl	4000
+퀀	!ztjl	70%
 퀁	!ztjlu
 퀂	!ztjlw
 퀃	!ztjc
-퀄	!ztjs	4000
+퀄	!ztjs	70%
 퀅	!ztjsy
 퀆	!ztjso
 퀇	!ztjsa
@@ -18051,14 +18051,14 @@ use_preset_vocabulary: false
 퀎	!ztjab
 퀏	!ztjb
 퀐	!ztjbb
-퀑	!ztjq	4000
+퀑	!ztjq	70%
 퀒	!ztju
 퀓	!ztjd
 퀔	!ztjz
 퀕	!ztje
 퀖	!ztjx
 퀗	!ztjw
-퀘	!ztp	4000
+퀘	!ztp	70%
 퀙	!ztpy
 퀚	!ztpyy
 퀛	!ztpyb
@@ -18079,22 +18079,22 @@ use_preset_vocabulary: false
 퀪	!ztpab
 퀫	!ztpb
 퀬	!ztpbb
-퀭	!ztpq	4000
+퀭	!ztpq	70%
 퀮	!ztpu
 퀯	!ztpd
 퀰	!ztpz
 퀱	!ztpe
 퀲	!ztpx
 퀳	!ztpw
-퀴	!zti	4000
-퀵	!ztiy	4000
+퀴	!zti	70%
+퀵	!ztiy	70%
 퀶	!ztiyy
 퀷	!ztiyb
-퀸	!ztil	4000
+퀸	!ztil	70%
 퀹	!ztilu
 퀺	!ztilw
 퀻	!ztic
-퀼	!ztis	4000
+퀼	!ztis	70%
 퀽	!ztisy
 퀾	!ztiso
 퀿	!ztisa
@@ -18102,27 +18102,27 @@ use_preset_vocabulary: false
 큁	!ztise
 큂	!ztisx
 큃	!ztisw
-큄	!ztio	4000
-큅	!ztia	4000
+큄	!ztio	70%
+큅	!ztia	70%
 큆	!ztiab
-큇	!ztib	4000
+큇	!ztib	70%
 큈	!ztibb
-큉	!ztiq	4000
+큉	!ztiq	70%
 큊	!ztiu
 큋	!ztid
 큌	!ztiz
 큍	!ztie
 큎	!ztix
 큏	!ztiw
-큐	!zr	4000
+큐	!zr	70%
 큑	!zry
 큒	!zryy
 큓	!zryb
-큔	!zrl	4000
+큔	!zrl	70%
 큕	!zrlu
 큖	!zrlw
 큗	!zrc
-큘	!zrs	4000
+큘	!zrs	70%
 큙	!zrsy
 큚	!zrso
 큛	!zrsa
@@ -18130,7 +18130,7 @@ use_preset_vocabulary: false
 큝	!zrse
 큞	!zrsx
 큟	!zrsw
-큠	!zro	4000
+큠	!zro	70%
 큡	!zra
 큢	!zrab
 큣	!zrb
@@ -18142,15 +18142,15 @@ use_preset_vocabulary: false
 큩	!zre
 큪	!zrx
 큫	!zrw
-크	!zv	4000
-큭	!zvy	4000
+크	!zv	70%
+큭	!zvy	70%
 큮	!zvyy
 큯	!zvyb
-큰	!zvl	4000
+큰	!zvl	70%
 큱	!zvlu
 큲	!zvlw
 큳	!zvc
-클	!zvs	4000
+클	!zvs	70%
 큵	!zvsy
 큶	!zvso
 큷	!zvsa
@@ -18158,12 +18158,12 @@ use_preset_vocabulary: false
 큹	!zvse
 큺	!zvsx
 큻	!zvsw
-큼	!zvo	4000
-큽	!zva	4000
+큼	!zvo	70%
+큽	!zva	70%
 큾	!zvab
 큿	!zvb
 킀	!zvbb
-킁	!zvq	4000
+킁	!zvq	70%
 킂	!zvu
 킃	!zvd
 킄	!zvz
@@ -18198,15 +18198,15 @@ use_preset_vocabulary: false
 킡	!zvie
 킢	!zvix
 킣	!zviw
-키	!zi	4000
-킥	!ziy	4000
+키	!zi	70%
+킥	!ziy	70%
 킦	!ziyy
 킧	!ziyb
-킨	!zil	4000
+킨	!zil	70%
 킩	!zilu
 킪	!zilw
 킫	!zic
-킬	!zis	4000
+킬	!zis	70%
 킭	!zisy
 킮	!ziso
 킯	!zisa
@@ -18214,55 +18214,55 @@ use_preset_vocabulary: false
 킱	!zise
 킲	!zisx
 킳	!zisw
-킴	!zio	4000
-킵	!zia	4000
+킴	!zio	70%
+킵	!zia	70%
 킶	!ziab
-킷	!zib	4000
+킷	!zib	70%
 킸	!zibb
-킹	!ziq	4000
+킹	!ziq	70%
 킺	!ziu
 킻	!zid
 킼	!ziz
 킽	!zie
 킾	!zix
 킿	!ziw
-타	!ek	4000
-탁	!eky	4000
+타	!ek	70%
+탁	!eky	70%
 탂	!ekyy
 탃	!ekyb
-탄	!ekl	4000
+탄	!ekl	70%
 탅	!eklu
 탆	!eklw
 탇	!ekc
-탈	!eks	4000
-탉	!eksy	4000
+탈	!eks	70%
+탉	!eksy	70%
 탊	!ekso
 탋	!eksa
 탌	!eksb
 탍	!ekse
 탎	!eksx
 탏	!eksw
-탐	!eko	4000
-탑	!eka	4000
+탐	!eko	70%
+탑	!eka	70%
 탒	!ekab
-탓	!ekb	4000
-탔	!ekbb	4000
-탕	!ekq	4000
+탓	!ekb	70%
+탔	!ekbb	70%
+탕	!ekq	70%
 탖	!eku
 탗	!ekd
 탘	!ekz
 탙	!eke
 탚	!ekx
 탛	!ekw
-태	!eh	4000
-택	!ehy	4000
+태	!eh	70%
+택	!ehy	70%
 탞	!ehyy
 탟	!ehyb
-탠	!ehl	4000
+탠	!ehl	70%
 탡	!ehlu
 탢	!ehlw
 탣	!ehc
-탤	!ehs	4000
+탤	!ehs	70%
 탥	!ehsy
 탦	!ehso
 탧	!ehsa
@@ -18270,19 +18270,19 @@ use_preset_vocabulary: false
 탩	!ehse
 탪	!ehsx
 탫	!ehsw
-탬	!eho	4000
-탭	!eha	4000
+탬	!eho	70%
+탭	!eha	70%
 탮	!ehab
-탯	!ehb	4000
-탰	!ehbb	4000
-탱	!ehq	4000
+탯	!ehb	70%
+탰	!ehbb	70%
+탱	!ehq	70%
 탲	!ehu
 탳	!ehd
 탴	!ehz
 탵	!ehe
 탶	!ehx
 탷	!ehw
-탸	!ef	4000
+탸	!ef	70%
 탹	!efy
 탺	!efyy
 탻	!efyb
@@ -18304,7 +18304,7 @@ use_preset_vocabulary: false
 턊	!efab
 턋	!efb
 턌	!efbb
-턍	!efq	4000
+턍	!efq	70%
 턎	!efu
 턏	!efd
 턐	!efz
@@ -18339,43 +18339,43 @@ use_preset_vocabulary: false
 턭	!ehhe
 턮	!ehhx
 턯	!ehhw
-터	!ej	4000
-턱	!ejy	4000
+터	!ej	70%
+턱	!ejy	70%
 턲	!ejyy
 턳	!ejyb
-턴	!ejl	4000
+턴	!ejl	70%
 턵	!ejlu
 턶	!ejlw
 턷	!ejc
-털	!ejs	4000
+털	!ejs	70%
 턹	!ejsy
-턺	!ejso	4000
+턺	!ejso	70%
 턻	!ejsa
 턼	!ejsb
 턽	!ejse
 턾	!ejsx
 턿	!ejsw
-텀	!ejo	4000
-텁	!eja	4000
+텀	!ejo	70%
+텁	!eja	70%
 텂	!ejab
-텃	!ejb	4000
-텄	!ejbb	4000
-텅	!ejq	4000
+텃	!ejb	70%
+텄	!ejbb	70%
+텅	!ejq	70%
 텆	!eju
 텇	!ejd
 텈	!ejz
 텉	!eje
 텊	!ejx
 텋	!ejw
-테	!ep	4000
-텍	!epy	4000
+테	!ep	70%
+텍	!epy	70%
 텎	!epyy
 텏	!epyb
-텐	!epl	4000
+텐	!epl	70%
 텑	!eplu
 텒	!eplw
 텓	!epc
-텔	!eps	4000
+텔	!eps	70%
 텕	!epsy
 텖	!epso
 텗	!epsa
@@ -18383,23 +18383,23 @@ use_preset_vocabulary: false
 텙	!epse
 텚	!epsx
 텛	!epsw
-템	!epo	4000
-텝	!epa	4000
+템	!epo	70%
+텝	!epa	70%
 텞	!epab
-텟	!epb	4000
+텟	!epb	70%
 텠	!epbb
-텡	!epq	4000
+텡	!epq	70%
 텢	!epu
 텣	!epd
 텤	!epz
 텥	!epe
 텦	!epx
 텧	!epw
-텨	!eg	4000
+텨	!eg	70%
 텩	!egy
 텪	!egyy
 텫	!egyb
-텬	!egl	4000
+텬	!egl	70%
 텭	!eglu
 텮	!eglw
 텯	!egc
@@ -18415,7 +18415,7 @@ use_preset_vocabulary: false
 텹	!ega
 텺	!egab
 텻	!egb
-텼	!egbb	4000
+텼	!egbb	70%
 텽	!egq
 텾	!egu
 텿	!egd
@@ -18423,11 +18423,11 @@ use_preset_vocabulary: false
 톁	!ege
 톂	!egx
 톃	!egw
-톄	!epp	4000
+톄	!epp	70%
 톅	!eppy
 톆	!eppyy
 톇	!eppyb
-톈	!eppl	4000
+톈	!eppl	70%
 톉	!epplu
 톊	!epplw
 톋	!eppc
@@ -18451,15 +18451,15 @@ use_preset_vocabulary: false
 톝	!eppe
 톞	!eppx
 톟	!eppw
-토	!en	4000
-톡	!eny	4000
+토	!en	70%
+톡	!eny	70%
 톢	!enyy
 톣	!enyb
-톤	!enl	4000
+톤	!enl	70%
 톥	!enlu
 톦	!enlw
 톧	!enc
-톨	!ens	4000
+톨	!ens	70%
 톩	!ensy
 톪	!enso
 톫	!ensa
@@ -18467,23 +18467,23 @@ use_preset_vocabulary: false
 톭	!ense
 톮	!ensx
 톯	!ensw
-톰	!eno	4000
-톱	!ena	4000
+톰	!eno	70%
+톱	!ena	70%
 톲	!enab
-톳	!enb	4000
+톳	!enb	70%
 톴	!enbb
-통	!enq	4000
+통	!enq	70%
 톶	!enu
 톷	!end
 톸	!enz
 톹	!ene
-톺	!enx	4000
+톺	!enx	70%
 톻	!enw
-톼	!enk	4000
+톼	!enk	70%
 톽	!enky
 톾	!enkyy
 톿	!enkyb
-퇀	!enkl	4000
+퇀	!enkl	70%
 퇁	!enklu
 퇂	!enklw
 퇃	!enkc
@@ -18507,7 +18507,7 @@ use_preset_vocabulary: false
 퇕	!enke
 퇖	!enkx
 퇗	!enkw
-퇘	!enh	4000
+퇘	!enh	70%
 퇙	!enhy
 퇚	!enhyy
 퇛	!enhyb
@@ -18535,11 +18535,11 @@ use_preset_vocabulary: false
 퇱	!enhe
 퇲	!enhx
 퇳	!enhw
-퇴	!eni	4000
+퇴	!eni	70%
 퇵	!eniy
 퇶	!eniyy
 퇷	!eniyb
-퇸	!enil	4000
+퇸	!enil	70%
 퇹	!enilu
 퇺	!enilw
 퇻	!enic
@@ -18555,16 +18555,16 @@ use_preset_vocabulary: false
 툄	!enio
 툅	!enia
 툆	!eniab
-툇	!enib	4000
+툇	!enib	70%
 툈	!enibb
-툉	!eniq	4000
+툉	!eniq	70%
 툊	!eniu
 툋	!enid
 툌	!eniz
 툍	!enie
 툎	!enix
 툏	!eniw
-툐	!em	4000
+툐	!em	70%
 툑	!emy
 툒	!emyy
 툓	!emyb
@@ -18592,15 +18592,15 @@ use_preset_vocabulary: false
 툩	!eme
 툪	!emx
 툫	!emw
-투	!et	4000
-툭	!ety	4000
+투	!et	70%
+툭	!ety	70%
 툮	!etyy
 툯	!etyb
-툰	!etl	4000
+툰	!etl	70%
 툱	!etlu
 툲	!etlw
 툳	!etc
-툴	!ets	4000
+툴	!ets	70%
 툵	!etsy
 툶	!etso
 툷	!etsa
@@ -18608,19 +18608,19 @@ use_preset_vocabulary: false
 툹	!etse
 툺	!etsx
 툻	!etsw
-툼	!eto	4000
-툽	!eta	4000
+툼	!eto	70%
+툽	!eta	70%
 툾	!etab
-툿	!etb	4000
+툿	!etb	70%
 퉀	!etbb
-퉁	!etq	4000
+퉁	!etq	70%
 퉂	!etu
 퉃	!etd
 퉄	!etz
 퉅	!ete
 퉆	!etx
 퉇	!etw
-퉈	!etj	4000
+퉈	!etj	70%
 퉉	!etjy
 퉊	!etjyy
 퉋	!etjyb
@@ -18640,7 +18640,7 @@ use_preset_vocabulary: false
 퉙	!etja
 퉚	!etjab
 퉛	!etjb
-퉜	!etjbb	4000
+퉜	!etjbb	70%
 퉝	!etjq
 퉞	!etju
 퉟	!etjd
@@ -18648,7 +18648,7 @@ use_preset_vocabulary: false
 퉡	!etje
 퉢	!etjx
 퉣	!etjw
-퉤	!etp	4000
+퉤	!etp	70%
 퉥	!etpy
 퉦	!etpyy
 퉧	!etpyb
@@ -18676,15 +18676,15 @@ use_preset_vocabulary: false
 퉽	!etpe
 퉾	!etpx
 퉿	!etpw
-튀	!eti	4000
-튁	!etiy	4000
+튀	!eti	70%
+튁	!etiy	70%
 튂	!etiyy
 튃	!etiyb
-튄	!etil	4000
+튄	!etil	70%
 튅	!etilu
 튆	!etilw
 튇	!etic
-튈	!etis	4000
+튈	!etis	70%
 튉	!etisy
 튊	!etiso
 튋	!etisa
@@ -18692,27 +18692,27 @@ use_preset_vocabulary: false
 튍	!etise
 튎	!etisx
 튏	!etisw
-튐	!etio	4000
-튑	!etia	4000
+튐	!etio	70%
+튑	!etia	70%
 튒	!etiab
 튓	!etib
 튔	!etibb
-튕	!etiq	4000
+튕	!etiq	70%
 튖	!etiu
 튗	!etid
 튘	!etiz
 튙	!etie
 튚	!etix
 튛	!etiw
-튜	!er	4000
+튜	!er	70%
 튝	!ery
 튞	!eryy
 튟	!eryb
-튠	!erl	4000
+튠	!erl	70%
 튡	!erlu
 튢	!erlw
 튣	!erc
-튤	!ers	4000
+튤	!ers	70%
 튥	!ersy
 튦	!erso
 튧	!ersa
@@ -18720,38 +18720,38 @@ use_preset_vocabulary: false
 튩	!erse
 튪	!ersx
 튫	!ersw
-튬	!ero	4000
+튬	!ero	70%
 튭	!era
 튮	!erab
 튯	!erb
 튰	!erbb
-튱	!erq	4000
+튱	!erq	70%
 튲	!eru
 튳	!erd
 튴	!erz
 튵	!ere
 튶	!erx
 튷	!erw
-트	!ev	4000
-특	!evy	4000
+트	!ev	70%
+특	!evy	70%
 튺	!evyy
 튻	!evyb
-튼	!evl	4000
+튼	!evl	70%
 튽	!evlu
 튾	!evlw
-튿	!evc	4000
-틀	!evs	4000
+튿	!evc	70%
+틀	!evs	70%
 틁	!evsy
-틂	!evso	4000
+틂	!evso	70%
 틃	!evsa
 틄	!evsb
 틅	!evse
 틆	!evsx
 틇	!evsw
-틈	!evo	4000
-틉	!eva	4000
+틈	!evo	70%
+틉	!eva	70%
 틊	!evab
-틋	!evb	4000
+틋	!evb	70%
 틌	!evbb
 틍	!evq
 틎	!evu
@@ -18760,15 +18760,15 @@ use_preset_vocabulary: false
 틑	!eve
 틒	!evx
 틓	!evw
-틔	!evi	4000
+틔	!evi	70%
 틕	!eviy
 틖	!eviyy
 틗	!eviyb
-틘	!evil	4000
+틘	!evil	70%
 틙	!evilu
 틚	!evilw
 틛	!evic
-틜	!evis	4000
+틜	!evis	70%
 틝	!evisy
 틞	!eviso
 틟	!evisa
@@ -18776,8 +18776,8 @@ use_preset_vocabulary: false
 틡	!evise
 틢	!evisx
 틣	!evisw
-틤	!evio	4000
-틥	!evia	4000
+틤	!evio	70%
+틥	!evia	70%
 틦	!eviab
 틧	!evib
 틨	!evibb
@@ -18788,15 +18788,15 @@ use_preset_vocabulary: false
 틭	!evie
 틮	!evix
 틯	!eviw
-티	!ei	4000
-틱	!eiy	4000
+티	!ei	70%
+틱	!eiy	70%
 틲	!eiyy
 틳	!eiyb
-틴	!eil	4000
+틴	!eil	70%
 틵	!eilu
 틶	!eilw
 틷	!eic
-틸	!eis	4000
+틸	!eis	70%
 틹	!eisy
 틺	!eiso
 틻	!eisa
@@ -18805,55 +18805,55 @@ use_preset_vocabulary: false
 틾	!eisx
 틿	!eisw
 #41
-팀	!eio	4000
-팁	!eia	4000
+팀	!eio	70%
+팁	!eia	70%
 팂	!eiab
-팃	!eib	4000
+팃	!eib	70%
 팄	!eibb
-팅	!eiq	4000
+팅	!eiq	70%
 팆	!eiu
 팇	!eid
 팈	!eiz
 팉	!eie
 팊	!eix
 팋	!eiw
-파	!xk	4000
-팍	!xky	4000
-팎	!xkyy	4000
+파	!xk	70%
+팍	!xky	70%
+팎	!xkyy	70%
 팏	!xkyb
-판	!xkl	4000
+판	!xkl	70%
 팑	!xklu
 팒	!xklw
 팓	!xkc
-팔	!xks	4000
+팔	!xks	70%
 팕	!xksy
-팖	!xkso	4000
+팖	!xkso	70%
 팗	!xksa
 팘	!xksb
 팙	!xkse
 팚	!xksx
 팛	!xksw
-팜	!xko	4000
-팝	!xka	4000
+팜	!xko	70%
+팝	!xka	70%
 팞	!xkab
-팟	!xkb	4000
-팠	!xkbb	4000
-팡	!xkq	4000
+팟	!xkb	70%
+팠	!xkbb	70%
+팡	!xkq	70%
 팢	!xku
 팣	!xkd
 팤	!xkz
-팥	!xke	4000
+팥	!xke	70%
 팦	!xkx
 팧	!xkw
-패	!xh	4000
-팩	!xhy	4000
+패	!xh	70%
+팩	!xhy	70%
 팪	!xhyy
 팫	!xhyb
-팬	!xhl	4000
+팬	!xhl	70%
 팭	!xhlu
 팮	!xhlw
 팯	!xhc
-팰	!xhs	4000
+팰	!xhs	70%
 팱	!xhsy
 팲	!xhso
 팳	!xhsa
@@ -18861,20 +18861,20 @@ use_preset_vocabulary: false
 팵	!xhse
 팶	!xhsx
 팷	!xhsw
-팸	!xho	4000
-팹	!xha	4000
+팸	!xho	70%
+팹	!xha	70%
 팺	!xhab
-팻	!xhb	4000
-팼	!xhbb	4000
-팽	!xhq	4000
+팻	!xhb	70%
+팼	!xhbb	70%
+팽	!xhq	70%
 팾	!xhu
 팿	!xhd
 퍀	!xhz
 퍁	!xhe
 퍂	!xhx
 퍃	!xhw
-퍄	!xf	4000
-퍅	!xfy	4000
+퍄	!xf	70%
+퍅	!xfy	70%
 퍆	!xfyy
 퍇	!xfyb
 퍈	!xfl
@@ -18929,15 +18929,15 @@ use_preset_vocabulary: false
 퍹	!xhhe
 퍺	!xhhx
 퍻	!xhhw
-퍼	!xj	4000
-퍽	!xjy	4000
+퍼	!xj	70%
+퍽	!xjy	70%
 퍾	!xjyy
 퍿	!xjyb
-펀	!xjl	4000
+펀	!xjl	70%
 펁	!xjlu
 펂	!xjlw
 펃	!xjc
-펄	!xjs	4000
+펄	!xjs	70%
 펅	!xjsy
 펆	!xjso
 펇	!xjsa
@@ -18945,27 +18945,27 @@ use_preset_vocabulary: false
 펉	!xjse
 펊	!xjsx
 펋	!xjsw
-펌	!xjo	4000
-펍	!xja	4000
+펌	!xjo	70%
+펍	!xja	70%
 펎	!xjab
-펏	!xjb	4000
-펐	!xjbb	4000
-펑	!xjq	4000
+펏	!xjb	70%
+펐	!xjbb	70%
+펑	!xjq	70%
 펒	!xju
 펓	!xjd
 펔	!xjz
 펕	!xje
 펖	!xjx
 펗	!xjw
-페	!xp	4000
-펙	!xpy	4000
+페	!xp	70%
+펙	!xpy	70%
 펚	!xpyy
 펛	!xpyb
-펜	!xpl	4000
+펜	!xpl	70%
 펝	!xplu
 펞	!xplw
 펟	!xpc
-펠	!xps	4000
+펠	!xps	70%
 펡	!xpsy
 펢	!xpso
 펣	!xpsa
@@ -18973,27 +18973,27 @@ use_preset_vocabulary: false
 펥	!xpse
 펦	!xpsx
 펧	!xpsw
-펨	!xpo	4000
-펩	!xpa	4000
+펨	!xpo	70%
+펩	!xpa	70%
 펪	!xpab
-펫	!xpb	4000
+펫	!xpb	70%
 펬	!xpbb
-펭	!xpq	4000
+펭	!xpq	70%
 펮	!xpu
 펯	!xpd
 펰	!xpz
 펱	!xpe
 펲	!xpx
 펳	!xpw
-펴	!xg	4000
+펴	!xg	70%
 펵	!xgy
 펶	!xgyy
 펷	!xgyb
-편	!xgl	4000
+편	!xgl	70%
 펹	!xglu
 펺	!xglw
 펻	!xgc
-펼	!xgs	4000
+펼	!xgs	70%
 펽	!xgsy
 펾	!xgso
 펿	!xgsa
@@ -19001,19 +19001,19 @@ use_preset_vocabulary: false
 폁	!xgse
 폂	!xgsx
 폃	!xgsw
-폄	!xgo	4000
-폅	!xga	4000
+폄	!xgo	70%
+폅	!xga	70%
 폆	!xgab
 폇	!xgb
-폈	!xgbb	4000
-평	!xgq	4000
+폈	!xgbb	70%
+평	!xgq	70%
 폊	!xgu
 폋	!xgd
 폌	!xgz
 폍	!xge
 폎	!xgx
 폏	!xgw
-폐	!xpp	4000
+폐	!xpp	70%
 폑	!xppy
 폒	!xppyy
 폓	!xppyb
@@ -19021,7 +19021,7 @@ use_preset_vocabulary: false
 폕	!xpplu
 폖	!xpplw
 폗	!xppc
-폘	!xpps	4000
+폘	!xpps	70%
 폙	!xppsy
 폚	!xppso
 폛	!xppsa
@@ -19030,9 +19030,9 @@ use_preset_vocabulary: false
 폞	!xppsx
 폟	!xppsw
 폠	!xppo
-폡	!xppa	4000
+폡	!xppa	70%
 폢	!xppab
-폣	!xppb	4000
+폣	!xppb	70%
 폤	!xppbb
 폥	!xppq
 폦	!xppu
@@ -19041,16 +19041,16 @@ use_preset_vocabulary: false
 폩	!xppe
 폪	!xppx
 폫	!xppw
-포	!xn	4000
-폭	!xny	4000
+포	!xn	70%
+폭	!xny	70%
 폮	!xnyy
 폯	!xnyb
 #42
-폰	!xnl	4000
+폰	!xnl	70%
 폱	!xnlu
 폲	!xnlw
 폳	!xnc
-폴	!xns	4000
+폴	!xns	70%
 폵	!xnsy
 폶	!xnso
 폷	!xnsa
@@ -19058,19 +19058,19 @@ use_preset_vocabulary: false
 폹	!xnse
 폺	!xnsx
 폻	!xnsw
-폼	!xno	4000
-폽	!xna	4000
+폼	!xno	70%
+폽	!xna	70%
 폾	!xnab
-폿	!xnb	4000
+폿	!xnb	70%
 퐀	!xnbb
-퐁	!xnq	4000
+퐁	!xnq	70%
 퐂	!xnu
 퐃	!xnd
 퐄	!xnz
 퐅	!xne
 퐆	!xnx
 퐇	!xnw
-퐈	!xnk	4000
+퐈	!xnk	70%
 퐉	!xnky
 퐊	!xnkyy
 퐋	!xnkyb
@@ -19091,7 +19091,7 @@ use_preset_vocabulary: false
 퐚	!xnkab
 퐛	!xnkb
 퐜	!xnkbb
-퐝	!xnkq	4000
+퐝	!xnkq	70%
 퐞	!xnku
 퐟	!xnkd
 퐠	!xnkz
@@ -19126,11 +19126,11 @@ use_preset_vocabulary: false
 퐽	!xnhe
 퐾	!xnhx
 퐿	!xnhw
-푀	!xni	4000
+푀	!xni	70%
 푁	!xniy
 푂	!xniyy
 푃	!xniyb
-푄	!xnil	4000
+푄	!xnil	70%
 푅	!xnilu
 푆	!xnilw
 푇	!xnic
@@ -19154,15 +19154,15 @@ use_preset_vocabulary: false
 푙	!xnie
 푚	!xnix
 푛	!xniw
-표	!xm	4000
+표	!xm	70%
 푝	!xmy
 푞	!xmyy
 푟	!xmyb
-푠	!xml	4000
+푠	!xml	70%
 푡	!xmlu
 푢	!xmlw
 푣	!xmc
-푤	!xms	4000
+푤	!xms	70%
 푥	!xmsy
 푦	!xmso
 푧	!xmsa
@@ -19171,9 +19171,9 @@ use_preset_vocabulary: false
 푪	!xmsx
 푫	!xmsw
 푬	!xmo
-푭	!xma	4000
+푭	!xma	70%
 푮	!xmab
-푯	!xmb	4000
+푯	!xmb	70%
 푰	!xmbb
 푱	!xmq
 푲	!xmu
@@ -19182,35 +19182,35 @@ use_preset_vocabulary: false
 푵	!xme
 푶	!xmx
 푷	!xmw
-푸	!xt	4000
-푹	!xty	4000
+푸	!xt	70%
+푹	!xty	70%
 푺	!xtyy
 푻	!xtyb
-푼	!xtl	4000
+푼	!xtl	70%
 푽	!xtlu
 푾	!xtlw
-푿	!xtc	4000
-풀	!xts	4000
+푿	!xtc	70%
+풀	!xts	70%
 풁	!xtsy
-풂	!xtso	4000
+풂	!xtso	70%
 풃	!xtsa
 풄	!xtsb
 풅	!xtse
 풆	!xtsx
 풇	!xtsw
-품	!xto	4000
-풉	!xta	4000
+품	!xto	70%
+풉	!xta	70%
 풊	!xtab
-풋	!xtb	4000
+풋	!xtb	70%
 풌	!xtbb
-풍	!xtq	4000
+풍	!xtq	70%
 풎	!xtu
 풏	!xtd
 풐	!xtz
 풑	!xte
 풒	!xtx
 풓	!xtw
-풔	!xtj	4000
+풔	!xtj	70%
 풕	!xtjy
 풖	!xtjyy
 풗	!xtjyb
@@ -19231,7 +19231,7 @@ use_preset_vocabulary: false
 풦	!xtjab
 풧	!xtjb
 풨	!xtjbb
-풩	!xtjq	4000
+풩	!xtjq	70%
 풪	!xtju
 풫	!xtjd
 풬	!xtjz
@@ -19266,15 +19266,15 @@ use_preset_vocabulary: false
 퓉	!xtpe
 퓊	!xtpx
 퓋	!xtpw
-퓌	!xti	4000
+퓌	!xti	70%
 퓍	!xtiy
 퓎	!xtiyy
 퓏	!xtiyb
-퓐	!xtil	4000
+퓐	!xtil	70%
 퓑	!xtilu
 퓒	!xtilw
 퓓	!xtic
-퓔	!xtis	4000
+퓔	!xtis	70%
 퓕	!xtisy
 퓖	!xtiso
 퓗	!xtisa
@@ -19282,10 +19282,10 @@ use_preset_vocabulary: false
 퓙	!xtise
 퓚	!xtisx
 퓛	!xtisw
-퓜	!xtio	4000
+퓜	!xtio	70%
 퓝	!xtia
 퓞	!xtiab
-퓟	!xtib	4000
+퓟	!xtib	70%
 #43
 퓠	!xtibb
 퓡	!xtiq
@@ -19295,15 +19295,15 @@ use_preset_vocabulary: false
 퓥	!xtie
 퓦	!xtix
 퓧	!xtiw
-퓨	!xr	4000
+퓨	!xr	70%
 퓩	!xry
 퓪	!xryy
 퓫	!xryb
-퓬	!xrl	4000
+퓬	!xrl	70%
 퓭	!xrlu
 퓮	!xrlw
 퓯	!xrc
-퓰	!xrs	4000
+퓰	!xrs	70%
 퓱	!xrsy
 퓲	!xrso
 퓳	!xrsa
@@ -19311,27 +19311,27 @@ use_preset_vocabulary: false
 퓵	!xrse
 퓶	!xrsx
 퓷	!xrsw
-퓸	!xro	4000
+퓸	!xro	70%
 퓹	!xra
 퓺	!xrab
-퓻	!xrb	4000
+퓻	!xrb	70%
 퓼	!xrbb
-퓽	!xrq	4000
+퓽	!xrq	70%
 퓾	!xru
 퓿	!xrd
 픀	!xrz
 픁	!xre
 픂	!xrx
 픃	!xrw
-프	!xv	4000
+프	!xv	70%
 픅	!xvy
 픆	!xvyy
 픇	!xvyb
-픈	!xvl	4000
+픈	!xvl	70%
 픉	!xvlu
 픊	!xvlw
 픋	!xvc
-플	!xvs	4000
+플	!xvs	70%
 픍	!xvsy
 픎	!xvso
 픏	!xvsa
@@ -19339,10 +19339,10 @@ use_preset_vocabulary: false
 픑	!xvse
 픒	!xvsx
 픓	!xvsw
-픔	!xvo	4000
-픕	!xva	4000
+픔	!xvo	70%
+픕	!xva	70%
 픖	!xvab
-픗	!xvb	4000
+픗	!xvb	70%
 픘	!xvbb
 픙	!xvq
 픚	!xvu
@@ -19379,15 +19379,15 @@ use_preset_vocabulary: false
 픹	!xvie
 픺	!xvix
 픻	!xviw
-피	!xi	4000
-픽	!xiy	4000
+피	!xi	70%
+픽	!xiy	70%
 픾	!xiyy
 픿	!xiyb
-핀	!xil	4000
+핀	!xil	70%
 핁	!xilu
 핂	!xilw
 핃	!xic
-필	!xis	4000
+필	!xis	70%
 핅	!xisy
 핆	!xiso
 핇	!xisa
@@ -19395,55 +19395,55 @@ use_preset_vocabulary: false
 핉	!xise
 핊	!xisx
 핋	!xisw
-핌	!xio	4000
-핍	!xia	4000
+핌	!xio	70%
+핍	!xia	70%
 핎	!xiab
-핏	!xib	4000
+핏	!xib	70%
 핐	!xibb
-핑	!xiq	4000
+핑	!xiq	70%
 핒	!xiu
 핓	!xid
 핔	!xiz
 핕	!xie
 핖	!xix
 핗	!xiw
-하	!wk	4000
-학	!wky	4000
+하	!wk	70%
+학	!wky	70%
 핚	!wkyy
 핛	!wkyb
-한	!wkl	4000
+한	!wkl	70%
 핝	!wklu
 핞	!wklw
 핟	!wkc
-할	!wks	4000
+할	!wks	70%
 핡	!wksy
 핢	!wkso
 핣	!wksa
 핤	!wksb
-핥	!wkse	4000
+핥	!wkse	70%
 핦	!wksx
 핧	!wksw
-함	!wko	4000
-합	!wka	4000
+함	!wko	70%
+합	!wka	70%
 핪	!wkab
-핫	!wkb	4000
+핫	!wkb	70%
 핬	!wkbb
-항	!wkq	4000
+항	!wkq	70%
 핮	!wku
 핯	!wkd
 핰	!wkz
 핱	!wke
 핲	!wkx
 핳	!wkw
-해	!wh	4000
-핵	!why	4000
+해	!wh	70%
+핵	!why	70%
 핶	!whyy
 핷	!whyb
-핸	!whl	4000
+핸	!whl	70%
 핹	!whlu
 핺	!whlw
 핻	!whc
-핼	!whs	4000
+핼	!whs	70%
 핽	!whsy
 핾	!whso
 핿	!whsa
@@ -19451,19 +19451,19 @@ use_preset_vocabulary: false
 햁	!whse
 햂	!whsx
 햃	!whsw
-햄	!who	4000
-햅	!wha	4000
+햄	!who	70%
+햅	!wha	70%
 햆	!whab
-햇	!whb	4000
-했	!whbb	4000
-행	!whq	4000
+햇	!whb	70%
+했	!whbb	70%
+행	!whq	70%
 햊	!whu
 햋	!whd
 햌	!whz
 햍	!whe
 햎	!whx
 햏	!whw
-햐	!wf	4000
+햐	!wf	70%
 햑	!wfy
 햒	!wfyy
 햓	!wfyb
@@ -19484,7 +19484,7 @@ use_preset_vocabulary: false
 햢	!wfab
 햣	!wfb
 햤	!wfbb
-향	!wfq	4000
+향	!wfq	70%
 햦	!wfu
 햧	!wfd
 햨	!wfz
@@ -19519,44 +19519,44 @@ use_preset_vocabulary: false
 헅	!whhe
 헆	!whhx
 헇	!whhw
-허	!wj	4000
-헉	!wjy	4000
+허	!wj	70%
+헉	!wjy	70%
 헊	!wjyy
 헋	!wjyb
-헌	!wjl	4000
+헌	!wjl	70%
 헍	!wjlu
 헎	!wjlw
 헏	!wjc
 #44
-헐	!wjs	4000
+헐	!wjs	70%
 헑	!wjsy
-헒	!wjso	4000
+헒	!wjso	70%
 헓	!wjsa
 헔	!wjsb
 헕	!wjse
 헖	!wjsx
 헗	!wjsw
-험	!wjo	4000
-헙	!wja	4000
+험	!wjo	70%
+헙	!wja	70%
 헚	!wjab
-헛	!wjb	4000
+헛	!wjb	70%
 헜	!wjbb
-헝	!wjq	4000
+헝	!wjq	70%
 헞	!wju
 헟	!wjd
 헠	!wjz
 헡	!wje
 헢	!wjx
 헣	!wjw
-헤	!wp	4000
-헥	!wpy	4000
+헤	!wp	70%
+헥	!wpy	70%
 헦	!wpyy
 헧	!wpyb
-헨	!wpl	4000
+헨	!wpl	70%
 헩	!wplu
 헪	!wplw
 헫	!wpc
-헬	!wps	4000
+헬	!wps	70%
 헭	!wpsy
 헮	!wpso
 헯	!wpsa
@@ -19564,27 +19564,27 @@ use_preset_vocabulary: false
 헱	!wpse
 헲	!wpsx
 헳	!wpsw
-헴	!wpo	4000
-헵	!wpa	4000
+헴	!wpo	70%
+헵	!wpa	70%
 헶	!wpab
-헷	!wpb	4000
+헷	!wpb	70%
 헸	!wpbb
-헹	!wpq	4000
+헹	!wpq	70%
 헺	!wpu
 헻	!wpd
 헼	!wpz
 헽	!wpe
 헾	!wpx
 헿	!wpw
-혀	!wg	4000
-혁	!wgy	4000
+혀	!wg	70%
+혁	!wgy	70%
 혂	!wgyy
 혃	!wgyb
-현	!wgl	4000
+현	!wgl	70%
 혅	!wglu
 혆	!wglw
 혇	!wgc
-혈	!wgs	4000
+혈	!wgs	70%
 혉	!wgsy
 혊	!wgso
 혋	!wgsa
@@ -19592,27 +19592,27 @@ use_preset_vocabulary: false
 혍	!wgse
 혎	!wgsx
 혏	!wgsw
-혐	!wgo	4000
-협	!wga	4000
+혐	!wgo	70%
+협	!wga	70%
 혒	!wgab
-혓	!wgb	4000
-혔	!wgbb	4000
-형	!wgq	4000
+혓	!wgb	70%
+혔	!wgbb	70%
+형	!wgq	70%
 혖	!wgu
 혗	!wgd
 혘	!wgz
 혙	!wge
 혚	!wgx
 혛	!wgw
-혜	!wpp	4000
+혜	!wpp	70%
 혝	!wppy
 혞	!wppyy
 혟	!wppyb
-혠	!wppl	4000
+혠	!wppl	70%
 혡	!wpplu
 혢	!wpplw
 혣	!wppc
-혤	!wpps	4000
+혤	!wpps	70%
 혥	!wppsy
 혦	!wppso
 혧	!wppsa
@@ -19621,7 +19621,7 @@ use_preset_vocabulary: false
 혪	!wppsx
 혫	!wppsw
 혬	!wppo
-혭	!wppa	4000
+혭	!wppa	70%
 혮	!wppab
 혯	!wppb
 혰	!wppbb
@@ -19632,43 +19632,43 @@ use_preset_vocabulary: false
 혵	!wppe
 혶	!wppx
 혷	!wppw
-호	!wn	4000
-혹	!wny	4000
+호	!wn	70%
+혹	!wny	70%
 혺	!wnyy
 혻	!wnyb
-혼	!wnl	4000
+혼	!wnl	70%
 혽	!wnlu
 혾	!wnlw
 혿	!wnc
-홀	!wns	4000
+홀	!wns	70%
 홁	!wnsy
 홂	!wnso
 홃	!wnsa
 홄	!wnsb
-홅	!wnse	4000
+홅	!wnse	70%
 홆	!wnsx
 홇	!wnsw
-홈	!wno	4000
-홉	!wna	4000
+홈	!wno	70%
+홉	!wna	70%
 홊	!wnab
-홋	!wnb	4000
+홋	!wnb	70%
 홌	!wnbb
-홍	!wnq	4000
+홍	!wnq	70%
 홎	!wnu
 홏	!wnd
 홐	!wnz
-홑	!wne	4000
+홑	!wne	70%
 홒	!wnx
 홓	!wnw
-화	!wnk	4000
-확	!wnky	4000
+화	!wnk	70%
+확	!wnky	70%
 홖	!wnkyy
 홗	!wnkyb
-환	!wnkl	4000
+환	!wnkl	70%
 홙	!wnklu
 홚	!wnklw
 홛	!wnkc
-활	!wnks	4000
+활	!wnks	70%
 홝	!wnksy
 홞	!wnkso
 홟	!wnksa
@@ -19679,20 +19679,20 @@ use_preset_vocabulary: false
 홤	!wnko
 홥	!wnka
 홦	!wnkab
-홧	!wnkb	4000
+홧	!wnkb	70%
 홨	!wnkbb
-황	!wnkq	4000
+황	!wnkq	70%
 홪	!wnku
 홫	!wnkd
 홬	!wnkz
 홭	!wnke
 홮	!wnkx
 홯	!wnkw
-홰	!wnh	4000
-홱	!wnhy	4000
+홰	!wnh	70%
+홱	!wnhy	70%
 홲	!wnhyy
 홳	!wnhyb
-홴	!wnhl	4000
+홴	!wnhl	70%
 홵	!wnhlu
 홶	!wnhlw
 홷	!wnhc
@@ -19707,24 +19707,24 @@ use_preset_vocabulary: false
 횀	!wnho
 횁	!wnha
 횂	!wnhab
-횃	!wnhb	4000
+횃	!wnhb	70%
 횄	!wnhbb
-횅	!wnhq	4000
+횅	!wnhq	70%
 횆	!wnhu
 횇	!wnhd
 횈	!wnhz
 횉	!wnhe
 횊	!wnhx
 횋	!wnhw
-회	!wni	4000
-획	!wniy	4000
+회	!wni	70%
+획	!wniy	70%
 횎	!wniyy
 횏	!wniyb
-횐	!wnil	4000
+횐	!wnil	70%
 횑	!wnilu
 횒	!wnilw
 횓	!wnic
-횔	!wnis	4000
+횔	!wnis	70%
 횕	!wnisy
 횖	!wniso
 횗	!wnisa
@@ -19733,26 +19733,26 @@ use_preset_vocabulary: false
 횚	!wnisx
 횛	!wnisw
 횜	!wnio
-횝	!wnia	4000
+횝	!wnia	70%
 횞	!wniab
-횟	!wnib	4000
+횟	!wnib	70%
 횠	!wnibb
-횡	!wniq	4000
+횡	!wniq	70%
 횢	!wniu
 횣	!wnid
 횤	!wniz
 횥	!wnie
 횦	!wnix
 횧	!wniw
-효	!wm	4000
+효	!wm	70%
 횩	!wmy
 횪	!wmyy
 횫	!wmyb
-횬	!wml	4000
+횬	!wml	70%
 횭	!wmlu
 횮	!wmlw
 횯	!wmc
-횰	!wms	4000
+횰	!wms	70%
 횱	!wmsy
 횲	!wmso
 횳	!wmsa
@@ -19761,9 +19761,9 @@ use_preset_vocabulary: false
 횶	!wmsx
 횷	!wmsw
 횸	!wmo
-횹	!wma	4000
+횹	!wma	70%
 횺	!wmab
-횻	!wmb	4000
+횻	!wmb	70%
 횼	!wmbb
 횽	!wmq
 횾	!wmu
@@ -19773,43 +19773,43 @@ use_preset_vocabulary: false
 훁	!wme
 훂	!wmx
 훃	!wmw
-후	!wt	4000
-훅	!wty	4000
+후	!wt	70%
+훅	!wty	70%
 훆	!wtyy
 훇	!wtyb
-훈	!wtl	4000
+훈	!wtl	70%
 훉	!wtlu
 훊	!wtlw
 훋	!wtc
-훌	!wts	4000
+훌	!wts	70%
 훍	!wtsy
 훎	!wtso
 훏	!wtsa
 훐	!wtsb
-훑	!wtse	4000
+훑	!wtse	70%
 훒	!wtsx
 훓	!wtsw
-훔	!wto	4000
+훔	!wto	70%
 훕	!wta
 훖	!wtab
-훗	!wtb	4000
+훗	!wtb	70%
 훘	!wtbb
-훙	!wtq	4000
+훙	!wtq	70%
 훚	!wtu
 훛	!wtd
 훜	!wtz
 훝	!wte
 훞	!wtx
 훟	!wtw
-훠	!wtj	4000
+훠	!wtj	70%
 훡	!wtjy
 훢	!wtjyy
 훣	!wtjyb
-훤	!wtjl	4000
+훤	!wtjl	70%
 훥	!wtjlu
 훦	!wtjlw
 훧	!wtjc
-훨	!wtjs	4000
+훨	!wtjs	70%
 훩	!wtjsy
 훪	!wtjso
 훫	!wtjsa
@@ -19817,27 +19817,27 @@ use_preset_vocabulary: false
 훭	!wtjse
 훮	!wtjsx
 훯	!wtjsw
-훰	!wtjo	4000
+훰	!wtjo	70%
 훱	!wtja
 훲	!wtjab
 훳	!wtjb
 훴	!wtjbb
-훵	!wtjq	4000
+훵	!wtjq	70%
 훶	!wtju
 훷	!wtjd
 훸	!wtjz
 훹	!wtje
 훺	!wtjx
 훻	!wtjw
-훼	!wtp	4000
-훽	!wtpy	4000
+훼	!wtp	70%
+훽	!wtpy	70%
 훾	!wtpyy
 훿	!wtpyb
-휀	!wtpl	4000
+휀	!wtpl	70%
 휁	!wtplu
 휂	!wtplw
 휃	!wtpc
-휄	!wtps	4000
+휄	!wtps	70%
 휅	!wtpsy
 휆	!wtpso
 휇	!wtpsa
@@ -19850,22 +19850,22 @@ use_preset_vocabulary: false
 휎	!wtpab
 휏	!wtpb
 휐	!wtpbb
-휑	!wtpq	4000
+휑	!wtpq	70%
 휒	!wtpu
 휓	!wtpd
 휔	!wtpz
 휕	!wtpe
 휖	!wtpx
 휗	!wtpw
-휘	!wti	4000
-휙	!wtiy	4000
+휘	!wti	70%
+휙	!wtiy	70%
 휚	!wtiyy
 휛	!wtiyb
-휜	!wtil	4000
+휜	!wtil	70%
 휝	!wtilu
 휞	!wtilw
 휟	!wtic
-휠	!wtis	4000
+휠	!wtis	70%
 휡	!wtisy
 휢	!wtiso
 휣	!wtisa
@@ -19873,27 +19873,27 @@ use_preset_vocabulary: false
 휥	!wtise
 휦	!wtisx
 휧	!wtisw
-휨	!wtio	4000
-휩	!wtia	4000
+휨	!wtio	70%
+휩	!wtia	70%
 휪	!wtiab
-휫	!wtib	4000
+휫	!wtib	70%
 휬	!wtibb
-휭	!wtiq	4000
+휭	!wtiq	70%
 휮	!wtiu
 휯	!wtid
 휰	!wtiz
 휱	!wtie
 휲	!wtix
 휳	!wtiw
-휴	!wr	4000
-휵	!wry	4000
+휴	!wr	70%
+휵	!wry	70%
 휶	!wryy
 휷	!wryb
-휸	!wrl	4000
+휸	!wrl	70%
 휹	!wrlu
 휺	!wrlw
 휻	!wrc
-휼	!wrs	4000
+휼	!wrs	70%
 휽	!wrsy
 휾	!wrso
 휿	!wrsa
@@ -19901,55 +19901,55 @@ use_preset_vocabulary: false
 흁	!wrse
 흂	!wrsx
 흃	!wrsw
-흄	!wro	4000
+흄	!wro	70%
 흅	!wra
 흆	!wrab
-흇	!wrb	4000
+흇	!wrb	70%
 흈	!wrbb
-흉	!wrq	4000
+흉	!wrq	70%
 흊	!wru
 흋	!wrd
 흌	!wrz
 흍	!wre
 흎	!wrx
 흏	!wrw
-흐	!wv	4000
-흑	!wvy	4000
+흐	!wv	70%
+흑	!wvy	70%
 흒	!wvyy
 흓	!wvyb
-흔	!wvl	4000
+흔	!wvl	70%
 흕	!wvlu
-흖	!wvlw	4000
-흗	!wvc	4000
-흘	!wvs	4000
-흙	!wvsy	4000
+흖	!wvlw	70%
+흗	!wvc	70%
+흘	!wvs	70%
+흙	!wvsy	70%
 흚	!wvso
 흛	!wvsa
 흜	!wvsb
 흝	!wvse
 흞	!wvsx
 흟	!wvsw
-흠	!wvo	4000
-흡	!wva	4000
+흠	!wvo	70%
+흡	!wva	70%
 흢	!wvab
-흣	!wvb	4000
+흣	!wvb	70%
 흤	!wvbb
-흥	!wvq	4000
+흥	!wvq	70%
 흦	!wvu
 흧	!wvd
 흨	!wvz
-흩	!wve	4000
+흩	!wve	70%
 흪	!wvx
 흫	!wvw
-희	!wvi	4000
+희	!wvi	70%
 흭	!wviy
 흮	!wviyy
 흯	!wviyb
-흰	!wvil	4000
+흰	!wvil	70%
 흱	!wvilu
 흲	!wvilw
 흳	!wvic
-흴	!wvis	4000
+흴	!wvis	70%
 흵	!wvisy
 흶	!wviso
 흷	!wvisa
@@ -19957,27 +19957,27 @@ use_preset_vocabulary: false
 흹	!wvise
 흺	!wvisx
 흻	!wvisw
-흼	!wvio	4000
-흽	!wvia	4000
+흼	!wvio	70%
+흽	!wvia	70%
 흾	!wviab
 흿	!wvib
 힀	!wvibb
-힁	!wviq	4000
+힁	!wviq	70%
 힂	!wviu
 힃	!wvid
 힄	!wviz
 힅	!wvie
 힆	!wvix
 힇	!wviw
-히	!wi	4000
-힉	!wiy	4000
+히	!wi	70%
+힉	!wiy	70%
 힊	!wiyy
 힋	!wiyb
-힌	!wil	4000
+힌	!wil	70%
 힍	!wilu
 힎	!wilw
 힏	!wic
-힐	!wis	4000
+힐	!wis	70%
 힑	!wisy
 힒	!wiso
 힓	!wisa
@@ -19985,12 +19985,12 @@ use_preset_vocabulary: false
 힕	!wise
 힖	!wisx
 힗	!wisw
-힘	!wio	4000
-힙	!wia	4000
+힘	!wio	70%
+힙	!wia	70%
 힚	!wiab
-힛	!wib	4000
+힛	!wib	70%
 힜	!wibb
-힝	!wiq	4000
+힝	!wiq	70%
 힞	!wiu
 힟	!wid
 힠	!wiz
