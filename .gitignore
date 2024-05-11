@@ -1,0 +1,8 @@
+# output of build
+/電腦RIME方案_*
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
