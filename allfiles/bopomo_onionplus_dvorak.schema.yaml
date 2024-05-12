@@ -9,7 +9,7 @@ schema:
     - 『洋蔥』
     - Yen, Tzu-Hsi
   description: |
-    注音符號輸入，採用「大千式 Dvorak」鍵盤排列。
+    注音符號輸入，採用「大千式 + Dvorak」鍵盤排列。中文大千，英文 Dvorak。
 
   dependencies:
     - symbols_bpmf
@@ -194,22 +194,17 @@ convert_japan_filter:
 #   tags: [ punct, abc, reverse2_lookup ]
 ################################### 選單 ######################################
 menu:
-  __include: element_bopomo:/menu
-  # alternative_select_keys: "GCRLHTNSMWVZ"
-#  alternative_select_keys: "QAZWSXEDCRFV"
-  # page_size: 10
+  __include: element_bopomo_dvorak:/menu
 ################################### 拼寫 ######################################
 speller:
   alphabet: "1'a;2,oq.ejpuk5yixfdbghm8ctw9rnv0lsz[3467 "
   initials: "1'a;2,oq.ejpuk5yixfdbghm8ctw9rnv0lsz["
-  # alphabet: "1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 3467"
-  # initials: "1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-"
   finals: " 6347"
   delimiter: "\\"
   use_space: true
   algebra:
 ##### 非正確注音（補空碼或慣用發音）轉寫 #####
-    - xform/[)(]/
+    - xform/[)(]//
 ########################################
     - xform/iu/iU/ #iou
     - xform/ui/uI/ #uei
@@ -256,7 +251,6 @@ speller:
     - derive/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])([aoeEAIOUMNKG])/$3$1$2/ #[R]
     - derive/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])([aoeEAIOUMNKG])/$2$3$1/ #[R]
     - derive/^([bpmfdtnlgkhjqxZCSrzcs])([iuv])([aoeEAIOUMNKG])/$1$3$2/ #[R]
-#    - 'xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR12345|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|'
     - "xlit|bpmfdtnlgkhjqxZCSrzcsiuvaoeEAIOUMNKGR12345|1'a;2,oq.ejpuk5yixfdbghm8ctw9rnv0lsz[ 6347|"
 ########################## 以下開始幾大段為各種翻譯器 ########################
 translator:
@@ -267,7 +261,6 @@ translator:
   enable_user_dict: true
   # initial_quality: 0
   preedit_format:
-    # - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
     - "xlit|1'a;2,oq.ejpuk5yixfdbghm8ctw9rnv0lsz[ 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
     - 'xform/\\/\⁞/' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
 ############################## 短語 #########################################
@@ -552,7 +545,6 @@ all_bpm:
     - xform/^/《注音文》/
     - xform/^《注音文》(.+)A$/$1《注音文》/
     - xform/A//
-#     - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-6347 |ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˊˇˋ˙ˉ|"
     - "xlit|1'a;2,oq.ejpuk5yixfdbghm8ctw9rnv0lsz[ 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
     - 'xform/\\//'
 #######################<EMOJI>和<顏文字>系列符號（方案掛載）##########################
@@ -571,7 +563,7 @@ emoji_series:
   tips: "《emoji集》▶"
   closing_tips: "◀《emoji集》"
   preedit_format:
-    __include: element_bopomo:/emoji_series
+    __include: element_bopomo_dvorak:/emoji_series
 ################################ 符號處理 ##################################
 punctuator:
   import_preset: punct_bopomo
@@ -579,11 +571,11 @@ punctuator:
 key_binder:
   import_preset: default
   bindings:
-    __include: element_bopomo:/key_binder
+    __include: element_bopomo_dvorak:/key_binder
 
 editor:
   bindings:
-    __include: element_bopomo:/editor
+    __include: element_bopomo_dvorak:/editor
 ########################## 用正則調出各種功能 ##############################
 recognizer:
   patterns:

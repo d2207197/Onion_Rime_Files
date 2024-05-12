@@ -9,7 +9,7 @@ schema:
     - 『洋蔥』
     - Yen, Tzu-Hsi
   description: |
-    注音符號輸入，採用「大千式」鍵盤排列。
+    注音符號輸入，採用「大千式 Dvorak」鍵盤排列。中文大千，英文 Dvorak。
 
   dependencies:
     - cangjie5
@@ -82,11 +82,8 @@ menu:
   page_size: 6
 ################################### 拼寫 ######################################
 speller:
-#  alphabet: "1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-3467 "
-#  initials: "1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/-"
   alphabet: "1'a;2,oq.ejpuk5yixfdbghm8ctw9rnv0lsz[3467 "
   initials: "1'a;2,oq.ejpuk5yixfdbghm8ctw9rnv0lsz["
-
   finals: " 6347"
   delimiter: "\\"
   use_space: true
@@ -149,7 +146,6 @@ translator:
   enable_user_dict: true
   # initial_quality: 0
   preedit_format:
-#    - "xlit|1qaz2wsxedcrfv5tgbyhnujm8ik,9ol.0p;/- 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
     - "xlit|1'a;2,oq.ejpuk5yixfdbghm8ctw9rnv0lsz[ 6347|ㄅㄆㄇㄈㄉㄊㄋㄌㄍㄎㄏㄐㄑㄒㄓㄔㄕㄖㄗㄘㄙㄧㄨㄩㄚㄛㄜㄝㄞㄟㄠㄡㄢㄣㄤㄥㄦˉˊˇˋ˙|"
     - 'xform/\\/ /' #全形空格　 #半形空格  #| #⁞ #⁝ #⋮ #¦ #┆
 ############################## 以下為短語 ##########################################
@@ -216,7 +212,7 @@ punctuator:
     "{" : { commit: "〔" }
     "}" : { commit: "〕" }
     ":" : { commit: "：" }
-    "'" : [ "、","—", "──", "——", "⸺", "‧", "·", "●", "•", "・", "･" ]
+    "-" : [ "、","—", "──", "——", "⸺", "‧", "·", "●", "•", "・", "･" ]
     "\"" : { commit: "；" }
     "<" : { commit: "，" }
     ">" : { commit: "。" }
@@ -229,7 +225,7 @@ punctuator:
     ">" : { commit: "。" }
     "?" : { commit: "？" }
     ":" : { commit: "：" }
-    "'" : [ "、","—", "──", "——", "⸺", "‧", "·", "●", "•", "・", "･" ]
+    "-" : [ "、","—", "──", "——", "⸺", "‧", "·", "●", "•", "・", "･" ]
     "\"" : { commit: "；" }
     "\\" : [ "\\", "＼", "﹨" ]
     "|" : [ "|", "｜", "︱", "§", "¶", "⁋", "❡", "⁌", "⁍", "∣", "︳", "│", "┃", "¦", "￤", "╎", "╏", "┆", "┇", "┊", "┋", "‖", "║", "‖", "∥", "᱿", "᰼" ]
@@ -339,8 +335,8 @@ key_binder:
 #關#    - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
 ### 另設快捷刪除鍵 ###
 #    - {accept: Shift+R, send: BackSpace, when: composing}
-    - {accept: Shift+V, send: BackSpace, when: composing}
-    - {accept: Shift+Z, send: Delete, when: composing}
+    - {accept: Shift+B, send: BackSpace, when: composing}
+    - {accept: Shift+D, send: Delete, when: composing}
 #    - {accept: Shift+G, send: Escape, when: composing}
 ### 另設快捷鍵 ###
 #    - {accept: Shift+V, send: Home, when: composing}
@@ -348,18 +344,18 @@ key_binder:
 ### 功能快捷鍵 ###
     # - {accept: Return, send: space, when: has_menu}
 ### 避聲調重複按 ###
-    - {accept: 3, send: Escape, when: always}
-    # - {accept: 3, send: Escape, when: composing}
-    - {accept: 3, send: 3, when: has_menu}
-    - {accept: 4, send: Escape, when: always}
-    # - {accept: 4, send: Escape, when: composing}
-    - {accept: 4, send: 4, when: has_menu}
-    - {accept: 6, send: Escape, when: always}
-    # - {accept: 6, send: Escape, when: composing}
-    - {accept: 6, send: 6, when: has_menu}
-    - {accept: 7, send: Escape, when: always}
-    # - {accept: 7, send: Escape, when: composing}
-    - {accept: 7, send: 7, when: has_menu}
+    - {accept: "3", send: Escape, when: always}
+    # - {accept: "3", send: Escape, when: composing}
+    - {accept: "3", send: "3", when: has_menu}
+    - {accept: "4", send: Escape, when: always}
+    # - {accept: "4", send: Escape, when: composing}
+    - {accept: "4", send: "4", when: has_menu}
+    - {accept: "6", send: Escape, when: always}
+    # - {accept: "6", send: Escape, when: composing}
+    - {accept: "6", send: "6", when: has_menu}
+    - {accept: "7", send: Escape, when: always}
+    # - {accept: "7", send: Escape, when: composing}
+    - {accept: "7", send: "7", when: has_menu}
 ### ctrl 打出標點 ###
 #關#    - {accept: "Control+comma", send: "less", when: always} #「逗號」#接受「Contol」+「,」直出「<」
 #關#    - {accept: "Control+period", send: "greater", when: always} #「句號」#接受「Contol」+「.」直出「>」
@@ -382,7 +378,7 @@ recognizer:
     # uppercase: "^[A-Z][-_+.'0-9A-Za-z]*$"
     url: "^(https?:|ftp:|mailto:|file:).*$"
     email: "^[a-z][-_.0-9a-z]*@.*$"
-    punct: "(?<![=`])``?[-,;/0-9a-z]*$|[[][[]?'?$|[]][]]?'?$|[[][]]$|[[][[][]][]]$|[[]'[]]'$|[[][[]'[]][]]'$|'''?$|===?$|=``?$|=''?$|=''?=''?$|=[][][][]?$|=[][][][]?=[][][][]?$|=[-,./;][-,./;]? ?$|=,,=[.][.] ?$|=[0-9] ?$|=9=0 ?$|==[].,90'[]+ ?$"
+    punct: "(?<![=`])``?[-,;/0-9a-z]*$|[[][[]?-?$|[]][]]?-?$|[[][]]$|[[][[][]][]]$|[[]-[]]-$|[[][[]-[]][]]-$|---?$|===?$|=``?$|=--?$|=--?=--?$|=[][][][]?$|=[][][][]?=[][][][]?$|=[-,./;][-,./;]? ?$|=,,=[.][.] ?$|=[0-9] ?$|=9=0 ?$|==[].,90'[]+ ?$"
     reverse2_lookup: "=[a-z]* ?$"
 #    lua: "^'/[';]?[a-z0-9./-]*$"
 
