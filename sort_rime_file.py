@@ -197,6 +197,7 @@ shutil.copyfile("./allfiles/easy_en_upper.dict.yaml", "./sort_rime/注音洋蔥p
 shutil.copyfile("./allfiles/easy_en_upper.schema.yaml", "./sort_rime/注音洋蔥plus版/easy_en_upper.schema.yaml")
 
 shutil.copyfile("./allfiles/element_bopomo.yaml", "./sort_rime/注音洋蔥plus版/element_bopomo.yaml")
+shutil.copyfile("./allfiles/element_bopomo_dvorak.yaml", "./sort_rime/注音洋蔥plus版/element_bopomo_dvorak.yaml")
 shutil.copyfile("./allfiles/fullshape.extended.dict.yaml", "./sort_rime/注音洋蔥plus版/fullshape.extended.dict.yaml")
 shutil.copyfile("./allfiles/fullshape.dict.yaml", "./sort_rime/注音洋蔥plus版/fullshape.dict.yaml")
 shutil.copyfile("./allfiles/fullshape.schema.yaml", "./sort_rime/注音洋蔥plus版/fullshape.schema.yaml")

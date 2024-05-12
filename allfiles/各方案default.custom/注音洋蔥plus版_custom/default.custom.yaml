@@ -95,8 +95,8 @@ patch:
     # - { accept: Right, send: Page_Down, when: paging } #直式選單用 #has_menu
     # - { accept: KP_Enter, send: Return, when: always } #使小鍵盤Enter可選擇
 
-  ascii_composer:
-    good_old_caps_lock: false
+#  ascii_composer:
+#    good_old_caps_lock: false
   ascii_composer/switch_key:
     Shift_L: noop
     Shift_R: noop

@@ -1,6 +1,6 @@
 # Rime schema settings
 # encoding: utf-8
-# 《洋蔥純注音版 設定頁》
+# 《洋蔥純注音版 Dvorak 設定頁》
 schema:
   schema_id: bopomo_onion_dvorak
   name: "☆注音(洋蔥純注音版)Dvorak☆"

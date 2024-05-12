@@ -13,7 +13,7 @@ menu:
   # alternative_select_labels: [ 'QY', 'AH', 'ZN', 'WU', 'SJ', 'XM' ]
   # alternative_select_labels: [ 1QY, 2AH, 3ZN, 4WU, 5SJ, 6XM ]
   # alternative_select_labels: [ ₁QY, ₂AH, ₃ZN, ₄WU, ₅SJ, ₆XM ]
-  alternative_select_labels: [ GP, HU, MK, CY, TI, WX ]
+  alternative_select_labels: [ G, H, M, C, T, W ]
   page_size: 6
 
 
@@ -65,22 +65,23 @@ key_binder:
 #關#    - {accept: Tab, send: Page_Down, when: has_menu} #「tab」翻頁。
     - {accept: Shift+J, send: Page_Up, when: has_menu}
     - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。 #send: Right #send: Down
-    - {accept: Shift+R, send: Page_Up, when: has_menu}
-    - {accept: Shift+N, send: Page_Down, when: has_menu}
-#左邊選字
+    - {accept: Shift+R, send: Page_Up, when: has_menu}        # R 代表 Return，回到前一頁
+    - {accept: Shift+N, send: Page_Down, when: has_menu}      # N 代表 Next page
+#右邊選字
     - {accept: Shift+G, send: Control+1, when: has_menu}
     - {accept: Shift+H, send: Control+2, when: has_menu}
     - {accept: Shift+M, send: Control+3, when: has_menu}
     - {accept: Shift+C, send: Control+4, when: has_menu}
     - {accept: Shift+T, send: Control+5, when: has_menu}
     - {accept: Shift+W, send: Control+6, when: has_menu}
-#右邊選字
-    - {accept: Shift+P, send: Control+1, when: has_menu}
-    - {accept: Shift+U, send: Control+2, when: has_menu}
-    - {accept: Shift+K, send: Control+3, when: has_menu}
-    - {accept: Shift+Y, send: Control+4, when: has_menu}
-    - {accept: Shift+I, send: Control+5, when: has_menu}
-    - {accept: Shift+X, send: Control+6, when: has_menu}
+#左邊選字
+# 在 Dvorak 情境只設計適合雙手選字右邊選字
+#    - {accept: Shift+P, send: Control+1, when: has_menu}
+#    - {accept: Shift+U, send: Control+2, when: has_menu}
+#    - {accept: Shift+K, send: Control+3, when: has_menu}
+#    - {accept: Shift+Y, send: Control+4, when: has_menu}
+#    - {accept: Shift+I, send: Control+5, when: has_menu}
+#    - {accept: Shift+X, send: Control+6, when: has_menu}
 ### 空白鍵 ###
     - {accept: space, send: Return, when: paging} #方向鍵選字時，space直接上屏（避免被一聲空格影響）
     # - {accept: space, send: Page_Down, when: paging} #方向鍵選字時，space翻頁（上條遮屏需開啟，否則「=」+「符號」會誤按）
@@ -91,11 +92,11 @@ key_binder:
 #關#    - {accept: space, send: space, when: has_menu} #非空碼時，空白還是空白
 ### 補一聲和上屏 raw_input （ paging 時，空白鍵無法輸出一聲 ） ###
 #    - {accept: Shift+D, send: space, when: has_menu}
-    - {accept: Shift+S, send: space, when: has_menu}
+    - {accept: Shift+S, send: space, when: has_menu}            # S 代表 space
 #    - {accept: Shift+E, send: Shift+Return, when: composing}
-#    - {accept: Shift+O, send: Shift+Return, when: composing}
+    - {accept: Shift+L, send: Shift+Return, when: composing}
 ### 上屏 preedit（注音文）編碼 ###
-    - {accept: Shift+F, send: Control+Return, when: has_menu}
+    - {accept: Shift+F, send: Control+Return, when: has_menu}   # F 代表 feed ，意思是直接輸出注音文
 ### 刪除鍵 ###
     - {accept: BackSpace, send: Control+BackSpace, when: has_menu} #〔關〕刪除前一個拼音字符〔開〕：刪除整組拼音字符（一個字）
     - {accept: Shift+BackSpace, send: BackSpace, when: has_menu}
@@ -104,11 +105,11 @@ key_binder:
 #關#    - {accept: backslash, send: Shift+Return, when: has_menu} #「\」鍵位上屏英文。
 ### 另設快捷刪除鍵 ###
 #    - {accept: Shift+R, send: BackSpace, when: composing}
-    - {accept: Shift+B, send: BackSpace, when: composing}
-    - {accept: Shift+D, send: Delete, when: composing}
+    - {accept: Shift+B, send: BackSpace, when: composing}       # B 代表 backspace
+    - {accept: Shift+D, send: Delete, when: composing}          # D 代表 delete
 #    - {accept: Shift+G, send: Escape, when: composing}
 ### 另設快捷鍵 ###
-    - {accept: Shift+V, send: Home, when: composing}
+    - {accept: Shift+V, send: Home, when: composing}            # V 與 Z 位置適合，沒特別記憶意義
     - {accept: Shift+Z, send: End, when: composing}
 ### 功能快捷鍵 ###
     # - {accept: Return, send: space, when: has_menu}

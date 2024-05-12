@@ -1,8 +1,5 @@
-# output of build
+# Output of sort_rime_file.py
 /電腦RIME方案_*
 
 # IntelliJ project files
 .idea
-*.iml
-out
-gen
