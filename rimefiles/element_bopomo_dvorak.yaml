@@ -7,77 +7,72 @@
 # 洋蔥注音 Dvorak 版 — 按鍵操作說明
 # ══════════════════════════════════════════════════════════════════
 #
-# 設計原則：所有 Shift+字母 快捷鍵維持與 QWERTY 原版相同的「物理位置」，
-# 使用者不需重新記憶鍵位，手指位置和原版完全一致。
-#
-# ┌─────────────────────────────────────────────────────────┐
-# │  Dvorak 鍵盤配置（僅標示本方案用到的 Shift+鍵 功能）   │
-# └─────────────────────────────────────────────────────────┘
-#
-#   Dvorak 鍵盤排列：
-#   ' , . p y   f g c r l
-#   a o e u i   d h t n s
-#   ; q j k x   b m w v z
+# 設計原則：
+# - 右手九宮格 (GCR/HTN/MWV) 專用選字，共 9 候選
+# - 右手九宮格外 (F/B/D) 用 Emacs 風格游標操作
+# - 左手用助記鍵管理導航與上屏
 #
 # ──────────────────────────────────────
-#  選字鍵（候選字選單出現時按 Shift+鍵）
+#  右手九宮格 — 選字（has_menu 時）
 # ──────────────────────────────────────
 #
-#   右手（主要）：
-#   ┌─────────────────────────────────┐
-#   │  候選 1: Shift+F    (物理 Y)   │
-#   │  候選 2: Shift+D    (物理 H)   │
-#   │  候選 3: Shift+B    (物理 N)   │
-#   │  候選 4: Shift+G    (物理 U)   │
-#   │  候選 5: Shift+H    (物理 J)   │
-#   │  候選 6: Shift+M    (物理 M)   │
-#   │  候選 7: Shift+C    (物理 I)   │
-#   │  候選 8: Shift+T    (物理 K)   │
-#   └─────────────────────────────────┘
+#   ┌──────────┬──────────┬──────────┐
+#   │ G = 候選1│ C = 候選2│ R = 候選3│
+#   ├──────────┼──────────┼──────────┤
+#   │ H = 候選4│ T = 候選5│ N = 候選6│
+#   ├──────────┼──────────┼──────────┤
+#   │ M = 候選7│ W = 候選8│ V = 候選9│
+#   └──────────┴──────────┴──────────┘
+#   Enter = 確認第 1 候選（重選時可用 Shift+G）
 #
 # ──────────────────────────────────────
-#  功能快捷鍵（Shift+鍵）
+#  右手九宮格外 — Emacs 游標與刪除（composing 時）
 # ──────────────────────────────────────
 #
-#   輸入相關：
-#   ┌──────────────────────────────────────────────────────┐
-#   │  上屏原始輸入      Shift+O        (O = Original)    │
-#   │  上屏注音文編碼    Shift+U        (物理 F)          │
-#   │  上屏 comment      Shift+P        (物理 R)          │
-#   └──────────────────────────────────────────────────────┘
+#   F = Forward（右移一個字）
+#   B = Backward（左移回退一個字）
+#   D = Delete（向右刪一個字）
 #
-#   編輯相關：
-#   ┌──────────────────────────────────────────────────────┐
-#   │  退格 BackSpace    Shift+L        (物理 P)          │
-#   │  刪除 Delete       Shift+Y        (物理 T)          │
-#   │  取消 Escape       Shift+I        (物理 G)          │
-#   │  Home              Shift+A        (Emacs C-a)       │
-#   │  End               Shift+E        (Emacs C-e)       │
-#   └──────────────────────────────────────────────────────┘
-#
-#   翻頁（vi 風格）：
-#   ┌──────────────────────────────────────────────────────┐
-#   │  上一頁            Shift+K        (vi k=up)         │
-#   │  下一頁            Shift+J        (vi j=down)       │
-#   │  下一頁            Shift+Space                      │
-#   │  上/下頁           方向鍵 ← →（選單出現時）         │
-#   └──────────────────────────────────────────────────────┘
+#   鍵位：
+#     F  [G  C  R]  ...
+#     D  [H  T  N]  ...
+#     B  [M  W  V]  ...
 #
 # ──────────────────────────────────────
-#  物理鍵位總覽（Dvorak 鍵盤上的 Shift+鍵 功能分布）
+#  左手 — 導航、刪除、上屏
 # ──────────────────────────────────────
 #
-#   上排：  '     ,     .     P     Y     F     G     C     R     L
-#          ---   ---   ---  上屏  Del   選1   選4   選7  ---   Back
-#                           cmnt              右    右         Space
+#   導航：
+#     A = Home        (Emacs C-a)
+#     E = End         (Emacs C-e)
+#     J = Page Down   (vi j=down)
+#     K = Page Up     (vi k=up)
 #
-#   中排：  A     O     E     U     I     D     H     T     N     S
-#          Home  上屏  End  上屏  Esc   選2   選5   選8  ---    ---
-#          C-a   原始  C-e  編碼        右    右    右
+#   操作：
+#     Q = Escape/Quit
+#     Shift+\ = BackSpace（刪除整組注音）
 #
-#   下排：  ;     Q     J     K     X     B     M     W     V     Z
-#          ---   ---  PgDn  PgUp  ---   選3   選6   ---   ---   ---
-#                      vi    vi         右    右
+#   上屏：
+#     O = 上屏原始輸入  (Original)
+#     P = 上屏注音文    (Phonetic)
+#
+# ──────────────────────────────────────
+#  物理鍵位總覽
+# ──────────────────────────────────────
+#
+#   上排：  '     ,     .     P     Y  │  F     G     C     R     L
+#          ---   ---   ---  注音文 --- │ Fwd   選1   選2   選3   ---
+#                           Phon      │ C-f   九宮  九宮  九宮
+#                                     │
+#   中排：  A     O     E     U     I  │  D     H     T     N     S
+#          Home  上屏  End   ---  --- │ Del   選4   選5   選6   ---
+#          C-a   Orig  C-e           │ C-d   九宮  九宮  九宮
+#                                     │
+#   下排：  ;     Q     J     K     X  │  B     M     W     V     Z
+#          ---   Quit  PgDn  PgUp --- │ Bwd   選7   選8   選9   ---
+#                      vi    vi       │ C-b   九宮  九宮  九宮
+#
+#   其他：Shift+\ = BackSpace（刪除整組注音）
 #
 # ══════════════════════════════════════════════════════════════════
 
@@ -120,14 +115,12 @@
 #   page_size: 6
 
 
-### 8x2 Dvorak（物理位置同 QWERTY 原版）###
-### 右手選字物理位置：Y→F, H→D, N→B, U→G, J→H, M→M, I→C, K→T ###
-### 左手可用選字：A→A, S→O, X→Q, D→E, C→J（Q→' W→, E→. 為標點，已註釋）###
+### 9 候選九宮格 Dvorak ###
 menu:
-### 修改候選標籤（右手鍵）
-  alternative_select_labels: [ 1F, 2D, 3B, 4G, 5H, 6M, 7C, 8T ]
+### 修改候選標籤（右手九宮格）
+  alternative_select_labels: [ G, C, R, H, T, N, M, W, V ]
 ### 選單每頁顯示個數
-  page_size: 8
+  page_size: 9
 
 
 # ### 8x1 ###
@@ -380,37 +373,36 @@ key_binder:
 #     - {accept: Shift+M, send: Control+6, when: has_menu}
 
 
-### 8x2 Dvorak（物理位置同 QWERTY 原版）###
-### 原版 QWERTY → 物理位置 → Dvorak 輸出 ###
+### 九宮格 Dvorak ###
 key_binder_plus:
   __append:
-### 上屏原始輸入 ###
-    - {accept: Shift+O, send: Shift+Return, when: composing}     # O = Original，上屏原始輸入
-### 上屏 preedit（注音文）編碼 ###
-    - {accept: Shift+U, send: Control+Return, when: composing} #has_menu  # 物理F→U
-### 上屏 comment 內容 ###
-    - {accept: Shift+P, send: Control+Shift+Return, when: composing}  # 物理R→P
-### 刪除鍵 ###
-### 另設快捷刪除鍵 ###
-    - {accept: Shift+L, send: BackSpace, when: composing}  # 物理P→L
-    - {accept: Shift+Y, send: Delete, when: composing}     # 物理T→Y
-    - {accept: Shift+I, send: Escape, when: composing}     # 物理G→I
-### 另設快捷鍵（Emacs 風格：A=ahead E=end）###
-    - {accept: Shift+A, send: Home, when: composing}       # Emacs C-a = ahead
-    - {accept: Shift+E, send: End, when: composing}        # Emacs C-e = end
-#翻頁（vi 風格：J=下 K=上）
-    - {accept: Shift+K, send: Page_Up, when: has_menu}     # vi k=up
-    - {accept: Shift+J, send: Page_Down, when: has_menu}   # vi j=down
-    - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。
-#右邊選字（物理位置同 QWERTY，「Control+」不要換成「KP_」，特殊功能集【數字】選字會有問題）
-    - {accept: Shift+F, send: Control+1, when: has_menu}   # 物理Y→F
-    - {accept: Shift+D, send: Control+2, when: has_menu}   # 物理H→D
-    - {accept: Shift+B, send: Control+3, when: has_menu}   # 物理N→B
-    - {accept: Shift+G, send: Control+4, when: has_menu}   # 物理U→G
-    - {accept: Shift+H, send: Control+5, when: has_menu}   # 物理J→H
-    - {accept: Shift+M, send: Control+6, when: has_menu}   # 物理M→M
-    - {accept: Shift+C, send: Control+7, when: has_menu}   # 物理I→C
-    - {accept: Shift+T, send: Control+8, when: has_menu}   # 物理K→T
+### 右手九宮格選字（「Control+」不要換成「KP_」，特殊功能集【數字】選字會有問題）###
+    - {accept: Shift+G, send: Control+1, when: has_menu}   # 九宮格 1
+    - {accept: Shift+C, send: Control+2, when: has_menu}   # 九宮格 2
+    - {accept: Shift+R, send: Control+3, when: has_menu}   # 九宮格 3
+    - {accept: Shift+H, send: Control+4, when: has_menu}   # 九宮格 4
+    - {accept: Shift+T, send: Control+5, when: has_menu}   # 九宮格 5
+    - {accept: Shift+N, send: Control+6, when: has_menu}   # 九宮格 6
+    - {accept: Shift+M, send: Control+7, when: has_menu}   # 九宮格 7
+    - {accept: Shift+W, send: Control+8, when: has_menu}   # 九宮格 8
+    - {accept: Shift+V, send: Control+9, when: has_menu}   # 九宮格 9
+### 右手 Emacs 游標移動 ###
+    - {accept: Shift+F, send: Shift+Right, when: composing}  # C-f = forward（右移一個字）
+    - {accept: Shift+B, send: Shift+Left, when: composing}   # C-b = backward（左移回退一個字）
+### 右手 Emacs 刪除 ###
+    - {accept: Shift+D, send: Delete, when: composing}       # C-d = delete（向右刪）
+### 左手 Emacs 導航 ###
+    - {accept: Shift+A, send: Home, when: composing}         # C-a = Home
+    - {accept: Shift+E, send: End, when: composing}          # C-e = End
+### 左手 vi 翻頁 ###
+    - {accept: Shift+K, send: Page_Up, when: has_menu}       # vi k=up
+    - {accept: Shift+J, send: Page_Down, when: has_menu}     # vi j=down
+### 左手操作 ###
+    - {accept: Shift+Q, send: Escape, when: composing}       # Q = Quit
+    - {accept: bar, send: BackSpace, when: composing}         # Shift+\ = BackSpace（整組刪除）
+### 左手上屏 ###
+    - {accept: Shift+O, send: Shift+Return, when: composing} # O = Original
+    - {accept: Shift+P, send: Control+Return, when: composing} # P = Phonetic（注音文）
 
 
 # ### 8x1 ###
