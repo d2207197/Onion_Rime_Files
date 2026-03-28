@@ -120,6 +120,14 @@ Dvorak 鍵盤排列（同物理位置，同注音符號）：
 | Home | `Shift+V` | `Shift+A` | 左手小指中排 | Emacs C-a = **a**head |
 | End | `Shift+B` | `Shift+E` | 左手中指上排 | Emacs C-e = **e**nd |
 
+### 刪除操作詳細（QWERTY / Dvorak 相同）
+
+| 按鍵 | 效果 | 說明 |
+|------|------|------|
+| `BackSpace` | 刪除整組注音（一個字） | 預設行為被改為刪整組 |
+| `Shift+BackSpace` | 刪除一個注音字符 | 精細刪除 |
+| `\` | 刪除一個注音字符 | 選字狀態時可用 |
+
 ### 切分移位（QWERTY / Dvorak 相同）
 
 | 功能 | 按鍵 |
