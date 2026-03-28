@@ -86,7 +86,10 @@ Dvorak 鍵盤排列（同物理位置，同注音符號）：
 
 - **Enter** = 確認第 1 候選（平時使用）
 - **Shift+H** = 選第 1 候選（回頭重選字時方便）
-- 上排 **G / C / R** 空出，保留給未來功能
+- **Tab** = 離開選字模式，回到編輯狀態
+- 繼續輸入注音也會自動離開選字模式
+
+> 空閒鍵（保留給未來功能）：右手 G, C, R, D, S, L ／左手 Y, U, I, X
 
 ### 翻頁（vi 風格）
 
@@ -106,7 +109,7 @@ Dvorak 鍵盤排列（同物理位置，同注音符號）：
 ```
 Dvorak 右手：                              Dvorak 左手：
   F(fwd)  G(-)  C(-)  R(-)                  P(注音文) ...
-  D(---) [H=1  T=2  N=3  S=4]               O(orig)  E(end)  A(home)
+  D(---) [H=1  T=2  N=3  S=4]               A(ahead) O(orig) E(end)
   B(bwd) [M=5  W=6  V=7  Z=8]               Q(quit)  J(pgdn) K(pgup)
 ```
 
@@ -121,7 +124,7 @@ Dvorak 右手：                              Dvorak 左手：
 
 | 按鍵 | 功能 | 助記 |
 |------|------|------|
-| `Shift+A` | Home（跳到開頭） | Emacs C-**a** |
+| `Shift+A` | Home（跳到開頭） | **A** = **a**head / Emacs C-a |
 | `Shift+E` | End（跳到結尾） | Emacs C-**e** |
 | `Shift+J` | Page Down | vi **j**=down |
 | `Shift+K` | Page Up | vi **k**=up |
@@ -150,6 +153,7 @@ Dvorak 右手：                              Dvorak 左手：
 | 左移一個注音 | `↑`、`Shift+←` |
 | 右移一個注音 | `Shift+→` |
 | 右移一整個字 | `→` |
+| 左移一個字 | `←`（非選字狀態時） |
 | 回到輸入列 | `Tab`（選字狀態時） |
 
 > **Shift+F/B**（字級移動）和**方向鍵**（注音級移動）搭配使用，
@@ -159,7 +163,7 @@ Dvorak 右手：                              Dvorak 左手：
 
 | 功能 | 按鍵 |
 |------|------|
-| 切換中/英文 | `Control+Shift+2` 或 `Shift+空白` |
+| 切換中/英文 | `Shift+空白`（推薦）或 `Control+Shift+2` |
 | 切換方案 | `Control+~` 或 `F4` |
 | 切換全/半形 | `Control+Shift+3` |
 | 切換繁/簡 | `Control+Shift+5` |
