@@ -31,7 +31,7 @@
 #
 #   F = Forward（右移一個字）
 #   B = Backward（左移回退一個字）
-#   D = Delete（向右刪）
+#   D = Done（確認當前詞，同 Enter）
 #   Z = BackSpace（刪除整組注音）
 #
 #   鍵位：
@@ -65,8 +65,8 @@
 #                           Phon      │ C-f   九宮  九宮  九宮
 #                                     │
 #   中排：  A     O     E     U     I  │  D     H     T     N     S
-#          Home  上屏  End   ---  --- │ Del   選4   選5   選6   ---
-#          C-a   Orig  C-e           │ C-d   九宮  九宮  九宮
+#          Home  上屏  End   ---  --- │ Done  選4   選5   選6   ---
+#          C-a   Orig  C-e           │ 確認  九宮  九宮  九宮
 #                                     │
 #   下排：  ;     Q     J     K     X  │  B     M     W     V     Z
 #          ---   Quit  PgDn  PgUp --- │ Bwd   選7   選8   選9  整組刪
@@ -387,8 +387,8 @@ key_binder_plus:
 ### 右手 Emacs 游標移動 ###
     - {accept: Shift+F, send: Shift+Right, when: composing}  # C-f = forward（右移一個字）
     - {accept: Shift+B, send: Shift+Left, when: composing}   # C-b = backward（左移回退一個字）
-### 右手 Emacs 刪除 ###
-    - {accept: Shift+D, send: Delete, when: composing}       # C-d = delete（向右刪）
+### 右手確認 ###
+    - {accept: Shift+D, send: Return, when: composing}       # D = Done（確認當前詞）
 ### 左手 Emacs 導航 ###
     - {accept: Shift+A, send: Home, when: composing}         # C-a = Home
     - {accept: Shift+E, send: End, when: composing}          # C-e = End

@@ -26,7 +26,7 @@ patch:
 ## 設計原則
 
 1. **右手九宮格選字**：GCR / HTN / MWV 九鍵專用選字，共 9 候選
-2. **Emacs 風格游標**：F=forward、B=backward、D=delete，圍繞九宮格
+2. **Emacs 風格游標**：F=forward、B=backward、D=done，圍繞九宮格
 3. **助記鍵**：所有功能鍵都有助記（vi/Emacs/英文縮寫），不需死記
 4. **一個功能一個鍵**：不重複綁定，簡潔明確
 
@@ -88,9 +88,7 @@ Dvorak 鍵盤排列（同物理位置，同注音符號）：
 
 - **Enter** = 確認第 1 候選（平時使用）
 - **Shift+G** = 選第 1 候選（回頭重選字時方便）
-
-> QWERTY 原版使用左右手各 8 鍵（共 16 鍵）選 8 個候選。
-> Dvorak 版改為右手九宮格 9 鍵選 9 個候選，更直覺且候選更多。
+- **Shift+D** = 確認當前詞（同 Enter，**D**=Done，左手不離 Shift 即可確認）
 
 ### 翻頁（vi 風格）
 
@@ -110,17 +108,17 @@ Dvorak 鍵盤排列（同物理位置，同注音符號）：
 ```
 Dvorak 右手：                              Dvorak 左手：
   F(fwd) [G=1  C=2  R=3]                    P(注音文) ...
-  D(del) [H=4  T=5  N=6]                    O(orig)  E(end)  A(home)
+  D(done)[H=4  T=5  N=6]                    O(orig)  E(end)  A(home)
   B(bwd) [M=7  W=8  V=9]  Z(BkSp)          Q(quit)  J(pgdn) K(pgup)
 ```
 
-### 右手 — Emacs 游標與刪除（composing 時）
+### 右手 — Emacs 游標與操作（composing 時）
 
 | 按鍵 | 功能 | 助記 |
 |------|------|------|
 | `Shift+F` | 右移一個字 | Emacs C-**f** = **f**orward |
 | `Shift+B` | 左移回退一個字 | Emacs C-**b** = **b**ackward |
-| `Shift+D` | 向右刪除 (Delete) | Emacs C-**d** = **d**elete |
+| `Shift+D` | 確認當前詞（同 Enter） | **D** = **D**one |
 | `Shift+Z` | 刪除整組注音 (BackSpace) | 九宮格右下，快速刪字 |
 
 ### 左手 — 導航
@@ -147,8 +145,7 @@ Dvorak 右手：                              Dvorak 左手：
 | `BackSpace` | 刪除整組注音（一個字） | Rime 共用設定 |
 | `Shift+BackSpace` | 刪除一個注音字符 | 精細刪除 |
 | `\` | 刪除一個注音字符 | 選字狀態時可用 |
-| `Shift+D` | 向右刪除 (Delete) | Emacs C-d |
-| `Shift+Z` | 刪除整組注音 (BackSpace) | 右手小指，九宮格旁 |
+| `Shift+Z` | 刪除整組注音 (BackSpace) | 右手小指，不離開 Shift |
 | `Fn+Shift+Delete` | 刪除記憶詞 | 先將游標移到該候選上再按。Rime 內建功能 |
 
 ### 切分移位（方向鍵）
@@ -190,7 +187,7 @@ Dvorak 右手：                              Dvorak 左手：
 | 全形 | `][` | 《全》 | 全形英數字 |
 | 注音文 | `';` | 《注音文》 | 輸出注音符號本身 |
 | emoji | `` ` `` | 《emoji集》 | 表情符號系列 |
-| 倉頡反查 | `]` + 倉頡碼 | 《查》 | 用倉頡碼反查注音（Dvorak `]` = QWERTY `=` 物理位置）|
+| 倉頡反查 | `]` + 倉頡碼 | 《查》 | Dvorak `]` = QWERTY `=` 物理位置 |
 | 數學/功能 | `'/` | — | 日期時間、計算機等 lua 功能 |
 
 ---
@@ -234,6 +231,57 @@ Dvorak 版覆蓋了部分標點鍵，讓常用標點維持 QWERTY 的**物理位
 
 ---
 
+## 與 QWERTY 原版的完整對照
+
+### 選字
+
+| 功能 | QWERTY 原版 | Dvorak 版 | 備註 |
+|------|:-----------:|:---------:|------|
+| 候選數 | 8 | 9 | Dvorak 多 1 個候選 |
+| 右手選字 1-8 | Shift+Y/H/N/U/J/M/I/K | Shift+G/C/R/H/T/N/M/W/V | Dvorak 用九宮格 |
+| 左手選字 1-8 | Shift+Q/A/W/S/X/E/D/C | — | **移除**，改為其他功能 |
+
+### 編輯快捷鍵
+
+| 功能 | QWERTY 原版 | Dvorak 版 | 備註 |
+|------|:-----------:|:---------:|------|
+| 補一聲 | `Shift+L` | — | **移除**，直接用空白鍵 |
+| 上屏原始輸入 | `Shift+O` | `Shift+O` | **O**=Original |
+| 上屏注音文 | `Shift+F` | `Shift+P` | **P**=Phonetic |
+| 上屏 comment | `Shift+R` | — | **移除**，低頻功能 |
+| BackSpace | `Shift+P` | `Shift+Z` | 九宮格旁，不離開 Shift |
+| Delete | `Shift+T` | — | **移除**，改為 Shift+D=Done(確認) |
+| Escape | `Shift+G` | `Shift+Q` | **Q**=Quit |
+| Home | `Shift+V` | `Shift+A` | Emacs C-**a** |
+| End | `Shift+B` | `Shift+E` | Emacs C-**e** |
+| Page Up | `Shift+Z` | `Shift+K` | vi **k**=up |
+| Page Down | `Shift+空白` | `Shift+J` | vi **j**=down |
+| 確認當前詞 | — | `Shift+D` | **D**=Done（Dvorak 新增） |
+| 右移一個字 | — | `Shift+F` | Emacs C-**f**（Dvorak 新增） |
+| 左移回退一個字 | — | `Shift+B` | Emacs C-**b**（Dvorak 新增） |
+
+### 標點符號
+
+| 功能 | QWERTY 按鍵 | Dvorak 按鍵 | 備註 |
+|------|:-----------:|:-----------:|------|
+| 頓號 | `'` | `-` | 同物理位置（Enter 旁） |
+| 左引號「 | `[` | `/` | 同物理位置 |
+| 右引號」 | `]` | `=` | 同物理位置 |
+| 等號＝ | `=` | `]` | 同物理位置 |
+| 逗號 | `<` | `<` | 不變 |
+| 句號 | `>` | `>` | 不變 |
+
+### 其他差異
+
+| 項目 | QWERTY 原版 | Dvorak 版 |
+|------|-------------|-----------|
+| 注音鍵位 | 大千式 QWERTY | 大千式 Dvorak（同物理位置） |
+| 選字標籤 | `𝟷𝚀𝚈` 等 (Unicode) | `G` `C` `R` 等 (ASCII) |
+| 字典/prism | bopomo_onionplus | 字典共用，prism 獨立編譯 |
+| 設定檔 | element_bopomo | element_bopomo_dvorak |
+
+---
+
 ## 檔案結構
 
 ```
@@ -251,23 +299,3 @@ Dvorak 專屬檔案（本 fork 新增）：
 ├── rimefiles/opencc/                               # OpenCC 轉換
 └── ...（其餘所有 rimefiles/ 下的檔案）
 ```
-
----
-
-## 與 QWERTY 原版的差異摘要
-
-| 項目 | QWERTY 原版 | Dvorak 版 |
-|------|-------------|-----------|
-| 注音鍵位 | 大千式 QWERTY | 大千式 Dvorak（同物理位置） |
-| 選字 | 8 候選，左右手各 8 鍵 | 9 候選，右手九宮格 9 鍵 |
-| 選字標籤 | `𝟷𝚀𝚈` 等 (Unicode) | `G` `C` `R` 等 (ASCII) |
-| 游標移動 | 方向鍵為主 | 方向鍵 + Shift+F/B（Emacs） |
-| 刪除 | Shift+P/T（物理位置） | Shift+D（Emacs C-d）+ Shift+\ |
-| 翻頁 | Shift+Z / Shift+空白 | Shift+J/K（vi 風格） |
-| 導航 | Shift+V/B（物理位置） | Shift+A/E（Emacs C-a/C-e） |
-| 取消 | Shift+G（物理位置） | Shift+Q（Quit） |
-| 上屏 | Shift+O/F/R（物理位置） | Shift+O/P（Original/Phonetic） |
-| 頓號 | `'` (Enter 旁) | `-` (Enter 旁，同物理位置) |
-| 引號 | `[` `]` | `/` `=`（同物理位置） |
-| 字典/prism | bopomo_onionplus | 字典共用，prism 獨立編譯 |
-| 設定檔 | element_bopomo | element_bopomo_dvorak |
