@@ -35,19 +35,6 @@
 #   │  候選 8: Shift+T    (物理 K)   │
 #   └─────────────────────────────────┘
 #
-#   左手（輔助，部分鍵位因標點衝突已停用）：
-#   ┌──────────────────────────────────────────────┐
-#   │  候選 2: Shift+A    (物理 A)                 │
-#   │  候選 4: Shift+O    (物理 S)                 │
-#   │  候選 5: Shift+Q    (物理 X)                 │
-#   │  候選 7: Shift+E    (物理 D)                 │
-#   │  候選 8: Shift+J    (物理 C)                 │
-#   │  --- 以下因 Shift 後為標點，已停用 ---        │
-#   │  候選 1: (物理 Q → ' → " 衝突)              │
-#   │  候選 3: (物理 W → , → < 衝突)              │
-#   │  候選 6: (物理 E → . → > 衝突)              │
-#   └──────────────────────────────────────────────┘
-#
 # ──────────────────────────────────────
 #  功能快捷鍵（Shift+鍵）
 # ──────────────────────────────────────
@@ -69,11 +56,12 @@
 #   │  End               Shift+X        (物理 B)          │
 #   └──────────────────────────────────────────────────────┘
 #
-#   翻頁：
+#   翻頁（vi 風格）：
 #   ┌──────────────────────────────────────────────────────┐
+#   │  上一頁            Shift+K        (vi k=up)         │
+#   │  下一頁            Shift+J        (vi j=down)       │
 #   │  下一頁            Shift+Space                      │
 #   │  上/下頁           方向鍵 ← →（選單出現時）         │
-#   │  上/下頁           Shift+↑ / Shift+↓                │
 #   └──────────────────────────────────────────────────────┘
 #
 # ──────────────────────────────────────
@@ -85,12 +73,12 @@
 #                           cmnt              右    右   原始  Space
 #
 #   中排：  A     O     E     U     I     D     H     T     N     S
-#          選2   選4   選7  上屏  Esc   選2   選5   選8   補    ---
-#          左    左    左   編碼        右    右    右   一聲
+#          ---   ---   ---  上屏  Esc   選2   選5   選8   補    ---
+#                           編碼        右    右    右   一聲
 #
 #   下排：  ;     Q     J     K     X     B     M     W     V     Z
-#          ---   選5   選8  Home  End   選3   選6   ---   ---   ---
-#                左    左               右    右
+#          ---   ---  PgDn  Home  End   選3   選6   ---   ---   ---
+#                     /PgUp        右    右
 #
 # ══════════════════════════════════════════════════════════════════
 
@@ -413,8 +401,9 @@ key_binder_plus:
 ### 另設快捷鍵 ###
     - {accept: Shift+K, send: Home, when: composing}       # 物理V→K
     - {accept: Shift+X, send: End, when: composing}        # 物理B→X
-#其他快捷鍵翻頁
-    # - {accept: colon, send: Page_Up, when: has_menu}     # 物理Z→; Shift+;=: 比較特殊，先不啟用
+#翻頁（vi 風格：J=下 K=上）
+    - {accept: Shift+K, send: Page_Up, when: has_menu}     # vi k=up
+    - {accept: Shift+J, send: Page_Down, when: has_menu}   # vi j=down
     - {accept: Shift+space, send: Page_Down, when: has_menu} #選字時「Shift」+「空白鍵」翻頁。
 #右邊選字（物理位置同 QWERTY，「Control+」不要換成「KP_」，特殊功能集【數字】選字會有問題）
     - {accept: Shift+F, send: Control+1, when: has_menu}   # 物理Y→F
@@ -425,15 +414,6 @@ key_binder_plus:
     - {accept: Shift+M, send: Control+6, when: has_menu}   # 物理M→M
     - {accept: Shift+C, send: Control+7, when: has_menu}   # 物理I→C
     - {accept: Shift+T, send: Control+8, when: has_menu}   # 物理K→T
-#左邊選字（物理位置同 QWERTY，標點鍵位已註釋）
-    # - {accept: quotedbl, send: Control+1, when: has_menu}   # 物理Q→' Shift+'=" 標點衝突
-    - {accept: Shift+A, send: Control+2, when: has_menu}     # 物理A→A
-    # - {accept: less, send: Control+3, when: has_menu}       # 物理W→, Shift+,=< 標點衝突
-    - {accept: Shift+O, send: Control+4, when: has_menu}     # 物理S→O
-    - {accept: Shift+Q, send: Control+5, when: has_menu}     # 物理X→Q
-    # - {accept: greater, send: Control+6, when: has_menu}    # 物理E→. Shift+.=> 標點衝突
-    - {accept: Shift+E, send: Control+7, when: has_menu}     # 物理D→E
-    - {accept: Shift+J, send: Control+8, when: has_menu}     # 物理C→J
 
 
 # ### 8x1 ###
