@@ -88,7 +88,6 @@ Dvorak 鍵盤排列（同物理位置，同注音符號）：
 
 - **Enter** = 確認第 1 候選（平時使用）
 - **Shift+G** = 選第 1 候選（回頭重選字時方便）
-- **Shift+D** = 確認當前詞（同 Enter，**D**=Done，左手不離 Shift 即可確認）
 
 ### 翻頁（vi 風格）
 
@@ -108,7 +107,7 @@ Dvorak 鍵盤排列（同物理位置，同注音符號）：
 ```
 Dvorak 右手：                              Dvorak 左手：
   F(fwd) [G=1  C=2  R=3]                    P(注音文) ...
-  D(done)[H=4  T=5  N=6]                    O(orig)  E(end)  A(home)
+  D(---) [H=4  T=5  N=6]                    O(orig)  E(end)  A(home)
   B(bwd) [M=7  W=8  V=9]  Z(BkSp)          Q(quit)  J(pgdn) K(pgup)
 ```
 
@@ -118,7 +117,6 @@ Dvorak 右手：                              Dvorak 左手：
 |------|------|------|
 | `Shift+F` | 右移一個字 | Emacs C-**f** = **f**orward |
 | `Shift+B` | 左移回退一個字 | Emacs C-**b** = **b**ackward |
-| `Shift+D` | 確認當前詞（同 Enter） | **D** = **D**one |
 | `Shift+Z` | 刪除整組注音 (BackSpace) | 九宮格右下，快速刪字 |
 
 ### 左手 — 導航
@@ -250,13 +248,12 @@ Dvorak 版覆蓋了部分標點鍵，讓常用標點維持 QWERTY 的**物理位
 | 上屏注音文 | `Shift+F` | `Shift+P` | **P**=Phonetic |
 | 上屏 comment | `Shift+R` | — | **移除**，低頻功能 |
 | BackSpace | `Shift+P` | `Shift+Z` | 九宮格旁，不離開 Shift |
-| Delete | `Shift+T` | — | **移除**，改為 Shift+D=Done(確認) |
+| Delete | `Shift+T` | — | **移除** |
 | Escape | `Shift+G` | `Shift+Q` | **Q**=Quit |
 | Home | `Shift+V` | `Shift+A` | Emacs C-**a** |
 | End | `Shift+B` | `Shift+E` | Emacs C-**e** |
 | Page Up | `Shift+Z` | `Shift+K` | vi **k**=up |
 | Page Down | `Shift+空白` | `Shift+J` | vi **j**=down |
-| 確認當前詞 | — | `Shift+D` | **D**=Done（Dvorak 新增） |
 | 右移一個字 | — | `Shift+F` | Emacs C-**f**（Dvorak 新增） |
 | 左移回退一個字 | — | `Shift+B` | Emacs C-**b**（Dvorak 新增） |
 
