@@ -52,8 +52,8 @@
 #   │  退格 BackSpace    Shift+L        (物理 P)          │
 #   │  刪除 Delete       Shift+Y        (物理 T)          │
 #   │  取消 Escape       Shift+I        (物理 G)          │
-#   │  Home              Shift+K        (物理 V)          │
-#   │  End               Shift+X        (物理 B)          │
+#   │  Home              Shift+A        (Emacs C-a)       │
+#   │  End               Shift+E        (Emacs C-e)       │
 #   └──────────────────────────────────────────────────────┘
 #
 #   翻頁（vi 風格）：
@@ -73,12 +73,12 @@
 #                           cmnt              右    右   原始  Space
 #
 #   中排：  A     O     E     U     I     D     H     T     N     S
-#          ---   ---   ---  上屏  Esc   選2   選5   選8   補    ---
-#                           編碼        右    右    右   一聲
+#          Home  ---   End  上屏  Esc   選2   選5   選8   補    ---
+#          C-a         C-e  編碼        右    右    右   一聲
 #
 #   下排：  ;     Q     J     K     X     B     M     W     V     Z
-#          ---   ---  PgDn  Home  End   選3   選6   ---   ---   ---
-#                     /PgUp        右    右
+#          ---   ---  PgDn  PgUp  ---   選3   選6   ---   ---   ---
+#                      vi    vi         右    右
 #
 # ══════════════════════════════════════════════════════════════════
 
@@ -398,9 +398,9 @@ key_binder_plus:
     - {accept: Shift+L, send: BackSpace, when: composing}  # 物理P→L
     - {accept: Shift+Y, send: Delete, when: composing}     # 物理T→Y
     - {accept: Shift+I, send: Escape, when: composing}     # 物理G→I
-### 另設快捷鍵 ###
-    - {accept: Shift+K, send: Home, when: composing}       # 物理V→K
-    - {accept: Shift+X, send: End, when: composing}        # 物理B→X
+### 另設快捷鍵（Emacs 風格：A=ahead E=end）###
+    - {accept: Shift+A, send: Home, when: composing}       # Emacs C-a = ahead
+    - {accept: Shift+E, send: End, when: composing}        # Emacs C-e = end
 #翻頁（vi 風格：J=下 K=上）
     - {accept: Shift+K, send: Page_Up, when: has_menu}     # vi k=up
     - {accept: Shift+J, send: Page_Down, when: has_menu}   # vi j=down

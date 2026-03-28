@@ -117,8 +117,8 @@ Dvorak 鍵盤排列（同物理位置，同注音符號）：
 | 退格 | `Shift+P` | `Shift+L` | 右手小指上排 | 刪除前一字 |
 | 刪除 | `Shift+T` | `Shift+Y` | 左手食指上排 | 刪除後一字 |
 | 取消 | `Shift+G` | `Shift+I` | 左手食指中排 | Escape，清除輸入 |
-| Home | `Shift+V` | `Shift+K` | 左手食指下排 | 移到開頭 |
-| End | `Shift+B` | `Shift+X` | 左手中指下排 | 移到結尾 |
+| Home | `Shift+V` | `Shift+A` | 左手小指中排 | Emacs C-a = **a**head |
+| End | `Shift+B` | `Shift+E` | 左手中指上排 | Emacs C-e = **e**nd |
 
 ### 切分移位（QWERTY / Dvorak 相同）
 
