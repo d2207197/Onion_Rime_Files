@@ -13,31 +13,29 @@
 # - 左手用助記鍵管理導航與上屏
 #
 # ──────────────────────────────────────
-#  右手九宮格 — 選字（has_menu 時）
+#  右手選字（has_menu 時）— 中排+下排 8 鍵
 # ──────────────────────────────────────
 #
-#   ┌──────────┬──────────┬──────────┐
-#   │ G = 候選1│ C = 候選2│ R = 候選3│
-#   ├──────────┼──────────┼──────────┤
-#   │ H = 候選4│ T = 候選5│ N = 候選6│
-#   ├──────────┼──────────┼──────────┤
-#   │ M = 候選7│ W = 候選8│ V = 候選9│
-#   └──────────┴──────────┴──────────┘
-#   Enter = 確認第 1 候選（重選時可用 Shift+G）
+#   ┌──────────┬──────────┬──────────┬──────────┐
+#   │ H = 候選1│ T = 候選2│ N = 候選3│ S = 候選4│
+#   ├──────────┼──────────┼──────────┼──────────┤
+#   │ M = 候選5│ W = 候選6│ V = 候選7│ Z = 候選8│
+#   └──────────┴──────────┴──────────┴──────────┘
+#   Enter = 確認第 1 候選（重選時可用 Shift+H）
+#   上排 G/C/R 空出給其他功能
 #
 # ──────────────────────────────────────
-#  右手九宮格外 — Emacs 游標與刪除（composing 時）
+#  右手上排 — Emacs 游標（composing 時）
 # ──────────────────────────────────────
 #
 #   F = Forward（右移一個字）
 #   B = Backward（左移回退一個字）
-#   D = （保留）
-#   Z = BackSpace（刪除整組注音）
+#   G/C/R/D = （保留）
 #
 #   鍵位：
-#     F  [G  C  R]  ...
-#     D  [H  T  N]  ...
-#     B  [M  W  V]  Z ←整組刪除
+#     F  G(-)  C(-)  R(-)  ...
+#     D(-)[H=1  T=2  N=3  S=4]
+#     B  [M=5  W=6  V=7  Z=8]
 #
 # ──────────────────────────────────────
 #  左手 — 導航、刪除、上屏
@@ -61,16 +59,16 @@
 # ──────────────────────────────────────
 #
 #   上排：  '     ,     .     P     Y  │  F     G     C     R     L
-#          ---   ---   ---  注音文 --- │ Fwd   選1   選2   選3   ---
-#                           Phon      │ C-f   九宮  九宮  九宮
+#          ---   ---   ---  注音文 --- │ Fwd   ---   ---   ---   ---
+#                           Phon      │ C-f  (保留)(保留)(保留)
 #                                     │
 #   中排：  A     O     E     U     I  │  D     H     T     N     S
-#          Home  上屏  End   ---  --- │ ---   選4   選5   選6   ---
-#          C-a   Orig  C-e           │       九宮  九宮  九宮
+#          Home  上屏  End   ---  --- │ ---   選1   選2   選3   選4
+#          C-a   Orig  C-e           │(保留)
 #                                     │
 #   下排：  ;     Q     J     K     X  │  B     M     W     V     Z
-#          ---   Quit  PgDn  PgUp --- │ Bwd   選7   選8   選9  整組刪
-#                      vi    vi       │ C-b   九宮  九宮  九宮  BkSp
+#          ---   Quit  PgDn  PgUp --- │ Bwd   選5   選6   選7   選8
+#                      vi    vi       │ C-b
 #
 # ══════════════════════════════════════════════════════════════════
 
@@ -113,12 +111,12 @@
 #   page_size: 6
 
 
-### 9 候選九宮格 Dvorak ###
+### 8 候選兩排 Dvorak ###
 menu:
-### 修改候選標籤（右手九宮格）
-  alternative_select_labels: [ G, C, R, H, T, N, M, W, V ]
+### 修改候選標籤（右手中排+下排）
+  alternative_select_labels: [ H, T, N, S, M, W, V, Z ]
 ### 選單每頁顯示個數
-  page_size: 9
+  page_size: 8
 
 
 # ### 8x1 ###
@@ -375,15 +373,14 @@ key_binder:
 key_binder_plus:
   __append:
 ### 右手九宮格選字（「Control+」不要換成「KP_」，特殊功能集【數字】選字會有問題）###
-    - {accept: Shift+G, send: Control+1, when: has_menu}   # 九宮格 1
-    - {accept: Shift+C, send: Control+2, when: has_menu}   # 九宮格 2
-    - {accept: Shift+R, send: Control+3, when: has_menu}   # 九宮格 3
-    - {accept: Shift+H, send: Control+4, when: has_menu}   # 九宮格 4
-    - {accept: Shift+T, send: Control+5, when: has_menu}   # 九宮格 5
-    - {accept: Shift+N, send: Control+6, when: has_menu}   # 九宮格 6
-    - {accept: Shift+M, send: Control+7, when: has_menu}   # 九宮格 7
-    - {accept: Shift+W, send: Control+8, when: has_menu}   # 九宮格 8
-    - {accept: Shift+V, send: Control+9, when: has_menu}   # 九宮格 9
+    - {accept: Shift+H, send: Control+1, when: has_menu}   # 選字 1
+    - {accept: Shift+T, send: Control+2, when: has_menu}   # 選字 2
+    - {accept: Shift+N, send: Control+3, when: has_menu}   # 選字 3
+    - {accept: Shift+S, send: Control+4, when: has_menu}   # 選字 4
+    - {accept: Shift+M, send: Control+5, when: has_menu}   # 選字 5
+    - {accept: Shift+W, send: Control+6, when: has_menu}   # 選字 6
+    - {accept: Shift+V, send: Control+7, when: has_menu}   # 選字 7
+    - {accept: Shift+Z, send: Control+8, when: has_menu}   # 選字 8
 ### 右手 Emacs 游標移動 ###
     - {accept: Shift+F, send: Shift+Right, when: composing}  # C-f = forward（右移一個字）
     - {accept: Shift+B, send: Shift+Left, when: composing}   # C-b = backward（左移回退一個字）
@@ -395,8 +392,6 @@ key_binder_plus:
     - {accept: Shift+J, send: Page_Down, when: has_menu}     # vi j=down
 ### 左手操作 ###
     - {accept: Shift+Q, send: Escape, when: composing}       # Q = Quit
-### 右手小指 — 刪除 ###
-    - {accept: Shift+Z, send: Control+BackSpace, when: composing}  # Z = 刪除整組注音
 ### 左手上屏 ###
     - {accept: Shift+O, send: Shift+Return, when: composing} # O = Original
     - {accept: Shift+P, send: Control+Return, when: composing} # P = Phonetic（注音文）
