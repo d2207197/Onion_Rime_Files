@@ -41,7 +41,6 @@
 #
 #   輸入相關：
 #   ┌──────────────────────────────────────────────────────┐
-#   │  補一聲 / 空格     Shift+N        (物理 L)          │
 #   │  上屏原始輸入      Shift+O        (O = Original)    │
 #   │  上屏注音文編碼    Shift+U        (物理 F)          │
 #   │  上屏 comment      Shift+P        (物理 R)          │
@@ -73,8 +72,8 @@
 #                           cmnt              右    右         Space
 #
 #   中排：  A     O     E     U     I     D     H     T     N     S
-#          Home  上屏  End  上屏  Esc   選2   選5   選8   補    ---
-#          C-a   原始  C-e  編碼        右    右    右   一聲
+#          Home  上屏  End  上屏  Esc   選2   選5   選8  ---    ---
+#          C-a   原始  C-e  編碼        右    右    右
 #
 #   下排：  ;     Q     J     K     X     B     M     W     V     Z
 #          ---   ---  PgDn  PgUp  ---   選3   選6   ---   ---   ---
@@ -385,9 +384,7 @@ key_binder:
 ### 原版 QWERTY → 物理位置 → Dvorak 輸出 ###
 key_binder_plus:
   __append:
-### 空白鍵 ###
-### 補一聲和上屏 raw_input （ paging 時，空白鍵無法輸出一聲 ） ###
-    - {accept: Shift+N, send: space, when: composing} #has_menu  # 物理L→N
+### 上屏原始輸入 ###
     - {accept: Shift+O, send: Shift+Return, when: composing}     # O = Original，上屏原始輸入
 ### 上屏 preedit（注音文）編碼 ###
     - {accept: Shift+U, send: Control+Return, when: composing} #has_menu  # 物理F→U
