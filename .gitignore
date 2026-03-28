@@ -1,0 +1,9 @@
+# Build output
+/電腦RIME方案_*/
+
+# IDE
+.idea/
+
+# Claude Code
+.claude/
+
