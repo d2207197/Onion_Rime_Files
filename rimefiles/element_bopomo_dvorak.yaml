@@ -138,7 +138,7 @@
 ### 左手可用選字：A→A, S→O, X→Q, D→E, C→J（Q→' W→, E→. 為標點，已註釋）###
 menu:
 ### 修改候選標籤（右手鍵）
-  alternative_select_labels: [ 𝟷𝙵, 𝟸𝙳, 𝟹𝙱, 𝟺𝙶, 𝟻𝙷, 𝟼𝙼, 𝟽𝙲, 𝟾𝚃 ]
+  alternative_select_labels: [ 1F, 2D, 3B, 4G, 5H, 6M, 7C, 8T ]
 ### 選單每頁顯示個數
   page_size: 8
 
