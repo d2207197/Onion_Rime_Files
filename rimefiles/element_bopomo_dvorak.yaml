@@ -398,7 +398,7 @@ key_binder_plus:
 ### 左手操作 ###
     - {accept: Shift+Q, send: Escape, when: composing}       # Q = Quit
 ### 右手小指 — 刪除 ###
-    - {accept: Shift+Z, send: BackSpace, when: composing}     # Z = 刪除整組注音
+    - {accept: Shift+Z, send: Control+BackSpace, when: composing}  # Z = 刪除整組注音
 ### 左手上屏 ###
     - {accept: Shift+O, send: Shift+Return, when: composing} # O = Original
     - {accept: Shift+P, send: Control+Return, when: composing} # P = Phonetic（注音文）
