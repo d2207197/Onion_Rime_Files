@@ -108,10 +108,10 @@ Dvorak 鍵盤排列（同物理位置，同注音符號）：
 ### Shift+鍵 功能總覽
 
 ```
-Dvorak 右手：                          Dvorak 左手：
-  F(fwd) [G=1  C=2  R=3]                P(注音文) ...
-  D(del) [H=4  T=5  N=6]                O(orig)  E(end)  A(home)
-  B(bwd) [M=7  W=8  V=9]                Q(quit)  J(pgdn) K(pgup)
+Dvorak 右手：                              Dvorak 左手：
+  F(fwd) [G=1  C=2  R=3]                    P(注音文) ...
+  D(del) [H=4  T=5  N=6]                    O(orig)  E(end)  A(home)
+  B(bwd) [M=7  W=8  V=9]  Z(BkSp)          Q(quit)  J(pgdn) K(pgup)
 ```
 
 ### 右手 — Emacs 游標與刪除（composing 時）
@@ -121,6 +121,7 @@ Dvorak 右手：                          Dvorak 左手：
 | `Shift+F` | 右移一個字 | Emacs C-**f** = **f**orward |
 | `Shift+B` | 左移回退一個字 | Emacs C-**b** = **b**ackward |
 | `Shift+D` | 向右刪除 (Delete) | Emacs C-**d** = **d**elete |
+| `Shift+Z` | 刪除整組注音 (BackSpace) | 九宮格右下，快速刪字 |
 
 ### 左手 — 導航
 
@@ -146,8 +147,8 @@ Dvorak 右手：                          Dvorak 左手：
 | `BackSpace` | 刪除整組注音（一個字） | Rime 共用設定 |
 | `Shift+BackSpace` | 刪除一個注音字符 | 精細刪除 |
 | `\` | 刪除一個注音字符 | 選字狀態時可用 |
-| `Shift+\` | 刪除整組注音（BackSpace） | 左手 Shift 不放手刪除 |
 | `Shift+D` | 向右刪除 (Delete) | Emacs C-d |
+| `Shift+Z` | 刪除整組注音 (BackSpace) | 右手小指，九宮格旁 |
 | `Fn+Shift+Delete` | 刪除記憶詞 | 先將游標移到該候選上再按。Rime 內建功能 |
 
 ### 切分移位（方向鍵）

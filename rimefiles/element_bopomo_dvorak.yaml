@@ -31,12 +31,13 @@
 #
 #   F = Forward（右移一個字）
 #   B = Backward（左移回退一個字）
-#   D = Delete（向右刪一個字）
+#   D = Delete（向右刪）
+#   Z = BackSpace（刪除整組注音）
 #
 #   鍵位：
 #     F  [G  C  R]  ...
 #     D  [H  T  N]  ...
-#     B  [M  W  V]  ...
+#     B  [M  W  V]  Z ←整組刪除
 #
 # ──────────────────────────────────────
 #  左手 — 導航、刪除、上屏
@@ -50,7 +51,6 @@
 #
 #   操作：
 #     Q = Escape/Quit
-#     Shift+\ = BackSpace（刪除整組注音）
 #
 #   上屏：
 #     O = 上屏原始輸入  (Original)
@@ -69,10 +69,8 @@
 #          C-a   Orig  C-e           │ C-d   九宮  九宮  九宮
 #                                     │
 #   下排：  ;     Q     J     K     X  │  B     M     W     V     Z
-#          ---   Quit  PgDn  PgUp --- │ Bwd   選7   選8   選9   ---
-#                      vi    vi       │ C-b   九宮  九宮  九宮
-#
-#   其他：Shift+\ = BackSpace（刪除整組注音）
+#          ---   Quit  PgDn  PgUp --- │ Bwd   選7   選8   選9  整組刪
+#                      vi    vi       │ C-b   九宮  九宮  九宮  BkSp
 #
 # ══════════════════════════════════════════════════════════════════
 
@@ -399,7 +397,8 @@ key_binder_plus:
     - {accept: Shift+J, send: Page_Down, when: has_menu}     # vi j=down
 ### 左手操作 ###
     - {accept: Shift+Q, send: Escape, when: composing}       # Q = Quit
-    - {accept: bar, send: BackSpace, when: composing}         # Shift+\ = BackSpace（整組刪除）
+### 右手小指 — 刪除 ###
+    - {accept: Shift+Z, send: BackSpace, when: composing}     # Z = 刪除整組注音
 ### 左手上屏 ###
     - {accept: Shift+O, send: Shift+Return, when: composing} # O = Original
     - {accept: Shift+P, send: Control+Return, when: composing} # P = Phonetic（注音文）
