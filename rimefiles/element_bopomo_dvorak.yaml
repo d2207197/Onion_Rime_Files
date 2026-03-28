@@ -51,8 +51,8 @@
 #     Q = Escape/Quit
 #
 #   上屏：
-#     O = 上屏原始輸入  (Original)
 #     P = 上屏注音文    (Phonetic)
+#     Shift+Enter = 上屏原始輸入（鍵盤原生）
 #
 # ──────────────────────────────────────
 #  物理鍵位總覽
@@ -63,8 +63,8 @@
 #                           Phon      │ C-f  (保留)(保留)(保留)
 #                                     │
 #   中排：  A     O     E     U     I  │  D     H     T     N     S
-#          Home  上屏  End   ---  --- │ ---   選1   選2   選3   選4
-#          C-a   Orig  C-e           │(保留)
+#          Home  ---   End   ---  --- │ ---   選1   選2   選3   選4
+#          C-a         C-e           │
 #                                     │
 #   下排：  ;     Q     J     K     X  │  B     M     W     V     Z
 #          ---   Quit  PgDn  PgUp --- │ Bwd   選5   選6   選7   選8
@@ -393,7 +393,7 @@ key_binder_plus:
 ### 左手操作 ###
     - {accept: Shift+Q, send: Escape, when: composing}       # Q = Quit
 ### 左手上屏 ###
-    - {accept: Shift+O, send: Shift+Return, when: composing} # O = Original
+    # Shift+O 移除：與 Shift+Enter（鍵盤原生）功能重複
     - {accept: Shift+P, send: Control+Return, when: composing} # P = Phonetic（注音文）
 
 
