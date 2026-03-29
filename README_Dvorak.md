@@ -250,8 +250,8 @@ Dvorak 右手（左手按住 Shift）：       Dvorak 左手：
 | 按鍵 | 功能 | 助記 |
 |------|------|------|
 | `Shift+H/T/N/S/M/W/V/Z` | 選字 1-8 | 右手中排+下排 |
-| `Shift+F` | 右移一個字 | **F** = **f**orward |
-| `Shift+B` | 左移回退一個字 | **B** = **b**ackward |
+| `Shift+F` | 右移一個字（同 Tab） | **F** = **f**orward |
+| `Shift+B` | 左移回退一個字（同 Shift+Tab） | **B** = **b**ackward |
 
 ### 導航
 
