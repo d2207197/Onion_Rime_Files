@@ -446,7 +446,22 @@ Dvorak 版覆蓋了部分標點鍵，讓常用標點維持 QWERTY 的**物理位
 
 在 Cursor、VSCode 等 Electron 應用中，方向鍵事件可能同時作用在 Rime 和 app 上（例如按 ↑ 移動注音游標的同時，app 也回溯歷史輸入）。
 
-**解決方式**：在這類 app 中使用 **Shift 流派**而非方向鍵流派。Shift+字母組合不會穿透到 app。
+**解決方式**：
+
+1. **使用 Shift 流派**：Shift+字母組合不會穿透到 app（推薦）
+2. **設定 app_options**：在 `squirrel.custom.yaml` 中針對特定 app 設定 `inline: true`，可能改善按鍵處理：
+
+```yaml
+patch:
+  app_options:
+    com.todesktop.230313mzl4w4u92:  # Cursor
+      inline: true
+    com.microsoft.VSCode:
+      inline: true
+```
+
+> `inline: true` 會讓 Rime 在該 app 中使用行內編輯模式，按鍵處理可能更好。
+> 需要重新部署鼠鬚管後生效。app 的 bundle ID 可用 `mdls -name kMDItemCFBundleIdentifier /Applications/Cursor.app` 查詢。
 
 ### `\` 鍵的雙重身份
 
@@ -529,6 +544,42 @@ Dvorak 版覆蓋了部分標點鍵，讓常用標點維持 QWERTY 的**物理位
 | 選字標籤 | `𝟷𝚀𝚈` 等 (Unicode) | `H` `T` `N` 等 (ASCII) |
 | 字典/prism | bopomo_onionplus | 字典共用，prism 獨立編譯 |
 | 設定檔 | element_bopomo | element_bopomo_dvorak |
+
+---
+
+## 鼠鬚管（Squirrel）外觀設定
+
+外觀設定在 `squirrel.custom.yaml` 中（透過 mackup 管理或直接放在 `~/Library/Rime/`）。
+
+### 常用設定項
+
+| 設定 | 說明 | 目前值 |
+|------|------|--------|
+| `style/candidate_list_layout` | 候選框樣式（`stacked` 堆疊 / `linear` 平鋪） | stacked |
+| `style/text_orientation` | 文字方向（`horizontal` / `vertical`） | horizontal |
+| `style/inline_preedit` | 行內編輯（注音顯示在游標處而非浮動視窗） | false |
+| `style/inline_candidate` | 行內顯示第一候選 | false |
+| `style/font_face` | 主字體 | SourceHanSansVF-Light |
+| `style/font_point` | 字號 | 20 |
+| `style/label_font_face` | 候選序號字體 | Menlo |
+| `style/label_font_point` | 序號字號 | 14 |
+| `style/color_scheme` | 配色方案 | mritd_dark |
+| `style/corner_radius` | 視窗圓角 | 4 |
+
+### 針對特定 app 的設定
+
+```yaml
+patch:
+  app_options:
+    com.todesktop.230313mzl4w4u92:  # Cursor
+      inline: true                   # 使用行內編輯
+    com.microsoft.VSCode:
+      inline: true
+    com.googlecode.iterm2:
+      ascii_mode: true               # 在 iTerm2 中預設英文模式
+```
+
+可用選項：`ascii_mode`（預設英文）、`inline`（強制行內編輯）、`no_inline`（禁用行內編輯）、`vim_mode`（退出 VIM 插入模式時自動切換）。
 
 ---
 
