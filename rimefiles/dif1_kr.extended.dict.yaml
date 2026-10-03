@@ -3,10 +3,18 @@
 # 《字庫匯入設定頁》
 ---
 name: dif1_kr.extended
-version: "201908"
+version: "202606"
 sort: original
-use_preset_vocabulary: false
+vocabulary: essay-kr-onion  #使快捷「空格」不被「單音//」影響。
+# use_preset_vocabulary: false
 import_tables:
   - ocm_mixin_kr
+  # - ocm_mixin_kr_hnc
   - phrases.kr
 ...
+## 以下「空格」編碼加詞頻，因「목」加「空格」輸入「ony//」會有「모ᄀ」分割問題！
+## 編碼家詞頻，因含「볘」之詞末尾加「空格」輸入「aq//」會有分割問題！
+## 承上單個「볘」加「空格」無法避免先出「ᄫ」。
+# 	//	1800
+# 	/	1800
+ 	/@	1800

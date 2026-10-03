@@ -35,23 +35,27 @@ local change_comment = require("filter_cand/change_comment")
 local function tags_match(seg, env)
   local engine = env.engine
   local context = engine.context
-  c_f2_s = context:get_option("character_range_bhjm")
-  o_ascii_punct = context:get_option("ascii_punct")
-  c_input = context.input
+  -- --- 以下「c_input」「c_f2_s」「o_ascii_punct」「seg_punct」為全域，會透到其他 lua 濾鏡，但此處限定 seg 範圍判別，因此其他 lua filter 不能使用，會判別錯誤。
+  -- c_input = context.input
+  -- c_f2_s = context:get_option("character_range_bhjm")
+  -- o_ascii_punct = context:get_option("ascii_punct")
   local seg_abc = seg:has_tag("abc")
   local seg_reverse = seg:has_tag("reverse2_lookup")
   seg_punct = seg:has_tag("punct")
   return seg_abc or seg_punct or seg_reverse
+  -- return seg_abc or seg_punct
 end
 
 -- local function mix_cf2_miss_filter(inp, env)
 local function filter(inp, env)
 -- function M.func(inp,env)
-  -- local engine = env.engine
-  -- local context = engine.context
-  -- local c_input = context.input
-  -- local c_f2_s = context:get_option("character_range_bhjm")
-  -- local o_ascii_punct = context:get_option("ascii_punct")
+  local engine = env.engine
+  local context = engine.context
+  local c_input = context.input
+  -- local comp = context.composition
+  -- local seg = comp:back()
+  local c_f2_s = context:get_option("character_range_bhjm")
+  local o_ascii_punct = context:get_option("ascii_punct")
   -- -- local start = context:get_preedit().sel_start
   -- -- local _end = context:get_preedit().sel_end
   -- local addcomment1 = string.match(c_input, "=%.$")
@@ -101,14 +105,19 @@ local function filter(inp, env)
   -- if seg_reverse or seg_reverse then
     local tran = c_f2_s and Translation(drop_cand, inp, "᰼᰼") or inp
     for cand in tran:iter() do
-        yield(cand)
+      yield(cand)
     end
   else
+    -- local cand_apostrophe = Candidate("simp_apostrophe", seg.start, seg._end, "'", "〔半角〕")  -- 無法顯示
     for cand in inp:iter() do
       local cand_text = cand.text
       yield(cand_text == "。" and change_comment(cand,"〔句點〕") or
-            (cand_text == "〔" or cand_text == "〕") and change_comment(cand,"〔六角括號〕") or
-            o_ascii_punct and c_input == "'" and Candidate("simp_apostrophe", 0, 1, "'", "〔半角〕") or
+            cand_text == "〔" and change_comment(cand,"〔六角括號〕") or
+            cand_text == "〕" and change_comment(cand,"〔六角括號〕") or
+            cand_text == "\t" and change_comment(cand,"〔Tab製表符〕") or
+            -- o_ascii_punct and c_input == "'" and cand_apostrophe or
+            -- o_ascii_punct and c_input == "'" and Candidate("simp_apostrophe", 0, 1, "'", "〔半角〕") or
+            o_ascii_punct and c_input == "'" and Candidate("simp_apostrophe", cand.start, cand._end, "'", "〔半角〕") or
             cand
            )
     end

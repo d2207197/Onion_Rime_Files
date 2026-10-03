@@ -41,6 +41,8 @@
 --      - lua_filter@array30_comment_filter          --（關） 遮屏提示碼，開關（simplify_comment）（遇到「`」不遮屏）
 --      - lua_filter@array30_nil_filter              --（引lua資料夾）（onion-array30） 行列30空碼'⎔'轉成不輸出任何符號，符合原生。後來移至「=」「=」反查用。
 --      - lua_filter@array30_spaceup_filter          --（關） 行列30開關一二碼按空格後，是否直上或可能有選單。
+--      - lua_filter@predictor_filter                --（引lua資料夾）（onion-array30）改進預測詞 predictor 用，預測詞第一候選生成一個空選項，好快速明顯的關閉預測詞。
+--      - lua_filter@predictor_s_filter              --（引lua資料夾）（onion-array10-and-bpmf）改進預測詞 predictor 用，預測詞第一候選生成一個空選項，好快速明顯的關閉預測詞。
 --      - lua_filter@en_sort_filter                  --（引lua資料夾）（easy_en_super和其掛接）如同英漢字典一樣排序，候選項重新排序。開關（en_sort）
 --      - lua_filter@kr_hnc_1m_filter                --（引lua資料夾）（hangeul_hnc）韓語遮屏只剩一個選項。開關（kr_1m）
 --      - lua_filter@convert_english_filter          --（引lua資料夾）easy 英文尾綴「;」或「;;」生成全大寫或首字母大寫。後來合併修改為掛接方案也可使用。
@@ -50,6 +52,7 @@
 --      - lua_filter@halfwidth_katakana_filter       --（關）（jpnin1）片假名後附加半形片假名。選單顯示太雜亂，故不用。
 --      - lua_filter@lua_custom_phrase_filter        --（關）取代原先 table_translator@custom_phrase。接續掛接方案後，有 bug，上不了屏，改用 translator 實現。202512重新整理無發現？！
 --      - lua_filter@preedit_model_filter            --（關）（bo_mixin 全系列）切換 preedit 樣式。
+--      - lua_filter@preedit_linebreak_filter        --（引lua資料夾）（bo_mixin 全系列）注音 mixin 方案選字後，「英文」和「注音」之 preedit 無法對齊，開頭換行修改之。
 --      - lua_filter@punct_preedit_revise_filter     --（引lua資料夾）（bopomo_onion_double 和 onion-array30 和 onion-array10）punct 下，附加 preedit 後面 prompt 缺漏之標示。另修正 ascii_punct 下，分號(;)和冒號(:)無法變半形問題。
 --      - lua_filter@back_mark_filter                --（引lua資料夾）（dif、1bopomo_onion_double、bopomo_onionplus 和 bo_mixin 全系列）不直接用 opencc 去 comment，改 lua 間接 comment，防「兩個字符」以上無法標注，和一個字串被多個標注。
 --      - lua_filter@comment_filter_unicode          --（關）註釋 Unicode 編碼。
@@ -71,6 +74,7 @@
 --      - lua_processor@ascii_punct_change           --（引lua資料夾）（bopomo_onionplus_2和3） 注音非 ascii_mode 時 ascii_punct 轉換後按 '<' 和 '>' 能輸出 ',' 和 '.'
 --      - lua_processor@array30up                    --（關） 行列30三四碼字按空格直接上屏
 --      - lua_processor@array30up_zy                 --（關） 行列30注音反查 Return 和 space 上屏修正
+--      - lua_processor@predictor_improve            --（引lua資料夾）（onion-array30）改進預測詞 predictor 用，使「return」「space」「shifit+space」改善。
 --      - lua_processor@p_open_files/p_run_files     --（關） （bopomo_onionplus_2）快捷鍵開啟檔案/程式/網站
 --
 --      = 以下針對「編碼有用到空白鍵」方案，如：注音一聲，去除空白上屏產生莫名之空格 =
@@ -193,10 +197,26 @@ mix_cf2_cfp_filter = require("filter_mix_cf2_cfp_filter")
 mix30_nil_comment_new_filter = require("filter_mix30_nil_comment_new_filter")
 
 
+--- predictor_filter （onion-array30）
+-- 改進預測詞 predictor 用，預測詞第一候選生成一個空選項，好快速明顯的關閉預測詞。
+predictor_filter = require("filter_predictor_filter")
+
+
+--- predictor_s_filter （onion-array10-and-bpmf）
+-- 改進預測詞 predictor 用，預測詞第一候選生成一個空選項，好快速明顯的關閉預測詞。
+predictor_s_filter = require("filter_predictor_s_filter")
+
+
 --- preedit_model_filter （bo_mixin 全系列）
 -- 切換 preedit 樣式
 -- preedit_model_filter = require("filter_preedit_model_filter")
 -- preedit_model_charset_filter2_filter = require("filter_preedit_model_charset_filter2_filter")
+
+
+--- preedit_linebreak_filter （bo_mixin 全系列）
+-- 注音 mixin 方案選字後，「英文」和「注音」之 preedit 無法對齊，開頭換行修改之。
+-- 後來修改不限定於注音「abc」之下，掛接方案也換行。
+preedit_linebreak_filter = require("filter_preedit_linebreak_filter")
 
 
 --- punct_preedit_revise_filter （bopomo_onion_double 和 onion-array30 和 onion-array10）
@@ -306,6 +326,11 @@ ascii_punct_change = require("processor_ascii_punct_change")
 -- 合併 array30up_zy 等
 -- 行列30注音反查 Return 和 space 上屏修正
 array30new_mix = require("processor_array30new_mix")
+
+
+--- predictor_improve （onion-array30）
+-- 改進預測詞 predictor 用，使「return」「space」「shifit+space」改善。
+predictor_improve = require("processor_predictor_improve")
 
 
 --- array10_mix （onion-array10）

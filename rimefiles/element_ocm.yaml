@@ -53,8 +53,8 @@ key_binder:
     # - {accept: Return, send: space, when: has_menu} #return,enter直出
     # - {accept: KP_Enter, send: space, when: has_menu} #KP_Enter直出
 ### 空白鍵 ###
-    - {accept: space, send: Escape, when: composing} #空碼清屏用
-    - {accept: space, send: space, when: has_menu} #補上一條產生之bug
+    # - {accept: space, send: Escape, when: composing} #空碼清屏用
+    # - {accept: space, send: space, when: has_menu} #補上一條產生之bug
 ### 刪除鍵 ###
     # - {accept: BackSpace, send: Control+BackSpace, when: has_menu} #〔關〕刪除前一個拼音字符〔開〕：刪除整組拼音字符（一個字）
     # - {accept: Shift+BackSpace, send: BackSpace, when: has_menu}
@@ -375,6 +375,7 @@ emoji_series:
     - xform/^mm/【粗糧】/
     - xform/^nm/【肉類】/
     - xform/^no/【肉品】/
+    - xform/^ov/【跳舞】/
     - xform/^zv/【船隻】/
     - xform/^rj/【花卉】/
     - xform/^rr/【蔬菜】/
@@ -493,6 +494,7 @@ emoji_series:
     - xform/^ok/【圓形】/
     - xform/^sn/【三角】/
     - xform/^jn/【打勾】/
+    - xform/^np/【空白】(空格)/
     - xform/^pw/【血液／血型】/
     - xform/^pk/【血型／血液】/
     - xform/^on/【器官】/
@@ -537,6 +539,10 @@ emoji_series:
     # - xform/@//
     - xform/^ab$/【 AB 】/
     - xform/^([a-z])$/【 \U$1\E 】/
-    - xform/^;([a-z])$/〖 \U$1\E 變化〗/
+    - xform|^([a-z])/$|【 \U$1\E 】(小寫)|
+    - xform|^([a-z]);$|【 \U$1\E 】(大寫)|
+    - xform/^;([a-z])$/〖 \U$1\E  變化〗/
+    - xform|^;([a-z])/$|〖 \U$1\E  變化〗(小寫)|
+    - xform|^;([a-z]);$|〖 \U$1\E  變化〗(大寫)|
     - xform//Mac/
 ##### 結束 #####

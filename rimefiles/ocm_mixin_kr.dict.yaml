@@ -4,7 +4,7 @@
 # 『洋蔥』製作
 ---
 name: ocm_mixin_kr
-version: "202104"
+version: "202606"
 sort: original
 use_preset_vocabulary: false
 #max_phrase_length: 7
@@ -115,15 +115,15 @@ use_preset_vocabulary: false
 갃	ykv/
 갅	ykk/
 갆	ykg/
-갉	ykj/
-갊	ykn/
+갉	ykj/	100%
+갊	ykn/	100%
 갋	ykr/
 갌	ykp/
 갍	ykt/
 갎	yki/
 갏	ywk/
-값	ykh/
-갔	ykm/
+값	ykh/	100%
+갔	ykm/	100%
 갞	yhf/
 갟	yhv/
 갡	yhk/
@@ -136,7 +136,7 @@ use_preset_vocabulary: false
 갪	yhi/
 갫	ywh/
 갮	yhh/
-갰	yhm/
+갰	yhm/	100%
 갺	yff/
 갻	yfv/
 갽	yfk/
@@ -150,15 +150,15 @@ use_preset_vocabulary: false
 걇	ywf/
 걊	yfh/
 걌	yfm/
-걔	yo/
+걔	yo/	100%
 걕	yoy/
 걖	yof/
 걗	yov/
-걘	yol/
+걘	yol/	100%
 걙	yok/
 걚	yog/
 걛	yoc/
-걜	yos/
+걜	yos/	100%
 걝	yoj/
 걞	yon/
 걟	yor/
@@ -183,14 +183,14 @@ use_preset_vocabulary: false
 걵	yjk/
 걶	yjg/
 걹	yjj/
-걺	yjn/
+걺	yjn/	100%
 걻	yjr/
 걼	yjp/
 걽	yjt/
 걾	yji/
 걿	ywj/
 겂	yjh/
-겄	yjm/
+겄	yjm/	100%
 겎	ypf/
 겏	ypv/
 겑	ypk/
@@ -203,8 +203,8 @@ use_preset_vocabulary: false
 겚	ypi/
 겛	ywp/
 겞	yph/
-겠	ypm/
-겪	ygf/
+겠	ypm/	100%
+겪	ygf/	100%
 겫	ygv/
 겭	ygk/
 겮	ygg/
@@ -216,16 +216,16 @@ use_preset_vocabulary: false
 겶	ygi/
 겷	ywg/
 겺	ygh/
-겼	ygm/
-계	yq/
+겼	ygm/	100%
+계	yq/	100%
 곅	yqy/
 곆	yqf/
 곇	yqv/
-곈	yql/
+곈	yql/	100%
 곉	yqk/
 곊	yqg/
 곋	yqc/
-곌	yqs/
+곌	yqs/	100%
 곍	yqj/
 곎	yqn/
 곏	yqr/
@@ -234,9 +234,9 @@ use_preset_vocabulary: false
 곒	yqi/
 곓	ywq/
 곔	yqo/
-곕	yqa/
+곕	yqa/	100%
 곖	yqh/
-곗	yqb/
+곗	yqb/	100%
 곘	yqm/
 곙	yqq/
 곚	yqu/
@@ -250,51 +250,51 @@ use_preset_vocabulary: false
 곥	ynk/
 곦	yng/
 곩	ynj/
-곪	ynn/
+곪	ynn/	100%
 곫	ynr/
-곬	ynp/
+곬	ynp/	100%
 곭	ynt/
 곮	yni/
-곯	ywn/
+곯	ywn/	100%
 곲	ynh/
 곴	ynm/
-과	ye/
-곽	yey/
+과	ye/	100%
+곽	yey/	100%
 곾	yef/
 곿	yev/
-관	yel/
+관	yel/	100%
 괁	yek/
 괂	yeg/
 괃	yec/
-괄	yes/
+괄	yes/	100%
 괅	yej/
-괆	yen/
+괆	yen/	100%
 괇	yer/
 괈	yep/
 괉	yet/
 괊	yei/
 괋	ywe/
-괌	yeo/
-괍	yea/
+괌	yeo/	100%
+괍	yea/	100%
 괎	yeh/
-괏	yeb/
+괏	yeb/	100%
 괐	yem/
-광	yeq/
+광	yeq/	100%
 괒	yeu/
 괓	yed/
 괔	yez/
 괕	yee/
 괖	yex/
 괗	yew/
-괘	ys/
+괘	ys/	100%
 괙	ysy/
 괚	ysf/
 괛	ysv/
-괜	ysl/
+괜	ysl/	100%
 괝	ysk/
 괞	ysg/
 괟	ysc/
-괠	yss/
+괠	yss/	100%
 괡	ysj/
 괢	ysn/
 괣	ysr/
@@ -303,26 +303,26 @@ use_preset_vocabulary: false
 괦	ysi/
 괧	yws/
 괨	yso/
-괩	ysa/
+괩	ysa/	100%
 괪	ysh/
 괫	ysb/
-괬	ysm/
-괭	ysq/
+괬	ysm/	100%
+괭	ysq/	100%
 괮	ysu/
 괯	ysd/
 괰	ysz/
 괱	yse/
 괲	ysx/
 괳	ysw/
-괴	yx/
-괵	yxy/
+괴	yx/	100%
+괵	yxy/	100%
 괶	yxf/
 괷	yxv/
-괸	yxl/
+괸	yxl/	100%
 괹	yxk/
 괺	yxg/
 괻	yxc/
-괼	yxs/
+괼	yxs/	100%
 괽	yxj/
 괾	yxn/
 괿	yxr/
@@ -330,12 +330,12 @@ use_preset_vocabulary: false
 굁	yxt/
 굂	yxi/
 굃	ywx/
-굄	yxo/
-굅	yxa/
+굄	yxo/	100%
+굅	yxa/	100%
 굆	yxh/
-굇	yxb/
+굇	yxb/	100%
 굈	yxm/
-굉	yxq/
+굉	yxq/	100%
 굊	yxu/
 굋	yxd/
 굌	yxz/
@@ -359,24 +359,24 @@ use_preset_vocabulary: false
 굯	ytv/
 굱	ytk/
 굲	ytg/
-굵	ytj/
-굶	ytn/
+굵	ytj/	100%
+굶	ytn/	100%
 굷	ytr/
 굸	ytp/
 굹	ytt/
 굺	yti/
-굻	ywt/
+굻	ywt/	100%
 굾	yth/
 궀	ytm/
-궈	ya/
-궉	yay/
+궈	ya/	100%
+궉	yay/	100%
 궊	yaf/
 궋	yav/
-권	yal/
+권	yal/	100%
 궍	yak/
 궎	yag/
 궏	yac/
-궐	yas/
+궐	yas/	100%
 궑	yaj/
 궒	yan/
 궓	yar/
@@ -388,15 +388,15 @@ use_preset_vocabulary: false
 궙	yaa/
 궚	yah/
 궛	yab/
-궜	yam/
-궝	yaq/
+궜	yam/	100%
+궝	yaq/	100%
 궞	yau/
 궟	yad/
 궠	yaz/
 궡	yae/
 궢	yax/
 궣	yaw/
-궤	yz/
+궤	yz/	100%
 궥	yzy/
 궦	yzf/
 궧	yzv/
@@ -415,7 +415,7 @@ use_preset_vocabulary: false
 궴	yzo/
 궵	yza/
 궶	yzh/
-궷	yzb/
+궷	yzb/	100%
 궸	yzm/
 궹	yzq/
 궺	yzu/
@@ -424,15 +424,15 @@ use_preset_vocabulary: false
 궽	yze/
 궾	yzx/
 궿	yzw/
-귀	yd/
-귁	ydy/
+귀	yd/	100%
+귁	ydy/	100%
 귂	ydf/
 귃	ydv/
-귄	ydl/
+귄	ydl/	100%
 귅	ydk/
 귆	ydg/
 귇	ydc/
-귈	yds/
+귈	yds/	100%
 귉	ydj/
 귊	ydn/
 귋	ydr/
@@ -440,10 +440,10 @@ use_preset_vocabulary: false
 귍	ydt/
 귎	ydi/
 귏	ywd/
-귐	ydo/
-귑	yda/
+귐	ydo/	100%
+귑	yda/	100%
 귒	ydh/
-귓	ydb/
+귓	ydb/	100%
 귔	ydm/
 귕	ydq/
 귖	ydu/
@@ -469,7 +469,7 @@ use_preset_vocabulary: false
 귻	yvv/
 귽	yvk/
 귾	yvg/
-긁	yvj/
+긁	yvj/	100%
 긂	yvn/
 긃	yvr/
 긄	yvp/
@@ -478,7 +478,7 @@ use_preset_vocabulary: false
 긇	ywv/
 긊	yvh/
 긌	yvm/
-긔	yl/
+긔	yl/	100%
 긕	yly/
 긖	ylf/
 긗	ylv/
@@ -511,7 +511,7 @@ use_preset_vocabulary: false
 긵	yik/
 긶	yig/
 긹	yij/
-긺	yin/
+긺	yin/	100%
 긻	yir/
 긼	yip/
 긽	yit/
@@ -520,43 +520,43 @@ use_preset_vocabulary: false
 깂	yih/
 깄	yim/
 #s2
-까	fk/
-깍	fky/
-깎	fkf/
+까	fk/	100%
+깍	fky/	100%
+깎	fkf/	100%
 깏	fkv/
-깐	fkl/
+깐	fkl/	100%
 깑	fkk/
 깒	fkg/
 깓	fkc/
-깔	fks/
+깔	fks/	100%
 깕	fkj/
-깖	fkn/
+깖	fkn/	100%
 깗	fkr/
 깘	fkp/
 깙	fkt/
 깚	fki/
 깛	fwk/
-깜	fko/
-깝	fka/
+깜	fko/	100%
+깝	fka/	100%
 깞	fkh/
-깟	fkb/
-깠	fkm/
-깡	fkq/
+깟	fkb/	100%
+깠	fkm/	100%
+깡	fkq/	100%
 깢	fku/
 깣	fkd/
 깤	fkz/
-깥	fke/
+깥	fke/	100%
 깦	fkx/
 깧	fkw/
-깨	fh/
-깩	fhy/
+깨	fh/	100%
+깩	fhy/	100%
 깪	fhf/
 깫	fhv/
-깬	fhl/
+깬	fhl/	100%
 깭	fhk/
 깮	fhg/
 깯	fhc/
-깰	fhs/
+깰	fhs/	100%
 깱	fhj/
 깲	fhn/
 깳	fhr/
@@ -564,27 +564,27 @@ use_preset_vocabulary: false
 깵	fht/
 깶	fhi/
 깷	fwh/
-깸	fho/
-깹	fha/
+깸	fho/	100%
+깹	fha/	100%
 깺	fhh/
-깻	fhb/
-깼	fhm/
-깽	fhq/
+깻	fhb/	100%
+깼	fhm/	100%
+깽	fhq/	100%
 깾	fhu/
 깿	fhd/
 꺀	fhz/
 꺁	fhe/
 꺂	fhx/
 꺃	fhw/
-꺄	ff/
-꺅	ffy/
+꺄	ff/	100%
+꺅	ffy/	100%
 꺆	fff/
 꺇	ffv/
 꺈	ffl/
 꺉	ffk/
 꺊	ffg/
 꺋	ffc/
-꺌	ffs/
+꺌	ffs/	100%
 꺍	ffj/
 꺎	ffn/
 꺏	ffr/
@@ -632,15 +632,15 @@ use_preset_vocabulary: false
 꺹	foe/
 꺺	fox/
 꺻	fow/
-꺼	fj/
-꺽	fjy/
-꺾	fjf/
+꺼	fj/	100%
+꺽	fjy/	100%
+꺾	fjf/	100%
 꺿	fjv/
-껀	fjl/
+껀	fjl/	100%
 껁	fjk/
 껂	fjg/
 껃	fjc/
-껄	fjs/
+껄	fjs/	100%
 껅	fjj/
 껆	fjn/
 껇	fjr/
@@ -648,23 +648,23 @@ use_preset_vocabulary: false
 껉	fjt/
 껊	fji/
 껋	fwj/
-껌	fjo/
-껍	fja/
+껌	fjo/	100%
+껍	fja/	100%
 껎	fjh/
-껏	fjb/
-껐	fjm/
-껑	fjq/
+껏	fjb/	100%
+껐	fjm/	100%
+껑	fjq/	100%
 껒	fju/
 껓	fjd/
 껔	fjz/
 껕	fje/
 껖	fjx/
 껗	fjw/
-께	fp/
-껙	fpy/
+께	fp/	100%
+껙	fpy/	100%
 껚	fpf/
 껛	fpv/
-껜	fpl/
+껜	fpl/	100%
 껝	fpk/
 껞	fpg/
 껟	fpc/
@@ -676,27 +676,27 @@ use_preset_vocabulary: false
 껥	fpt/
 껦	fpi/
 껧	fwp/
-껨	fpo/
+껨	fpo/	100%
 껩	fpa/
 껪	fph/
-껫	fpb/
+껫	fpb/	100%
 껬	fpm/
-껭	fpq/
+껭	fpq/	100%
 껮	fpu/
 껯	fpd/
 껰	fpz/
 껱	fpe/
 껲	fpx/
 껳	fpw/
-껴	fg/
+껴	fg/	100%
 껵	fgy/
 껶	fgf/
 껷	fgv/
-껸	fgl/
+껸	fgl/	100%
 껹	fgk/
 껺	fgg/
 껻	fgc/
-껼	fgs/
+껼	fgs/	100%
 껽	fgj/
 껾	fgn/
 껿	fgr/
@@ -707,16 +707,16 @@ use_preset_vocabulary: false
 꼄	fgo/
 꼅	fga/
 꼆	fgh/
-꼇	fgb/
-꼈	fgm/
+꼇	fgb/	100%
+꼈	fgm/	100%
 꼉	fgq/
 꼊	fgu/
 꼋	fgd/
 꼌	fgz/
-꼍	fge/
+꼍	fge/	100%
 꼎	fgx/
 꼏	fgw/
-꼐	fq/
+꼐	fq/	100%
 꼑	fqy/
 꼒	fqf/
 꼓	fqv/
@@ -744,15 +744,15 @@ use_preset_vocabulary: false
 꼩	fqe/
 꼪	fqx/
 꼫	fqw/
-꼬	fn/
-꼭	fny/
+꼬	fn/	100%
+꼭	fny/	100%
 꼮	fnf/
 꼯	fnv/
-꼰	fnl/
+꼰	fnl/	100%
 꼱	fnk/
-꼲	fng/
+꼲	fng/	100%
 꼳	fnc/
-꼴	fns/
+꼴	fns/	100%
 꼵	fnj/
 꼶	fnn/
 꼷	fnr/
@@ -760,27 +760,27 @@ use_preset_vocabulary: false
 꼹	fnt/
 꼺	fni/
 꼻	fwn/
-꼼	fno/
-꼽	fna/
+꼼	fno/	100%
+꼽	fna/	100%
 꼾	fnh/
-꼿	fnb/
+꼿	fnb/	100%
 꽀	fnm/
-꽁	fnq/
-꽂	fnu/
-꽃	fnd/
+꽁	fnq/	100%
+꽂	fnu/	100%
+꽃	fnd/	100%
 꽄	fnz/
 꽅	fne/
 꽆	fnx/
 꽇	fnw/
-꽈	fe/
-꽉	fey/
+꽈	fe/	100%
+꽉	fey/	100%
 꽊	fef/
 꽋	fev/
 꽌	fel/
 꽍	fek/
 꽎	feg/
 꽏	fec/
-꽐	fes/
+꽐	fes/	100%
 꽑	fej/
 꽒	fen/
 꽓	fer/
@@ -792,16 +792,16 @@ use_preset_vocabulary: false
 꽙	fea/
 꽚	feh/
 꽛	feb/
-꽜	fem/
-꽝	feq/
+꽜	fem/	100%
+꽝	feq/	100%
 꽞	feu/
 꽟	fed/
 꽠	fez/
 꽡	fee/
 꽢	fex/
 꽣	few/
-꽤	fs/
-꽥	fsy/
+꽤	fs/	100%
+꽥	fsy/	100%
 꽦	fsf/
 꽧	fsv/
 꽨	fsl/
@@ -821,22 +821,22 @@ use_preset_vocabulary: false
 꽶	fsh/
 꽷	fsb/
 꽸	fsm/
-꽹	fsq/
+꽹	fsq/	100%
 꽺	fsu/
 꽻	fsd/
 꽼	fsz/
 꽽	fse/
 꽾	fsx/
 꽿	fsw/
-꾀	fx/
+꾀	fx/	100%
 꾁	fxy/
 꾂	fxf/
 꾃	fxv/
-꾄	fxl/
+꾄	fxl/	100%
 꾅	fxk/
 꾆	fxg/
 꾇	fxc/
-꾈	fxs/
+꾈	fxs/	100%
 꾉	fxj/
 꾊	fxn/
 꾋	fxr/
@@ -844,19 +844,19 @@ use_preset_vocabulary: false
 꾍	fxt/
 꾎	fxi/
 꾏	fwx/
-꾐	fxo/
-꾑	fxa/
+꾐	fxo/	100%
+꾑	fxa/	100%
 꾒	fxh/
 꾓	fxb/
 꾔	fxm/
-꾕	fxq/
+꾕	fxq/	100%
 꾖	fxu/
 꾗	fxd/
 꾘	fxz/
 꾙	fxe/
 꾚	fxx/
 꾛	fxw/
-꾜	fm/
+꾜	fm/	100%
 꾝	fmy/
 꾞	fmf/
 꾟	fmv/
@@ -884,35 +884,35 @@ use_preset_vocabulary: false
 꾵	fme/
 꾶	fmx/
 꾷	fmw/
-꾸	ft/
-꾹	fty/
+꾸	ft/	100%
+꾹	fty/	100%
 꾺	ftf/
 꾻	ftv/
-꾼	ftl/
+꾼	ftl/	100%
 꾽	ftk/
 꾾	ftg/
 꾿	ftc/
-꿀	fts/
+꿀	fts/	100%
 꿁	ftj/
 꿂	ftn/
 꿃	ftr/
 꿄	ftp/
 꿅	ftt/
 꿆	fti/
-꿇	fwt/
-꿈	fto/
-꿉	fta/
+꿇	fwt/	100%
+꿈	fto/	100%
+꿉	fta/	100%
 꿊	fth/
-꿋	ftb/
+꿋	ftb/	100%
 꿌	ftm/
-꿍	ftq/
-꿎	ftu/
+꿍	ftq/	100%
+꿎	ftu/	100%
 꿏	ftd/
 꿐	ftz/
 꿑	fte/
 꿒	ftx/
 꿓	ftw/
-꿔	fa/
+꿔	fa/	100%
 꿕	fay/
 꿖	faf/
 꿗	fav/
@@ -920,7 +920,7 @@ use_preset_vocabulary: false
 꿙	fak/
 꿚	fag/
 꿛	fac/
-꿜	fas/
+꿜	fas/	100%
 꿝	faj/
 꿞	fan/
 꿟	far/
@@ -932,23 +932,23 @@ use_preset_vocabulary: false
 꿥	faa/
 꿦	fah/
 꿧	fab/
-꿨	fam/
-꿩	faq/
+꿨	fam/	100%
+꿩	faq/	100%
 꿪	fau/
 꿫	fad/
 꿬	faz/
 꿭	fae/
 꿮	fax/
 꿯	faw/
-꿰	fz/
-꿱	fzy/
+꿰	fz/	100%
+꿱	fzy/	100%
 꿲	fzf/
 꿳	fzv/
-꿴	fzl/
+꿴	fzl/	100%
 꿵	fzk/
 꿶	fzg/
 꿷	fzc/
-꿸	fzs/
+꿸	fzs/	100%
 꿹	fzj/
 꿺	fzn/
 꿻	fzr/
@@ -956,11 +956,11 @@ use_preset_vocabulary: false
 꿽	fzt/
 꿾	fzi/
 꿿	fwz/
-뀀	fzo/
-뀁	fza/
+뀀	fzo/	100%
+뀁	fza/	100%
 뀂	fzh/
 뀃	fzb/
-뀄	fzm/
+뀄	fzm/	100%
 뀅	fzq/
 뀆	fzu/
 뀇	fzd/
@@ -968,15 +968,15 @@ use_preset_vocabulary: false
 뀉	fze/
 뀊	fzx/
 뀋	fzw/
-뀌	fd/
+뀌	fd/	100%
 뀍	fdy/
 뀎	fdf/
 뀏	fdv/
-뀐	fdl/
+뀐	fdl/	100%
 뀑	fdk/
 뀒	fdg/
 뀓	fdc/
-뀔	fds/
+뀔	fds/	100%
 뀕	fdj/
 뀖	fdn/
 뀗	fdr/
@@ -984,8 +984,8 @@ use_preset_vocabulary: false
 뀙	fdt/
 뀚	fdi/
 뀛	fwd/
-뀜	fdo/
-뀝	fda/
+뀜	fdo/	100%
+뀝	fda/	100%
 뀞	fdh/
 뀟	fdb/
 뀠	fdm/
@@ -996,7 +996,7 @@ use_preset_vocabulary: false
 뀥	fde/
 뀦	fdx/
 뀧	fdw/
-뀨	fr/
+뀨	fr/	100%
 뀩	fry/
 뀪	frf/
 뀫	frv/
@@ -1024,32 +1024,32 @@ use_preset_vocabulary: false
 끁	fre/
 끂	frx/
 끃	frw/
-끄	fv/
-끅	fvy/
+끄	fv/	100%
+끅	fvy/	100%
 끆	fvf/
 끇	fvv/
-끈	fvl/
+끈	fvl/	100%
 끉	fvk/
-끊	fvg/
+끊	fvg/	100%
 끋	fvc/
-끌	fvs/
+끌	fvs/	100%
 끍	fvj/
-끎	fvn/
+끎	fvn/	100%
 끏	fvr/
 끐	fvp/
 끑	fvt/
 끒	fvi/
-끓	fwv/
-끔	fvo/
-끕	fva/
+끓	fwv/	100%
+끔	fvo/	100%
+끕	fva/	100%
 끖	fvh/
-끗	fvb/
+끗	fvb/	100%
 끘	fvm/
-끙	fvq/
+끙	fvq/	100%
 끚	fvu/
 끛	fvd/
 끜	fvz/
-끝	fve/
+끝	fve/	100%
 끞	fvx/
 끟	fvw/
 끠	fl/
@@ -1080,15 +1080,15 @@ use_preset_vocabulary: false
 끹	fle/
 끺	flx/
 끻	flw/
-끼	fi/
-끽	fiy/
+끼	fi/	100%
+끽	fiy/	100%
 끾	fif/
 끿	fiv/
-낀	fil/
+낀	fil/	100%
 낁	fik/
 낂	fig/
 낃	fic/
-낄	fis/
+낄	fis/	100%
 낅	fij/
 낆	fin/
 낇	fir/
@@ -1096,12 +1096,12 @@ use_preset_vocabulary: false
 낉	fit/
 낊	fii/
 낋	fwi/
-낌	fio/
-낍	fia/
+낌	fio/	100%
+낍	fia/	100%
 낎	fih/
-낏	fib/
+낏	fib/	100%
 낐	fim/
-낑	fiq/
+낑	fiq/	100%
 낒	fiu/
 낓	fid/
 낔	fiz/
@@ -1109,19 +1109,19 @@ use_preset_vocabulary: false
 낖	fix/
 낗	fiw/
 #s3
-낚	lkf/
+낚	lkf/	100%
 낛	lkv/
 낝	lkk/
 낞	lkg/
-낡	lkj/
-낢	lkn/
+낡	lkj/	100%
+낢	lkn/	100%
 낣	lkr/
 낤	lkp/
 낥	lkt/
 낦	lki/
 낧	lwk/
 낪	lkh/
-났	lkm/
+났	lkm/	100%
 낶	lhf/
 낷	lhv/
 낹	lhk/
@@ -1134,7 +1134,7 @@ use_preset_vocabulary: false
 냂	lhi/
 냃	lwh/
 냆	lhh/
-냈	lhm/
+냈	lhm/	100%
 냒	lff/
 냓	lfv/
 냕	lfk/
@@ -1177,18 +1177,18 @@ use_preset_vocabulary: false
 넆	lox/
 넇	low/
 넊	ljf/
-넋	ljv/
+넋	ljv/	100%
 넍	ljk/
 넎	ljg/
 넑	ljj/
-넒	ljn/
-넓	ljr/
+넒	ljn/	100%
+넓	ljr/	100%
 넔	ljp/
 넕	ljt/
 넖	lji/
 넗	lwj/
 넚	ljh/
-넜	ljm/
+넜	ljm/	100%
 넦	lpf/
 넧	lpv/
 넩	lpk/
@@ -1201,7 +1201,7 @@ use_preset_vocabulary: false
 넲	lpi/
 넳	lwp/
 넶	lph/
-넸	lpm/
+넸	lpm/	100%
 녂	lgf/
 녃	lgv/
 녅	lgk/
@@ -1214,12 +1214,12 @@ use_preset_vocabulary: false
 녎	lgi/
 녏	lwg/
 녒	lgh/
-녔	lgm/
-녜	lq/
+녔	lgm/	100%
+녜	lq/	100%
 녝	lqy/
 녞	lqf/
 녟	lqv/
-녠	lql/
+녠	lql/	100%
 녡	lqk/
 녢	lqg/
 녣	lqc/
@@ -1248,7 +1248,7 @@ use_preset_vocabulary: false
 녽	lnk/
 녾	lng/
 놁	lnj/
-놂	lnn/
+놂	lnn/	100%
 놃	lnr/
 놄	lnp/
 놅	lnt/
@@ -1256,15 +1256,15 @@ use_preset_vocabulary: false
 놇	lwn/
 놊	lnh/
 놌	lnm/
-놔	le/
+놔	le/	100%
 놕	ley/
 놖	lef/
 놗	lev/
-놘	lel/
+놘	lel/	100%
 놙	lek/
 놚	leg/
 놛	lec/
-놜	les/
+놜	les/	100%
 놝	lej/
 놞	len/
 놟	ler/
@@ -1276,7 +1276,7 @@ use_preset_vocabulary: false
 놥	lea/
 놦	leh/
 놧	leb/
-놨	lem/
+놨	lem/	100%
 놩	leq/
 놪	leu/
 놫	led/
@@ -1312,15 +1312,15 @@ use_preset_vocabulary: false
 뇉	lse/
 뇊	lsx/
 뇋	lsw/
-뇌	lx/
+뇌	lx/	100%
 뇍	lxy/
 뇎	lxf/
 뇏	lxv/
-뇐	lxl/
+뇐	lxl/	100%
 뇑	lxk/
 뇒	lxg/
 뇓	lxc/
-뇔	lxs/
+뇔	lxs/	100%
 뇕	lxj/
 뇖	lxn/
 뇗	lxr/
@@ -1328,10 +1328,10 @@ use_preset_vocabulary: false
 뇙	lxt/
 뇚	lxi/
 뇛	lwx/
-뇜	lxo/
-뇝	lxa/
+뇜	lxo/	100%
+뇝	lxa/	100%
 뇞	lxh/
-뇟	lxb/
+뇟	lxb/	100%
 뇠	lxm/
 뇡	lxq/
 뇢	lxu/
@@ -1366,7 +1366,7 @@ use_preset_vocabulary: false
 눓	lwt/
 눖	lth/
 눘	ltm/
-눠	la/
+눠	la/	100%
 눡	lay/
 눢	laf/
 눣	lav/
@@ -1386,7 +1386,7 @@ use_preset_vocabulary: false
 눱	laa/
 눲	lah/
 눳	lab/
-눴	lam/
+눴	lam/	100%
 눵	laq/
 눶	lau/
 눷	lad/
@@ -1394,7 +1394,7 @@ use_preset_vocabulary: false
 눹	lae/
 눺	lax/
 눻	law/
-눼	lz/
+눼	lz/	100%
 눽	lzy/
 눾	lzf/
 눿	lzv/
@@ -1422,15 +1422,15 @@ use_preset_vocabulary: false
 뉕	lze/
 뉖	lzx/
 뉗	lzw/
-뉘	ld/
+뉘	ld/	100%
 뉙	ldy/
 뉚	ldf/
 뉛	ldv/
-뉜	ldl/
+뉜	ldl/	100%
 뉝	ldk/
 뉞	ldg/
 뉟	ldc/
-뉠	lds/
+뉠	lds/	100%
 뉡	ldj/
 뉢	ldn/
 뉣	ldr/
@@ -1438,8 +1438,8 @@ use_preset_vocabulary: false
 뉥	ldt/
 뉦	ldi/
 뉧	lwd/
-뉨	ldo/
-뉩	lda/
+뉨	ldo/	100%
+뉩	lda/	100%
 뉪	ldh/
 뉫	ldb/
 뉬	ldm/
@@ -1467,8 +1467,8 @@ use_preset_vocabulary: false
 늓	lvv/
 늕	lvk/
 늖	lvg/
-늙	lvj/
-늚	lvn/
+늙	lvj/	100%
+늚	lvn/	100%
 늛	lvr/
 늜	lvp/
 늝	lvt/
@@ -1476,15 +1476,15 @@ use_preset_vocabulary: false
 늟	lwv/
 늢	lvh/
 늤	lvm/
-늬	ll/
+늬	ll/	100%
 늭	lly/
 늮	llf/
 늯	llv/
-늰	lll/
+늰	lll/	100%
 늱	llk/
 늲	llg/
 늳	llc/
-늴	lls/
+늴	lls/	100%
 늵	llj/
 늶	lln/
 늷	llr/
@@ -1509,7 +1509,7 @@ use_preset_vocabulary: false
 닍	lik/
 닎	lig/
 닑	lij/
-닒	lin/
+닒	lin/	100%
 닓	lir/
 닔	lip/
 닕	lit/
@@ -1518,19 +1518,19 @@ use_preset_vocabulary: false
 닚	lih/
 닜	lim/
 #s4
-닦	ckf/
+닦	ckf/	100%
 닧	ckv/
 닩	ckk/
 닪	ckg/
-닭	ckj/
-닮	ckn/
-닯	ckr/
+닭	ckj/	100%
+닮	ckn/	100%
+닯	ckr/	100%
 닰	ckp/
 닱	ckt/
 닲	cki/
-닳	cwk/
+닳	cwk/	100%
 닶	ckh/
-닸	ckm/
+닸	ckm/	100%
 댂	chf/
 댃	chv/
 댅	chk/
@@ -1543,7 +1543,7 @@ use_preset_vocabulary: false
 댎	chi/
 댏	cwh/
 댒	chh/
-댔	chm/
+댔	chm/	100%
 댞	cff/
 댟	cfv/
 댡	cfk/
@@ -1585,13 +1585,13 @@ use_preset_vocabulary: false
 덑	coe/
 덒	cox/
 덓	cow/
-덖	cjf/
+덖	cjf/	100%
 덗	cjv/
 덙	cjk/
 덚	cjg/
 덝	cjj/
-덞	cjn/
-덟	cjr/
+덞	cjn/	100%
+덟	cjr/	100%
 덠	cjp/
 덡	cjt/
 덢	cji/
@@ -1610,7 +1610,7 @@ use_preset_vocabulary: false
 덾	cpi/
 덿	cwp/
 뎂	cph/
-뎄	cpm/
+뎄	cpm/	100%
 뎎	cgf/
 뎏	cgv/
 뎑	cgk/
@@ -1623,12 +1623,12 @@ use_preset_vocabulary: false
 뎚	cgi/
 뎛	cwg/
 뎞	cgh/
-뎠	cgm/
-뎨	cq/
+뎠	cgm/	100%
+뎨	cq/	100%
 뎩	cqy/
 뎪	cqf/
 뎫	cqv/
-뎬	cql/
+뎬	cql/	100%
 뎭	cqk/
 뎮	cqg/
 뎯	cqc/
@@ -1657,23 +1657,23 @@ use_preset_vocabulary: false
 돉	cnk/
 돊	cng/
 돍	cnj/
-돎	cnn/
+돎	cnn/	100%
 돏	cnr/
-돐	cnp/
+돐	cnp/	100%
 돑	cnt/
 돒	cni/
 돓	cwn/
 돖	cnh/
 돘	cnm/
-돠	ce/
+돠	ce/	100%
 돡	cey/
 돢	cef/
 돣	cev/
-돤	cel/
+돤	cel/	100%
 돥	cek/
 돦	ceg/
 돧	cec/
-돨	ces/
+돨	ces/	100%
 돩	cej/
 돪	cen/
 돫	cer/
@@ -1693,7 +1693,7 @@ use_preset_vocabulary: false
 돹	cee/
 돺	cex/
 돻	cew/
-돼	cs/
+돼	cs/	100%
 돽	csy/
 돾	csf/
 돿	csv/
@@ -1713,7 +1713,7 @@ use_preset_vocabulary: false
 됍	csa/
 됎	csh/
 됏	csb/
-됐	csm/
+됐	csm/	100%
 됑	csq/
 됒	csu/
 됓	csd/
@@ -1721,15 +1721,15 @@ use_preset_vocabulary: false
 됕	cse/
 됖	csx/
 됗	csw/
-되	cx/
+되	cx/	100%
 됙	cxy/
 됚	cxf/
 됛	cxv/
-된	cxl/
+된	cxl/	100%
 됝	cxk/
 됞	cxg/
 됟	cxc/
-될	cxs/
+될	cxs/	100%
 됡	cxj/
 됢	cxn/
 됣	cxr/
@@ -1737,10 +1737,10 @@ use_preset_vocabulary: false
 됥	cxt/
 됦	cxi/
 됧	cwx/
-됨	cxo/
-됩	cxa/
+됨	cxo/	100%
+됩	cxa/	100%
 됪	cxh/
-됫	cxb/
+됫	cxb/	100%
 됬	cxm/
 됭	cxq/
 됮	cxu/
@@ -1775,7 +1775,7 @@ use_preset_vocabulary: false
 둟	cwt/
 둢	cth/
 둤	ctm/
-둬	ca/
+둬	ca/	100%
 둭	cay/
 둮	caf/
 둯	cav/
@@ -1795,7 +1795,7 @@ use_preset_vocabulary: false
 둽	caa/
 둾	cah/
 둿	cab/
-뒀	cam/
+뒀	cam/	100%
 뒁	caq/
 뒂	cau/
 뒃	cad/
@@ -1803,7 +1803,7 @@ use_preset_vocabulary: false
 뒅	cae/
 뒆	cax/
 뒇	caw/
-뒈	cz/
+뒈	cz/	100%
 뒉	czy/
 뒊	czf/
 뒋	czv/
@@ -1824,22 +1824,22 @@ use_preset_vocabulary: false
 뒚	czh/
 뒛	czb/
 뒜	czm/
-뒝	czq/
+뒝	czq/	100%
 뒞	czu/
 뒟	czd/
 뒠	czz/
 뒡	cze/
 뒢	czx/
 뒣	czw/
-뒤	cd/
+뒤	cd/	100%
 뒥	cdy/
 뒦	cdf/
 뒧	cdv/
-뒨	cdl/
+뒨	cdl/	100%
 뒩	cdk/
 뒪	cdg/
 뒫	cdc/
-뒬	cds/
+뒬	cds/	100%
 뒭	cdj/
 뒮	cdn/
 뒯	cdr/
@@ -1848,11 +1848,11 @@ use_preset_vocabulary: false
 뒲	cdi/
 뒳	cwd/
 뒴	cdo/
-뒵	cda/
+뒵	cda/	100%
 뒶	cdh/
-뒷	cdb/
+뒷	cdb/	100%
 뒸	cdm/
-뒹	cdq/
+뒹	cdq/	100%
 뒺	cdu/
 뒻	cdd/
 뒼	cdz/
@@ -1877,7 +1877,7 @@ use_preset_vocabulary: false
 듡	cvk/
 듢	cvg/
 듥	cvj/
-듦	cvn/
+듦	cvn/	100%
 듧	cvr/
 듨	cvp/
 듩	cvt/
@@ -1885,7 +1885,7 @@ use_preset_vocabulary: false
 듫	cwv/
 듮	cvh/
 듰	cvm/
-듸	cl/
+듸	cl/	100%
 듹	cly/
 듺	clf/
 듻	clv/
@@ -1925,17 +1925,17 @@ use_preset_vocabulary: false
 딢	cii/
 딣	cwi/
 딦	cih/
-딨	cim/
+딨	cim/	100%
 #s5
-따	gk/
-딱	gky/
+따	gk/	100%
+딱	gky/	100%
 딲	gkf/
 딳	gkv/
-딴	gkl/
+딴	gkl/	100%
 딵	gkk/
 딶	gkg/
 딷	gkc/
-딸	gks/
+딸	gks/	100%
 딹	gkj/
 딺	gkn/
 딻	gkr/
@@ -1943,27 +1943,27 @@ use_preset_vocabulary: false
 딽	gkt/
 딾	gki/
 딿	gwk/
-땀	gko/
-땁	gka/
+땀	gko/	100%
+땁	gka/	100%
 땂	gkh/
-땃	gkb/
-땄	gkm/
-땅	gkq/
+땃	gkb/	100%
+땄	gkm/	100%
+땅	gkq/	100%
 땆	gku/
 땇	gkd/
 땈	gkz/
 땉	gke/
 땊	gkx/
-땋	gkw/
-때	gh/
-땍	ghy/
+땋	gkw/	100%
+때	gh/	100%
+땍	ghy/	100%
 땎	ghf/
 땏	ghv/
-땐	ghl/
+땐	ghl/	100%
 땑	ghk/
 땒	ghg/
 땓	ghc/
-땔	ghs/
+땔	ghs/	100%
 땕	ghj/
 땖	ghn/
 땗	ghr/
@@ -1971,12 +1971,12 @@ use_preset_vocabulary: false
 땙	ght/
 땚	ghi/
 땛	gwh/
-땜	gho/
-땝	gha/
+땜	gho/	100%
+땝	gha/	100%
 땞	ghh/
-땟	ghb/
-땠	ghm/
-땡	ghq/
+땟	ghb/	100%
+땠	ghm/	100%
+땡	ghq/	100%
 땢	ghu/
 땣	ghd/
 땤	ghz/
@@ -2039,43 +2039,43 @@ use_preset_vocabulary: false
 떝	goe/
 떞	gox/
 떟	gow/
-떠	gj/
-떡	gjy/
+떠	gj/	100%
+떡	gjy/	100%
 떢	gjf/
 떣	gjv/
-떤	gjl/
+떤	gjl/	100%
 떥	gjk/
 떦	gjg/
 떧	gjc/
-떨	gjs/
+떨	gjs/	100%
 떩	gjj/
-떪	gjn/
-떫	gjr/
+떪	gjn/	100%
+떫	gjr/	100%
 떬	gjp/
 떭	gjt/
 떮	gji/
 떯	gwj/
-떰	gjo/
-떱	gja/
+떰	gjo/	100%
+떱	gja/	100%
 떲	gjh/
-떳	gjb/
-떴	gjm/
-떵	gjq/
+떳	gjb/	100%
+떴	gjm/	100%
+떵	gjq/	100%
 떶	gju/
 떷	gjd/
 떸	gjz/
 떹	gje/
 떺	gjx/
-떻	gjw/
-떼	gp/
-떽	gpy/
+떻	gjw/	100%
+떼	gp/	100%
+떽	gpy/	100%
 떾	gpf/
 떿	gpv/
-뗀	gpl/
+뗀	gpl/	100%
 뗁	gpk/
 뗂	gpg/
 뗃	gpc/
-뗄	gps/
+뗄	gps/	100%
 뗅	gpj/
 뗆	gpn/
 뗇	gpr/
@@ -2083,19 +2083,19 @@ use_preset_vocabulary: false
 뗉	gpt/
 뗊	gpi/
 뗋	gwp/
-뗌	gpo/
-뗍	gpa/
+뗌	gpo/	100%
+뗍	gpa/	100%
 뗎	gph/
-뗏	gpb/
-뗐	gpm/
-뗑	gpq/
+뗏	gpb/	100%
+뗐	gpm/	100%
+뗑	gpq/	100%
 뗒	gpu/
 뗓	gpd/
 뗔	gpz/
 뗕	gpe/
 뗖	gpx/
 뗗	gpw/
-뗘	gg/
+뗘	gg/	100%
 뗙	ggy/
 뗚	ggf/
 뗛	ggv/
@@ -2115,7 +2115,7 @@ use_preset_vocabulary: false
 뗩	gga/
 뗪	ggh/
 뗫	ggb/
-뗬	ggm/
+뗬	ggm/	100%
 뗭	ggq/
 뗮	ggu/
 뗯	ggd/
@@ -2151,15 +2151,15 @@ use_preset_vocabulary: false
 똍	gqe/
 똎	gqx/
 똏	gqw/
-또	gn/
-똑	gny/
+또	gn/	100%
+똑	gny/	100%
 똒	gnf/
 똓	gnv/
-똔	gnl/
+똔	gnl/	100%
 똕	gnk/
 똖	gng/
 똗	gnc/
-똘	gns/
+똘	gns/	100%
 똙	gnj/
 똚	gnn/
 똛	gnr/
@@ -2172,14 +2172,14 @@ use_preset_vocabulary: false
 똢	gnh/
 똣	gnb/
 똤	gnm/
-똥	gnq/
+똥	gnq/	100%
 똦	gnu/
 똧	gnd/
 똨	gnz/
 똩	gne/
 똪	gnx/
 똫	gnw/
-똬	ge/
+똬	ge/	100%
 똭	gey/
 똮	gef/
 똯	gev/
@@ -2187,7 +2187,7 @@ use_preset_vocabulary: false
 똱	gek/
 똲	geg/
 똳	gec/
-똴	ges/
+똴	ges/	100%
 똵	gej/
 똶	gen/
 똷	ger/
@@ -2207,7 +2207,7 @@ use_preset_vocabulary: false
 뙅	gee/
 뙆	gex/
 뙇	gew/
-뙈	gs/
+뙈	gs/	100%
 뙉	gsy/
 뙊	gsf/
 뙋	gsv/
@@ -2235,11 +2235,11 @@ use_preset_vocabulary: false
 뙡	gse/
 뙢	gsx/
 뙣	gsw/
-뙤	gx/
+뙤	gx/	100%
 뙥	gxy/
 뙦	gxf/
 뙧	gxv/
-뙨	gxl/
+뙨	gxl/	100%
 뙩	gxk/
 뙪	gxg/
 뙫	gxc/
@@ -2291,28 +2291,28 @@ use_preset_vocabulary: false
 뚙	gme/
 뚚	gmx/
 뚛	gmw/
-뚜	gt/
-뚝	gty/
+뚜	gt/	100%
+뚝	gty/	100%
 뚞	gtf/
 뚟	gtv/
-뚠	gtl/
+뚠	gtl/	100%
 뚡	gtk/
 뚢	gtg/
 뚣	gtc/
-뚤	gts/
+뚤	gts/	100%
 뚥	gtj/
 뚦	gtn/
 뚧	gtr/
 뚨	gtp/
 뚩	gtt/
 뚪	gti/
-뚫	gwt/
-뚬	gto/
+뚫	gwt/	100%
+뚬	gto/	100%
 뚭	gta/
 뚮	gth/
 뚯	gtb/
 뚰	gtm/
-뚱	gtq/
+뚱	gtq/	100%
 뚲	gtu/
 뚳	gtd/
 뚴	gtz/
@@ -2347,7 +2347,7 @@ use_preset_vocabulary: false
 뛑	gae/
 뛒	gax/
 뛓	gaw/
-뛔	gz/
+뛔	gz/	100%
 뛕	gzy/
 뛖	gzf/
 뛗	gzv/
@@ -2375,15 +2375,15 @@ use_preset_vocabulary: false
 뛭	gze/
 뛮	gzx/
 뛯	gzw/
-뛰	gd/
+뛰	gd/	100%
 뛱	gdy/
 뛲	gdf/
 뛳	gdv/
-뛴	gdl/
+뛴	gdl/	100%
 뛵	gdk/
 뛶	gdg/
 뛷	gdc/
-뛸	gds/
+뛸	gds/	100%
 뛹	gdj/
 뛺	gdn/
 뛻	gdr/
@@ -2391,12 +2391,12 @@ use_preset_vocabulary: false
 뛽	gdt/
 뛾	gdi/
 뛿	gwd/
-뜀	gdo/
-뜁	gda/
+뜀	gdo/	100%
+뜁	gda/	100%
 뜂	gdh/
 뜃	gdb/
 뜄	gdm/
-뜅	gdq/
+뜅	gdq/	100%
 뜆	gdu/
 뜇	gdd/
 뜈	gdz/
@@ -2431,15 +2431,15 @@ use_preset_vocabulary: false
 뜥	gre/
 뜦	grx/
 뜧	grw/
-뜨	gv/
-뜩	gvy/
+뜨	gv/	100%
+뜩	gvy/	100%
 뜪	gvf/
 뜫	gvv/
-뜬	gvl/
+뜬	gvl/	100%
 뜭	gvk/
 뜮	gvg/
-뜯	gvc/
-뜰	gvs/
+뜯	gvc/	100%
+뜰	gvs/	100%
 뜱	gvj/
 뜲	gvn/
 뜳	gvr/
@@ -2447,10 +2447,10 @@ use_preset_vocabulary: false
 뜵	gvt/
 뜶	gvi/
 뜷	gwv/
-뜸	gvo/
-뜹	gva/
+뜸	gvo/	100%
+뜹	gva/	100%
 뜺	gvh/
-뜻	gvb/
+뜻	gvb/	100%
 뜼	gvm/
 뜽	gvq/
 뜾	gvu/
@@ -2459,15 +2459,15 @@ use_preset_vocabulary: false
 띁	gve/
 띂	gvx/
 띃	gvw/
-띄	gl/
+띄	gl/	100%
 띅	gly/
 띆	glf/
 띇	glv/
-띈	gll/
+띈	gll/	100%
 띉	glk/
 띊	glg/
 띋	glc/
-띌	gls/
+띌	gls/	100%
 띍	glj/
 띎	gln/
 띏	glr/
@@ -2475,8 +2475,8 @@ use_preset_vocabulary: false
 띑	glt/
 띒	gli/
 띓	gwl/
-띔	glo/
-띕	gla/
+띔	glo/	100%
+띕	gla/	100%
 띖	glh/
 띗	glb/
 띘	glm/
@@ -2487,15 +2487,15 @@ use_preset_vocabulary: false
 띝	gle/
 띞	glx/
 띟	glw/
-띠	gi/
+띠	gi/	100%
 띡	giy/
 띢	gif/
 띣	giv/
-띤	gil/
+띤	gil/	100%
 띥	gik/
 띦	gig/
 띧	gic/
-띨	gis/
+띨	gis/	100%
 띩	gij/
 띪	gin/
 띫	gir/
@@ -2503,12 +2503,12 @@ use_preset_vocabulary: false
 띭	git/
 띮	gii/
 띯	gwi/
-띰	gio/
-띱	gia/
+띰	gio/	100%
+띱	gia/	100%
 띲	gih/
-띳	gib/
+띳	gib/	100%
 띴	gim/
-띵	giq/
+띵	giq/	100%
 띶	giu/
 띷	gid/
 띸	giz/
@@ -2528,7 +2528,7 @@ use_preset_vocabulary: false
 랊	ski/
 랋	swk/
 랎	skh/
-랐	skm/
+랐	skm/	100%
 랚	shf/
 랛	shv/
 랝	shk/
@@ -2541,7 +2541,7 @@ use_preset_vocabulary: false
 랦	shi/
 랧	swh/
 랪	shh/
-랬	shm/
+랬	shm/	100%
 랶	sff/
 랷	sfv/
 랹	sfk/
@@ -2595,7 +2595,7 @@ use_preset_vocabulary: false
 럺	sji/
 럻	swj/
 럾	sjh/
-렀	sjm/
+렀	sjm/	100%
 렊	spf/
 렋	spv/
 렍	spk/
@@ -2621,12 +2621,12 @@ use_preset_vocabulary: false
 렲	sgi/
 렳	swg/
 렶	sgh/
-렸	sgm/
-례	sq/
+렸	sgm/	100%
+례	sq/	100%
 롁	sqy/
 롂	sqf/
 롃	sqv/
-롄	sql/
+롄	sql/	100%
 롅	sqk/
 롆	sqg/
 롇	sqc/
@@ -2639,9 +2639,9 @@ use_preset_vocabulary: false
 롎	sqi/
 롏	swq/
 롐	sqo/
-롑	sqa/
+롑	sqa/	100%
 롒	sqh/
-롓	sqb/
+롓	sqb/	100%
 롔	sqm/
 롕	sqq/
 롖	squ/
@@ -2663,11 +2663,11 @@ use_preset_vocabulary: false
 롫	swn/
 롮	snh/
 롰	snm/
-롸	se/
+롸	se/	100%
 롹	sey/
 롺	sef/
 롻	sev/
-롼	sel/
+롼	sel/	100%
 롽	sek/
 롾	seg/
 롿	sec/
@@ -2684,7 +2684,7 @@ use_preset_vocabulary: false
 뢊	seh/
 뢋	seb/
 뢌	sem/
-뢍	seq/
+뢍	seq/	100%
 뢎	seu/
 뢏	sed/
 뢐	sez/
@@ -2711,7 +2711,7 @@ use_preset_vocabulary: false
 뢥	ssa/
 뢦	ssh/
 뢧	ssb/
-뢨	ssm/
+뢨	ssm/	100%
 뢩	ssq/
 뢪	ssu/
 뢫	ssd/
@@ -2719,15 +2719,15 @@ use_preset_vocabulary: false
 뢭	sse/
 뢮	ssx/
 뢯	ssw/
-뢰	sx/
+뢰	sx/	100%
 뢱	sxy/
 뢲	sxf/
 뢳	sxv/
-뢴	sxl/
+뢴	sxl/	100%
 뢵	sxk/
 뢶	sxg/
 뢷	sxc/
-뢸	sxs/
+뢸	sxs/	100%
 뢹	sxj/
 뢺	sxn/
 뢻	sxr/
@@ -2735,12 +2735,12 @@ use_preset_vocabulary: false
 뢽	sxt/
 뢾	sxi/
 뢿	swx/
-룀	sxo/
-룁	sxa/
+룀	sxo/	100%
+룁	sxa/	100%
 룂	sxh/
-룃	sxb/
+룃	sxb/	100%
 룄	sxm/
-룅	sxq/
+룅	sxq/	100%
 룆	sxu/
 룇	sxd/
 룈	sxz/
@@ -2773,7 +2773,7 @@ use_preset_vocabulary: false
 룷	swt/
 룺	sth/
 룼	stm/
-뤄	sa/
+뤄	sa/	100%
 뤅	say/
 뤆	saf/
 뤇	sav/
@@ -2793,7 +2793,7 @@ use_preset_vocabulary: false
 뤕	saa/
 뤖	sah/
 뤗	sab/
-뤘	sam/
+뤘	sam/	100%
 뤙	saq/
 뤚	sau/
 뤛	sad/
@@ -2801,7 +2801,7 @@ use_preset_vocabulary: false
 뤝	sae/
 뤞	sax/
 뤟	saw/
-뤠	sz/
+뤠	sz/	100%
 뤡	szy/
 뤢	szf/
 뤣	szv/
@@ -2829,15 +2829,15 @@ use_preset_vocabulary: false
 뤹	sze/
 뤺	szx/
 뤻	szw/
-뤼	sd/
-뤽	sdy/
+뤼	sd/	100%
+뤽	sdy/	100%
 뤾	sdf/
 뤿	sdv/
-륀	sdl/
+륀	sdl/	100%
 륁	sdk/
 륂	sdg/
 륃	sdc/
-륄	sds/
+륄	sds/	100%
 륅	sdj/
 륆	sdn/
 륇	sdr/
@@ -2845,12 +2845,12 @@ use_preset_vocabulary: false
 륉	sdt/
 륊	sdi/
 륋	swd/
-륌	sdo/
+륌	sdo/	100%
 륍	sda/
 륎	sdh/
-륏	sdb/
+륏	sdb/	100%
 륐	sdm/
-륑	sdq/
+륑	sdq/	100%
 륒	sdu/
 륓	sdd/
 륔	sdz/
@@ -2928,9 +2928,9 @@ use_preset_vocabulary: false
 맊	okf/
 맋	okv/
 맍	okk/
-많	okg/
-맑	okj/
-맒	okn/
+많	okg/	100%
+맑	okj/	100%
+맒	okn/	100%
 맓	okr/
 맔	okp/
 맕	okt/
@@ -2950,7 +2950,7 @@ use_preset_vocabulary: false
 맲	ohi/
 맳	owh/
 맶	ohh/
-맸	ohm/
+맸	ohm/	100%
 먂	off/
 먃	ofv/
 먅	ofk/
@@ -2997,7 +2997,7 @@ use_preset_vocabulary: false
 먽	ojk/
 먾	ojg/
 멁	ojj/
-멂	ojn/
+멂	ojn/	100%
 멃	ojr/
 멄	ojp/
 멅	ojt/
@@ -3017,7 +3017,7 @@ use_preset_vocabulary: false
 멢	opi/
 멣	owp/
 멦	oph/
-멨	opm/
+멨	opm/	100%
 멲	ogf/
 멳	ogv/
 멵	ogk/
@@ -3030,8 +3030,8 @@ use_preset_vocabulary: false
 멾	ogi/
 멿	owg/
 몂	ogh/
-몄	ogm/
-몌	oq/
+몄	ogm/	100%
+몌	oq/	100%
 몍	oqy/
 몎	oqf/
 몏	oqv/
@@ -3060,11 +3060,11 @@ use_preset_vocabulary: false
 몦	oqx/
 몧	oqw/
 몪	onf/
-몫	onv/
+몫	onv/	100%
 몭	onk/
 몮	ong/
 몱	onj/
-몲	onn/
+몲	onn/	100%
 몳	onr/
 몴	onp/
 몵	ont/
@@ -3072,11 +3072,11 @@ use_preset_vocabulary: false
 몷	own/
 몺	onh/
 몼	onm/
-뫄	oe/
+뫄	oe/	100%
 뫅	oey/
 뫆	oef/
 뫇	oev/
-뫈	oel/
+뫈	oel/	100%
 뫉	oek/
 뫊	oeg/
 뫋	oec/
@@ -3092,8 +3092,8 @@ use_preset_vocabulary: false
 뫕	oea/
 뫖	oeh/
 뫗	oeb/
-뫘	oem/
-뫙	oeq/
+뫘	oem/	100%
+뫙	oeq/	100%
 뫚	oeu/
 뫛	oed/
 뫜	oez/
@@ -3128,15 +3128,15 @@ use_preset_vocabulary: false
 뫹	ose/
 뫺	osx/
 뫻	osw/
-뫼	ox/
+뫼	ox/	100%
 뫽	oxy/
 뫾	oxf/
 뫿	oxv/
-묀	oxl/
+묀	oxl/	100%
 묁	oxk/
 묂	oxg/
 묃	oxc/
-묄	oxs/
+묄	oxs/	100%
 묅	oxj/
 묆	oxn/
 묇	oxr/
@@ -3145,11 +3145,11 @@ use_preset_vocabulary: false
 묊	oxi/
 묋	owx/
 묌	oxo/
-묍	oxa/
+묍	oxa/	100%
 묎	oxh/
-묏	oxb/
+묏	oxb/	100%
 묐	oxm/
-묑	oxq/
+묑	oxq/	100%
 묒	oxu/
 묓	oxd/
 묔	oxz/
@@ -3169,12 +3169,12 @@ use_preset_vocabulary: false
 묧	owm/
 묪	omh/
 묬	omm/
-묶	otf/
+묶	otf/	100%
 묷	otv/
 묹	otk/
 묺	otg/
-묽	otj/
-묾	otn/
+묽	otj/	100%
+묾	otn/	100%
 묿	otr/
 뭀	otp/
 뭁	ott/
@@ -3182,15 +3182,15 @@ use_preset_vocabulary: false
 뭃	owt/
 뭆	oth/
 뭈	otm/
-뭐	oa/
+뭐	oa/	100%
 뭑	oay/
 뭒	oaf/
 뭓	oav/
-뭔	oal/
+뭔	oal/	100%
 뭕	oak/
 뭖	oag/
 뭗	oac/
-뭘	oas/
+뭘	oas/	100%
 뭙	oaj/
 뭚	oan/
 뭛	oar/
@@ -3199,9 +3199,9 @@ use_preset_vocabulary: false
 뭞	oai/
 뭟	owa/
 뭠	oao/
-뭡	oaa/
+뭡	oaa/	100%
 뭢	oah/
-뭣	oab/
+뭣	oab/	100%
 뭤	oam/
 뭥	oaq/
 뭦	oau/
@@ -3210,7 +3210,7 @@ use_preset_vocabulary: false
 뭩	oae/
 뭪	oax/
 뭫	oaw/
-뭬	oz/
+뭬	oz/	100%
 뭭	ozy/
 뭮	ozf/
 뭯	ozv/
@@ -3238,15 +3238,15 @@ use_preset_vocabulary: false
 뮅	oze/
 뮆	ozx/
 뮇	ozw/
-뮈	od/
+뮈	od/	100%
 뮉	ody/
 뮊	odf/
 뮋	odv/
-뮌	odl/
+뮌	odl/	100%
 뮍	odk/
 뮎	odg/
 뮏	odc/
-뮐	ods/
+뮐	ods/	100%
 뮑	odj/
 뮒	odn/
 뮓	odr/
@@ -3325,22 +3325,22 @@ use_preset_vocabulary: false
 믽	oik/
 믾	oig/
 밁	oij/
-밂	oin/
+밂	oin/	100%
 밃	oir/
 밄	oip/
 밅	oit/
 밆	oii/
 밇	owi/
 밊	oih/
-밌	oim/
+밌	oim/	100%
 #s8
-밖	akf/
-밗	akv/
+밖	akf/	100%
+밗	akv/	100%
 밙	akk/
 밚	akg/
-밝	akj/
-밞	akn/
-밟	akr/
+밝	akj/	100%
+밞	akn/	100%
+밟	akr/	100%
 밠	akp/
 밡	akt/
 밢	aki/
@@ -3359,7 +3359,7 @@ use_preset_vocabulary: false
 밾	ahi/
 밿	awh/
 뱂	ahh/
-뱄	ahm/
+뱄	ahm/	100%
 뱎	aff/
 뱏	afv/
 뱑	afk/
@@ -3406,7 +3406,7 @@ use_preset_vocabulary: false
 벉	ajk/
 벊	ajg/
 벍	ajj/
-벎	ajn/
+벎	ajn/	100%
 벏	ajr/
 벐	ajp/
 벑	ajt/
@@ -3426,7 +3426,7 @@ use_preset_vocabulary: false
 벮	api/
 벯	awp/
 벲	aph/
-벴	apm/
+벴	apm/	100%
 벾	agf/
 벿	agv/
 볁	agk/
@@ -3439,12 +3439,12 @@ use_preset_vocabulary: false
 볊	agi/
 볋	awg/
 볎	agh/
-볐	agm/
-볘	aq/
+볐	agm/	100%
+볘	aq/	100%
 볙	aqy/
 볚	aqf/
 볛	aqv/
-볜	aql/
+볜	aql/	100%
 볝	aqk/
 볞	aqg/
 볟	aqc/
@@ -3468,7 +3468,7 @@ use_preset_vocabulary: false
 볱	aqe/
 볲	aqx/
 볳	aqw/
-볶	anf/
+볶	anf/	100%
 볷	anv/
 볹	ank/
 볺	ang/
@@ -3481,11 +3481,11 @@ use_preset_vocabulary: false
 봃	awn/
 봆	anh/
 봈	anm/
-봐	ae/
+봐	ae/	100%
 봑	aey/
 봒	aef/
 봓	aev/
-봔	ael/
+봔	ael/	100%
 봕	aek/
 봖	aeg/
 봗	aec/
@@ -3501,7 +3501,7 @@ use_preset_vocabulary: false
 봡	aea/
 봢	aeh/
 봣	aeb/
-봤	aem/
+봤	aem/	100%
 봥	aeq/
 봦	aeu/
 봧	aed/
@@ -3509,7 +3509,7 @@ use_preset_vocabulary: false
 봩	aee/
 봪	aex/
 봫	aew/
-봬	as/
+봬	as/	100%
 봭	asy/
 봮	asf/
 봯	asv/
@@ -3529,7 +3529,7 @@ use_preset_vocabulary: false
 봽	asa/
 봾	ash/
 봿	asb/
-뵀	asm/
+뵀	asm/	100%
 뵁	asq/
 뵂	asu/
 뵃	asd/
@@ -3537,15 +3537,15 @@ use_preset_vocabulary: false
 뵅	ase/
 뵆	asx/
 뵇	asw/
-뵈	ax/
-뵉	axy/
+뵈	ax/	100%
+뵉	axy/	100%
 뵊	axf/
 뵋	axv/
-뵌	axl/
+뵌	axl/	100%
 뵍	axk/
 뵎	axg/
 뵏	axc/
-뵐	axs/
+뵐	axs/	100%
 뵑	axj/
 뵒	axn/
 뵓	axr/
@@ -3553,8 +3553,8 @@ use_preset_vocabulary: false
 뵕	axt/
 뵖	axi/
 뵗	awx/
-뵘	axo/
-뵙	axa/
+뵘	axo/	100%
+뵙	axa/	100%
 뵚	axh/
 뵛	axb/
 뵜	axm/
@@ -3582,8 +3582,8 @@ use_preset_vocabulary: false
 붃	atv/
 붅	atk/
 붆	atg/
-붉	atj/
-붊	atn/
+붉	atj/	100%
+붊	atn/	100%
 붋	atr/
 붌	atp/
 붍	att/
@@ -3591,7 +3591,7 @@ use_preset_vocabulary: false
 붏	awt/
 붒	ath/
 붔	atm/
-붜	aa/
+붜	aa/	100%
 붝	aay/
 붞	aaf/
 붟	aav/
@@ -3599,7 +3599,7 @@ use_preset_vocabulary: false
 붡	aak/
 붢	aag/
 붣	aac/
-붤	aas/
+붤	aas/	100%
 붥	aaj/
 붦	aan/
 붧	aar/
@@ -3611,7 +3611,7 @@ use_preset_vocabulary: false
 붭	aaa/
 붮	aah/
 붯	aab/
-붰	aam/
+붰	aam/	100%
 붱	aaq/
 붲	aau/
 붳	aad/
@@ -3619,7 +3619,7 @@ use_preset_vocabulary: false
 붵	aae/
 붶	aax/
 붷	aaw/
-붸	az/
+붸	az/	100%
 붹	azy/
 붺	azf/
 붻	azv/
@@ -3647,15 +3647,15 @@ use_preset_vocabulary: false
 뷑	aze/
 뷒	azx/
 뷓	azw/
-뷔	ad/
-뷕	ady/
+뷔	ad/	100%
+뷕	ady/	100%
 뷖	adf/
 뷗	adv/
-뷘	adl/
+뷘	adl/	100%
 뷙	adk/
 뷚	adg/
 뷛	adc/
-뷜	ads/
+뷜	ads/	100%
 뷝	adj/
 뷞	adn/
 뷟	adr/
@@ -3668,7 +3668,7 @@ use_preset_vocabulary: false
 뷦	adh/
 뷧	adb/
 뷨	adm/
-뷩	adq/
+뷩	adq/	100%
 뷪	adu/
 뷫	add/
 뷬	adz/
@@ -3734,7 +3734,7 @@ use_preset_vocabulary: false
 빉	aik/
 빊	aig/
 빍	aij/
-빎	ain/
+빎	ain/	100%
 빏	air/
 빐	aip/
 빑	ait/
@@ -3743,43 +3743,43 @@ use_preset_vocabulary: false
 빖	aih/
 빘	aim/
 #s9
-빠	rk/
-빡	rky/
+빠	rk/	100%
+빡	rky/	100%
 빢	rkf/
 빣	rkv/
-빤	rkl/
+빤	rkl/	100%
 빥	rkk/
 빦	rkg/
 빧	rkc/
-빨	rks/
+빨	rks/	100%
 빩	rkj/
-빪	rkn/
+빪	rkn/	100%
 빫	rkr/
 빬	rkp/
 빭	rkt/
 빮	rki/
 빯	rwk/
-빰	rko/
-빱	rka/
+빰	rko/	100%
+빱	rka/	100%
 빲	rkh/
-빳	rkb/
-빴	rkm/
-빵	rkq/
+빳	rkb/	100%
+빴	rkm/	100%
+빵	rkq/	100%
 빶	rku/
 빷	rkd/
 빸	rkz/
 빹	rke/
 빺	rkx/
-빻	rkw/
-빼	rh/
-빽	rhy/
+빻	rkw/	100%
+빼	rh/	100%
+빽	rhy/	100%
 빾	rhf/
 빿	rhv/
-뺀	rhl/
+뺀	rhl/	100%
 뺁	rhk/
 뺂	rhg/
 뺃	rhc/
-뺄	rhs/
+뺄	rhs/	100%
 뺅	rhj/
 뺆	rhn/
 뺇	rhr/
@@ -3787,20 +3787,20 @@ use_preset_vocabulary: false
 뺉	rht/
 뺊	rhi/
 뺋	rwh/
-뺌	rho/
-뺍	rha/
+뺌	rho/	100%
+뺍	rha/	100%
 뺎	rhh/
-뺏	rhb/
-뺐	rhm/
-뺑	rhq/
+뺏	rhb/	100%
+뺐	rhm/	100%
+뺑	rhq/	100%
 뺒	rhu/
 뺓	rhd/
 뺔	rhz/
 뺕	rhe/
 뺖	rhx/
 뺗	rhw/
-뺘	rf/
-뺙	rfy/
+뺘	rf/	100%
+뺙	rfy/	100%
 뺚	rff/
 뺛	rfv/
 뺜	rfl/
@@ -3815,7 +3815,7 @@ use_preset_vocabulary: false
 뺥	rft/
 뺦	rfi/
 뺧	rwf/
-뺨	rfo/
+뺨	rfo/	100%
 뺩	rfa/
 뺪	rfh/
 뺫	rfb/
@@ -3855,15 +3855,15 @@ use_preset_vocabulary: false
 뻍	roe/
 뻎	rox/
 뻏	row/
-뻐	rj/
-뻑	rjy/
+뻐	rj/	100%
+뻑	rjy/	100%
 뻒	rjf/
 뻓	rjv/
-뻔	rjl/
+뻔	rjl/	100%
 뻕	rjk/
 뻖	rjg/
-뻗	rjc/
-뻘	rjs/
+뻗	rjc/	100%
+뻘	rjs/	100%
 뻙	rjj/
 뻚	rjn/
 뻛	rjr/
@@ -3871,19 +3871,19 @@ use_preset_vocabulary: false
 뻝	rjt/
 뻞	rji/
 뻟	rwj/
-뻠	rjo/
+뻠	rjo/	100%
 뻡	rja/
 뻢	rjh/
-뻣	rjb/
-뻤	rjm/
-뻥	rjq/
+뻣	rjb/	100%
+뻤	rjm/	100%
+뻥	rjq/	100%
 뻦	rju/
 뻧	rjd/
 뻨	rjz/
 뻩	rje/
 뻪	rjx/
 뻫	rjw/
-뻬	rp/
+뻬	rp/	100%
 뻭	rpy/
 뻮	rpf/
 뻯	rpv/
@@ -3904,15 +3904,15 @@ use_preset_vocabulary: false
 뻾	rph/
 뻿	rpb/
 뼀	rpm/
-뼁	rpq/
+뼁	rpq/	100%
 뼂	rpu/
 뼃	rpd/
 뼄	rpz/
 뼅	rpe/
 뼆	rpx/
 뼇	rpw/
-뼈	rg/
-뼉	rgy/
+뼈	rg/	100%
+뼉	rgy/	100%
 뼊	rgf/
 뼋	rgv/
 뼌	rgl/
@@ -3927,12 +3927,12 @@ use_preset_vocabulary: false
 뼕	rgt/
 뼖	rgi/
 뼗	rwg/
-뼘	rgo/
-뼙	rga/
+뼘	rgo/	100%
+뼙	rga/	100%
 뼚	rgh/
-뼛	rgb/
-뼜	rgm/
-뼝	rgq/
+뼛	rgb/	100%
+뼜	rgm/	100%
+뼝	rgq/	100%
 뼞	rgu/
 뼟	rgd/
 뼠	rgz/
@@ -3967,15 +3967,15 @@ use_preset_vocabulary: false
 뼽	rqe/
 뼾	rqx/
 뼿	rqw/
-뽀	rn/
-뽁	rny/
+뽀	rn/	100%
+뽁	rny/	100%
 뽂	rnf/
 뽃	rnv/
-뽄	rnl/
+뽄	rnl/	100%
 뽅	rnk/
 뽆	rng/
 뽇	rnc/
-뽈	rns/
+뽈	rns/	100%
 뽉	rnj/
 뽊	rnn/
 뽋	rnr/
@@ -3983,12 +3983,12 @@ use_preset_vocabulary: false
 뽍	rnt/
 뽎	rni/
 뽏	rwn/
-뽐	rno/
-뽑	rna/
+뽐	rno/	100%
+뽑	rna/	100%
 뽒	rnh/
 뽓	rnb/
 뽔	rnm/
-뽕	rnq/
+뽕	rnq/	100%
 뽖	rnu/
 뽗	rnd/
 뽘	rnz/
@@ -4051,7 +4051,7 @@ use_preset_vocabulary: false
 뾑	rse/
 뾒	rsx/
 뾓	rsw/
-뾔	rx/
+뾔	rx/	100%
 뾕	rxy/
 뾖	rxf/
 뾗	rxv/
@@ -4079,7 +4079,7 @@ use_preset_vocabulary: false
 뾭	rxe/
 뾮	rxx/
 뾯	rxw/
-뾰	rm/
+뾰	rm/	100%
 뾱	rmy/
 뾲	rmf/
 뾳	rmv/
@@ -4100,22 +4100,22 @@ use_preset_vocabulary: false
 뿂	rmh/
 뿃	rmb/
 뿄	rmm/
-뿅	rmq/
+뿅	rmq/	100%
 뿆	rmu/
 뿇	rmd/
 뿈	rmz/
 뿉	rme/
 뿊	rmx/
 뿋	rmw/
-뿌	rt/
-뿍	rty/
+뿌	rt/	100%
+뿍	rty/	100%
 뿎	rtf/
 뿏	rtv/
-뿐	rtl/
+뿐	rtl/	100%
 뿑	rtk/
 뿒	rtg/
 뿓	rtc/
-뿔	rts/
+뿔	rts/	100%
 뿕	rtj/
 뿖	rtn/
 뿗	rtr/
@@ -4123,12 +4123,12 @@ use_preset_vocabulary: false
 뿙	rtt/
 뿚	rti/
 뿛	rwt/
-뿜	rto/
+뿜	rto/	100%
 뿝	rta/
 뿞	rth/
-뿟	rtb/
+뿟	rtb/	100%
 뿠	rtm/
-뿡	rtq/
+뿡	rtq/	100%
 뿢	rtu/
 뿣	rtd/
 뿤	rtz/
@@ -4219,7 +4219,7 @@ use_preset_vocabulary: false
 쀹	rde/
 쀺	rdx/
 쀻	rdw/
-쀼	rr/
+쀼	rr/	100%
 쀽	rry/
 쀾	rrf/
 쀿	rrv/
@@ -4240,22 +4240,22 @@ use_preset_vocabulary: false
 쁎	rrh/
 쁏	rrb/
 쁐	rrm/
-쁑	rrq/
+쁑	rrq/	100%
 쁒	rru/
 쁓	rrd/
 쁔	rrz/
 쁕	rre/
 쁖	rrx/
 쁗	rrw/
-쁘	rv/
+쁘	rv/	100%
 쁙	rvy/
 쁚	rvf/
 쁛	rvv/
-쁜	rvl/
+쁜	rvl/	100%
 쁝	rvk/
 쁞	rvg/
 쁟	rvc/
-쁠	rvs/
+쁠	rvs/	100%
 쁡	rvj/
 쁢	rvn/
 쁣	rvr/
@@ -4263,8 +4263,8 @@ use_preset_vocabulary: false
 쁥	rvt/
 쁦	rvi/
 쁧	rwv/
-쁨	rvo/
-쁩	rva/
+쁨	rvo/	100%
+쁩	rva/	100%
 쁪	rvh/
 쁫	rvb/
 쁬	rvm/
@@ -4303,15 +4303,15 @@ use_preset_vocabulary: false
 삍	rle/
 삎	rlx/
 삏	rlw/
-삐	ri/
-삑	riy/
+삐	ri/	100%
+삑	riy/	100%
 삒	rif/
 삓	riv/
-삔	ril/
+삔	ril/	100%
 삕	rik/
 삖	rig/
 삗	ric/
-삘	ris/
+삘	ris/	100%
 삙	rij/
 삚	rin/
 삛	rir/
@@ -4319,12 +4319,12 @@ use_preset_vocabulary: false
 삝	rit/
 삞	rii/
 삟	rwi/
-삠	rio/
-삡	ria/
+삠	rio/	100%
+삡	ria/	100%
 삢	rih/
-삣	rib/
+삣	rib/	100%
 삤	rim/
-삥	riq/
+삥	riq/	100%
 삦	riu/
 삧	rid/
 삨	riz/
@@ -4333,18 +4333,18 @@ use_preset_vocabulary: false
 삫	riw/
 #s10
 삮	bkf/
-삯	bkv/
+삯	bkv/	100%
 삱	bkk/
 삲	bkg/
-삵	bkj/
-삶	bkn/
+삵	bkj/	100%
+삶	bkn/	100%
 삷	bkr/
 삸	bkp/
 삹	bkt/
 삺	bki/
 삻	bwk/
 삾	bkh/
-샀	bkm/
+샀	bkm/	100%
 샊	bhf/
 샋	bhv/
 샍	bhk/
@@ -4357,7 +4357,7 @@ use_preset_vocabulary: false
 샖	bhi/
 샗	bwh/
 샚	bhh/
-샜	bhm/
+샜	bhm/	100%
 샦	bff/
 샧	bfv/
 샩	bfk/
@@ -4371,15 +4371,15 @@ use_preset_vocabulary: false
 샳	bwf/
 샶	bfh/
 샸	bfm/
-섀	bo/
+섀	bo/	100%
 섁	boy/
 섂	bof/
 섃	bov/
-섄	bol/
+섄	bol/	100%
 섅	bok/
 섆	bog/
 섇	boc/
-섈	bos/
+섈	bos/	100%
 섉	boj/
 섊	bon/
 섋	bor/
@@ -4387,31 +4387,31 @@ use_preset_vocabulary: false
 섍	bot/
 섎	boi/
 섏	bwo/
-섐	boo/
+섐	boo/	100%
 섑	boa/
 섒	boh/
 섓	bob/
 섔	bom/
-섕	boq/
+섕	boq/	100%
 섖	bou/
 섗	bod/
 섘	boz/
 섙	boe/
 섚	box/
 섛	bow/
-섞	bjf/
-섟	bjv/
+섞	bjf/	100%
+섟	bjv/	100%
 섡	bjk/
 섢	bjg/
 섥	bjj/
-섦	bjn/
-섧	bjr/
+섦	bjn/	100%
+섧	bjr/	100%
 섨	bjp/
 섩	bjt/
 섪	bji/
 섫	bwj/
 섮	bjh/
-섰	bjm/
+섰	bjm/	100%
 섺	bpf/
 섻	bpv/
 섽	bpk/
@@ -4424,7 +4424,7 @@ use_preset_vocabulary: false
 셆	bpi/
 셇	bwp/
 셊	bph/
-셌	bpm/
+셌	bpm/	100%
 셖	bgf/
 셗	bgv/
 셙	bgk/
@@ -4437,16 +4437,16 @@ use_preset_vocabulary: false
 셢	bgi/
 셣	bwg/
 셦	bgh/
-셨	bgm/
-셰	bq/
+셨	bgm/	100%
+셰	bq/	100%
 셱	bqy/
 셲	bqf/
 셳	bqv/
-셴	bql/
+셴	bql/	100%
 셵	bqk/
 셶	bqg/
 셷	bqc/
-셸	bqs/
+셸	bqs/	100%
 셹	bqj/
 셺	bqn/
 셻	bqr/
@@ -4459,19 +4459,19 @@ use_preset_vocabulary: false
 솂	bqh/
 솃	bqb/
 솄	bqm/
-솅	bqq/
+솅	bqq/	100%
 솆	bqu/
 솇	bqd/
 솈	bqz/
 솉	bqe/
 솊	bqx/
 솋	bqw/
-솎	bnf/
+솎	bnf/	100%
 솏	bnv/
 솑	bnk/
 솒	bng/
 솕	bnj/
-솖	bnn/
+솖	bnn/	100%
 솗	bnr/
 솘	bnp/
 솙	bnt/
@@ -4479,15 +4479,15 @@ use_preset_vocabulary: false
 솛	bwn/
 솞	bnh/
 솠	bnm/
-솨	be/
-솩	bey/
+솨	be/	100%
+솩	bey/	100%
 솪	bef/
 솫	bev/
-솬	bel/
+솬	bel/	100%
 솭	bek/
 솮	beg/
 솯	bec/
-솰	bes/
+솰	bes/	100%
 솱	bej/
 솲	ben/
 솳	ber/
@@ -4500,22 +4500,22 @@ use_preset_vocabulary: false
 솺	beh/
 솻	beb/
 솼	bem/
-솽	beq/
+솽	beq/	100%
 솾	beu/
 솿	bed/
 쇀	bez/
 쇁	bee/
 쇂	bex/
 쇃	bew/
-쇄	bs/
+쇄	bs/	100%
 쇅	bsy/
 쇆	bsf/
 쇇	bsv/
-쇈	bsl/
+쇈	bsl/	100%
 쇉	bsk/
 쇊	bsg/
 쇋	bsc/
-쇌	bss/
+쇌	bss/	100%
 쇍	bsj/
 쇎	bsn/
 쇏	bsr/
@@ -4523,11 +4523,11 @@ use_preset_vocabulary: false
 쇑	bst/
 쇒	bsi/
 쇓	bws/
-쇔	bso/
+쇔	bso/	100%
 쇕	bsa/
 쇖	bsh/
-쇗	bsb/
-쇘	bsm/
+쇗	bsb/	100%
+쇘	bsm/	100%
 쇙	bsq/
 쇚	bsu/
 쇛	bsd/
@@ -4535,15 +4535,15 @@ use_preset_vocabulary: false
 쇝	bse/
 쇞	bsx/
 쇟	bsw/
-쇠	bx/
+쇠	bx/	100%
 쇡	bxy/
 쇢	bxf/
 쇣	bxv/
-쇤	bxl/
+쇤	bxl/	100%
 쇥	bxk/
 쇦	bxg/
 쇧	bxc/
-쇨	bxs/
+쇨	bxs/	100%
 쇩	bxj/
 쇪	bxn/
 쇫	bxr/
@@ -4551,10 +4551,10 @@ use_preset_vocabulary: false
 쇭	bxt/
 쇮	bxi/
 쇯	bwx/
-쇰	bxo/
-쇱	bxa/
+쇰	bxo/	100%
+쇱	bxa/	100%
 쇲	bxh/
-쇳	bxb/
+쇳	bxb/	100%
 쇴	bxm/
 쇵	bxq/
 쇶	bxu/
@@ -4589,7 +4589,7 @@ use_preset_vocabulary: false
 숧	bwt/
 숪	bth/
 숬	btm/
-숴	ba/
+숴	ba/	100%
 숵	bay/
 숶	baf/
 숷	bav/
@@ -4609,7 +4609,7 @@ use_preset_vocabulary: false
 쉅	baa/
 쉆	bah/
 쉇	bab/
-쉈	bam/
+쉈	bam/	100%
 쉉	baq/
 쉊	bau/
 쉋	bad/
@@ -4617,15 +4617,15 @@ use_preset_vocabulary: false
 쉍	bae/
 쉎	bax/
 쉏	baw/
-쉐	bz/
-쉑	bzy/
+쉐	bz/	100%
+쉑	bzy/	100%
 쉒	bzf/
 쉓	bzv/
-쉔	bzl/
+쉔	bzl/	100%
 쉕	bzk/
 쉖	bzg/
 쉗	bzc/
-쉘	bzs/
+쉘	bzs/	100%
 쉙	bzj/
 쉚	bzn/
 쉛	bzr/
@@ -4633,27 +4633,27 @@ use_preset_vocabulary: false
 쉝	bzt/
 쉞	bzi/
 쉟	bwz/
-쉠	bzo/
+쉠	bzo/	100%
 쉡	bza/
 쉢	bzh/
 쉣	bzb/
 쉤	bzm/
-쉥	bzq/
+쉥	bzq/	100%
 쉦	bzu/
 쉧	bzd/
 쉨	bzz/
 쉩	bze/
 쉪	bzx/
 쉫	bzw/
-쉬	bd/
-쉭	bdy/
+쉬	bd/	100%
+쉭	bdy/	100%
 쉮	bdf/
 쉯	bdv/
-쉰	bdl/
+쉰	bdl/	100%
 쉱	bdk/
 쉲	bdg/
 쉳	bdc/
-쉴	bds/
+쉴	bds/	100%
 쉵	bdj/
 쉶	bdn/
 쉷	bdr/
@@ -4661,12 +4661,12 @@ use_preset_vocabulary: false
 쉹	bdt/
 쉺	bdi/
 쉻	bwd/
-쉼	bdo/
-쉽	bda/
+쉼	bdo/	100%
+쉽	bda/	100%
 쉾	bdh/
-쉿	bdb/
+쉿	bdb/	100%
 슀	bdm/
-슁	bdq/
+슁	bdq/	100%
 슂	bdu/
 슃	bdd/
 슄	bdz/
@@ -4690,7 +4690,7 @@ use_preset_vocabulary: false
 슧	bvv/
 슩	bvk/
 슪	bvg/
-슭	bvj/
+슭	bvj/	100%
 슮	bvn/
 슯	bvr/
 슰	bvp/
@@ -4737,19 +4737,19 @@ use_preset_vocabulary: false
 싨	bip/
 싩	bit/
 싪	bii/
-싫	bwi/
+싫	bwi/	100%
 싮	bih/
 싰	bim/
 #s11
-싸	mk/
-싹	mky/
+싸	mk/	100%
+싹	mky/	100%
 싺	mkf/
-싻	mkv/
-싼	mkl/
+싻	mkv/	100%
+싼	mkl/	100%
 싽	mkk/
 싾	mkg/
 싿	mkc/
-쌀	mks/
+쌀	mks/	100%
 쌁	mkj/
 쌂	mkn/
 쌃	mkr/
@@ -4757,27 +4757,27 @@ use_preset_vocabulary: false
 쌅	mkt/
 쌆	mki/
 쌇	mwk/
-쌈	mko/
-쌉	mka/
+쌈	mko/	100%
+쌉	mka/	100%
 쌊	mkh/
 쌋	mkb/
-쌌	mkm/
-쌍	mkq/
+쌌	mkm/	100%
+쌍	mkq/	100%
 쌎	mku/
 쌏	mkd/
 쌐	mkz/
 쌑	mke/
 쌒	mkx/
-쌓	mkw/
-쌔	mh/
-쌕	mhy/
+쌓	mkw/	100%
+쌔	mh/	100%
+쌕	mhy/	100%
 쌖	mhf/
 쌗	mhv/
-쌘	mhl/
+쌘	mhl/	100%
 쌙	mhk/
 쌚	mhg/
 쌛	mhc/
-쌜	mhs/
+쌜	mhs/	100%
 쌝	mhj/
 쌞	mhn/
 쌟	mhr/
@@ -4785,12 +4785,12 @@ use_preset_vocabulary: false
 쌡	mht/
 쌢	mhi/
 쌣	mwh/
-쌤	mho/
-쌥	mha/
+쌤	mho/	100%
+쌥	mha/	100%
 쌦	mhh/
 쌧	mhb/
-쌨	mhm/
-쌩	mhq/
+쌨	mhm/	100%
+쌩	mhq/	100%
 쌪	mhu/
 쌫	mhd/
 쌬	mhz/
@@ -4818,7 +4818,7 @@ use_preset_vocabulary: false
 썂	mfh/
 썃	mfb/
 썄	mfm/
-썅	mfq/
+썅	mfq/	100%
 썆	mfu/
 썇	mfd/
 썈	mfz/
@@ -4853,43 +4853,43 @@ use_preset_vocabulary: false
 썥	moe/
 썦	mox/
 썧	mow/
-써	mj/
-썩	mjy/
+써	mj/	100%
+썩	mjy/	100%
 썪	mjf/
 썫	mjv/
-썬	mjl/
+썬	mjl/	100%
 썭	mjk/
 썮	mjg/
 썯	mjc/
-썰	mjs/
+썰	mjs/	100%
 썱	mjj/
-썲	mjn/
+썲	mjn/	100%
 썳	mjr/
 썴	mjp/
 썵	mjt/
 썶	mji/
 썷	mwj/
-썸	mjo/
-썹	mja/
+썸	mjo/	100%
+썹	mja/	100%
 썺	mjh/
 썻	mjb/
-썼	mjm/
-썽	mjq/
+썼	mjm/	100%
+썽	mjq/	100%
 썾	mju/
 썿	mjd/
 쎀	mjz/
 쎁	mje/
 쎂	mjx/
 쎃	mjw/
-쎄	mp/
+쎄	mp/	100%
 쎅	mpy/
 쎆	mpf/
 쎇	mpv/
-쎈	mpl/
+쎈	mpl/	100%
 쎉	mpk/
 쎊	mpg/
 쎋	mpc/
-쎌	mps/
+쎌	mps/	100%
 쎍	mpj/
 쎎	mpn/
 쎏	mpr/
@@ -4941,7 +4941,7 @@ use_preset_vocabulary: false
 쎽	mqy/
 쎾	mqf/
 쎿	mqv/
-쏀	mql/
+쏀	mql/	100%
 쏁	mqk/
 쏂	mqg/
 쏃	mqc/
@@ -4965,39 +4965,39 @@ use_preset_vocabulary: false
 쏕	mqe/
 쏖	mqx/
 쏗	mqw/
-쏘	mn/
-쏙	mny/
+쏘	mn/	100%
+쏙	mny/	100%
 쏚	mnf/
 쏛	mnv/
-쏜	mnl/
+쏜	mnl/	100%
 쏝	mnk/
 쏞	mng/
-쏟	mnc/
-쏠	mns/
+쏟	mnc/	100%
+쏠	mns/	100%
 쏡	mnj/
-쏢	mnn/
+쏢	mnn/	100%
 쏣	mnr/
 쏤	mnp/
 쏥	mnt/
 쏦	mni/
 쏧	mwn/
-쏨	mno/
-쏩	mna/
+쏨	mno/	100%
+쏩	mna/	100%
 쏪	mnh/
 쏫	mnb/
 쏬	mnm/
-쏭	mnq/
+쏭	mnq/	100%
 쏮	mnu/
 쏯	mnd/
 쏰	mnz/
 쏱	mne/
 쏲	mnx/
 쏳	mnw/
-쏴	me/
-쏵	mey/
+쏴	me/	100%
+쏵	mey/	100%
 쏶	mef/
 쏷	mev/
-쏸	mel/
+쏸	mel/	100%
 쏹	mek/
 쏺	meg/
 쏻	mec/
@@ -5013,7 +5013,7 @@ use_preset_vocabulary: false
 쐅	mea/
 쐆	meh/
 쐇	meb/
-쐈	mem/
+쐈	mem/	100%
 쐉	meq/
 쐊	meu/
 쐋	med/
@@ -5021,7 +5021,7 @@ use_preset_vocabulary: false
 쐍	mee/
 쐎	mex/
 쐏	mew/
-쐐	ms/
+쐐	ms/	100%
 쐑	msy/
 쐒	msf/
 쐓	msv/
@@ -5041,7 +5041,7 @@ use_preset_vocabulary: false
 쐡	msa/
 쐢	msh/
 쐣	msb/
-쐤	msm/
+쐤	msm/	100%
 쐥	msq/
 쐦	msu/
 쐧	msd/
@@ -5049,15 +5049,15 @@ use_preset_vocabulary: false
 쐩	mse/
 쐪	msx/
 쐫	msw/
-쐬	mx/
+쐬	mx/	100%
 쐭	mxy/
 쐮	mxf/
 쐯	mxv/
-쐰	mxl/
+쐰	mxl/	100%
 쐱	mxk/
 쐲	mxg/
 쐳	mxc/
-쐴	mxs/
+쐴	mxs/	100%
 쐵	mxj/
 쐶	mxn/
 쐷	mxr/
@@ -5065,8 +5065,8 @@ use_preset_vocabulary: false
 쐹	mxt/
 쐺	mxi/
 쐻	mwx/
-쐼	mxo/
-쐽	mxa/
+쐼	mxo/	100%
+쐽	mxa/	100%
 쐾	mxh/
 쐿	mxb/
 쑀	mxm/
@@ -5077,7 +5077,7 @@ use_preset_vocabulary: false
 쑅	mxe/
 쑆	mxx/
 쑇	mxw/
-쑈	mm/
+쑈	mm/	100%
 쑉	mmy/
 쑊	mmf/
 쑋	mmv/
@@ -5105,15 +5105,15 @@ use_preset_vocabulary: false
 쑡	mme/
 쑢	mmx/
 쑣	mmw/
-쑤	mt/
-쑥	mty/
+쑤	mt/	100%
+쑥	mty/	100%
 쑦	mtf/
 쑧	mtv/
-쑨	mtl/
+쑨	mtl/	100%
 쑩	mtk/
 쑪	mtg/
 쑫	mtc/
-쑬	mts/
+쑬	mts/	100%
 쑭	mtj/
 쑮	mtn/
 쑯	mtr/
@@ -5121,19 +5121,19 @@ use_preset_vocabulary: false
 쑱	mtt/
 쑲	mti/
 쑳	mwt/
-쑴	mto/
-쑵	mta/
+쑴	mto/	100%
+쑵	mta/	100%
 쑶	mth/
 쑷	mtb/
 쑸	mtm/
-쑹	mtq/
+쑹	mtq/	100%
 쑺	mtu/
 쑻	mtd/
 쑼	mtz/
 쑽	mte/
 쑾	mtx/
 쑿	mtw/
-쒀	ma/
+쒀	ma/	100%
 쒁	may/
 쒂	maf/
 쒃	mav/
@@ -5153,7 +5153,7 @@ use_preset_vocabulary: false
 쒑	maa/
 쒒	mah/
 쒓	mab/
-쒔	mam/
+쒔	mam/	100%
 쒕	maq/
 쒖	mau/
 쒗	mad/
@@ -5161,7 +5161,7 @@ use_preset_vocabulary: false
 쒙	mae/
 쒚	max/
 쒛	maw/
-쒜	mz/
+쒜	mz/	100%
 쒝	mzy/
 쒞	mzf/
 쒟	mzv/
@@ -5189,11 +5189,11 @@ use_preset_vocabulary: false
 쒵	mze/
 쒶	mzx/
 쒷	mzw/
-쒸	md/
+쒸	md/	100%
 쒹	mdy/
 쒺	mdf/
 쒻	mdv/
-쒼	mdl/
+쒼	mdl/	100%
 쒽	mdk/
 쒾	mdg/
 쒿	mdc/
@@ -5238,31 +5238,31 @@ use_preset_vocabulary: false
 쓦	mrh/
 쓧	mrb/
 쓨	mrm/
-쓩	mrq/
+쓩	mrq/	100%
 쓪	mru/
 쓫	mrd/
 쓬	mrz/
 쓭	mre/
 쓮	mrx/
 쓯	mrw/
-쓰	mv/
-쓱	mvy/
+쓰	mv/	100%
+쓱	mvy/	100%
 쓲	mvf/
 쓳	mvv/
-쓴	mvl/
+쓴	mvl/	100%
 쓵	mvk/
 쓶	mvg/
 쓷	mvc/
-쓸	mvs/
+쓸	mvs/	100%
 쓹	mvj/
-쓺	mvn/
+쓺	mvn/	100%
 쓻	mvr/
 쓼	mvp/
 쓽	mvt/
 쓾	mvi/
-쓿	mwv/
-씀	mvo/
-씁	mva/
+쓿	mwv/	100%
+씀	mvo/	100%
+씁	mva/	100%
 씂	mvh/
 씃	mvb/
 씄	mvm/
@@ -5273,15 +5273,15 @@ use_preset_vocabulary: false
 씉	mve/
 씊	mvx/
 씋	mvw/
-씌	ml/
+씌	ml/	100%
 씍	mly/
 씎	mlf/
 씏	mlv/
-씐	mll/
+씐	mll/	100%
 씑	mlk/
 씒	mlg/
 씓	mlc/
-씔	mls/
+씔	mls/	100%
 씕	mlj/
 씖	mln/
 씗	mlr/
@@ -5289,7 +5289,7 @@ use_preset_vocabulary: false
 씙	mlt/
 씚	mli/
 씛	mwl/
-씜	mlo/
+씜	mlo/	100%
 씝	mla/
 씞	mlh/
 씟	mlb/
@@ -5301,15 +5301,15 @@ use_preset_vocabulary: false
 씥	mle/
 씦	mlx/
 씧	mlw/
-씨	mi/
-씩	miy/
+씨	mi/	100%
+씩	miy/	100%
 씪	mif/
 씫	miv/
-씬	mil/
+씬	mil/	100%
 씭	mik/
 씮	mig/
 씯	mic/
-씰	mis/
+씰	mis/	100%
 씱	mij/
 씲	min/
 씳	mir/
@@ -5317,12 +5317,12 @@ use_preset_vocabulary: false
 씵	mit/
 씶	mii/
 씷	mwi/
-씸	mio/
-씹	mia/
+씸	mio/	100%
+씹	mia/	100%
 씺	mih/
-씻	mib/
+씻	mib/	100%
 씼	mim/
-씽	miq/
+씽	miq/	100%
 씾	miu/
 씿	mid/
 앀	miz/
@@ -5332,17 +5332,17 @@ use_preset_vocabulary: false
 #s12
 앆	qkf/
 앇	qkv/
-앉	qkk/
-않	qkg/
-앍	qkj/
-앎	qkn/
+앉	qkk/	100%
+않	qkg/	100%
+앍	qkj/	100%
+앎	qkn/	100%
 앏	qkr/
 앐	qkp/
 앑	qkt/
 앒	qki/
-앓	qwk/
+앓	qwk/	100%
 앖	qkh/
-았	qkm/
+았	qkm/	100%
 앢	qhf/
 앣	qhv/
 앥	qhk/
@@ -5355,29 +5355,29 @@ use_preset_vocabulary: false
 앮	qhi/
 앯	qwh/
 앲	qhh/
-앴	qhm/
+앴	qhm/	100%
 앾	qff/
 앿	qfv/
 얁	qfk/
 얂	qfg/
 얅	qfj/
 얆	qfn/
-얇	qfr/
+얇	qfr/	100%
 얈	qfp/
 얉	qft/
 얊	qfi/
 얋	qwf/
 얎	qfh/
 얐	qfm/
-얘	qo/
+얘	qo/	100%
 얙	qoy/
 얚	qof/
 얛	qov/
-얜	qol/
+얜	qol/	100%
 얝	qok/
 얞	qog/
 얟	qoc/
-얠	qos/
+얠	qos/	100%
 얡	qoj/
 얢	qon/
 얣	qor/
@@ -5386,7 +5386,7 @@ use_preset_vocabulary: false
 얦	qoi/
 얧	qwo/
 얨	qoo/
-얩	qoa/
+얩	qoa/	100%
 얪	qoh/
 얫	qob/
 얬	qom/
@@ -5399,17 +5399,17 @@ use_preset_vocabulary: false
 얳	qow/
 얶	qjf/
 얷	qjv/
-얹	qjk/
+얹	qjk/	100%
 얺	qjg/
-얽	qjj/
-얾	qjn/
+얽	qjj/	100%
+얾	qjn/	100%
 얿	qjr/
 엀	qjp/
 엁	qjt/
 엂	qji/
 엃	qwj/
-없	qjh/
-었	qjm/
+없	qjh/	100%
+었	qjm/	100%
 엒	qpf/
 엓	qpv/
 엕	qpk/
@@ -5423,28 +5423,28 @@ use_preset_vocabulary: false
 엟	qwp/
 엢	qph/
 엤	qpm/
-엮	qgf/
+엮	qgf/	100%
 엯	qgv/
 엱	qgk/
 엲	qgg/
 엵	qgj/
-엶	qgn/
-엷	qgr/
+엶	qgn/	100%
+엷	qgr/	100%
 엸	qgp/
 엹	qgt/
 엺	qgi/
 엻	qwg/
-엾	qgh/
-였	qgm/
-예	qq/
+엾	qgh/	100%
+였	qgm/	100%
+예	qq/	100%
 옉	qqy/
 옊	qqf/
 옋	qqv/
-옌	qql/
+옌	qql/	100%
 옍	qqk/
 옎	qqg/
 옏	qqc/
-옐	qqs/
+옐	qqs/	100%
 옑	qqj/
 옒	qqn/
 옓	qqr/
@@ -5452,11 +5452,11 @@ use_preset_vocabulary: false
 옕	qqt/
 옖	qqi/
 옗	qwq/
-옘	qqo/
-옙	qqa/
+옘	qqo/	100%
+옙	qqa/	100%
 옚	qqh/
-옛	qqb/
-옜	qqm/
+옛	qqb/	100%
+옜	qqm/	100%
 옝	qqq/
 옞	qqu/
 옟	qqd/
@@ -5468,24 +5468,24 @@ use_preset_vocabulary: false
 옧	qnv/
 옩	qnk/
 옪	qng/
-옭	qnj/
-옮	qnn/
+옭	qnj/	100%
+옮	qnn/	100%
 옯	qnr/
-옰	qnp/
+옰	qnp/	100%
 옱	qnt/
 옲	qni/
-옳	qwn/
+옳	qwn/	100%
 옶	qnh/
 옸	qnm/
-와	qe/
-왁	qey/
+와	qe/	100%
+왁	qey/	100%
 왂	qef/
 왃	qev/
-완	qel/
+완	qel/	100%
 왅	qek/
 왆	qeg/
 왇	qec/
-왈	qes/
+왈	qes/	100%
 왉	qej/
 왊	qen/
 왋	qer/
@@ -5493,23 +5493,23 @@ use_preset_vocabulary: false
 왍	qet/
 왎	qei/
 왏	qwe/
-왐	qeo/
-왑	qea/
+왐	qeo/	100%
+왑	qea/	100%
 왒	qeh/
-왓	qeb/
-왔	qem/
-왕	qeq/
+왓	qeb/	100%
+왔	qem/	100%
+왕	qeq/	100%
 왖	qeu/
 왗	qed/
 왘	qez/
 왙	qee/
 왚	qex/
 왛	qew/
-왜	qs/
-왝	qsy/
+왜	qs/	100%
+왝	qsy/	100%
 왞	qsf/
 왟	qsv/
-왠	qsl/
+왠	qsl/	100%
 왡	qsk/
 왢	qsg/
 왣	qsc/
@@ -5521,27 +5521,27 @@ use_preset_vocabulary: false
 왩	qst/
 왪	qsi/
 왫	qws/
-왬	qso/
+왬	qso/	100%
 왭	qsa/
 왮	qsh/
-왯	qsb/
+왯	qsb/	100%
 왰	qsm/
-왱	qsq/
+왱	qsq/	100%
 왲	qsu/
 왳	qsd/
 왴	qsz/
 왵	qse/
 왶	qsx/
 왷	qsw/
-외	qx/
-왹	qxy/
+외	qx/	100%
+왹	qxy/	100%
 왺	qxf/
 왻	qxv/
-왼	qxl/
+왼	qxl/	100%
 왽	qxk/
 왾	qxg/
 왿	qxc/
-욀	qxs/
+욀	qxs/	100%
 욁	qxj/
 욂	qxn/
 욃	qxr/
@@ -5549,12 +5549,12 @@ use_preset_vocabulary: false
 욅	qxt/
 욆	qxi/
 욇	qwx/
-욈	qxo/
-욉	qxa/
+욈	qxo/	100%
+욉	qxa/	100%
 욊	qxh/
-욋	qxb/
+욋	qxb/	100%
 욌	qxm/
-욍	qxq/
+욍	qxq/	100%
 욎	qxu/
 욏	qxd/
 욐	qxz/
@@ -5578,8 +5578,8 @@ use_preset_vocabulary: false
 욳	qtv/
 욵	qtk/
 욶	qtg/
-욹	qtj/
-욺	qtn/
+욹	qtj/	100%
+욺	qtn/	100%
 욻	qtr/
 욼	qtp/
 욽	qtt/
@@ -5587,15 +5587,15 @@ use_preset_vocabulary: false
 욿	qwt/
 웂	qth/
 웄	qtm/
-워	qa/
-웍	qay/
+워	qa/	100%
+웍	qay/	100%
 웎	qaf/
 웏	qav/
-원	qal/
+원	qal/	100%
 웑	qak/
 웒	qag/
 웓	qac/
-월	qas/
+월	qas/	100%
 웕	qaj/
 웖	qan/
 웗	qar/
@@ -5603,27 +5603,27 @@ use_preset_vocabulary: false
 웙	qat/
 웚	qai/
 웛	qwa/
-웜	qao/
-웝	qaa/
+웜	qao/	100%
+웝	qaa/	100%
 웞	qah/
 웟	qab/
-웠	qam/
-웡	qaq/
+웠	qam/	100%
+웡	qaq/	100%
 웢	qau/
 웣	qad/
 웤	qaz/
 웥	qae/
 웦	qax/
 웧	qaw/
-웨	qz/
-웩	qzy/
+웨	qz/	100%
+웩	qzy/	100%
 웪	qzf/
 웫	qzv/
-웬	qzl/
+웬	qzl/	100%
 웭	qzk/
 웮	qzg/
 웯	qzc/
-웰	qzs/
+웰	qzs/	100%
 웱	qzj/
 웲	qzn/
 웳	qzr/
@@ -5631,27 +5631,27 @@ use_preset_vocabulary: false
 웵	qzt/
 웶	qzi/
 웷	qwz/
-웸	qzo/
-웹	qza/
+웸	qzo/	100%
+웹	qza/	100%
 웺	qzh/
 웻	qzb/
 웼	qzm/
-웽	qzq/
+웽	qzq/	100%
 웾	qzu/
 웿	qzd/
 윀	qzz/
 윁	qze/
 윂	qzx/
 윃	qzw/
-위	qd/
-윅	qdy/
+위	qd/	100%
+윅	qdy/	100%
 윆	qdf/
 윇	qdv/
-윈	qdl/
+윈	qdl/	100%
 윉	qdk/
 윊	qdg/
 윋	qdc/
-윌	qds/
+윌	qds/	100%
 윍	qdj/
 윎	qdn/
 윏	qdr/
@@ -5659,12 +5659,12 @@ use_preset_vocabulary: false
 윑	qdt/
 윒	qdi/
 윓	qwd/
-윔	qdo/
-윕	qda/
+윔	qdo/	100%
+윕	qda/	100%
 윖	qdh/
-윗	qdb/
+윗	qdb/	100%
 윘	qdm/
-윙	qdq/
+윙	qdq/	100%
 윚	qdu/
 윛	qdd/
 윜	qdz/
@@ -5693,19 +5693,19 @@ use_preset_vocabulary: false
 읇	qvr/
 읈	qvp/
 읉	qvt/
-읊	qvi/
+읊	qvi/	100%
 읋	qwv/
 읎	qvh/
 읐	qvm/
-의	ql/
+의	ql/	100%
 읙	qly/
 읚	qlf/
 읛	qlv/
-읜	qll/
+읜	qll/	100%
 읝	qlk/
 읞	qlg/
 읟	qlc/
-읠	qls/
+읠	qls/	100%
 읡	qlj/
 읢	qln/
 읣	qlr/
@@ -5713,10 +5713,10 @@ use_preset_vocabulary: false
 읥	qlt/
 읦	qli/
 읧	qwl/
-읨	qlo/
+읨	qlo/	100%
 읩	qla/
 읪	qlh/
-읫	qlb/
+읫	qlb/	100%
 읬	qlm/
 읭	qlq/
 읮	qlu/
@@ -5729,29 +5729,29 @@ use_preset_vocabulary: false
 읷	qiv/
 읹	qik/
 읺	qig/
-읽	qij/
-읾	qin/
+읽	qij/	100%
+읾	qin/	100%
 읿	qir/
 잀	qip/
 잁	qit/
 잂	qii/
-잃	qwi/
+잃	qwi/	100%
 잆	qih/
-있	qim/
+있	qim/	100%
 #s13
 잒	ukf/
 잓	ukv/
 잕	ukk/
-잖	ukg/
+잖	ukg/	100%
 잙	ukj/
-잚	ukn/
+잚	ukn/	100%
 잛	ukr/
 잜	ukp/
 잝	ukt/
 잞	uki/
 잟	uwk/
 잢	ukh/
-잤	ukm/
+잤	ukm/	100%
 잮	uhf/
 잯	uhv/
 잱	uhk/
@@ -5764,11 +5764,11 @@ use_preset_vocabulary: false
 잺	uhi/
 잻	uwh/
 잾	uhh/
-쟀	uhm/
+쟀	uhm/	100%
 쟊	uff/
 쟋	ufv/
 쟍	ufk/
-쟎	ufg/
+쟎	ufg/	100%
 쟑	ufj/
 쟒	ufn/
 쟓	ufr/
@@ -5778,15 +5778,15 @@ use_preset_vocabulary: false
 쟗	uwf/
 쟚	ufh/
 쟜	ufm/
-쟤	uo/
+쟤	uo/	100%
 쟥	uoy/
 쟦	uof/
 쟧	uov/
-쟨	uol/
+쟨	uol/	100%
 쟩	uok/
 쟪	uog/
 쟫	uoc/
-쟬	uos/
+쟬	uos/	100%
 쟭	uoj/
 쟮	uon/
 쟯	uor/
@@ -5811,7 +5811,7 @@ use_preset_vocabulary: false
 젅	ujk/
 젆	ujg/
 젉	ujj/
-젊	ujn/
+젊	ujn/	100%
 젋	ujr/
 젌	ujp/
 젍	ujt/
@@ -5844,8 +5844,8 @@ use_preset_vocabulary: false
 졆	ugi/
 졇	uwg/
 졊	ugh/
-졌	ugm/
-졔	uq/
+졌	ugm/	100%
+졔	uq/	100%
 졕	uqy/
 졖	uqf/
 졗	uqv/
@@ -5878,7 +5878,7 @@ use_preset_vocabulary: false
 졵	unk/
 졶	ung/
 졹	unj/
-졺	unn/
+졺	unn/	100%
 졻	unr/
 졼	unp/
 졽	unt/
@@ -5886,15 +5886,15 @@ use_preset_vocabulary: false
 졿	uwn/
 좂	unh/
 좄	unm/
-좌	ue/
-좍	uey/
+좌	ue/	100%
+좍	uey/	100%
 좎	uef/
 좏	uev/
 좐	uel/
 좑	uek/
 좒	ueg/
 좓	uec/
-좔	ues/
+좔	ues/	100%
 좕	uej/
 좖	uen/
 좗	uer/
@@ -5903,18 +5903,18 @@ use_preset_vocabulary: false
 좚	uei/
 좛	uwe/
 좜	ueo/
-좝	uea/
+좝	uea/	100%
 좞	ueh/
-좟	ueb/
+좟	ueb/	100%
 좠	uem/
-좡	ueq/
+좡	ueq/	100%
 좢	ueu/
 좣	ued/
 좤	uez/
 좥	uee/
 좦	uex/
 좧	uew/
-좨	us/
+좨	us/	100%
 좩	usy/
 좪	usf/
 좫	usv/
@@ -5934,23 +5934,23 @@ use_preset_vocabulary: false
 좹	usa/
 좺	ush/
 좻	usb/
-좼	usm/
-좽	usq/
+좼	usm/	100%
+좽	usq/	100%
 좾	usu/
 좿	usd/
 죀	usz/
 죁	use/
 죂	usx/
 죃	usw/
-죄	ux/
+죄	ux/	100%
 죅	uxy/
 죆	uxf/
 죇	uxv/
-죈	uxl/
+죈	uxl/	100%
 죉	uxk/
 죊	uxg/
 죋	uxc/
-죌	uxs/
+죌	uxs/	100%
 죍	uxj/
 죎	uxn/
 죏	uxr/
@@ -5958,12 +5958,12 @@ use_preset_vocabulary: false
 죑	uxt/
 죒	uxi/
 죓	uwx/
-죔	uxo/
-죕	uxa/
+죔	uxo/	100%
+죕	uxa/	100%
 죖	uxh/
-죗	uxb/
+죗	uxb/	100%
 죘	uxm/
-죙	uxq/
+죙	uxq/	100%
 죚	uxu/
 죛	uxd/
 죜	uxz/
@@ -5987,8 +5987,8 @@ use_preset_vocabulary: false
 죿	utv/
 줁	utk/
 줂	utg/
-줅	utj/
-줆	utn/
+줅	utj/	100%
+줆	utn/	100%
 줇	utr/
 줈	utp/
 줉	utt/
@@ -5996,7 +5996,7 @@ use_preset_vocabulary: false
 줋	uwt/
 줎	uth/
 줐	utm/
-줘	ua/
+줘	ua/	100%
 줙	uay/
 줚	uaf/
 줛	uav/
@@ -6016,7 +6016,7 @@ use_preset_vocabulary: false
 줩	uaa/
 줪	uah/
 줫	uab/
-줬	uam/
+줬	uam/	100%
 줭	uaq/
 줮	uau/
 줯	uad/
@@ -6024,7 +6024,7 @@ use_preset_vocabulary: false
 줱	uae/
 줲	uax/
 줳	uaw/
-줴	uz/
+줴	uz/	100%
 줵	uzy/
 줶	uzf/
 줷	uzv/
@@ -6052,15 +6052,15 @@ use_preset_vocabulary: false
 쥍	uze/
 쥎	uzx/
 쥏	uzw/
-쥐	ud/
-쥑	udy/
+쥐	ud/	100%
+쥑	udy/	100%
 쥒	udf/
 쥓	udv/
-쥔	udl/
+쥔	udl/	100%
 쥕	udk/
 쥖	udg/
 쥗	udc/
-쥘	uds/
+쥘	uds/	100%
 쥙	udj/
 쥚	udn/
 쥛	udr/
@@ -6068,10 +6068,10 @@ use_preset_vocabulary: false
 쥝	udt/
 쥞	udi/
 쥟	uwd/
-쥠	udo/
-쥡	uda/
+쥠	udo/	100%
+쥡	uda/	100%
 쥢	udh/
-쥣	udb/
+쥣	udb/	100%
 쥤	udm/
 쥥	udq/
 쥦	udu/
@@ -6139,7 +6139,7 @@ use_preset_vocabulary: false
 짅	uik/
 짆	uig/
 짉	uij/
-짊	uin/
+짊	uin/	100%
 짋	uir/
 짌	uip/
 짍	uit/
@@ -6148,43 +6148,43 @@ use_preset_vocabulary: false
 짒	uih/
 짔	uim/
 #s14
-짜	kk/
-짝	kky/
+짜	kk/	100%
+짝	kky/	100%
 짞	kkf/
 짟	kkv/
-짠	kkl/
+짠	kkl/	100%
 짡	kkk/
-짢	kkg/
+짢	kkg/	100%
 짣	kkc/
-짤	kks/
+짤	kks/	100%
 짥	kkj/
 짦	kkn/
-짧	kkr/
+짧	kkr/	100%
 짨	kkp/
 짩	kkt/
 짪	kki/
 짫	kwk/
-짬	kko/
-짭	kka/
+짬	kko/	100%
+짭	kka/	100%
 짮	kkh/
-짯	kkb/
-짰	kkm/
-짱	kkq/
+짯	kkb/	100%
+짰	kkm/	100%
+짱	kkq/	100%
 짲	kku/
 짳	kkd/
 짴	kkz/
 짵	kke/
 짶	kkx/
 짷	kkw/
-째	kh/
-짹	khy/
+째	kh/	100%
+짹	khy/	100%
 짺	khf/
 짻	khv/
-짼	khl/
+짼	khl/	100%
 짽	khk/
 짾	khg/
 짿	khc/
-쨀	khs/
+쨀	khs/	100%
 쨁	khj/
 쨂	khn/
 쨃	khr/
@@ -6192,23 +6192,23 @@ use_preset_vocabulary: false
 쨅	kht/
 쨆	khi/
 쨇	kwh/
-쨈	kho/
-쨉	kha/
+쨈	kho/	100%
+쨉	kha/	100%
 쨊	khh/
-쨋	khb/
-쨌	khm/
-쨍	khq/
+쨋	khb/	100%
+쨌	khm/	100%
+쨍	khq/	100%
 쨎	khu/
 쨏	khd/
 쨐	khz/
 쨑	khe/
 쨒	khx/
 쨓	khw/
-쨔	kf/
+쨔	kf/	100%
 쨕	kfy/
 쨖	kff/
 쨗	kfv/
-쨘	kfl/
+쨘	kfl/	100%
 쨙	kfk/
 쨚	kfg/
 쨛	kfc/
@@ -6225,7 +6225,7 @@ use_preset_vocabulary: false
 쨦	kfh/
 쨧	kfb/
 쨨	kfm/
-쨩	kfq/
+쨩	kfq/	100%
 쨪	kfu/
 쨫	kfd/
 쨬	kfz/
@@ -6260,15 +6260,15 @@ use_preset_vocabulary: false
 쩉	koe/
 쩊	kox/
 쩋	kow/
-쩌	kj/
-쩍	kjy/
+쩌	kj/	100%
+쩍	kjy/	100%
 쩎	kjf/
 쩏	kjv/
-쩐	kjl/
+쩐	kjl/	100%
 쩑	kjk/
 쩒	kjg/
 쩓	kjc/
-쩔	kjs/
+쩔	kjs/	100%
 쩕	kjj/
 쩖	kjn/
 쩗	kjr/
@@ -6276,19 +6276,19 @@ use_preset_vocabulary: false
 쩙	kjt/
 쩚	kji/
 쩛	kwj/
-쩜	kjo/
-쩝	kja/
+쩜	kjo/	100%
+쩝	kja/	100%
 쩞	kjh/
-쩟	kjb/
-쩠	kjm/
-쩡	kjq/
+쩟	kjb/	100%
+쩠	kjm/	100%
+쩡	kjq/	100%
 쩢	kju/
 쩣	kjd/
 쩤	kjz/
 쩥	kje/
 쩦	kjx/
 쩧	kjw/
-쩨	kp/
+쩨	kp/	100%
 쩩	kpy/
 쩪	kpf/
 쩫	kpv/
@@ -6309,14 +6309,14 @@ use_preset_vocabulary: false
 쩺	kph/
 쩻	kpb/
 쩼	kpm/
-쩽	kpq/
+쩽	kpq/	100%
 쩾	kpu/
 쩿	kpd/
 쪀	kpz/
 쪁	kpe/
 쪂	kpx/
 쪃	kpw/
-쪄	kg/
+쪄	kg/	100%
 쪅	kgy/
 쪆	kgf/
 쪇	kgv/
@@ -6336,7 +6336,7 @@ use_preset_vocabulary: false
 쪕	kga/
 쪖	kgh/
 쪗	kgb/
-쪘	kgm/
+쪘	kgm/	100%
 쪙	kgq/
 쪚	kgu/
 쪛	kgd/
@@ -6372,15 +6372,15 @@ use_preset_vocabulary: false
 쪹	kqe/
 쪺	kqx/
 쪻	kqw/
-쪼	kn/
-쪽	kny/
+쪼	kn/	100%
+쪽	kny/	100%
 쪾	knf/
 쪿	knv/
-쫀	knl/
+쫀	knl/	100%
 쫁	knk/
 쫂	kng/
 쫃	knc/
-쫄	kns/
+쫄	kns/	100%
 쫅	knj/
 쫆	knn/
 쫇	knr/
@@ -6388,27 +6388,27 @@ use_preset_vocabulary: false
 쫉	knt/
 쫊	kni/
 쫋	kwn/
-쫌	kno/
-쫍	kna/
+쫌	kno/	100%
+쫍	kna/	100%
 쫎	knh/
-쫏	knb/
+쫏	knb/	100%
 쫐	knm/
-쫑	knq/
+쫑	knq/	100%
 쫒	knu/
-쫓	knd/
+쫓	knd/	100%
 쫔	knz/
 쫕	kne/
 쫖	knx/
 쫗	knw/
-쫘	ke/
-쫙	key/
+쫘	ke/	100%
+쫙	key/	100%
 쫚	kef/
 쫛	kev/
 쫜	kel/
 쫝	kek/
 쫞	keg/
 쫟	kec/
-쫠	kes/
+쫠	kes/	100%
 쫡	kej/
 쫢	ken/
 쫣	ker/
@@ -6420,7 +6420,7 @@ use_preset_vocabulary: false
 쫩	kea/
 쫪	keh/
 쫫	keb/
-쫬	kem/
+쫬	kem/	100%
 쫭	keq/
 쫮	keu/
 쫯	ked/
@@ -6428,7 +6428,7 @@ use_preset_vocabulary: false
 쫱	kee/
 쫲	kex/
 쫳	kew/
-쫴	ks/
+쫴	ks/	100%
 쫵	ksy/
 쫶	ksf/
 쫷	ksv/
@@ -6448,7 +6448,7 @@ use_preset_vocabulary: false
 쬅	ksa/
 쬆	ksh/
 쬇	ksb/
-쬈	ksm/
+쬈	ksm/	100%
 쬉	ksq/
 쬊	ksu/
 쬋	ksd/
@@ -6456,15 +6456,15 @@ use_preset_vocabulary: false
 쬍	kse/
 쬎	ksx/
 쬏	ksw/
-쬐	kx/
+쬐	kx/	100%
 쬑	kxy/
 쬒	kxf/
 쬓	kxv/
-쬔	kxl/
+쬔	kxl/	100%
 쬕	kxk/
 쬖	kxg/
 쬗	kxc/
-쬘	kxs/
+쬘	kxs/	100%
 쬙	kxj/
 쬚	kxn/
 쬛	kxr/
@@ -6472,8 +6472,8 @@ use_preset_vocabulary: false
 쬝	kxt/
 쬞	kxi/
 쬟	kwx/
-쬠	kxo/
-쬡	kxa/
+쬠	kxo/	100%
+쬡	kxa/	100%
 쬢	kxh/
 쬣	kxb/
 쬤	kxm/
@@ -6505,22 +6505,22 @@ use_preset_vocabulary: false
 쬾	kmh/
 쬿	kmb/
 쭀	kmm/
-쭁	kmq/
+쭁	kmq/	100%
 쭂	kmu/
 쭃	kmd/
 쭄	kmz/
 쭅	kme/
 쭆	kmx/
 쭇	kmw/
-쭈	kt/
-쭉	kty/
+쭈	kt/	100%
+쭉	kty/	100%
 쭊	ktf/
 쭋	ktv/
-쭌	ktl/
+쭌	ktl/	100%
 쭍	ktk/
 쭎	ktg/
 쭏	ktc/
-쭐	kts/
+쭐	kts/	100%
 쭑	ktj/
 쭒	ktn/
 쭓	ktr/
@@ -6528,19 +6528,19 @@ use_preset_vocabulary: false
 쭕	ktt/
 쭖	kti/
 쭗	kwt/
-쭘	kto/
-쭙	kta/
+쭘	kto/	100%
+쭙	kta/	100%
 쭚	kth/
 쭛	ktb/
 쭜	ktm/
-쭝	ktq/
+쭝	ktq/	100%
 쭞	ktu/
 쭟	ktd/
 쭠	ktz/
 쭡	kte/
 쭢	ktx/
 쭣	ktw/
-쭤	ka/
+쭤	ka/	100%
 쭥	kay/
 쭦	kaf/
 쭧	kav/
@@ -6560,8 +6560,8 @@ use_preset_vocabulary: false
 쭵	kaa/
 쭶	kah/
 쭷	kab/
-쭸	kam/
-쭹	kaq/
+쭸	kam/	100%
+쭹	kaq/	100%
 쭺	kau/
 쭻	kad/
 쭼	kaz/
@@ -6596,7 +6596,7 @@ use_preset_vocabulary: false
 쮙	kze/
 쮚	kzx/
 쮛	kzw/
-쮜	kd/
+쮜	kd/	100%
 쮝	kdy/
 쮞	kdf/
 쮟	kdv/
@@ -6624,7 +6624,7 @@ use_preset_vocabulary: false
 쮵	kde/
 쮶	kdx/
 쮷	kdw/
-쮸	kr/
+쮸	kr/	100%
 쮹	kry/
 쮺	krf/
 쮻	krv/
@@ -6652,7 +6652,7 @@ use_preset_vocabulary: false
 쯑	kre/
 쯒	krx/
 쯓	krw/
-쯔	kv/
+쯔	kv/	100%
 쯕	kvy/
 쯖	kvf/
 쯗	kvv/
@@ -6668,12 +6668,12 @@ use_preset_vocabulary: false
 쯡	kvt/
 쯢	kvi/
 쯣	kwv/
-쯤	kvo/
+쯤	kvo/	100%
 쯥	kva/
 쯦	kvh/
-쯧	kvb/
+쯧	kvb/	100%
 쯨	kvm/
-쯩	kvq/
+쯩	kvq/	100%
 쯪	kvu/
 쯫	kvd/
 쯬	kvz/
@@ -6708,15 +6708,15 @@ use_preset_vocabulary: false
 찉	kle/
 찊	klx/
 찋	klw/
-찌	ki/
-찍	kiy/
+찌	ki/	100%
+찍	kiy/	100%
 찎	kif/
 찏	kiv/
-찐	kil/
+찐	kil/	100%
 찑	kik/
 찒	kig/
 찓	kic/
-찔	kis/
+찔	kis/	100%
 찕	kij/
 찖	kin/
 찗	kir/
@@ -6724,23 +6724,23 @@ use_preset_vocabulary: false
 찙	kit/
 찚	kii/
 찛	kwi/
-찜	kio/
-찝	kia/
+찜	kio/	100%
+찝	kia/	100%
 찞	kih/
 찟	kib/
 찠	kim/
-찡	kiq/
-찢	kiu/
+찡	kiq/	100%
+찢	kiu/	100%
 찣	kid/
 찤	kiz/
 찥	kie/
 찦	kix/
-찧	kiw/
+찧	kiw/	100%
 #s15
 찪	dkf/
 찫	dkv/
 찭	dkk/
-찮	dkg/
+찮	dkg/	100%
 찱	dkj/
 찲	dkn/
 찳	dkr/
@@ -6749,7 +6749,7 @@ use_preset_vocabulary: false
 찶	dki/
 찷	dwk/
 찺	dkh/
-찼	dkm/
+찼	dkm/	100%
 챆	dhf/
 챇	dhv/
 챉	dhk/
@@ -6762,11 +6762,11 @@ use_preset_vocabulary: false
 챒	dhi/
 챓	dwh/
 챖	dhh/
-챘	dhm/
+챘	dhm/	100%
 챢	dff/
 챣	dfv/
 챥	dfk/
-챦	dfg/
+챦	dfg/	100%
 챩	dfj/
 챪	dfn/
 챫	dfr/
@@ -6816,7 +6816,7 @@ use_preset_vocabulary: false
 첦	dji/
 첧	dwj/
 첪	djh/
-첬	djm/
+첬	djm/	100%
 첶	dpf/
 첷	dpv/
 첹	dpk/
@@ -6842,12 +6842,12 @@ use_preset_vocabulary: false
 쳞	dgi/
 쳟	dwg/
 쳢	dgh/
-쳤	dgm/
-쳬	dq/
+쳤	dgm/	100%
+쳬	dq/	100%
 쳭	dqy/
 쳮	dqf/
 쳯	dqv/
-쳰	dql/
+쳰	dql/	100%
 쳱	dqk/
 쳲	dqg/
 쳳	dqc/
@@ -6864,7 +6864,7 @@ use_preset_vocabulary: false
 쳾	dqh/
 쳿	dqb/
 촀	dqm/
-촁	dqq/
+촁	dqq/	100%
 촂	dqu/
 촃	dqd/
 촄	dqz/
@@ -6884,15 +6884,15 @@ use_preset_vocabulary: false
 촗	dwn/
 촚	dnh/
 촜	dnm/
-촤	de/
+촤	de/	100%
 촥	dey/
 촦	def/
 촧	dev/
-촨	del/
+촨	del/	100%
 촩	dek/
 촪	deg/
 촫	dec/
-촬	des/
+촬	des/	100%
 촭	dej/
 촮	den/
 촯	der/
@@ -6905,7 +6905,7 @@ use_preset_vocabulary: false
 촶	deh/
 촷	deb/
 촸	dem/
-촹	deq/
+촹	deq/	100%
 촺	deu/
 촻	ded/
 촼	dez/
@@ -6940,15 +6940,15 @@ use_preset_vocabulary: false
 쵙	dse/
 쵚	dsx/
 쵛	dsw/
-최	dx/
+최	dx/	100%
 쵝	dxy/
 쵞	dxf/
 쵟	dxv/
-쵠	dxl/
+쵠	dxl/	100%
 쵡	dxk/
 쵢	dxg/
 쵣	dxc/
-쵤	dxs/
+쵤	dxs/	100%
 쵥	dxj/
 쵦	dxn/
 쵧	dxr/
@@ -6956,12 +6956,12 @@ use_preset_vocabulary: false
 쵩	dxt/
 쵪	dxi/
 쵫	dwx/
-쵬	dxo/
-쵭	dxa/
+쵬	dxo/	100%
+쵭	dxa/	100%
 쵮	dxh/
-쵯	dxb/
+쵯	dxb/	100%
 쵰	dxm/
-쵱	dxq/
+쵱	dxq/	100%
 쵲	dxu/
 쵳	dxd/
 쵴	dxz/
@@ -6994,7 +6994,7 @@ use_preset_vocabulary: false
 춣	dwt/
 춦	dth/
 춨	dtm/
-춰	da/
+춰	da/	100%
 춱	day/
 춲	daf/
 춳	dav/
@@ -7014,7 +7014,7 @@ use_preset_vocabulary: false
 췁	daa/
 췂	dah/
 췃	dab/
-췄	dam/
+췄	dam/	100%
 췅	daq/
 췆	dau/
 췇	dad/
@@ -7022,11 +7022,11 @@ use_preset_vocabulary: false
 췉	dae/
 췊	dax/
 췋	daw/
-췌	dz/
+췌	dz/	100%
 췍	dzy/
 췎	dzf/
 췏	dzv/
-췐	dzl/
+췐	dzl/	100%
 췑	dzk/
 췒	dzg/
 췓	dzc/
@@ -7050,15 +7050,15 @@ use_preset_vocabulary: false
 췥	dze/
 췦	dzx/
 췧	dzw/
-취	dd/
+취	dd/	100%
 췩	ddy/
 췪	ddf/
 췫	ddv/
-췬	ddl/
+췬	ddl/	100%
 췭	ddk/
 췮	ddg/
 췯	ddc/
-췰	dds/
+췰	dds/	100%
 췱	ddj/
 췲	ddn/
 췳	ddr/
@@ -7066,12 +7066,12 @@ use_preset_vocabulary: false
 췵	ddt/
 췶	ddi/
 췷	dwd/
-췸	ddo/
-췹	dda/
+췸	ddo/	100%
+췹	dda/	100%
 췺	ddh/
-췻	ddb/
+췻	ddb/	100%
 췼	ddm/
-췽	ddq/
+췽	ddq/	100%
 췾	ddu/
 췿	ddd/
 츀	ddz/
@@ -7136,7 +7136,7 @@ use_preset_vocabulary: false
 칛	div/
 칝	dik/
 칞	dig/
-칡	dij/
+칡	dij/	100%
 칢	din/
 칣	dir/
 칤	dip/
@@ -7171,7 +7171,7 @@ use_preset_vocabulary: false
 캞	zhi/
 캟	zwh/
 캢	zhh/
-캤	zhm/
+캤	zhm/	100%
 캮	zff/
 캯	zfv/
 캱	zfk/
@@ -7225,7 +7225,7 @@ use_preset_vocabulary: false
 컲	zji/
 컳	zwj/
 컶	zjh/
-컸	zjm/
+컸	zjm/	100%
 켂	zpf/
 켃	zpv/
 켅	zpk/
@@ -7251,8 +7251,8 @@ use_preset_vocabulary: false
 켪	zgi/
 켫	zwg/
 켮	zgh/
-켰	zgm/
-켸	zq/
+켰	zgm/	100%
+켸	zq/	100%
 켹	zqy/
 켺	zqf/
 켻	zqv/
@@ -7293,15 +7293,15 @@ use_preset_vocabulary: false
 콣	zwn/
 콦	znh/
 콨	znm/
-콰	ze/
-콱	zey/
+콰	ze/	100%
+콱	zey/	100%
 콲	zef/
 콳	zev/
-콴	zel/
+콴	zel/	100%
 콵	zek/
 콶	zeg/
 콷	zec/
-콸	zes/
+콸	zes/	100%
 콹	zej/
 콺	zen/
 콻	zer/
@@ -7309,19 +7309,19 @@ use_preset_vocabulary: false
 콽	zet/
 콾	zei/
 콿	zwe/
-쾀	zeo/
+쾀	zeo/	100%
 쾁	zea/
 쾂	zeh/
 쾃	zeb/
 쾄	zem/
-쾅	zeq/
+쾅	zeq/	100%
 쾆	zeu/
 쾇	zed/
 쾈	zez/
 쾉	zee/
 쾊	zex/
 쾋	zew/
-쾌	zs/
+쾌	zs/	100%
 쾍	zsy/
 쾎	zsf/
 쾏	zsv/
@@ -7342,14 +7342,14 @@ use_preset_vocabulary: false
 쾞	zsh/
 쾟	zsb/
 쾠	zsm/
-쾡	zsq/
+쾡	zsq/	100%
 쾢	zsu/
 쾣	zsd/
 쾤	zsz/
 쾥	zse/
 쾦	zsx/
 쾧	zsw/
-쾨	zx/
+쾨	zx/	100%
 쾩	zxy/
 쾪	zxf/
 쾫	zxv/
@@ -7357,7 +7357,7 @@ use_preset_vocabulary: false
 쾭	zxk/
 쾮	zxg/
 쾯	zxc/
-쾰	zxs/
+쾰	zxs/	100%
 쾱	zxj/
 쾲	zxn/
 쾳	zxr/
@@ -7403,15 +7403,15 @@ use_preset_vocabulary: false
 쿯	zwt/
 쿲	zth/
 쿴	ztm/
-쿼	za/
+쿼	za/	100%
 쿽	zay/
 쿾	zaf/
 쿿	zav/
-퀀	zal/
+퀀	zal/	100%
 퀁	zak/
 퀂	zag/
 퀃	zac/
-퀄	zas/
+퀄	zas/	100%
 퀅	zaj/
 퀆	zan/
 퀇	zar/
@@ -7424,14 +7424,14 @@ use_preset_vocabulary: false
 퀎	zah/
 퀏	zab/
 퀐	zam/
-퀑	zaq/
+퀑	zaq/	100%
 퀒	zau/
 퀓	zad/
 퀔	zaz/
 퀕	zae/
 퀖	zax/
 퀗	zaw/
-퀘	zz/
+퀘	zz/	100%
 퀙	zzy/
 퀚	zzf/
 퀛	zzv/
@@ -7452,22 +7452,22 @@ use_preset_vocabulary: false
 퀪	zzh/
 퀫	zzb/
 퀬	zzm/
-퀭	zzq/
+퀭	zzq/	100%
 퀮	zzu/
 퀯	zzd/
 퀰	zzz/
 퀱	zze/
 퀲	zzx/
 퀳	zzw/
-퀴	zd/
-퀵	zdy/
+퀴	zd/	100%
+퀵	zdy/	100%
 퀶	zdf/
 퀷	zdv/
-퀸	zdl/
+퀸	zdl/	100%
 퀹	zdk/
 퀺	zdg/
 퀻	zdc/
-퀼	zds/
+퀼	zds/	100%
 퀽	zdj/
 퀾	zdn/
 퀿	zdr/
@@ -7475,12 +7475,12 @@ use_preset_vocabulary: false
 큁	zdt/
 큂	zdi/
 큃	zwd/
-큄	zdo/
-큅	zda/
+큄	zdo/	100%
+큅	zda/	100%
 큆	zdh/
-큇	zdb/
+큇	zdb/	100%
 큈	zdm/
-큉	zdq/
+큉	zdq/	100%
 큊	zdu/
 큋	zdd/
 큌	zdz/
@@ -7559,7 +7559,7 @@ use_preset_vocabulary: false
 탃	ekv/
 탅	ekk/
 탆	ekg/
-탉	ekj/
+탉	ekj/	100%
 탊	ekn/
 탋	ekr/
 탌	ekp/
@@ -7567,7 +7567,7 @@ use_preset_vocabulary: false
 탎	eki/
 탏	ewk/
 탒	ekh/
-탔	ekm/
+탔	ekm/	100%
 탞	ehf/
 탟	ehv/
 탡	ehk/
@@ -7580,7 +7580,7 @@ use_preset_vocabulary: false
 탪	ehi/
 탫	ewh/
 탮	ehh/
-탰	ehm/
+탰	ehm/	100%
 탺	eff/
 탻	efv/
 탽	efk/
@@ -7627,14 +7627,14 @@ use_preset_vocabulary: false
 턵	ejk/
 턶	ejg/
 턹	ejj/
-턺	ejn/
+턺	ejn/	100%
 턻	ejr/
 턼	ejp/
 턽	ejt/
 턾	eji/
 턿	ewj/
 텂	ejh/
-텄	ejm/
+텄	ejm/	100%
 텎	epf/
 텏	epv/
 텑	epk/
@@ -7660,12 +7660,12 @@ use_preset_vocabulary: false
 텶	egi/
 텷	ewg/
 텺	egh/
-텼	egm/
-톄	eq/
+텼	egm/	100%
+톄	eq/	100%
 톅	eqy/
 톆	eqf/
 톇	eqv/
-톈	eql/
+톈	eql/	100%
 톉	eqk/
 톊	eqg/
 톋	eqc/
@@ -7702,11 +7702,11 @@ use_preset_vocabulary: false
 톯	ewn/
 톲	enh/
 톴	enm/
-톼	ee/
+톼	ee/	100%
 톽	eey/
 톾	eef/
 톿	eev/
-퇀	eel/
+퇀	eel/	100%
 퇁	eek/
 퇂	eeg/
 퇃	eec/
@@ -7730,7 +7730,7 @@ use_preset_vocabulary: false
 퇕	eee/
 퇖	eex/
 퇗	eew/
-퇘	es/
+퇘	es/	100%
 퇙	esy/
 퇚	esf/
 퇛	esv/
@@ -7758,11 +7758,11 @@ use_preset_vocabulary: false
 퇱	ese/
 퇲	esx/
 퇳	esw/
-퇴	ex/
+퇴	ex/	100%
 퇵	exy/
 퇶	exf/
 퇷	exv/
-퇸	exl/
+퇸	exl/	100%
 퇹	exk/
 퇺	exg/
 퇻	exc/
@@ -7777,9 +7777,9 @@ use_preset_vocabulary: false
 툄	exo/
 툅	exa/
 툆	exh/
-툇	exb/
+툇	exb/	100%
 툈	exm/
-툉	exq/
+툉	exq/	100%
 툊	exu/
 툋	exd/
 툌	exz/
@@ -7812,7 +7812,7 @@ use_preset_vocabulary: false
 툻	ewt/
 툾	eth/
 퉀	etm/
-퉈	ea/
+퉈	ea/	100%
 퉉	eay/
 퉊	eaf/
 퉋	eav/
@@ -7832,7 +7832,7 @@ use_preset_vocabulary: false
 퉙	eaa/
 퉚	eah/
 퉛	eab/
-퉜	eam/
+퉜	eam/	100%
 퉝	eaq/
 퉞	eau/
 퉟	ead/
@@ -7840,7 +7840,7 @@ use_preset_vocabulary: false
 퉡	eae/
 퉢	eax/
 퉣	eaw/
-퉤	ez/
+퉤	ez/	100%
 퉥	ezy/
 퉦	ezf/
 퉧	ezv/
@@ -7868,15 +7868,15 @@ use_preset_vocabulary: false
 퉽	eze/
 퉾	ezx/
 퉿	ezw/
-튀	ed/
-튁	edy/
+튀	ed/	100%
+튁	edy/	100%
 튂	edf/
 튃	edv/
-튄	edl/
+튄	edl/	100%
 튅	edk/
 튆	edg/
 튇	edc/
-튈	eds/
+튈	eds/	100%
 튉	edj/
 튊	edn/
 튋	edr/
@@ -7884,12 +7884,12 @@ use_preset_vocabulary: false
 튍	edt/
 튎	edi/
 튏	ewd/
-튐	edo/
-튑	eda/
+튐	edo/	100%
+튑	eda/	100%
 튒	edh/
 튓	edb/
 튔	edm/
-튕	edq/
+튕	edq/	100%
 튖	edu/
 튗	edd/
 튘	edz/
@@ -7914,7 +7914,7 @@ use_preset_vocabulary: false
 튽	evk/
 튾	evg/
 틁	evj/
-틂	evn/
+틂	evn/	100%
 틃	evr/
 틄	evp/
 틅	evt/
@@ -7922,15 +7922,15 @@ use_preset_vocabulary: false
 틇	ewv/
 틊	evh/
 틌	evm/
-틔	el/
+틔	el/	100%
 틕	ely/
 틖	elf/
 틗	elv/
-틘	ell/
+틘	ell/	100%
 틙	elk/
 틚	elg/
 틛	elc/
-틜	els/
+틜	els/	100%
 틝	elj/
 틞	eln/
 틟	elr/
@@ -7938,8 +7938,8 @@ use_preset_vocabulary: false
 틡	elt/
 틢	eli/
 틣	ewl/
-틤	elo/
-틥	ela/
+틤	elo/	100%
+틥	ela/	100%
 틦	elh/
 틧	elb/
 틨	elm/
@@ -7964,19 +7964,19 @@ use_preset_vocabulary: false
 팂	eih/
 팄	eim/
 #s18
-팎	xkf/
+팎	xkf/	100%
 팏	xkv/
 팑	xkk/
 팒	xkg/
 팕	xkj/
-팖	xkn/
+팖	xkn/	100%
 팗	xkr/
 팘	xkp/
 팙	xkt/
 팚	xki/
 팛	xwk/
 팞	xkh/
-팠	xkm/
+팠	xkm/	100%
 팪	xhf/
 팫	xhv/
 팭	xhk/
@@ -7989,7 +7989,7 @@ use_preset_vocabulary: false
 팶	xhi/
 팷	xwh/
 팺	xhh/
-팼	xhm/
+팼	xhm/	100%
 퍆	xff/
 퍇	xfv/
 퍉	xfk/
@@ -8043,7 +8043,7 @@ use_preset_vocabulary: false
 펊	xji/
 펋	xwj/
 펎	xjh/
-펐	xjm/
+펐	xjm/	100%
 펚	xpf/
 펛	xpv/
 펝	xpk/
@@ -8069,8 +8069,8 @@ use_preset_vocabulary: false
 폂	xgi/
 폃	xwg/
 폆	xgh/
-폈	xgm/
-폐	xq/
+폈	xgm/	100%
+폐	xq/	100%
 폑	xqy/
 폒	xqf/
 폓	xqv/
@@ -8078,7 +8078,7 @@ use_preset_vocabulary: false
 폕	xqk/
 폖	xqg/
 폗	xqc/
-폘	xqs/
+폘	xqs/	100%
 폙	xqj/
 폚	xqn/
 폛	xqr/
@@ -8087,9 +8087,9 @@ use_preset_vocabulary: false
 폞	xqi/
 폟	xwq/
 폠	xqo/
-폡	xqa/
+폡	xqa/	100%
 폢	xqh/
-폣	xqb/
+폣	xqb/	100%
 폤	xqm/
 폥	xqq/
 폦	xqu/
@@ -8111,7 +8111,7 @@ use_preset_vocabulary: false
 폻	xwn/
 폾	xnh/
 퐀	xnm/
-퐈	xe/
+퐈	xe/	100%
 퐉	xey/
 퐊	xef/
 퐋	xev/
@@ -8132,7 +8132,7 @@ use_preset_vocabulary: false
 퐚	xeh/
 퐛	xeb/
 퐜	xem/
-퐝	xeq/
+퐝	xeq/	100%
 퐞	xeu/
 퐟	xed/
 퐠	xez/
@@ -8167,11 +8167,11 @@ use_preset_vocabulary: false
 퐽	xse/
 퐾	xsx/
 퐿	xsw/
-푀	xx/
+푀	xx/	100%
 푁	xxy/
 푂	xxf/
 푃	xxv/
-푄	xxl/
+푄	xxl/	100%
 푅	xxk/
 푆	xxg/
 푇	xxc/
@@ -8213,7 +8213,7 @@ use_preset_vocabulary: false
 푽	xtk/
 푾	xtg/
 풁	xtj/
-풂	xtn/
+풂	xtn/	100%
 풃	xtr/
 풄	xtp/
 풅	xtt/
@@ -8221,7 +8221,7 @@ use_preset_vocabulary: false
 풇	xwt/
 풊	xth/
 풌	xtm/
-풔	xa/
+풔	xa/	100%
 풕	xay/
 풖	xaf/
 풗	xav/
@@ -8242,7 +8242,7 @@ use_preset_vocabulary: false
 풦	xah/
 풧	xab/
 풨	xam/
-풩	xaq/
+풩	xaq/	100%
 풪	xau/
 풫	xad/
 풬	xaz/
@@ -8277,15 +8277,15 @@ use_preset_vocabulary: false
 퓉	xze/
 퓊	xzx/
 퓋	xzw/
-퓌	xd/
+퓌	xd/	100%
 퓍	xdy/
 퓎	xdf/
 퓏	xdv/
-퓐	xdl/
+퓐	xdl/	100%
 퓑	xdk/
 퓒	xdg/
 퓓	xdc/
-퓔	xds/
+퓔	xds/	100%
 퓕	xdj/
 퓖	xdn/
 퓗	xdr/
@@ -8293,10 +8293,10 @@ use_preset_vocabulary: false
 퓙	xdt/
 퓚	xdi/
 퓛	xwd/
-퓜	xdo/
+퓜	xdo/	100%
 퓝	xda/
 퓞	xdh/
-퓟	xdb/
+퓟	xdb/	100%
 퓠	xdm/
 퓡	xdq/
 퓢	xdu/
@@ -8381,7 +8381,7 @@ use_preset_vocabulary: false
 핢	wkn/
 핣	wkr/
 핤	wkp/
-핥	wkt/
+핥	wkt/	100%
 핦	wki/
 핧	wwk/
 핪	wkh/
@@ -8398,7 +8398,7 @@ use_preset_vocabulary: false
 햂	whi/
 햃	wwh/
 햆	whh/
-했	whm/
+했	whm/	100%
 햒	wff/
 햓	wfv/
 햕	wfk/
@@ -8445,7 +8445,7 @@ use_preset_vocabulary: false
 헍	wjk/
 헎	wjg/
 헑	wjj/
-헒	wjn/
+헒	wjn/	100%
 헓	wjr/
 헔	wjp/
 헕	wjt/
@@ -8478,16 +8478,16 @@ use_preset_vocabulary: false
 혎	wgi/
 혏	wwg/
 혒	wgh/
-혔	wgm/
-혜	wq/
+혔	wgm/	100%
+혜	wq/	100%
 혝	wqy/
 혞	wqf/
 혟	wqv/
-혠	wql/
+혠	wql/	100%
 혡	wqk/
 혢	wqg/
 혣	wqc/
-혤	wqs/
+혤	wqs/	100%
 혥	wqj/
 혦	wqn/
 혧	wqr/
@@ -8496,7 +8496,7 @@ use_preset_vocabulary: false
 혪	wqi/
 혫	wwq/
 혬	wqo/
-혭	wqa/
+혭	wqa/	100%
 혮	wqh/
 혯	wqb/
 혰	wqm/
@@ -8515,20 +8515,20 @@ use_preset_vocabulary: false
 홂	wnn/
 홃	wnr/
 홄	wnp/
-홅	wnt/
+홅	wnt/	100%
 홆	wni/
 홇	wwn/
 홊	wnh/
 홌	wnm/
-화	we/
-확	wey/
+화	we/	100%
+확	wey/	100%
 홖	wef/
 홗	wev/
-환	wel/
+환	wel/	100%
 홙	wek/
 홚	weg/
 홛	wec/
-활	wes/
+활	wes/	100%
 홝	wej/
 홞	wen/
 홟	wer/
@@ -8539,20 +8539,20 @@ use_preset_vocabulary: false
 홤	weo/
 홥	wea/
 홦	weh/
-홧	web/
+홧	web/	100%
 홨	wem/
-황	weq/
+황	weq/	100%
 홪	weu/
 홫	wed/
 홬	wez/
 홭	wee/
 홮	wex/
 홯	wew/
-홰	ws/
-홱	wsy/
+홰	ws/	100%
+홱	wsy/	100%
 홲	wsf/
 홳	wsv/
-홴	wsl/
+홴	wsl/	100%
 홵	wsk/
 홶	wsg/
 홷	wsc/
@@ -8567,24 +8567,24 @@ use_preset_vocabulary: false
 횀	wso/
 횁	wsa/
 횂	wsh/
-횃	wsb/
+횃	wsb/	100%
 횄	wsm/
-횅	wsq/
+횅	wsq/	100%
 횆	wsu/
 횇	wsd/
 횈	wsz/
 횉	wse/
 횊	wsx/
 횋	wsw/
-회	wx/
-획	wxy/
+회	wx/	100%
+획	wxy/	100%
 횎	wxf/
 횏	wxv/
-횐	wxl/
+횐	wxl/	100%
 횑	wxk/
 횒	wxg/
 횓	wxc/
-횔	wxs/
+횔	wxs/	100%
 횕	wxj/
 횖	wxn/
 횗	wxr/
@@ -8593,11 +8593,11 @@ use_preset_vocabulary: false
 횚	wxi/
 횛	wwx/
 횜	wxo/
-횝	wxa/
+횝	wxa/	100%
 횞	wxh/
-횟	wxb/
+횟	wxb/	100%
 횠	wxm/
-횡	wxq/
+횡	wxq/	100%
 횢	wxu/
 횣	wxd/
 횤	wxz/
@@ -8625,20 +8625,20 @@ use_preset_vocabulary: false
 훎	wtn/
 훏	wtr/
 훐	wtp/
-훑	wtt/
+훑	wtt/	100%
 훒	wti/
 훓	wwt/
 훖	wth/
 훘	wtm/
-훠	wa/
+훠	wa/	100%
 훡	way/
 훢	waf/
 훣	wav/
-훤	wal/
+훤	wal/	100%
 훥	wak/
 훦	wag/
 훧	wac/
-훨	was/
+훨	was/	100%
 훩	waj/
 훪	wan/
 훫	war/
@@ -8646,27 +8646,27 @@ use_preset_vocabulary: false
 훭	wat/
 훮	wai/
 훯	wwa/
-훰	wao/
+훰	wao/	100%
 훱	waa/
 훲	wah/
 훳	wab/
 훴	wam/
-훵	waq/
+훵	waq/	100%
 훶	wau/
 훷	wad/
 훸	waz/
 훹	wae/
 훺	wax/
 훻	waw/
-훼	wz/
-훽	wzy/
+훼	wz/	100%
+훽	wzy/	100%
 훾	wzf/
 훿	wzv/
-휀	wzl/
+휀	wzl/	100%
 휁	wzk/
 휂	wzg/
 휃	wzc/
-휄	wzs/
+휄	wzs/	100%
 휅	wzj/
 휆	wzn/
 휇	wzr/
@@ -8679,22 +8679,22 @@ use_preset_vocabulary: false
 휎	wzh/
 휏	wzb/
 휐	wzm/
-휑	wzq/
+휑	wzq/	100%
 휒	wzu/
 휓	wzd/
 휔	wzz/
 휕	wze/
 휖	wzx/
 휗	wzw/
-휘	wd/
-휙	wdy/
+휘	wd/	100%
+휙	wdy/	100%
 휚	wdf/
 휛	wdv/
-휜	wdl/
+휜	wdl/	100%
 휝	wdk/
 휞	wdg/
 휟	wdc/
-휠	wds/
+휠	wds/	100%
 휡	wdj/
 휢	wdn/
 휣	wdr/
@@ -8702,12 +8702,12 @@ use_preset_vocabulary: false
 휥	wdt/
 휦	wdi/
 휧	wwd/
-휨	wdo/
-휩	wda/
+휨	wdo/	100%
+휩	wda/	100%
 휪	wdh/
-휫	wdb/
+휫	wdb/	100%
 휬	wdm/
-휭	wdq/
+휭	wdq/	100%
 휮	wdu/
 휯	wdd/
 휰	wdz/
@@ -8730,8 +8730,8 @@ use_preset_vocabulary: false
 흒	wvf/
 흓	wvv/
 흕	wvk/
-흖	wvg/
-흙	wvj/
+흖	wvg/	100%
+흙	wvj/	100%
 흚	wvn/
 흛	wvr/
 흜	wvp/
@@ -8740,15 +8740,15 @@ use_preset_vocabulary: false
 흟	wwv/
 흢	wvh/
 흤	wvm/
-희	wl/
+희	wl/	100%
 흭	wly/
 흮	wlf/
 흯	wlv/
-흰	wll/
+흰	wll/	100%
 흱	wlk/
 흲	wlg/
 흳	wlc/
-흴	wls/
+흴	wls/	100%
 흵	wlj/
 흶	wln/
 흷	wlr/
@@ -8756,12 +8756,12 @@ use_preset_vocabulary: false
 흹	wlt/
 흺	wli/
 흻	wwl/
-흼	wlo/
-흽	wla/
+흼	wlo/	100%
+흽	wla/	100%
 흾	wlh/
 흿	wlb/
 힀	wlm/
-힁	wlq/
+힁	wlq/	100%
 힂	wlu/
 힃	wld/
 힄	wlz/
@@ -8784,43 +8784,43 @@ use_preset_vocabulary: false
 ### 諺文使用簡根結束 ###
 ### 諺文正碼啟始 ###
 #2
-가	yk/
-각	yky/
+가	yk/	100%
+각	yky/	100%
 갂	ykyy/
 갃	ykyb/
-간	ykl/
+간	ykl/	100%
 갅	yklu/
 갆	yklw/
-갇	ykc/
-갈	yks/
-갉	yksy/
-갊	ykso/
+갇	ykc/	100%
+갈	yks/	100%
+갉	yksy/	100%
+갊	ykso/	100%
 갋	yksa/
 갌	yksb/
 갍	ykse/
 갎	yksx/
 갏	yksw/
-감	yko/
-갑	yka/
-값	ykab/
-갓	ykb/
-갔	ykbb/
-강	ykq/
-갖	yku/
-갗	ykd/
+감	yko/	100%
+갑	yka/	100%
+값	ykab/	100%
+갓	ykb/	100%
+갔	ykbb/	100%
+강	ykq/	100%
+갖	yku/	100%
+갗	ykd/	100%
 갘	ykz/
-같	yke/
-갚	ykx/
-갛	ykw/
-개	yh/
-객	yhy/
+같	yke/	100%
+갚	ykx/	100%
+갛	ykw/	100%
+개	yh/	100%
+객	yhy/	100%
 갞	yhyy/
 갟	yhyb/
-갠	yhl/
+갠	yhl/	100%
 갡	yhlu/
 갢	yhlw/
 갣	yhc/
-갤	yhs/
+갤	yhs/	100%
 갥	yhsy/
 갦	yhso/
 갧	yhsa/
@@ -8828,27 +8828,27 @@ use_preset_vocabulary: false
 갩	yhse/
 갪	yhsx/
 갫	yhsw/
-갬	yho/
-갭	yha/
+갬	yho/	100%
+갭	yha/	100%
 갮	yhab/
-갯	yhb/
-갰	yhbb/
-갱	yhq/
+갯	yhb/	100%
+갰	yhbb/	100%
+갱	yhq/	100%
 갲	yhu/
 갳	yhd/
 갴	yhz/
 갵	yhe/
 갶	yhx/
 갷	yhw/
-갸	yf/
-갹	yfy/
+갸	yf/	100%
+갹	yfy/	100%
 갺	yfyy/
 갻	yfyb/
-갼	yfl/
+갼	yfl/	100%
 갽	yflu/
 갾	yflw/
 갿	yfc/
-걀	yfs/
+걀	yfs/	100%
 걁	yfsy/
 걂	yfso/
 걃	yfsa/
@@ -8859,24 +8859,24 @@ use_preset_vocabulary: false
 걈	yfo/
 걉	yfa/
 걊	yfab/
-걋	yfb/
+걋	yfb/	100%
 걌	yfbb/
-걍	yfq/
+걍	yfq/	100%
 걎	yfu/
 걏	yfd/
 걐	yfz/
 걑	yfe/
 걒	yfx/
 걓	yfw/
-걔	yhh/
+걔	yhh/	100%
 걕	yhhy/
 걖	yhhyy/
 걗	yhhyb/
-걘	yhhl/
+걘	yhhl/	100%
 걙	yhhlu/
 걚	yhhlw/
 걛	yhhc/
-걜	yhhs/
+걜	yhhs/	100%
 걝	yhhsy/
 걞	yhhso/
 걟	yhhsa/
@@ -8896,43 +8896,43 @@ use_preset_vocabulary: false
 걭	yhhe/
 걮	yhhx/
 걯	yhhw/
-거	yj/
-걱	yjy/
+거	yj/	100%
+걱	yjy/	100%
 걲	yjyy/
 걳	yjyb/
-건	yjl/
+건	yjl/	100%
 걵	yjlu/
 걶	yjlw/
-걷	yjc/
-걸	yjs/
+걷	yjc/	100%
+걸	yjs/	100%
 걹	yjsy/
-걺	yjso/
+걺	yjso/	100%
 걻	yjsa/
 걼	yjsb/
 걽	yjse/
 걾	yjsx/
 걿	yjsw/
-검	yjo/
-겁	yja/
+검	yjo/	100%
+겁	yja/	100%
 겂	yjab/
-것	yjb/
-겄	yjbb/
-겅	yjq/
-겆	yju/
+것	yjb/	100%
+겄	yjbb/	100%
+겅	yjq/	100%
+겆	yju/	100%
 겇	yjd/
 겈	yjz/
-겉	yje/
-겊	yjx/
-겋	yjw/
-게	yp/
+겉	yje/	100%
+겊	yjx/	100%
+겋	yjw/	100%
+게	yp/	100%
 겍	ypy/
 겎	ypyy/
 겏	ypyb/
-겐	ypl/
+겐	ypl/	100%
 겑	yplu/
 겒	yplw/
 겓	ypc/
-겔	yps/
+겔	yps/	100%
 겕	ypsy/
 겖	ypso/
 겗	ypsa/
@@ -8940,27 +8940,27 @@ use_preset_vocabulary: false
 겙	ypse/
 겚	ypsx/
 겛	ypsw/
-겜	ypo/
-겝	ypa/
+겜	ypo/	100%
+겝	ypa/	100%
 겞	ypab/
-겟	ypb/
-겠	ypbb/
-겡	ypq/
+겟	ypb/	100%
+겠	ypbb/	100%
+겡	ypq/	100%
 겢	ypu/
 겣	ypd/
 겤	ypz/
 겥	ype/
 겦	ypx/
 겧	ypw/
-겨	yg/
-격	ygy/
-겪	ygyy/
+겨	yg/	100%
+격	ygy/	100%
+겪	ygyy/	100%
 겫	ygyb/
-견	ygl/
+견	ygl/	100%
 겭	yglu/
 겮	yglw/
-겯	ygc/
-결	ygs/
+겯	ygc/	100%
+결	ygs/	100%
 겱	ygsy/
 겲	ygso/
 겳	ygsa/
@@ -8968,27 +8968,27 @@ use_preset_vocabulary: false
 겵	ygse/
 겶	ygsx/
 겷	ygsw/
-겸	ygo/
-겹	yga/
+겸	ygo/	100%
+겹	yga/	100%
 겺	ygab/
-겻	ygb/
-겼	ygbb/
-경	ygq/
+겻	ygb/	100%
+겼	ygbb/	100%
+경	ygq/	100%
 겾	ygu/
 겿	ygd/
 곀	ygz/
-곁	yge/
+곁	yge/	100%
 곂	ygx/
 곃	ygw/
-계	ypp/
+계	ypp/	100%
 곅	yppy/
 곆	yppyy/
 곇	yppyb/
-곈	yppl/
+곈	yppl/	100%
 곉	ypplu/
 곊	ypplw/
 곋	yppc/
-곌	ypps/
+곌	ypps/	100%
 곍	yppsy/
 곎	yppso/
 곏	yppsa/
@@ -8997,9 +8997,9 @@ use_preset_vocabulary: false
 곒	yppsx/
 곓	yppsw/
 곔	yppo/
-곕	yppa/
+곕	yppa/	100%
 곖	yppab/
-곗	yppb/
+곗	yppb/	100%
 곘	yppbb/
 곙	yppq/
 곚	yppu/
@@ -9008,72 +9008,72 @@ use_preset_vocabulary: false
 곝	yppe/
 곞	yppx/
 곟	yppw/
-고	yn/
-곡	yny/
+고	yn/	100%
+곡	yny/	100%
 곢	ynyy/
 곣	ynyb/
-곤	ynl/
+곤	ynl/	100%
 곥	ynlu/
 곦	ynlw/
-곧	ync/
-골	yns/
+곧	ync/	100%
+골	yns/	100%
 곩	ynsy/
-곪	ynso/
+곪	ynso/	100%
 곫	ynsa/
-곬	ynsb/
+곬	ynsb/	100%
 곭	ynse/
 곮	ynsx/
-곯	ynsw/
-곰	yno/
-곱	yna/
+곯	ynsw/	100%
+곰	yno/	100%
+곱	yna/	100%
 곲	ynab/
-곳	ynb/
+곳	ynb/	100%
 곴	ynbb/
-공	ynq/
-곶	ynu/
+공	ynq/	100%
+곶	ynu/	100%
 곷	ynd/
 곸	ynz/
 곹	yne/
 곺	ynx/
 곻	ynw/
-과	ynk/
-곽	ynky/
+과	ynk/	100%
+곽	ynky/	100%
 곾	ynkyy/
 곿	ynkyb/
 #3
-관	ynkl/
+관	ynkl/	100%
 괁	ynklu/
 괂	ynklw/
 괃	ynkc/
-괄	ynks/
+괄	ynks/	100%
 괅	ynksy/
-괆	ynkso/
+괆	ynkso/	100%
 괇	ynksa/
 괈	ynksb/
 괉	ynkse/
 괊	ynksx/
 괋	ynksw/
-괌	ynko/
-괍	ynka/
+괌	ynko/	100%
+괍	ynka/	100%
 괎	ynkab/
-괏	ynkb/
+괏	ynkb/	100%
 괐	ynkbb/
-광	ynkq/
+광	ynkq/	100%
 괒	ynku/
 괓	ynkd/
 괔	ynkz/
 괕	ynke/
 괖	ynkx/
 괗	ynkw/
-괘	ynh/
+괘	ynh/	100%
 괙	ynhy/
 괚	ynhyy/
 괛	ynhyb/
-괜	ynhl/
+괜	ynhl/	100%
 괝	ynhlu/
 괞	ynhlw/
 괟	ynhc/
-괠	ynhs/
+괠	ynhs/	100%
 괡	ynhsy/
 괢	ynhso/
 괣	ynhsa/
@@ -9082,26 +9082,26 @@ use_preset_vocabulary: false
 괦	ynhsx/
 괧	ynhsw/
 괨	ynho/
-괩	ynha/
+괩	ynha/	100%
 괪	ynhab/
 괫	ynhb/
-괬	ynhbb/
-괭	ynhq/
+괬	ynhbb/	100%
+괭	ynhq/	100%
 괮	ynhu/
 괯	ynhd/
 괰	ynhz/
 괱	ynhe/
 괲	ynhx/
 괳	ynhw/
-괴	yni/
-괵	yniy/
+괴	yni/	100%
+괵	yniy/	100%
 괶	yniyy/
 괷	yniyb/
-괸	ynil/
+괸	ynil/	100%
 괹	ynilu/
 괺	ynilw/
 괻	ynic/
-괼	ynis/
+괼	ynis/	100%
 괽	ynisy/
 괾	yniso/
 괿	ynisa/
@@ -9109,27 +9109,27 @@ use_preset_vocabulary: false
 굁	ynise/
 굂	ynisx/
 굃	ynisw/
-굄	ynio/
-굅	ynia/
+굄	ynio/	100%
+굅	ynia/	100%
 굆	yniab/
-굇	ynib/
+굇	ynib/	100%
 굈	ynibb/
-굉	yniq/
+굉	yniq/	100%
 굊	yniu/
 굋	ynid/
 굌	yniz/
 굍	ynie/
 굎	ynix/
 굏	yniw/
-교	ym/
+교	ym/	100%
 굑	ymy/
 굒	ymyy/
 굓	ymyb/
-굔	yml/
+굔	yml/	100%
 굕	ymlu/
 굖	ymlw/
 굗	ymc/
-굘	yms/
+굘	yms/	100%
 굙	ymsy/
 굚	ymso/
 굛	ymsa/
@@ -9138,9 +9138,9 @@ use_preset_vocabulary: false
 굞	ymsx/
 굟	ymsw/
 굠	ymo/
-굡	yma/
+굡	yma/	100%
 굢	ymab/
-굣	ymb/
+굣	ymb/	100%
 굤	ymbb/
 굥	ymq/
 굦	ymu/
@@ -9149,43 +9149,43 @@ use_preset_vocabulary: false
 굩	yme/
 굪	ymx/
 굫	ymw/
-구	yt/
-국	yty/
+구	yt/	100%
+국	yty/	100%
 굮	ytyy/
 굯	ytyb/
-군	ytl/
+군	ytl/	100%
 굱	ytlu/
 굲	ytlw/
-굳	ytc/
-굴	yts/
-굵	ytsy/
-굶	ytso/
+굳	ytc/	100%
+굴	yts/	100%
+굵	ytsy/	100%
+굶	ytso/	100%
 굷	ytsa/
 굸	ytsb/
 굹	ytse/
 굺	ytsx/
-굻	ytsw/
-굼	yto/
-굽	yta/
+굻	ytsw/	100%
+굼	yto/	100%
+굽	yta/	100%
 굾	ytab/
-굿	ytb/
+굿	ytb/	100%
 궀	ytbb/
-궁	ytq/
-궂	ytu/
+궁	ytq/	100%
+궂	ytu/	100%
 궃	ytd/
 궄	ytz/
 궅	yte/
 궆	ytx/
 궇	ytw/
-궈	ytj/
-궉	ytjy/
+궈	ytj/	100%
+궉	ytjy/	100%
 궊	ytjyy/
 궋	ytjyb/
-권	ytjl/
+권	ytjl/	100%
 궍	ytjlu/
 궎	ytjlw/
 궏	ytjc/
-궐	ytjs/
+궐	ytjs/	100%
 궑	ytjsy/
 궒	ytjso/
 궓	ytjsa/
@@ -9197,15 +9197,15 @@ use_preset_vocabulary: false
 궙	ytja/
 궚	ytjab/
 궛	ytjb/
-궜	ytjbb/
-궝	ytjq/
+궜	ytjbb/	100%
+궝	ytjq/	100%
 궞	ytju/
 궟	ytjd/
 궠	ytjz/
 궡	ytje/
 궢	ytjx/
 궣	ytjw/
-궤	ytp/
+궤	ytp/	100%
 궥	ytpy/
 궦	ytpyy/
 궧	ytpyb/
@@ -9224,7 +9224,7 @@ use_preset_vocabulary: false
 궴	ytpo/
 궵	ytpa/
 궶	ytpab/
-궷	ytpb/
+궷	ytpb/	100%
 궸	ytpbb/
 궹	ytpq/
 궺	ytpu/
@@ -9233,15 +9233,15 @@ use_preset_vocabulary: false
 궽	ytpe/
 궾	ytpx/
 궿	ytpw/
-귀	yti/
-귁	ytiy/
+귀	yti/	100%
+귁	ytiy/	100%
 귂	ytiyy/
 귃	ytiyb/
-귄	ytil/
+귄	ytil/	100%
 귅	ytilu/
 귆	ytilw/
 귇	ytic/
-귈	ytis/
+귈	ytis/	100%
 귉	ytisy/
 귊	ytiso/
 귋	ytisa/
@@ -9249,10 +9249,10 @@ use_preset_vocabulary: false
 귍	ytise/
 귎	ytisx/
 귏	ytisw/
-귐	ytio/
-귑	ytia/
+귐	ytio/	100%
+귑	ytia/	100%
 귒	ytiab/
-귓	ytib/
+귓	ytib/	100%
 귔	ytibb/
 귕	ytiq/
 귖	ytiu/
@@ -9261,15 +9261,15 @@ use_preset_vocabulary: false
 귙	ytie/
 귚	ytix/
 귛	ytiw/
-규	yr/
+규	yr/	100%
 귝	yry/
 귞	yryy/
 귟	yryb/
-균	yrl/
+균	yrl/	100%
 귡	yrlu/
 귢	yrlw/
 귣	yrc/
-귤	yrs/
+귤	yrs/	100%
 귥	yrsy/
 귦	yrso/
 귧	yrsa/
@@ -9289,36 +9289,36 @@ use_preset_vocabulary: false
 귵	yre/
 귶	yrx/
 귷	yrw/
-그	yv/
-극	yvy/
+그	yv/	100%
+극	yvy/	100%
 귺	yvyy/
 귻	yvyb/
-근	yvl/
+근	yvl/	100%
 귽	yvlu/
 귾	yvlw/
-귿	yvc/
+귿	yvc/	100%
 #4
-글	yvs/
-긁	yvsy/
+글	yvs/	100%
+긁	yvsy/	100%
 긂	yvso/
 긃	yvsa/
 긄	yvsb/
 긅	yvse/
 긆	yvsx/
 긇	yvsw/
-금	yvo/
-급	yva/
+금	yvo/	100%
+급	yva/	100%
 긊	yvab/
-긋	yvb/
+긋	yvb/	100%
 긌	yvbb/
-긍	yvq/
+긍	yvq/	100%
 긎	yvu/
 긏	yvd/
 긐	yvz/
 긑	yve/
 긒	yvx/
 긓	yvw/
-긔	yvi/
+긔	yvi/	100%
 긕	yviy/
 긖	yviyy/
 긗	yviyb/
@@ -9346,71 +9346,71 @@ use_preset_vocabulary: false
 긭	yvie/
 긮	yvix/
 긯	yviw/
-기	yi/
-긱	yiy/
+기	yi/	100%
+긱	yiy/	100%
 긲	yiyy/
 긳	yiyb/
-긴	yil/
+긴	yil/	100%
 긵	yilu/
 긶	yilw/
-긷	yic/
-길	yis/
+긷	yic/	100%
+길	yis/	100%
 긹	yisy/
-긺	yiso/
+긺	yiso/	100%
 긻	yisa/
 긼	yisb/
 긽	yise/
 긾	yisx/
 긿	yisw/
-김	yio/
-깁	yia/
+김	yio/	100%
+깁	yia/	100%
 깂	yiab/
-깃	yib/
+깃	yib/	100%
 깄	yibb/
-깅	yiq/
-깆	yiu/
+깅	yiq/	100%
+깆	yiu/	100%
 깇	yid/
 깈	yiz/
 깉	yie/
-깊	yix/
+깊	yix/	100%
 깋	yiw/
-까	yyk/
-깍	yyky/
-깎	yykyy/
+까	yyk/	100%
+깍	yyky/	100%
+깎	yykyy/	100%
 깏	yykyb/
-깐	yykl/
+깐	yykl/	100%
 깑	yyklu/
 깒	yyklw/
 깓	yykc/
-깔	yyks/
+깔	yyks/	100%
 깕	yyksy/
-깖	yykso/
+깖	yykso/	100%
 깗	yyksa/
 깘	yyksb/
 깙	yykse/
 깚	yyksx/
 깛	yyksw/
-깜	yyko/
-깝	yyka/
+깜	yyko/	100%
+깝	yyka/	100%
 깞	yykab/
-깟	yykb/
-깠	yykbb/
-깡	yykq/
+깟	yykb/	100%
+깠	yykbb/	100%
+깡	yykq/	100%
 깢	yyku/
 깣	yykd/
 깤	yykz/
-깥	yyke/
+깥	yyke/	100%
 깦	yykx/
 깧	yykw/
-깨	yyh/
-깩	yyhy/
+깨	yyh/	100%
+깩	yyhy/	100%
 깪	yyhyy/
 깫	yyhyb/
-깬	yyhl/
+깬	yyhl/	100%
 깭	yyhlu/
 깮	yyhlw/
 깯	yyhc/
-깰	yyhs/
+깰	yyhs/	100%
 깱	yyhsy/
 깲	yyhso/
 깳	yyhsa/
@@ -9418,27 +9418,27 @@ use_preset_vocabulary: false
 깵	yyhse/
 깶	yyhsx/
 깷	yyhsw/
-깸	yyho/
-깹	yyha/
+깸	yyho/	100%
+깹	yyha/	100%
 깺	yyhab/
-깻	yyhb/
-깼	yyhbb/
-깽	yyhq/
+깻	yyhb/	100%
+깼	yyhbb/	100%
+깽	yyhq/	100%
 깾	yyhu/
 깿	yyhd/
 꺀	yyhz/
 꺁	yyhe/
 꺂	yyhx/
 꺃	yyhw/
-꺄	yyf/
-꺅	yyfy/
+꺄	yyf/	100%
+꺅	yyfy/	100%
 꺆	yyfyy/
 꺇	yyfyb/
 꺈	yyfl/
 꺉	yyflu/
 꺊	yyflw/
 꺋	yyfc/
-꺌	yyfs/
+꺌	yyfs/	100%
 꺍	yyfsy/
 꺎	yyfso/
 꺏	yyfsa/
@@ -9486,15 +9486,15 @@ use_preset_vocabulary: false
 꺹	vyhe/
 꺺	vyhx/
 꺻	vyhw/
-꺼	yyj/
-꺽	yyjy/
-꺾	yyjyy/
+꺼	yyj/	100%
+꺽	yyjy/	100%
+꺾	yyjyy/	100%
 꺿	yyjyb/
-껀	yyjl/
+껀	yyjl/	100%
 껁	yyjlu/
 껂	yyjlw/
 껃	yyjc/
-껄	yyjs/
+껄	yyjs/	100%
 껅	yyjsy/
 껆	yyjso/
 껇	yyjsa/
@@ -9502,23 +9502,23 @@ use_preset_vocabulary: false
 껉	yyjse/
 껊	yyjsx/
 껋	yyjsw/
-껌	yyjo/
-껍	yyja/
+껌	yyjo/	100%
+껍	yyja/	100%
 껎	yyjab/
-껏	yyjb/
-껐	yyjbb/
-껑	yyjq/
+껏	yyjb/	100%
+껐	yyjbb/	100%
+껑	yyjq/	100%
 껒	yyju/
 껓	yyjd/
 껔	yyjz/
 껕	yyje/
 껖	yyjx/
 껗	yyjw/
-께	yyp/
-껙	yypy/
+께	yyp/	100%
+껙	yypy/	100%
 껚	yypyy/
 껛	yypyb/
-껜	yypl/
+껜	yypl/	100%
 껝	yyplu/
 껞	yyplw/
 껟	yypc/
@@ -9530,27 +9530,27 @@ use_preset_vocabulary: false
 껥	yypse/
 껦	yypsx/
 껧	yypsw/
-껨	yypo/
+껨	yypo/	100%
 껩	yypa/
 껪	yypab/
-껫	yypb/
+껫	yypb/	100%
 껬	yypbb/
-껭	yypq/
+껭	yypq/	100%
 껮	yypu/
 껯	yypd/
 껰	yypz/
 껱	yype/
 껲	yypx/
 껳	yypw/
-껴	yyg/
+껴	yyg/	100%
 껵	yygy/
 껶	yygyy/
 껷	yygyb/
-껸	yygl/
+껸	yygl/	100%
 껹	yyglu/
 껺	yyglw/
 껻	yygc/
-껼	yygs/
+껼	yygs/	100%
 껽	yygsy/
 껾	yygso/
 껿	yygsa/
@@ -9562,16 +9562,16 @@ use_preset_vocabulary: false
 꼄	yygo/
 꼅	yyga/
 꼆	yygab/
-꼇	yygb/
-꼈	yygbb/
+꼇	yygb/	100%
+꼈	yygbb/	100%
 꼉	yygq/
 꼊	yygu/
 꼋	yygd/
 꼌	yygz/
-꼍	yyge/
+꼍	yyge/	100%
 꼎	yygx/
 꼏	yygw/
-꼐	vyp/
+꼐	vyp/	100%
 꼑	vypy/
 꼒	vypyy/
 꼓	vypyb/
@@ -9599,15 +9599,15 @@ use_preset_vocabulary: false
 꼩	vype/
 꼪	vypx/
 꼫	vypw/
-꼬	yyn/
-꼭	yyny/
+꼬	yyn/	100%
+꼭	yyny/	100%
 꼮	yynyy/
 꼯	yynyb/
-꼰	yynl/
+꼰	yynl/	100%
 꼱	yynlu/
-꼲	yynlw/
+꼲	yynlw/	100%
 꼳	yync/
-꼴	yyns/
+꼴	yyns/	100%
 꼵	yynsy/
 꼶	yynso/
 꼷	yynsa/
@@ -9615,27 +9615,27 @@ use_preset_vocabulary: false
 꼹	yynse/
 꼺	yynsx/
 꼻	yynsw/
-꼼	yyno/
-꼽	yyna/
+꼼	yyno/	100%
+꼽	yyna/	100%
 꼾	yynab/
-꼿	yynb/
+꼿	yynb/	100%
 꽀	yynbb/
-꽁	yynq/
-꽂	yynu/
-꽃	yynd/
+꽁	yynq/	100%
+꽂	yynu/	100%
+꽃	yynd/	100%
 꽄	yynz/
 꽅	yyne/
 꽆	yynx/
 꽇	yynw/
-꽈	yynk/
-꽉	yynky/
+꽈	yynk/	100%
+꽉	yynky/	100%
 꽊	yynkyy/
 꽋	yynkyb/
 꽌	yynkl/
 꽍	yynklu/
 꽎	yynklw/
 꽏	yynkc/
-꽐	yynks/
+꽐	yynks/	100%
 꽑	yynksy/
 꽒	yynkso/
 꽓	yynksa/
@@ -9647,16 +9647,16 @@ use_preset_vocabulary: false
 꽙	yynka/
 꽚	yynkab/
 꽛	yynkb/
-꽜	yynkbb/
-꽝	yynkq/
+꽜	yynkbb/	100%
+꽝	yynkq/	100%
 꽞	yynku/
 꽟	yynkd/
 꽠	yynkz/
 꽡	yynke/
 꽢	yynkx/
 꽣	yynkw/
-꽤	yynh/
-꽥	yynhy/
+꽤	yynh/	100%
+꽥	yynhy/	100%
 꽦	yynhyy/
 꽧	yynhyb/
 꽨	yynhl/
@@ -9676,22 +9676,22 @@ use_preset_vocabulary: false
 꽶	yynhab/
 꽷	yynhb/
 꽸	yynhbb/
-꽹	yynhq/
+꽹	yynhq/	100%
 꽺	yynhu/
 꽻	yynhd/
 꽼	yynhz/
 꽽	yynhe/
 꽾	yynhx/
 꽿	yynhw/
-꾀	yyni/
+꾀	yyni/	100%
 꾁	yyniy/
 꾂	yyniyy/
 꾃	yyniyb/
-꾄	yynil/
+꾄	yynil/	100%
 꾅	yynilu/
 꾆	yynilw/
 꾇	yynic/
-꾈	yynis/
+꾈	yynis/	100%
 꾉	yynisy/
 꾊	yyniso/
 꾋	yynisa/
@@ -9699,19 +9699,19 @@ use_preset_vocabulary: false
 꾍	yynise/
 꾎	yynisx/
 꾏	yynisw/
-꾐	yynio/
-꾑	yynia/
+꾐	yynio/	100%
+꾑	yynia/	100%
 꾒	yyniab/
 꾓	yynib/
 꾔	yynibb/
-꾕	yyniq/
+꾕	yyniq/	100%
 꾖	yyniu/
 꾗	yynid/
 꾘	yyniz/
 꾙	yynie/
 꾚	yynix/
 꾛	yyniw/
-꾜	yym/
+꾜	yym/	100%
 꾝	yymy/
 꾞	yymyy/
 꾟	yymyb/
@@ -9739,35 +9739,35 @@ use_preset_vocabulary: false
 꾵	yyme/
 꾶	yymx/
 꾷	yymw/
-꾸	yyt/
-꾹	yyty/
+꾸	yyt/	100%
+꾹	yyty/	100%
 꾺	yytyy/
 꾻	yytyb/
-꾼	yytl/
+꾼	yytl/	100%
 꾽	yytlu/
 꾾	yytlw/
 꾿	yytc/
-꿀	yyts/
+꿀	yyts/	100%
 꿁	yytsy/
 꿂	yytso/
 꿃	yytsa/
 꿄	yytsb/
 꿅	yytse/
 꿆	yytsx/
-꿇	yytsw/
-꿈	yyto/
-꿉	yyta/
+꿇	yytsw/	100%
+꿈	yyto/	100%
+꿉	yyta/	100%
 꿊	yytab/
-꿋	yytb/
+꿋	yytb/	100%
 꿌	yytbb/
-꿍	yytq/
-꿎	yytu/
+꿍	yytq/	100%
+꿎	yytu/	100%
 꿏	yytd/
 꿐	yytz/
 꿑	yyte/
 꿒	yytx/
 꿓	yytw/
-꿔	yytj/
+꿔	yytj/	100%
 꿕	yytjy/
 꿖	yytjyy/
 꿗	yytjyb/
@@ -9775,7 +9775,7 @@ use_preset_vocabulary: false
 꿙	yytjlu/
 꿚	yytjlw/
 꿛	yytjc/
-꿜	yytjs/
+꿜	yytjs/	100%
 꿝	yytjsy/
 꿞	yytjso/
 꿟	yytjsa/
@@ -9787,23 +9787,23 @@ use_preset_vocabulary: false
 꿥	yytja/
 꿦	yytjab/
 꿧	yytjb/
-꿨	yytjbb/
-꿩	yytjq/
+꿨	yytjbb/	100%
+꿩	yytjq/	100%
 꿪	yytju/
 꿫	yytjd/
 꿬	yytjz/
 꿭	yytje/
 꿮	yytjx/
 꿯	yytjw/
-꿰	yytp/
-꿱	yytpy/
+꿰	yytp/	100%
+꿱	yytpy/	100%
 꿲	yytpyy/
 꿳	yytpyb/
-꿴	yytpl/
+꿴	yytpl/	100%
 꿵	yytplu/
 꿶	yytplw/
 꿷	yytpc/
-꿸	yytps/
+꿸	yytps/	100%
 꿹	yytpsy/
 꿺	yytpso/
 꿻	yytpsa/
@@ -9812,11 +9812,11 @@ use_preset_vocabulary: false
 꿾	yytpsx/
 꿿	yytpsw/
 #6
-뀀	yytpo/
-뀁	yytpa/
+뀀	yytpo/	100%
+뀁	yytpa/	100%
 뀂	yytpab/
 뀃	yytpb/
-뀄	yytpbb/
+뀄	yytpbb/	100%
 뀅	yytpq/
 뀆	yytpu/
 뀇	yytpd/
@@ -9824,15 +9824,15 @@ use_preset_vocabulary: false
 뀉	yytpe/
 뀊	yytpx/
 뀋	yytpw/
-뀌	yyti/
+뀌	yyti/	100%
 뀍	yytiy/
 뀎	yytiyy/
 뀏	yytiyb/
-뀐	yytil/
+뀐	yytil/	100%
 뀑	yytilu/
 뀒	yytilw/
 뀓	yytic/
-뀔	yytis/
+뀔	yytis/	100%
 뀕	yytisy/
 뀖	yytiso/
 뀗	yytisa/
@@ -9840,8 +9840,8 @@ use_preset_vocabulary: false
 뀙	yytise/
 뀚	yytisx/
 뀛	yytisw/
-뀜	yytio/
-뀝	yytia/
+뀜	yytio/	100%
+뀝	yytia/	100%
 뀞	yytiab/
 뀟	yytib/
 뀠	yytibb/
@@ -9852,7 +9852,7 @@ use_preset_vocabulary: false
 뀥	yytie/
 뀦	yytix/
 뀧	yytiw/
-뀨	yyr/
+뀨	yyr/	100%
 뀩	yyry/
 뀪	yyryy/
 뀫	yyryb/
@@ -9880,32 +9880,32 @@ use_preset_vocabulary: false
 끁	yyre/
 끂	yyrx/
 끃	yyrw/
-끄	yyv/
-끅	yyvy/
+끄	yyv/	100%
+끅	yyvy/	100%
 끆	yyvyy/
 끇	yyvyb/
-끈	yyvl/
+끈	yyvl/	100%
 끉	yyvlu/
-끊	yyvlw/
+끊	yyvlw/	100%
 끋	yyvc/
-끌	yyvs/
+끌	yyvs/	100%
 끍	yyvsy/
-끎	yyvso/
+끎	yyvso/	100%
 끏	yyvsa/
 끐	yyvsb/
 끑	yyvse/
 끒	yyvsx/
-끓	yyvsw/
-끔	yyvo/
-끕	yyva/
+끓	yyvsw/	100%
+끔	yyvo/	100%
+끕	yyva/	100%
 끖	yyvab/
-끗	yyvb/
+끗	yyvb/	100%
 끘	yyvbb/
-끙	yyvq/
+끙	yyvq/	100%
 끚	yyvu/
 끛	yyvd/
 끜	yyvz/
-끝	yyve/
+끝	yyve/	100%
 끞	yyvx/
 끟	yyvw/
 끠	yyvi/
@@ -9936,15 +9936,15 @@ use_preset_vocabulary: false
 끹	yyvie/
 끺	yyvix/
 끻	yyviw/
-끼	yyi/
-끽	yyiy/
+끼	yyi/	100%
+끽	yyiy/	100%
 끾	yyiyy/
 끿	yyiyb/
-낀	yyil/
+낀	yyil/	100%
 낁	yyilu/
 낂	yyilw/
 낃	yyic/
-낄	yyis/
+낄	yyis/	100%
 낅	yyisy/
 낆	yyiso/
 낇	yyisa/
@@ -9952,55 +9952,55 @@ use_preset_vocabulary: false
 낉	yyise/
 낊	yyisx/
 낋	yyisw/
-낌	yyio/
-낍	yyia/
+낌	yyio/	100%
+낍	yyia/	100%
 낎	yyiab/
-낏	yyib/
+낏	yyib/	100%
 낐	yyibb/
-낑	yyiq/
+낑	yyiq/	100%
 낒	yyiu/
 낓	yyid/
 낔	yyiz/
 낕	yyie/
 낖	yyix/
 낗	yyiw/
-나	lk/
-낙	lky/
-낚	lkyy/
+나	lk/	100%
+낙	lky/	100%
+낚	lkyy/	100%
 낛	lkyb/
-난	lkl/
+난	lkl/	100%
 낝	lklu/
 낞	lklw/
-낟	lkc/
-날	lks/
-낡	lksy/
-낢	lkso/
+낟	lkc/	100%
+날	lks/	100%
+낡	lksy/	100%
+낢	lkso/	100%
 낣	lksa/
 낤	lksb/
 낥	lkse/
 낦	lksx/
 낧	lksw/
-남	lko/
-납	lka/
+남	lko/	100%
+납	lka/	100%
 낪	lkab/
-낫	lkb/
-났	lkbb/
-낭	lkq/
-낮	lku/
-낯	lkd/
+낫	lkb/	100%
+났	lkbb/	100%
+낭	lkq/	100%
+낮	lku/	100%
+낯	lkd/	100%
 낰	lkz/
-낱	lke/
+낱	lke/	100%
 낲	lkx/
-낳	lkw/
-내	lh/
-낵	lhy/
+낳	lkw/	100%
+내	lh/	100%
+낵	lhy/	100%
 낶	lhyy/
 낷	lhyb/
-낸	lhl/
+낸	lhl/	100%
 낹	lhlu/
 낺	lhlw/
 낻	lhc/
-낼	lhs/
+낼	lhs/	100%
 낽	lhsy/
 낾	lhso/
 낿	lhsa/
@@ -10008,27 +10008,27 @@ use_preset_vocabulary: false
 냁	lhse/
 냂	lhsx/
 냃	lhsw/
-냄	lho/
-냅	lha/
+냄	lho/	100%
+냅	lha/	100%
 냆	lhab/
-냇	lhb/
-냈	lhbb/
-냉	lhq/
+냇	lhb/	100%
+냈	lhbb/	100%
+냉	lhq/	100%
 냊	lhu/
 냋	lhd/
 냌	lhz/
 냍	lhe/
 냎	lhx/
 냏	lhw/
-냐	lf/
-냑	lfy/
+냐	lf/	100%
+냑	lfy/	100%
 냒	lfyy/
 냓	lfyb/
-냔	lfl/
+냔	lfl/	100%
 냕	lflu/
 냖	lflw/
 냗	lfc/
-냘	lfs/
+냘	lfs/	100%
 냙	lfsy/
 냚	lfso/
 냛	lfsa/
@@ -10036,12 +10036,12 @@ use_preset_vocabulary: false
 냝	lfse/
 냞	lfsx/
 냟	lfsw/
-냠	lfo/
+냠	lfo/	100%
 냡	lfa/
 냢	lfab/
 냣	lfb/
 냤	lfbb/
-냥	lfq/
+냥	lfq/	100%
 냦	lfu/
 냧	lfd/
 냨	lfz/
@@ -10077,43 +10077,43 @@ use_preset_vocabulary: false
 넅	lhhe/
 넆	lhhx/
 넇	lhhw/
-너	lj/
-넉	ljy/
+너	lj/	100%
+넉	ljy/	100%
 넊	ljyy/
-넋	ljyb/
-넌	ljl/
+넋	ljyb/	100%
+넌	ljl/	100%
 넍	ljlu/
 넎	ljlw/
 넏	ljc/
-널	ljs/
+널	ljs/	100%
 넑	ljsy/
-넒	ljso/
-넓	ljsa/
+넒	ljso/	100%
+넓	ljsa/	100%
 넔	ljsb/
 넕	ljse/
 넖	ljsx/
 넗	ljsw/
-넘	ljo/
-넙	lja/
+넘	ljo/	100%
+넙	lja/	100%
 넚	ljab/
-넛	ljb/
-넜	ljbb/
-넝	ljq/
+넛	ljb/	100%
+넜	ljbb/	100%
+넝	ljq/	100%
 넞	lju/
 넟	ljd/
 넠	ljz/
 넡	lje/
 넢	ljx/
-넣	ljw/
-네	lp/
-넥	lpy/
+넣	ljw/	100%
+네	lp/	100%
+넥	lpy/	100%
 넦	lpyy/
 넧	lpyb/
-넨	lpl/
+넨	lpl/	100%
 넩	lplu/
 넪	lplw/
 넫	lpc/
-넬	lps/
+넬	lps/	100%
 넭	lpsy/
 넮	lpso/
 넯	lpsa/
@@ -10121,27 +10121,27 @@ use_preset_vocabulary: false
 넱	lpse/
 넲	lpsx/
 넳	lpsw/
-넴	lpo/
-넵	lpa/
+넴	lpo/	100%
+넵	lpa/	100%
 넶	lpab/
-넷	lpb/
-넸	lpbb/
-넹	lpq/
+넷	lpb/	100%
+넸	lpbb/	100%
+넹	lpq/	100%
 넺	lpu/
 넻	lpd/
 넼	lpz/
 넽	lpe/
 넾	lpx/
 넿	lpw/
-녀	lg/
-녁	lgy/
+녀	lg/	100%
+녁	lgy/	100%
 녂	lgyy/
 녃	lgyb/
-년	lgl/
+년	lgl/	100%
 녅	lglu/
 녆	lglw/
 녇	lgc/
-녈	lgs/
+녈	lgs/	100%
 녉	lgsy/
 녊	lgso/
 녋	lgsa/
@@ -10149,23 +10149,23 @@ use_preset_vocabulary: false
 녍	lgse/
 녎	lgsx/
 녏	lgsw/
-념	lgo/
-녑	lga/
+념	lgo/	100%
+녑	lga/	100%
 녒	lgab/
 녓	lgb/
-녔	lgbb/
-녕	lgq/
+녔	lgbb/	100%
+녕	lgq/	100%
 녖	lgu/
 녗	lgd/
-녘	lgz/
+녘	lgz/	100%
 녙	lge/
 녚	lgx/
 녛	lgw/
-녜	lpp/
+녜	lpp/	100%
 녝	lppy/
 녞	lppyy/
 녟	lppyb/
-녠	lppl/
+녠	lppl/	100%
 녡	lpplu/
 녢	lpplw/
 녣	lppc/
@@ -10189,43 +10189,43 @@ use_preset_vocabulary: false
 녵	lppe/
 녶	lppx/
 녷	lppw/
-노	ln/
-녹	lny/
+노	ln/	100%
+녹	lny/	100%
 녺	lnyy/
 녻	lnyb/
-논	lnl/
+논	lnl/	100%
 녽	lnlu/
 녾	lnlw/
 녿	lnc/
-놀	lns/
+놀	lns/	100%
 놁	lnsy/
-놂	lnso/
+놂	lnso/	100%
 놃	lnsa/
 놄	lnsb/
 놅	lnse/
 놆	lnsx/
 놇	lnsw/
-놈	lno/
-놉	lna/
+놈	lno/	100%
+놉	lna/	100%
 놊	lnab/
-놋	lnb/
+놋	lnb/	100%
 놌	lnbb/
-농	lnq/
+농	lnq/	100%
 놎	lnu/
 놏	lnd/
 놐	lnz/
 놑	lne/
-높	lnx/
-놓	lnw/
-놔	lnk/
+높	lnx/	100%
+놓	lnw/	100%
+놔	lnk/	100%
 놕	lnky/
 놖	lnkyy/
 놗	lnkyb/
-놘	lnkl/
+놘	lnkl/	100%
 놙	lnklu/
 놚	lnklw/
 놛	lnkc/
-놜	lnks/
+놜	lnks/	100%
 놝	lnksy/
 놞	lnkso/
 놟	lnksa/
@@ -10237,7 +10237,7 @@ use_preset_vocabulary: false
 놥	lnka/
 놦	lnkab/
 놧	lnkb/
-놨	lnkbb/
+놨	lnkbb/	100%
 놩	lnkq/
 놪	lnku/
 놫	lnkd/
@@ -10273,15 +10273,15 @@ use_preset_vocabulary: false
 뇉	lnhe/
 뇊	lnhx/
 뇋	lnhw/
-뇌	lni/
+뇌	lni/	100%
 뇍	lniy/
 뇎	lniyy/
 뇏	lniyb/
-뇐	lnil/
+뇐	lnil/	100%
 뇑	lnilu/
 뇒	lnilw/
 뇓	lnic/
-뇔	lnis/
+뇔	lnis/	100%
 뇕	lnisy/
 뇖	lniso/
 뇗	lnisa/
@@ -10289,10 +10289,10 @@ use_preset_vocabulary: false
 뇙	lnise/
 뇚	lnisx/
 뇛	lnisw/
-뇜	lnio/
-뇝	lnia/
+뇜	lnio/	100%
+뇝	lnia/	100%
 뇞	lniab/
-뇟	lnib/
+뇟	lnib/	100%
 뇠	lnibb/
 뇡	lniq/
 뇢	lniu/
@@ -10301,15 +10301,15 @@ use_preset_vocabulary: false
 뇥	lnie/
 뇦	lnix/
 뇧	lniw/
-뇨	lm/
-뇩	lmy/
+뇨	lm/	100%
+뇩	lmy/	100%
 뇪	lmyy/
 뇫	lmyb/
-뇬	lml/
+뇬	lml/	100%
 뇭	lmlu/
 뇮	lmlw/
 뇯	lmc/
-뇰	lms/
+뇰	lms/	100%
 뇱	lmsy/
 뇲	lmso/
 뇳	lmsa/
@@ -10318,11 +10318,11 @@ use_preset_vocabulary: false
 뇶	lmsx/
 뇷	lmsw/
 뇸	lmo/
-뇹	lma/
+뇹	lma/	100%
 뇺	lmab/
-뇻	lmb/
+뇻	lmb/	100%
 뇼	lmbb/
-뇽	lmq/
+뇽	lmq/	100%
 뇾	lmu/
 뇿	lmd/
 #8
@@ -10330,15 +10330,15 @@ use_preset_vocabulary: false
 눁	lme/
 눂	lmx/
 눃	lmw/
-누	lt/
-눅	lty/
+누	lt/	100%
+눅	lty/	100%
 눆	ltyy/
 눇	ltyb/
-눈	ltl/
+눈	ltl/	100%
 눉	ltlu/
 눊	ltlw/
-눋	ltc/
-눌	lts/
+눋	ltc/	100%
+눌	lts/	100%
 눍	ltsy/
 눎	ltso/
 눏	ltsa/
@@ -10346,19 +10346,19 @@ use_preset_vocabulary: false
 눑	ltse/
 눒	ltsx/
 눓	ltsw/
-눔	lto/
-눕	lta/
+눔	lto/	100%
+눕	lta/	100%
 눖	ltab/
-눗	ltb/
+눗	ltb/	100%
 눘	ltbb/
-눙	ltq/
+눙	ltq/	100%
 눚	ltu/
 눛	ltd/
 눜	ltz/
 눝	lte/
 눞	ltx/
 눟	ltw/
-눠	ltj/
+눠	ltj/	100%
 눡	ltjy/
 눢	ltjyy/
 눣	ltjyb/
@@ -10378,7 +10378,7 @@ use_preset_vocabulary: false
 눱	ltja/
 눲	ltjab/
 눳	ltjb/
-눴	ltjbb/
+눴	ltjbb/	100%
 눵	ltjq/
 눶	ltju/
 눷	ltjd/
@@ -10386,7 +10386,7 @@ use_preset_vocabulary: false
 눹	ltje/
 눺	ltjx/
 눻	ltjw/
-눼	ltp/
+눼	ltp/	100%
 눽	ltpy/
 눾	ltpyy/
 눿	ltpyb/
@@ -10414,15 +10414,15 @@ use_preset_vocabulary: false
 뉕	ltpe/
 뉖	ltpx/
 뉗	ltpw/
-뉘	lti/
+뉘	lti/	100%
 뉙	ltiy/
 뉚	ltiyy/
 뉛	ltiyb/
-뉜	ltil/
+뉜	ltil/	100%
 뉝	ltilu/
 뉞	ltilw/
 뉟	ltic/
-뉠	ltis/
+뉠	ltis/	100%
 뉡	ltisy/
 뉢	ltiso/
 뉣	ltisa/
@@ -10430,8 +10430,8 @@ use_preset_vocabulary: false
 뉥	ltise/
 뉦	ltisx/
 뉧	ltisw/
-뉨	ltio/
-뉩	ltia/
+뉨	ltio/	100%
+뉩	ltia/	100%
 뉪	ltiab/
 뉫	ltib/
 뉬	ltibb/
@@ -10442,15 +10442,15 @@ use_preset_vocabulary: false
 뉱	ltie/
 뉲	ltix/
 뉳	ltiw/
-뉴	lr/
-뉵	lry/
+뉴	lr/	100%
+뉵	lry/	100%
 뉶	lryy/
 뉷	lryb/
 뉸	lrl/
 뉹	lrlu/
 뉺	lrlw/
 뉻	lrc/
-뉼	lrs/
+뉼	lrs/	100%
 뉽	lrsy/
 뉾	lrso/
 뉿	lrsa/
@@ -10458,55 +10458,55 @@ use_preset_vocabulary: false
 늁	lrse/
 늂	lrsx/
 늃	lrsw/
-늄	lro/
-늅	lra/
+늄	lro/	100%
+늅	lra/	100%
 늆	lrab/
 늇	lrb/
 늈	lrbb/
-늉	lrq/
+늉	lrq/	100%
 늊	lru/
 늋	lrd/
 늌	lrz/
 늍	lre/
 늎	lrx/
 늏	lrw/
-느	lv/
-늑	lvy/
+느	lv/	100%
+늑	lvy/	100%
 늒	lvyy/
 늓	lvyb/
-는	lvl/
+는	lvl/	100%
 늕	lvlu/
 늖	lvlw/
 늗	lvc/
-늘	lvs/
-늙	lvsy/
-늚	lvso/
+늘	lvs/	100%
+늙	lvsy/	100%
+늚	lvso/	100%
 늛	lvsa/
 늜	lvsb/
 늝	lvse/
 늞	lvsx/
 늟	lvsw/
-늠	lvo/
-늡	lva/
+늠	lvo/	100%
+늡	lva/	100%
 늢	lvab/
-늣	lvb/
+늣	lvb/	100%
 늤	lvbb/
-능	lvq/
-늦	lvu/
+능	lvq/	100%
+늦	lvu/	100%
 늧	lvd/
 늨	lvz/
 늩	lve/
-늪	lvx/
+늪	lvx/	100%
 늫	lvw/
-늬	lvi/
+늬	lvi/	100%
 늭	lviy/
 늮	lviyy/
 늯	lviyb/
-늰	lvil/
+늰	lvil/	100%
 늱	lvilu/
 늲	lvilw/
 늳	lvic/
-늴	lvis/
+늴	lvis/	100%
 늵	lvisy/
 늶	lviso/
 늷	lvisa/
@@ -10526,72 +10526,72 @@ use_preset_vocabulary: false
 닅	lvie/
 닆	lvix/
 닇	lviw/
-니	li/
-닉	liy/
+니	li/	100%
+닉	liy/	100%
 닊	liyy/
 닋	liyb/
-닌	lil/
+닌	lil/	100%
 닍	lilu/
 닎	lilw/
 닏	lic/
-닐	lis/
+닐	lis/	100%
 닑	lisy/
-닒	liso/
+닒	liso/	100%
 닓	lisa/
 닔	lisb/
 닕	lise/
 닖	lisx/
 닗	lisw/
-님	lio/
-닙	lia/
+님	lio/	100%
+닙	lia/	100%
 닚	liab/
-닛	lib/
+닛	lib/	100%
 닜	libb/
-닝	liq/
+닝	liq/	100%
 닞	liu/
 닟	lid/
 닠	liz/
 닡	lie/
-닢	lix/
+닢	lix/	100%
 닣	liw/
-다	ck/
-닥	cky/
-닦	ckyy/
+다	ck/	100%
+닥	cky/	100%
+닦	ckyy/	100%
 닧	ckyb/
-단	ckl/
+단	ckl/	100%
 닩	cklu/
 닪	cklw/
-닫	ckc/
-달	cks/
-닭	cksy/
-닮	ckso/
-닯	cksa/
+닫	ckc/	100%
+달	cks/	100%
+닭	cksy/	100%
+닮	ckso/	100%
+닯	cksa/	100%
 닰	cksb/
 닱	ckse/
 닲	cksx/
-닳	cksw/
-담	cko/
-답	cka/
+닳	cksw/	100%
+담	cko/	100%
+답	cka/	100%
 닶	ckab/
-닷	ckb/
-닸	ckbb/
-당	ckq/
-닺	cku/
-닻	ckd/
+닷	ckb/	100%
+닸	ckbb/	100%
+당	ckq/	100%
+닺	cku/	100%
+닻	ckd/	100%
 닼	ckz/
 닽	cke/
 닾	ckx/
-닿	ckw/
+닿	ckw/	100%
 #9
-대	ch/
-댁	chy/
+대	ch/	100%
+댁	chy/	100%
 댂	chyy/
 댃	chyb/
-댄	chl/
+댄	chl/	100%
 댅	chlu/
 댆	chlw/
 댇	chc/
-댈	chs/
+댈	chs/	100%
 댉	chsy/
 댊	chso/
 댋	chsa/
@@ -10599,19 +10599,19 @@ use_preset_vocabulary: false
 댍	chse/
 댎	chsx/
 댏	chsw/
-댐	cho/
-댑	cha/
+댐	cho/	100%
+댑	cha/	100%
 댒	chab/
-댓	chb/
-댔	chbb/
-댕	chq/
+댓	chb/	100%
+댔	chbb/	100%
+댕	chq/	100%
 댖	chu/
 댗	chd/
 댘	chz/
 댙	che/
 댚	chx/
 댛	chw/
-댜	cf/
+댜	cf/	100%
 댝	cfy/
 댞	cfyy/
 댟	cfyb/
@@ -10667,43 +10667,43 @@ use_preset_vocabulary: false
 덑	chhe/
 덒	chhx/
 덓	chhw/
-더	cj/
-덕	cjy/
-덖	cjyy/
+더	cj/	100%
+덕	cjy/	100%
+덖	cjyy/	100%
 덗	cjyb/
-던	cjl/
+던	cjl/	100%
 덙	cjlu/
 덚	cjlw/
-덛	cjc/
-덜	cjs/
+덛	cjc/	100%
+덜	cjs/	100%
 덝	cjsy/
-덞	cjso/
-덟	cjsa/
+덞	cjso/	100%
+덟	cjsa/	100%
 덠	cjsb/
 덡	cjse/
 덢	cjsx/
 덣	cjsw/
-덤	cjo/
-덥	cja/
+덤	cjo/	100%
+덥	cja/	100%
 덦	cjab/
-덧	cjb/
+덧	cjb/	100%
 덨	cjbb/
-덩	cjq/
+덩	cjq/	100%
 덪	cju/
-덫	cjd/
+덫	cjd/	100%
 덬	cjz/
 덭	cje/
-덮	cjx/
+덮	cjx/	100%
 덯	cjw/
-데	cp/
-덱	cpy/
+데	cp/	100%
+덱	cpy/	100%
 덲	cpyy/
 덳	cpyb/
-덴	cpl/
+덴	cpl/	100%
 덵	cplu/
 덶	cplw/
 덷	cpc/
-델	cps/
+델	cps/	100%
 덹	cpsy/
 덺	cpso/
 덻	cpsa/
@@ -10711,27 +10711,27 @@ use_preset_vocabulary: false
 덽	cpse/
 덾	cpsx/
 덿	cpsw/
-뎀	cpo/
-뎁	cpa/
+뎀	cpo/	100%
+뎁	cpa/	100%
 뎂	cpab/
-뎃	cpb/
-뎄	cpbb/
-뎅	cpq/
+뎃	cpb/	100%
+뎄	cpbb/	100%
+뎅	cpq/	100%
 뎆	cpu/
 뎇	cpd/
 뎈	cpz/
 뎉	cpe/
 뎊	cpx/
 뎋	cpw/
-뎌	cg/
+뎌	cg/	100%
 뎍	cgy/
 뎎	cgyy/
 뎏	cgyb/
-뎐	cgl/
+뎐	cgl/	100%
 뎑	cglu/
 뎒	cglw/
 뎓	cgc/
-뎔	cgs/
+뎔	cgs/	100%
 뎕	cgsy/
 뎖	cgso/
 뎗	cgsa/
@@ -10743,19 +10743,19 @@ use_preset_vocabulary: false
 뎝	cga/
 뎞	cgab/
 뎟	cgb/
-뎠	cgbb/
-뎡	cgq/
+뎠	cgbb/	100%
+뎡	cgq/	100%
 뎢	cgu/
 뎣	cgd/
 뎤	cgz/
 뎥	cge/
 뎦	cgx/
 뎧	cgw/
-뎨	cpp/
+뎨	cpp/	100%
 뎩	cppy/
 뎪	cppyy/
 뎫	cppyb/
-뎬	cppl/
+뎬	cppl/	100%
 뎭	cpplu/
 뎮	cpplw/
 뎯	cppc/
@@ -10779,43 +10779,43 @@ use_preset_vocabulary: false
 돁	cppe/
 돂	cppx/
 돃	cppw/
-도	cn/
-독	cny/
+도	cn/	100%
+독	cny/	100%
 돆	cnyy/
 돇	cnyb/
-돈	cnl/
+돈	cnl/	100%
 돉	cnlu/
 돊	cnlw/
-돋	cnc/
-돌	cns/
+돋	cnc/	100%
+돌	cns/	100%
 돍	cnsy/
-돎	cnso/
+돎	cnso/	100%
 돏	cnsa/
-돐	cnsb/
+돐	cnsb/	100%
 돑	cnse/
 돒	cnsx/
 돓	cnsw/
-돔	cno/
-돕	cna/
+돔	cno/	100%
+돕	cna/	100%
 돖	cnab/
-돗	cnb/
+돗	cnb/	100%
 돘	cnbb/
-동	cnq/
+동	cnq/	100%
 돚	cnu/
-돛	cnd/
+돛	cnd/	100%
 돜	cnz/
-돝	cne/
+돝	cne/	100%
 돞	cnx/
 돟	cnw/
-돠	cnk/
+돠	cnk/	100%
 돡	cnky/
 돢	cnkyy/
 돣	cnkyb/
-돤	cnkl/
+돤	cnkl/	100%
 돥	cnklu/
 돦	cnklw/
 돧	cnkc/
-돨	cnks/
+돨	cnks/	100%
 돩	cnksy/
 돪	cnkso/
 돫	cnksa/
@@ -10835,7 +10835,7 @@ use_preset_vocabulary: false
 돹	cnke/
 돺	cnkx/
 돻	cnkw/
-돼	cnh/
+돼	cnh/	100%
 돽	cnhy/
 돾	cnhyy/
 돿	cnhyb/
@@ -10856,7 +10856,7 @@ use_preset_vocabulary: false
 됍	cnha/
 됎	cnhab/
 됏	cnhb/
-됐	cnhbb/
+됐	cnhbb/	100%
 됑	cnhq/
 됒	cnhu/
 됓	cnhd/
@@ -10864,15 +10864,15 @@ use_preset_vocabulary: false
 됕	cnhe/
 됖	cnhx/
 됗	cnhw/
-되	cni/
+되	cni/	100%
 됙	cniy/
 됚	cniyy/
 됛	cniyb/
-된	cnil/
+된	cnil/	100%
 됝	cnilu/
 됞	cnilw/
 됟	cnic/
-될	cnis/
+될	cnis/	100%
 됡	cnisy/
 됢	cniso/
 됣	cnisa/
@@ -10880,10 +10880,10 @@ use_preset_vocabulary: false
 됥	cnise/
 됦	cnisx/
 됧	cnisw/
-됨	cnio/
-됩	cnia/
+됨	cnio/	100%
+됩	cnia/	100%
 됪	cniab/
-됫	cnib/
+됫	cnib/	100%
 됬	cnibb/
 됭	cniq/
 됮	cniu/
@@ -10892,7 +10892,7 @@ use_preset_vocabulary: false
 됱	cnie/
 됲	cnix/
 됳	cniw/
-됴	cm/
+됴	cm/	100%
 됵	cmy/
 됶	cmyy/
 됷	cmyb/
@@ -10920,15 +10920,15 @@ use_preset_vocabulary: false
 둍	cme/
 둎	cmx/
 둏	cmw/
-두	ct/
-둑	cty/
+두	ct/	100%
+둑	cty/	100%
 둒	ctyy/
 둓	ctyb/
-둔	ctl/
+둔	ctl/	100%
 둕	ctlu/
 둖	ctlw/
 둗	ctc/
-둘	cts/
+둘	cts/	100%
 둙	ctsy/
 둚	ctso/
 둛	ctsa/
@@ -10936,19 +10936,19 @@ use_preset_vocabulary: false
 둝	ctse/
 둞	ctsx/
 둟	ctsw/
-둠	cto/
-둡	cta/
+둠	cto/	100%
+둡	cta/	100%
 둢	ctab/
-둣	ctb/
+둣	ctb/	100%
 둤	ctbb/
-둥	ctq/
+둥	ctq/	100%
 둦	ctu/
 둧	ctd/
 둨	ctz/
 둩	cte/
 둪	ctx/
 둫	ctw/
-둬	ctj/
+둬	ctj/	100%
 둭	ctjy/
 둮	ctjyy/
 둯	ctjyb/
@@ -10968,7 +10968,7 @@ use_preset_vocabulary: false
 둽	ctja/
 둾	ctjab/
 둿	ctjb/
-뒀	ctjbb/
+뒀	ctjbb/	100%
 뒁	ctjq/
 뒂	ctju/
 뒃	ctjd/
@@ -10976,7 +10976,7 @@ use_preset_vocabulary: false
 뒅	ctje/
 뒆	ctjx/
 뒇	ctjw/
-뒈	ctp/
+뒈	ctp/	100%
 뒉	ctpy/
 뒊	ctpyy/
 뒋	ctpyb/
@@ -10997,22 +10997,22 @@ use_preset_vocabulary: false
 뒚	ctpab/
 뒛	ctpb/
 뒜	ctpbb/
-뒝	ctpq/
+뒝	ctpq/	100%
 뒞	ctpu/
 뒟	ctpd/
 뒠	ctpz/
 뒡	ctpe/
 뒢	ctpx/
 뒣	ctpw/
-뒤	cti/
+뒤	cti/	100%
 뒥	ctiy/
 뒦	ctiyy/
 뒧	ctiyb/
-뒨	ctil/
+뒨	ctil/	100%
 뒩	ctilu/
 뒪	ctilw/
 뒫	ctic/
-뒬	ctis/
+뒬	ctis/	100%
 뒭	ctisy/
 뒮	ctiso/
 뒯	ctisa/
@@ -11021,26 +11021,26 @@ use_preset_vocabulary: false
 뒲	ctisx/
 뒳	ctisw/
 뒴	ctio/
-뒵	ctia/
+뒵	ctia/	100%
 뒶	ctiab/
-뒷	ctib/
+뒷	ctib/	100%
 뒸	ctibb/
-뒹	ctiq/
+뒹	ctiq/	100%
 뒺	ctiu/
 뒻	ctid/
 뒼	ctiz/
 뒽	ctie/
 뒾	ctix/
 뒿	ctiw/
-듀	cr/
+듀	cr/	100%
 듁	cry/
 듂	cryy/
 듃	cryb/
-듄	crl/
+듄	crl/	100%
 듅	crlu/
 듆	crlw/
 듇	crc/
-듈	crs/
+듈	crs/	100%
 듉	crsy/
 듊	crso/
 듋	crsa/
@@ -11048,47 +11048,47 @@ use_preset_vocabulary: false
 듍	crse/
 듎	crsx/
 듏	crsw/
-듐	cro/
+듐	cro/	100%
 듑	cra/
 듒	crab/
 듓	crb/
 듔	crbb/
-듕	crq/
+듕	crq/	100%
 듖	cru/
 듗	crd/
 듘	crz/
 듙	cre/
 듚	crx/
 듛	crw/
-드	cv/
-득	cvy/
+드	cv/	100%
+득	cvy/	100%
 듞	cvyy/
 듟	cvyb/
-든	cvl/
+든	cvl/	100%
 듡	cvlu/
 듢	cvlw/
-듣	cvc/
-들	cvs/
+듣	cvc/	100%
+들	cvs/	100%
 듥	cvsy/
-듦	cvso/
+듦	cvso/	100%
 듧	cvsa/
 듨	cvsb/
 듩	cvse/
 듪	cvsx/
 듫	cvsw/
-듬	cvo/
-듭	cva/
+듬	cvo/	100%
+듭	cva/	100%
 듮	cvab/
-듯	cvb/
+듯	cvb/	100%
 듰	cvbb/
-등	cvq/
+등	cvq/	100%
 듲	cvu/
 듳	cvd/
 듴	cvz/
 듵	cve/
 듶	cvx/
 듷	cvw/
-듸	cvi/
+듸	cvi/	100%
 듹	cviy/
 듺	cviyy/
 듻	cviyb/
@@ -11117,15 +11117,15 @@ use_preset_vocabulary: false
 딑	cvie/
 딒	cvix/
 딓	cviw/
-디	ci/
-딕	ciy/
+디	ci/	100%
+딕	ciy/	100%
 딖	ciyy/
 딗	ciyb/
-딘	cil/
+딘	cil/	100%
 딙	cilu/
 딚	cilw/
-딛	cic/
-딜	cis/
+딛	cic/	100%
+딜	cis/	100%
 딝	cisy/
 딞	ciso/
 딟	cisa/
@@ -11133,27 +11133,27 @@ use_preset_vocabulary: false
 딡	cise/
 딢	cisx/
 딣	cisw/
-딤	cio/
-딥	cia/
+딤	cio/	100%
+딥	cia/	100%
 딦	ciab/
-딧	cib/
-딨	cibb/
-딩	ciq/
-딪	ciu/
+딧	cib/	100%
+딨	cibb/	100%
+딩	ciq/	100%
+딪	ciu/	100%
 딫	cid/
 딬	ciz/
 딭	cie/
 딮	cix/
 딯	ciw/
-따	cck/
-딱	ccky/
+따	cck/	100%
+딱	ccky/	100%
 딲	cckyy/
 딳	cckyb/
-딴	cckl/
+딴	cckl/	100%
 딵	ccklu/
 딶	ccklw/
 딷	cckc/
-딸	ccks/
+딸	ccks/	100%
 딹	ccksy/
 딺	cckso/
 딻	ccksa/
@@ -11161,27 +11161,27 @@ use_preset_vocabulary: false
 딽	cckse/
 딾	ccksx/
 딿	ccksw/
-땀	ccko/
-땁	ccka/
+땀	ccko/	100%
+땁	ccka/	100%
 땂	cckab/
-땃	cckb/
-땄	cckbb/
-땅	cckq/
+땃	cckb/	100%
+땄	cckbb/	100%
+땅	cckq/	100%
 땆	ccku/
 땇	cckd/
 땈	cckz/
 땉	ccke/
 땊	cckx/
-땋	cckw/
-때	cch/
-땍	cchy/
+땋	cckw/	100%
+때	cch/	100%
+땍	cchy/	100%
 땎	cchyy/
 땏	cchyb/
-땐	cchl/
+땐	cchl/	100%
 땑	cchlu/
 땒	cchlw/
 땓	cchc/
-땔	cchs/
+땔	cchs/	100%
 땕	cchsy/
 땖	cchso/
 땗	cchsa/
@@ -11189,12 +11189,12 @@ use_preset_vocabulary: false
 땙	cchse/
 땚	cchsx/
 땛	cchsw/
-땜	ccho/
-땝	ccha/
+땜	ccho/	100%
+땝	ccha/	100%
 땞	cchab/
-땟	cchb/
-땠	cchbb/
-땡	cchq/
+땟	cchb/	100%
+땠	cchbb/	100%
+땡	cchq/	100%
 땢	cchu/
 땣	cchd/
 땤	cchz/
@@ -11257,43 +11257,43 @@ use_preset_vocabulary: false
 떝	vche/
 떞	vchx/
 떟	vchw/
-떠	ccj/
-떡	ccjy/
+떠	ccj/	100%
+떡	ccjy/	100%
 떢	ccjyy/
 떣	ccjyb/
-떤	ccjl/
+떤	ccjl/	100%
 떥	ccjlu/
 떦	ccjlw/
 떧	ccjc/
-떨	ccjs/
+떨	ccjs/	100%
 떩	ccjsy/
-떪	ccjso/
-떫	ccjsa/
+떪	ccjso/	100%
+떫	ccjsa/	100%
 떬	ccjsb/
 떭	ccjse/
 떮	ccjsx/
 떯	ccjsw/
-떰	ccjo/
-떱	ccja/
+떰	ccjo/	100%
+떱	ccja/	100%
 떲	ccjab/
-떳	ccjb/
-떴	ccjbb/
-떵	ccjq/
+떳	ccjb/	100%
+떴	ccjbb/	100%
+떵	ccjq/	100%
 떶	ccju/
 떷	ccjd/
 떸	ccjz/
 떹	ccje/
 떺	ccjx/
-떻	ccjw/
-떼	ccp/
-떽	ccpy/
+떻	ccjw/	100%
+떼	ccp/	100%
+떽	ccpy/	100%
 떾	ccpyy/
 떿	ccpyb/
-뗀	ccpl/
+뗀	ccpl/	100%
 뗁	ccplu/
 뗂	ccplw/
 뗃	ccpc/
-뗄	ccps/
+뗄	ccps/	100%
 뗅	ccpsy/
 뗆	ccpso/
 뗇	ccpsa/
@@ -11301,19 +11301,19 @@ use_preset_vocabulary: false
 뗉	ccpse/
 뗊	ccpsx/
 뗋	ccpsw/
-뗌	ccpo/
-뗍	ccpa/
+뗌	ccpo/	100%
+뗍	ccpa/	100%
 뗎	ccpab/
-뗏	ccpb/
-뗐	ccpbb/
-뗑	ccpq/
+뗏	ccpb/	100%
+뗐	ccpbb/	100%
+뗑	ccpq/	100%
 뗒	ccpu/
 뗓	ccpd/
 뗔	ccpz/
 뗕	ccpe/
 뗖	ccpx/
 뗗	ccpw/
-뗘	ccg/
+뗘	ccg/	100%
 뗙	ccgy/
 뗚	ccgyy/
 뗛	ccgyb/
@@ -11333,7 +11333,7 @@ use_preset_vocabulary: false
 뗩	ccga/
 뗪	ccgab/
 뗫	ccgb/
-뗬	ccgbb/
+뗬	ccgbb/	100%
 뗭	ccgq/
 뗮	ccgu/
 뗯	ccgd/
@@ -11370,15 +11370,15 @@ use_preset_vocabulary: false
 똍	vcpe/
 똎	vcpx/
 똏	vcpw/
-또	ccn/
-똑	ccny/
+또	ccn/	100%
+똑	ccny/	100%
 똒	ccnyy/
 똓	ccnyb/
-똔	ccnl/
+똔	ccnl/	100%
 똕	ccnlu/
 똖	ccnlw/
 똗	ccnc/
-똘	ccns/
+똘	ccns/	100%
 똙	ccnsy/
 똚	ccnso/
 똛	ccnsa/
@@ -11391,14 +11391,14 @@ use_preset_vocabulary: false
 똢	ccnab/
 똣	ccnb/
 똤	ccnbb/
-똥	ccnq/
+똥	ccnq/	100%
 똦	ccnu/
 똧	ccnd/
 똨	ccnz/
 똩	ccne/
 똪	ccnx/
 똫	ccnw/
-똬	ccnk/
+똬	ccnk/	100%
 똭	ccnky/
 똮	ccnkyy/
 똯	ccnkyb/
@@ -11406,7 +11406,7 @@ use_preset_vocabulary: false
 똱	ccnklu/
 똲	ccnklw/
 똳	ccnkc/
-똴	ccnks/
+똴	ccnks/	100%
 똵	ccnksy/
 똶	ccnkso/
 똷	ccnksa/
@@ -11426,7 +11426,7 @@ use_preset_vocabulary: false
 뙅	ccnke/
 뙆	ccnkx/
 뙇	ccnkw/
-뙈	ccnh/
+뙈	ccnh/	100%
 뙉	ccnhy/
 뙊	ccnhyy/
 뙋	ccnhyb/
@@ -11454,11 +11454,11 @@ use_preset_vocabulary: false
 뙡	ccnhe/
 뙢	ccnhx/
 뙣	ccnhw/
-뙤	ccni/
+뙤	ccni/	100%
 뙥	ccniy/
 뙦	ccniyy/
 뙧	ccniyn/
-뙨	ccnil/
+뙨	ccnil/	100%
 뙩	ccnilu/
 뙪	ccnilw/
 뙫	ccnic/
@@ -11510,28 +11510,28 @@ use_preset_vocabulary: false
 뚙	ccme/
 뚚	ccmx/
 뚛	ccmw/
-뚜	cct/
-뚝	ccty/
+뚜	cct/	100%
+뚝	ccty/	100%
 뚞	cctyy/
 뚟	cctyb/
-뚠	cctl/
+뚠	cctl/	100%
 뚡	cctlu/
 뚢	cctlw/
 뚣	cctc/
-뚤	ccts/
+뚤	ccts/	100%
 뚥	cctsy/
 뚦	cctso/
 뚧	cctsa/
 뚨	cctsb/
 뚩	cctse/
 뚪	cctsx/
-뚫	cctsw/
-뚬	ccto/
+뚫	cctsw/	100%
+뚬	ccto/	100%
 뚭	ccta/
 뚮	cctab/
 뚯	cctb/
 뚰	cctbb/
-뚱	cctq/
+뚱	cctq/	100%
 뚲	cctu/
 뚳	cctd/
 뚴	cctz/
@@ -11566,7 +11566,7 @@ use_preset_vocabulary: false
 뛑	cctje/
 뛒	cctjx/
 뛓	cctjw/
-뛔	cctp/
+뛔	cctp/	100%
 뛕	cctpy/
 뛖	cctpyy/
 뛗	cctpyb/
@@ -11594,15 +11594,15 @@ use_preset_vocabulary: false
 뛭	cctpe/
 뛮	cctpx/
 뛯	cctpw/
-뛰	ccti/
+뛰	ccti/	100%
 뛱	cctiy/
 뛲	cctiyy/
 뛳	cctiyb/
-뛴	cctil/
+뛴	cctil/	100%
 뛵	cctilu/
 뛶	cctilw/
 뛷	cctic/
-뛸	cctis/
+뛸	cctis/	100%
 뛹	cctisy/
 뛺	cctiso/
 뛻	cctisa/
@@ -11611,12 +11611,12 @@ use_preset_vocabulary: false
 뛾	cctisx/
 뛿	cctisw/
 #13
-뜀	cctio/
-뜁	cctia/
+뜀	cctio/	100%
+뜁	cctia/	100%
 뜂	cctiab/
 뜃	cctib/
 뜄	cctibb/
-뜅	cctiq/
+뜅	cctiq/	100%
 뜆	cctiu/
 뜇	cctid/
 뜈	cctiz/
@@ -11651,15 +11651,15 @@ use_preset_vocabulary: false
 뜥	ccre/
 뜦	ccrx/
 뜧	ccrw/
-뜨	ccv/
-뜩	ccvy/
+뜨	ccv/	100%
+뜩	ccvy/	100%
 뜪	ccvyy/
 뜫	ccvyb/
-뜬	ccvl/
+뜬	ccvl/	100%
 뜭	ccvlu/
 뜮	ccvlw/
-뜯	ccvc/
-뜰	ccvs/
+뜯	ccvc/	100%
+뜰	ccvs/	100%
 뜱	ccvsy/
 뜲	ccvso/
 뜳	ccvsa/
@@ -11667,10 +11667,10 @@ use_preset_vocabulary: false
 뜵	ccvse/
 뜶	ccvsx/
 뜷	ccvsw/
-뜸	ccvo/
-뜹	ccva/
+뜸	ccvo/	100%
+뜹	ccva/	100%
 뜺	ccvab/
-뜻	ccvb/
+뜻	ccvb/	100%
 뜼	ccvbb/
 뜽	ccvq/
 뜾	ccvu/
@@ -11679,15 +11679,15 @@ use_preset_vocabulary: false
 띁	ccve/
 띂	ccvx/
 띃	ccvw/
-띄	ccvi/
+띄	ccvi/	100%
 띅	ccviy/
 띆	ccviyy/
 띇	ccviyb/
-띈	ccvil/
+띈	ccvil/	100%
 띉	ccvilu/
 띊	ccvilw/
 띋	ccvic/
-띌	ccvis/
+띌	ccvis/	100%
 띍	ccvisy/
 띎	ccviso/
 띏	ccvisa/
@@ -11695,8 +11695,8 @@ use_preset_vocabulary: false
 띑	ccvise/
 띒	ccvisx/
 띓	ccvisw/
-띔	ccvio/
-띕	ccvia/
+띔	ccvio/	100%
+띕	ccvia/	100%
 띖	ccviab/
 띗	ccvib/
 띘	ccvibb/
@@ -11707,15 +11707,15 @@ use_preset_vocabulary: false
 띝	ccvie/
 띞	ccvix/
 띟	ccviw/
-띠	cci/
+띠	cci/	100%
 띡	cciy/
 띢	cciyy/
 띣	cciyb/
-띤	ccil/
+띤	ccil/	100%
 띥	ccilu/
 띦	ccilw/
 띧	ccic/
-띨	ccis/
+띨	ccis/	100%
 띩	ccisy/
 띪	cciso/
 띫	ccisa/
@@ -11723,27 +11723,27 @@ use_preset_vocabulary: false
 띭	ccise/
 띮	ccisx/
 띯	ccisw/
-띰	ccio/
-띱	ccia/
+띰	ccio/	100%
+띱	ccia/	100%
 띲	cciab/
-띳	ccib/
+띳	ccib/	100%
 띴	ccibb/
-띵	cciq/
+띵	cciq/	100%
 띶	cciu/
 띷	ccid/
 띸	cciz/
 띹	ccie/
 띺	ccix/
 띻	cciw/
-라	sk/
-락	sky/
+라	sk/	100%
+락	sky/	100%
 띾	skyy/
 띿	skyb/
-란	skl/
+란	skl/	100%
 랁	sklu/
 랂	sklw/
 랃	skc/
-랄	sks/
+랄	sks/	100%
 랅	sksy/
 랆	skso/
 랇	sksa/
@@ -11751,27 +11751,27 @@ use_preset_vocabulary: false
 랉	skse/
 랊	sksx/
 랋	sksw/
-람	sko/
-랍	ska/
+람	sko/	100%
+랍	ska/	100%
 랎	skab/
-랏	skb/
-랐	skbb/
-랑	skq/
-랒	sku/
+랏	skb/	100%
+랐	skbb/	100%
+랑	skq/	100%
+랒	sku/	100%
 랓	skd/
 랔	skz/
 랕	ske/
-랖	skx/
-랗	skw/
-래	sh/
-랙	shy/
+랖	skx/	100%
+랗	skw/	100%
+래	sh/	100%
+랙	shy/	100%
 랚	shyy/
 랛	shyb/
-랜	shl/
+랜	shl/	100%
 랝	shlu/
 랞	shlw/
 랟	shc/
-랠	shs/
+랠	shs/	100%
 랡	shsy/
 랢	shso/
 랣	shsa/
@@ -11779,23 +11779,23 @@ use_preset_vocabulary: false
 랥	shse/
 랦	shsx/
 랧	shsw/
-램	sho/
-랩	sha/
+램	sho/	100%
+랩	sha/	100%
 랪	shab/
-랫	shb/
-랬	shbb/
-랭	shq/
+랫	shb/	100%
+랬	shbb/	100%
+랭	shq/	100%
 랮	shu/
 랯	shd/
 랰	shz/
 랱	she/
 랲	shx/
 랳	shw/
-랴	sf/
-략	sfy/
+랴	sf/	100%
+략	sfy/	100%
 랶	sfyy/
 랷	sfyb/
-랸	sfl/
+랸	sfl/	100%
 랹	sflu/
 랺	sflw/
 랻	sfc/
@@ -11810,9 +11810,9 @@ use_preset_vocabulary: false
 럄	sfo/
 럅	sfa/
 럆	sfab/
-럇	sfb/
+럇	sfb/	100%
 럈	sfbb/
-량	sfq/
+량	sfq/	100%
 럊	sfu/
 럋	sfd/
 럌	sfz/
@@ -11847,15 +11847,15 @@ use_preset_vocabulary: false
 럩	shhe/
 럪	shhx/
 럫	shhw/
-러	sj/
-럭	sjy/
+러	sj/	100%
+럭	sjy/	100%
 럮	sjyy/
 럯	sjyb/
-런	sjl/
+런	sjl/	100%
 럱	sjlu/
 럲	sjlw/
 럳	sjc/
-럴	sjs/
+럴	sjs/	100%
 럵	sjsy/
 럶	sjso/
 럷	sjsa/
@@ -11863,28 +11863,28 @@ use_preset_vocabulary: false
 럹	sjse/
 럺	sjsx/
 럻	sjsw/
-럼	sjo/
-럽	sja/
+럼	sjo/	100%
+럽	sja/	100%
 럾	sjab/
-럿	sjb/
+럿	sjb/	100%
 #14
-렀	sjbb/
-렁	sjq/
+렀	sjbb/	100%
+렁	sjq/	100%
 렂	sju/
 렃	sjd/
 렄	sjz/
 렅	sje/
 렆	sjx/
-렇	sjw/
-레	sp/
-렉	spy/
+렇	sjw/	100%
+레	sp/	100%
+렉	spy/	100%
 렊	spyy/
 렋	spyb/
-렌	spl/
+렌	spl/	100%
 렍	splu/
 렎	splw/
 렏	spc/
-렐	sps/
+렐	sps/	100%
 렑	spsy/
 렒	spso/
 렓	spsa/
@@ -11892,27 +11892,27 @@ use_preset_vocabulary: false
 렕	spse/
 렖	spsx/
 렗	spsw/
-렘	spo/
-렙	spa/
+렘	spo/	100%
+렙	spa/	100%
 렚	spab/
-렛	spb/
+렛	spb/	100%
 렜	spbb/
-렝	spq/
+렝	spq/	100%
 렞	spu/
 렟	spd/
 렠	spz/
 렡	spe/
 렢	spx/
 렣	spw/
-려	sg/
-력	sgy/
+려	sg/	100%
+력	sgy/	100%
 렦	sgyy/
 렧	sgyb/
-련	sgl/
+련	sgl/	100%
 렩	sglu/
 렪	sglw/
 렫	sgc/
-렬	sgs/
+렬	sgs/	100%
 렭	sgsy/
 렮	sgso/
 렯	sgsa/
@@ -11920,23 +11920,23 @@ use_preset_vocabulary: false
 렱	sgse/
 렲	sgsx/
 렳	sgsw/
-렴	sgo/
-렵	sga/
+렴	sgo/	100%
+렵	sga/	100%
 렶	sgab/
-렷	sgb/
-렸	sgbb/
-령	sgq/
+렷	sgb/	100%
+렸	sgbb/	100%
+령	sgq/	100%
 렺	sgu/
 렻	sgd/
 렼	sgz/
 렽	sge/
 렾	sgx/
 렿	sgw/
-례	spp/
+례	spp/	100%
 롁	sppy/
 롂	sppyy/
 롃	sppyb/
-롄	sppl/
+롄	sppl/	100%
 롅	spplu/
 롆	spplw/
 롇	sppc/
@@ -11949,9 +11949,9 @@ use_preset_vocabulary: false
 롎	sppsx/
 롏	sppsw/
 롐	sppo/
-롑	sppa/
+롑	sppa/	100%
 롒	sppab/
-롓	sppb/
+롓	sppb/	100%
 롔	sppbb/
 롕	sppq/
 롖	sppu/
@@ -11960,15 +11960,15 @@ use_preset_vocabulary: false
 롙	sppe/
 롚	sppx/
 롛	sppw/
-로	sn/
-록	sny/
+로	sn/	100%
+록	sny/	100%
 롞	snyy/
 롟	snyb/
-론	snl/
+론	snl/	100%
 롡	snlu/
 롢	snlw/
 롣	snc/
-롤	sns/
+롤	sns/	100%
 롥	snsy/
 롦	snso/
 롧	snsa/
@@ -11976,23 +11976,23 @@ use_preset_vocabulary: false
 롩	snse/
 롪	snsx/
 롫	snsw/
-롬	sno/
-롭	sna/
+롬	sno/	100%
+롭	sna/	100%
 롮	snab/
-롯	snb/
+롯	snb/	100%
 롰	snbb/
-롱	snq/
+롱	snq/	100%
 롲	snu/
 롳	snd/
 롴	snz/
 롵	sne/
 롶	snx/
 롷	snw/
-롸	snk/
+롸	snk/	100%
 롹	snky/
 롺	snkyy/
 롻	snkyb/
-롼	snkl/
+롼	snkl/	100%
 롽	snklu/
 롾	snklw/
 롿	snkc/
@@ -12009,7 +12009,7 @@ use_preset_vocabulary: false
 뢊	snkab/
 뢋	snkb/
 뢌	snkbb/
-뢍	snkq/
+뢍	snkq/	100%
 뢎	snku/
 뢏	snkd/
 뢐	snkz/
@@ -12036,7 +12036,7 @@ use_preset_vocabulary: false
 뢥	snha/
 뢦	snhab/
 뢧	snhb/
-뢨	snhbb/
+뢨	snhbb/	100%
 뢩	snhq/
 뢪	snhu/
 뢫	snhd/
@@ -12044,15 +12044,15 @@ use_preset_vocabulary: false
 뢭	snhe/
 뢮	snhx/
 뢯	snhw/
-뢰	sni/
+뢰	sni/	100%
 뢱	sniy/
 뢲	sniyy/
 뢳	sniyb/
-뢴	snil/
+뢴	snil/	100%
 뢵	snilu/
 뢶	snilw/
 뢷	snic/
-뢸	snis/
+뢸	snis/	100%
 뢹	snisy/
 뢺	sniso/
 뢻	snisa/
@@ -12060,27 +12060,27 @@ use_preset_vocabulary: false
 뢽	snise/
 뢾	snisx/
 뢿	snisw/
-룀	snio/
-룁	snia/
+룀	snio/	100%
+룁	snia/	100%
 룂	sniab/
-룃	snib/
+룃	snib/	100%
 룄	snibb/
-룅	sniq/
+룅	sniq/	100%
 룆	sniu/
 룇	snid/
 룈	sniz/
 룉	snie/
 룊	snix/
 룋	sniw/
-료	sm/
+료	sm/	100%
 룍	smy/
 룎	smyy/
 룏	smyb/
-룐	sml/
+룐	sml/	100%
 룑	smlu/
 룒	smlw/
 룓	smc/
-룔	sms/
+룔	sms/	100%
 룕	smsy/
 룖	smso/
 룗	smsa/
@@ -12089,26 +12089,26 @@ use_preset_vocabulary: false
 룚	smsx/
 룛	smsw/
 룜	smo/
-룝	sma/
+룝	sma/	100%
 룞	smab/
-룟	smb/
+룟	smb/	100%
 룠	smbb/
-룡	smq/
+룡	smq/	100%
 룢	smu/
 룣	smd/
 룤	smz/
 룥	sme/
 룦	smx/
 룧	smw/
-루	st/
-룩	sty/
+루	st/	100%
+룩	sty/	100%
 룪	styy/
 룫	styb/
-룬	stl/
+룬	stl/	100%
 룭	stlu/
 룮	stlw/
 룯	stc/
-룰	sts/
+룰	sts/	100%
 룱	stsy/
 룲	stso/
 룳	stsa/
@@ -12116,12 +12116,12 @@ use_preset_vocabulary: false
 룵	stse/
 룶	stsx/
 룷	stsw/
-룸	sto/
-룹	sta/
+룸	sto/	100%
+룹	sta/	100%
 룺	stab/
-룻	stb/
+룻	stb/	100%
 룼	stbb/
-룽	stq/
+룽	stq/	100%
 룾	stu/
 룿	std/
 #15
@@ -12129,7 +12129,7 @@ use_preset_vocabulary: false
 뤁	ste/
 뤂	stx/
 뤃	stw/
-뤄	stj/
+뤄	stj/	100%
 뤅	stjy/
 뤆	stjyy/
 뤇	stjyb/
@@ -12149,7 +12149,7 @@ use_preset_vocabulary: false
 뤕	stja/
 뤖	stjab/
 뤗	stjb/
-뤘	stjbb/
+뤘	stjbb/	100%
 뤙	stjq/
 뤚	stju/
 뤛	stjd/
@@ -12157,7 +12157,7 @@ use_preset_vocabulary: false
 뤝	stje/
 뤞	stjx/
 뤟	stjw/
-뤠	stp/
+뤠	stp/	100%
 뤡	stpy/
 뤢	stpyy/
 뤣	stpyb/
@@ -12185,15 +12185,15 @@ use_preset_vocabulary: false
 뤹	stpe/
 뤺	stpx/
 뤻	stpw/
-뤼	sti/
-뤽	stiy/
+뤼	sti/	100%
+뤽	stiy/	100%
 뤾	stiyy/
 뤿	stiyb/
-륀	stil/
+륀	stil/	100%
 륁	stilu/
 륂	stilw/
 륃	stic/
-륄	stis/
+륄	stis/	100%
 륅	stisy/
 륆	stiso/
 륇	stisa/
@@ -12201,27 +12201,27 @@ use_preset_vocabulary: false
 륉	stise/
 륊	stisx/
 륋	stisw/
-륌	stio/
+륌	stio/	100%
 륍	stia/
 륎	stiab/
-륏	stib/
+륏	stib/	100%
 륐	stibb/
-륑	stiq/
+륑	stiq/	100%
 륒	stiu/
 륓	stid/
 륔	stiz/
 륕	stie/
 륖	stix/
 륗	stiw/
-류	sr/
-륙	sry/
+류	sr/	100%
+륙	sry/	100%
 륚	sryy/
 륛	sryb/
-륜	srl/
+륜	srl/	100%
 륝	srlu/
 륞	srlw/
 륟	src/
-률	srs/
+률	srs/	100%
 륡	srsy/
 륢	srso/
 륣	srsa/
@@ -12229,27 +12229,27 @@ use_preset_vocabulary: false
 륥	srse/
 륦	srsx/
 륧	srsw/
-륨	sro/
-륩	sra/
+륨	sro/	100%
+륩	sra/	100%
 륪	srab/
-륫	srb/
+륫	srb/	100%
 륬	srbb/
-륭	srq/
+륭	srq/	100%
 륮	sru/
 륯	srd/
 륰	srz/
 륱	sre/
 륲	srx/
 륳	srw/
-르	sv/
-륵	svy/
+르	sv/	100%
+륵	svy/	100%
 륶	svyy/
 륷	svyb/
-른	svl/
+른	svl/	100%
 륹	svlu/
 륺	svlw/
 륻	svc/
-를	svs/
+를	svs/	100%
 륽	svsy/
 륾	svso/
 륿	svsa/
@@ -12257,17 +12257,17 @@ use_preset_vocabulary: false
 릁	svse/
 릂	svsx/
 릃	svsw/
-름	svo/
-릅	sva/
+름	svo/	100%
+릅	sva/	100%
 릆	svab/
-릇	svb/
+릇	svb/	100%
 릈	svbb/
-릉	svq/
-릊	svu/
+릉	svq/	100%
+릊	svu/	100%
 릋	svd/
 릌	svz/
-릍	sve/
-릎	svx/
+릍	sve/	100%
+릎	svx/	100%
 릏	svw/
 릐	svi/
 릑	sviy/
@@ -12297,15 +12297,15 @@ use_preset_vocabulary: false
 릩	svie/
 릪	svix/
 릫	sviw/
-리	si/
-릭	siy/
+리	si/	100%
+릭	siy/	100%
 릮	siyy/
 릯	siyb/
-린	sil/
+린	sil/	100%
 릱	silu/
 릲	silw/
 릳	sic/
-릴	sis/
+릴	sis/	100%
 릵	sisy/
 릶	siso/
 릷	sisa/
@@ -12313,55 +12313,55 @@ use_preset_vocabulary: false
 릹	sise/
 릺	sisx/
 릻	sisw/
-림	sio/
-립	sia/
+림	sio/	100%
+립	sia/	100%
 릾	siab/
-릿	sib/
+릿	sib/	100%
 맀	sibb/
-링	siq/
+링	siq/	100%
 맂	siu/
 맃	sid/
 맄	siz/
 맅	sie/
 맆	six/
 맇	siw/
-마	ok/
-막	oky/
+마	ok/	100%
+막	oky/	100%
 맊	okyy/
 맋	okyb/
-만	okl/
+만	okl/	100%
 맍	oklu/
-많	oklw/
-맏	okc/
-말	oks/
-맑	oksy/
-맒	okso/
+많	oklw/	100%
+맏	okc/	100%
+말	oks/	100%
+맑	oksy/	100%
+맒	okso/	100%
 맓	oksa/
 맔	oksb/
 맕	okse/
 맖	oksx/
 맗	oksw/
-맘	oko/
-맙	oka/
+맘	oko/	100%
+맙	oka/	100%
 맚	okab/
-맛	okb/
+맛	okb/	100%
 맜	okbb/
-망	okq/
-맞	oku/
+망	okq/	100%
+맞	oku/	100%
 맟	okd/
 맠	okz/
-맡	oke/
+맡	oke/	100%
 맢	okx/
-맣	okw/
-매	oh/
-맥	ohy/
+맣	okw/	100%
+매	oh/	100%
+맥	ohy/	100%
 맦	ohyy/
 맧	ohyb/
-맨	ohl/
+맨	ohl/	100%
 맩	ohlu/
 맪	ohlw/
 맫	ohc/
-맬	ohs/
+맬	ohs/	100%
 맭	ohsy/
 맮	ohso/
 맯	ohka/
@@ -12369,28 +12369,28 @@ use_preset_vocabulary: false
 맱	ohse/
 맲	ohsx/
 맳	ohsw/
-맴	oho/
-맵	oha/
+맴	oho/	100%
+맵	oha/	100%
 맶	ohab/
-맷	ohb/
-맸	ohbb/
-맹	ohq/
-맺	ohu/
+맷	ohb/	100%
+맸	ohbb/	100%
+맹	ohq/	100%
+맺	ohu/	100%
 맻	ohd/
 맼	ohz/
 맽	ohe/
 맾	ohx/
 맿	ohw/
 #16
-먀	of/
-먁	ofy/
+먀	of/	100%
+먁	ofy/	100%
 먂	ofyy/
 먃	ofyb/
 먄	ofl/
 먅	oflu/
 먆	oflw/
 먇	ofc/
-먈	ofs/
+먈	ofs/	100%
 먉	ofsy/
 먊	ofso/
 먋	ofsa/
@@ -12403,7 +12403,7 @@ use_preset_vocabulary: false
 먒	ofab/
 먓	ofb/
 먔	ofbb/
-먕	ofq/
+먕	ofq/	100%
 먖	ofu/
 먗	ofd/
 먘	ofz/
@@ -12438,43 +12438,43 @@ use_preset_vocabulary: false
 먵	ohhe/
 먶	ohhx/
 먷	ohhw/
-머	oj/
-먹	ojy/
+머	oj/	100%
+먹	ojy/	100%
 먺	ojyy/
 먻	ojyb/
-먼	ojl/
+먼	ojl/	100%
 먽	ojlu/
 먾	ojlw/
 먿	ojc/
-멀	ojs/
+멀	ojs/	100%
 멁	ojsy/
-멂	ojso/
+멂	ojso/	100%
 멃	ojsa/
 멄	ojsb/
 멅	ojse/
 멆	ojsx/
 멇	ojsw/
-멈	ojo/
-멉	oja/
+멈	ojo/	100%
+멉	oja/	100%
 멊	ojab/
-멋	ojb/
+멋	ojb/	100%
 멌	ojbb/
-멍	ojq/
-멎	oju/
+멍	ojq/	100%
+멎	oju/	100%
 멏	ojd/
 멐	ojz/
 멑	oje/
 멒	ojx/
-멓	ojw/
-메	op/
-멕	opy/
+멓	ojw/	100%
+메	op/	100%
+멕	opy/	100%
 멖	opyy/
 멗	opyb/
-멘	opl/
+멘	opl/	100%
 멙	oplu/
 멚	oplw/
 멛	opc/
-멜	ops/
+멜	ops/	100%
 멝	opsy/
 멞	opso/
 멟	opsa/
@@ -12482,27 +12482,27 @@ use_preset_vocabulary: false
 멡	opse/
 멢	opsx/
 멣	opsw/
-멤	opo/
-멥	opa/
+멤	opo/	100%
+멥	opa/	100%
 멦	opab/
-멧	opb/
-멨	opbb/
-멩	opq/
+멧	opb/	100%
+멨	opbb/	100%
+멩	opq/	100%
 멪	opu/
 멫	opd/
 멬	opz/
 멭	ope/
 멮	opx/
 멯	opw/
-며	og/
-멱	ogy/
+며	og/	100%
+멱	ogy/	100%
 멲	ogyy/
 멳	ogyb/
-면	ogl/
+면	ogl/	100%
 멵	oglu/
 멶	oglw/
 멷	ogc/
-멸	ogs/
+멸	ogs/	100%
 멹	ogsy/
 멺	ogso/
 멻	ogsa/
@@ -12513,16 +12513,16 @@ use_preset_vocabulary: false
 몀	ogo/
 몁	oga/
 몂	ogab/
-몃	ogb/
-몄	ogbb/
-명	ogq/
+몃	ogb/	100%
+몄	ogbb/	100%
+명	ogq/	100%
 몆	ogu/
-몇	ogd/
+몇	ogd/	100%
 몈	ogz/
 몉	oge/
 몊	ogx/
 몋	ogw/
-몌	opp/
+몌	opp/	100%
 몍	oppy/
 몎	oppyy/
 몏	oppyb/
@@ -12550,39 +12550,39 @@ use_preset_vocabulary: false
 몥	oppe/
 몦	oppx/
 몧	oppw/
-모	on/
-목	ony/
+모	on/	100%
+목	ony/	100%
 몪	onyy/
-몫	onyb/
-몬	onl/
+몫	onyb/	100%
+몬	onl/	100%
 몭	onlu/
 몮	onlw/
 몯	onc/
-몰	ons/
+몰	ons/	100%
 몱	onsy/
-몲	onso/
+몲	onso/	100%
 몳	onsa/
 몴	onsb/
 몵	onse/
 몶	onsx/
 몷	onsw/
-몸	ono/
-몹	ona/
+몸	ono/	100%
+몹	ona/	100%
 몺	onab/
-못	onb/
+못	onb/	100%
 몼	onbb/
-몽	onq/
+몽	onq/	100%
 몾	onu/
 몿	ond/
 뫀	onz/
 뫁	one/
 뫂	onx/
 뫃	onw/
-뫄	onk/
+뫄	onk/	100%
 뫅	onky/
 뫆	onkyy/
 뫇	onkyb/
-뫈	onkl/
+뫈	onkl/	100%
 뫉	onklu/
 뫊	onklw/
 뫋	onkc/
@@ -12598,8 +12598,8 @@ use_preset_vocabulary: false
 뫕	onka/
 뫖	onkab/
 뫗	onkb/
-뫘	onkbb/
-뫙	onkq/
+뫘	onkbb/	100%
+뫙	onkq/	100%
 뫚	onku/
 뫛	onkd/
 뫜	onkz/
@@ -12634,16 +12634,16 @@ use_preset_vocabulary: false
 뫹	onhe/
 뫺	onhx/
 뫻	onhw/
-뫼	oni/
+뫼	oni/	100%
 뫽	oniy/
 뫾	oniyy/
 뫿	oniyb/
 #17
-묀	onil/
+묀	onil/	100%
 묁	onilu/
 묂	onilw/
 묃	onic/
-묄	onis/
+묄	onis/	100%
 묅	onisy/
 묆	oniso/
 묇	onisa/
@@ -12652,26 +12652,26 @@ use_preset_vocabulary: false
 묊	onisx/
 묋	onisw/
 묌	onio/
-묍	onia/
+묍	onia/	100%
 묎	oniab/
-묏	onib/
+묏	onib/	100%
 묐	onibb/
-묑	oniq/
+묑	oniq/	100%
 묒	oniu/
 묓	onid/
 묔	oniz/
 묕	onie/
 묖	onix/
 묗	oniw/
-묘	om/
+묘	om/	100%
 묙	omy/
 묚	omyy/
 묛	omyb/
-묜	oml/
+묜	oml/	100%
 묝	omlu/
 묞	omlw/
 묟	omc/
-묠	oms/
+묠	oms/	100%
 묡	omsy/
 묢	omso/
 묣	omsa/
@@ -12680,9 +12680,9 @@ use_preset_vocabulary: false
 묦	omsx/
 묧	omsw/
 묨	omo/
-묩	oma/
+묩	oma/	100%
 묪	omab/
-묫	omb/
+묫	omb/	100%
 묬	ombb/
 묭	omq/
 묮	omu/
@@ -12691,43 +12691,43 @@ use_preset_vocabulary: false
 묱	ome/
 묲	omx/
 묳	omw/
-무	ot/
-묵	oty/
-묶	otyy/
+무	ot/	100%
+묵	oty/	100%
+묶	otyy/	100%
 묷	otyb/
-문	otl/
+문	otl/	100%
 묹	otlu/
 묺	otlw/
-묻	otc/
-물	ots/
-묽	otsy/
-묾	otso/
+묻	otc/	100%
+물	ots/	100%
+묽	otsy/	100%
+묾	otso/	100%
 묿	otsa/
 뭀	otsb/
 뭁	otse/
 뭂	otsx/
 뭃	otsw/
-뭄	oto/
-뭅	ota/
+뭄	oto/	100%
+뭅	ota/	100%
 뭆	otab/
-뭇	otb/
+뭇	otb/	100%
 뭈	otbb/
-뭉	otq/
+뭉	otq/	100%
 뭊	otu/
 뭋	otd/
 뭌	otz/
-뭍	ote/
+뭍	ote/	100%
 뭎	otx/
-뭏	otw/
-뭐	otj/
+뭏	otw/	100%
+뭐	otj/	100%
 뭑	otjy/
 뭒	otjyy/
 뭓	otjyb/
-뭔	otjl/
+뭔	otjl/	100%
 뭕	otjlu/
 뭖	otjlw/
 뭗	otjc/
-뭘	otjs/
+뭘	otjs/	100%
 뭙	otjsy/
 뭚	otjso/
 뭛	otjsa/
@@ -12736,9 +12736,9 @@ use_preset_vocabulary: false
 뭞	otjsx/
 뭟	otjsw/
 뭠	otjo/
-뭡	otja/
+뭡	otja/	100%
 뭢	otjab/
-뭣	otjb/
+뭣	otjb/	100%
 뭤	otjbb/
 뭥	otjq/
 뭦	otju/
@@ -12747,7 +12747,7 @@ use_preset_vocabulary: false
 뭩	otje/
 뭪	otjx/
 뭫	otjw/
-뭬	otp/
+뭬	otp/	100%
 뭭	otpy/
 뭮	otpyy/
 뭯	otpyb/
@@ -12775,15 +12775,15 @@ use_preset_vocabulary: false
 뮅	otpe/
 뮆	otpx/
 뮇	otpw/
-뮈	oti/
+뮈	oti/	100%
 뮉	otiy/
 뮊	otiyy/
 뮋	otiyb/
-뮌	otil/
+뮌	otil/	100%
 뮍	otilu/
 뮎	otilw/
 뮏	otic/
-뮐	otis/
+뮐	otis/	100%
 뮑	otisy/
 뮒	otiso/
 뮓	otisa/
@@ -12803,15 +12803,15 @@ use_preset_vocabulary: false
 뮡	otie/
 뮢	otix/
 뮣	otiw/
-뮤	or/
+뮤	or/	100%
 뮥	ory/
 뮦	oryy/
 뮧	oryb/
-뮨	orl/
+뮨	orl/	100%
 뮩	orlu/
 뮪	orlw/
 뮫	orc/
-뮬	ors/
+뮬	ors/	100%
 뮭	orsy/
 뮮	orso/
 뮯	orsa/
@@ -12819,10 +12819,10 @@ use_preset_vocabulary: false
 뮱	orse/
 뮲	orsx/
 뮳	orsw/
-뮴	oro/
+뮴	oro/	100%
 뮵	ora/
 뮶	orab/
-뮷	orb/
+뮷	orb/	100%
 뮸	orbb/
 뮹	orq/
 뮺	oru/
@@ -12831,15 +12831,15 @@ use_preset_vocabulary: false
 뮽	ore/
 뮾	orx/
 뮿	orw/
-므	ov/
+므	ov/	100%
 믁	ovy/
 믂	ovyy/
 믃	ovyb/
-믄	ovl/
+믄	ovl/	100%
 믅	ovlu/
 믆	ovlw/
 믇	ovc/
-믈	ovs/
+믈	ovs/	100%
 믉	ovsy/
 믊	ovso/
 믋	ovsa/
@@ -12847,10 +12847,10 @@ use_preset_vocabulary: false
 믍	ovse/
 믎	ovsx/
 믏	ovsw/
-믐	ovo/
+믐	ovo/	100%
 믑	ova/
 믒	ovab/
-믓	ovb/
+믓	ovb/	100%
 믔	ovbb/
 믕	ovq/
 믖	ovu/
@@ -12887,72 +12887,72 @@ use_preset_vocabulary: false
 믵	ovie/
 믶	ovix/
 믷	oviw/
-미	oi/
-믹	oiy/
+미	oi/	100%
+믹	oiy/	100%
 믺	oiyy/
 믻	oiyb/
-민	oil/
+민	oil/	100%
 믽	oilu/
 믾	oilw/
-믿	oic/
+믿	oic/	100%
 #18
-밀	ois/
+밀	ois/	100%
 밁	oisy/
-밂	oiso/
+밂	oiso/	100%
 밃	oisa/
 밄	oisb/
 밅	oise/
 밆	oisx/
 밇	oisw/
-밈	oio/
-밉	oia/
+밈	oio/	100%
+밉	oia/	100%
 밊	oiab/
-밋	oib/
-밌	oibb/
-밍	oiq/
+밋	oib/	100%
+밌	oibb/	100%
+밍	oiq/	100%
 밎	oiu/
-및	oid/
+및	oid/	100%
 밐	oiz/
-밑	oie/
+밑	oie/	100%
 밒	oix/
 밓	oiw/
-바	ak/
-박	aky/
-밖	akyy/
-밗	akyz/
-반	akl/
+바	ak/	100%
+박	aky/	100%
+밖	akyy/	100%
+밗	akyz/	100%
+반	akl/	100%
 밙	aklu/
 밚	aklw/
-받	akc/
-발	aks/
-밝	aksy/
-밞	akso/
-밟	aksa/
+받	akc/	100%
+발	aks/	100%
+밝	aksy/	100%
+밞	akso/	100%
+밟	aksa/	100%
 밠	aksb/
 밡	akse/
 밢	aksx/
 밣	aksw/
-밤	ako/
-밥	aka/
+밤	ako/	100%
+밥	aka/	100%
 밦	akab/
-밧	akb/
+밧	akb/	100%
 밨	akbb/
-방	akq/
+방	akq/	100%
 밪	aku/
 밫	akd/
 밬	akz/
-밭	ake/
+밭	ake/	100%
 밮	akx/
 밯	akw/
-배	ah/
-백	ahy/
+배	ah/	100%
+백	ahy/	100%
 밲	ahyy/
 밳	ahyb/
-밴	ahl/
+밴	ahl/	100%
 밵	ahlu/
 밶	ahlw/
 밷	ahc/
-밸	ahs/
+밸	ahs/	100%
 밹	ahsy/
 밺	ahso/
 밻	ahsa/
@@ -12960,23 +12960,23 @@ use_preset_vocabulary: false
 밽	ahse/
 밾	ahsx/
 밿	ahsw/
-뱀	aho/
-뱁	aha/
+뱀	aho/	100%
+뱁	aha/	100%
 뱂	ahab/
-뱃	ahb/
-뱄	ahbb/
-뱅	ahq/
+뱃	ahb/	100%
+뱄	ahbb/	100%
+뱅	ahq/	100%
 뱆	ahu/
 뱇	ahd/
 뱈	ahz/
-뱉	ahe/
+뱉	ahe/	100%
 뱊	ahx/
 뱋	ahw/
-뱌	af/
-뱍	afy/
+뱌	af/	100%
+뱍	afy/	100%
 뱎	afyy/
 뱏	afyb/
-뱐	afl/
+뱐	afl/	100%
 뱑	aflu/
 뱒	aflw/
 뱓	afc/
@@ -12989,7 +12989,7 @@ use_preset_vocabulary: false
 뱚	afsx/
 뱛	afsw/
 뱜	afo/
-뱝	afa/
+뱝	afa/	100%
 뱞	afab/
 뱟	afb/
 뱠	afbb/
@@ -13028,43 +13028,43 @@ use_preset_vocabulary: false
 벁	ahhe/
 벂	ahhx/
 벃	ahhw/
-버	aj/
-벅	ajy/
+버	aj/	100%
+벅	ajy/	100%
 벆	ajyy/
 벇	ajyb/
-번	ajl/
+번	ajl/	100%
 벉	ajlu/
 벊	ajlw/
-벋	ajc/
-벌	ajs/
+벋	ajc/	100%
+벌	ajs/	100%
 벍	ajsy/
-벎	ajso/
+벎	ajso/	100%
 벏	ajsa/
 벐	ajsb/
 벑	ajse/
 벒	ajsx/
 벓	ajsw/
-범	ajo/
-법	aja/
+범	ajo/	100%
+법	aja/	100%
 벖	ajab/
-벗	ajb/
+벗	ajb/	100%
 벘	ajbb/
-벙	ajq/
-벚	aju/
+벙	ajq/	100%
+벚	aju/	100%
 벛	ajd/
 벜	ajz/
 벝	aje/
 벞	ajx/
 벟	ajw/
-베	ap/
-벡	apy/
+베	ap/	100%
+벡	apy/	100%
 벢	apyy/
 벣	apyb/
-벤	apl/
+벤	apl/	100%
 벥	aplu/
 벦	aplw/
-벧	apc/
-벨	aps/
+벧	apc/	100%
+벨	aps/	100%
 벩	apsy/
 벪	apso/
 벫	apsa/
@@ -13072,27 +13072,27 @@ use_preset_vocabulary: false
 벭	apse/
 벮	apsx/
 벯	apsw/
-벰	apo/
-벱	apa/
+벰	apo/	100%
+벱	apa/	100%
 벲	apab/
-벳	apb/
-벴	apbb/
-벵	apq/
+벳	apb/	100%
+벴	apbb/	100%
+벵	apq/	100%
 벶	apu/
 벷	apd/
 벸	apz/
 벹	ape/
 벺	apx/
 벻	apw/
-벼	ag/
-벽	agy/
+벼	ag/	100%
+벽	agy/	100%
 벾	agyy/
 벿	agyb/
-변	agl/
+변	agl/	100%
 볁	aglu/
 볂	aglw/
 볃	agc/
-별	ags/
+별	ags/	100%
 볅	agsy/
 볆	agso/
 볇	agsa/
@@ -13101,22 +13101,22 @@ use_preset_vocabulary: false
 볊	agsx/
 볋	agsw/
 볌	ago/
-볍	aga/
+볍	aga/	100%
 볎	agab/
-볏	agb/
-볐	agbb/
-병	agq/
+볏	agb/	100%
+볐	agbb/	100%
+병	agq/	100%
 볒	agu/
 볓	agd/
 볔	agz/
-볕	age/
+볕	age/	100%
 볖	agx/
 볗	agw/
-볘	app/
+볘	app/	100%
 볙	appy/
 볚	appyy/
 볛	appyb/
-볜	appl/
+볜	appl/	100%
 볝	applu/
 볞	applw/
 볟	appc/
@@ -13140,15 +13140,15 @@ use_preset_vocabulary: false
 볱	appe/
 볲	appx/
 볳	appw/
-보	an/
-복	any/
-볶	anyy/
+보	an/	100%
+복	any/	100%
+볶	anyy/	100%
 볷	anyb/
-본	anl/
+본	anl/	100%
 볹	anlu/
 볺	anlw/
 볻	anc/
-볼	ans/
+볼	ans/	100%
 볽	ansy/
 볾	anso/
 볿	ansa/
@@ -13157,23 +13157,23 @@ use_preset_vocabulary: false
 봁	anse/
 봂	ansx/
 봃	answ/
-봄	ano/
-봅	ana/
+봄	ano/	100%
+봅	ana/	100%
 봆	anab/
-봇	anb/
+봇	anb/	100%
 봈	anbb/
-봉	anq/
+봉	anq/	100%
 봊	anu/
 봋	and/
 봌	anz/
 봍	ane/
 봎	anx/
 봏	anw/
-봐	ank/
+봐	ank/	100%
 봑	anky/
 봒	ankyy/
 봓	ankyb/
-봔	ankl/
+봔	ankl/	100%
 봕	anklu/
 봖	anklw/
 봗	ankc/
@@ -13189,7 +13189,7 @@ use_preset_vocabulary: false
 봡	anka/
 봢	ankab/
 봣	ankb/
-봤	ankbb/
+봤	ankbb/	100%
 봥	ankq/
 봦	anku/
 봧	ankd/
@@ -13197,7 +13197,7 @@ use_preset_vocabulary: false
 봩	anke/
 봪	ankx/
 봫	ankw/
-봬	anh/
+봬	anh/	100%
 봭	anhy/
 봮	anhyy/
 봯	anhyb/
@@ -13217,7 +13217,7 @@ use_preset_vocabulary: false
 봽	anha/
 봾	anhab/
 봿	anhb/
-뵀	anhbb/
+뵀	anhbb/	100%
 뵁	anhq/
 뵂	anhu/
 뵃	anhd/
@@ -13225,15 +13225,15 @@ use_preset_vocabulary: false
 뵅	anhe/
 뵆	anhx/
 뵇	anhw/
-뵈	ani/
-뵉	aniy/
+뵈	ani/	100%
+뵉	aniy/	100%
 뵊	aniyy/
 뵋	aniyb/
-뵌	anil/
+뵌	anil/	100%
 뵍	anilu/
 뵎	anilw/
 뵏	anic/
-뵐	anis/
+뵐	anis/	100%
 뵑	anisy/
 뵒	aniso/
 뵓	anisa/
@@ -13241,8 +13241,8 @@ use_preset_vocabulary: false
 뵕	anise/
 뵖	anisx/
 뵗	anisw/
-뵘	anio/
-뵙	ania/
+뵘	anio/	100%
+뵙	ania/	100%
 뵚	aniab/
 뵛	anib/
 뵜	anibb/
@@ -13253,11 +13253,11 @@ use_preset_vocabulary: false
 뵡	anie/
 뵢	anix/
 뵣	aniw/
-뵤	am/
+뵤	am/	100%
 뵥	amy/
 뵦	amyy/
 뵧	amyb/
-뵨	aml/
+뵨	aml/	100%
 뵩	amlu/
 뵪	amlw/
 뵫	amc/
@@ -13281,35 +13281,35 @@ use_preset_vocabulary: false
 뵽	ame/
 뵾	amx/
 뵿	amw/
-부	at/
-북	aty/
+부	at/	100%
+북	aty/	100%
 붂	atyy/
 붃	atyb/
-분	atl/
+분	atl/	100%
 붅	atlu/
 붆	atlw/
-붇	atc/
-불	ats/
-붉	atsy/
-붊	atso/
+붇	atc/	100%
+불	ats/	100%
+붉	atsy/	100%
+붊	atso/	100%
 붋	atsa/
 붌	atsb/
 붍	atse/
 붎	atsx/
 붏	atsw/
-붐	ato/
-붑	ata/
+붐	ato/	100%
+붑	ata/	100%
 붒	atab/
-붓	atb/
+붓	atb/	100%
 붔	atbb/
-붕	atq/
+붕	atq/	100%
 붖	atu/
 붗	atd/
 붘	atz/
-붙	ate/
-붚	atx/
+붙	ate/	100%
+붚	atx/	100%
 붛	atw/
-붜	atj/
+붜	atj/	100%
 붝	atjy/
 붞	atjyy/
 붟	atjyb/
@@ -13317,7 +13317,7 @@ use_preset_vocabulary: false
 붡	atjld/
 붢	atjlw/
 붣	atjc/
-붤	atjs/
+붤	atjs/	100%
 붥	atjsy/
 붦	atjso/
 붧	atjsa/
@@ -13329,7 +13329,7 @@ use_preset_vocabulary: false
 붭	atja/
 붮	atjab/
 붯	atjb/
-붰	atjbb/
+붰	atjbb/	100%
 붱	atjq/
 붲	atju/
 붳	atjd/
@@ -13337,7 +13337,7 @@ use_preset_vocabulary: false
 붵	atje/
 붶	atjx/
 붷	atjw/
-붸	atp/
+붸	atp/	100%
 붹	atpy/
 붺	atpyy/
 붻	atpyb/
@@ -13365,15 +13365,15 @@ use_preset_vocabulary: false
 뷑	atpe/
 뷒	atpx/
 뷓	atpw/
-뷔	ati/
-뷕	atiy/
+뷔	ati/	100%
+뷕	atiy/	100%
 뷖	atiyy/
 뷗	atiyb/
-뷘	atil/
+뷘	atil/	100%
 뷙	atilu/
 뷚	atilw/
 뷛	atic/
-뷜	atis/
+뷜	atis/	100%
 뷝	atisy/
 뷞	atiso/
 뷟	atisa/
@@ -13386,22 +13386,22 @@ use_preset_vocabulary: false
 뷦	atiab/
 뷧	atib/
 뷨	atibb/
-뷩	atiq/
+뷩	atiq/	100%
 뷪	atiu/
 뷫	atid/
 뷬	atiz/
 뷭	atie/
 뷮	atix/
 뷯	atiw/
-뷰	ar/
+뷰	ar/	100%
 뷱	ary/
 뷲	aryy/
 뷳	aryb/
-뷴	arl/
+뷴	arl/	100%
 뷵	arlu/
 뷶	arlw/
 뷷	arc/
-뷸	ars/
+뷸	ars/	100%
 뷹	arsy/
 뷺	arso/
 뷻	arsa/
@@ -13410,27 +13410,27 @@ use_preset_vocabulary: false
 뷾	arsx/
 뷿	arsw/
 #20
-븀	aro/
+븀	aro/	100%
 븁	ara/
 븂	arab/
-븃	arb/
+븃	arb/	100%
 븄	arbb/
-븅	arq/
+븅	arq/	100%
 븆	aru/
 븇	ard/
 븈	arz/
 븉	are/
 븊	arx/
 븋	arw/
-브	av/
-븍	avy/
+브	av/	100%
+븍	avy/	100%
 븎	avyy/
 븏	avyb/
-븐	avl/
+븐	avl/	100%
 븑	avlu/
 븒	avlw/
 븓	avc/
-블	avs/
+블	avs/	100%
 븕	avsy/
 븖	avso/
 븗	avsa/
@@ -13438,10 +13438,10 @@ use_preset_vocabulary: false
 븙	avse/
 븚	avsx/
 븛	avsw/
-븜	avo/
-븝	ava/
+븜	avo/	100%
+븝	ava/	100%
 븞	avab/
-븟	avb/
+븟	avb/	100%
 븠	avbb/
 븡	avq/
 븢	avu/
@@ -13478,71 +13478,71 @@ use_preset_vocabulary: false
 빁	avie/
 빂	avix/
 빃	aviw/
-비	ai/
-빅	aiy/
+비	ai/	100%
+빅	aiy/	100%
 빆	aiyy/
 빇	aiyb/
-빈	ail/
+빈	ail/	100%
 빉	ailu/
 빊	ailw/
 빋	aic/
-빌	ais/
+빌	ais/	100%
 빍	aisy/
-빎	aiso/
+빎	aiso/	100%
 빏	aisa/
 빐	aisb/
 빑	aise/
 빒	aisx/
 빓	aisw/
-빔	aio/
-빕	aia/
+빔	aio/	100%
+빕	aia/	100%
 빖	aiab/
-빗	aib/
+빗	aib/	100%
 빘	aibb/
-빙	aiq/
-빚	aiu/
-빛	aid/
+빙	aiq/	100%
+빚	aiu/	100%
+빛	aid/	100%
 빜	aiz/
 빝	aie/
 빞	aix/
 빟	aiw/
-빠	aak/
-빡	aaky/
+빠	aak/	100%
+빡	aaky/	100%
 빢	aakyy/
 빣	aakyb/
-빤	aakl/
+빤	aakl/	100%
 빥	aaklu/
 빦	aaklw/
 빧	aakc/
-빨	aaks/
+빨	aaks/	100%
 빩	aaksy/
-빪	aakso/
+빪	aakso/	100%
 빫	aaksa/
 빬	aaksb/
 빭	aakse/
 빮	aaksx/
 빯	aaksw/
-빰	aako/
-빱	aaka/
+빰	aako/	100%
+빱	aaka/	100%
 빲	aakab/
-빳	aakb/
-빴	aakbb/
-빵	aakq/
+빳	aakb/	100%
+빴	aakbb/	100%
+빵	aakq/	100%
 빶	aaku/
 빷	aakd/
 빸	aakz/
 빹	aake/
 빺	aakx/
-빻	aakw/
-빼	aah/
-빽	aahy/
+빻	aakw/	100%
+빼	aah/	100%
+빽	aahy/	100%
 빾	aahyy/
 빿	aahyb/
-뺀	aahl/
+뺀	aahl/	100%
 뺁	aahlu/
 뺂	aahlw/
 뺃	aahc/
-뺄	aahs/
+뺄	aahs/	100%
 뺅	aahsy/
 뺆	aahso/
 뺇	aahsa/
@@ -13550,20 +13550,20 @@ use_preset_vocabulary: false
 뺉	aahse/
 뺊	aahsx/
 뺋	aahsw/
-뺌	aaho/
-뺍	aaha/
+뺌	aaho/	100%
+뺍	aaha/	100%
 뺎	aahab/
-뺏	aahb/
-뺐	aahbb/
-뺑	aahq/
+뺏	aahb/	100%
+뺐	aahbb/	100%
+뺑	aahq/	100%
 뺒	aahu/
 뺓	aahd/
 뺔	aahz/
 뺕	aahe/
 뺖	aahx/
 뺗	aahw/
-뺘	aaf/
-뺙	aafy/
+뺘	aaf/	100%
+뺙	aafy/	100%
 뺚	aafyy/
 뺛	aafyb/
 뺜	aafl/
@@ -13578,7 +13578,7 @@ use_preset_vocabulary: false
 뺥	aafse/
 뺦	aafsx/
 뺧	aafsw/
-뺨	aafo/
+뺨	aafo/	100%
 뺩	aafa/
 뺪	aafab/
 뺫	aafb/
@@ -13618,15 +13618,15 @@ use_preset_vocabulary: false
 뻍	vahe/
 뻎	vahx/
 뻏	vahw/
-뻐	aaj/
-뻑	aajy/
+뻐	aaj/	100%
+뻑	aajy/	100%
 뻒	aajyy/
 뻓	aajyb/
-뻔	aajl/
+뻔	aajl/	100%
 뻕	aajlu/
 뻖	aajlw/
-뻗	aajc/
-뻘	aajs/
+뻗	aajc/	100%
+뻘	aajs/	100%
 뻙	aajsy/
 뻚	aajso/
 뻛	aajsa/
@@ -13634,19 +13634,19 @@ use_preset_vocabulary: false
 뻝	aajse/
 뻞	aajsx/
 뻟	aajsw/
-뻠	aajo/
+뻠	aajo/	100%
 뻡	aaja/
 뻢	aajab/
-뻣	aajb/
-뻤	aajbb/
-뻥	aajq/
+뻣	aajb/	100%
+뻤	aajbb/	100%
+뻥	aajq/	100%
 뻦	aaju/
 뻧	aajd/
 뻨	aajz/
 뻩	aaje/
 뻪	aajx/
 뻫	aajw/
-뻬	aap/
+뻬	aap/	100%
 뻭	aapy/
 뻮	aapyy/
 뻯	aapyb/
@@ -13668,15 +13668,15 @@ use_preset_vocabulary: false
 뻿	aapb/
 #21
 뼀	aapbb/
-뼁	aapq/
+뼁	aapq/	100%
 뼂	aapu/
 뼃	aapd/
 뼄	aapz/
 뼅	aape/
 뼆	aapx/
 뼇	aapw/
-뼈	aag/
-뼉	aagy/
+뼈	aag/	100%
+뼉	aagy/	100%
 뼊	aagyy/
 뼋	aagyb/
 뼌	aagl/
@@ -13691,12 +13691,12 @@ use_preset_vocabulary: false
 뼕	aagse/
 뼖	aagsx/
 뼗	aagsw/
-뼘	aago/
-뼙	aaga/
+뼘	aago/	100%
+뼙	aaga/	100%
 뼚	aagab/
-뼛	aagb/
-뼜	aagbb/
-뼝	aagq/
+뼛	aagb/	100%
+뼜	aagbb/	100%
+뼝	aagq/	100%
 뼞	aagu/
 뼟	aagd/
 뼠	aagz/
@@ -13731,15 +13731,15 @@ use_preset_vocabulary: false
 뼽	vape/
 뼾	vapx/
 뼿	vapw/
-뽀	aan/
-뽁	aany/
+뽀	aan/	100%
+뽁	aany/	100%
 뽂	aanyy/
 뽃	aanyb/
-뽄	aanl/
+뽄	aanl/	100%
 뽅	aanlu/
 뽆	aanlw/
 뽇	aanc/
-뽈	aans/
+뽈	aans/	100%
 뽉	aansy/
 뽊	aanso/
 뽋	aansa/
@@ -13747,12 +13747,12 @@ use_preset_vocabulary: false
 뽍	aanse/
 뽎	aansx/
 뽏	aansw/
-뽐	aano/
-뽑	aana/
+뽐	aano/	100%
+뽑	aana/	100%
 뽒	aanab/
 뽓	aanb/
 뽔	aanbb/
-뽕	aanq/
+뽕	aanq/	100%
 뽖	aanu/
 뽗	aand/
 뽘	aanz/
@@ -13815,7 +13815,7 @@ use_preset_vocabulary: false
 뾑	aanhe/
 뾒	aanhx/
 뾓	aanhw/
-뾔	aani/
+뾔	aani/	100%
 뾕	aaniy/
 뾖	aaniyy/
 뾗	aaniyb/
@@ -13843,7 +13843,7 @@ use_preset_vocabulary: false
 뾭	aanie/
 뾮	aanix/
 뾯	aaniw/
-뾰	aam/
+뾰	aam/	100%
 뾱	aamy/
 뾲	aamyy/
 뾳	aamyb/
@@ -13864,22 +13864,22 @@ use_preset_vocabulary: false
 뿂	aamab/
 뿃	aamb/
 뿄	aambb/
-뿅	aamq/
+뿅	aamq/	100%
 뿆	aamu/
 뿇	aamd/
 뿈	aamz/
 뿉	aame/
 뿊	aamx/
 뿋	aamw/
-뿌	aat/
-뿍	aaty/
+뿌	aat/	100%
+뿍	aaty/	100%
 뿎	aatyy/
 뿏	aatyb/
-뿐	aatl/
+뿐	aatl/	100%
 뿑	aatlu/
 뿒	aatlw/
 뿓	aatc/
-뿔	aats/
+뿔	aats/	100%
 뿕	aatsy/
 뿖	aatso/
 뿗	aatsa/
@@ -13887,12 +13887,12 @@ use_preset_vocabulary: false
 뿙	aatse/
 뿚	aatsx/
 뿛	aatsw/
-뿜	aato/
+뿜	aato/	100%
 뿝	aata/
 뿞	aatab/
-뿟	aatb/
+뿟	aatb/	100%
 뿠	aatbb/
-뿡	aatq/
+뿡	aatq/	100%
 뿢	aatu/
 뿣	aatd/
 뿤	aatz/
@@ -13984,7 +13984,7 @@ use_preset_vocabulary: false
 쀹	aatie/
 쀺	aatix/
 쀻	aatiw/
-쀼	aar/
+쀼	aar/	100%
 쀽	aary/
 쀾	aaryy/
 쀿	aaryb/
@@ -14005,22 +14005,22 @@ use_preset_vocabulary: false
 쁎	aarab/
 쁏	aarb/
 쁐	aarbb/
-쁑	aarq/
+쁑	aarq/	100%
 쁒	aaru/
 쁓	aard/
 쁔	aarz/
 쁕	aare/
 쁖	aarx/
 쁗	aarw/
-쁘	aav/
+쁘	aav/	100%
 쁙	aavy/
 쁚	aavyy/
 쁛	aavyb/
-쁜	aavl/
+쁜	aavl/	100%
 쁝	aavlu/
 쁞	aavlw/
 쁟	aavc/
-쁠	aavs/
+쁠	aavs/	100%
 쁡	aavsy/
 쁢	aavso/
 쁣	aavsa/
@@ -14028,8 +14028,8 @@ use_preset_vocabulary: false
 쁥	aavse/
 쁦	aavsx/
 쁧	aavsw/
-쁨	aavo/
-쁩	aava/
+쁨	aavo/	100%
+쁩	aava/	100%
 쁪	aavab/
 쁫	aavb/
 쁬	aavbb/
@@ -14068,15 +14068,15 @@ use_preset_vocabulary: false
 삍	aavie/
 삎	aavix/
 삏	aaviw/
-삐	aai/
-삑	aaiy/
+삐	aai/	100%
+삑	aaiy/	100%
 삒	aaiyy/
 삓	aaiyb/
-삔	aail/
+삔	aail/	100%
 삕	aailu/
 삖	aailw/
 삗	aaic/
-삘	aais/
+삘	aais/	100%
 삙	aaisy/
 삚	aaiso/
 삛	aaisa/
@@ -14084,55 +14084,55 @@ use_preset_vocabulary: false
 삝	aaise/
 삞	aaisx/
 삟	aaisw/
-삠	aaio/
-삡	aaia/
+삠	aaio/	100%
+삡	aaia/	100%
 삢	aaiab/
-삣	aaib/
+삣	aaib/	100%
 삤	aaibb/
-삥	aaiq/
+삥	aaiq/	100%
 삦	aaiu/
 삧	aaid/
 삨	aaiz/
 삩	aaie/
 삪	aaix/
 삫	aaiw/
-사	bk/
-삭	bky/
+사	bk/	100%
+삭	bky/	100%
 삮	bkyy/
-삯	bkyb/
-산	bkl/
+삯	bkyb/	100%
+산	bkl/	100%
 삱	bklu/
 삲	bklw/
-삳	bkc/
-살	bks/
-삵	bksy/
-삶	bkso/
+삳	bkc/	100%
+살	bks/	100%
+삵	bksy/	100%
+삶	bkso/	100%
 삷	bksa/
 삸	bksb/
 삹	bkse/
 삺	bksx/
 삻	bksw/
-삼	bko/
-삽	bka/
+삼	bko/	100%
+삽	bka/	100%
 삾	bkab/
-삿	bkb/
-샀	bkbb/
-상	bkq/
+삿	bkb/	100%
+샀	bkbb/	100%
+상	bkq/	100%
 샂	bku/
 샃	bkd/
 샄	bkz/
-샅	bke/
+샅	bke/	100%
 샆	bkx/
 샇	bkw/
-새	bh/
-색	bhy/
+새	bh/	100%
+색	bhy/	100%
 샊	bhyy/
 샋	bhyb/
-샌	bhl/
+샌	bhl/	100%
 샍	bhlu/
 샎	bhlw/
 샏	bhc/
-샐	bhs/
+샐	bhs/	100%
 샑	bhsy/
 샒	bhso/
 샓	bhsa/
@@ -14140,27 +14140,27 @@ use_preset_vocabulary: false
 샕	bhse/
 샖	bhsx/
 샗	bhsw/
-샘	bho/
-샙	bha/
+샘	bho/	100%
+샙	bha/	100%
 샚	bhab/
-샛	bhb/
-샜	bhbb/
-생	bhq/
+샛	bhb/	100%
+샜	bhbb/	100%
+생	bhq/	100%
 샞	bhu/
 샟	bhd/
 샠	bhz/
 샡	bhe/
 샢	bhx/
 샣	bhw/
-샤	bf/
-샥	bfy/
+샤	bf/	100%
+샥	bfy/	100%
 샦	bfyy/
 샧	bfyb/
-샨	bfl/
+샨	bfl/	100%
 샩	bflu/
 샪	bflw/
 샫	bfc/
-샬	bfs/
+샬	bfs/	100%
 샭	bfsy/
 샮	bfso/
 샯	bfsa/
@@ -14168,12 +14168,12 @@ use_preset_vocabulary: false
 샱	bfse/
 샲	bfsx/
 샳	bfsw/
-샴	bfo/
-샵	bfa/
+샴	bfo/	100%
+샵	bfa/	100%
 샶	bfab/
-샷	bfb/
+샷	bfb/	100%
 샸	bfbb/
-샹	bfq/
+샹	bfq/	100%
 샺	bfu/
 샻	bfd/
 샼	bfz/
@@ -14181,15 +14181,15 @@ use_preset_vocabulary: false
 샾	bfx/
 샿	bfw/
 #23
-섀	bhh/
+섀	bhh/	100%
 섁	bhhy/
 섂	bhhyy/
 섃	bhhyb/
-섄	bhhl/
+섄	bhhl/	100%
 섅	bhhlu/
 섆	bhhlw/
 섇	bhhc/
-섈	bhhs/
+섈	bhhs/	100%
 섉	bhhsy/
 섊	bhhso/
 섋	bhhsa/
@@ -14197,55 +14197,55 @@ use_preset_vocabulary: false
 섍	bhhse/
 섎	bhhsx/
 섏	bhhsw/
-섐	bhho/
+섐	bhho/	100%
 섑	bhha/
 섒	bhhab/
 섓	bhhb/
 섔	bhhbb/
-섕	bhhq/
+섕	bhhq/	100%
 섖	bhhu/
 섗	bhhd/
 섘	bhhz/
 섙	bhhe/
 섚	bhhx/
 섛	bhhw/
-서	bj/
-석	bjy/
-섞	bjyy/
-섟	bjyb/
-선	bjl/
+서	bj/	100%
+석	bjy/	100%
+섞	bjyy/	100%
+섟	bjyb/	100%
+선	bjl/	100%
 섡	bjlu/
 섢	bjlw/
-섣	bjc/
-설	bjs/
+섣	bjc/	100%
+설	bjs/	100%
 섥	bjsy/
-섦	bjso/
-섧	bjsa/
+섦	bjso/	100%
+섧	bjsa/	100%
 섨	bjsb/
 섩	bjse/
 섪	bjsx/
 섫	bjsw/
-섬	bjo/
-섭	bja/
+섬	bjo/	100%
+섭	bja/	100%
 섮	bjab/
-섯	bjb/
-섰	bjbb/
-성	bjq/
+섯	bjb/	100%
+섰	bjbb/	100%
+성	bjq/	100%
 섲	bju/
 섳	bjd/
 섴	bjz/
 섵	bje/
-섶	bjx/
+섶	bjx/	100%
 섷	bjw/
-세	bp/
-섹	bpy/
+세	bp/	100%
+섹	bpy/	100%
 섺	bpyy/
 섻	bpyb/
-센	bpl/
+센	bpl/	100%
 섽	bplu/
 섾	bplw/
 섿	bpc/
-셀	bps/
+셀	bps/	100%
 셁	bpsy/
 셂	bpso/
 셃	bpsa/
@@ -14253,27 +14253,27 @@ use_preset_vocabulary: false
 셅	bpse/
 셆	bpsx/
 셇	bpsw/
-셈	bpo/
-셉	bpa/
+셈	bpo/	100%
+셉	bpa/	100%
 셊	bpab/
-셋	bpb/
-셌	bpbb/
-셍	bpq/
+셋	bpb/	100%
+셌	bpbb/	100%
+셍	bpq/	100%
 셎	bpu/
 셏	bpd/
 셐	bpz/
 셑	bpe/
 셒	bpx/
 셓	bpw/
-셔	bg/
-셕	bgy/
+셔	bg/	100%
+셕	bgy/	100%
 셖	bgyy/
 셗	bgyb/
-션	bgl/
+션	bgl/	100%
 셙	bglu/
 셚	bglw/
 셛	bgc/
-셜	bgs/
+셜	bgs/	100%
 셝	bgsy/
 셞	bgso/
 셟	bgsa/
@@ -14281,27 +14281,27 @@ use_preset_vocabulary: false
 셡	bgse/
 셢	bgsx/
 셣	bgsw/
-셤	bgo/
-셥	bga/
+셤	bgo/	100%
+셥	bga/	100%
 셦	bgab/
-셧	bgb/
-셨	bgbb/
-셩	bgq/
+셧	bgb/	100%
+셨	bgbb/	100%
+셩	bgq/	100%
 셪	bgu/
 셫	bgd/
 셬	bgz/
 셭	bge/
 셮	bgx/
 셯	bgw/
-셰	bpp/
+셰	bpp/	100%
 셱	bppy/
 셲	bppyy/
 셳	bppyb/
-셴	bppl/
+셴	bppl/	100%
 셵	bpplu/
 셶	bpplw/
 셷	bppc/
-셸	bpps/
+셸	bpps/	100%
 셹	bppsy/
 셺	bppso/
 셻	bppsa/
@@ -14314,50 +14314,50 @@ use_preset_vocabulary: false
 솂	bppab/
 솃	bppb/
 솄	bppbb/
-솅	bppq/
+솅	bppq/	100%
 솆	bppu/
 솇	bppd/
 솈	bppz/
 솉	bppe/
 솊	bppx/
 솋	bppw/
-소	bn/
-속	bny/
-솎	bnyy/
+소	bn/	100%
+속	bny/	100%
+솎	bnyy/	100%
 솏	bnyb/
-손	bnl/
+손	bnl/	100%
 솑	bnlu/
 솒	bnlw/
 솓	bnc/
-솔	bns/
+솔	bns/	100%
 솕	bnsy/
-솖	bnso/
+솖	bnso/	100%
 솗	bnsa/
 솘	bnsb/
 솙	bnse/
 솚	bnsx/
 솛	bnsw/
-솜	bno/
-솝	bna/
+솜	bno/	100%
+솝	bna/	100%
 솞	bnab/
-솟	bnb/
+솟	bnb/	100%
 솠	bnbb/
-송	bnq/
+송	bnq/	100%
 솢	bnu/
 솣	bnd/
 솤	bnz/
-솥	bne/
+솥	bne/	100%
 솦	bnx/
 솧	bnw/
-솨	bnk/
-솩	bnky/
+솨	bnk/	100%
+솩	bnky/	100%
 솪	bnkyy/
 솫	bnkyb/
-솬	bnkl/
+솬	bnkl/	100%
 솭	bnklu/
 솮	bnklw/
 솯	bnkc/
-솰	bnks/
+솰	bnks/	100%
 솱	bnksy/
 솲	bnkso/
 솳	bnksa/
@@ -14370,22 +14370,22 @@ use_preset_vocabulary: false
 솺	bnkab/
 솻	bnkb/
 솼	bnkbb/
-솽	bnkq/
+솽	bnkq/	100%
 솾	bnku/
 솿	bnkd/
 쇀	bnkz/
 쇁	bnke/
 쇂	bnkx/
 쇃	bnkw/
-쇄	bnh/
+쇄	bnh/	100%
 쇅	bnhy/
 쇆	bnhyy/
 쇇	bnhyb/
-쇈	bnhl/
+쇈	bnhl/	100%
 쇉	bnhlu/
 쇊	bnhlw/
 쇋	bnhc/
-쇌	bnhs/
+쇌	bnhs/	100%
 쇍	bnhsy/
 쇎	bnhso/
 쇏	bnhsa/
@@ -14393,11 +14393,11 @@ use_preset_vocabulary: false
 쇑	bnhse/
 쇒	bnhsx/
 쇓	bnhsw/
-쇔	bnho/
+쇔	bnho/	100%
 쇕	bnha/
 쇖	bnhab/
-쇗	bnhb/
-쇘	bnhbb/
+쇗	bnhb/	100%
+쇘	bnhbb/	100%
 쇙	bnhq/
 쇚	bnhu/
 쇛	bnhd/
@@ -14405,15 +14405,15 @@ use_preset_vocabulary: false
 쇝	bnhe/
 쇞	bnhx/
 쇟	bnhw/
-쇠	bni/
+쇠	bni/	100%
 쇡	bniy/
 쇢	bniyy/
 쇣	bniyb/
-쇤	bnil/
+쇤	bnil/	100%
 쇥	bnilu/
 쇦	bnilw/
 쇧	bnic/
-쇨	bnis/
+쇨	bnis/	100%
 쇩	bnisy/
 쇪	bniso/
 쇫	bnisa/
@@ -14421,10 +14421,10 @@ use_preset_vocabulary: false
 쇭	bnise/
 쇮	bnisx/
 쇯	bnisw/
-쇰	bnio/
-쇱	bnia/
+쇰	bnio/	100%
+쇱	bnia/	100%
 쇲	bniab/
-쇳	bnib/
+쇳	bnib/	100%
 쇴	bnibb/
 쇵	bniq/
 쇶	bniu/
@@ -14433,16 +14433,16 @@ use_preset_vocabulary: false
 쇹	bnie/
 쇺	bnix/
 쇻	bniw/
-쇼	bm/
-쇽	bmy/
+쇼	bm/	100%
+쇽	bmy/	100%
 쇾	bmyy/
 쇿	bmyb/
 #24
-숀	bml/
+숀	bml/	100%
 숁	bmlu/
 숂	bmlw/
 숃	bmc/
-숄	bms/
+숄	bms/	100%
 숅	bmsy/
 숆	bmso/
 숇	bmsa/
@@ -14450,27 +14450,27 @@ use_preset_vocabulary: false
 숉	bmse/
 숊	bmsx/
 숋	bmsw/
-숌	bmo/
-숍	bma/
+숌	bmo/	100%
+숍	bma/	100%
 숎	bmab/
-숏	bmb/
+숏	bmb/	100%
 숐	bmbb/
-숑	bmq/
+숑	bmq/	100%
 숒	bmu/
 숓	bmd/
 숔	bmz/
 숕	bme/
 숖	bmx/
 숗	bmw/
-수	bt/
-숙	bty/
+수	bt/	100%
+숙	bty/	100%
 숚	btyy/
 숛	btyb/
-순	btl/
+순	btl/	100%
 숝	btlu/
 숞	btlw/
-숟	btc/
-술	bts/
+숟	btc/	100%
+술	bts/	100%
 숡	btsy/
 숢	btso/
 숣	btsa/
@@ -14478,19 +14478,19 @@ use_preset_vocabulary: false
 숥	btse/
 숦	btsx/
 숧	btsw/
-숨	bto/
-숩	bta/
+숨	bto/	100%
+숩	bta/	100%
 숪	btab/
-숫	btb/
+숫	btb/	100%
 숬	btbb/
-숭	btq/
+숭	btq/	100%
 숮	btu/
-숯	btd/
+숯	btd/	100%
 숰	btz/
-숱	bte/
-숲	btx/
+숱	bte/	100%
+숲	btx/	100%
 숳	btw/
-숴	btj/
+숴	btj/	100%
 숵	btjy/
 숶	btjyy/
 숷	btjyb/
@@ -14510,7 +14510,7 @@ use_preset_vocabulary: false
 쉅	btja/
 쉆	btjab/
 쉇	btjb/
-쉈	btjbb/
+쉈	btjbb/	100%
 쉉	btjq/
 쉊	btju/
 쉋	btjd/
@@ -14518,15 +14518,15 @@ use_preset_vocabulary: false
 쉍	btje/
 쉎	btjx/
 쉏	btjw/
-쉐	btp/
-쉑	btpy/
+쉐	btp/	100%
+쉑	btpy/	100%
 쉒	btpyy/
 쉓	btpyb/
-쉔	btpl/
+쉔	btpl/	100%
 쉕	btplu/
 쉖	btplw/
 쉗	btpc/
-쉘	btps/
+쉘	btps/	100%
 쉙	btpsy/
 쉚	btpso/
 쉛	btpsa/
@@ -14534,27 +14534,27 @@ use_preset_vocabulary: false
 쉝	btpse/
 쉞	btpsx/
 쉟	btpsw/
-쉠	btpo/
+쉠	btpo/	100%
 쉡	btpa/
 쉢	btpab/
 쉣	btpb/
 쉤	btpbb/
-쉥	btpq/
+쉥	btpq/	100%
 쉦	btpu/
 쉧	btpd/
 쉨	btpz/
 쉩	btpe/
 쉪	btpx/
 쉫	btpw/
-쉬	bti/
-쉭	btiy/
+쉬	bti/	100%
+쉭	btiy/	100%
 쉮	btiyy/
 쉯	btiyb/
-쉰	btil/
+쉰	btil/	100%
 쉱	btilu/
 쉲	btilw/
 쉳	btic/
-쉴	btis/
+쉴	btis/	100%
 쉵	btisy/
 쉶	btiso/
 쉷	btisa/
@@ -14562,27 +14562,27 @@ use_preset_vocabulary: false
 쉹	btise/
 쉺	btisx/
 쉻	btisw/
-쉼	btio/
-쉽	btia/
+쉼	btio/	100%
+쉽	btia/	100%
 쉾	btiab/
-쉿	btib/
+쉿	btib/	100%
 슀	btibb/
-슁	btiq/
+슁	btiq/	100%
 슂	btiu/
 슃	btid/
 슄	btiz/
 슅	btie/
 슆	btix/
 슇	btiw/
-슈	br/
-슉	bry/
+슈	br/	100%
+슉	bry/	100%
 슊	bryy/
 슋	bryb/
 슌	brl/
 슍	brlu/
 슎	brlw/
 슏	brc/
-슐	brs/
+슐	brs/	100%
 슑	brsy/
 슒	brso/
 슓	brsa/
@@ -14590,40 +14590,40 @@ use_preset_vocabulary: false
 슕	brse/
 슖	brsx/
 슗	brsw/
-슘	bro/
+슘	bro/	100%
 슙	bra/
 슚	brab/
-슛	brb/
+슛	brb/	100%
 슜	brbb/
-슝	brq/
+슝	brq/	100%
 슞	bru/
 슟	brd/
 슠	brz/
 슡	bre/
 슢	brx/
 슣	brw/
-스	bv/
-슥	bvy/
+스	bv/	100%
+슥	bvy/	100%
 슦	bvyy/
 슧	bvyb/
-슨	bvl/
+슨	bvl/	100%
 슩	bvlu/
 슪	bvlw/
 슫	bvc/
-슬	bvs/
-슭	bvsy/
+슬	bvs/	100%
+슭	bvsy/	100%
 슮	bvso/
 슯	bvsa/
 슰	bvsb/
 슱	bvse/
 슲	bvsx/
 슳	bvsw/
-슴	bvo/
-습	bva/
+슴	bvo/	100%
+습	bva/	100%
 슶	bvab/
-슷	bvb/
+슷	bvb/	100%
 슸	bvbb/
-승	bvq/
+승	bvq/	100%
 슺	bvu/
 슻	bvd/
 슼	bvz/
@@ -14658,44 +14658,44 @@ use_preset_vocabulary: false
 싙	bvie/
 싚	bvix/
 싛	bviw/
-시	bi/
-식	biy/
+시	bi/	100%
+식	biy/	100%
 싞	biyy/
 싟	biyb/
-신	bil/
+신	bil/	100%
 싡	bilu/
 싢	bilw/
-싣	bic/
-실	bis/
+싣	bic/	100%
+실	bis/	100%
 싥	bisy/
 싦	biso/
 싧	bisa/
 싨	bisb/
 싩	bise/
 싪	bisx/
-싫	bisw/
-심	bio/
-십	bia/
+싫	bisw/	100%
+심	bio/	100%
+십	bia/	100%
 싮	biab/
-싯	bib/
+싯	bib/	100%
 싰	bibb/
-싱	biq/
+싱	biq/	100%
 싲	biu/
 싳	bid/
 싴	biz/
 싵	bie/
-싶	bix/
+싶	bix/	100%
 싷	biw/
-싸	bbk/
-싹	bbky/
+싸	bbk/	100%
+싹	bbky/	100%
 싺	bbkyy/
-싻	bbkyb/
-싼	bbkl/
+싻	bbkyb/	100%
+싼	bbkl/	100%
 싽	bbklu/
 싾	bbklw/
 싿	bbkc/
 #25
-쌀	bbks/
+쌀	bbks/	100%
 쌁	bbksy/
 쌂	bbkso/
 쌃	bbksa/
@@ -14703,27 +14703,27 @@ use_preset_vocabulary: false
 쌅	bbkse/
 쌆	bbksx/
 쌇	bbksw/
-쌈	bbko/
-쌉	bbka/
+쌈	bbko/	100%
+쌉	bbka/	100%
 쌊	bbkab/
 쌋	bbkb/
-쌌	bbkbb/
-쌍	bbkq/
+쌌	bbkbb/	100%
+쌍	bbkq/	100%
 쌎	bbku/
 쌏	bbkd/
 쌐	bbkz/
 쌑	bbke/
 쌒	bbkx/
-쌓	bbkw/
-쌔	bbh/
-쌕	bbhy/
+쌓	bbkw/	100%
+쌔	bbh/	100%
+쌕	bbhy/	100%
 쌖	bbhyy/
 쌗	bbhyb/
-쌘	bbhl/
+쌘	bbhl/	100%
 쌙	bbhlu/
 쌚	bbhlw/
 쌛	bbhc/
-쌜	bbhs/
+쌜	bbhs/	100%
 쌝	bbhsy/
 쌞	bbhso/
 쌟	bbhsa/
@@ -14731,12 +14731,12 @@ use_preset_vocabulary: false
 쌡	bbhse/
 쌢	bbhsx/
 쌣	bbhsw/
-쌤	bbho/
-쌥	bbha/
+쌤	bbho/	100%
+쌥	bbha/	100%
 쌦	bbhab/
 쌧	bbhb/
-쌨	bbhbb/
-쌩	bbhq/
+쌨	bbhbb/	100%
+쌩	bbhq/	100%
 쌪	bbhu/
 쌫	bbhd/
 쌬	bbhz/
@@ -14764,7 +14764,7 @@ use_preset_vocabulary: false
 썂	bbfab/
 썃	bbfb/
 썄	bbfbb/
-썅	bbfq/
+썅	bbfq/	100%
 썆	bbfu/
 썇	bbfd/
 썈	bbfz/
@@ -14799,43 +14799,43 @@ use_preset_vocabulary: false
 썥	vbhe/
 썦	vbhx/
 썧	vbhw/
-써	bbj/
-썩	bbjy/
+써	bbj/	100%
+썩	bbjy/	100%
 썪	bbjyy/
 썫	bbjyb/
-썬	bbjl/
+썬	bbjl/	100%
 썭	bbjlu/
 썮	bbjlw/
 썯	bbjc/
-썰	bbjs/
+썰	bbjs/	100%
 썱	bbjsy/
-썲	bbjso/
+썲	bbjso/	100%
 썳	bbjsa/
 썴	bbjsb/
 썵	bbjse/
 썶	bbjsx/
 썷	bbjsw/
-썸	bbjo/
-썹	bbja/
+썸	bbjo/	100%
+썹	bbja/	100%
 썺	bbjab/
 썻	bbjb/
-썼	bbjbb/
-썽	bbjq/
+썼	bbjbb/	100%
+썽	bbjq/	100%
 썾	bbju/
 썿	bbjd/
 쎀	bbjz/
 쎁	bbje/
 쎂	bbjx/
 쎃	bbjw/
-쎄	bbp/
+쎄	bbp/	100%
 쎅	bbpy/
 쎆	bbpyy/
 쎇	bbpyb/
-쎈	bbpl/
+쎈	bbpl/	100%
 쎉	bbplu/
 쎊	bbplw/
 쎋	bbpc/
-쎌	bbps/
+쎌	bbps/	100%
 쎍	bbpsy/
 쎎	bbpso/
 쎏	bbpsa/
@@ -14887,7 +14887,7 @@ use_preset_vocabulary: false
 쎽	vbpy/
 쎾	vbpyy/
 쎿	vbpyb/
-쏀	vbpl/
+쏀	vbpl/	100%
 쏁	vbplu/
 쏂	vbplw/
 쏃	vbpc/
@@ -14911,39 +14911,39 @@ use_preset_vocabulary: false
 쏕	vbpe/
 쏖	vbpx/
 쏗	vbpw/
-쏘	bbn/
-쏙	bbny/
+쏘	bbn/	100%
+쏙	bbny/	100%
 쏚	bbnyy/
 쏛	bbnyb/
-쏜	bbnl/
+쏜	bbnl/	100%
 쏝	bbnlu/
 쏞	bbnlw/
-쏟	bbnc/
-쏠	bbns/
+쏟	bbnc/	100%
+쏠	bbns/	100%
 쏡	bbnsy/
-쏢	bbnso/
+쏢	bbnso/	100%
 쏣	bbnsa/
 쏤	bbnsb/
 쏥	bbnse/
 쏦	bbnsx/
 쏧	bbnsw/
-쏨	bbno/
-쏩	bbna/
+쏨	bbno/	100%
+쏩	bbna/	100%
 쏪	bbnab/
 쏫	bbnb/
 쏬	bbnbb/
-쏭	bbnq/
+쏭	bbnq/	100%
 쏮	bbnu/
 쏯	bbnd/
 쏰	bbnz/
 쏱	bbne/
 쏲	bbnx/
 쏳	bbnw/
-쏴	bbnk/
-쏵	bbnky/
+쏴	bbnk/	100%
+쏵	bbnky/	100%
 쏶	bbnkyy/
 쏷	bbnkyb/
-쏸	bbnkl/
+쏸	bbnkl/	100%
 쏹	bbnklu/
 쏺	bbnklw/
 쏻	bbnkc/
@@ -14960,7 +14960,7 @@ use_preset_vocabulary: false
 쐅	bbnka/
 쐆	bbnkab/
 쐇	bbnkb/
-쐈	bbnkbb/
+쐈	bbnkbb/	100%
 쐉	bbnkq/
 쐊	bbnku/
 쐋	bbnkd/
@@ -14968,7 +14968,7 @@ use_preset_vocabulary: false
 쐍	bbnke/
 쐎	bbnkx/
 쐏	bbnkw/
-쐐	bbnh/
+쐐	bbnh/	100%
 쐑	bbnhy/
 쐒	bbnhyy/
 쐓	bbnhyb/
@@ -14988,7 +14988,7 @@ use_preset_vocabulary: false
 쐡	bbnha/
 쐢	bbnhab/
 쐣	bbnhb/
-쐤	bbnhbb/
+쐤	bbnhbb/	100%
 쐥	bbnhq/
 쐦	bbnhu/
 쐧	bbnhd/
@@ -14996,15 +14996,15 @@ use_preset_vocabulary: false
 쐩	bbnhe/
 쐪	bbnhx/
 쐫	bbnhw/
-쐬	bbni/
+쐬	bbni/	100%
 쐭	bbniy/
 쐮	bbniyy/
 쐯	bbniyb/
-쐰	bbnil/
+쐰	bbnil/	100%
 쐱	bbnilu/
 쐲	bbnilw/
 쐳	bbnic/
-쐴	bbnis/
+쐴	bbnis/	100%
 쐵	bbnisy/
 쐶	bbniso/
 쐷	bbnisa/
@@ -15012,8 +15012,8 @@ use_preset_vocabulary: false
 쐹	bbnise/
 쐺	bbnisx/
 쐻	bbnisw/
-쐼	bbnio/
-쐽	bbnia/
+쐼	bbnio/	100%
+쐽	bbnia/	100%
 쐾	bbniab/
 쐿	bbnib/
 쑀	bbnibb/
@@ -15024,7 +15024,7 @@ use_preset_vocabulary: false
 쑅	bbnie/
 쑆	bbnix/
 쑇	bbniw/
-쑈	bbm/
+쑈	bbm/	100%
 쑉	bbmy/
 쑊	bbmyy/
 쑋	bbmyb/
@@ -15052,15 +15052,15 @@ use_preset_vocabulary: false
 쑡	bbme/
 쑢	bbmx/
 쑣	bbmw/
-쑤	bbt/
-쑥	bbty/
+쑤	bbt/	100%
+쑥	bbty/	100%
 쑦	bbtyy/
 쑧	bbtyb/
-쑨	bbtl/
+쑨	bbtl/	100%
 쑩	bbtlu/
 쑪	bbtlw/
 쑫	bbtc/
-쑬	bbts/
+쑬	bbts/	100%
 쑭	bbtsy/
 쑮	bbtso/
 쑯	bbtsa/
@@ -15068,19 +15068,19 @@ use_preset_vocabulary: false
 쑱	bbtse/
 쑲	bbtsx/
 쑳	bbtsw/
-쑴	bbto/
-쑵	bbta/
+쑴	bbto/	100%
+쑵	bbta/	100%
 쑶	bbtab/
 쑷	bbtb/
 쑸	bbtbb/
-쑹	bbtq/
+쑹	bbtq/	100%
 쑺	bbtu/
 쑻	bbtd/
 쑼	bbtz/
 쑽	bbte/
 쑾	bbtx/
 쑿	bbtw/
-쒀	bbtj/
+쒀	bbtj/	100%
 쒁	bbtjy/
 쒂	bbtjyy/
 쒃	bbtjyb/
@@ -15100,7 +15100,7 @@ use_preset_vocabulary: false
 쒑	bbtja/
 쒒	bbtjab/
 쒓	bbtjb/
-쒔	bbtjbb/
+쒔	bbtjbb/	100%
 쒕	bbtjq/
 쒖	bbtju/
 쒗	bbtjd/
@@ -15108,7 +15108,7 @@ use_preset_vocabulary: false
 쒙	bbtje/
 쒚	bbtjx/
 쒛	bbtjw/
-쒜	bbtp/
+쒜	bbtp/	100%
 쒝	bbtpy/
 쒞	bbtpyy/
 쒟	bbtpyb/
@@ -15136,11 +15136,11 @@ use_preset_vocabulary: false
 쒵	bbtpe/
 쒶	bbtpx/
 쒷	bbtpw/
-쒸	bbti/
+쒸	bbti/	100%
 쒹	bbtiy/
 쒺	bbtiyy/
 쒻	bbtiyb/
-쒼	bbtil/
+쒼	bbtil/	100%
 쒽	bbtilu/
 쒾	bbtilw/
 쒿	bbtic/
@@ -15185,32 +15185,32 @@ use_preset_vocabulary: false
 쓦	bbrab/
 쓧	bbrb/
 쓨	bbrbb/
-쓩	bbrq/
+쓩	bbrq/	100%
 쓪	bbru/
 쓫	bbrd/
 쓬	bbrz/
 쓭	bbre/
 쓮	bbrx/
 쓯	bbrw/
-쓰	bbv/
-쓱	bbvy/
+쓰	bbv/	100%
+쓱	bbvy/	100%
 쓲	bbvyy/
 쓳	bbvyb/
-쓴	bbvl/
+쓴	bbvl/	100%
 쓵	bbvlu/
 쓶	bbvlw/
 쓷	bbvc/
-쓸	bbvs/
+쓸	bbvs/	100%
 쓹	bbvsy/
-쓺	bbvso/
+쓺	bbvso/	100%
 쓻	bbvsa/
 쓼	bbvsb/
 쓽	bbvse/
 쓾	bbvsx/
-쓿	bbvsw/
+쓿	bbvsw/	100%
 #27
-씀	bbvo/
-씁	bbva/
+씀	bbvo/	100%
+씁	bbva/	100%
 씂	bbvab/
 씃	bbvb/
 씄	bbvbb/
@@ -15221,15 +15221,15 @@ use_preset_vocabulary: false
 씉	bbve/
 씊	bbvx/
 씋	bbvw/
-씌	bbvi/
+씌	bbvi/	100%
 씍	bbviy/
 씎	bbviyy/
 씏	bbviyb/
-씐	bbvil/
+씐	bbvil/	100%
 씑	bbvilu/
 씒	bbvilw/
 씓	bbvic/
-씔	bbvis/
+씔	bbvis/	100%
 씕	bbvisy/
 씖	bbviso/
 씗	bbvisa/
@@ -15237,7 +15237,7 @@ use_preset_vocabulary: false
 씙	bbvise/
 씚	bbvisx/
 씛	bbvisw/
-씜	bbvio/
+씜	bbvio/	100%
 씝	bbvia/
 씞	bbviab/
 씟	bbvib/
@@ -15249,15 +15249,15 @@ use_preset_vocabulary: false
 씥	bbvie/
 씦	bbvix/
 씧	bbviw/
-씨	bbi/
-씩	bbiy/
+씨	bbi/	100%
+씩	bbiy/	100%
 씪	bbiyy/
 씫	bbiyb/
-씬	bbil/
+씬	bbil/	100%
 씭	bbilu/
 씮	bbilw/
 씯	bbic/
-씰	bbis/
+씰	bbis/	100%
 씱	bbisy/
 씲	bbiso/
 씳	bbisa/
@@ -15265,55 +15265,55 @@ use_preset_vocabulary: false
 씵	bbise/
 씶	bbisx/
 씷	bbisw/
-씸	bbio/
-씹	bbia/
+씸	bbio/	100%
+씹	bbia/	100%
 씺	bbiab/
-씻	bbib/
+씻	bbib/	100%
 씼	bbibb/
-씽	bbiq/
+씽	bbiq/	100%
 씾	bbiu/
 씿	bbid/
 앀	bbiz/
 앁	bbie/
 앂	bbix/
 앃	bbiw/
-아	qk/
-악	qky/
+아	qk/	100%
+악	qky/	100%
 앆	qkyy/
 앇	qkyb/
-안	qkl/
-앉	qklu/
-않	qklw/
+안	qkl/	100%
+앉	qklu/	100%
+않	qklw/	100%
 앋	qkc/
-알	qks/
-앍	qksy/
-앎	qkso/
+알	qks/	100%
+앍	qksy/	100%
+앎	qkso/	100%
 앏	qksa/
 앐	qksb/
 앑	qkse/
 앒	qksx/
-앓	qksw/
-암	qko/
-압	qka/
+앓	qksw/	100%
+암	qko/	100%
+압	qka/	100%
 앖	qkab/
-앗	qkb/
-았	qkbb/
-앙	qkq/
+앗	qkb/	100%
+았	qkbb/	100%
+앙	qkq/	100%
 앚	qku/
 앛	qkd/
 앜	qkz/
-앝	qke/
-앞	qkx/
+앝	qke/	100%
+앞	qkx/	100%
 앟	qkw/
-애	qh/
-액	qhy/
+애	qh/	100%
+액	qhy/	100%
 앢	qhyy/
 앣	qhyb/
-앤	qhl/
+앤	qhl/	100%
 앥	qhlu/
 앦	qhlw/
 앧	qhc/
-앨	qhs/
+앨	qhs/	100%
 앩	qhsy/
 앪	qhso/
 앫	qhsa/
@@ -15321,55 +15321,55 @@ use_preset_vocabulary: false
 앭	qhse/
 앮	qhsx/
 앯	qhsw/
-앰	qho/
-앱	qha/
+앰	qho/	100%
+앱	qha/	100%
 앲	qhab/
-앳	qhb/
-앴	qhbb/
-앵	qhq/
+앳	qhb/	100%
+앴	qhbb/	100%
+앵	qhq/	100%
 앶	qhu/
 앷	qhd/
 앸	qhz/
 앹	qhe/
 앺	qhx/
 앻	qhw/
-야	qf/
-약	qfy/
+야	qf/	100%
+약	qfy/	100%
 앾	qfyy/
 앿	qfyb/
-얀	qfl/
+얀	qfl/	100%
 얁	qflu/
 얂	qflw/
 얃	qfc/
-얄	qfs/
+얄	qfs/	100%
 얅	qfsy/
 얆	qfso/
-얇	qfsa/
+얇	qfsa/	100%
 얈	qfsb/
 얉	qfse/
 얊	qfsx/
 얋	qfsw/
-얌	qfo/
-얍	qfa/
+얌	qfo/	100%
+얍	qfa/	100%
 얎	qfab/
-얏	qfb/
+얏	qfb/	100%
 얐	qfbb/
-양	qfq/
+양	qfq/	100%
 얒	qfu/
 얓	qfd/
 얔	qfz/
-얕	qfe/
+얕	qfe/	100%
 얖	qfx/
-얗	qfw/
-얘	qhh/
+얗	qfw/	100%
+얘	qhh/	100%
 얙	qhhy/
 얚	qhhyy/
 얛	qhhyb/
-얜	qhhl/
+얜	qhhl/	100%
 얝	qhhlu/
 얞	qhhlw/
 얟	qhhc/
-얠	qhhs/
+얠	qhhs/	100%
 얡	qhhsy/
 얢	qhhso/
 얣	qhhsa/
@@ -15378,7 +15378,7 @@ use_preset_vocabulary: false
 얦	qhhsx/
 얧	qhhsw/
 얨	qhho/
-얩	qhha/
+얩	qhha/	100%
 얪	qhhab/
 얫	qhhb/
 얬	qhhbb/
@@ -15389,43 +15389,43 @@ use_preset_vocabulary: false
 얱	qhhe/
 얲	qhhx/
 얳	qhhw/
-어	qj/
-억	qjy/
+어	qj/	100%
+억	qjy/	100%
 얶	qjyy/
 얷	qjyb/
-언	qjl/
-얹	qjlu/
+언	qjl/	100%
+얹	qjlu/	100%
 얺	qjlw/
-얻	qjc/
-얼	qjs/
-얽	qjsy/
-얾	qjso/
+얻	qjc/	100%
+얼	qjs/	100%
+얽	qjsy/	100%
+얾	qjso/	100%
 얿	qjsa/
 엀	qjsb/
 엁	qjse/
 엂	qjsx/
 엃	qjsw/
-엄	qjo/
-업	qja/
-없	qjab/
-엇	qjb/
-었	qjbb/
-엉	qjq/
-엊	qju/
+엄	qjo/	100%
+업	qja/	100%
+없	qjab/	100%
+엇	qjb/	100%
+었	qjbb/	100%
+엉	qjq/	100%
+엊	qju/	100%
 엋	qjd/
-엌	qjz/
+엌	qjz/	100%
 엍	qje/
-엎	qjx/
+엎	qjx/	100%
 엏	qjw/
-에	qp/
-엑	qpy/
+에	qp/	100%
+엑	qpy/	100%
 엒	qpyy/
 엓	qpyb/
-엔	qpl/
+엔	qpl/	100%
 엕	qplu/
 엖	qplw/
 엗	qpc/
-엘	qps/
+엘	qps/	100%
 엙	qpsy/
 엚	qpso/
 엛	qpsa/
@@ -15433,56 +15433,56 @@ use_preset_vocabulary: false
 엝	qpse/
 엞	qpsx/
 엟	qpsw/
-엠	qpo/
-엡	qpa/
+엠	qpo/	100%
+엡	qpa/	100%
 엢	qpab/
-엣	qpb/
+엣	qpb/	100%
 엤	qpbb/
-엥	qpq/
+엥	qpq/	100%
 엦	qpu/
 엧	qpd/
 엨	qpz/
 엩	qpe/
 엪	qpx/
 엫	qpw/
-여	qg/
-역	qgy/
-엮	qgyy/
+여	qg/	100%
+역	qgy/	100%
+엮	qgyy/	100%
 엯	qgyb/
-연	qgl/
+연	qgl/	100%
 엱	qglu/
 엲	qglw/
 엳	qgc/
-열	qgs/
+열	qgs/	100%
 엵	qgsy/
-엶	qgso/
-엷	qgsa/
+엶	qgso/	100%
+엷	qgsa/	100%
 엸	qgsb/
 엹	qgse/
 엺	qgsx/
 엻	qgsw/
-염	qgo/
-엽	qga/
-엾	qgab/
-엿	qgb/
+염	qgo/	100%
+엽	qga/	100%
+엾	qgab/	100%
+엿	qgb/	100%
 #28
-였	qgbb/
-영	qgq/
+였	qgbb/	100%
+영	qgq/	100%
 옂	qgu/
 옃	qgd/
 옄	qgz/
-옅	qge/
-옆	qgx/
-옇	qgw/
-예	qpp/
+옅	qge/	100%
+옆	qgx/	100%
+옇	qgw/	100%
+예	qpp/	100%
 옉	qppy/
 옊	qppyy/
 옋	qppyb/
-옌	qppl/
+옌	qppl/	100%
 옍	qpplu/
 옎	qpplw/
 옏	qppc/
-옐	qpps/
+옐	qpps/	100%
 옑	qppsy/
 옒	qppso/
 옓	qppsa/
@@ -15490,11 +15490,11 @@ use_preset_vocabulary: false
 옕	qppse/
 옖	qppsx/
 옗	qppsw/
-옘	qppo/
-옙	qppa/
+옘	qppo/	100%
+옙	qppa/	100%
 옚	qppab/
-옛	qppb/
-옜	qppbb/
+옛	qppb/	100%
+옜	qppbb/	100%
 옝	qppq/
 옞	qppu/
 옟	qppd/
@@ -15502,43 +15502,43 @@ use_preset_vocabulary: false
 옡	qppe/
 옢	qppx/
 옣	qppw/
-오	qn/
-옥	qny/
+오	qn/	100%
+옥	qny/	100%
 옦	qnyy/
 옧	qnyb/
-온	qnl/
+온	qnl/	100%
 옩	qnlu/
 옪	qnlw/
 옫	qnc/
-올	qns/
-옭	qnsy/
-옮	qnso/
+올	qns/	100%
+옭	qnsy/	100%
+옮	qnso/	100%
 옯	qnsa/
-옰	qnsb/
+옰	qnsb/	100%
 옱	qnse/
 옲	qnsx/
-옳	qnsw/
-옴	qno/
-옵	qna/
+옳	qnsw/	100%
+옴	qno/	100%
+옵	qna/	100%
 옶	qnab/
-옷	qnb/
+옷	qnb/	100%
 옸	qnbb/
-옹	qnq/
+옹	qnq/	100%
 옺	qnu/
-옻	qnd/
+옻	qnd/	100%
 옼	qnz/
 옽	qne/
 옾	qnx/
 옿	qnw/
-와	qnk/
-왁	qnky/
+와	qnk/	100%
+왁	qnky/	100%
 왂	qnkyy/
 왃	qnkyb/
-완	qnkl/
+완	qnkl/	100%
 왅	qnklu/
 왆	qnklw/
 왇	qnkc/
-왈	qnks/
+왈	qnks/	100%
 왉	qnksy/
 왊	qnkso/
 왋	qnksa/
@@ -15546,23 +15546,23 @@ use_preset_vocabulary: false
 왍	qnkse/
 왎	qnksx/
 왏	qnksw/
-왐	qnko/
-왑	qnka/
+왐	qnko/	100%
+왑	qnka/	100%
 왒	qnkab/
-왓	qnkb/
-왔	qnkbb/
-왕	qnkq/
+왓	qnkb/	100%
+왔	qnkbb/	100%
+왕	qnkq/	100%
 왖	qnku/
 왗	qnkd/
 왘	qnkz/
 왙	qnke/
 왚	qnkx/
 왛	qnkw/
-왜	qnh/
-왝	qnhy/
+왜	qnh/	100%
+왝	qnhy/	100%
 왞	qnhyy/
 왟	qnhyb/
-왠	qnhl/
+왠	qnhl/	100%
 왡	qnhlu/
 왢	qnhlw/
 왣	qnhc/
@@ -15574,27 +15574,27 @@ use_preset_vocabulary: false
 왩	qnhse/
 왪	qnhsx/
 왫	qnhsw/
-왬	qnho/
+왬	qnho/	100%
 왭	qnha/
 왮	qnhab/
-왯	qnhb/
+왯	qnhb/	100%
 왰	qnhbb/
-왱	qnhq/
+왱	qnhq/	100%
 왲	qnhu/
 왳	qnhd/
 왴	qnhz/
 왵	qnhe/
 왶	qnhx/
 왷	qnhw/
-외	qni/
-왹	qniy/
+외	qni/	100%
+왹	qniy/	100%
 왺	qniyy/
 왻	qniyb/
-왼	qnil/
+왼	qnil/	100%
 왽	qnilu/
 왾	qnilw/
 왿	qnic/
-욀	qnis/
+욀	qnis/	100%
 욁	qnisy/
 욂	qniso/
 욃	qnisa/
@@ -15602,27 +15602,27 @@ use_preset_vocabulary: false
 욅	qnise/
 욆	qnisx/
 욇	qnisw/
-욈	qnio/
-욉	qnia/
+욈	qnio/	100%
+욉	qnia/	100%
 욊	qniab/
-욋	qnib/
+욋	qnib/	100%
 욌	qnibb/
-욍	qniq/
+욍	qniq/	100%
 욎	qniu/
 욏	qnid/
 욐	qniz/
 욑	qnie/
 욒	qnix/
 욓	qniw/
-요	qm/
-욕	qmy/
+요	qm/	100%
+욕	qmy/	100%
 욖	qmyy/
 욗	qmyb/
-욘	qml/
+욘	qml/	100%
 욙	qmlu/
 욚	qmlw/
 욛	qmc/
-욜	qms/
+욜	qms/	100%
 욝	qmsy/
 욞	qmso/
 욟	qmsa/
@@ -15630,55 +15630,55 @@ use_preset_vocabulary: false
 욡	qmse/
 욢	qmsx/
 욣	qmsw/
-욤	qmo/
-욥	qma/
+욤	qmo/	100%
+욥	qma/	100%
 욦	qmab/
-욧	qmb/
+욧	qmb/	100%
 욨	qmbb/
-용	qmq/
+용	qmq/	100%
 욪	qmu/
 욫	qmd/
 욬	qmz/
 욭	qme/
 욮	qmx/
 욯	qmw/
-우	qt/
-욱	qty/
+우	qt/	100%
+욱	qty/	100%
 욲	qtyy/
 욳	qtyb/
-운	qtl/
+운	qtl/	100%
 욵	qtlu/
 욶	qtlw/
 욷	qtc/
-울	qts/
-욹	qtsy/
-욺	qtso/
+울	qts/	100%
+욹	qtsy/	100%
+욺	qtso/	100%
 욻	qtsa/
 욼	qtsb/
 욽	qtse/
 욾	qtsx/
 욿	qtsw/
-움	qto/
-웁	qta/
+움	qto/	100%
+웁	qta/	100%
 웂	qtab/
-웃	qtb/
+웃	qtb/	100%
 웄	qtbb/
-웅	qtq/
+웅	qtq/	100%
 웆	qtu/
 웇	qtd/
 웈	qtz/
 웉	qte/
 웊	qtx/
 웋	qtw/
-워	qtj/
-웍	qtjy/
+워	qtj/	100%
+웍	qtjy/	100%
 웎	qtjyy/
 웏	qtjyb/
-원	qtjl/
+원	qtjl/	100%
 웑	qtjlu/
 웒	qtjlw/
 웓	qtjc/
-월	qtjs/
+월	qtjs/	100%
 웕	qtjsy/
 웖	qtjso/
 웗	qtjsa/
@@ -15686,27 +15686,27 @@ use_preset_vocabulary: false
 웙	qtjse/
 웚	qtjsx/
 웛	qtjsw/
-웜	qtjo/
-웝	qtja/
+웜	qtjo/	100%
+웝	qtja/	100%
 웞	qtjab/
 웟	qtjb/
-웠	qtjbb/
-웡	qtjq/
+웠	qtjbb/	100%
+웡	qtjq/	100%
 웢	qtju/
 웣	qtjd/
 웤	qtjz/
 웥	qtje/
 웦	qtjx/
 웧	qtjw/
-웨	qtp/
-웩	qtpy/
+웨	qtp/	100%
+웩	qtpy/	100%
 웪	qtpyy/
 웫	qtpyb/
-웬	qtpl/
+웬	qtpl/	100%
 웭	qtplu/
 웮	qtplw/
 웯	qtpc/
-웰	qtps/
+웰	qtps/	100%
 웱	qtpsy/
 웲	qtpso/
 웳	qtpsa/
@@ -15714,12 +15714,12 @@ use_preset_vocabulary: false
 웵	qtpse/
 웶	qtpsx/
 웷	qtpsw/
-웸	qtpo/
-웹	qtpa/
+웸	qtpo/	100%
+웹	qtpa/	100%
 웺	qtpab/
 웻	qtpb/
 웼	qtpbb/
-웽	qtpq/
+웽	qtpq/	100%
 웾	qtpu/
 웿	qtpd/
 #29
@@ -15727,15 +15727,15 @@ use_preset_vocabulary: false
 윁	qtpe/
 윂	qtpx/
 윃	qtpw/
-위	qti/
-윅	qtiy/
+위	qti/	100%
+윅	qtiy/	100%
 윆	qtiyy/
 윇	qtiyb/
-윈	qtil/
+윈	qtil/	100%
 윉	qtilu/
 윊	qtilw/
 윋	qtic/
-윌	qtis/
+윌	qtis/	100%
 윍	qtisy/
 윎	qtiso/
 윏	qtisa/
@@ -15743,27 +15743,27 @@ use_preset_vocabulary: false
 윑	qtise/
 윒	qtisx/
 윓	qtisw/
-윔	qtio/
-윕	qtia/
+윔	qtio/	100%
+윕	qtia/	100%
 윖	qtiab/
-윗	qtib/
+윗	qtib/	100%
 윘	qtibb/
-윙	qtiq/
+윙	qtiq/	100%
 윚	qtiu/
 윛	qtid/
 윜	qtiz/
 윝	qtie/
 윞	qtix/
 윟	qtiw/
-유	qr/
-육	qry/
+유	qr/	100%
+육	qry/	100%
 윢	qryy/
 윣	qryb/
-윤	qrl/
+윤	qrl/	100%
 윥	qrlu/
 윦	qrlw/
 윧	qrc/
-율	qrs/
+율	qrs/	100%
 윩	qrsy/
 윪	qrso/
 윫	qrsa/
@@ -15771,55 +15771,55 @@ use_preset_vocabulary: false
 윭	qrse/
 윮	qrsx/
 윯	qrsw/
-윰	qro/
-윱	qra/
+윰	qro/	100%
+윱	qra/	100%
 윲	qrab/
-윳	qrb/
+윳	qrb/	100%
 윴	qrbb/
-융	qrq/
+융	qrq/	100%
 윶	qru/
-윷	qrd/
+윷	qrd/	100%
 윸	qrz/
 윹	qre/
 윺	qrx/
 윻	qrw/
-으	qv/
-윽	qvy/
+으	qv/	100%
+윽	qvy/	100%
 윾	qvyy/
 윿	qvyb/
-은	qvl/
+은	qvl/	100%
 읁	qvlu/
 읂	qvlw/
 읃	qvc/
-을	qvs/
+을	qvs/	100%
 읅	qvsy/
 읆	qvso/
 읇	qvsa/
 읈	qvsb/
 읉	qvse/
-읊	qvsx/
+읊	qvsx/	100%
 읋	qvsw/
-음	qvo/
-읍	qva/
+음	qvo/	100%
+읍	qva/	100%
 읎	qvab/
-읏	qvb/
+읏	qvb/	100%
 읐	qvbb/
-응	qvq/
-읒	qvu/
-읓	qvd/
-읔	qvz/
-읕	qve/
-읖	qvx/
-읗	qvw/
-의	qvi/
+응	qvq/	100%
+읒	qvu/	100%
+읓	qvd/	100%
+읔	qvz/	100%
+읕	qve/	100%
+읖	qvx/	100%
+읗	qvw/	100%
+의	qvi/	100%
 읙	qviy/
 읚	qviyy/
 읛	qviyb/
-읜	qvil/
+읜	qvil/	100%
 읝	qvilu/
 읞	qvilw/
 읟	qvic/
-읠	qvis/
+읠	qvis/	100%
 읡	qvisy/
 읢	qviso/
 읣	qvisa/
@@ -15827,10 +15827,10 @@ use_preset_vocabulary: false
 읥	qvise/
 읦	qvisx/
 읧	qvisw/
-읨	qvio/
+읨	qvio/	100%
 읩	qvia/
 읪	qviab/
-읫	qvib/
+읫	qvib/	100%
 읬	qvibb/
 읭	qviq/
 읮	qviu/
@@ -15839,71 +15839,71 @@ use_preset_vocabulary: false
 읱	qvie/
 읲	qvix/
 읳	qviw/
-이	qi/
-익	qiy/
+이	qi/	100%
+익	qiy/	100%
 읶	qiyy/
 읷	qiyb/
-인	qil/
+인	qil/	100%
 읹	qilu/
 읺	qilw/
 읻	qic/
-일	qis/
-읽	qisy/
-읾	qiso/
+일	qis/	100%
+읽	qisy/	100%
+읾	qiso/	100%
 읿	qisa/
 잀	qisb/
 잁	qise/
 잂	qisx/
-잃	qisw/
-임	qio/
-입	qia/
+잃	qisw/	100%
+임	qio/	100%
+입	qia/	100%
 잆	qiab/
-잇	qib/
-있	qibb/
-잉	qiq/
-잊	qiu/
+잇	qib/	100%
+있	qibb/	100%
+잉	qiq/	100%
+잊	qiu/	100%
 잋	qid/
 잌	qiz/
 잍	qie/
-잎	qix/
+잎	qix/	100%
 잏	qiw/
-자	uk/
-작	uky/
+자	uk/	100%
+작	uky/	100%
 잒	ukyy/
 잓	ukyb/
-잔	ukl/
+잔	ukl/	100%
 잕	uklu/
-잖	uklw/
-잗	ukc/
-잘	uks/
+잖	uklw/	100%
+잗	ukc/	100%
+잘	uks/	100%
 잙	uksy/
-잚	ukso/
+잚	ukso/	100%
 잛	uksa/
 잜	uksb/
 잝	ukse/
 잞	uksx/
 잟	uksw/
-잠	uko/
-잡	uka/
+잠	uko/	100%
+잡	uka/	100%
 잢	ukab/
-잣	ukb/
-잤	ukbb/
-장	ukq/
-잦	uku/
+잣	ukb/	100%
+잤	ukbb/	100%
+장	ukq/	100%
+잦	uku/	100%
 잧	ukd/
 잨	ukz/
 잩	uke/
 잪	ukx/
 잫	ukw/
-재	uh/
-잭	uhy/
+재	uh/	100%
+잭	uhy/	100%
 잮	uhyy/
 잯	uhyb/
-잰	uhl/
+잰	uhl/	100%
 잱	uhlu/
 잲	uhlw/
 잳	uhc/
-잴	uhs/
+잴	uhs/	100%
 잵	uhsy/
 잶	uhso/
 잷	uhsa/
@@ -15911,27 +15911,27 @@ use_preset_vocabulary: false
 잹	uhse/
 잺	uhsx/
 잻	uhsw/
-잼	uho/
-잽	uha/
+잼	uho/	100%
+잽	uha/	100%
 잾	uhab/
-잿	uhb/
-쟀	uhbb/
-쟁	uhq/
+잿	uhb/	100%
+쟀	uhbb/	100%
+쟁	uhq/	100%
 쟂	uhu/
 쟃	uhd/
 쟄	uhz/
 쟅	uhe/
 쟆	uhx/
 쟇	uhw/
-쟈	uf/
-쟉	ufy/
+쟈	uf/	100%
+쟉	ufy/	100%
 쟊	ufyy/
 쟋	ufyb/
-쟌	ufl/
+쟌	ufl/	100%
 쟍	uflu/
-쟎	uflw/
+쟎	uflw/	100%
 쟏	ufc/
-쟐	ufs/
+쟐	ufs/	100%
 쟑	ufsy/
 쟒	ufso/
 쟓	ufsa/
@@ -15939,27 +15939,27 @@ use_preset_vocabulary: false
 쟕	ufse/
 쟖	ufsx/
 쟗	ufsw/
-쟘	ufo/
+쟘	ufo/	100%
 쟙	ufa/
 쟚	ufab/
 쟛	ufb/
 쟜	ufbb/
-쟝	ufq/
+쟝	ufq/	100%
 쟞	ufu/
 쟟	ufd/
 쟠	ufz/
 쟡	ufe/
 쟢	ufx/
 쟣	ufw/
-쟤	uhh/
+쟤	uhh/	100%
 쟥	uhhy/
 쟦	uhhyy/
 쟧	uhhyb/
-쟨	uhhl/
+쟨	uhhl/	100%
 쟩	uhhlu/
 쟪	uhhlw/
 쟫	uhhc/
-쟬	uhhs/
+쟬	uhhs/	100%
 쟭	uhhsy/
 쟮	uhhso/
 쟯	uhhsa/
@@ -15980,43 +15980,43 @@ use_preset_vocabulary: false
 쟾	uhhx/
 쟿	uhhw/
 #30
-저	uj/
-적	ujy/
+저	uj/	100%
+적	ujy/	100%
 젂	ujyy/
 젃	ujyb/
-전	ujl/
+전	ujl/	100%
 젅	ujlu/
 젆	ujlw/
 젇	ujc/
-절	ujs/
+절	ujs/	100%
 젉	ujsy/
-젊	ujso/
+젊	ujso/	100%
 젋	ujsa/
 젌	ujsb/
 젍	ujse/
 젎	ujsx/
 젏	ujsw/
-점	ujo/
-접	uja/
+점	ujo/	100%
+접	uja/	100%
 젒	ujab/
-젓	ujb/
+젓	ujb/	100%
 젔	ujbb/
-정	ujq/
-젖	uju/
+정	ujq/	100%
+젖	uju/	100%
 젗	ujd/
 젘	ujz/
 젙	uje/
 젚	ujx/
 젛	ujw/
-제	up/
-젝	upy/
+제	up/	100%
+젝	upy/	100%
 젞	upyy/
 젟	upyb/
-젠	upl/
+젠	upl/	100%
 젡	uplu/
 젢	uplw/
 젣	upc/
-젤	ups/
+젤	ups/	100%
 젥	upsy/
 젦	upso/
 젧	upsa/
@@ -16024,27 +16024,27 @@ use_preset_vocabulary: false
 젩	upse/
 젪	upsx/
 젫	upsw/
-젬	upo/
-젭	upa/
+젬	upo/	100%
+젭	upa/	100%
 젮	upab/
-젯	upb/
+젯	upb/	100%
 젰	upbb/
-젱	upq/
+젱	upq/	100%
 젲	upu/
 젳	upd/
 젴	upz/
 젵	upe/
 젶	upx/
 젷	upw/
-져	ug/
+져	ug/	100%
 젹	ugy/
 젺	ugyy/
 젻	ugyb/
-젼	ugl/
+젼	ugl/	100%
 젽	uglu/
 젾	uglw/
 젿	ugc/
-졀	ugs/
+졀	ugs/	100%
 졁	ugsy/
 졂	ugso/
 졃	ugsa/
@@ -16052,19 +16052,19 @@ use_preset_vocabulary: false
 졅	ugse/
 졆	ugsx/
 졇	ugsw/
-졈	ugo/
-졉	uga/
+졈	ugo/	100%
+졉	uga/	100%
 졊	ugab/
 졋	ugb/
-졌	ugbb/
-졍	ugq/
+졌	ugbb/	100%
+졍	ugq/	100%
 졎	ugu/
 졏	ugd/
 졐	ugz/
 졑	uge/
 졒	ugx/
 졓	ugw/
-졔	upp/
+졔	upp/	100%
 졕	uppy/
 졖	uppyy/
 졗	uppyb/
@@ -16092,43 +16092,43 @@ use_preset_vocabulary: false
 졭	uppe/
 졮	uppx/
 졯	uppw/
-조	un/
-족	uny/
+조	un/	100%
+족	uny/	100%
 졲	unyy/
 졳	unyb/
-존	unl/
+존	unl/	100%
 졵	unlu/
 졶	unlw/
 졷	unc/
-졸	uns/
+졸	uns/	100%
 졹	unsy/
-졺	unso/
+졺	unso/	100%
 졻	unsa/
 졼	unsb/
 졽	unse/
 졾	unsx/
 졿	unsw/
-좀	uno/
-좁	una/
+좀	uno/	100%
+좁	una/	100%
 좂	unab/
-좃	unb/
+좃	unb/	100%
 좄	unbb/
-종	unq/
-좆	unu/
-좇	und/
+종	unq/	100%
+좆	unu/	100%
+좇	und/	100%
 좈	unz/
 좉	une/
 좊	unx/
-좋	unw/
-좌	unk/
-좍	unky/
+좋	unw/	100%
+좌	unk/	100%
+좍	unky/	100%
 좎	unkyy/
 좏	unkyb/
 좐	unkl/
 좑	unklu/
 좒	unklw/
 좓	unkc/
-좔	unks/
+좔	unks/	100%
 좕	unksy/
 좖	unkso/
 좗	unksa/
@@ -16137,18 +16137,18 @@ use_preset_vocabulary: false
 좚	unksx/
 좛	unksw/
 좜	unko/
-좝	unka/
+좝	unka/	100%
 좞	unkab/
-좟	unkb/
+좟	unkb/	100%
 좠	unkbb/
-좡	unkq/
+좡	unkq/	100%
 좢	unku/
 좣	unkd/
 좤	unkz/
 좥	unke/
 좦	unkx/
 좧	unkw/
-좨	unh/
+좨	unh/	100%
 좩	unhy/
 좪	unhyy/
 좫	unhyb/
@@ -16168,23 +16168,23 @@ use_preset_vocabulary: false
 좹	unha/
 좺	unhab/
 좻	unhb/
-좼	unhbb/
-좽	unhq/
+좼	unhbb/	100%
+좽	unhq/	100%
 좾	unhu/
 좿	unhd/
 죀	unhz/
 죁	unhe/
 죂	unhx/
 죃	unhw/
-죄	uni/
+죄	uni/	100%
 죅	uniy/
 죆	uniyy/
 죇	uniyb/
-죈	unil/
+죈	unil/	100%
 죉	unilu/
 죊	unilw/
 죋	unic/
-죌	unis/
+죌	unis/	100%
 죍	unisy/
 죎	uniso/
 죏	unisa/
@@ -16192,23 +16192,23 @@ use_preset_vocabulary: false
 죑	unise/
 죒	unisx/
 죓	unisw/
-죔	unio/
-죕	unia/
+죔	unio/	100%
+죕	unia/	100%
 죖	uniab/
-죗	unib/
+죗	unib/	100%
 죘	unibb/
-죙	uniq/
+죙	uniq/	100%
 죚	uniu/
 죛	unid/
 죜	uniz/
 죝	unie/
 죞	unix/
 죟	uniw/
-죠	um/
-죡	umy/
+죠	um/	100%
+죡	umy/	100%
 죢	umyy/
 죣	umyb/
-죤	uml/
+죤	uml/	100%
 죥	umlu/
 죦	umlw/
 죧	umc/
@@ -16225,7 +16225,7 @@ use_preset_vocabulary: false
 죲	umab/
 죳	umb/
 죴	umbb/
-죵	umq/
+죵	umq/	100%
 죶	umu/
 죷	umd/
 죸	umz/
@@ -16233,35 +16233,35 @@ use_preset_vocabulary: false
 죺	umx/
 죻	umw/
 주	ut/
-죽	uty/
+죽	uty/	100%
 죾	utyy/
 죿	utyb/
 #31
-준	utl/
+준	utl/	100%
 줁	utlu/
 줂	utlw/
 줃	utc/
-줄	uts/
-줅	utsy/
-줆	utso/
+줄	uts/	100%
+줅	utsy/	100%
+줆	utso/	100%
 줇	utsa/
 줈	utsb/
 줉	utse/
 줊	utsx/
 줋	utsw/
-줌	uto/
-줍	uta/
+줌	uto/	100%
+줍	uta/	100%
 줎	utab/
-줏	utb/
+줏	utb/	100%
 줐	utbb/
-중	utq/
+중	utq/	100%
 줒	utu/
 줓	utd/
 줔	utz/
 줕	ute/
 줖	utx/
 줗	utw/
-줘	utj/
+줘	utj/	100%
 줙	utjy/
 줚	utjyy/
 줛	utjyb/
@@ -16281,7 +16281,7 @@ use_preset_vocabulary: false
 줩	utja/
 줪	utjab/
 줫	utjb/
-줬	utjbb/
+줬	utjbb/	100%
 줭	utjq/
 줮	utju/
 줯	utjd/
@@ -16289,7 +16289,7 @@ use_preset_vocabulary: false
 줱	utje/
 줲	utjx/
 줳	utjw/
-줴	utp/
+줴	utp/	100%
 줵	utpy/
 줶	utpyy/
 줷	utpyb/
@@ -16317,15 +16317,15 @@ use_preset_vocabulary: false
 쥍	utpe/
 쥎	utpx/
 쥏	utpw/
-쥐	uti/
-쥑	utiy/
+쥐	uti/	100%
+쥑	utiy/	100%
 쥒	utiyy/
 쥓	utiyb/
-쥔	util/
+쥔	util/	100%
 쥕	utilu/
 쥖	utilw/
 쥗	utic/
-쥘	utis/
+쥘	utis/	100%
 쥙	utisy/
 쥚	utiso/
 쥛	utisa/
@@ -16333,10 +16333,10 @@ use_preset_vocabulary: false
 쥝	utise/
 쥞	utisx/
 쥟	utisw/
-쥠	utio/
-쥡	utia/
+쥠	utio/	100%
+쥡	utia/	100%
 쥢	utiab/
-쥣	utib/
+쥣	utib/	100%
 쥤	utibb/
 쥥	utiq/
 쥦	utiu/
@@ -16345,15 +16345,15 @@ use_preset_vocabulary: false
 쥩	utie/
 쥪	utix/
 쥫	utiw/
-쥬	ur/
+쥬	ur/	100%
 쥭	ury/
 쥮	uryy/
 쥯	uryb/
-쥰	url/
+쥰	url/	100%
 쥱	urlu/
 쥲	urlw/
 쥳	urc/
-쥴	urs/
+쥴	urs/	100%
 쥵	ursy/
 쥶	urso/
 쥷	ursa/
@@ -16361,7 +16361,7 @@ use_preset_vocabulary: false
 쥹	urse/
 쥺	ursx/
 쥻	ursw/
-쥼	uro/
+쥼	uro/	100%
 쥽	ura/
 쥾	urab/
 쥿	urb/
@@ -16373,15 +16373,15 @@ use_preset_vocabulary: false
 즅	ure/
 즆	urx/
 즇	urw/
-즈	uv/
-즉	uvy/
+즈	uv/	100%
+즉	uvy/	100%
 즊	uvyy/
 즋	uvyb/
-즌	uvl/
+즌	uvl/	100%
 즍	uvlu/
 즎	uvlw/
 즏	uvc/
-즐	uvs/
+즐	uvs/	100%
 즑	uvsy/
 즒	uvso/
 즓	uvsa/
@@ -16389,12 +16389,12 @@ use_preset_vocabulary: false
 즕	uvse/
 즖	uvsx/
 즗	uvsw/
-즘	uvo/
-즙	uva/
+즘	uvo/	100%
+즙	uva/	100%
 즚	uvab/
-즛	uvb/
+즛	uvb/	100%
 즜	uvbb/
-증	uvq/
+증	uvq/	100%
 즞	uvu/
 즟	uvd/
 즠	uvz/
@@ -16429,72 +16429,72 @@ use_preset_vocabulary: false
 즽	uvie/
 즾	uvix/
 즿	uviw/
-지	ui/
-직	uiy/
+지	ui/	100%
+직	uiy/	100%
 짂	uiyy/
 짃	uiyb/
-진	uil/
+진	uil/	100%
 짅	uilu/
 짆	uilw/
-짇	uic/
-질	uis/
+짇	uic/	100%
+질	uis/	100%
 짉	uisy/
-짊	uiso/
+짊	uiso/	100%
 짋	uisa/
 짌	uisb/
 짍	uise/
 짎	uisx/
 짏	uisw/
-짐	uio/
-집	uia/
+짐	uio/	100%
+집	uia/	100%
 짒	uiab/
-짓	uib/
+짓	uib/	100%
 짔	uibb/
-징	uiq/
-짖	uiu/
+징	uiq/	100%
+짖	uiu/	100%
 짗	uid/
 짘	uiz/
-짙	uie/
-짚	uix/
+짙	uie/	100%
+짚	uix/	100%
 짛	uiw/
-짜	uuk/
-짝	uuky/
+짜	uuk/	100%
+짝	uuky/	100%
 짞	uukyy/
 짟	uukyb/
-짠	uukl/
+짠	uukl/	100%
 짡	uuklu/
-짢	uuklw/
+짢	uuklw/	100%
 짣	uukc/
-짤	uuks/
+짤	uuks/	100%
 짥	uuksy/
 짦	uukso/
-짧	uuksa/
+짧	uuksa/	100%
 짨	uuksb/
 짩	uukse/
 짪	uuksx/
 짫	uuksw/
-짬	uuko/
-짭	uuka/
+짬	uuko/	100%
+짭	uuka/	100%
 짮	uukab/
-짯	uukb/
-짰	uukbb/
-짱	uukq/
+짯	uukb/	100%
+짰	uukbb/	100%
+짱	uukq/	100%
 짲	uuku/
 짳	uukd/
 짴	uukz/
 짵	uuke/
 짶	uukx/
 짷	uukw/
-째	uuh/
-짹	uuhy/
+째	uuh/	100%
+짹	uuhy/	100%
 짺	uuhyy/
 짻	uuhyb/
-짼	uuhl/
+짼	uuhl/	100%
 짽	uuhlu/
 짾	uuhlw/
 짿	uuhc/
 #32
-쨀	uuhs/
+쨀	uuhs/	100%
 쨁	uuhsy/
 쨂	uuhso/
 쨃	uuhsa/
@@ -16502,23 +16502,23 @@ use_preset_vocabulary: false
 쨅	uuhse/
 쨆	uuhsx/
 쨇	uuhsw/
-쨈	uuho/
-쨉	uuha/
+쨈	uuho/	100%
+쨉	uuha/	100%
 쨊	uuhab/
-쨋	uuhb/
-쨌	uuhbb/
-쨍	uuhq/
+쨋	uuhb/	100%
+쨌	uuhbb/	100%
+쨍	uuhq/	100%
 쨎	uuhu/
 쨏	uuhd/
 쨐	uuhz/
 쨑	uuhe/
 쨒	uuhx/
 쨓	uuhw/
-쨔	uuf/
+쨔	uuf/	100%
 쨕	uufy/
 쨖	uufyy/
 쨗	uufyb/
-쨘	uufl/
+쨘	uufl/	100%
 쨙	uuflu/
 쨚	uuflw/
 쨛	uufc/
@@ -16535,7 +16535,7 @@ use_preset_vocabulary: false
 쨦	uufab/
 쨧	uufb/
 쨨	uufbb/
-쨩	uufq/
+쨩	uufq/	100%
 쨪	uufu/
 쨫	uufd/
 쨬	uufz/
@@ -16570,15 +16570,15 @@ use_preset_vocabulary: false
 쩉	vuhe/
 쩊	vuhx/
 쩋	vuhw/
-쩌	uuj/
-쩍	uujy/
+쩌	uuj/	100%
+쩍	uujy/	100%
 쩎	uujyy/
 쩏	uujyb/
-쩐	uujl/
+쩐	uujl/	100%
 쩑	uujlu/
 쩒	uujlw/
 쩓	uujc/
-쩔	uujs/
+쩔	uujs/	100%
 쩕	uujsy/
 쩖	uujso/
 쩗	uujsa/
@@ -16586,19 +16586,19 @@ use_preset_vocabulary: false
 쩙	uujse/
 쩚	uujsx/
 쩛	uujsw/
-쩜	uujo/
-쩝	uuja/
+쩜	uujo/	100%
+쩝	uuja/	100%
 쩞	uujab/
-쩟	uujb/
-쩠	uujbb/
-쩡	uujq/
+쩟	uujb/	100%
+쩠	uujbb/	100%
+쩡	uujq/	100%
 쩢	uuju/
 쩣	uujd/
 쩤	uujz/
 쩥	uuje/
 쩦	uujx/
 쩧	uujw/
-쩨	uup/
+쩨	uup/	100%
 쩩	uupy/
 쩪	uupyy/
 쩫	uupyb/
@@ -16619,14 +16619,14 @@ use_preset_vocabulary: false
 쩺	uupab/
 쩻	uupb/
 쩼	uupbb/
-쩽	uupq/
+쩽	uupq/	100%
 쩾	uupu/
 쩿	uupd/
 쪀	uupz/
 쪁	uupe/
 쪂	uupx/
 쪃	uupw/
-쪄	uug/
+쪄	uug/	100%
 쪅	uugy/
 쪆	uugyy/
 쪇	uugyb/
@@ -16646,7 +16646,7 @@ use_preset_vocabulary: false
 쪕	uuga/
 쪖	uugab/
 쪗	uugb/
-쪘	uugbb/
+쪘	uugbb/	100%
 쪙	uugq/
 쪚	uugu/
 쪛	uugd/
@@ -16682,15 +16682,15 @@ use_preset_vocabulary: false
 쪹	vupe/
 쪺	vupx/
 쪻	vupw/
-쪼	uun/
-쪽	uuny/
+쪼	uun/	100%
+쪽	uuny/	100%
 쪾	uunyy/
 쪿	uunyb/
-쫀	uunl/
+쫀	uunl/	100%
 쫁	uunlu/
 쫂	uunlw/
 쫃	uunc/
-쫄	uuns/
+쫄	uuns/	100%
 쫅	uunsy/
 쫆	uunso/
 쫇	uunsa/
@@ -16698,27 +16698,27 @@ use_preset_vocabulary: false
 쫉	uunse/
 쫊	uunsx/
 쫋	uunsw/
-쫌	uuno/
-쫍	uuna/
+쫌	uuno/	100%
+쫍	uuna/	100%
 쫎	uunab/
-쫏	uunb/
+쫏	uunb/	100%
 쫐	uunbb/
-쫑	uunq/
+쫑	uunq/	100%
 쫒	uunu/
-쫓	uund/
+쫓	uund/	100%
 쫔	uunz/
 쫕	uune/
 쫖	uunx/
 쫗	uunw/
-쫘	uunk/
-쫙	uunky/
+쫘	uunk/	100%
+쫙	uunky/	100%
 쫚	uunkyy/
 쫛	uunkyb/
 쫜	uunkl/
 쫝	uunklu/
 쫞	uunklw/
 쫟	uunkc/
-쫠	uunks/
+쫠	uunks/	100%
 쫡	uunksy/
 쫢	uunkso/
 쫣	uunksa/
@@ -16730,7 +16730,7 @@ use_preset_vocabulary: false
 쫩	uunka/
 쫪	uunkab/
 쫫	uunkb/
-쫬	uunkbb/
+쫬	uunkbb/	100%
 쫭	uunkq/
 쫮	uunku/
 쫯	uunkd/
@@ -16738,7 +16738,7 @@ use_preset_vocabulary: false
 쫱	uunke/
 쫲	uunkx/
 쫳	uunkw/
-쫴	uunh/
+쫴	uunh/	100%
 쫵	uunhy/
 쫶	uunhyy/
 쫷	uunhyb/
@@ -16759,7 +16759,7 @@ use_preset_vocabulary: false
 쬅	uunha/
 쬆	uunhab/
 쬇	uunhb/
-쬈	uunhbb/
+쬈	uunhbb/	100%
 쬉	uunhq/
 쬊	uunhu/
 쬋	uunhd/
@@ -16767,15 +16767,15 @@ use_preset_vocabulary: false
 쬍	uunhe/
 쬎	uunhx/
 쬏	uunhw/
-쬐	uuni/
+쬐	uuni/	100%
 쬑	uuniy/
 쬒	uuniyy/
 쬓	uuniyb/
-쬔	uunil/
+쬔	uunil/	100%
 쬕	uunilu/
 쬖	uunilw/
 쬗	uunic/
-쬘	uunis/
+쬘	uunis/	100%
 쬙	uunisy/
 쬚	uuniso/
 쬛	uunisa/
@@ -16783,8 +16783,8 @@ use_preset_vocabulary: false
 쬝	uunise/
 쬞	uunisx/
 쬟	uunisw/
-쬠	uunio/
-쬡	uunia/
+쬠	uunio/	100%
+쬡	uunia/	100%
 쬢	uuniab/
 쬣	uunib/
 쬤	uunibb/
@@ -16816,22 +16816,22 @@ use_preset_vocabulary: false
 쬾	uumab/
 쬿	uumb/
 쭀	uumbb/
-쭁	uumq/
+쭁	uumq/	100%
 쭂	uumu/
 쭃	uumd/
 쭄	uumz/
 쭅	uume/
 쭆	uumx/
 쭇	uumw/
-쭈	uut/
-쭉	uuty/
+쭈	uut/	100%
+쭉	uuty/	100%
 쭊	uutyy/
 쭋	uutyb/
-쭌	uutl/
+쭌	uutl/	100%
 쭍	uutlu/
 쭎	uutlw/
 쭏	uutc/
-쭐	uuts/
+쭐	uuts/	100%
 쭑	uutsy/
 쭒	uutso/
 쭓	uutsa/
@@ -16839,19 +16839,19 @@ use_preset_vocabulary: false
 쭕	uutse/
 쭖	uutsx/
 쭗	uutsw/
-쭘	uuto/
-쭙	uuta/
+쭘	uuto/	100%
+쭙	uuta/	100%
 쭚	uutab/
 쭛	uutb/
 쭜	uutbb/
-쭝	uutq/
+쭝	uutq/	100%
 쭞	uutu/
 쭟	uutd/
 쭠	uutz/
 쭡	uute/
 쭢	uutx/
 쭣	uutw/
-쭤	uutj/
+쭤	uutj/	100%
 쭥	uutjy/
 쭦	uutjyy/
 쭧	uutjyb/
@@ -16871,8 +16871,8 @@ use_preset_vocabulary: false
 쭵	uutja/
 쭶	uutjab/
 쭷	uutjb/
-쭸	uutjbb/
-쭹	uutjq/
+쭸	uutjbb/	100%
+쭹	uutjq/	100%
 쭺	uutju/
 쭻	uutjd/
 쭼	uutjz/
@@ -16907,7 +16907,7 @@ use_preset_vocabulary: false
 쮙	uutpe/
 쮚	uutpx/
 쮛	uutpw/
-쮜	uuti/
+쮜	uuti/	100%
 쮝	uutiy/
 쮞	uutiyy/
 쮟	uutiyb/
@@ -16935,7 +16935,7 @@ use_preset_vocabulary: false
 쮵	uutie/
 쮶	uutix/
 쮷	uutiw/
-쮸	uur/
+쮸	uur/	100%
 쮹	uury/
 쮺	uuryy/
 쮻	uuryb/
@@ -16963,7 +16963,7 @@ use_preset_vocabulary: false
 쯑	uure/
 쯒	uurx/
 쯓	uurw/
-쯔	uuv/
+쯔	uuv/	100%
 쯕	uuvy/
 쯖	uuvyy/
 쯗	uuvyb/
@@ -16979,12 +16979,12 @@ use_preset_vocabulary: false
 쯡	uuvse/
 쯢	uuvsx/
 쯣	uuvsw/
-쯤	uuvo/
+쯤	uuvo/	100%
 쯥	uuva/
 쯦	uuvab/
-쯧	uuvb/
+쯧	uuvb/	100%
 쯨	uuvbb/
-쯩	uuvq/
+쯩	uuvq/	100%
 쯪	uuvu/
 쯫	uuvd/
 쯬	uuvz/
@@ -17020,15 +17020,15 @@ use_preset_vocabulary: false
 찉	uuvie/
 찊	uuvix/
 찋	uuviw/
-찌	uui/
-찍	uuiy/
+찌	uui/	100%
+찍	uuiy/	100%
 찎	uuiyy/
 찏	uuiyb/
-찐	uuil/
+찐	uuil/	100%
 찑	uuilu/
 찒	uuilw/
 찓	uuic/
-찔	uuis/
+찔	uuis/	100%
 찕	uuisy/
 찖	uuiso/
 찗	uuisa/
@@ -17036,27 +17036,27 @@ use_preset_vocabulary: false
 찙	uuise/
 찚	uuisx/
 찛	uuisw/
-찜	uuio/
-찝	uuia/
+찜	uuio/	100%
+찝	uuia/	100%
 찞	uuiab/
 찟	uuib/
 찠	uuibb/
-찡	uuiq/
-찢	uuiu/
+찡	uuiq/	100%
+찢	uuiu/	100%
 찣	uuid/
 찤	uuiz/
 찥	uuie/
 찦	uuix/
-찧	uuiw/
-차	dk/
-착	dky/
+찧	uuiw/	100%
+차	dk/	100%
+착	dky/	100%
 찪	dkyy/
 찫	dkyb/
-찬	dkl/
+찬	dkl/	100%
 찭	dklu/
-찮	dklw/
+찮	dklw/	100%
 찯	dkc/
-찰	dks/
+찰	dks/	100%
 찱	dksy/
 찲	dkso/
 찳	dksa/
@@ -17064,27 +17064,27 @@ use_preset_vocabulary: false
 찵	dkse/
 찶	dksx/
 찷	dksw/
-참	dko/
-찹	dka/
+참	dko/	100%
+찹	dka/	100%
 찺	dkab/
-찻	dkb/
-찼	dkbb/
-창	dkq/
-찾	dku/
+찻	dkb/	100%
+찼	dkbb/	100%
+창	dkq/	100%
+찾	dku/	100%
 찿	dkd/
 챀	dkz/
 챁	dke/
 챂	dkx/
 챃	dkw/
-채	dh/
-책	dhy/
+채	dh/	100%
+책	dhy/	100%
 챆	dhyy/
 챇	dhyb/
-챈	dhl/
+챈	dhl/	100%
 챉	dhlu/
 챊	dhlw/
 챋	dhc/
-챌	dhs/
+챌	dhs/	100%
 챍	dhsy/
 챎	dhso/
 챏	dhsa/
@@ -17092,27 +17092,27 @@ use_preset_vocabulary: false
 챑	dhse/
 챒	dhsx/
 챓	dhsw/
-챔	dho/
-챕	dha/
+챔	dho/	100%
+챕	dha/	100%
 챖	dhab/
-챗	dhb/
-챘	dhbb/
-챙	dhq/
+챗	dhb/	100%
+챘	dhbb/	100%
+챙	dhq/	100%
 챚	dhu/
 챛	dhd/
 챜	dhz/
 챝	dhe/
 챞	dhx/
 챟	dhw/
-챠	df/
+챠	df/	100%
 챡	dfy/
 챢	dfyy/
 챣	dfyb/
-챤	dfl/
+챤	dfl/	100%
 챥	dflu/
-챦	dflw/
+챦	dflw/	100%
 챧	dfc/
-챨	dfs/
+챨	dfs/	100%
 챩	dfsy/
 챪	dfso/
 챫	dfsa/
@@ -17120,12 +17120,12 @@ use_preset_vocabulary: false
 챭	dfse/
 챮	dfsx/
 챯	dfsw/
-챰	dfo/
+챰	dfo/	100%
 챱	dfa/
 챲	dfab/
 챳	dfb/
 챴	dfbb/
-챵	dfq/
+챵	dfq/	100%
 챶	dfu/
 챷	dfd/
 챸	dfz/
@@ -17160,15 +17160,15 @@ use_preset_vocabulary: false
 첕	dhhe/
 첖	dhhx/
 첗	dhhw/
-처	dj/
-척	djy/
+처	dj/	100%
+척	djy/	100%
 첚	djyy/
 첛	djyb/
-천	djl/
+천	djl/	100%
 첝	djlu/
 첞	djlw/
 첟	djc/
-철	djs/
+철	djs/	100%
 첡	djsy/
 첢	djso/
 첣	djsa/
@@ -17176,27 +17176,27 @@ use_preset_vocabulary: false
 첥	djse/
 첦	djsx/
 첧	djsw/
-첨	djo/
-첩	dja/
+첨	djo/	100%
+첩	dja/	100%
 첪	djab/
-첫	djb/
-첬	djbb/
-청	djq/
+첫	djb/	100%
+첬	djbb/	100%
+청	djq/	100%
 첮	dju/
 첯	djd/
 첰	djz/
 첱	dje/
 첲	djx/
 첳	djw/
-체	dp/
-첵	dpy/
+체	dp/	100%
+첵	dpy/	100%
 첶	dpyy/
 첷	dpyb/
-첸	dpl/
+첸	dpl/	100%
 첹	dplu/
 첺	dplw/
 첻	dpc/
-첼	dps/
+첼	dps/	100%
 첽	dpsy/
 첾	dpso/
 첿	dpsa/
@@ -17204,23 +17204,23 @@ use_preset_vocabulary: false
 쳁	dpse/
 쳂	dpsx/
 쳃	dpsw/
-쳄	dpo/
-쳅	dpa/
+쳄	dpo/	100%
+쳅	dpa/	100%
 쳆	dpab/
-쳇	dpb/
+쳇	dpb/	100%
 쳈	dpbb/
-쳉	dpq/
+쳉	dpq/	100%
 쳊	dpu/
 쳋	dpd/
 쳌	dpz/
 쳍	dpe/
 쳎	dpx/
 쳏	dpw/
-쳐	dg/
+쳐	dg/	100%
 쳑	dgy/
 쳒	dgyy/
 쳓	dgyb/
-쳔	dgl/
+쳔	dgl/	100%
 쳕	dglu/
 쳖	dglw/
 쳗	dgc/
@@ -17236,7 +17236,7 @@ use_preset_vocabulary: false
 쳡	dga/
 쳢	dgab/
 쳣	dgb/
-쳤	dgbb/
+쳤	dgbb/	100%
 쳥	dgq/
 쳦	dgu/
 쳧	dgd/
@@ -17244,11 +17244,11 @@ use_preset_vocabulary: false
 쳩	dge/
 쳪	dgx/
 쳫	dgw/
-쳬	dpp/
+쳬	dpp/	100%
 쳭	dppy/
 쳮	dppyy/
 쳯	dppyb/
-쳰	dppl/
+쳰	dppl/	100%
 쳱	dpplu/
 쳲	dpplw/
 쳳	dppc/
@@ -17266,22 +17266,22 @@ use_preset_vocabulary: false
 쳿	dppb/
 #35
 촀	dppbb/
-촁	dppq/
+촁	dppq/	100%
 촂	dppu/
 촃	dppd/
 촄	dppz/
 촅	dppe/
 촆	dppx/
 촇	dppw/
-초	dn/
-촉	dny/
+초	dn/	100%
+촉	dny/	100%
 촊	dnyy/
 촋	dnyb/
-촌	dnl/
+촌	dnl/	100%
 촍	dnlu/
 촎	dnlw/
 촏	dnc/
-촐	dns/
+촐	dns/	100%
 촑	dnsy/
 촒	dnso/
 촓	dnsa/
@@ -17289,27 +17289,27 @@ use_preset_vocabulary: false
 촕	dnse/
 촖	dnsx/
 촗	dnsw/
-촘	dno/
-촙	dna/
+촘	dno/	100%
+촙	dna/	100%
 촚	dnab/
-촛	dnb/
+촛	dnb/	100%
 촜	dnbb/
-총	dnq/
+총	dnq/	100%
 촞	dnu/
 촟	dnd/
 촠	dnz/
 촡	dne/
 촢	dnx/
 촣	dnw/
-촤	dnk/
+촤	dnk/	100%
 촥	dnky/
 촦	dnkyy/
 촧	dnkyb/
-촨	dnkl/
+촨	dnkl/	100%
 촩	dnklu/
 촪	dnklw/
 촫	dnkc/
-촬	dnks/
+촬	dnks/	100%
 촭	dnksy/
 촮	dnkso/
 촯	dnksa/
@@ -17322,7 +17322,7 @@ use_preset_vocabulary: false
 촶	dnkab/
 촷	dnkb/
 촸	dnkbb/
-촹	dnkq/
+촹	dnkq/	100%
 촺	dnku/
 촻	dnkd/
 촼	dnkz/
@@ -17357,15 +17357,15 @@ use_preset_vocabulary: false
 쵙	dnhe/
 쵚	dnhx/
 쵛	dnhw/
-최	dni/
+최	dni/	100%
 쵝	dniy/
 쵞	dniyy/
 쵟	dniyb/
-쵠	dnil/
+쵠	dnil/	100%
 쵡	dnilu/
 쵢	dnilw/
 쵣	dnic/
-쵤	dnis/
+쵤	dnis/	100%
 쵥	dnisy/
 쵦	dniso/
 쵧	dnisa/
@@ -17373,19 +17373,19 @@ use_preset_vocabulary: false
 쵩	dnise/
 쵪	dnisx/
 쵫	dnisw/
-쵬	dnio/
-쵭	dnia/
+쵬	dnio/	100%
+쵭	dnia/	100%
 쵮	dniab/
-쵯	dnib/
+쵯	dnib/	100%
 쵰	dnibb/
-쵱	dniq/
+쵱	dniq/	100%
 쵲	dniu/
 쵳	dnid/
 쵴	dniz/
 쵵	dnie/
 쵶	dnix/
 쵷	dniw/
-쵸	dm/
+쵸	dm/	100%
 쵹	dmy/
 쵺	dmyy/
 쵻	dmyb/
@@ -17401,7 +17401,7 @@ use_preset_vocabulary: false
 춅	dmse/
 춆	dmsx/
 춇	dmsw/
-춈	dmo/
+춈	dmo/	100%
 춉	dma/
 춊	dmab/
 춋	dmb/
@@ -17413,15 +17413,15 @@ use_preset_vocabulary: false
 춑	dme/
 춒	dmx/
 춓	dmw/
-추	dt/
-축	dty/
+추	dt/	100%
+축	dty/	100%
 춖	dtyy/
 춗	dtyb/
-춘	dtl/
+춘	dtl/	100%
 춙	dtlu/
 춚	dtlw/
 춛	dtc/
-출	dts/
+출	dts/	100%
 춝	dtsy/
 춞	dtso/
 춟	dtsa/
@@ -17429,19 +17429,19 @@ use_preset_vocabulary: false
 춡	dtse/
 춢	dtsx/
 춣	dtsw/
-춤	dto/
-춥	dta/
+춤	dto/	100%
+춥	dta/	100%
 춦	dtab/
-춧	dtb/
+춧	dtb/	100%
 춨	dtbb/
-충	dtq/
+충	dtq/	100%
 춪	dtu/
 춫	dtd/
 춬	dtz/
 춭	dte/
 춮	dtx/
 춯	dtw/
-춰	dtj/
+춰	dtj/	100%
 춱	dtjy/
 춲	dtjyy/
 춳	dtjyb/
@@ -17461,7 +17461,7 @@ use_preset_vocabulary: false
 췁	dtja/
 췂	dtjab/
 췃	dtjb/
-췄	dtjbb/
+췄	dtjbb/	100%
 췅	dtjq/
 췆	dtju/
 췇	dtjd/
@@ -17469,11 +17469,11 @@ use_preset_vocabulary: false
 췉	dtje/
 췊	dtjx/
 췋	dtjw/
-췌	dtp/
+췌	dtp/	100%
 췍	dtpy/
 췎	dtpyy/
 췏	dtpyb/
-췐	dtpl/
+췐	dtpl/	100%
 췑	dtplu/
 췒	dtplw/
 췓	dtpc/
@@ -17497,15 +17497,15 @@ use_preset_vocabulary: false
 췥	dtpe/
 췦	dtpx/
 췧	dtpw/
-취	dti/
+취	dti/	100%
 췩	dtiy/
 췪	dtiyy/
 췫	dtiyb/
-췬	dtil/
+췬	dtil/	100%
 췭	dtilu/
 췮	dtilw/
 췯	dtic/
-췰	dtis/
+췰	dtis/	100%
 췱	dtisy/
 췲	dtiso/
 췳	dtisa/
@@ -17513,12 +17513,12 @@ use_preset_vocabulary: false
 췵	dtise/
 췶	dtisx/
 췷	dtisw/
-췸	dtio/
-췹	dtia/
+췸	dtio/	100%
+췹	dtia/	100%
 췺	dtiab/
-췻	dtib/
+췻	dtib/	100%
 췼	dtibb/
-췽	dtiq/
+췽	dtiq/	100%
 췾	dtiu/
 췿	dtid/
 #36
@@ -17526,15 +17526,15 @@ use_preset_vocabulary: false
 츁	dtie/
 츂	dtix/
 츃	dtiw/
-츄	dr/
+츄	dr/	100%
 츅	dry/
 츆	dryy/
 츇	dryb/
-츈	drl/
+츈	drl/	100%
 츉	drlu/
 츊	drlw/
 츋	drc/
-츌	drs/
+츌	drs/	100%
 츍	drsy/
 츎	drso/
 츏	drsa/
@@ -17542,27 +17542,27 @@ use_preset_vocabulary: false
 츑	drse/
 츒	drsx/
 츓	drsw/
-츔	dro/
+츔	dro/	100%
 츕	dra/
 츖	drab/
 츗	drb/
 츘	drbb/
-츙	drq/
+츙	drq/	100%
 츚	dru/
 츛	drd/
 츜	drz/
 츝	dre/
 츞	drx/
 츟	drw/
-츠	dv/
-측	dvy/
+츠	dv/	100%
+측	dvy/	100%
 츢	dvyy/
 츣	dvyb/
-츤	dvl/
+츤	dvl/	100%
 츥	dvlu/
 츦	dvlw/
 츧	dvc/
-츨	dvs/
+츨	dvs/	100%
 츩	dvsy/
 츪	dvso/
 츫	dvsa/
@@ -17570,12 +17570,12 @@ use_preset_vocabulary: false
 츭	dvse/
 츮	dvsx/
 츯	dvsw/
-츰	dvo/
-츱	dva/
+츰	dvo/	100%
+츱	dva/	100%
 츲	dvab/
-츳	dvb/
+츳	dvb/	100%
 츴	dvbb/
-층	dvq/
+층	dvq/	100%
 츶	dvu/
 츷	dvd/
 츸	dvz/
@@ -17610,43 +17610,43 @@ use_preset_vocabulary: false
 칕	dvie/
 칖	dvix/
 칗	dviw/
-치	di/
-칙	diy/
+치	di/	100%
+칙	diy/	100%
 칚	diyy/
 칛	diyb/
-친	dil/
+친	dil/	100%
 칝	dilu/
 칞	dilw/
-칟	dic/
-칠	dis/
-칡	disy/
+칟	dic/	100%
+칠	dis/	100%
+칡	disy/	100%
 칢	diso/
 칣	disa/
 칤	disb/
 칥	dise/
 칦	disx/
 칧	disw/
-침	dio/
-칩	dia/
+침	dio/	100%
+칩	dia/	100%
 칪	diab/
-칫	dib/
+칫	dib/	100%
 칬	dibb/
-칭	diq/
+칭	diq/	100%
 칮	diu/
 칯	did/
 칰	diz/
 칱	die/
 칲	dix/
 칳	diw/
-카	zk/
-칵	zky/
+카	zk/	100%
+칵	zky/	100%
 칶	zkyy/
 칷	zkyb/
-칸	zkl/
+칸	zkl/	100%
 칹	zklu/
 칺	zklw/
 칻	zkc/
-칼	zks/
+칼	zks/	100%
 칽	zksy/
 칾	zkso/
 칿	zksa/
@@ -17654,27 +17654,27 @@ use_preset_vocabulary: false
 캁	zkse/
 캂	zksx/
 캃	zksw/
-캄	zko/
-캅	zka/
+캄	zko/	100%
+캅	zka/	100%
 캆	zkab/
-캇	zkb/
+캇	zkb/	100%
 캈	zkbb/
-캉	zkq/
+캉	zkq/	100%
 캊	zku/
 캋	zkd/
 캌	zkz/
 캍	zke/
 캎	zkx/
 캏	zkw/
-캐	zh/
-캑	zhy/
+캐	zh/	100%
+캑	zhy/	100%
 캒	zhyy/
 캓	zhyb/
-캔	zhl/
+캔	zhl/	100%
 캕	zhlu/
 캖	zhlw/
 캗	zhc/
-캘	zhs/
+캘	zhs/	100%
 캙	zhsy/
 캚	zhso/
 캛	zhsa/
@@ -17682,20 +17682,20 @@ use_preset_vocabulary: false
 캝	zhse/
 캞	zhsx/
 캟	zhsw/
-캠	zho/
-캡	zha/
+캠	zho/	100%
+캡	zha/	100%
 캢	zhab/
-캣	zhb/
-캤	zhbb/
-캥	zhq/
+캣	zhb/	100%
+캤	zhbb/	100%
+캥	zhq/	100%
 캦	zhu/
 캧	zhd/
 캨	zhz/
 캩	zhe/
 캪	zhx/
 캫	zhw/
-캬	zf/
-캭	zfy/
+캬	zf/	100%
+캭	zfy/	100%
 캮	zfyy/
 캯	zfyb/
 캰	zfl/
@@ -17715,7 +17715,7 @@ use_preset_vocabulary: false
 캾	zfab/
 캿	zfb/
 컀	zfbb/
-컁	zfq/
+컁	zfq/	100%
 컂	zfu/
 컃	zfd/
 컄	zfz/
@@ -17750,15 +17750,15 @@ use_preset_vocabulary: false
 컡	zhhe/
 컢	zhhx/
 컣	zhhw/
-커	zj/
-컥	zjy/
+커	zj/	100%
+컥	zjy/	100%
 컦	zjyy/
 컧	zjyb/
-컨	zjl/
+컨	zjl/	100%
 컩	zjlu/
 컪	zjlw/
-컫	zjc/
-컬	zjs/
+컫	zjc/	100%
+컬	zjs/	100%
 컭	zjsy/
 컮	zjso/
 컯	zjsa/
@@ -17766,12 +17766,12 @@ use_preset_vocabulary: false
 컱	zjse/
 컲	zjsx/
 컳	zjsw/
-컴	zjo/
-컵	zja/
+컴	zjo/	100%
+컵	zja/	100%
 컶	zjab/
-컷	zjb/
-컸	zjbb/
-컹	zjq/
+컷	zjb/	100%
+컸	zjbb/	100%
+컹	zjq/	100%
 컺	zju/
 컻	zjd/
 컼	zjz/
@@ -17779,15 +17779,15 @@ use_preset_vocabulary: false
 컾	zjx/
 컿	zjw/
 #37
-케	zp/
-켁	zpy/
+케	zp/	100%
+켁	zpy/	100%
 켂	zpyy/
 켃	zpyb/
-켄	zpl/
+켄	zpl/	100%
 켅	zplu/
 켆	zplw/
 켇	zpc/
-켈	zps/
+켈	zps/	100%
 켉	zpsy/
 켊	zpso/
 켋	zpsa/
@@ -17795,27 +17795,27 @@ use_preset_vocabulary: false
 켍	zpse/
 켎	zpsx/
 켏	zpsw/
-켐	zpo/
-켑	zpa/
+켐	zpo/	100%
+켑	zpa/	100%
 켒	zpab/
-켓	zpb/
+켓	zpb/	100%
 켔	zpbb/
-켕	zpq/
+켕	zpq/	100%
 켖	zpu/
 켗	zpd/
 켘	zpz/
 켙	zpe/
 켚	zpx/
 켛	zpw/
-켜	zg/
+켜	zg/	100%
 켝	zgy/
 켞	zgyy/
 켟	zgyb/
-켠	zgl/
+켠	zgl/	100%
 켡	zglu/
 켢	zglw/
 켣	zgc/
-켤	zgs/
+켤	zgs/	100%
 켥	zgsy/
 켦	zgso/
 켧	zgsa/
@@ -17823,19 +17823,19 @@ use_preset_vocabulary: false
 켩	zgse/
 켪	zgsx/
 켫	zgsw/
-켬	zgo/
-켭	zga/
+켬	zgo/	100%
+켭	zga/	100%
 켮	zgab/
-켯	zgb/
-켰	zgbb/
-켱	zgq/
+켯	zgb/	100%
+켰	zgbb/	100%
+켱	zgq/	100%
 켲	zgu/
 켳	zgd/
 켴	zgz/
 켵	zge/
 켶	zgx/
 켷	zgw/
-켸	zpp/
+켸	zpp/	100%
 켹	zppy/
 켺	zppyy/
 켻	zppyb/
@@ -17863,15 +17863,15 @@ use_preset_vocabulary: false
 콑	zppe/
 콒	zppx/
 콓	zppw/
-코	zn/
-콕	zny/
+코	zn/	100%
+콕	zny/	100%
 콖	znyy/
 콗	znyb/
-콘	znl/
+콘	znl/	100%
 콙	znlu/
 콚	znlw/
 콛	znc/
-콜	zns/
+콜	zns/	100%
 콝	znsy/
 콞	znso/
 콟	znsa/
@@ -17879,27 +17879,27 @@ use_preset_vocabulary: false
 콡	znse/
 콢	znsx/
 콣	znsw/
-콤	zno/
-콥	zna/
+콤	zno/	100%
+콥	zna/	100%
 콦	znab/
-콧	znb/
+콧	znb/	100%
 콨	znbb/
-콩	znq/
+콩	znq/	100%
 콪	znu/
 콫	znd/
 콬	znz/
 콭	zne/
 콮	znx/
 콯	znw/
-콰	znk/
-콱	znky/
+콰	znk/	100%
+콱	znky/	100%
 콲	znkyy/
 콳	znkyb/
-콴	znkl/
+콴	znkl/	100%
 콵	znklu/
 콶	znklw/
 콷	znkc/
-콸	znks/
+콸	znks/	100%
 콹	znksy/
 콺	znkso/
 콻	znksa/
@@ -17907,19 +17907,19 @@ use_preset_vocabulary: false
 콽	znkse/
 콾	znksx/
 콿	znksw/
-쾀	znko/
+쾀	znko/	100%
 쾁	znka/
 쾂	znkab/
 쾃	znkb/
 쾄	znkbb/
-쾅	znkq/
+쾅	znkq/	100%
 쾆	znku/
 쾇	znkd/
 쾈	znkz/
 쾉	znke/
 쾊	znkx/
 쾋	znkw/
-쾌	znh/
+쾌	znh/	100%
 쾍	znhy/
 쾎	znhyy/
 쾏	znhyb/
@@ -17940,14 +17940,14 @@ use_preset_vocabulary: false
 쾞	znhab/
 쾟	znhb/
 쾠	znhbb/
-쾡	znhq/
+쾡	znhq/	100%
 쾢	znhu/
 쾣	znhd/
 쾤	znhz/
 쾥	znhe/
 쾦	znhx/
 쾧	znhw/
-쾨	zni/
+쾨	zni/	100%
 쾩	zniy/
 쾪	zniyy/
 쾫	zniyb/
@@ -17955,7 +17955,7 @@ use_preset_vocabulary: false
 쾭	znilu/
 쾮	znilw/
 쾯	znic/
-쾰	znis/
+쾰	znis/	100%
 쾱	znisy/
 쾲	zniso/
 쾳	znisa/
@@ -17975,7 +17975,7 @@ use_preset_vocabulary: false
 쿁	znie/
 쿂	znix/
 쿃	zniw/
-쿄	zm/
+쿄	zm/	100%
 쿅	zmy/
 쿆	zmyy/
 쿇	zmyb/
@@ -18003,15 +18003,15 @@ use_preset_vocabulary: false
 쿝	zme/
 쿞	zmx/
 쿟	zmw/
-쿠	zt/
-쿡	zty/
+쿠	zt/	100%
+쿡	zty/	100%
 쿢	ztyy/
 쿣	ztyb/
-쿤	ztl/
+쿤	ztl/	100%
 쿥	ztlu/
 쿦	ztlw/
 쿧	ztc/
-쿨	zts/
+쿨	zts/	100%
 쿩	ztsy/
 쿪	ztso/
 쿫	ztsa/
@@ -18019,28 +18019,28 @@ use_preset_vocabulary: false
 쿭	ztse/
 쿮	ztsx/
 쿯	ztsw/
-쿰	zto/
-쿱	zta/
+쿰	zto/	100%
+쿱	zta/	100%
 쿲	ztab/
-쿳	ztb/
+쿳	ztb/	100%
 쿴	ztbb/
-쿵	ztq/
+쿵	ztq/	100%
 쿶	ztu/
 쿷	ztd/
 쿸	ztz/
 쿹	zte/
 쿺	ztx/
 쿻	ztw/
-쿼	ztj/
+쿼	ztj/	100%
 쿽	ztjy/
 쿾	ztjyy/
 쿿	ztjyb/
 #38
-퀀	ztjl/
+퀀	ztjl/	100%
 퀁	ztjlu/
 퀂	ztjlw/
 퀃	ztjc/
-퀄	ztjs/
+퀄	ztjs/	100%
 퀅	ztjsy/
 퀆	ztjso/
 퀇	ztjsa/
@@ -18053,14 +18053,14 @@ use_preset_vocabulary: false
 퀎	ztjab/
 퀏	ztjb/
 퀐	ztjbb/
-퀑	ztjq/
+퀑	ztjq/	100%
 퀒	ztju/
 퀓	ztjd/
 퀔	ztjz/
 퀕	ztje/
 퀖	ztjx/
 퀗	ztjw/
-퀘	ztp/
+퀘	ztp/	100%
 퀙	ztpy/
 퀚	ztpyy/
 퀛	ztpyb/
@@ -18081,22 +18081,22 @@ use_preset_vocabulary: false
 퀪	ztpab/
 퀫	ztpb/
 퀬	ztpbb/
-퀭	ztpq/
+퀭	ztpq/	100%
 퀮	ztpu/
 퀯	ztpd/
 퀰	ztpz/
 퀱	ztpe/
 퀲	ztpx/
 퀳	ztpw/
-퀴	zti/
-퀵	ztiy/
+퀴	zti/	100%
+퀵	ztiy/	100%
 퀶	ztiyy/
 퀷	ztiyb/
-퀸	ztil/
+퀸	ztil/	100%
 퀹	ztilu/
 퀺	ztilw/
 퀻	ztic/
-퀼	ztis/
+퀼	ztis/	100%
 퀽	ztisy/
 퀾	ztiso/
 퀿	ztisa/
@@ -18104,27 +18104,27 @@ use_preset_vocabulary: false
 큁	ztise/
 큂	ztisx/
 큃	ztisw/
-큄	ztio/
-큅	ztia/
+큄	ztio/	100%
+큅	ztia/	100%
 큆	ztiab/
-큇	ztib/
+큇	ztib/	100%
 큈	ztibb/
-큉	ztiq/
+큉	ztiq/	100%
 큊	ztiu/
 큋	ztid/
 큌	ztiz/
 큍	ztie/
 큎	ztix/
 큏	ztiw/
-큐	zr/
+큐	zr/	100%
 큑	zry/
 큒	zryy/
 큓	zryb/
-큔	zrl/
+큔	zrl/	100%
 큕	zrlu/
 큖	zrlw/
 큗	zrc/
-큘	zrs/
+큘	zrs/	100%
 큙	zrsy/
 큚	zrso/
 큛	zrsa/
@@ -18132,7 +18132,7 @@ use_preset_vocabulary: false
 큝	zrse/
 큞	zrsx/
 큟	zrsw/
-큠	zro/
+큠	zro/	100%
 큡	zra/
 큢	zrab/
 큣	zrb/
@@ -18144,15 +18144,15 @@ use_preset_vocabulary: false
 큩	zre/
 큪	zrx/
 큫	zrw/
-크	zv/
-큭	zvy/
+크	zv/	100%
+큭	zvy/	100%
 큮	zvyy/
 큯	zvyb/
-큰	zvl/
+큰	zvl/	100%
 큱	zvlu/
 큲	zvlw/
 큳	zvc/
-클	zvs/
+클	zvs/	100%
 큵	zvsy/
 큶	zvso/
 큷	zvsa/
@@ -18160,12 +18160,12 @@ use_preset_vocabulary: false
 큹	zvse/
 큺	zvsx/
 큻	zvsw/
-큼	zvo/
-큽	zva/
+큼	zvo/	100%
+큽	zva/	100%
 큾	zvab/
 큿	zvb/
 킀	zvbb/
-킁	zvq/
+킁	zvq/	100%
 킂	zvu/
 킃	zvd/
 킄	zvz/
@@ -18200,15 +18200,15 @@ use_preset_vocabulary: false
 킡	zvie/
 킢	zvix/
 킣	zviw/
-키	zi/
-킥	ziy/
+키	zi/	100%
+킥	ziy/	100%
 킦	ziyy/
 킧	ziyb/
-킨	zil/
+킨	zil/	100%
 킩	zilu/
 킪	zilw/
 킫	zic/
-킬	zis/
+킬	zis/	100%
 킭	zisy/
 킮	ziso/
 킯	zisa/
@@ -18216,55 +18216,55 @@ use_preset_vocabulary: false
 킱	zise/
 킲	zisx/
 킳	zisw/
-킴	zio/
-킵	zia/
+킴	zio/	100%
+킵	zia/	100%
 킶	ziab/
-킷	zib/
+킷	zib/	100%
 킸	zibb/
-킹	ziq/
+킹	ziq/	100%
 킺	ziu/
 킻	zid/
 킼	ziz/
 킽	zie/
 킾	zix/
 킿	ziw/
-타	ek/
-탁	eky/
+타	ek/	100%
+탁	eky/	100%
 탂	ekyy/
 탃	ekyb/
-탄	ekl/
+탄	ekl/	100%
 탅	eklu/
 탆	eklw/
 탇	ekc/
-탈	eks/
-탉	eksy/
+탈	eks/	100%
+탉	eksy/	100%
 탊	ekso/
 탋	eksa/
 탌	eksb/
 탍	ekse/
 탎	eksx/
 탏	eksw/
-탐	eko/
-탑	eka/
+탐	eko/	100%
+탑	eka/	100%
 탒	ekab/
-탓	ekb/
-탔	ekbb/
-탕	ekq/
+탓	ekb/	100%
+탔	ekbb/	100%
+탕	ekq/	100%
 탖	eku/
 탗	ekd/
 탘	ekz/
 탙	eke/
 탚	ekx/
 탛	ekw/
-태	eh/
-택	ehy/
+태	eh/	100%
+택	ehy/	100%
 탞	ehyy/
 탟	ehyb/
-탠	ehl/
+탠	ehl/	100%
 탡	ehlu/
 탢	ehlw/
 탣	ehc/
-탤	ehs/
+탤	ehs/	100%
 탥	ehsy/
 탦	ehso/
 탧	ehsa/
@@ -18272,19 +18272,19 @@ use_preset_vocabulary: false
 탩	ehse/
 탪	ehsx/
 탫	ehsw/
-탬	eho/
-탭	eha/
+탬	eho/	100%
+탭	eha/	100%
 탮	ehab/
-탯	ehb/
-탰	ehbb/
-탱	ehq/
+탯	ehb/	100%
+탰	ehbb/	100%
+탱	ehq/	100%
 탲	ehu/
 탳	ehd/
 탴	ehz/
 탵	ehe/
 탶	ehx/
 탷	ehw/
-탸	ef/
+탸	ef/	100%
 탹	efy/
 탺	efyy/
 탻	efyb/
@@ -18306,7 +18306,7 @@ use_preset_vocabulary: false
 턊	efab/
 턋	efb/
 턌	efbb/
-턍	efq/
+턍	efq/	100%
 턎	efu/
 턏	efd/
 턐	efz/
@@ -18341,43 +18341,43 @@ use_preset_vocabulary: false
 턭	ehhe/
 턮	ehhx/
 턯	ehhw/
-터	ej/
-턱	ejy/
+터	ej/	100%
+턱	ejy/	100%
 턲	ejyy/
 턳	ejyb/
-턴	ejl/
+턴	ejl/	100%
 턵	ejlu/
 턶	ejlw/
 턷	ejc/
-털	ejs/
+털	ejs/	100%
 턹	ejsy/
-턺	ejso/
+턺	ejso/	100%
 턻	ejsa/
 턼	ejsb/
 턽	ejse/
 턾	ejsx/
 턿	ejsw/
-텀	ejo/
-텁	eja/
+텀	ejo/	100%
+텁	eja/	100%
 텂	ejab/
-텃	ejb/
-텄	ejbb/
-텅	ejq/
+텃	ejb/	100%
+텄	ejbb/	100%
+텅	ejq/	100%
 텆	eju/
 텇	ejd/
 텈	ejz/
 텉	eje/
 텊	ejx/
 텋	ejw/
-테	ep/
-텍	epy/
+테	ep/	100%
+텍	epy/	100%
 텎	epyy/
 텏	epyb/
-텐	epl/
+텐	epl/	100%
 텑	eplu/
 텒	eplw/
 텓	epc/
-텔	eps/
+텔	eps/	100%
 텕	epsy/
 텖	epso/
 텗	epsa/
@@ -18385,23 +18385,23 @@ use_preset_vocabulary: false
 텙	epse/
 텚	epsx/
 텛	epsw/
-템	epo/
-텝	epa/
+템	epo/	100%
+텝	epa/	100%
 텞	epab/
-텟	epb/
+텟	epb/	100%
 텠	epbb/
-텡	epq/
+텡	epq/	100%
 텢	epu/
 텣	epd/
 텤	epz/
 텥	epe/
 텦	epx/
 텧	epw/
-텨	eg/
+텨	eg/	100%
 텩	egy/
 텪	egyy/
 텫	egyb/
-텬	egl/
+텬	egl/	100%
 텭	eglu/
 텮	eglw/
 텯	egc/
@@ -18417,7 +18417,7 @@ use_preset_vocabulary: false
 텹	ega/
 텺	egab/
 텻	egb/
-텼	egbb/
+텼	egbb/	100%
 텽	egq/
 텾	egu/
 텿	egd/
@@ -18425,11 +18425,11 @@ use_preset_vocabulary: false
 톁	ege/
 톂	egx/
 톃	egw/
-톄	epp/
+톄	epp/	100%
 톅	eppy/
 톆	eppyy/
 톇	eppyb/
-톈	eppl/
+톈	eppl/	100%
 톉	epplu/
 톊	epplw/
 톋	eppc/
@@ -18453,15 +18453,15 @@ use_preset_vocabulary: false
 톝	eppe/
 톞	eppx/
 톟	eppw/
-토	en/
-톡	eny/
+토	en/	100%
+톡	eny/	100%
 톢	enyy/
 톣	enyb/
-톤	enl/
+톤	enl/	100%
 톥	enlu/
 톦	enlw/
 톧	enc/
-톨	ens/
+톨	ens/	100%
 톩	ensy/
 톪	enso/
 톫	ensa/
@@ -18469,23 +18469,23 @@ use_preset_vocabulary: false
 톭	ense/
 톮	ensx/
 톯	ensw/
-톰	eno/
-톱	ena/
+톰	eno/	100%
+톱	ena/	100%
 톲	enab/
-톳	enb/
+톳	enb/	100%
 톴	enbb/
-통	enq/
+통	enq/	100%
 톶	enu/
 톷	end/
 톸	enz/
 톹	ene/
-톺	enx/
+톺	enx/	100%
 톻	enw/
-톼	enk/
+톼	enk/	100%
 톽	enky/
 톾	enkyy/
 톿	enkyb/
-퇀	enkl/
+퇀	enkl/	100%
 퇁	enklu/
 퇂	enklw/
 퇃	enkc/
@@ -18509,7 +18509,7 @@ use_preset_vocabulary: false
 퇕	enke/
 퇖	enkx/
 퇗	enkw/
-퇘	enh/
+퇘	enh/	100%
 퇙	enhy/
 퇚	enhyy/
 퇛	enhyb/
@@ -18537,11 +18537,11 @@ use_preset_vocabulary: false
 퇱	enhe/
 퇲	enhx/
 퇳	enhw/
-퇴	eni/
+퇴	eni/	100%
 퇵	eniy/
 퇶	eniyy/
 퇷	eniyb/
-퇸	enil/
+퇸	enil/	100%
 퇹	enilu/
 퇺	enilw/
 퇻	enic/
@@ -18557,16 +18557,16 @@ use_preset_vocabulary: false
 툄	enio/
 툅	enia/
 툆	eniab/
-툇	enib/
+툇	enib/	100%
 툈	enibb/
-툉	eniq/
+툉	eniq/	100%
 툊	eniu/
 툋	enid/
 툌	eniz/
 툍	enie/
 툎	enix/
 툏	eniw/
-툐	em/
+툐	em/	100%
 툑	emy/
 툒	emyy/
 툓	emyb/
@@ -18594,15 +18594,15 @@ use_preset_vocabulary: false
 툩	eme/
 툪	emx/
 툫	emw/
-투	et/
-툭	ety/
+투	et/	100%
+툭	ety/	100%
 툮	etyy/
 툯	etyb/
-툰	etl/
+툰	etl/	100%
 툱	etlu/
 툲	etlw/
 툳	etc/
-툴	ets/
+툴	ets/	100%
 툵	etsy/
 툶	etso/
 툷	etsa/
@@ -18610,19 +18610,19 @@ use_preset_vocabulary: false
 툹	etse/
 툺	etsx/
 툻	etsw/
-툼	eto/
-툽	eta/
+툼	eto/	100%
+툽	eta/	100%
 툾	etab/
-툿	etb/
+툿	etb/	100%
 퉀	etbb/
-퉁	etq/
+퉁	etq/	100%
 퉂	etu/
 퉃	etd/
 퉄	etz/
 퉅	ete/
 퉆	etx/
 퉇	etw/
-퉈	etj/
+퉈	etj/	100%
 퉉	etjy/
 퉊	etjyy/
 퉋	etjyb/
@@ -18642,7 +18642,7 @@ use_preset_vocabulary: false
 퉙	etja/
 퉚	etjab/
 퉛	etjb/
-퉜	etjbb/
+퉜	etjbb/	100%
 퉝	etjq/
 퉞	etju/
 퉟	etjd/
@@ -18650,7 +18650,7 @@ use_preset_vocabulary: false
 퉡	etje/
 퉢	etjx/
 퉣	etjw/
-퉤	etp/
+퉤	etp/	100%
 퉥	etpy/
 퉦	etpyy/
 퉧	etpyb/
@@ -18678,15 +18678,15 @@ use_preset_vocabulary: false
 퉽	etpe/
 퉾	etpx/
 퉿	etpw/
-튀	eti/
-튁	etiy/
+튀	eti/	100%
+튁	etiy/	100%
 튂	etiyy/
 튃	etiyb/
-튄	etil/
+튄	etil/	100%
 튅	etilu/
 튆	etilw/
 튇	etic/
-튈	etis/
+튈	etis/	100%
 튉	etisy/
 튊	etiso/
 튋	etisa/
@@ -18694,27 +18694,27 @@ use_preset_vocabulary: false
 튍	etise/
 튎	etisx/
 튏	etisw/
-튐	etio/
-튑	etia/
+튐	etio/	100%
+튑	etia/	100%
 튒	etiab/
 튓	etib/
 튔	etibb/
-튕	etiq/
+튕	etiq/	100%
 튖	etiu/
 튗	etid/
 튘	etiz/
 튙	etie/
 튚	etix/
 튛	etiw/
-튜	er/
+튜	er/	100%
 튝	ery/
 튞	eryy/
 튟	eryb/
-튠	erl/
+튠	erl/	100%
 튡	erlu/
 튢	erlw/
 튣	erc/
-튤	ers/
+튤	ers/	100%
 튥	ersy/
 튦	erso/
 튧	ersa/
@@ -18722,38 +18722,38 @@ use_preset_vocabulary: false
 튩	erse/
 튪	ersx/
 튫	ersw/
-튬	ero/
+튬	ero/	100%
 튭	era/
 튮	erab/
 튯	erb/
 튰	erbb/
-튱	erq/
+튱	erq/	100%
 튲	eru/
 튳	erd/
 튴	erz/
 튵	ere/
 튶	erx/
 튷	erw/
-트	ev/
-특	evy/
+트	ev/	100%
+특	evy/	100%
 튺	evyy/
 튻	evyb/
-튼	evl/
+튼	evl/	100%
 튽	evlu/
 튾	evlw/
-튿	evc/
-틀	evs/
+튿	evc/	100%
+틀	evs/	100%
 틁	evsy/
-틂	evso/
+틂	evso/	100%
 틃	evsa/
 틄	evsb/
 틅	evse/
 틆	evsx/
 틇	evsw/
-틈	evo/
-틉	eva/
+틈	evo/	100%
+틉	eva/	100%
 틊	evab/
-틋	evb/
+틋	evb/	100%
 틌	evbb/
 틍	evq/
 틎	evu/
@@ -18762,15 +18762,15 @@ use_preset_vocabulary: false
 틑	eve/
 틒	evx/
 틓	evw/
-틔	evi/
+틔	evi/	100%
 틕	eviy/
 틖	eviyy/
 틗	eviyb/
-틘	evil/
+틘	evil/	100%
 틙	evilu/
 틚	evilw/
 틛	evic/
-틜	evis/
+틜	evis/	100%
 틝	evisy/
 틞	eviso/
 틟	evisa/
@@ -18778,8 +18778,8 @@ use_preset_vocabulary: false
 틡	evise/
 틢	evisx/
 틣	evisw/
-틤	evio/
-틥	evia/
+틤	evio/	100%
+틥	evia/	100%
 틦	eviab/
 틧	evib/
 틨	evibb/
@@ -18790,15 +18790,15 @@ use_preset_vocabulary: false
 틭	evie/
 틮	evix/
 틯	eviw/
-티	ei/
-틱	eiy/
+티	ei/	100%
+틱	eiy/	100%
 틲	eiyy/
 틳	eiyb/
-틴	eil/
+틴	eil/	100%
 틵	eilu/
 틶	eilw/
 틷	eic/
-틸	eis/
+틸	eis/	100%
 틹	eisy/
 틺	eiso/
 틻	eisa/
@@ -18807,55 +18807,55 @@ use_preset_vocabulary: false
 틾	eisx/
 틿	eisw/
 #41
-팀	eio/
-팁	eia/
+팀	eio/	100%
+팁	eia/	100%
 팂	eiab/
-팃	eib/
+팃	eib/	100%
 팄	eibb/
-팅	eiq/
+팅	eiq/	100%
 팆	eiu/
 팇	eid/
 팈	eiz/
 팉	eie/
 팊	eix/
 팋	eiw/
-파	xk/
-팍	xky/
-팎	xkyy/
+파	xk/	100%
+팍	xky/	100%
+팎	xkyy/	100%
 팏	xkyb/
-판	xkl/
+판	xkl/	100%
 팑	xklu/
 팒	xklw/
 팓	xkc/
-팔	xks/
+팔	xks/	100%
 팕	xksy/
-팖	xkso/
+팖	xkso/	100%
 팗	xksa/
 팘	xksb/
 팙	xkse/
 팚	xksx/
 팛	xksw/
-팜	xko/
-팝	xka/
+팜	xko/	100%
+팝	xka/	100%
 팞	xkab/
-팟	xkb/
-팠	xkbb/
-팡	xkq/
+팟	xkb/	100%
+팠	xkbb/	100%
+팡	xkq/	100%
 팢	xku/
 팣	xkd/
 팤	xkz/
-팥	xke/
+팥	xke/	100%
 팦	xkx/
 팧	xkw/
-패	xh/
-팩	xhy/
+패	xh/	100%
+팩	xhy/	100%
 팪	xhyy/
 팫	xhyb/
-팬	xhl/
+팬	xhl/	100%
 팭	xhlu/
 팮	xhlw/
 팯	xhc/
-팰	xhs/
+팰	xhs/	100%
 팱	xhsy/
 팲	xhso/
 팳	xhsa/
@@ -18863,20 +18863,20 @@ use_preset_vocabulary: false
 팵	xhse/
 팶	xhsx/
 팷	xhsw/
-팸	xho/
-팹	xha/
+팸	xho/	100%
+팹	xha/	100%
 팺	xhab/
-팻	xhb/
-팼	xhbb/
-팽	xhq/
+팻	xhb/	100%
+팼	xhbb/	100%
+팽	xhq/	100%
 팾	xhu/
 팿	xhd/
 퍀	xhz/
 퍁	xhe/
 퍂	xhx/
 퍃	xhw/
-퍄	xf/
-퍅	xfy/
+퍄	xf/	100%
+퍅	xfy/	100%
 퍆	xfyy/
 퍇	xfyb/
 퍈	xfl/
@@ -18931,15 +18931,15 @@ use_preset_vocabulary: false
 퍹	xhhe/
 퍺	xhhx/
 퍻	xhhw/
-퍼	xj/
-퍽	xjy/
+퍼	xj/	100%
+퍽	xjy/	100%
 퍾	xjyy/
 퍿	xjyb/
-펀	xjl/
+펀	xjl/	100%
 펁	xjlu/
 펂	xjlw/
 펃	xjc/
-펄	xjs/
+펄	xjs/	100%
 펅	xjsy/
 펆	xjso/
 펇	xjsa/
@@ -18947,27 +18947,27 @@ use_preset_vocabulary: false
 펉	xjse/
 펊	xjsx/
 펋	xjsw/
-펌	xjo/
-펍	xja/
+펌	xjo/	100%
+펍	xja/	100%
 펎	xjab/
-펏	xjb/
-펐	xjbb/
-펑	xjq/
+펏	xjb/	100%
+펐	xjbb/	100%
+펑	xjq/	100%
 펒	xju/
 펓	xjd/
 펔	xjz/
 펕	xje/
 펖	xjx/
 펗	xjw/
-페	xp/
-펙	xpy/
+페	xp/	100%
+펙	xpy/	100%
 펚	xpyy/
 펛	xpyb/
-펜	xpl/
+펜	xpl/	100%
 펝	xplu/
 펞	xplw/
 펟	xpc/
-펠	xps/
+펠	xps/	100%
 펡	xpsy/
 펢	xpso/
 펣	xpsa/
@@ -18975,27 +18975,27 @@ use_preset_vocabulary: false
 펥	xpse/
 펦	xpsx/
 펧	xpsw/
-펨	xpo/
-펩	xpa/
+펨	xpo/	100%
+펩	xpa/	100%
 펪	xpab/
-펫	xpb/
+펫	xpb/	100%
 펬	xpbb/
-펭	xpq/
+펭	xpq/	100%
 펮	xpu/
 펯	xpd/
 펰	xpz/
 펱	xpe/
 펲	xpx/
 펳	xpw/
-펴	xg/
+펴	xg/	100%
 펵	xgy/
 펶	xgyy/
 펷	xgyb/
-편	xgl/
+편	xgl/	100%
 펹	xglu/
 펺	xglw/
 펻	xgc/
-펼	xgs/
+펼	xgs/	100%
 펽	xgsy/
 펾	xgso/
 펿	xgsa/
@@ -19003,19 +19003,19 @@ use_preset_vocabulary: false
 폁	xgse/
 폂	xgsx/
 폃	xgsw/
-폄	xgo/
-폅	xga/
+폄	xgo/	100%
+폅	xga/	100%
 폆	xgab/
 폇	xgb/
-폈	xgbb/
-평	xgq/
+폈	xgbb/	100%
+평	xgq/	100%
 폊	xgu/
 폋	xgd/
 폌	xgz/
 폍	xge/
 폎	xgx/
 폏	xgw/
-폐	xpp/
+폐	xpp/	100%
 폑	xppy/
 폒	xppyy/
 폓	xppyb/
@@ -19023,7 +19023,7 @@ use_preset_vocabulary: false
 폕	xpplu/
 폖	xpplw/
 폗	xppc/
-폘	xpps/
+폘	xpps/	100%
 폙	xppsy/
 폚	xppso/
 폛	xppsa/
@@ -19032,9 +19032,9 @@ use_preset_vocabulary: false
 폞	xppsx/
 폟	xppsw/
 폠	xppo/
-폡	xppa/
+폡	xppa/	100%
 폢	xppab/
-폣	xppb/
+폣	xppb/	100%
 폤	xppbb/
 폥	xppq/
 폦	xppu/
@@ -19043,16 +19043,16 @@ use_preset_vocabulary: false
 폩	xppe/
 폪	xppx/
 폫	xppw/
-포	xn/
-폭	xny/
+포	xn/	100%
+폭	xny/	100%
 폮	xnyy/
 폯	xnyb/
 #42
-폰	xnl/
+폰	xnl/	100%
 폱	xnlu/
 폲	xnlw/
 폳	xnc/
-폴	xns/
+폴	xns/	100%
 폵	xnsy/
 폶	xnso/
 폷	xnsa/
@@ -19060,19 +19060,19 @@ use_preset_vocabulary: false
 폹	xnse/
 폺	xnsx/
 폻	xnsw/
-폼	xno/
-폽	xna/
+폼	xno/	100%
+폽	xna/	100%
 폾	xnab/
-폿	xnb/
+폿	xnb/	100%
 퐀	xnbb/
-퐁	xnq/
+퐁	xnq/	100%
 퐂	xnu/
 퐃	xnd/
 퐄	xnz/
 퐅	xne/
 퐆	xnx/
 퐇	xnw/
-퐈	xnk/
+퐈	xnk/	100%
 퐉	xnky/
 퐊	xnkyy/
 퐋	xnkyb/
@@ -19093,7 +19093,7 @@ use_preset_vocabulary: false
 퐚	xnkab/
 퐛	xnkb/
 퐜	xnkbb/
-퐝	xnkq/
+퐝	xnkq/	100%
 퐞	xnku/
 퐟	xnkd/
 퐠	xnkz/
@@ -19128,11 +19128,11 @@ use_preset_vocabulary: false
 퐽	xnhe/
 퐾	xnhx/
 퐿	xnhw/
-푀	xni/
+푀	xni/	100%
 푁	xniy/
 푂	xniyy/
 푃	xniyb/
-푄	xnil/
+푄	xnil/	100%
 푅	xnilu/
 푆	xnilw/
 푇	xnic/
@@ -19156,15 +19156,15 @@ use_preset_vocabulary: false
 푙	xnie/
 푚	xnix/
 푛	xniw/
-표	xm/
+표	xm/	100%
 푝	xmy/
 푞	xmyy/
 푟	xmyb/
-푠	xml/
+푠	xml/	100%
 푡	xmlu/
 푢	xmlw/
 푣	xmc/
-푤	xms/
+푤	xms/	100%
 푥	xmsy/
 푦	xmso/
 푧	xmsa/
@@ -19173,9 +19173,9 @@ use_preset_vocabulary: false
 푪	xmsx/
 푫	xmsw/
 푬	xmo/
-푭	xma/
+푭	xma/	100%
 푮	xmab/
-푯	xmb/
+푯	xmb/	100%
 푰	xmbb/
 푱	xmq/
 푲	xmu/
@@ -19184,35 +19184,35 @@ use_preset_vocabulary: false
 푵	xme/
 푶	xmx/
 푷	xmw/
-푸	xt/
-푹	xty/
+푸	xt/	100%
+푹	xty/	100%
 푺	xtyy/
 푻	xtyb/
-푼	xtl/
+푼	xtl/	100%
 푽	xtlu/
 푾	xtlw/
-푿	xtc/
-풀	xts/
+푿	xtc/	100%
+풀	xts/	100%
 풁	xtsy/
-풂	xtso/
+풂	xtso/	100%
 풃	xtsa/
 풄	xtsb/
 풅	xtse/
 풆	xtsx/
 풇	xtsw/
-품	xto/
-풉	xta/
+품	xto/	100%
+풉	xta/	100%
 풊	xtab/
-풋	xtb/
+풋	xtb/	100%
 풌	xtbb/
-풍	xtq/
+풍	xtq/	100%
 풎	xtu/
 풏	xtd/
 풐	xtz/
 풑	xte/
 풒	xtx/
 풓	xtw/
-풔	xtj/
+풔	xtj/	100%
 풕	xtjy/
 풖	xtjyy/
 풗	xtjyb/
@@ -19233,7 +19233,7 @@ use_preset_vocabulary: false
 풦	xtjab/
 풧	xtjb/
 풨	xtjbb/
-풩	xtjq/
+풩	xtjq/	100%
 풪	xtju/
 풫	xtjd/
 풬	xtjz/
@@ -19268,15 +19268,15 @@ use_preset_vocabulary: false
 퓉	xtpe/
 퓊	xtpx/
 퓋	xtpw/
-퓌	xti/
+퓌	xti/	100%
 퓍	xtiy/
 퓎	xtiyy/
 퓏	xtiyb/
-퓐	xtil/
+퓐	xtil/	100%
 퓑	xtilu/
 퓒	xtilw/
 퓓	xtic/
-퓔	xtis/
+퓔	xtis/	100%
 퓕	xtisy/
 퓖	xtiso/
 퓗	xtisa/
@@ -19284,10 +19284,10 @@ use_preset_vocabulary: false
 퓙	xtise/
 퓚	xtisx/
 퓛	xtisw/
-퓜	xtio/
+퓜	xtio/	100%
 퓝	xtia/
 퓞	xtiab/
-퓟	xtib/
+퓟	xtib/	100%
 #43
 퓠	xtibb/
 퓡	xtiq/
@@ -19297,15 +19297,15 @@ use_preset_vocabulary: false
 퓥	xtie/
 퓦	xtix/
 퓧	xtiw/
-퓨	xr/
+퓨	xr/	100%
 퓩	xry/
 퓪	xryy/
 퓫	xryb/
-퓬	xrl/
+퓬	xrl/	100%
 퓭	xrlu/
 퓮	xrlw/
 퓯	xrc/
-퓰	xrs/
+퓰	xrs/	100%
 퓱	xrsy/
 퓲	xrso/
 퓳	xrsa/
@@ -19313,27 +19313,27 @@ use_preset_vocabulary: false
 퓵	xrse/
 퓶	xrsx/
 퓷	xrsw/
-퓸	xro/
+퓸	xro/	100%
 퓹	xra/
 퓺	xrab/
-퓻	xrb/
+퓻	xrb/	100%
 퓼	xrbb/
-퓽	xrq/
+퓽	xrq/	100%
 퓾	xru/
 퓿	xrd/
 픀	xrz/
 픁	xre/
 픂	xrx/
 픃	xrw/
-프	xv/
+프	xv/	100%
 픅	xvy/
 픆	xvyy/
 픇	xvyb/
-픈	xvl/
+픈	xvl/	100%
 픉	xvlu/
 픊	xvlw/
 픋	xvc/
-플	xvs/
+플	xvs/	100%
 픍	xvsy/
 픎	xvso/
 픏	xvsa/
@@ -19341,10 +19341,10 @@ use_preset_vocabulary: false
 픑	xvse/
 픒	xvsx/
 픓	xvsw/
-픔	xvo/
-픕	xva/
+픔	xvo/	100%
+픕	xva/	100%
 픖	xvab/
-픗	xvb/
+픗	xvb/	100%
 픘	xvbb/
 픙	xvq/
 픚	xvu/
@@ -19381,15 +19381,15 @@ use_preset_vocabulary: false
 픹	xvie/
 픺	xvix/
 픻	xviw/
-피	xi/
-픽	xiy/
+피	xi/	100%
+픽	xiy/	100%
 픾	xiyy/
 픿	xiyb/
-핀	xil/
+핀	xil/	100%
 핁	xilu/
 핂	xilw/
 핃	xic/
-필	xis/
+필	xis/	100%
 핅	xisy/
 핆	xiso/
 핇	xisa/
@@ -19397,55 +19397,55 @@ use_preset_vocabulary: false
 핉	xise/
 핊	xisx/
 핋	xisw/
-핌	xio/
-핍	xia/
+핌	xio/	100%
+핍	xia/	100%
 핎	xiab/
-핏	xib/
+핏	xib/	100%
 핐	xibb/
-핑	xiq/
+핑	xiq/	100%
 핒	xiu/
 핓	xid/
 핔	xiz/
 핕	xie/
 핖	xix/
 핗	xiw/
-하	wk/
-학	wky/
+하	wk/	100%
+학	wky/	100%
 핚	wkyy/
 핛	wkyb/
-한	wkl/
+한	wkl/	100%
 핝	wklu/
 핞	wklw/
 핟	wkc/
-할	wks/
+할	wks/	100%
 핡	wksy/
 핢	wkso/
 핣	wksa/
 핤	wksb/
-핥	wkse/
+핥	wkse/	100%
 핦	wksx/
 핧	wksw/
-함	wko/
-합	wka/
+함	wko/	100%
+합	wka/	100%
 핪	wkab/
-핫	wkb/
+핫	wkb/	100%
 핬	wkbb/
-항	wkq/
+항	wkq/	100%
 핮	wku/
 핯	wkd/
 핰	wkz/
 핱	wke/
 핲	wkx/
 핳	wkw/
-해	wh/
-핵	why/
+해	wh/	100%
+핵	why/	100%
 핶	whyy/
 핷	whyb/
-핸	whl/
+핸	whl/	100%
 핹	whlu/
 핺	whlw/
 핻	whc/
-핼	whs/
+핼	whs/	100%
 핽	whsy/
 핾	whso/
 핿	whsa/
@@ -19453,19 +19453,19 @@ use_preset_vocabulary: false
 햁	whse/
 햂	whsx/
 햃	whsw/
-햄	who/
-햅	wha/
+햄	who/	100%
+햅	wha/	100%
 햆	whab/
-햇	whb/
-했	whbb/
-행	whq/
+햇	whb/	100%
+했	whbb/	100%
+행	whq/	100%
 햊	whu/
 햋	whd/
 햌	whz/
 햍	whe/
 햎	whx/
 햏	whw/
-햐	wf/
+햐	wf/	100%
 햑	wfy/
 햒	wfyy/
 햓	wfyb/
@@ -19486,7 +19486,7 @@ use_preset_vocabulary: false
 햢	wfab/
 햣	wfb/
 햤	wfbb/
-향	wfq/
+향	wfq/	100%
 햦	wfu/
 햧	wfd/
 햨	wfz/
@@ -19521,44 +19521,44 @@ use_preset_vocabulary: false
 헅	whhe/
 헆	whhx/
 헇	whhw/
-허	wj/
-헉	wjy/
+허	wj/	100%
+헉	wjy/	100%
 헊	wjyy/
 헋	wjyb/
-헌	wjl/
+헌	wjl/	100%
 헍	wjlu/
 헎	wjlw/
 헏	wjc/
 #44
-헐	wjs/
+헐	wjs/	100%
 헑	wjsy/
-헒	wjso/
+헒	wjso/	100%
 헓	wjsa/
 헔	wjsb/
 헕	wjse/
 헖	wjsx/
 헗	wjsw/
-험	wjo/
-헙	wja/
+험	wjo/	100%
+헙	wja/	100%
 헚	wjab/
-헛	wjb/
+헛	wjb/	100%
 헜	wjbb/
-헝	wjq/
+헝	wjq/	100%
 헞	wju/
 헟	wjd/
 헠	wjz/
 헡	wje/
 헢	wjx/
 헣	wjw/
-헤	wp/
-헥	wpy/
+헤	wp/	100%
+헥	wpy/	100%
 헦	wpyy/
 헧	wpyb/
-헨	wpl/
+헨	wpl/	100%
 헩	wplu/
 헪	wplw/
 헫	wpc/
-헬	wps/
+헬	wps/	100%
 헭	wpsy/
 헮	wpso/
 헯	wpsa/
@@ -19566,27 +19566,27 @@ use_preset_vocabulary: false
 헱	wpse/
 헲	wpsx/
 헳	wpsw/
-헴	wpo/
-헵	wpa/
+헴	wpo/	100%
+헵	wpa/	100%
 헶	wpab/
-헷	wpb/
+헷	wpb/	100%
 헸	wpbb/
-헹	wpq/
+헹	wpq/	100%
 헺	wpu/
 헻	wpd/
 헼	wpz/
 헽	wpe/
 헾	wpx/
 헿	wpw/
-혀	wg/
-혁	wgy/
+혀	wg/	100%
+혁	wgy/	100%
 혂	wgyy/
 혃	wgyb/
-현	wgl/
+현	wgl/	100%
 혅	wglu/
 혆	wglw/
 혇	wgc/
-혈	wgs/
+혈	wgs/	100%
 혉	wgsy/
 혊	wgso/
 혋	wgsa/
@@ -19594,27 +19594,27 @@ use_preset_vocabulary: false
 혍	wgse/
 혎	wgsx/
 혏	wgsw/
-혐	wgo/
-협	wga/
+혐	wgo/	100%
+협	wga/	100%
 혒	wgab/
-혓	wgb/
-혔	wgbb/
-형	wgq/
+혓	wgb/	100%
+혔	wgbb/	100%
+형	wgq/	100%
 혖	wgu/
 혗	wgd/
 혘	wgz/
 혙	wge/
 혚	wgx/
 혛	wgw/
-혜	wpp/
+혜	wpp/	100%
 혝	wppy/
 혞	wppyy/
 혟	wppyb/
-혠	wppl/
+혠	wppl/	100%
 혡	wpplu/
 혢	wpplw/
 혣	wppc/
-혤	wpps/
+혤	wpps/	100%
 혥	wppsy/
 혦	wppso/
 혧	wppsa/
@@ -19623,7 +19623,7 @@ use_preset_vocabulary: false
 혪	wppsx/
 혫	wppsw/
 혬	wppo/
-혭	wppa/
+혭	wppa/	100%
 혮	wppab/
 혯	wppb/
 혰	wppbb/
@@ -19634,43 +19634,43 @@ use_preset_vocabulary: false
 혵	wppe/
 혶	wppx/
 혷	wppw/
-호	wn/
-혹	wny/
+호	wn/	100%
+혹	wny/	100%
 혺	wnyy/
 혻	wnyb/
-혼	wnl/
+혼	wnl/	100%
 혽	wnlu/
 혾	wnlw/
 혿	wnc/
-홀	wns/
+홀	wns/	100%
 홁	wnsy/
 홂	wnso/
 홃	wnsa/
 홄	wnsb/
-홅	wnse/
+홅	wnse/	100%
 홆	wnsx/
 홇	wnsw/
-홈	wno/
-홉	wna/
+홈	wno/	100%
+홉	wna/	100%
 홊	wnab/
-홋	wnb/
+홋	wnb/	100%
 홌	wnbb/
-홍	wnq/
+홍	wnq/	100%
 홎	wnu/
 홏	wnd/
 홐	wnz/
-홑	wne/
+홑	wne/	100%
 홒	wnx/
 홓	wnw/
-화	wnk/
-확	wnky/
+화	wnk/	100%
+확	wnky/	100%
 홖	wnkyy/
 홗	wnkyb/
-환	wnkl/
+환	wnkl/	100%
 홙	wnklu/
 홚	wnklw/
 홛	wnkc/
-활	wnks/
+활	wnks/	100%
 홝	wnksy/
 홞	wnkso/
 홟	wnksa/
@@ -19681,20 +19681,20 @@ use_preset_vocabulary: false
 홤	wnko/
 홥	wnka/
 홦	wnkab/
-홧	wnkb/
+홧	wnkb/	100%
 홨	wnkbb/
-황	wnkq/
+황	wnkq/	100%
 홪	wnku/
 홫	wnkd/
 홬	wnkz/
 홭	wnke/
 홮	wnkx/
 홯	wnkw/
-홰	wnh/
-홱	wnhy/
+홰	wnh/	100%
+홱	wnhy/	100%
 홲	wnhyy/
 홳	wnhyb/
-홴	wnhl/
+홴	wnhl/	100%
 홵	wnhlu/
 홶	wnhlw/
 홷	wnhc/
@@ -19709,24 +19709,24 @@ use_preset_vocabulary: false
 횀	wnho/
 횁	wnha/
 횂	wnhab/
-횃	wnhb/
+횃	wnhb/	100%
 횄	wnhbb/
-횅	wnhq/
+횅	wnhq/	100%
 횆	wnhu/
 횇	wnhd/
 횈	wnhz/
 횉	wnhe/
 횊	wnhx/
 횋	wnhw/
-회	wni/
-획	wniy/
+회	wni/	100%
+획	wniy/	100%
 횎	wniyy/
 횏	wniyb/
-횐	wnil/
+횐	wnil/	100%
 횑	wnilu/
 횒	wnilw/
 횓	wnic/
-횔	wnis/
+횔	wnis/	100%
 횕	wnisy/
 횖	wniso/
 횗	wnisa/
@@ -19735,26 +19735,26 @@ use_preset_vocabulary: false
 횚	wnisx/
 횛	wnisw/
 횜	wnio/
-횝	wnia/
+횝	wnia/	100%
 횞	wniab/
-횟	wnib/
+횟	wnib/	100%
 횠	wnibb/
-횡	wniq/
+횡	wniq/	100%
 횢	wniu/
 횣	wnid/
 횤	wniz/
 횥	wnie/
 횦	wnix/
 횧	wniw/
-효	wm/
+효	wm/	100%
 횩	wmy/
 횪	wmyy/
 횫	wmyb/
-횬	wml/
+횬	wml/	100%
 횭	wmlu/
 횮	wmlw/
 횯	wmc/
-횰	wms/
+횰	wms/	100%
 횱	wmsy/
 횲	wmso/
 횳	wmsa/
@@ -19763,9 +19763,9 @@ use_preset_vocabulary: false
 횶	wmsx/
 횷	wmsw/
 횸	wmo/
-횹	wma/
+횹	wma/	100%
 횺	wmab/
-횻	wmb/
+횻	wmb/	100%
 횼	wmbb/
 횽	wmq/
 횾	wmu/
@@ -19775,43 +19775,43 @@ use_preset_vocabulary: false
 훁	wme/
 훂	wmx/
 훃	wmw/
-후	wt/
-훅	wty/
+후	wt/	100%
+훅	wty/	100%
 훆	wtyy/
 훇	wtyb/
-훈	wtl/
+훈	wtl/	100%
 훉	wtlu/
 훊	wtlw/
 훋	wtc/
-훌	wts/
+훌	wts/	100%
 훍	wtsy/
 훎	wtso/
 훏	wtsa/
 훐	wtsb/
-훑	wtse/
+훑	wtse/	100%
 훒	wtsx/
 훓	wtsw/
-훔	wto/
+훔	wto/	100%
 훕	wta/
 훖	wtab/
-훗	wtb/
+훗	wtb/	100%
 훘	wtbb/
-훙	wtq/
+훙	wtq/	100%
 훚	wtu/
 훛	wtd/
 훜	wtz/
 훝	wte/
 훞	wtx/
 훟	wtw/
-훠	wtj/
+훠	wtj/	100%
 훡	wtjy/
 훢	wtjyy/
 훣	wtjyb/
-훤	wtjl/
+훤	wtjl/	100%
 훥	wtjlu/
 훦	wtjlw/
 훧	wtjc/
-훨	wtjs/
+훨	wtjs/	100%
 훩	wtjsy/
 훪	wtjso/
 훫	wtjsa/
@@ -19819,27 +19819,27 @@ use_preset_vocabulary: false
 훭	wtjse/
 훮	wtjsx/
 훯	wtjsw/
-훰	wtjo/
+훰	wtjo/	100%
 훱	wtja/
 훲	wtjab/
 훳	wtjb/
 훴	wtjbb/
-훵	wtjq/
+훵	wtjq/	100%
 훶	wtju/
 훷	wtjd/
 훸	wtjz/
 훹	wtje/
 훺	wtjx/
 훻	wtjw/
-훼	wtp/
-훽	wtpy/
+훼	wtp/	100%
+훽	wtpy/	100%
 훾	wtpyy/
 훿	wtpyb/
-휀	wtpl/
+휀	wtpl/	100%
 휁	wtplu/
 휂	wtplw/
 휃	wtpc/
-휄	wtps/
+휄	wtps/	100%
 휅	wtpsy/
 휆	wtpso/
 휇	wtpsa/
@@ -19852,22 +19852,22 @@ use_preset_vocabulary: false
 휎	wtpab/
 휏	wtpb/
 휐	wtpbb/
-휑	wtpq/
+휑	wtpq/	100%
 휒	wtpu/
 휓	wtpd/
 휔	wtpz/
 휕	wtpe/
 휖	wtpx/
 휗	wtpw/
-휘	wti/
-휙	wtiy/
+휘	wti/	100%
+휙	wtiy/	100%
 휚	wtiyy/
 휛	wtiyb/
-휜	wtil/
+휜	wtil/	100%
 휝	wtilu/
 휞	wtilw/
 휟	wtic/
-휠	wtis/
+휠	wtis/	100%
 휡	wtisy/
 휢	wtiso/
 휣	wtisa/
@@ -19875,27 +19875,27 @@ use_preset_vocabulary: false
 휥	wtise/
 휦	wtisx/
 휧	wtisw/
-휨	wtio/
-휩	wtia/
+휨	wtio/	100%
+휩	wtia/	100%
 휪	wtiab/
-휫	wtib/
+휫	wtib/	100%
 휬	wtibb/
-휭	wtiq/
+휭	wtiq/	100%
 휮	wtiu/
 휯	wtid/
 휰	wtiz/
 휱	wtie/
 휲	wtix/
 휳	wtiw/
-휴	wr/
-휵	wry/
+휴	wr/	100%
+휵	wry/	100%
 휶	wryy/
 휷	wryb/
-휸	wrl/
+휸	wrl/	100%
 휹	wrlu/
 휺	wrlw/
 휻	wrc/
-휼	wrs/
+휼	wrs/	100%
 휽	wrsy/
 휾	wrso/
 휿	wrsa/
@@ -19903,55 +19903,55 @@ use_preset_vocabulary: false
 흁	wrse/
 흂	wrsx/
 흃	wrsw/
-흄	wro/
+흄	wro/	100%
 흅	wra/
 흆	wrab/
-흇	wrb/
+흇	wrb/	100%
 흈	wrbb/
-흉	wrq/
+흉	wrq/	100%
 흊	wru/
 흋	wrd/
 흌	wrz/
 흍	wre/
 흎	wrx/
 흏	wrw/
-흐	wv/
-흑	wvy/
+흐	wv/	100%
+흑	wvy/	100%
 흒	wvyy/
 흓	wvyb/
-흔	wvl/
+흔	wvl/	100%
 흕	wvlu/
-흖	wvlw/
-흗	wvc/
-흘	wvs/
-흙	wvsy/
+흖	wvlw/	100%
+흗	wvc/	100%
+흘	wvs/	100%
+흙	wvsy/	100%
 흚	wvso/
 흛	wvsa/
 흜	wvsb/
 흝	wvse/
 흞	wvsx/
 흟	wvsw/
-흠	wvo/
-흡	wva/
+흠	wvo/	100%
+흡	wva/	100%
 흢	wvab/
-흣	wvb/
+흣	wvb/	100%
 흤	wvbb/
-흥	wvq/
+흥	wvq/	100%
 흦	wvu/
 흧	wvd/
 흨	wvz/
-흩	wve/
+흩	wve/	100%
 흪	wvx/
 흫	wvw/
-희	wvi/
+희	wvi/	100%
 흭	wviy/
 흮	wviyy/
 흯	wviyb/
-흰	wvil/
+흰	wvil/	100%
 흱	wvilu/
 흲	wvilw/
 흳	wvic/
-흴	wvis/
+흴	wvis/	100%
 흵	wvisy/
 흶	wviso/
 흷	wvisa/
@@ -19959,27 +19959,27 @@ use_preset_vocabulary: false
 흹	wvise/
 흺	wvisx/
 흻	wvisw/
-흼	wvio/
-흽	wvia/
+흼	wvio/	100%
+흽	wvia/	100%
 흾	wviab/
 흿	wvib/
 힀	wvibb/
-힁	wviq/
+힁	wviq/	100%
 힂	wviu/
 힃	wvid/
 힄	wviz/
 힅	wvie/
 힆	wvix/
 힇	wviw/
-히	wi/
-힉	wiy/
+히	wi/	100%
+힉	wiy/	100%
 힊	wiyy/
 힋	wiyb/
-힌	wil/
+힌	wil/	100%
 힍	wilu/
 힎	wilw/
 힏	wic/
-힐	wis/
+힐	wis/	100%
 힑	wisy/
 힒	wiso/
 힓	wisa/
@@ -19987,12 +19987,12 @@ use_preset_vocabulary: false
 힕	wise/
 힖	wisx/
 힗	wisw/
-힘	wio/
-힙	wia/
+힘	wio/	100%
+힙	wia/	100%
 힚	wiab/
-힛	wib/
+힛	wib/	100%
 힜	wibb/
-힝	wiq/
+힝	wiq/	100%
 힞	wiu/
 힟	wid/
 힠	wiz/
@@ -20006,7 +20006,7 @@ use_preset_vocabulary: false
 # 붮	aahv/
 # 붪	aaiv/
 # 붥	aajv/
-# 붰	aamv/
+# 붰	aamv/	100%
 # 붦	aanv/
 # 붨	aapv/
 # 붧	aarv/
@@ -20019,7 +20019,7 @@ use_preset_vocabulary: false
 # 볹	ankv/
 # 벬	appv/
 # 붎	ativ/
-# 붉	atjv/
+# 붉	atjv/	100%
 # 붌	atpv/
 # 븚	aviv/
 # 샚	bhhv/
@@ -20082,7 +20082,7 @@ use_preset_vocabulary: false
 # 몭	onkv/
 # 멠	oppv/
 # 뭂	otiv/
-# 묽	otjv/
+# 묽	otjv/	100%
 # 뭀	otpv/
 # 믎	oviv/
 # 앲	qhhv/
@@ -20091,9 +20091,9 @@ use_preset_vocabulary: false
 # 옩	qnkv/
 # 엜	qppv/
 # 욾	qtiv/
-# 욹	qtjv/
+# 욹	qtjv/	100%
 # 욼	qtpv/
-# 읊	qviv/
+# 읊	qviv/	100%
 # 랪	shhv/
 # 롮	snhv/
 # 롪	sniv/
@@ -20109,7 +20109,7 @@ use_preset_vocabulary: false
 # 졵	unkv/
 # 젨	uppv/
 # 줊	utiv/
-# 줅	utjv/
+# 줅	utjv/	100%
 # 줈	utpv/
 # 즖	uviv/
 # 햆	whhv/
@@ -20136,149 +20136,149 @@ use_preset_vocabulary: false
 # 곥	ynkv/
 # 겘	yppv/
 # 굺	ytiv/
-# 굵	ytjv/
+# 굵	ytjv/	100%
 # 굸	ytpv/
 # 긆	yviv/
 ### 以簡根在後，韓文補碼vr結束 ###
 ### （與以上相反）以基本字根在後，韓文補碼vr起始 ###
-# 뺘	aafv/
-# 뼈	aagv/
-# 빼	aahv/
-# 삐	aaiv/
-# 뻐	aajv/
-# 뾰	aamv/
-# 뽀	aanv/
-# 뻬	aapv/
-# 쀼	aarv/
-# 뿌	aatv/
-# 쁘	aavv/
-# 빠	aakv/
+# 뺘	aafv/	100%
+# 뼈	aagv/	100%
+# 빼	aahv/	100%
+# 삐	aaiv/	100%
+# 뻐	aajv/	100%
+# 뾰	aamv/	100%
+# 뽀	aanv/	100%
+# 뻬	aapv/	100%
+# 쀼	aarv/	100%
+# 뿌	aatv/	100%
+# 쁘	aavv/	100%
+# 빠	aakv/	100%
 # 뱨	ahhv/
-# 봬	anhv/
-# 뵈	aniv/
-# 봐	ankv/
-# 볘	appv/
-# 뷔	ativ/
-# 붜	atjv/
-# 붸	atpv/
+# 봬	anhv/	100%
+# 뵈	aniv/	100%
+# 봐	ankv/	100%
+# 볘	appv/	100%
+# 뷔	ativ/	100%
+# 붜	atjv/	100%
+# 붸	atpv/	100%
 # 븨	aviv/
-# 섀	bhhv/
-# 쇄	bnhv/
-# 쇠	bniv/
-# 솨	bnkv/
-# 셰	bppv/
-# 쉬	btiv/
-# 숴	btjv/
-# 쉐	btpv/
+# 섀	bhhv/	100%
+# 쇄	bnhv/	100%
+# 쇠	bniv/	100%
+# 솨	bnkv/	100%
+# 셰	bppv/	100%
+# 쉬	btiv/	100%
+# 숴	btjv/	100%
+# 쉐	btpv/	100%
 # 싀	bviv/
 # 댸	chhv/
-# 돼	cnhv/
-# 되	cniv/
-# 돠	cnkv/
-# 뎨	cppv/
-# 뒤	ctiv/
-# 둬	ctjv/
-# 뒈	ctpv/
-# 듸	cviv/
+# 돼	cnhv/	100%
+# 되	cniv/	100%
+# 돠	cnkv/	100%
+# 뎨	cppv/	100%
+# 뒤	ctiv/	100%
+# 둬	ctjv/	100%
+# 뒈	ctpv/	100%
+# 듸	cviv/	100%
 # 퍠	xhhv/
 # 퐤	xnhv/
-# 푀	xniv/
-# 퐈	xnkv/
-# 폐	xppv/
-# 퓌	xtiv/
-# 풔	xtjv/
+# 푀	xniv/	100%
+# 퐈	xnkv/	100%
+# 폐	xppv/	100%
+# 퓌	xtiv/	100%
+# 풔	xtjv/	100%
 # 풰	xtpv/
 # 픠	xviv/
 # 턔	ehhv/
-# 퇘	enhv/
-# 퇴	eniv/
-# 톼	enkv/
-# 톄	eppv/
-# 튀	etiv/
-# 퉈	etjv/
-# 퉤	etpv/
-# 틔	eviv/
+# 퇘	enhv/	100%
+# 퇴	eniv/	100%
+# 톼	enkv/	100%
+# 톄	eppv/	100%
+# 튀	etiv/	100%
+# 퉈	etjv/	100%
+# 퉤	etpv/	100%
+# 틔	eviv/	100%
 # 컈	zhhv/
-# 쾌	znhv/
-# 쾨	zniv/
-# 콰	znkv/
-# 켸	zppv/
-# 퀴	ztiv/
-# 쿼	ztjv/
-# 퀘	ztpv/
+# 쾌	znhv/	100%
+# 쾨	zniv/	100%
+# 콰	znkv/	100%
+# 켸	zppv/	100%
+# 퀴	ztiv/	100%
+# 쿼	ztjv/	100%
+# 퀘	ztpv/	100%
 # 킈	zviv/
 # 냬	lhhv/
 # 놰	lnhv/
-# 뇌	lniv/
-# 놔	lnkv/
-# 녜	lppv/
-# 뉘	ltiv/
-# 눠	ltjv/
-# 눼	ltpv/
-# 늬	lviv/
+# 뇌	lniv/	100%
+# 놔	lnkv/	100%
+# 녜	lppv/	100%
+# 뉘	ltiv/	100%
+# 눠	ltjv/	100%
+# 눼	ltpv/	100%
+# 늬	lviv/	100%
 # 먜	ohhv/
 # 뫠	onhv/
-# 뫼	oniv/
-# 뫄	onkv/
-# 몌	oppv/
-# 뮈	otiv/
-# 뭐	otjv/
-# 뭬	otpv/
+# 뫼	oniv/	100%
+# 뫄	onkv/	100%
+# 몌	oppv/	100%
+# 뮈	otiv/	100%
+# 뭐	otjv/	100%
+# 뭬	otpv/	100%
 # 믜	oviv/
-# 얘	qhhv/
-# 왜	qnhv/
-# 외	qniv/
-# 와	qnkv/
-# 예	qppv/
-# 위	qtiv/
-# 워	qtjv/
-# 웨	qtpv/
-# 의	qviv/
+# 얘	qhhv/	100%
+# 왜	qnhv/	100%
+# 외	qniv/	100%
+# 와	qnkv/	100%
+# 예	qppv/	100%
+# 위	qtiv/	100%
+# 워	qtjv/	100%
+# 웨	qtpv/	100%
+# 의	qviv/	100%
 # 럐	shhv/
 # 뢔	snhv/
-# 뢰	sniv/
-# 롸	snkv/
-# 례	sppv/
-# 뤼	stiv/
-# 뤄	stjv/
-# 뤠	stpv/
+# 뢰	sniv/	100%
+# 롸	snkv/	100%
+# 례	sppv/	100%
+# 뤼	stiv/	100%
+# 뤄	stjv/	100%
+# 뤠	stpv/	100%
 # 릐	sviv/
-# 쟤	uhhv/
-# 좨	unhv/
-# 죄	univ/
-# 좌	unkv/
-# 졔	uppv/
-# 쥐	utiv/
-# 줘	utjv/
-# 줴	utpv/
+# 쟤	uhhv/	100%
+# 좨	unhv/	100%
+# 죄	univ/	100%
+# 좌	unkv/	100%
+# 졔	uppv/	100%
+# 쥐	utiv/	100%
+# 줘	utjv/	100%
+# 줴	utpv/	100%
 # 즤	uviv/
 # 햬	whhv/
-# 홰	wnhv/
-# 회	wniv/
-# 화	wnkv/
-# 혜	wppv/
-# 휘	wtiv/
-# 훠	wtjv/
-# 훼	wtpv/
-# 희	wviv/
+# 홰	wnhv/	100%
+# 회	wniv/	100%
+# 화	wnkv/	100%
+# 혜	wppv/	100%
+# 휘	wtiv/	100%
+# 훠	wtjv/	100%
+# 훼	wtpv/	100%
+# 희	wviv/	100%
 # 챼	dhhv/
 # 쵀	dnhv/
-# 최	dniv/
-# 촤	dnkv/
-# 쳬	dppv/
-# 취	dtiv/
-# 춰	dtjv/
-# 췌	dtpv/
+# 최	dniv/	100%
+# 촤	dnkv/	100%
+# 쳬	dppv/	100%
+# 취	dtiv/	100%
+# 춰	dtjv/	100%
+# 췌	dtpv/	100%
 # 츼	dviv/
-# 걔	yhhv/
-# 괘	ynhv/
-# 괴	yniv/
-# 과	ynkv/
-# 계	yppv/
-# 귀	ytiv/
-# 궈	ytjv/
-# 궤	ytpv/
-# 긔	yviv/
+# 걔	yhhv/	100%
+# 괘	ynhv/	100%
+# 괴	yniv/	100%
+# 과	ynkv/	100%
+# 계	yppv/	100%
+# 귀	ytiv/	100%
+# 궈	ytjv/	100%
+# 궤	ytpv/	100%
+# 긔	yviv/	100%
 ### 以基本字根在後，韓文補碼vr結束 ###
 ##### 韓文音節 HangulSyllables 結束 #####
 ##### 韓文單音補充 (韓文古代使用字母-注意有些字母會自動合併) #####
